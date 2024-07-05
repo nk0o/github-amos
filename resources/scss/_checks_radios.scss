@@ -1,0 +1,164 @@
+/* Checkbox Button */
+.input_check {
+  display: none;
+  &_wrap {
+    display: inline-block;
+  }
+  & + label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    min-height: 24px;
+    padding-left: 28px;
+    user-select: none;
+    @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../images/icon/ico_checkbox.svg");
+    }
+  }
+  &:checked + label {
+    &::before {
+      background-image: url("../images/icon/ico_checkbox_on.svg");
+    }
+  }
+  &:disabled + label {
+    cursor: default;
+    color: $gray-600;
+    &::before {
+      background-image: url("../images/icon/ico_checkbox.svg");
+    }
+  }
+  &[disabled][checked] + label {
+    &::before {
+      background-image: url("../images/icon/ico_checkbox_on.svg");
+    }
+  }
+}
+//체크표시만 있는 타입
+.input_check_wrap.without_box{
+  .input_check{
+    & + label{
+      min-height: 20px;
+      padding-left: 24px;
+      @include fontStyle(inherit, $fs-s, $fw-m, 1.357);
+      &::before{
+        top: 0px;
+        background-image: url("../images/icon/ico_check_24.svg");
+      }
+    }
+    &:checked + label::before{
+      background-image: url("../images/icon/ico_check_24_on.svg");
+    }
+  }
+  &_sm{
+    .input_check{
+      & + label{
+        min-height: 20px;
+        padding-left: 24px;
+        @include fontStyle(inherit, $fs-s, $fw-m, 1.357);
+        &::before{
+          top: 0px;
+          background-image: url("../images/icon/ico_check_20.svg");
+        }
+      }
+      &:checked + label::before{
+        background-image: url("../images/icon/ico_check_20_on.svg");
+      }
+    }
+  }
+}
+
+/* Radio Button */
+.input_radio {
+  display: none;
+  &_wrap {
+    display: inline-block;
+    position: relative;
+  }
+  & + label {
+    display: block;
+    position: relative;
+    min-height: 20px;
+    padding-left: 28px;
+    @include fontStyle($gray-950, $fs-s, $fw-m, 1.429 );
+    user-select: none;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../images/icon/ico_radio.svg");
+    }
+  }
+  &:checked + label {
+    &::before {
+      background-image: url("../images/icon/ico_radio_on.svg");
+    }
+  }
+  &:disabled + label {
+    color: $gray-600;
+    cursor: default;
+    &::before {
+      background-image: url("../images/icon/ico_radio.svg");
+    }
+  }
+  &[disabled][checked] + label {
+    color: $gray-600;
+    &::before {
+      background-image: url("../images/icon/ico_radio_on.svg");
+    }
+  }
+}
+//버튼타입 라디오박스
+.input_radio_wrap.type_btn{  
+  height: 40px;
+  .input_radio{
+    & + label{
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background-color:$color-white ;
+      border:1px solid $gray-200;
+      @include fontStyle($gray-800, $fs-s, $fw-b, 1);
+      &::before{
+        display: none !important;
+      }
+    }
+    &:checked + label {
+      background-color: $color-primary; 
+      border-color: $color-primary;
+      color: $color-white;
+    }
+    &:disabled + label {
+      border-color: $gray-200;
+      background-color: $gray-50; 
+      color: $gray-600;
+      cursor: default;
+    }
+    &[disabled][checked] + label {
+      background-color: $gray-200;
+      color: $color-white;
+    }
+  }
+}

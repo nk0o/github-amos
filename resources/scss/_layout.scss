@@ -1,0 +1,80 @@
+header.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
+  padding: 0 20px;
+}
+footer{
+  padding: 40px 0 60px;
+  background-color: $gray-50;
+  .accord{
+    &_head{
+      background-color: transparent;
+      border: none !important;
+    }
+    &_tit{
+      padding: 0;
+      margin: 0 0 28px 0;
+      &::before{
+        width: 24px;
+        height: 24px;
+        mask-image: url('../images/icon/ico_chev_up_24.svg');
+      }
+    }
+    &_cont{
+      padding: 0 0 20px;
+      background-color: transparent;
+    }
+  }
+  .logo{
+    height: 24px;
+    img{
+      width: auto;
+      height: 100%;
+    }
+  }
+  .f_info{
+    display: flex;
+    gap: 26px;
+    padding: 20px 0 0;
+    border-top: 1px solid $gray-200;
+    li, a{
+      @include fontStyle($gray-900, $fs-xxs, $fw-sb, 1.33333);
+    }
+  }
+  .f_copyright{
+    margin-top: 8px;
+    @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.3333);
+  }
+  .f_cs{
+    & > p:not(.tel){
+      @include fontStyle($gray-900, $fs-s, $fw-b, 1.214);
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
+    .tel{
+      margin-top: 2px;
+      text-decoration: none;
+      @include fontStyle($gray-900, $fs-lg, $fw-m, 1.416);
+    }
+    ul{
+      margin-top: 9px;
+    }
+    li{
+      @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
+      & + li{
+        margin-top: 4px;
+      }
+      span{
+        position: relative;
+        display: inline-block;        
+        padding-right: 8px;
+        margin-right: 8px;
+        border-right: 1px solid $gray-700;
+        line-height: 12px;
+      }
+    }
+  }
+  .f_company{
+    margin-top: 17px;
+    @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.5555);
+    font-family: 'aritadt', sans-serif;
+  }
+}

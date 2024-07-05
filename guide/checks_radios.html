@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Checks and Radios</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+      <!-- contnets -->
+      <div class="guide_contnets">
+        <h1>체크박스</h1>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1"/>
+          <label for="check-1-1">기본 체크박스</label>
+        </div>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked/>
+          <label for="check-1-2">선택된 체크박스</label>
+        </div>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-3" class="input_check" name="check-item-1"/>
+          <label for="check-1-3"></label>
+        </div>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-4" class="input_check" name="check-item-1" checked/>
+          <label for="check-1-4"></label>
+        </div>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-5" class="input_check" name="check-item-3" disabled/>
+          <label for="check-1-5">비활성화된 체크박스</label>
+        </div>
+        <div class="input_check_wrap">
+          <input type="checkbox" id="check-1-6" class="input_check" name="check-item-3" checked disabled/>
+          <label for="check-1-6">비활성화 선택된 체크박스</label>
+        </div>
+
+        <h2>체크표시만 있는 타입 - 24px</h2>
+        <div class="input_check_wrap without_box">
+          <input type="checkbox" id="check-6" class="input_check" name="check-item-1"/>
+          <label for="check-6">Option</label>
+        </div>
+        <div class="input_check_wrap without_box">
+          <input type="checkbox" id="check-7" class="input_check" name="check-item-1" checked/>
+          <label for="check-7">Option</label>
+        </div>
+
+        <h2>체크표시만 있는 타입 - 20px</h2>
+        <div class="input_check_wrap without_box_sm">
+          <input type="checkbox" id="check-8" class="input_check" name="check-item-1"/>
+          <label for="check-8">Option</label>
+        </div>
+        <div class="input_check_wrap without_box_sm">
+          <input type="checkbox" id="check-9" class="input_check" name="check-item-1" checked/>
+          <label for="check-9">Option</label>
+        </div>
+
+        
+
+        <h1>라디오박스</h1>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1"/>
+          <label for="radio-1-1">기본 라디오박스</label>
+        </div>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1" checked/>
+          <label for="radio-1-2">선택된 라디오박스</label>
+        </div>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-3-1" class="input_radio" name="radio-item-2"/>
+          <label for="radio-1-3-1"></label>
+        </div>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-3-2" class="input_radio" name="radio-item-2" checked/>
+          <label for="radio-1-3-2"></label>
+        </div>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-4" class="input_radio" name="radio-item-3" disabled/>
+          <label for="radio-1-4">비활성화된 라디오박스</label>
+        </div>
+        <div class="input_radio_wrap">
+          <input type="radio" id="radio-1-5" class="input_radio" name="radio-item-3" checked disabled/>
+          <label for="radio-1-5">비활성화 선택된 라디오박스</label>
+        </div>
+
+        <h2>버튼 타입 - type2</h2>
+        <div class="input_radio_wrap type_btn">
+          <input type="radio" id="radio-1-6" class="input_radio" name="radio-item-4"/>
+          <label for="radio-1-6">Option 1</label>
+        </div>
+        <div class="input_radio_wrap type_btn">
+          <input type="radio" id="radio-1-7" class="input_radio" name="radio-item-4" checked/>
+          <label for="radio-1-7">Option 1</label>
+        </div>
+        <div class="input_radio_wrap type_btn">
+          <input type="radio" id="radio-1-8" class="input_radio" name="radio-item-5" disabled/>
+          <label for="radio-1-8">Option 1</label>
+        </div>
+        <div class="input_radio_wrap type_btn">
+          <input type="radio" id="radio-1-9" class="input_radio" name="radio-item-5" checked disabled/>
+          <label for="radio-1-9">Option 1</label>
+        </div>
+      </div>
+      <!--// contnets -->
+  </div>
+</body>
+</html>

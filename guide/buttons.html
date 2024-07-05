@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Buttons</title>
+  <style>
+    body{background-color: #f6f6f6;}
+.guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets > div, ul{ margin-bottom: 16px; }
+    ul li + li{margin-top: 8px;}
+  </style>
+</head>
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <h1>버튼 Usage</h1>
+      <div>
+        <button class="btn_icon"><i class="ico_btn_color ico_16"></i>+36</button>
+        <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+        <button class="btn_icon"><i class="ico_btn_heart_red ico_16"></i></button>
+        <button class="btn_icon"><i class="ico_btn_cart ico_16"></i></button>
+        <button class="btn_icon"><i class="ico_btn_view ico_16"></i>상세보기</button>
+        <button class="btn_icon"><i class="ico_btn_view ico_16"></i></button>
+        <h2>버튼 in Input</h2>
+        <button class="btn_icon"><i class="ico_btn_view ico_16"></i></button>
+      </div>
+      <h1>버튼 Size</h1>
+      <div>
+        <button class="btn_sm btn_primary">Small button = height 46px</button>
+        <button class="btn_md btn_primary">Medium button = height 50px</button>
+        <button class="btn_lg btn_primary">Large button = height 56px</button>
+      </div>
+      <h1>버튼 Type</h1>
+      <div>
+        <button class="btn_sm btn_primary">Normal(Radius 2px)</button>
+        <button class="btn_md btn_primary btn_radius">Radius 4px</button>
+        <button class="btn_lg btn_primary btn_circle">Circle</button>
+      </div>
+      <h1>버튼 Color, :Hover</h1>
+      <ul>
+        <li>
+          <button class="btn_md btn_primary">Primary</button>
+          <button class="btn_md btn_primary">Primary:hover</button>
+        </li>
+        <li>
+          <button class="btn_md btn_light">Light</button>
+          <button class="btn_md btn_light">Light:hover</button>
+        </li>
+        <li>
+          <button class="btn_sm btn_border">Line</button>
+          <button class="btn_sm btn_border">Line:hover</button>
+        </li>
+      </ul>
+      <h1>버튼 With Icon</h1>
+      <div>
+        <button class="btn_sm btn_primary btn_icon"><i class="ico_search white ico_24"></i></button>
+        <button class="btn_sm btn_border btn_icon"><i class="ico_search point ico_24"></i></button>
+        <button class="btn_sm btn_primary btn_radius btn_icon"><i class="ico_search white ico_24"></i></button>
+        <button class="btn_sm btn_primary btn_circle"><i class="ico_search white ico_24"></i></button>
+      </div>
+      <h1>버튼 With Icon + Text</h1>
+      <div>
+        <button class="btn_sm btn_primary"><i class="ico_search white ico_16"></i>버튼</button>
+        <button class="btn_sm btn_border"><i class="ico_search point ico_16"></i>버튼</button>
+        <button class="btn_sm btn_light"><i class="ico_search white ico_16"></i>버튼</button>
+        <button class="btn_sm btn_primary btn_radius"><i class="ico_search white ico_16"></i>버튼</button>
+      </div>
+      <h1>버튼 Disabled</h1>
+      <ul>
+        <li>
+          <button class="btn_sm btn_disabled">버튼</button>
+          <button class="btn_sm btn_border btn_disabled">버튼</button>
+          <button class="btn_sm btn_radius btn_disabled">버튼</button>
+        </li>
+        <li>
+          <button class="btn_sm btn_icon btn_disabled"><i class="ico_search white ico_24"></i></button>
+          <button class="btn_sm btn_border btn_icon btn_disabled"><i class="ico_search point ico_24"></i></button>
+          <button class="btn_sm btn_radius btn_disabled btn_icon"><i class="ico_search white ico_24"></i></button>
+        </li>
+        <li>
+          <button class="btn_sm btn_disabled"><i class="ico_search white ico_16"></i>버튼</button>
+          <button class="btn_sm btn_border btn_disabled"><i class="ico_search point ico_16"></i>버튼</button>
+          <button class="btn_sm btn_disabled btn_radius"><i class="ico_search white ico_16"></i>버튼</button>
+        </li>
+      </ul>
+      <h1>버튼 그룹</h1>
+      <div class="btn_group">
+        <button class="btn_md btn_light">취소</button>
+        <button class="btn_md btn_primary">저장</button>
+      </div>
+      <h1>Bottom Button</h1>
+        <div>
+          <button class="btn_bottom">
+            <i class="ico_cart_float ico_24"></i>
+            <span>상품담기</span>
+            <span class="count">(4)</span>
+          </button>
+        </div>
+    </div>
+    <h1>플롯팅 버튼</h1>
+    <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+    <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
+    <br>
+    <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
+    <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
+    <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
+    <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
+    <!--// contnets -->
+  </div>
+</body>
+</html>

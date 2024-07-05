@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Tabs</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+    .guide_tab{width: 375px;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <div class="guide_tab">
+
+        <h1>라인탭 type1 (스크롤x, 100%)</h1>
+        <!-- 탭 메뉴 -->
+        <div class="tab_menu line_tab">
+          <ul>
+            <li class="current tab_list" data-tab="tab2-1"><button>선택된 메뉴</button></li>
+            <li class="tab_list" data-tab="tab2-2"><button>비활성 메뉴</button></li>
+            <li class="tab_list" data-tab="tab2-3"><button> 비활성 메뉴 긴 텍스트 비활성 메뉴 긴 텍스트</button></li>
+          </ul>
+          <div class="tab_bar"></div>
+        </div>
+        <!-- 탭 내용 -->
+        <div class="tab_cont">
+          <div id="tab2-1" class="tab_cont_item current">
+            tab1 <br>
+            ...
+          </div>
+          <div id="tab2-2" class="tab_cont_item">
+            tab2 <br>
+            ...
+          </div>
+          <div id="tab2-3" class="tab_cont_item">
+            tab3 <br>
+            ...
+          </div>
+        </div><!-- //tab_cont -->
+        <!-- //fix_tab_wrap -->
+
+        <h1>라인탭 type2 (스크롤O, 100%)</h1>
+        <!-- 탭 메뉴 -->
+        <div class="tab_menu line_tab is_scroll">
+          <ul>
+            <li class="current tab_list" data-tab="tab4-1"><button>선택된 메뉴</button></li>
+            <li class="tab_list" data-tab="tab4-2"><button>비활성 메뉴</button></li>
+            <li class="tab_list" data-tab="tab4-3"><button>비활성 메뉴 긴 텍스트</button></li>
+            <li class="tab_list" data-tab="tab4-4"><button>비활성 메뉴</button></li>
+            <li class="tab_list" data-tab="tab4-5"><button>비활성 메뉴</button></li>
+          </ul>
+          <div class="tab_bar"></div>
+        </div>
+        <!-- 탭 내용 -->
+        <div class="tab_cont">
+          <div id="tab4-1" class="tab_cont_item current">
+            tab1 <br>
+            ...
+          </div>
+          <div id="tab4-2" class="tab_cont_item">
+            tab2 <br>
+            ...
+          </div>
+          <div id="tab4-3" class="tab_cont_item">
+            tab3 <br>
+            ...
+          </div>
+          <div id="tab4-4" class="tab_cont_item">
+            tab3 <br>
+            ...
+          </div>
+          <div id="tab4-5" class="tab_cont_item">
+            tab3 <br>
+            ...
+          </div>
+        </div><!-- //tab_cont -->
+
+        <h1>컨테인드 탭</h1>
+        <!-- 탭 메뉴 -->
+        <div class="tab_menu contain_tab">
+          <ul>
+            <li class="current tab_list" data-tab="tab5-1"><button>전체보기</button></li>
+            <li class="tab_list" data-tab="tab5-1"><button>탈모 케어</button></li>
+            <li class="tab_list" data-tab="tab5-1"><button>비듬 케어</button></li>
+          </ul>
+        </div>
+        <!-- 탭 내용 -->
+        <div class="tab_cont">
+          <div id="tab5-1" class="tab_cont_item current">
+            tab1 <br>...
+          </div>
+          <div id="tab5-2" class="tab_cont_item">
+            tab2 <br>...
+          </div>
+          <div id="tab5-3" class="tab_cont_item">
+            tab3 <br>...
+          </div>
+        </div><!-- //tab_cont -->
+        
+      </div><!-- //guide_tab -->
+    </div><!--// contnets -->
+  </div>
+</body>
+
+</html>

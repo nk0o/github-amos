@@ -1,0 +1,116 @@
+.appbar{
+  background-color: $color-white;
+  .inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;  
+  }
+  .logo{
+    display: inline-block;
+    height: 24px;
+    img{
+      width: auto;
+      height: 100%;
+    }
+  }
+  &_util{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    button{
+      &::before{
+        background-color: $color-primary !important;
+      }
+    }
+  }
+  &_tit{
+    @include pos_center;
+    @include fontStyle($color-primary, $fs-ml, $fw-sb, 1.444);
+  }
+  &_close{
+    &::before{
+      background-color: $color-primary !important;
+    }
+  }
+}
+//Tab Bar
+.btm_bar{
+  height: 100px;
+  padding: 16px 0 32px;
+  background-color: $color-white;
+  .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .btn_heart{
+    padding: 14px;
+    flex:0;
+    width: 52px;
+    height: 52px;
+    border: 1px solid $gray-200;
+  }
+  &.is_nav{
+    background-color: $color-primary;
+  }
+  &_nav{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    li{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: $color-white;
+      color: #A5A5A5;
+      gap: 2px;
+      i::before{
+        background-color: $gray-500 !important;
+      }
+      &.active{
+        i::before{
+          background-color: $color-white !important;
+        }
+        .nav_tit{
+          color: $color-white;
+        }
+      }
+    }
+    .nav_tit{
+      @include fontStyle($gray-500, $fs-xxs, $fw-m, 1.333);
+    }
+  }
+}
+
+//Floating Area
+.floating{
+  &_side{
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    li{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+  &_tit{
+    @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
+  }
+  &_btm{
+    position: fixed;
+    bottom: 60px;
+    .btn_bottom{
+      max-width: 200px;
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

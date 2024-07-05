@@ -1,0 +1,130 @@
+/* Badge */
+.badge {
+  @mixin badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 20px;
+    padding: 0 4px;
+    font-size: $fs-xxs;
+    color: $color-white;
+    text-align: center;
+  }
+  @include badge;
+  &.bg_light {
+    color: $gray-700;
+  }
+  &.line {
+    &_primary {
+      color: $color-primary;
+    }
+    &_secondary {
+      color: $gray-700;
+    }
+    &_success,
+    &_green {
+      color: $color-green;
+    }
+    &_red,
+    &_danger {
+      color: $color-red;
+    }
+    &_warning,
+    &_yellow {
+      color: $color-yellow;
+    }
+    &_info {
+      color: $color-blue;
+    }
+    &_light {
+      color: $gray-50;
+    }
+    &_orange {
+      color: $color-orange;
+    }
+    &_olive {
+      color: $color-olive;
+    }
+    &_teal {
+      color: $color-teal;
+    }
+    &_blue {
+      color: $color-blue;
+    }
+    &_violet {
+      color: $color-violet;
+    }
+    &_purple {
+      color: $color-purple;
+    }
+    &_pink {
+      color: $color-pink;
+    }
+    &_brown {
+      color: $color-brown;
+    }
+    &_gray {
+      color: $gray-300;
+    }
+    &_dark,
+    &_black {
+      color: $gray-950;
+    }
+  }
+  &_round {
+    @include badge;
+    height: 18px;
+    min-width: 18px;
+    padding: 3px 5px;
+    border-radius: 20px;
+    @include fontStyle($color-white, 11px, $fw-b, 1);
+  }
+  &_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+}
+
+//Usage
+button > .badge {
+  margin-left: 8px;
+}
+button > .badge_dot,
+i > .badge_dot {
+  position: absolute;
+  top: -5px;
+  right: 0; 
+  transform: translate(50%, 50%);
+}
+button > .badge_round,
+i > .badge_round {
+  position: absolute;
+  top: -11px;
+  left: calc(100% - 11px);
+}
+.avatar {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  > img {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    & + .badge_dot {
+      position: absolute;
+      top: 0px;
+      left: calc(100% - 12px);
+      border: 1px solid $color-white;
+    }
+    & + .badge_round {
+      position: absolute;
+      top: -7px;
+      left: calc(100% - 14px);
+    }
+  }
+}

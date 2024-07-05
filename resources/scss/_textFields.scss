@@ -1,0 +1,168 @@
+/* Input */
+.input {
+  &_group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 6px;
+    min-width: 240px;
+    label{
+      position: relative;
+      width: 100%;
+    }
+    .ico_close_circle{
+      @include pos_Ycenter;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+    }
+    .time, .btn, .btn_sm, .btn_md, .btn_lg{
+      @include pos_Ycenter;
+      right:12px;
+      height: 30px;
+      padding: 0 12px;
+      border-color:$gray-400;
+      border-radius: 4px;
+      @include fontStyle($gray-600, $fs-s, $fw-m, 1.357);
+    }
+    label, .input_label{
+      @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
+    }
+    .time{
+      @include fontStyle($color-red, $fs-sm, $fw-m, 2);
+    }
+    &[class*="input_icon"] {
+      label{
+        > i {
+          @include pos_Ycenter;
+          right: 12px;
+          min-width: 24px;
+          min-height: 24px;
+        }
+      }
+    }
+    &.input_icon_left {
+      .input_text {
+        padding-left: 56px;
+      }
+      [class*="ico_"] {
+        left: 12px;
+      }
+    }
+    &.input_icon_right {
+      .ico_close_circle{
+        right: 48px;
+      }
+      input {
+        padding-right: 56px;
+      }
+      i {
+        right: 12px;
+      }
+    }
+    &.with_time{
+      .ico_close_circle{
+        right: 67px;
+      }
+    }
+    &.input_social_num{
+      label{
+        @include flexStart;
+        gap: 6px;
+        color:$gray-500;
+      }
+      .dash{
+        color:$gray-200;
+      }
+      .input_text{
+        flex: 1;
+        max-width: 40px;
+        &.birth_date{
+          max-width: 120px;
+        }
+      }
+    }
+  }
+  //타입 텍스트
+  &_text[type="text"] {
+    width: 100%;
+    height: 50px;
+    padding: 0px 12px;
+    border: 1px solid $gray-200;
+    border-radius: 4px;
+    @include trans($prop: all, $duration: 0.2s, $type: ease-out, $delay: 0s);
+    @include placeholder;
+    @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+    &:focus {
+      border: 1px solid $gray-950;
+      & ~ button{
+        border-color: $color-red;
+        color: $color-red;
+      }
+    }
+    &:disabled {
+      color: $gray-600;
+      background-color: $gray-50;
+      & ~ button{
+        display: none;
+      }
+    }
+    & + .input_text {
+      margin-left: 8px;
+    }
+    &.input_error {
+      border: 1px solid $color-red;
+    }
+    &.input_success { 
+      border: 1px solid $color-green;
+    }
+  } 
+  //Textarea
+  &_writing_group {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    min-width: 240px;
+    height: 140px;
+    padding: 12px;
+    border-radius: 4px;
+    border: solid 1px $gray-200;
+    background-color: $color-white;
+    outline: none;
+    textarea {
+      width: 100%;
+      height: 100%;
+      //resize: none;
+      @include placeholder;
+      @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+    }
+    &.disabled, &.disabled textarea {
+      background-color: $gray-50;
+      color: $gray-300;
+      resize: none;
+      .txt_count, .txt_count .current.zero{
+        color:inherit;
+      }
+    }
+    .txt_count {
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 12px;
+      right: 32px;
+      user-select: none;
+      @include fontStyle($gray-600, $fs-xxs, $fw-m, 1.333);
+      & > *{
+        font:inherit;
+      }
+      .current {
+        color: $gray-900;
+        &.zero{
+          color: $gray-600;
+        }
+      }
+    }
+  }
+}

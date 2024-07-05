@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Dropdowns</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+      <!-- contnets -->
+      <div class="guide_contnets">
+        <h1>드롭다운 - Default</h1>
+        <div class="select_box">
+          <div class="select_box_value"><span>Select Option</span></div>
+          <div class="select_box_list">
+            <ul>
+              <li><span>Option 1</span></li>
+              <li><span>Option 2</span></li>
+              <li><span>Option 3</span></li>
+              <li><span>Option 4</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <h1>드롭다운 - Disabled</h1>
+        <div class="select_box disabled">
+          <div class="select_box_value"><span>Select Option</span></div>
+          <div class="select_box_list">
+                <ul>
+                      <li><span>Option 1</span></li>
+                      <li><span>Option 2</span></li>
+                      <li><span>Option 3</span></li>
+                      <li><span>Option 4</span></li>
+                </ul>
+          </div>
+        </div>
+
+        <h1>드롭다운 - Group</h1>
+        <div class="select_box">
+          <div class="select_box_value"><span>Select Option</span></div>
+          <div class="select_box_list list-group">
+            <ul>
+              <li class="list-group_opt">
+                <div class="list_tit">Category A</div>
+                <ul>
+                  <li><span>Category A1</span></li>
+                  <li><span>Category A2</span></li>
+                  <li><span>Category A3</span></li>
+                </ul>
+              </li>
+              <li class="list-group_opt">
+                <div class="list_tit">Category B</div>
+                <ul>
+                  <li><span>Category B1</span></li>
+                  <li><span>Category B2</span></li>
+                  <li><span>Category B3</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h1>드롭다운 - 기본 SelectBox</h1>
+        <div class="select_box select_box_defalut">
+          <span class="select_box_arr"></span>
+          <select class="select_box_value" name="" id="">
+            <option value="">Select Option</option>
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+            <option value="">Option 4</option>
+          </select>     
+        </div>
+
+        <h1>드롭다운 - 기본 SelectBox - Disabled</h1>
+        <div class="select_box select_box_defalut disabled">
+          <span class="select_box_arr"></span>
+          <select class="select_box_value" name="" id="" disabled>
+            <option value="">Select Option</option>
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+            <option value="">Option 4</option>
+          </select>     
+        </div>
+
+      </div><!--// contnets -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Toggles</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    /*  */
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+    .guide_tab{width: 375px;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      
+      <h1>Text in Toggle</h1>
+      <div class="btn_toggle txt_in_toggle">
+        <input type="checkbox"/>
+        <label>
+          <span>뉴플랫폼</span>
+          <span>AMOS TV</span>
+        </label>
+      </div>
+
+      <h1>Default - ON</h1>
+      <div class="btn_toggle_group">
+        <div class="btn_toggle">
+          <input type="checkbox" checked/>
+          <label></label>
+        </div>
+        <p class="btn_toggle_txt">ON</p>
+      </div>
+      <br>
+      <div class="btn_toggle">
+        <input type="checkbox" checked />
+        <label></label>
+      </div>
+
+      <h1>Default - OFF</h1>
+      <div class="btn_toggle_group">
+        <div class="btn_toggle">
+          <input type="checkbox" />
+          <label></label>
+        </div>
+        <p class="btn_toggle_txt">OFF</p>
+      </div>
+      <br>
+      <div class="btn_toggle">
+        <input type="checkbox" />
+        <label></label>
+      </div>
+
+      <h1>Size small</h1>
+
+      <div class="btn_toggle_group">
+        <div class="btn_toggle btn_toggle_sm">
+          <input type="checkbox" checked />
+          <label></label>
+        </div>
+        <p class="btn_toggle_txt">Checked toggle</p>
+      </div>
+
+      <h1>Disabled</h1>
+      <div class="btn_toggle_group">
+        <div class="btn_toggle">
+          <input type="checkbox" checked disabled />
+          <label></label>
+        </div>
+        <p class="btn_toggle_txt">ON</p>
+        <div class="btn_toggle">
+          <input type="checkbox" disabled />
+          <label></label>
+        </div>
+        <p class="btn_toggle_txt">OFF</p>
+      </div>      
+    </div><!--// contnets -->
+  </div>
+</body>
+
+</html>

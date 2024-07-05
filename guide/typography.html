@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Typography</title>
+  <style>    
+    /* 가이드에서만 사용하는 스타일 */
+    body {
+      overflow-y: visible;
+    }
+    .container{
+      min-width: auto;
+    }
+    .container>header {
+      background-color: #407df1;
+    }
+    .guide_contnets, .guide_contnets .inner{
+      width: 100%;
+      margin-left: 0;
+    }
+    h1{font-size: 32px;font-weight: 700; padding: 10px 16px 24px;}
+    h2{font-size: 24px;font-weight: 600; padding: 10px 16px;}
+    .aritadt {
+      font-family: "aritadt" !important;
+    }
+    .gotham {
+      font-family: "gotham" !important;
+    }
+    .font_type li p:nth-child(2) {
+      font-size: 34px;
+    }
+    ul {
+      display: flex;
+      width: 100%;
+    }
+    ul li {
+      flex:1;
+      padding: 0 16px;
+      overflow: hidden;
+    }
+    .ft_group + .ft_group {
+      margin-top: 60px;
+    }
+    .type {
+      font-size: 12px;
+      line-height: 24px;
+      color: #999;
+    }
+    .ft_set li p{
+      white-space: nowrap;
+      min-height: 42px;
+    }
+    .ft_set li > * {      
+      display: flex;
+      align-items: center;
+    }
+    .ft_set li:first-child {
+      flex: 2;
+      height: auto;
+    }
+    .txt_bold{font-weight: 700;}
+    .txt_semibold{font-weight: 600;}
+    .txt_medium{font-weight: 400;}
+    .txt_1{font-size:24px; line-height:1.417;font-family: "aritadt" !important;}
+    .txt_2{font-size:20px; line-height:1.4;font-family: "aritadt" !important;}
+    .txt_3{font-size:18px; line-height:1.445;font-family: "aritadt" !important;}
+    .txt_4{font-size:18px; line-height:1.445;font-family: "aritadt" !important;}
+    .txt_5{font-size:16px; line-height:1.5;font-family: "aritadt" !important;} 
+    .txt_6{font-size:15px; line-height:1.334;font-family: "aritadt" !important;}
+    .txt_7{font-size:14px; line-height:1.357;font-family: "aritadt" !important;}
+    .txt_8{font-size:14px; line-height:1.214;font-family: "aritadt" !important;}
+    .txt_9{font-size:13px; line-height:1.385;font-family: "aritadt" !important;}
+    .txt_10{font-size:13px; line-height:1.231;font-family: "aritadt" !important;}
+    .txt_11{font-size:12px; line-height:1.334;font-family: "aritadt" !important;}
+
+    .text_1{font-size:30px; line-height:1.4;font-family: "gotham" !important;}
+    .text_2{font-size:24px; line-height:1.417;font-family: "gotham" !important;}
+    .text_3{font-size:17px; line-height:1.176;font-family: "gotham" !important;}
+    .text_4{font-size:17px; line-height:1.177;font-family: "gotham" !important;}
+    .text_5{font-size:15px; line-height:1.2;font-family: "gotham" !important;}
+    /* 가이드에서만 사용하는 스타일 */
+  </style>
+</head>
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <div class="inner">
+        <h1>Typography</h1>
+        <!-- 폰트 타입 -->
+        <div class="ft_group"> 
+          <h2>Type</h2>
+          <ul class="font_type">
+            <li>
+              <p class="type">AritaDotum4.0</p>
+              <p class="aritadt">한국어</p>
+            </li>
+            <li>
+              <p class="type">Gotham</p>
+              <p class="gotham">English / 123</p>
+            </li>
+          </ul>
+        </div>
+        <!-- 폰트 굵기 -->
+        <div class="ft_group">
+          <h2>Weight</h2>
+          <ul>
+            <li>
+              <p class="type">SemiBold</p>
+              <p class="txt_semibold aritadt">아리따돋움체 (한국어)</p>
+            </li>
+            <li>
+              <p class="type">Bold</p>
+              <p class="txt_bold gotham">Gotham</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p class="type">Medium</p>
+              <p class="txt_medium aritadt">아리따돋움체 (한국어)</p>
+            </li>
+            <li>
+              <p class="type">Medium</p>
+              <p class="txt_medium gotham">Gotham</p>
+            </li>
+          </ul>
+        </div>
+        <!-- 폰트 셋트 -->
+        <div class="ft_group">
+          <h2>Font Set - AritaDotum4.0</h2>
+          <ul class="ft_set">
+            <li>
+              <p class="type">Scale Category</p>
+              <p class="txt_1">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_2">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_3">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_4">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_5">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_6">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_7">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_8">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_9">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_10">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+              <p class="txt_11">프로의 순간을 완성하는 가장 프로페셔널적 시선</p>
+            </li>
+            <li>
+              <p class="type">Size</p>
+              <p class="txt_1">(24px) 1.5rem;</p>
+              <p class="txt_2">(20px) 1.25rem;</p>
+              <p class="txt_3">(18px) 1.125rem;</p>
+              <p class="txt_4">(18px) 1.125rem;</p>
+              <p class="txt_5">(16px) 1rem;</p>
+              <p class="txt_6">(15px) 0.9375rem;</p>
+              <p class="txt_7">(14px) 0.875rem;</p>
+              <p class="txt_8">(14px) 0.875rem;</p>
+              <p class="txt_9">(13px) 0.8125rem;</p>
+              <p class="txt_10">(13px) 0.8125rem;</p>
+              <p class="txt_11">(12px) 0.75rem;</p>
+            </li>
+            <li>
+                <p class="type">Line Height</p>
+                <p class="txt_1">34px</p>
+                <p class="txt_2">28px</p>
+                <p class="txt_3">26px</p>
+                <p class="txt_4">26px</p>
+                <p class="txt_5">24px</p>
+                <p class="txt_6">20px</p>
+                <p class="txt_7">19px</p>
+                <p class="txt_8">17px</p>
+                <p class="txt_9">18px</p>
+                <p class="txt_10">16px</p>
+                <p class="txt_11">16px</p>
+            </li>                            
+          </ul>
+        </div>
+        <!-- 폰트 셋트 -->
+        <div class="ft_group">
+          <h2>Font Set - Gotham</h2>
+          <ul class="ft_set">
+            <li>
+              <p class="type">Scale Category</p>
+              <p class="text_1 gotham">AMOS PROFESSIONAL 1234567890</p>
+              <p class="text_2 gotham">AMOS PROFESSIONAL 1234567890</p>
+              <p class="text_3 gotham">AMOS PROFESSIONAL 1234567890</p>
+              <p class="text_4 gotham">AMOS PROFESSIONAL 1234567890</p>
+              <p class="text_5 gotham">AMOS PROFESSIONAL 1234567890</p>
+            </li>
+            <li>
+              <p class="type">Size</p>
+              <p class="text_1 gotham">(30px) 1.875rem;</p>
+              <p class="text_2 gotham">(24px) 1.5rem;</p>
+              <p class="text_3 gotham">(17px) 1.0625rem;</p>
+              <p class="text_4 gotham">(17px) 1.0625rem;</p>
+              <p class="text_5 gotham">(15px) 0.9375rem;</p>
+            </li>
+            <li>
+                <p class="type">Line Height</p>
+                <p class="text_1 gotham">42px;</p>
+                <p class="text_2 gotham">34px;</p>
+                <p class="text_3 gotham">20px;</p>
+                <p class="text_4 gotham">20px;</p>
+                <p class="text_5 gotham">18px;</p>
+            </li>                            
+          </ul>
+        </div>
+      </div>
+    </div><!--// contnets -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Tab Bar</title>
+  <style>
+    body{ background-color: #eee;}
+    .guide_contnets{padding: 20px;}
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+  </style>
+</head>
+
+<body>
+   <div id="container">
+      <!-- guide_contnets -->
+      <div class="guide_contnets">
+
+        <h1>Tab Bar</h1>
+        <div class="btm_bar">
+          <div class="inner">
+            <button class="btn_heart"><i class="ico_heart ico_24"></i></button>
+            <button class="btn_bottom"><i class="ico_cart_actionbar ico_24"></i><span>장바구니 담기</span></button>
+          </div>
+        </div>
+        <!-- //.btm_bar -->
+
+        <h1>Tab Bar - Navigation</h1>
+        <div class="btm_bar is_nav">
+          <div class="inner">
+            <ul class="btm_bar_nav"><!-- li.active -->
+              <li class="active"><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
+              <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
+              <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
+              <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
+              <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //.btm_bar -->
+
+        <h1>Floating Side - default</h1>
+        <ul class="floating_side" style="position:static">
+          <li>
+            <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+          </li>
+          <li>
+            <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
+          </li>
+        </ul>
+
+        <h1>Floating Side - expansion</h1>
+        <ul class="floating_side" style="position:static">
+          <li>
+            <span class="floating_tit">브랜드 소개</span>
+            <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
+          </li>
+          <li>
+            <span class="floating_tit">입점 상담</span>
+            <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
+          </li>
+          <li>
+            <span class="floating_tit">1:1 문의</span>
+            <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
+          </li>
+          <li>
+            <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
+          </li>
+        </ul>
+
+        <h1>Floating Bottom - 상품담기</h1>
+        <div class="floating_btm" style="position:static">
+          <button class="btn_bottom"><i class="ico_cart_float ico_24"></i><span>상품담기</span><span class="count">(4)</span></button>
+        </div>
+
+      </div>
+      <!--//.guide_contnets -->
+  </div>
+</body>
+</html>

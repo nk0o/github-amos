@@ -1,0 +1,71 @@
+/*****  FONT *****/
+// Font Family
+$font-gotham: "gotham";
+$font-aritadt: "aritadt"; 
+
+// Font Size
+///30/24/20/18/17/16/15/14/13/12 
+$fs-xxs: 0.75rem;  //12
+$fs-xs: 0.8125rem; //13
+$fs-s: 0.875rem; //14
+$fs-sm: 0.9375rem; //15
+$fs-m: 1rem; //16
+$fs-md: 1.0625rem; //17
+$fs-ml: 1.125rem; //18
+$fs-l: 1.25rem; //20
+$fs-lg: 1.5rem;//24
+$fs-xlg: 1.875rem;//30
+
+// Font Weight
+$fw-t: 100; // thin
+$fw-l: 300; // light
+$fw-m: 400; // medium
+$fw-sb: 600; // semibold
+$fw-b: 700; // bold
+$fw-bb: 900; // extrabold, black
+
+/*****  Color *****/
+// 주요 색상  
+$color-primary: #2A3136;
+$color-point: #FF2E00;
+
+$color-primary-lighten4: lighten($color-primary, 40%);;
+$color-primary-lighten3: lighten($color-primary, 30%);;
+$color-primary-lighten2: lighten($color-primary, 20%);;
+$color-primary-lighten1: lighten($color-primary, 10%);;
+$color-primary-darken1: darken($color-primary, 10%);;
+$color-primary-darken2: darken($color-primary, 20%);;
+$color-primary-darken3: darken($color-primary, 30%);;
+$color-primary-darken4: darken($color-primary, 40%);;
+
+// 시스템 색상
+$color-red: $color-point;
+$color-orange: #F2711C; 
+$color-yellow: #FFC107; 
+$color-olive: #B5CC18; 
+$color-green: #26A769; 
+$color-teal: #00B5AD; 
+$color-blue: #0036B1;
+$color-violet: #6435C9;
+$color-purple: #A333C8;
+$color-pink: #E03997;
+$color-brown: #A5673F;
+
+// Grayscale
+$gray-50: #f6f6f6;
+$gray-100:#eeeeee; 
+$gray-200: #e2e2e2;
+$gray-300: #dddddd;;
+$gray-400: #bbbbbb;
+$gray-500: #aaaaaa;
+$gray-600: #888888;
+$gray-700: #777777;
+$gray-800: #666666;
+$gray-900: #444444;
+$gray-950: #222222;
+$color-white: #ffffff;
+
+$color-disabled-box: $gray-50;
+$color-disabled-txt: $gray-600;
+$color-box: $gray-50;
+$color-input-border: $gray-200; 

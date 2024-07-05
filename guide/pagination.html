@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Pagination</title>
+</head>
+
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <div class="pagination" aria-label="Page Navigation">
+        <a href="javascript:void(0);" class="arr arr_text prev"><span>이전</span></a>
+        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
+      </div>
+      <br>
+      <div class="pagination" aria-label="Page Navigation">
+        <a href="javascript:void(0);" class="arr prev"><span>이전</span></a>
+        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+        <a href="javascript:void(0);" class="arr next"><span>다음</span></a>
+      </div>
+      <br>
+      <div class="pagination" aria-label="Page Navigation">
+        <a href="javascript:void(0);" class="arr arr_text prev disabled"><span>이전</span></a>
+        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
+      </div>
+      <br>
+      <div class="pagination" aria-label="Page Navigation">
+        <a href="javascript:void(0);" class="arr arr_text prev disabled"><span>이전</span></a>
+        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
+      </div>
+      <br>
+      <div class="pagination_number">
+        <span class="pagination_number_current">1</span>
+        <span class="pagination_number_total">5</span>
+      </div>
+      <br>
+      <div id="mySwiper-01" class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">....</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Swiper css head영역에서 불러오기 -->
+      <link rel="stylesheet" href="../resources/css/swiper.min.css">
+      <!-- Swiper pagination 속성 스크립트 -->
+      <script src="../resources/js/libs/swiper.min.js"></script>
+      <script>
+        var mySwiper01 = new Swiper('#mySwiper-01', {
+          //swiper pagination
+          pagination: {
+            el: '#mySwiper-01 .swiper-pagination',
+          }
+        })
+      </script>
+    </div><!--// contnets -->
+  </div>
+  <script>
+    var mySwiper01 = new Swiper('#mySwiper-01', {
+      //swiper pagination
+      pagination: {
+        el: '#mySwiper-01 .swiper-pagination',
+        clickable: true
+      }
+    });
+  </script>
+</body>
+
+</html>

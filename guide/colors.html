@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Colors</title>
+  <style>
+    .color_list { display: flex; align-items: center; }
+    .color_list li{font-weight: 700;}
+    .color_list + .color_list{margin-top: 16px;}
+    .color_list li .cont {display: flex; align-items: end; justify-content: end;  height: 70px; color: #dddddd;padding: 4px;}
+    .cont.primary { width: 240px; background-color: #2A3136; }
+    .cont.point { background-color: #FF2E00 }
+    .grayscale li .cont{width: 100px;height: 100px;margin-top: 8px;}
+    .grayscale li:nth-child(13) .cont{background-color:#222222;}
+    .grayscale li:nth-child(12) .cont{background-color:#444444;}
+    .grayscale li:nth-child(11) .cont{background-color:#666666;}
+    .grayscale li:nth-child(10) .cont{background-color:#777777; }
+    .grayscale li:nth-child(9) .cont{background-color:#888888;}
+    .grayscale li:nth-child(8) .cont{background-color:#aaaaaa;}
+    .grayscale li:nth-child(7) .cont{background-color:#bbbbbb;}
+    .grayscale li:nth-child(6) .cont{background-color:#999999;color: #444444;}
+    .grayscale li:nth-child(5) .cont{background-color:#dddddd;color: #444444;}
+    .grayscale li:nth-child(4) .cont{background-color:#e2e2e2;color: #444444;}
+    .grayscale li:nth-child(3) .cont{background-color:#eeeeee;color: #444444;}
+    .grayscale li:nth-child(2) .cont{background-color:#f6f6f6;color: #444444;}
+    .grayscale li:nth-child(1) .cont{background-color:#ffffff;color: #444444;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <ul class="color_list">
+        <li>
+          <h5 class="tit">Primary Color</h5>
+          <div class="cont primary">#2A3136</div>
+        </li>
+        <li>
+          <h5 class="tit">Point Color</h5>
+          <div class="cont point">#FF2E00</div>
+        </li>
+      </ul>
+      <ul class="color_list grayscale">
+        <li>
+          <h5 class="tit">white</h5>
+          <div class="cont">#ffffff</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 10</h5>
+          <div class="cont">#f6f6f6</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 50</h5>
+          <div class="cont">#eeeeee</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 100</h5>
+          <div class="cont"> #e2e2e2</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 200</h5>
+          <div class="cont">#dddddd</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 300</h5>
+          <div class="cont">#999999</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 400</h5>
+          <div class="cont">#bbbbbb</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 500</h5>
+          <div class="cont">#aaaaaa</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 600</h5>
+          <div class="cont">#888888</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 700</h5>
+          <div class="cont">#777777</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 800</h5>
+          <div class="cont">#666666</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 900</h5>
+          <div class="cont">#444444</div>
+        </li>
+        <li>
+          <h5 class="tit">gray 950</h5>
+          <div class="cont">#222222</div>
+        </li>
+      </ul>
+    </div>
+    <!--// contnets -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+/* Button */
+button {
+  vertical-align: middle;
+  border: 0;
+  background: none;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+  height: 46px;
+  margin: 0;
+  padding: 8px 20px;
+  font-size: $fs-xs;
+  font-weight: $fw-m;
+  line-height: 1.4;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: inherit;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out 0s, border-color 0.3s ease-out 0s;
+  //Size
+  &_lg {
+    @extend .btn;
+    height: 56px;
+    font-size: $fs-m;
+    line-height: 3.5;
+    &.btn_icon {
+      width: 56px;
+      height: 56px;
+      padding: 12px;
+      border-color: transparent;
+    }
+    &.btn_circle{
+      width: 56px;
+      height: 56px;
+    }
+  }
+  &_md {
+    @extend .btn;
+    height: 50px;
+    font-size: $fs-sm;
+    line-height: 3.33333;
+    &.btn_icon {
+      width: 50px;
+      height: 50px;
+      padding: 0 16px;
+      border-color: transparent;
+    }
+    &.btn_circle{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &_sm {
+    @extend .btn;
+    height: 46px;
+    font-size: $fs-sm;
+    line-height: 3.0666;
+    &.btn_icon {
+      width: 46px;
+      height: 46px;
+      padding: 6px;
+      border-color: transparent;
+    }
+    &.btn_circle{
+      width: 46px;
+      height: 46px;
+    }
+  }
+  //Color
+  &_primary {
+    color: $color-white !important;
+    border-color:$color-primary !important;
+    background-color: $color-primary !important;
+    &:hover {
+      border-color: $color-primary-darken4 !important;
+      background-color: $color-primary-darken4 !important;
+    }
+  }
+  &_light {
+    color: $color-white !important;
+    border-color:$gray-400 !important;
+    background-color: $gray-400 !important;
+    &:hover {
+      border-color: $color-primary-lighten1 !important;
+      background-color: $color-primary-lighten1 !important;
+    }
+  }
+  &_border {
+    color: $color-primary;
+    border-color:$color-primary;
+    background-color: $color-white;
+    &:hover {
+      background-color: rgba($color-primary, 0.051);
+    }
+  }
+  //disabled
+  &_disabled {
+    color: $color-white !important;
+    border-color: $gray-400;
+    background-color: $gray-400;
+    *[class*="ico_"] {
+      &::before {
+        background-color: $gray-300 !important;
+      }
+    }
+    &:hover {
+      border-color: $gray-400;
+      background-color: $gray-400;
+    }
+    &.btn_border {
+      color: $gray-400 !important;
+      border-color: $gray-400;
+      background-color: $color-white;
+      &:hover {
+        border-color: $gray-400;
+      }
+    }
+  }
+  //radius
+  &_radius {
+    border-radius: 4px;
+  }
+  //radius
+  &_circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 100% !important;
+    padding: 0;
+    justify-content: center;
+  }
+  //Button Group
+  &_group {
+    @include flexStart;
+    gap: 5px;
+  }
+  //Icon Button
+  &_icon{
+    @extend .btn;
+    justify-content: center;
+    height: 28px;
+    padding: 6px;
+    border-radius: 9999px;
+    border-color:$gray-100;
+    color: $gray-700;
+    gap: 2px;
+  }
+  //Bottom Button
+  &_bottom{
+    @extend .btn;
+    width: 100%;
+    height: 52px;
+    padding: 0 40px;
+    gap: 8px;
+    justify-content: center;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    span{
+      @include fontStyle($color-white, $fs-m, $fw-sb, 1.5);
+    }
+    *[class*="ico_"] {
+      &::before{
+        background-color: $color-white !important;
+      }
+    }
+    .count{
+      margin-left: -4px;
+    }
+  }
+  //Float Button
+  &_floating{
+    @extend .btn;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: $color-white;
+    border-radius: 0;
+    *[class*="ico_"], &[class*="ico_"] {
+      &::before{ 
+        mask-size: 24px;
+        background-color: $color-primary !important;
+      }
+    }
+    &.btn_border{
+      border-color: $gray-200;
+    }
+    &.btn_primary{
+      *[class*="ico_"] {
+        &::before{
+          background-color: $color-white !important;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,354 @@
+/* Icon */
+*[class*="ico_"] {
+   display: inline-block;
+   position: relative;
+   vertical-align: middle;
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+}
+/* svg아이콘 backgroundColor로 색상 변경(!important로 덮기) */
+*[class*="ico_"]{
+  &.white{
+      &::before{
+        background-color: $color-white !important;
+      }
+  }
+  &.point{
+    &::before{
+      background-color: $color-point !important;
+    }
+  }
+  &.primary{
+    &::before{
+        background-color: $color-primary !important;
+    }
+  }
+}
+/* 아이콘 사이즈 클래스 */
+*[class*="ico_60"] {
+   width: 60px;
+   height: 60px;
+}
+*[class*="ico_44"] {
+   width: 44px;
+   height: 44px;
+}
+*[class*="ico_24"] {
+   width: 24px;
+   height: 24px;
+}
+*[class*="ico_20"] {
+   width: 16px;
+   height: 16px;
+}
+*[class*="ico_16"] {
+   width: 16px;
+   height: 16px;
+}
+
+/********* 아이콘 svg 추가 *********/
+/* user아이콘 */
+.ico {
+  &_user {
+    &::before {
+        @include iconImgPath("ico_user.svg");
+    }
+    &_on{
+      &::before {
+        @include iconImgPath("ico_user_on.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+}
+/* arrow 아이콘 */
+.ico {
+  &_chev {
+    &_left {
+      &::before {
+        @include iconImgPath("ico_chev_left.svg");
+      }
+    }
+    &Next {
+      &_16{
+        &::before {
+          @include iconImgPath("ico_chev_next_16.svg");
+        }
+      }
+      &_20{
+        &::before {
+          @include iconImgPath("ico_chev_next_20.svg");
+        }
+      }
+      &_24{
+        &::before {
+          @include iconImgPath("ico_chev_next_24.svg");
+        }
+      }
+    }
+    &Up{
+      &::before {
+        @include iconImgPath("ico_chev_up_24.svg");
+      }
+    }
+    &Down {
+      &::before {
+        @include iconImgPath("ico_chev_down_24.svg");
+      }
+    }
+  }
+  &_btn_back{
+    &::before {
+      background: url("../images/icon/ico_btn_back.svg") center/contain no-repeat;
+    }
+  }
+}
+/* Commerce */
+.ico {
+  &_point {
+    &::before {
+      @include iconImgPath("ico_point.svg");
+    }
+    &_on{
+      &::before {
+        @include iconImgPath("ico_point_on.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+  &_wish {
+    &::before {
+      @include iconImgPath("ico_wish.svg");
+    }
+    &_on{
+      &::before {
+        @include iconImgPath("ico_wish_on.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+  &_cart {
+    &::before {
+        @include iconImgPath("ico_cart.svg");
+    }
+    &_actionbar{
+      &::before {
+        @include iconImgPath("ico_cart_actionbar.svg");
+      }
+    }
+    &_float{
+      &::before {
+        @include iconImgPath("ico_cart_float.svg");
+      }
+    }
+  }
+  &_hair{
+    &_care{
+      &::before {
+        @include iconImgPath("ico_hair_care.svg");
+      }
+    }
+    &_clinic{
+      &::before {
+        @include iconImgPath("ico_hair_clinic.svg");
+      }
+    }
+    &_color{
+      &::before {
+        @include iconImgPath("ico_hair_color.svg");
+      }
+    }
+    &_perm{
+      &::before {
+        @include iconImgPath("ico_hair_perm.svg");
+      }
+    }
+    &_salonsupport{
+      &::before {
+        @include iconImgPath("ico_hair_salonsupport.svg");
+      }
+    }
+    &_scalpcare{
+      &::before {
+        @include iconImgPath("ico_hair_scalpcare.svg");
+      }
+    }
+    &_styling{
+      &::before {
+        @include iconImgPath("ico_hair_styling.svg");
+      }
+    }
+  }
+}
+/* UI actions */
+.ico {  
+  &_clip{
+    &::before {
+      @include iconImgPath("ico_clip.svg");
+    }
+  }
+  &_plus{
+    &::before {
+      @include iconImgPath("ico_plus.svg");
+    }
+    &_white{
+      &::before {
+        @include iconImgPath("ico_plus_white.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+  &_minus{
+    &::before {
+      @include iconImgPath("ico_minus.svg");
+    }
+    &_white{
+      &::before {
+        @include iconImgPath("ico_minus_white.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+  &_check_60{
+    &::before {
+      @include iconImgPath("ico_check_60.svg");
+      background-color: $color-point !important;
+    } 
+  }
+  &_heart{
+    &::before {
+      @include iconImgPath("ico_heart.svg");
+    } 
+  }
+  &_heart_red{
+    &::before {
+      @include iconImgPath("ico_heart_red.svg");
+      background-color: $color-point !important;
+    }
+  }
+  &_home {
+    &::before {
+      @include iconImgPath("ico_home.svg");
+    }
+  }
+  &_home_on {
+    &::before {
+      @include iconImgPath("ico_home_on.svg");
+      background-color: $color-white !important;
+    }
+  }
+  &_search {
+    &::before {
+      @include iconImgPath("ico_search.svg");
+    }
+  }
+  &_cate {
+    &::before {
+      @include iconImgPath("ico_cate.svg");
+    }
+    &_on {
+      &::before {
+        @include iconImgPath("ico_cate_on.svg");
+        background-color: $color-white !important;
+      }
+    }
+  }
+  &_close{
+    &::before {
+      @include iconImgPath("ico_close.svg");
+    }
+    &_circle {
+      &::before {
+        background: url("../images/icon/ico_close_circle.svg") center/contain no-repeat;
+      }
+    }
+  }
+  &_masking{
+    &::before {
+      @include iconImgPath("ico_masking.svg");
+    }
+    &_hidden {
+      &::before {
+        @include iconImgPath("ico_masking_hidden.svg");
+      }
+    }
+  }
+  &_listview{
+    &_list{
+      &::before {
+        @include iconImgPath("ico_listview_list.svg");
+      }
+    }
+    &_thumb {
+      &::before {
+        @include iconImgPath("ico_listview_thumb.svg");
+      }
+    }
+  }
+  &_float{
+    &_brand{
+      &::before {
+        @include iconImgPath("ico_float_brand.svg");
+      }
+    }
+    &_close{
+      &::before {
+        @include iconImgPath("ico_float_close.svg");
+      }
+    }
+    &_question{
+      &::before {
+        @include iconImgPath("ico_float_question.svg");
+      }
+    }
+    &_store{
+      &::before {
+        @include iconImgPath("ico_float_store.svg");
+      }
+    }
+    &_top{
+      &::before {
+        @include iconImgPath("ico_float_top.svg");
+      }
+    }
+  }
+}
+.ico_btn { 
+  &_cart{
+    &::before {
+      @include iconImgPath("ico_btn_cart.svg");
+    }
+  }
+  &_color{
+    &::before {
+      @include iconImgPath("ico_btn_color.svg");
+    }
+  }
+  &_heart{
+    &::before {
+      @include iconImgPath("ico_btn_heart.svg");
+    } 
+  }
+  &_heart_red{
+    &::before {
+      @include iconImgPath("ico_btn_heart_red.svg");
+      background-color: $color-point !important;
+    }
+  }
+  &_view{
+    &::before {
+      @include iconImgPath("ico_btn_view.svg");
+    }
+  }
+}

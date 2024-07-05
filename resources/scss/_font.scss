@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* Arita-Dotum */
+@font-face {
+  font-family: 'aritadt';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/AritaDotum/Arita-Dotum-Medium.eot'),
+    url('../fonts/AritaDotum/Arita-Dotum-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AritaDotum/Arita-Dotum-Medium.woff') format('woff'),
+    url('../fonts/AritaDotum/Arita-Dotum-Medium.woff2') format('woff2'),
+    url('../fonts/AritaDotum/Arita-Dotum-Medium.ttf') format('truetype'),
+    url('../fonts/AritaDotum/Arita-Dotum-Medium.svg') format('svg');
+    unicode-range: U+AC00-D7A3;//한글
+}
+@font-face {
+  font-family: 'aritadt';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/AritaDotum/Arita-Dotum-SemiBold.eot'),
+  url('../fonts/AritaDotum/Arita-Dotum-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AritaDotum/Arita-Dotum-SemiBold.woff') format('woff'),
+  url('../fonts/AritaDotum/Arita-Dotum-SemiBold.woff2') format('woff2'),
+  url('../fonts/AritaDotum/Arita-Dotum-SemiBold.ttf') format('truetype'),
+  url('../fonts/AritaDotum/Arita-Dotum-SemiBold.svg') format('svg');
+  unicode-range: U+AC00-D7A3;//한글
+}
+
+/* Gotham */
+@font-face {
+  font-family: "gotham";
+  font-style: normal;
+  font-weight: 400;
+  src:url("../fonts/Gotham/Gotham-Medium.woff") format("woff"),
+      url("../fonts/Gotham/Gotham-Medium.ttf") format("truetype"),
+      url("../fonts/Gotham/Gotham-Medium.otf") format("opentype");
+      unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;	//영문 대소문자
+}
+
+@font-face {
+  font-family: "gotham";
+  font-style: normal;
+  font-weight: 700;
+  src:url("../fonts/Gotham/Gotham-Bold.woff") format("woff"),
+      url("../fonts/Gotham/Gotham-Bold.ttf") format("truetype"),
+      url("../fonts/Gotham/Gotham-Bold.otf") format("opentype");
+  unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;//영문 대소문자
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Text Fields</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    /*  */
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+    .guide_tab{width: 375px;}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <h1>Default</h1>
+      <div class="input_group">
+        <span class="input_label">Label</span>
+        <label for="">
+          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+        </label>
+        <p class="txt_alert">사용이 가능한 닉네임입니다.</p>
+      </div>
+
+      <h1>Disabled</h1>
+      <div class="input_group">
+        <label for="">
+          <input type="text" id="" class="input_text" value="대한민국" placeholder="내용을 입력해 주세요." disabled>
+        </label>
+      </div>
+      
+      <h1>Error</h1>
+      <div class="input_group">
+        <label for="">
+          <input type="text" id="" class="input_text input_error" value="대한민국" placeholder="내용을 입력해 주세요.">
+        </label>
+        <p class="txt_alert error">이미 사용 중인 닉네임입니다.</p>
+      </div>
+      
+      <h1>Success</h1>
+      <div class="input_group">
+        <label for="">
+          <input type="text" id="" class="input_text input_success" value="대한민국" placeholder="내용을 입력해 주세요.">
+        </label>
+        <p class="txt_alert success">사용이 가능한 닉네임입니다.</p>
+      </div>
+
+      <h1>Width 인증 시간</h1>
+      <div class="input_group with_time">
+        <label for="">
+          <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+          <span class="time">2:35</span>
+        </label>
+      </div>
+
+      <h1>Width 인증 실패</h1>
+      <div class="input_group with_time input_error">
+        <label for="">
+          <input type="text" id="" class="input_text input_error" value="" placeholder="휴대폰번호">
+          <span class="time">2:35</span>
+        </label>
+        <p class="txt_alert error">인증번호가 다릅니다.</p>
+      </div>
+
+      <h1>Width Button</h1>
+      <div class="input_group with_btn">
+        <label for="">
+          <input type="text" id="" class="input_text" value="dfds" placeholder="휴대폰번호">
+          <button class="btn_sm btn_border">인증요청</button>
+        </label>
+      </div>
+
+      <h1>Width Button - Disabled</h1>
+      <div class="input_group with_btn">
+        <label for="">
+          <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호" disabled>
+          <button class="btn_sm btn_border">인증요청</button>
+        </label>
+      </div>
+
+      <!-- 아이콘 왼쪽 -->
+      <h1>ICON - Left</h1>
+      <div class="input_group input_icon_left">
+        <label for="">
+          <i class="ico_clip ico_24"></i>
+          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+        </label>
+      </div>
+
+      <!-- 아이콘 오른쪽 -->
+      <h1>ICON - Right</h1>
+      <div class="input_group input_icon_right">
+        <label for="">
+          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+          <i class="ico_clip ico_24"></i>
+        </label>
+      </div>
+      
+      <h1>주민등록번호 입력</h1>
+      <div class="input_group input_social_num">
+        <span class="input_label">주민번호</span>
+        <label for="">
+          <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+          <span class="dash">-</span>
+          <input type="text" id="" class="input_text" value="" placeholder="0">
+          <span>******</span>
+        </label>
+        <p class="txt_alert">YYMMDD</p>
+      </div>
+  
+      
+
+
+      <h1>Textarea - Placeholder</h1>
+      <div class="input_writing_group">
+        <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+        <div class="txt_count">
+          <p class="current">0</p>
+          <span>/</span>
+          <p class="total">1000</p>
+        </div>
+      </div>
+
+      <h1>Textarea - 글자입력</h1>
+      <div class="input_writing_group">
+        <textarea name="" id="" placeholder="내용을 입력해주세요.">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</textarea>
+        <div class="txt_count">
+          <p class="current zero">0</p>
+          <span>/</span>
+          <p class="total">1000</p>
+        </div>
+      </div>
+
+      <h1>Textarea - 글자수 초과</h1>
+      <div class="input_writing_group">
+        <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+        <div class="txt_count">
+          <p class="current">0</p>
+          <span>/</span>
+          <p class="total">1000</p>
+        </div>
+      </div>
+
+      <h1>Textarea - disabled</h1>
+      <div class="input_writing_group disabled">
+        <textarea name="" id="" placeholder="내용을 입력해주세요." disabled></textarea>
+        <div class="txt_count">
+          <p class="current">0</p>
+          <span>/</span>
+          <p class="total">1000</p>
+        </div>
+      </div>
+      
+    </div><!--// contnets -->
+  </div>
+</body>
+
+</html>
