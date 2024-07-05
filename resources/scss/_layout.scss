@@ -1,6 +1,8 @@
 header.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
   padding: 0 20px;
 }
+
+//FOOTER
 footer{
   padding: 40px 0 60px;
   background-color: $gray-50;
@@ -41,7 +43,10 @@ footer{
   }
   .f_copyright{
     margin-top: 8px;
-    @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.3333);
+    @include fontStyle($gray-700, $fs-xxs, $fw-l, 1.3333);
+    span{
+      font-weight: $fw-m;
+    }
   }
   .f_cs{
     & > p:not(.tel){
@@ -58,7 +63,7 @@ footer{
       margin-top: 9px;
     }
     li{
-      @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
+      @include fontStyle($gray-700, $fs-xxs, $fw-l, 1.333);
       & + li{
         margin-top: 4px;
       }
@@ -69,6 +74,7 @@ footer{
         margin-right: 8px;
         border-right: 1px solid $gray-700;
         line-height: 12px;
+        font-weight: $fw-m;
       }
     }
   }
