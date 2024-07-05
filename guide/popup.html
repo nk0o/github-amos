@@ -8,22 +8,63 @@
   <script src="../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Badges</title>
+  <title>Popup</title>
   <style>
-    .guide_contnets{padding: 20px;}
-    
-    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+    .guide_contnets { padding: 20px; }
+    .guide_contnets h1 { font-weight: 700; font-size: 20px; margin: 16px 0; }
   </style>
 </head>
 
 <body>
-   <div id="container">
-      <!-- contnets -->
-      <div class="guide_contnets">
+  <div id="container">
+    <!-- contnets -->
+    <div class="guide_contnets">
+      <h1>팝업 - 모달 알럿 / 모달 컨펌 / 레이어팝업(height 풀팝업)</h1>
 
+      <br>
+      <h1>모달 - 알럿</h1>
+      <button type="button" id="modal01" class="btn_sm btn_primary btn_modal_open">Open Modal - Alert</button>
+
+      <div class="modal_container alert fade" data-modal="modal01"><!-- modal_container alert -->
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <div class="modal_body">
+            <p>아이디 및 비밀번호를 다시 확인해 주세요.</p>
+          </div>
+          <div class="modal_footer">
+            <div class="btn_group">
+              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal_content -->
       </div>
-      <!--// contnets -->
+      <!-- /.modal_container -->
+
+      <h1>모달 - 컨펌</h1>
+      <button type="button" id="modal02" class="btn_sm btn_primary btn_modal_open">Open Modal - Confirm</button>
+
+      <div class="modal_container confirm fade" data-modal="modal02"><!-- modal_container confirm -->
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <div class="modal_body">
+            <p>계속 진행하시겠습니까?</p>
+          </div>
+          <div class="modal_footer">
+            <div class="btn_group">
+              <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal_content -->
+      </div>
+      <!-- /.modal_container -->
+
+
+    </div>
+    <!--// contnets -->
   </div>
 </body>
+
 </html>

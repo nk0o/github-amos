@@ -8,6 +8,7 @@ $(document).ready(function () {
   if ($('.accord_head').length > 0) { accordionUI() }
   if ($('.select_box').length > 0) { selectBoxUI() }
   if ($('.input_text').length > 0) { addInputClearBtn() }
+  if ($('.modal_container').length > 0) { modalUI() }
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
@@ -350,4 +351,48 @@ function addInputClearBtn(){
       $(this).parent('label').append(`<button class="ico_close_circle"></button>`)
     }
   });
+}
+/****** Modal ******/
+function modalUI(){
+  $('.btn_modal_open').click((e) => { e.preventDefault(); openModal(e.target) }); //open modal
+
+  $('.modal_container').on('click', '.btn_modal_close, .modal_overlay', (e)=>{ //close modal
+    e.preventDefault();
+    closeModal(e.target);
+  });
+  let timer = null;
+  $(window).on('resize', function(){//resize modal
+    clearTimeout(timer);
+    timer = setTimeout(modalPosition, 50);
+  })
+  function openModal(el){
+    const modalName = $(el).attr('id');
+    let thisModal = $(".modal_container[data-modal='" + modalName + "']")
+    let documentH = $(document).height();
+    thisModal.removeAttr("aria-hidden").addClass('open');
+    $("body").addClass("no_scroll");
+    modalPosition(thisModal)
+    $(el).find('.modal_overlay').css('height' , documentH)
+  }
+  function closeModal(el){
+    $(el).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+    $("body").removeClass("no_scroll");
+  }
+  function modalPosition(el){
+    let windowH = $(window).height();
+    let modal;
+    el == true ?  modal = $(el) :  modal = $(".modal_container.open");
+    const modalH = modal.find('.modal_content').height();
+    const overlay = modal.find('.modal_overlay');
+    const content = modal.find('.modal_content');
+    
+    if( modalH >= windowH - 100 ){
+      overlay.css('height', modalH + 100);
+      content.css({'position':'fixed','top':'50px'});
+      modal.scrollTop(0);
+    }else if( modalH < windowH ){
+      modal.find('.modal_overlay').css('height', windowH);
+      content.css({'position':'relative','top':'auto'});
+    }
+  }
 }
