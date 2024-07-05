@@ -1973,8 +1973,6 @@ button {
   justify-content: center;
   background-color: #2A3136;
   border-color: #2A3136;
-}
-.btn_bottom span {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
@@ -2392,6 +2390,34 @@ button {
 .input_radio_wrap.type_btn .input_radio[disabled][checked] + label {
   background-color: #e2e2e2;
   color: #ffffff;
+}
+
+.input_check_list {
+  border: 1px solid;
+  padding: 0 16px;
+}
+.input_check_list li {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+}
+.input_check_list .input_check_wrap {
+  display: block;
+  width: 100%;
+}
+.input_check_list .input_check_wrap.without_box .input_check + label {
+  width: 100%;
+  padding: 0 24px 0 0;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.input_check_list .input_check_wrap.without_box .input_check + label::before {
+  left: auto;
+  right: 0;
 }
 
 /* SelectBox */
@@ -3943,6 +3969,74 @@ div.dataTables_wrapper .btn_floating:focus {
   max-width: 268px;
 }
 
+.btm_sheet {
+  /* Bottom Sheet 지역변수 */
+  display: none;
+  position: relative;
+}
+.btm_sheet .inner {
+  position: fixed;
+  z-index: 2;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  transition: all 0.2s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -110%;
+  width: 100%;
+  background: #ffffff;
+}
+.btm_sheet .inner > * {
+  border: 1px solid;
+}
+.btm_sheet.show {
+  display: block;
+  z-index: 1002;
+}
+.btm_sheet.show .btm_sheet_back {
+  z-index: 1000;
+  opacity: 1;
+  pointer-events: all;
+}
+.btm_sheet.show .inner {
+  z-index: 1001;
+  bottom: 0;
+}
+.btm_sheet_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.btm_sheet_head {
+  position: relative;
+  padding: 20px 32px;
+}
+.btm_sheet_head .tit {
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.444;
+}
+.btm_sheet_head .btm_sheet_close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 32px;
+  width: 20px;
+  height: 20px;
+  margin-left: 32px;
+  cursor: pointer;
+}
+.btm_sheet_btns {
+  padding: 0 32px 32px;
+}
 .appbar {
   background-color: #ffffff;
 }

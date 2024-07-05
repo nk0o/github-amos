@@ -1,0 +1,70 @@
+//Bottom Sheet
+.btm_sheet {
+  /* Bottom Sheet 지역변수 */
+  $BtmSheetRadius: 32px;
+  display: none;
+  position: relative;
+  .inner {
+    & > *{border: 1px solid;}
+    //min-height: 200px;
+    position:fixed;
+    z-index: 2;
+    border-top-left-radius: $BtmSheetRadius;
+    border-top-right-radius: $BtmSheetRadius;
+    transition: all 0.2s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -110%;
+    width: 100%;
+    background: $color-white;
+  }
+  &.show {
+    display: block;
+    z-index: 1002;
+    .btm_sheet_back {
+      z-index: 1000;
+      opacity: 1;
+      pointer-events: all;
+    }
+    .inner {
+      z-index: 1001;
+      bottom: 0;
+    }
+  }
+  &_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background:rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  &_head{
+    position: relative;
+    padding: 20px 32px;
+    .tit{
+      @include fontStyle($gray-950, $fs-ml, $fw-sb, 1.444);
+    }
+    .btm_sheet_close {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 32px;
+      width: 20px;
+      height: 20px;
+      margin-left: 32px;
+      cursor: pointer;
+    }
+  }
+  &_btns{
+    padding:0 32px 32px;
+  }
+  //Mobile Select Box
+  &_select{
+
+  }
+}

@@ -163,9 +163,7 @@ button {
     justify-content: center;
     background-color: $color-primary;
     border-color: $color-primary;
-    span{
-      @include fontStyle($color-white, $fs-m, $fw-sb, 1.5);
-    }
+    @include fontStyle($color-white, $fs-m, $fw-sb, 1.5);    
     *[class*="ico_"] {
       &::before{
         background-color: $color-white !important;

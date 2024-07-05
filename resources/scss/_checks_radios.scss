@@ -43,7 +43,7 @@
     &::before {
       background-image: url("../images/icon/ico_checkbox_on.svg");
     }
-  }
+  }  
 }
 //체크표시만 있는 타입
 .input_check_wrap.without_box{
@@ -78,7 +78,6 @@
     }
   }
 }
-
 /* Radio Button */
 .input_radio {
   display: none;
@@ -159,6 +158,34 @@
     &[disabled][checked] + label {
       background-color: $gray-200;
       color: $color-white;
+    }
+  }
+}
+
+//체크리스트(바텀시트)
+.input_check_list{
+  border:1px solid;
+  padding: 0 16px;
+  li{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+  }
+  .input_check_wrap{
+    display: block;
+    width: 100%;
+    &.without_box{
+      .input_check + label{
+        width: 100%;
+        padding:0 24px 0 0;
+        @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+        &::before{
+          left: auto;
+          right: 0;
+        }
+      }
     }
   }
 }

@@ -8,10 +8,9 @@
   <script src="../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Badges</title>
+  <title>Bottom Sheet</title>
   <style>
     .guide_contnets{padding: 20px;}
-    
     .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
     .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
   </style>
@@ -21,9 +20,113 @@
    <div id="container">
       <!-- contnets -->
       <div class="guide_contnets">
+        <h1>Bottom Sheet</h1>
+        <div style="width: 375px;">
+          <div class="select_box">
+            <div class="select_box_value"><span>Open Bottom Sheet At Mobile</span></div>
+            <div class="select_box_list">
+              <ul>
+                <li><span>Option 1</span></li>
+                <li><span>Option 2</span></li>
+                <li><span>Option 3</span></li>
+                <li><span>Option 4</span></li>
+              </ul>
+            </div>
+          </div><!-- //.select_box -->
+        </div>
+        <button type="button" class="btn_btm_sheet" data-btmsheet="btmSheet02">바텀시트열기버튼</button>
+        <h1>Bottom Sheet</h1>  
+        <div class="btm_sheet show" id="btmSheet02"><!-- id="btmSheet02" -->
+          <div class="btm_sheet_back"></div>
+          <div class="inner">
+            <div class="btm_sheet_head">
+              <p class="tit">통신사 선택</p>
+              <button type="button" class="btm_sheet_close ico_close"></button>
+            </div>
+            <div class="btm_sheet_cont">
+              <ul class="input_check_list">
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1">
+                    <label for="check-1-1">SKT</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1">
+                    <label for="check-1-2">KT</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-3" class="input_check" name="check-item-1">
+                    <label for="check-1-3">LGT U</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-4" class="input_check" name="check-item-1">
+                    <label for="check-1-4">SKT 알뜰폰</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-5" class="input_check" name="check-item-1">
+                    <label for="check-1-5">KT 알뜰폰</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-1-6" class="input_check" name="check-item-1">
+                    <label for="check-1-6">LG 알뜰폰</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="btm_sheet_btns">
+              <button type="button" class="btn_bottom btm_sheet_close">확인</button>
+            </div>
+          </div>
+        </div>
 
       </div>
       <!--// contnets -->
   </div>
+
+
+
+  <script>    
+  $(document).ready(function() {
+    $('.btn_btm_sheet').on('click', function() {
+      if($(this).data('btmsheet') !='btmSheetDate' && $(this).data('btmsheet') !='btmSheetTime'){
+        console.log("껍데기")
+        $("#"+ $(this).data('btmsheet')).addClass('show');
+      }else if($(this).data('btmsheet') =='btmSheetDate' || $(this).data('btmsheet') =='btmSheetTime'){
+console.log("기능")
+        getPicker($(this).data('btmsheet'), $(this).attr('id'));
+      }
+    });
+    $('.btm_sheet_close').on('click', function() {
+     $(this).parents('.btm_sheet').removeClass('show')
+    });
+  });
+  </script>
+   <script>    
+    /* $(document).ready(function() {
+      $('.btn_btm_sheet').on('click', function() {
+        if($(this).data('btmsheet') !='btmSheetDate' && $(this).data('btmsheet') !='btmSheetTime'){
+          // 바텀시트 열고닫기
+          $("#"+ $(this).data('btmsheet')).addClass('show');
+        }else if($(this).data('btmsheet') =='btmSheetDate' || $(this).data('btmsheet') =='btmSheetTime'){
+          //해당 페이지 하단에 추가 (바텀시트 여러개여도 아래 소스 한번만)
+          // 날짜선택/시간선택 호출
+          getPicker($(this).data('btmsheet'), $(this).attr('id'));
+        }
+      }); */
+     /*  $('.btm_sheet_close').on('click', function() {
+       $(this).parents('.btm_sheet').removeClass('show')
+      });
+    }); */
+    </script>
 </body>
 </html>
