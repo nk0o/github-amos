@@ -1,1 +1,1 @@
-# amos-publish
+# github-amos-publish
