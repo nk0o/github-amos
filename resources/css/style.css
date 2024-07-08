@@ -3002,6 +3002,29 @@ select {
   padding: 0;
 }
 
+.tab_center_wrap .tab_center {
+  white-space: nowrap;
+}
+.tab_center_wrap .tab_center::-webkit-scrollbar {
+  display: none;
+}
+.tab_center_wrap .tab_center ul {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.tab_center_wrap .tab_center ul::-webkit-scrollbar {
+  display: none;
+}
+.tab_center_wrap .tab_center ul .tab_list {
+  display: inline-block;
+  flex: none;
+}
+.tab_center_wrap .tab_center ul .tab_list.current {
+  border-bottom: 2px solid #2A3136;
+}
+
 /* Badge */
 .badge {
   display: inline-flex;

@@ -35,6 +35,31 @@ $(document).ready(function () {
         });
       }
     }
+    
+    // 가운데 정렬
+    if (tab.hasClass('tab_center')) {
+      let liWid = 0,
+          boxWid = $('.tab_center').outerWidth(),
+          boxHalf = $('.tab_center').outerWidth() / 2,
+          leftPos = 0,
+          selectPos,
+          pos;
+          $(el).parents('.tab_center').find('.tab_list').each(function() {
+          liWid += $(this).outerWidth();
+      });
+      for (let i=0; i< $(el).index(); i++) {
+          leftPos += $(el).parents('.tab_center').find('.tab_list').eq(i).outerWidth();
+      }
+      selectPos = leftPos + $(el).outerWidth()/2;
+      if (selectPos < boxHalf) {
+          pos = 0;
+      } else if (liWid - selectPos < boxHalf) {
+          pos = liWid - boxWid;
+      } else {
+          pos = selectPos - boxHalf;
+      }
+      $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
+    }
   }
   //Line Tab 초기화
   function LineTabMenuInit() {
