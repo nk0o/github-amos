@@ -66,12 +66,14 @@
     .w:before { content: 'W'; }
     .m { background-color: #f7b731; color: #fff; display: inline-block; width: 25px; height: 25px; border-radius: 50%; line-height: 25px; }
     .m:before { content: 'M'; }
-    .end { background-color: #eb3b5a; color: #fff; display: inline-block; width: 25px; height: 25px; border-radius: 50%; line-height: 25px; font-weight: bold; }
+    .end { background-color: #eb3b5a; color: #fff; display: inline-block; width: 25px; height: 25px; border-radius: 50%; line-height: 25px; font-weight: bold; text-align: center;}
     .end:before { content: '완'; }
     .ing { background-color: #2d98da; color: #fff; display: inline-block; width: 25px; height: 25px; border-radius: 50%; line-height: 25px; font-weight: bold; }
     .ing:before { content: '진'; }
     .modify { color: #fff; display: inline-block; width: auto; height: 25px; padding: 0 5px; border-radius: 30px; line-height: 25px; font-weight: bold; background-color: #39c4cd; text-align: center; }
     .modify:before { content: '수정'; }
+    .confirm { color: #fff; display: inline-block; width: 25px; height: 25px; padding: 0 5px; border-radius: 30px; line-height: 25px; font-weight: bold; background-color: #39c4cd; text-align: center; }
+    .confirm:before { content: '컨'; }
     .t_em { color: #e10e0e; }
     .t_re { color: #046ac9; }
     .t_pu { color: #17ae03; }
@@ -101,11 +103,11 @@
           <li>모바일&nbsp;&nbsp;&nbsp;/ </li>
           <li>상태 : </li>
           <li><span class="ing"></span></li>
-          <li>완료</li>
-          <li><span class="ing"></span></li>
           <li>진행중&nbsp;&nbsp;&nbsp;/ </li>
-          <li><span class="modify"></span></li>
-          <li>수정</li>
+          <li><span class="confirm"></span></li>
+          <li>컨펌중&nbsp;&nbsp;&nbsp;/ </li>
+          <li><span class="end"></span></li>
+          <li>완료</li>
         </ul>
         <div class="status"><span id="progress"><em></em></span> <span id="total"></span></div>
       </div>
@@ -126,8 +128,8 @@
         </tr>
         <tr class="list">
           <td>typography</td>
-          <td><a href="./guide/typography.html" target="_blank">typography.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/typography.html" target="_blank">typography.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -136,8 +138,8 @@
         </tr>
         <tr class="list">
           <td>colors</td>
-          <td><a href="./guide/colors.html" target="_blank">colors.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/colors.html" target="_blank">colors.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -146,8 +148,8 @@
         </tr>
         <tr class="list">
           <td>Icons</td>
-          <td><a href="./guide/icons.html" target="_blank">icons.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/icons.html" target="_blank">icons.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -156,8 +158,8 @@
         </tr>
         <tr class="list">
           <td>button</td>
-          <td><a href="./guide/buttons.html" target="_blank">buttons.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/buttons.html" target="_blank">buttons.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -166,8 +168,8 @@
         </tr>
         <tr class="list">
           <td>Badges</td>
-          <td><a href="./guide/badges.html" target="_blank">badges.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/badges.html" target="_blank">badges.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -176,8 +178,8 @@
         </tr>
         <tr class="list">
           <td>accordions</td>
-          <td><a href="./guide/accordions.html" target="_blank">accordions.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/accordions.html" target="_blank">accordions.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -186,8 +188,8 @@
         </tr>
         <tr class="list">
           <td>checks_radios</td>
-          <td><a href="./guide/checks_radios.html" target="_blank">checks_radios.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/checks_radios.html" target="_blank">checks_radios.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -197,7 +199,7 @@
         <!-- <tr class="list">
           <td>pagination</td>
           <td><a href="./guide/pagination.html" target="_blank">pagination.html</a></td>
-          <td>2024.06.01</td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="ing"></span></td>
           <td>
@@ -206,8 +208,8 @@
         </tr> -->
         <tr class="list">
           <td>tabs</td>
-          <td><a href="./guide/tabs.html" target="_blank">tabs.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/tabs.html" target="_blank">tabs.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -216,8 +218,8 @@
         </tr>
         <tr class="list">
           <td>textFields</td>
-          <td><a href="./guide/textFields.html" target="_blank">textFields.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/textFields.html" target="_blank">textFields.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -226,8 +228,8 @@
         </tr>
         <tr class="list">
           <td>dropdowns</td>
-          <td><a href="./guide/dropdowns.html" target="_blank">dropdowns.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/dropdowns.html" target="_blank">dropdowns.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -236,8 +238,8 @@
         </tr>
         <tr class="list">
           <td>toggles</td>
-          <td><a href="./guide/toggles.html" target="_blank">toggles.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/toggles.html" target="_blank">toggles.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -246,8 +248,8 @@
         </tr>
         <tr class="list">
           <td>footer</td>
-          <td><a href="./guide/footer.html" target="_blank">footer.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/layout/footer.html" target="_blank">footer.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -256,8 +258,8 @@
         </tr>
         <tr class="list">
           <td>appbar</td>
-          <td><a href="./guide/appbar.html" target="_blank">appbar.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/layout/appbar.html" target="_blank">appbar.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -266,8 +268,8 @@
         </tr>
         <tr class="list">
           <td>tabbar</td>
-          <td><a href="./guide/tabbar.html" target="_blank">tabbar.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/layout/tabbar.html" target="_blank">tabbar.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -276,8 +278,8 @@
         </tr>
         <tr class="list">
           <td>popup</td>
-          <td><a href="./guide/popup.html" target="_blank">popup.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/popup.html" target="_blank">popup.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="end"></span></td>
           <td>
@@ -286,8 +288,8 @@
         </tr>
         <tr class="list">
           <td>product list</td>
-          <td><a href="./guide/product_list.html" target="_blank">product_list.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/product_list.html" target="_blank">product_list.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
           <td><span class="ing"></span></td>
           <td>
@@ -296,18 +298,28 @@
         </tr>
         <tr class="list">
           <td>bottomsheet</td>
-          <td><a href="./guide/bottomsheet.html" target="_blank">bottomsheet.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/bottomsheet.html" target="_blank">bottomsheet.html</a></td>
+          <td>2024.07.05</td>
           <td><span class="r"></span></td>
-          <td><span class="ing"></span></td>
+          <td><span class="end"></span></td>
           <td>
             <p class="t_em"></p>
           </td>
         </tr>
         <tr class="list">
+          <td>layout</td>
+          <td><a href="./guide/components/layout.html" target="_blank">layout.html</a></td>
+          <td>2024.07.05</td>
+          <td><span class="r"></span></td>
+          <td><span class="ing"></span></td>
+          <td>
+            <p class="t_em"></p>
+          </td>
+        </tr>    
+        <tr class="list">
           <td>slide</td>
-          <td><a href="./guide/slide.html" target="_blank">slide.html</a></td>
-          <td>2024.06.01</td>
+          <td><a href="./guide/components/slide.html" target="_blank">slide.html</a></td>
+          <td>2024.00.00</td>
           <td><span class="r"></span></td>
           <td><span class=""></span></td>
           <td>
@@ -315,23 +327,65 @@
           </td>
         </tr>    
         <tr>
-          <td class="category" colspan="6">Main</td>
+          <td class="category" colspan="6">메인</td>
         </tr>
         <tr class="list">
           <td>Main</td><!-- 페이지 -->
-          <td><a href="./html/main.html" target="_blank">main.html</a></td>
-          <td>2023.00.00</td><!-- 날짜 -->
+          <td><a href="./html/Main/FO-main-00201.html" target="_blank">FO-main-00201.html</a></td>
+          <td>2024.07.00</td><!-- 날짜 -->
+          <td><span class="r"></span></td><!-- 구분 -->
+          <td><span class="ing"></span></td><!-- 상태 -->
+          <td>
+            <p>푸터, 내비바, 탭바, 플로팅배너 포함</p>
+            <p class="t_em"> </p><!-- 참고사항 -->
+          </td>
+        </tr>
+        <tr class="list">
+          <td>전체 카테고리</td><!-- 페이지 -->
+          <td><a href="./html/Main/FO-main-00202.html" target="_blank">FO-main-00202.html</a></td>
+          <td>2024.07.00</td><!-- 날짜 -->
+          <td><span class="r"></span></td><!-- 구분 -->
+          <td><span class="ing"></span></td><!-- 상태 -->
+          <td>
+            <p class="t_em"></p><!-- 참고사항 -->
+          </td>
+        </tr> <tr>
+          <td class="category" colspan="6">상품구매</td>
+        </tr>
+        <tr class="list">
+          <td>뎁스페이지 - 썸네일형</td><!-- 페이지 -->
+          <td><a href="./html/Depth/FO-Depth-00101.html" target="_blank">FO-Depth-00101.html</a></td>
+          <td>2024.07.00</td><!-- 날짜 -->
           <td><span class="r"></span></td><!-- 구분 -->
           <td><span class="ing"></span></td><!-- 상태 -->
           <td>
             <p class="t_em"></p><!-- 참고사항 -->
           </td>
         </tr>
-        <!-- Guidelines : ing  -->
+        <tr class="list">
+          <td>뎁스페이지 - 컬러칩</td><!-- 페이지 -->
+          <td><a href="./html/Depth/FO-Depth-00101.html" target="_blank">FO-Depth-00102.html</a></td>
+          <td>2024.07.00</td><!-- 날짜 -->
+          <td><span class="r"></span></td><!-- 구분 -->
+          <td><span class="ing"></span></td><!-- 상태 -->
+          <td>
+            <p class="t_em"></p><!-- 참고사항 -->
+          </td>
+        </tr>
+        <tr class="list">
+          <td>뎁스페이지 - 브랜드라인</td><!-- 페이지 -->
+          <td><a href="./html/Depth/FO-Depth-00101.html" target="_blank">FO-Depth-00103.html</a></td>
+          <td>2024.07.00</td><!-- 날짜 -->
+          <td><span class="r"></span></td><!-- 구분 -->
+          <td><span class="ing"></span></td><!-- 상태 -->
+          <td>
+            <p class="t_em"></p><!-- 참고사항 -->
+          </td>
+        </tr>
       </table>
     </div>
   </div>
-  <script type="text/javascript" src="./resources/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./resources/js/libs/jquery- v1.11.1.min.js"></script>
   <script>
     $(function () {
       var $content = $(".content table"),

@@ -1,3 +1,5 @@
+//모바일체크
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 $(document).ready(function () {
   if ($(".line_tab")) { LineTabMenuInit() }
   if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
@@ -9,6 +11,7 @@ $(document).ready(function () {
   if ($('.select_box').length > 0) { selectBoxUI() }
   if ($('.input_text').length > 0) { addInputClearBtn() }
   if ($('.modal_container').length > 0) { modalUI() }
+  if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
@@ -420,4 +423,15 @@ function modalUI(){
       content.css({'position':'relative','top':'auto'});
     }
   }
+}
+
+function bottomSheetUI(){
+  $('[data-btmsheet]').click(function() {
+    if(isMobile){
+      $("#"+ $(this).data('btmsheet')).addClass('show');
+    }
+  });
+  $('.btm_sheet_close').click(function() {
+    $(this).parents('.btm_sheet').removeClass('show')
+  });
 }
