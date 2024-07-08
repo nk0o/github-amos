@@ -124,7 +124,6 @@
     }
     ul {
       position: relative;
-      display: flex;
       flex-wrap: nowrap; 
       overflow: auto;
       &::-webkit-scrollbar {
@@ -133,8 +132,14 @@
       .tab_list {
         display: inline-block;
         flex: none;
-        &.current {
-          border-bottom: 2px solid #2A3136;
+      }
+    }
+    &.line {
+      ul {
+        .tab_list {
+          &.current {
+            border-bottom: 2px solid #2A3136;
+          }
         }
       }
     }
