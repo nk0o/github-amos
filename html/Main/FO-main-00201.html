@@ -8,50 +8,61 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-   <title>MAIN</title>
+  <title>MAIN</title>
 </head>
 
 <body>
-   <div id="wrap">
-     <header>
-       <script>include.appBar();</script>
-       <script>include.mainTabMenu();</script>       
-     </header>    
-     <!-- //header -->
-     <main id="container">
-       <section>
-         <div id="swiper1" class="swiper swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Promotion Area-1</div>
-              <div class="swiper-slide">Promotion Area-2</div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div><!-- //.swiper-container -->
-       </section>
-       <section>
-         <div class="banner_line">아모스 품평 자문단 ‘살롱 엑스퍼트’ 모집 안내</div>
-       </section>
-       <section></section>
-     </main>
-     <!-- //#container -->
-     <!-- footer -->
-     <script>include.footer();</script>
-     <!-- //footer -->
-     <!-- tabBar -->
-     <script>include.tabBar();</script>
-     <!-- //tabBar -->
-   </div>
-   <!-- floatingSide -->
-   <script>include.floatingSide();</script>
-   <!-- //floatingSide -->
- </body>
+  <div id="wrap">
+    <header>
+      <script>include.appBar();</script>
+      <script>include.mainTabMenu();</script>
+    </header>
+    <!-- //header -->
+    <main id="container" class="page_main">
+      <section>
+        <div id="swiper1" class="swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Promotion Area-1</div>
+            <div class="swiper-slide">Promotion Area-2</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div><!-- //.swiper-container -->
+      </section>
+      <section>
+        <a href="#" class="banner_line bg_primary">
+          <span>아모스 품평 자문단 <em>‘살롱 엑스퍼트’</em> 모집 안내</span>
+        </a>
+      </section>
+      <section class="sec_product">
+        <div class="inner">
+          <div class="tit_area">
+            <h2>멋내기 컬러<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
+            <p class="desc">맑고 풍부한 컬러감, 균일한 컬러 연출</p>
+          </div>
+          <div style="height:360px;background-color:beige"></div>
+        </div>
+      </section>
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+</body>
 
- <script>
-   const mainSwiper1 = new Swiper('#swiper1', {
-     pagination: {
-       el: "#swiper1 .swiper-pagination",
-       type: "fraction",
-     },
-   });
- </script>
+<script>
+  const mainSwiper1 = new Swiper('#swiper1', {
+    pagination: {
+      el: "#swiper1 .swiper-pagination",
+      type: "fraction",
+    },
+  });
+</script>
+
 </html>
