@@ -35,6 +35,21 @@ var include = {
       </div><!-- //.appbar -->
     `)
   },
+  mainTabMenu: function () {
+    document.write(`
+      <div class="tab_menu line_tab is_scroll">
+        <ul>
+          <li class="current tab_list" data-tab="tab4-1"><button>홈</button></li>
+          <li class="tab_list" data-tab="tab4-2"><button>상품구매</button></li>
+          <li class="tab_list" data-tab="tab4-3"><button>거래원장</button></li>
+          <li class="tab_list" data-tab="tab4-4"><button>정기교육</button></li>
+          <li class="tab_list" data-tab="tab4-5"><button>아모스TV</button></li>
+          <li class="tab_list" data-tab="tab4-5"><button>이벤트</button></li>
+        </ul>
+        <div class="tab_bar" style="width: 84px; left: 20px;"></div>
+      </div><!-- //.tab_menu -->
+    `)
+  },
   tabBar: function () {
     document.write(`
       <div class="btm_bar is_nav">

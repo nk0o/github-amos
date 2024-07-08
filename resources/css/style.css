@@ -4547,6 +4547,9 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 
 .btm_bar {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   height: 100px;
   padding: 16px 0 32px;
   background-color: #ffffff;
@@ -4658,6 +4661,10 @@ div.dataTables_wrapper .btn_floating:focus {
           box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
+header {
+  background-color: #ffffff;
+}
+
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner {
   padding: 0 20px;
 }
@@ -4759,4 +4766,25 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.5555;
   font-family: "aritadt", sans-serif;
+}
+
+.swiper-container {
+  height: 300px;
+  color: #ffffff;
+  background-color: #6E93BF;
+}
+
+.swiper-pagination {
+  top: auto;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  text-align: right;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.swiper-pagination-total {
+  opacity: 0.7;
 }
