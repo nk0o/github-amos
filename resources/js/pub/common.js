@@ -12,6 +12,7 @@ $(document).ready(function () {
   if ($('.input_text').length > 0) { addInputClearBtn() }
   if ($('.modal_container').length > 0) { modalUI() }
   if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
+  if ($('.floating_side').length > 0) { floatingSideUI() }
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
@@ -434,4 +435,15 @@ function bottomSheetUI(){
   $('.btm_sheet_close').click(function() {
     $(this).parents('.btm_sheet').removeClass('show')
   });
+}
+
+function floatingSideUI(){
+  $('.floating_side .anchor').click(function(){
+    $(this).parents('.floating_side').addClass('is_expanded');
+    $("body").addClass("no_scroll");
+  })
+  $('.floating_side .anchor_close').click(function(){
+    $(this).parents('.floating_side').removeClass('is_expanded');
+    $("body").removeClass("no_scroll");
+  })
 }
