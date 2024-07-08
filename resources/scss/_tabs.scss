@@ -118,7 +118,7 @@
 
 .tab_center_wrap {
   .tab_center {
-    // white-space: nowrap;
+    white-space: nowrap;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -130,8 +130,8 @@
         display: none;
       }
       .tab_list {
-        // display: inline-block;
-        // flex: none;
+        display: inline-block;
+        flex: none;
       }
     }
     &.line {

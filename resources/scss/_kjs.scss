@@ -1,16 +1,28 @@
 .thumb_tab {
   padding-top: 20px;
   .tab_menu {
+    // padding-right: 15px;
     > ul {
-      padding: 0 15px;
-      gap: 5px;
+      padding-left: 15px;
+      // &:after {
+      //   display: inline-block;
+      //   width: 30px;
+      //   height: 80px;
+      //   background-color: ;
+      //   content: '';
+      // }
     }
+    // li {
+    //   width: 84px;
+    //   flex-shrink: 0;
+    // }
     .tab_list {
-      min-width: 82px;
+      width: 84px;
       opacity: 0.5;
       &.current {
         opacity: 1;
       }
+      
       .img {
         width: 72px;
         height: 72px;
@@ -32,3 +44,6 @@
     }
   }
 }
+
+
+
