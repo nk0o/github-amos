@@ -7,10 +7,12 @@ var include = {
   scripts: function () {
     document.write('<script src="../resources/js/libs/jquery- v1.11.1.min.js"></script>');
     document.write('<script src="../resources/js/libs/jquery-ui.min.js"></script>');
-    document.write('<script src="../resources/js/libs/jquery.slimscroll.min.js"></script>');
+    document.write('<script src="../resources/js/libs/swiper.min.js"></script>');
     document.write('<script src="../resources/js/pub/common.js"></script>');
   },
   style: function () {
+    document.write('<link rel="stylesheet" href="../resources/css/jquery-ui.min.css"></link>');
+    document.write('<link rel="stylesheet" href="../resources/css/swiper-bundle.min.css"></link>');
     document.write('<link rel="stylesheet" href="../resources/css/style.css"></link>');
   },
   header: function () {
