@@ -115,3 +115,29 @@
     }
   }
 }
+
+.tab_center_wrap {
+  .tab_center {
+    white-space: nowrap;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    ul {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap; 
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .tab_list {
+        display: inline-block;
+        flex: none;
+        &.current {
+          border-bottom: 2px solid #2A3136;
+        }
+      }
+    }
+  }
+}
+
