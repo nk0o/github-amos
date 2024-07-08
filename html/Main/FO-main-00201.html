@@ -12,25 +12,46 @@
 </head>
 
 <body>
-   <!-- wrap -->
    <div id="wrap">
-      <!-- header -->
-      <header></header>
-      <!-- // header -->
-      <!-- container -->
-      <main id="container">
-         <!-- section -->
-         <section>
-
-         </section>
-         <!-- //section -->
-      </main>
-      <!-- // container -->
-      <!-- footer -->
-      <script>include.footer();</script>
-      <!-- //footer -->
+     <header>
+       <script>include.appBar();</script>
+       <script>include.mainTabMenu();</script>       
+     </header>    
+     <!-- //header -->
+     <main id="container">
+       <section>
+         <div id="swiper1" class="swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Promotion Area-1</div>
+              <div class="swiper-slide">Promotion Area-2</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div><!-- //.swiper-container -->
+       </section>
+       <section>
+         <div class="banner_line">아모스 품평 자문단 ‘살롱 엑스퍼트’ 모집 안내</div>
+       </section>
+       <section></section>
+     </main>
+     <!-- //#container -->
+     <!-- footer -->
+     <script>include.footer();</script>
+     <!-- //footer -->
+     <!-- tabBar -->
+     <script>include.tabBar();</script>
+     <!-- //tabBar -->
    </div>
-   <!-- //wrap -->
-</body>
+   <!-- floatingSide -->
+   <script>include.floatingSide();</script>
+   <!-- //floatingSide -->
+ </body>
 
+ <script>
+   const mainSwiper1 = new Swiper('#swiper1', {
+     pagination: {
+       el: "#swiper1 .swiper-pagination",
+       type: "fraction",
+     },
+   });
+ </script>
 </html>

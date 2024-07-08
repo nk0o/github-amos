@@ -38,6 +38,9 @@
 }
 //Tab Bar
 .btm_bar{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   height: 100px;
   padding: 16px 0 32px;
   background-color: $color-white;

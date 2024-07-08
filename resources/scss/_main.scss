@@ -1,0 +1,16 @@
+.swiper-container{
+  height: 300px;
+  color:$color-white;
+  background-color: #6E93BF;
+}
+.swiper-pagination{
+  top: auto;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  text-align: right;
+  @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
+  &-total{
+    opacity: 0.7;
+  }
+}
