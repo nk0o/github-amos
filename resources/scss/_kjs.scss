@@ -1,0 +1,34 @@
+.thumb_tab {
+  padding-top: 20px;
+  .tab_menu {
+    > ul {
+      padding: 0 15px;
+      gap: 5px;
+    }
+    .tab_list {
+      min-width: 82px;
+      opacity: 0.5;
+      &.current {
+        opacity: 1;
+      }
+      .img {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .img_tit {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        @include fontStyle($gray-950, $fs-xs, $fw-sb, 1);
+      }
+    }
+  }
+}
