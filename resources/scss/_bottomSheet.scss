@@ -1,11 +1,10 @@
 //Bottom Sheet
 .btm_sheet {
-  /* Bottom Sheet 지역변수 */
+  //변수
   $BtmSheetRadius: 32px;
   display: none;
   position: relative;
   .inner {
-    & > *{border: 1px solid;}
     //min-height: 200px;
     position:fixed;
     z-index: 2;
@@ -58,13 +57,12 @@
       height: 20px;
       margin-left: 32px;
       cursor: pointer;
+      &::before{
+        background-color: $color-primary !important;
+      }
     }
   }
   &_btns{
     padding:0 32px 32px;
-  }
-  //Mobile Select Box
-  &_select{
-
   }
 }
