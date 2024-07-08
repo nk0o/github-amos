@@ -5,22 +5,49 @@ var include = {
     document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
   },
   scripts: function () {
-    document.write('<script src="../resources/js/libs/jquery- v1.11.1.min.js"></script>');
-    document.write('<script src="../resources/js/libs/jquery-ui.min.js"></script>');
-    document.write('<script src="../resources/js/libs/swiper.min.js"></script>');
-    document.write('<script src="../resources/js/pub/common.js"></script>');
+    document.write('<script src="../../resources/js/libs/jquery- v1.11.1.min.js"></script>');
+    document.write('<script src="../../resources/js/libs/jquery-ui.min.js"></script>');
+    document.write('<script src="../../resources/js/libs/swiper.min.js"></script>');
+    document.write('<script src="../../resources/js/pub/common.js"></script>');
   },
   style: function () {
-    document.write('<link rel="stylesheet" href="../resources/css/jquery-ui.min.css"></link>');
-    document.write('<link rel="stylesheet" href="../resources/css/swiper-bundle.min.css"></link>');
-    document.write('<link rel="stylesheet" href="../resources/css/style.css"></link>');
+    document.write('<link rel="stylesheet" href="../../resources/css/jquery-ui.min.css"></link>');
+    document.write('<link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css"></link>');
+    document.write('<link rel="stylesheet" href="../../resources/css/style.css"></link>');
   },
-  header: function () {
-    document.write(``)
-  },
-  floatingSide: function () {
+  appBar: function () {
     document.write(`
-    
+      <div class="appbar">
+        <div class="inner">
+          <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
+          <div class="btn_toggle txt_in_toggle">
+            <input type="checkbox"/>
+            <label>
+              <span>뉴플랫폼</span>
+              <span>AMOS TV</span>
+            </label>
+          </div>
+          <div class="appbar_util">
+            <button class="ico_search ico_24"><div class="hide">검색</div></button>
+            <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
+          </div>
+        </div>
+      </div><!-- //.appbar -->
+    `)
+  },
+  tabBar: function () {
+    document.write(`
+      <div class="btm_bar is_nav">
+        <div class="inner">
+          <ul class="btm_bar_nav"><!-- li.active -->
+            <li class="active"><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
+            <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
+            <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
+            <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
+            <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
+          </ul>
+        </div>
+      </div><!-- //.btm_bar -->
     `);
   },
   footer: function () {
@@ -30,7 +57,7 @@ var include = {
           <ul class="accord_list">
             <li class="accord_head">
               <div class="accord_tit">
-                <div class="logo"><img src="../resources/images/logo.svg" alt="아모레프로페셔널"></div>
+                <div class="logo"><img src="../../resources/images/logo.svg" alt="아모레프로페셔널"></div>
               </div>
               <div class="accord_cont">
                 <div class="f_cs">
@@ -58,6 +85,18 @@ var include = {
           <p class="f_copyright">Copyright &copy; <span>아모스프로페셔널.</span> All rights reserved.</p>
         </div>
       </footer>
+    `);
+  },
+  floatingSide: function () {
+    document.write(`
+      <ul class="floating_side">
+        <li>
+          <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+        </li>
+        <li>
+          <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
+        </li>
+      </ul>
     `);
   },
 }

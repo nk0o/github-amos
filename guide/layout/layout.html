@@ -5,19 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../resources/js/pub/include.js"></script>
+  <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
   <title>Layout</title>
 </head>
 <body>
   <div id="wrap">
-    <header class="appbar">
-      <div class="inner">
-        <nav></nav>
-      </div>
-      <!-- //nav -->
-    </header>
+    <header>
+      <script>include.appBar();</script>
+    </header>    
     <!-- //header -->
     <main id="container">
       <section></section>
@@ -25,8 +22,15 @@
       <section></section>
     </main>
     <!-- //#container -->
-    <footer></footer>
+    <!-- footer -->
+    <script>include.footer();</script>
     <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
   </div>
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
 </body>
 </html>
