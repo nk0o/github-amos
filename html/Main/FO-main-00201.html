@@ -255,18 +255,18 @@
       $({ p: 0 }).animate({ p: per }, {
         duration: 3000,
         step: function (p) {
+          if(p >= 62){
+            bar.css("border-top-color","transparent");
+          }
           bar.css({
             transform: "rotate(" + (45 + (p * 1.8)) + "deg)"
           });
+          /* if( bar.css("transform") >= 170){
+            bar.css("border-top-color","transparent");
+          } */
           val.text(p | 0);
         }
-      }, paint()).delay(200);
-      function paint(){
-        console.log('gk');
-        setTimeout(() => {
-          
-        }, 3000);
-      }
+      }).delay(200);
     });
   })
 </script>
