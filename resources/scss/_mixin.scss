@@ -26,6 +26,14 @@
   -webkit-box-align: center;
   align-items: center;
 }
+@mixin flexBetween {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
 @mixin pos_center {
   position: absolute;
   left: 50%;

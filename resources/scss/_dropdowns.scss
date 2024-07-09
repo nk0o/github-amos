@@ -125,7 +125,7 @@
     min-width: 0;
     .select_box_value {
       height: auto;
-      padding:0 12px 4px 0;
+      padding:0 12px 0 0;
       font-size: 13px;
       line-height: 1;
       border: 0;
@@ -137,7 +137,6 @@
     }
     .select_box_list {
       top:24px;
-      width: 200%;
     }
   }
   &.on {
