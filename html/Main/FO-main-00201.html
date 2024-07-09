@@ -19,7 +19,7 @@
 <body>
   <div id="wrap">
     <header>
-      <script>include.appBar();</script>
+      <script>include.mainAppBar();</script>
       <script>include.mainTabMenu();</script>
     </header>
     <!-- //header -->
@@ -157,7 +157,7 @@
                   <div class="bar"></div>
                 </div>
                 <div class="txt_wrap">
-                  <p><span class="num">50</span>%</p>
+                  <p><span class="num">0</span>%</p>
                   <div class="txt_index">분기 구매금액</div>
                 </div>
               </div>
@@ -260,6 +260,7 @@
           }
           bar.css({
             transform: "rotate(" + (45 + (p * 1.8)) + "deg)"
+            //45 + (100 *1.8)
           });
           /* if( bar.css("transform") >= 170){
             bar.css("border-top-color","transparent");
