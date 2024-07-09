@@ -4127,6 +4127,9 @@ div.dataTables_wrapper .btn_floating:focus {
   width: auto;
   height: 100%;
 }
+.appbar.is_line {
+  border-bottom: 1px solid #eee;
+}
 .appbar_util {
   display: flex;
   justify-content: space-between;
