@@ -1,16 +1,18 @@
 .tabs_area {
   padding-top: 20px;
-  .tab_menu {
-    > .thumb_list {
-      padding-left: 15px;
-    }
-    .thumb_list {
-      >li {
-        opacity: 0.5;
-        &.current {
-          opacity: 1;
-        }
+}
+.thumb_tab {
+  .thumb_list {
+    padding-left: 15px;
+    .tab_list {
+      opacity: 0.5;
+      &.current {
+        opacity: 1;
       }
     }
   }
 }
+
+
+
+

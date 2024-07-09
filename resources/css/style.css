@@ -4573,12 +4573,13 @@ footer .f_company {
 .tabs_area {
   padding-top: 20px;
 }
-.tabs_area .tab_menu > .thumb_list {
+
+.thumb_tab .thumb_list {
   padding-left: 15px;
 }
-.tabs_area .tab_menu .thumb_list > li {
+.thumb_tab .thumb_list .tab_list {
   opacity: 0.5;
 }
-.tabs_area .tab_menu .thumb_list > li.current {
+.thumb_tab .thumb_list .tab_list.current {
   opacity: 1;
 }/*# sourceMappingURL=style.css.map */
