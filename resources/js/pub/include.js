@@ -15,7 +15,7 @@ var include = {
     document.write('<link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css"></link>');
     document.write('<link rel="stylesheet" href="../../resources/css/style.css"></link>');
   },
-  appBar: function () {
+  mainAppBar: function () {
     document.write(`
       <div class="appbar">
         <div class="inner">
@@ -37,18 +37,33 @@ var include = {
   },
   mainTabMenu: function () {
     document.write(`
-      <div class="tab_menu line_tab is_scroll">
+    <div class="tab_center_wrap">
+      <div class="tab_menu tab_center line">
         <ul>
-          <li class="current tab_list" data-tab="tab4-1"><button>홈</button></li>
-          <li class="tab_list" data-tab="tab4-2"><button>상품구매</button></li>
-          <li class="tab_list" data-tab="tab4-3"><button>거래원장</button></li>
-          <li class="tab_list" data-tab="tab4-4"><button>정기교육</button></li>
-          <li class="tab_list" data-tab="tab4-5"><button>아모스TV</button></li>
-          <li class="tab_list" data-tab="tab4-5"><button>이벤트</button></li>
+          <li class="current tab_list"><button>홈</button></li>
+        <li class="tab_list"><button>상품구매</button></li>
+        <li class="tab_list"><button>거래원장</button></li>
+        <li class="tab_list"><button>정기교육</button></li>
+        <li class="tab_list"><button>아모스TV</button></li>
+        <li class="tab_list"><button>이벤트</button></li>
         </ul>
-        <div class="tab_bar" style="width: 84px; left: 20px;"></div>
-      </div><!-- //.tab_menu -->
+      </div>
+    </div><!-- //.tab_center_wrap -->
     `)
+  },
+  subAppBarType1: function(){
+    document.write(`
+      <div class="appbar is_line">
+        <div class="inner">
+          <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
+          <h2 class="appbar_tit">서브 페이지(Type1) 제목</h2>
+          <div class="appbar_util">
+            <button class="ico_search ico_24"><span class="hide">검색</span></button>
+            <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
+          </div>
+        </div>
+      </div>
+    `);
   },
   tabBar: function () {
     document.write(`
