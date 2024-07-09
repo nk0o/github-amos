@@ -2919,7 +2919,6 @@ select {
 /* Tab Menu */
 .tab_cont {
   padding: 16px;
-  background-color: #f6f6f6;
 }
 .tab_cont_item {
   display: none;
