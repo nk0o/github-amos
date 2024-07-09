@@ -4788,6 +4788,7 @@ footer .f_company {
 .prd_list_sm .prd_box .prd .img {
   width: 73px;
   height: 73px;
+  flex-shrink: 0;
 }
 .prd_list_sm .prd_box .prd .info {
   flex-grow: 1;
