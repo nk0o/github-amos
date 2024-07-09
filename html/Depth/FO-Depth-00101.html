@@ -14,16 +14,7 @@
 <body>
   <div id="wrap">
     <header>
-      <div class="appbar">
-        <div class="inner">
-          <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
-          <h2 class="appbar_tit">살롱 서포트</h2>
-          <div class="appbar_util">
-            <button class="ico_search ico_24"><span class="hide">검색</span></button>
-            <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
-          </div>
-        </div>
-      </div>
+      <script>include.subAppBarType1();</script>
     </header>    
     <!-- //header -->
     <main id="container">      
@@ -31,45 +22,45 @@
       <section class="tabs_area"> 
         <!-- 썸네일 탭 -->
         <div class="tab_center_wrap">
-          <div class="tab_menu tab_center thumb_tab">
+          <div class="tab_menu thumb_tab tab_center">
             <ul class="thumb_list">
-              <li class="current tab_list" data-tab="tab1-00">
+              <li class="tab_list current">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb00.png" alt="컬러">
                 </div>
                 <em class="img_tit">컬러</em>
               </li>
-              <li class="tab_list" data-tab="tab1-11">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb01.png" alt="펌">
                 </div>
                 <em class="img_tit">펌</em>
               </li>
-              <li class="tab_list" data-tab="tab1-22">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb02.png" alt="클리닉">
                 </div>
                 <em class="img_tit">클리닉</em>
               </li>
-              <li class="tab_list" data-tab="tab1-33">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb03.png" alt="살롱 서포트">
                 </div>
                 <em class="img_tit">살롱 서포트</em>
               </li>
-              <li class="tab_list" data-tab="tab1-44">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb04.png" alt="스칼프케어">
                 </div>
                 <em class="img_tit">스칼프케어</em>
               </li>
-              <li class="tab_list" data-tab="tab1-55">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb05.png" alt="헤어케어">
                 </div>
                 <em class="img_tit">헤어케어</em>
               </li>
-              <li class="tab_list" data-tab="tab1-66">
+              <li class="tab_list">
                 <div class="img">
                   <img src="../../resources/images/contents/img_prd_thumb06.png" alt="스타일링">
                 </div>
@@ -79,13 +70,172 @@
           </div>
         </div>
         <!-- //썸네일 탭 -->
+        
+        <!-- 컨테인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="tab_menu contain_tab tab_center">
+            <ul>
+              <li class="tab_list current"><button>전체보기</button></li>
+              <li class="tab_list"><button>탈모 케어</button></li>
+              <li class="tab_list"><button>비듬 케어</button></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //컨테인 탭 -->
       </section>
       <!-- //탭 영역 -->
-      <section>
 
+      <section class="prd_cont">
+        <div class="inner">
+          <div class="prd_list_top">
+            <p class="count"><span><em>36</em>개</span>의 상품이 있습니다.</p>
+            <!-- 옵션값 -->
+            <div class="select_box type3">
+              <div class="select_box_value" data-btmsheet="btmSheetSort"><span>관리자지정값</span></div>
+              <div class="select_box_list">
+                <ul>
+                  <li><span>관리자지정값</span></li>
+                  <li><span>이름순</span></li>
+                  <li><span>가격순</span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- //옵션값 -->
+          </div>
+          <!-- 상품 리스트 -->
+          <div class="prd_list_wrap">
+            <!-- 썸네일형 -->
+            <div class="prd_list_lg">
+              <!-- 상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <!-- //상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일형 -->
+          </div>
+          <!-- //상품 리스트 -->
+
+
+          <!--  -->
+          <div class="prd_list_sm">
+            <div class="prd_box">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                  <span class="badge bg_primary">묶음</span>
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_view ico_16"></i>상세보기</a>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+
+        </div>
       </section>
     </main>
     <!-- //#container -->
+
+    <!-- Bottom Sheet -->
+    <div class="btm_sheet" id="btmSheetSort">
+      <div class="btm_sheet_back"></div>
+      <div class="inner">
+        <div class="btm_sheet_head">
+          <p class="tit">옵션값</p>
+          <button type="button" class="btm_sheet_close ico_close"></button>
+        </div><!-- //.btm_sheet_head -->
+        <div class="btm_sheet_cont check_list">
+          <ul class="input_check_list">
+            <li>
+              <div class="input_radio_wrap without_box">
+                <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked>
+                <label for="radio-1-1">관리자지정값</label>
+              </div>
+            </li>
+            <li>
+              <div class="input_radio_wrap without_box">
+                <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+                <label for="radio-1-2">이름순</label>
+              </div>
+            </li>
+            <li>
+              <div class="input_radio_wrap without_box">
+                <input type="radio" id="radio-1-3" class="input_radio" name="radio-item-1">
+                <label for="radio-1-3">가격순</label>
+              </div>
+            </li>
+          </ul>
+        </div><!-- //.btm_sheet_cont -->
+        <div class="btm_sheet_btns">
+          <button type="button" class="btn_bottom btm_sheet_close">확인</button>
+        </div><!-- //.btm_sheet_btns -->
+      </div><!-- //.inner -->
+    </div><!-- //.btm_sheet -->
+    <!-- //Bottom Sheet -->
 
     <!-- tabBar -->
     <script>include.tabBar();</script>

@@ -15,6 +15,9 @@
       height: 100%;
     }
   }
+  &.is_line {
+    border-bottom: 1px solid #eee;
+  }
   &_util{
     display: flex;
     justify-content: space-between;

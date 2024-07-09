@@ -12,10 +12,132 @@
     }
   }
 }
-div {
 
+.prd_cont {
+  padding-bottom: 500px;
+  .prd_list_top {
+    @include flexBetween;
+    padding: 20px 0;
+    .count {
+      font-size: $fs-xs;
+      color: $gray-600;
+      span {
+        em {
+          color: $gray-950;
+          font-weight: $fw-sb;
+        }
+      }
+    }
+  }
 }
 
+.prd_box {
+  .prd {
+    .img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .badge {
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+    }
+    .tit {
+      font-size: $fs-sm;
+      font-weight: $fw-sb;
+      color: $gray-950;
+      line-height: 1.25rem;
+      letter-spacing: -0.3px;
+    }
+    .amount {
+      display: block;
+      margin-top: 4px;
+      color: $gray-900;
+      font-size: $fs-s;
+      font-weight: 400;
+      letter-spacing: -0.28px;
+    }
+    .price {
+      margin-top: 8px;
+      color: $gray-950;
+      font-size: $fs-md;
+      letter-spacing: -0.34px;
+      em {
+        font-weight: $fw-sb;
+      }
+      span {
+        display: inline-block;
+        font-size: $fs-sm;
+        font-weight: $fw-sb;
+        vertical-align: 1px;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+
+//썸네일형
+.prd_list_lg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 9px;
+  .prd_box {
+    width: calc((100% - 9px)/2);
+    .prd {
+      .img {
+        background-color: $gray-50;
+      }
+      .info {
+        margin-top: 12px;
+        .tit {
+          display: block;
+        }
+        .price {
+          margin-top: 12px;
+        }
+      }
+    }
+    .bottom {
+      margin-top: 10px;
+    }
+  }
+}
+
+// 리스트형
+.prd_list_sm {
+  gap: 20px;
+  .prd_box {
+    position: relative;
+    width: 100%;
+    .prd {
+      display: flex;
+      gap: 16px;
+      .img {
+        width: 73px;
+        height: 73px;
+        flex-shrink: 0;
+      }
+      .info {
+        flex-grow: 1;
+      }
+    }
+    .bottom {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
 
 
 
