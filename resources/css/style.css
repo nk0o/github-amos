@@ -4380,29 +4380,39 @@ footer .f_company {
 .thumb_tab {
   padding-top: 20px;
 }
-.thumb_tab .tab_menu > ul {
+.thumb_tab .tab_menu > .thumb_list {
   padding-left: 15px;
 }
-.thumb_tab .tab_menu .tab_list {
-  width: 84px;
+.thumb_tab .tab_menu .thumb_list > li {
   opacity: 0.5;
 }
-.thumb_tab .tab_menu .tab_list.current {
+.thumb_tab .tab_menu .thumb_list > li.current {
   opacity: 1;
 }
-.thumb_tab .tab_menu .tab_list .img {
-  width: 72px;
-  height: 72px;
+
+.thumb_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 5px;
+}
+.thumb_list > li {
+  width: calc(25% - 5px);
+  height: auto;
+}
+.thumb_list > li .img {
+  width: calc(100% - 6px);
+  height: auto;
+  aspect-ratio: 1;
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
 }
-.thumb_tab .tab_menu .tab_list .img img {
+.thumb_list > li .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.thumb_tab .tab_menu .tab_list .img_tit {
+.thumb_list > li .img_tit {
   display: block;
   text-align: center;
   margin-top: 6px;
