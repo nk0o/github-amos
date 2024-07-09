@@ -1,49 +1,52 @@
 .thumb_tab {
   padding-top: 20px;
   .tab_menu {
-    // padding-right: 15px;
-    > ul {
+    > .thumb_list {
       padding-left: 15px;
-      // &:after {
-      //   display: inline-block;
-      //   width: 30px;
-      //   height: 80px;
-      //   background-color: ;
-      //   content: '';
-      // }
     }
-    // li {
-    //   width: 84px;
-    //   flex-shrink: 0;
-    // }
-    .tab_list {
-      width: 84px;
-      opacity: 0.5;
-      &.current {
-        opacity: 1;
-      }
-      
-      .img {
-        width: 72px;
-        height: 72px;
-        margin: 0 auto;
-        border-radius: 8px;
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+    .thumb_list {
+      >li {
+        opacity: 0.5;
+        &.current {
+          opacity: 1;
         }
-      }
-      .img_tit {
-        display: block;
-        text-align: center;
-        margin-top: 6px;
-        @include fontStyle($gray-950, $fs-xs, $fw-sb, 1);
       }
     }
   }
 }
+
+
+
+// 썸네일 리스트
+.thumb_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 5px;
+  >li {
+    width: calc(25% - 5px);
+    height: auto;
+    .img {
+      width: calc(100% - 6px);
+      height: auto;
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .img_tit {
+      display: block;
+      text-align: center;
+      margin-top: 6px;
+      @include fontStyle($gray-950, $fs-xs, $fw-sb, 1);
+    }
+  }
+}
+
 
 
 

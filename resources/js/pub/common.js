@@ -46,6 +46,7 @@ $(document).ready(function () {
           boxWid = $('.tab_center').outerWidth(),
           boxHalf = $('.tab_center').outerWidth() / 2,
           leftPos = 0,
+          pd = $(el).parent('ul').css('padding-left') * 2,
           selectPos,
           pos;
           $(el).parents('.tab_center').find('.tab_list').each(function() {
@@ -62,6 +63,7 @@ $(document).ready(function () {
       } else {
           pos = selectPos - boxHalf;
       }
+
       $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
     }
   }
