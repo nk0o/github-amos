@@ -471,3 +471,33 @@
     text-align: center !important;
   }
 }
+
+// 썸네일 리스트
+.thumb_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 5px;
+  >li {
+    width: calc((100% - 15px)/4);
+    height: auto;
+    .img {
+      width: calc(100% - 8px);
+      height: auto;
+      aspect-ratio: 1;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .img_tit {
+      display: block;
+      text-align: center;
+      margin-top: 6px;
+      @include fontStyle($gray-950, $fs-xs, $fw-sb, 1);
+    }
+  }
+}
