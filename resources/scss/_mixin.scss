@@ -101,6 +101,30 @@
   @include iconImgPath("ico_dropdown_arr_24.svg");
   background-color: $gray-600 !important;
 }
+@mixin selectArrowType2 {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  @include iconImgPath("ico_arrow.svg");
+  background-color: $gray-600 !important;
+}
+@mixin selectArrowType3 {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  @include iconImgPath("ico_arrow.svg");
+  background-color: $gray-600 !important;
+}
 @mixin blind {
   position: absolute;
   overflow: hidden;
