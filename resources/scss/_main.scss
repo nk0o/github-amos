@@ -58,3 +58,97 @@
     }
   }
 }
+/* 메인 - 반원 그래프 */
+.half_progress {
+  & > *{border:1px solid}
+  width: 150px;
+  height: 84px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  .txt_wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    .txt_range {
+      letter-spacing: -0.0375rem;
+      font-family: "Suit tuneh";
+      font-size: 1.0625rem;
+      font-weight: 700;
+      line-height: 1.56;
+      &.type01 {
+        color: #fed637;
+      }
+      &.type02 {
+        color: #91d47a;
+      }
+      &.type03 {
+        color: #2acfb7;
+      }
+    }
+    .txt_index {
+      letter-spacing: -0.046875rem;
+      font-family: "Suit tuneh";
+      font-size: 0.8125rem;
+      font-weight: 500;
+      line-height: 1.54;
+    }
+  }
+  .bar_overflow {
+    position: relative;
+    //overflow: hidden;
+    width: 150px;
+    height: 90px;
+    margin-bottom: 10px;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      transform: rotate(45deg);
+      border: 1rem solid transparent;
+      border-radius: 50%;
+      background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #33ECA9 19%, #33ECA9 92%) border-box;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+    .bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1rem solid #ebeff5;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      transform: rotate(45deg);
+    }
+  }
+  .left {
+    position: absolute;
+    background: #fed637;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  .right { 
+    position: absolute;
+    background: #ebeff5;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden; 
+  }
+}
