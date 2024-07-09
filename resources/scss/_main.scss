@@ -21,7 +21,7 @@
   .sec_product{
     padding-top: 32px;
     position: relative;
-     &::before{
+    &::before{
       content: '';
       z-index: -1;
       position: absolute;
@@ -29,7 +29,38 @@
       width: 100%;
       height: 210px;
       background-color: $color-primary;
-     }
+    }
+    &.is_noBack{
+      &::before{
+        background-color: transparent;
+      }
+      .tit_area{
+        h2{
+          color: $gray-950;
+        }
+      }
+    }
+  }
+  .sec_banner{
+    margin: 0;
+  }
+  .sec_amount{
+    padding: 24px 0 40px;
+    h2{
+      color: $color-white;
+      @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
+    }
+    ul{
+      display: flex;
+      gap: 8px;
+    }
+    li{
+      flex: 1;
+      padding: 19px 14px;
+      background-color: $color-white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.03);
+    }
   }
   .tit_area{
     padding:0 0 24px 0;
@@ -47,6 +78,7 @@
     }
   }
 }
+/* 메인 띠베너 */
 .banner_line{
   @include flexCenter;
   height: 40px;
@@ -58,49 +90,32 @@
     }
   }
 }
-/* 메인 - 반원 그래프 */
+/* 메인 반원 그래프 */
 .half_progress {
-  & > *{border:1px solid}
+  //& > *{border:1px solid}
   width: 150px;
-  height: 84px;
+  height: 110px;
   margin: 0 auto;
   position: relative;
   text-align: center;
+  .num{
+    @include fontStyle($gray-950, $fs-xlg, $fw-b, 1.4);
+  }
   .txt_wrap {
     position: absolute;
-    bottom: 0;
+    top: 40px;
     left: 0;
     width: 100%;
     text-align: center;
-    .txt_range {
-      letter-spacing: -0.0375rem;
-      font-family: "Suit tuneh";
-      font-size: 1.0625rem;
-      font-weight: 700;
-      line-height: 1.56;
-      &.type01 {
-        color: #fed637;
-      }
-      &.type02 {
-        color: #91d47a;
-      }
-      &.type03 {
-        color: #2acfb7;
-      }
-    }
-    .txt_index {
-      letter-spacing: -0.046875rem;
-      font-family: "Suit tuneh";
-      font-size: 0.8125rem;
-      font-weight: 500;
-      line-height: 1.54;
-    }
+  }
+  .txt_index {
+    @include fontStyle($gray-800, $fs-xxs, $fw-m, 1.333);
   }
   .bar_overflow {
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
     width: 150px;
-    height: 90px;
+    height: 110px;
     margin-bottom: 10px;
     &::before {
       content: "";
@@ -111,11 +126,12 @@
       width: 150px;
       height: 150px;
       transform: rotate(45deg);
-      border: 1rem solid transparent;
+      border: 5px solid transparent;
       border-radius: 50%;
-      background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #33ECA9 19%, #33ECA9 92%) border-box;
+      border-color: #33ECA9;
       background-origin: border-box;
       background-clip: content-box, border-box;
+      box-sizing: border-box;
     }
     .bar {
       position: absolute;
@@ -125,30 +141,38 @@
       height: 150px;
       border-radius: 50%;
       box-sizing: border-box;
-      border: 1rem solid #ebeff5;
+      border: 5px solid $gray-100;
       border-bottom-color: transparent;
       border-right-color: transparent;
       transform: rotate(45deg);
     }
   }
   .left {
+    z-index: 1;
     position: absolute;
-    background: #fed637;
-    width: 1rem;
-    height: 1rem;
+    background: $gray-100;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    left: 0;
-    bottom: 0;
+    left: 9px;
+    bottom: -3px;
     overflow: hidden;
   }
   .right { 
     position: absolute;
-    background: #ebeff5;
-    width: 1rem;
-    height: 1rem;
+    background: $gray-100;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    right: 0;
-    bottom: 0;
+    right: 9px;
+    bottom: -3px;
     overflow: hidden; 
+  }
+  &.orange{
+    .bar_overflow {
+      &::before{
+        border-color: $color-orange;
+      }
+    }
   }
 }
