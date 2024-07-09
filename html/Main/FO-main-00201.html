@@ -9,13 +9,7 @@
   <script>include.scripts();</script>
   <script>include.style();</script>
   <title>MAIN</title>
-  <style>
-    section {
-      border: 1px solid;
-    }
-  </style>
 </head>
-
 <body>
   <div id="wrap">
     <header>
@@ -37,7 +31,53 @@
         <a href="#" class="banner_line bg_primary">
           <span>아모스 품평 자문단 <em>‘살롱 엑스퍼트’</em> 모집 안내</span>
         </a>
+      </section><!-- // section -->      
+      <section class="sec_amount">
+        <div class="tit_area">
+          <h2>PURCHASE AMOUNT</h2>
+        </div>
+        <div class="inner">
+          <ul>
+            <li>
+              <div class="half_progress">
+                <div class="left"></div>
+                <div class="right"><div class="back"></div></div>
+                <div class="bar_overflow">
+                  <div class="bar"></div>
+                </div>
+                <div class="txt_wrap">
+                  <p><span class="num">58</span>%</p>
+                  <div class="txt_index">분기 구매금액</div>
+                </div>
+              </div>
+              <div class="price"><span>1,740,000</span><em>원</em></div>
+            </li>
+            <li>
+              <div class="half_progress orange">
+                <div class="left"></div>
+                <div class="right"><div class="back"></div></div>
+                <div class="bar_overflow">
+                  <div class="bar"></div>
+                </div>
+                <div class="txt_wrap">
+                  <p><span class="num">60</span>%</p>
+                  <div class="txt_index">분기 구매금액</div>
+                </div>
+              </div>
+              <div class="price"><span>18,000,000</span><em>원</em></div>
+            </li>
+          </ul>
+        </div>
       </section><!-- // section -->
+      <section class="sec_product is_noBack">
+        <div class="inner">
+          <div class="tit_area">
+            <h2>최근 구매한 상품<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
+          </div>
+          <div style="height: 375px; background-color: beige;"></div>
+        </div>
+      </section><!-- // section -->
+      <section class="hr_divider"></section><!-- // section -->
       <section>
         <div class="inner">
           <!-- 탭 메뉴 -->
@@ -130,40 +170,7 @@
               </ul>
             </div>
           </div><!-- //tab_cont -->
-        </div>
-      </section><!-- // section -->
-      <section class="sec_amount bg_primary">
-        <h2>PURCHASE AMOUNT</h2>
-        <div class="inner">
-          <ul>
-            <li>
-              <div class="half_progress">
-                <div class="left"></div>
-                <div class="right"><div class="back"></div></div>
-                <div class="bar_overflow">
-                  <div class="bar"></div>
-                </div>
-                <div class="txt_wrap">
-                  <p><span class="num">100</span>%</p>
-                  <div class="txt_index">분기 구매금액</div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="half_progress orange">
-                <div class="left"></div>
-                <div class="right"><div class="back"></div></div>
-                <div class="bar_overflow">
-                  <div class="bar"></div>
-                </div>
-                <div class="txt_wrap">
-                  <p><span class="num">0</span>%</p>
-                  <div class="txt_index">분기 구매금액</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        </div> 
       </section><!-- // section -->
       <section class="sec_product">
         <div class="inner">
@@ -173,15 +180,7 @@
           </div>
           <div style="height: 375px; background-color: beige;"></div>
         </div>
-      </section><!-- // section -->
-      <section class="sec_product is_noBack">
-        <div class="inner">
-          <div class="tit_area">
-            <h2>최근 구매한 상품<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
-          </div>
-          <div style="height: 375px; background-color: beige;"></div>
-        </div>
-      </section><!-- // section -->
+      </section><!-- // section -->     
     </main>
     <!-- //#container -->
     <!-- footer -->
@@ -245,26 +244,29 @@
         type: "fraction",
       },
     });
+    //분기금액 인터렉션
     $(".half_progress").each(function () {
       var analysisType = $(this).find(".aType").text();
       var bar = $(this).find(".bar");
       var val = $(this).find(".num");//퍼센트값
       var per = parseInt(val.text(), 10);
       var $right = $('.right');
-      var $back = $('.back');
+      var $back = $('.back');      
+      if(per <=45){
+        bar.css("border-right-color", "#eeeeee");
+      }
       $({ p: 0 }).animate({ p: per }, {
         duration: 3000,
         step: function (p) {
-          if(p >= 62){
-            bar.css("border-top-color","transparent");
-          }
           bar.css({
-            transform: "rotate(" + (45 + (p * 1.8)) + "deg)"
-            //45 + (100 *1.8)
+            transform: "rotate(" + (15 + (p * 2.4)) + "deg)"
           });
-          /* if( bar.css("transform") >= 170){
-            bar.css("border-top-color","transparent");
-          } */
+          if(p >=36){
+            bar.css("border-right-color", "transparent");
+          }
+          if(p >=75){
+            bar.css("border-top-color", "transparent");
+          }
           val.text(p | 0);
         }
       }).delay(200);

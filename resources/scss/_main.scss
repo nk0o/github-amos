@@ -18,6 +18,21 @@
   section{
     margin:0 0 60px 0;
   }
+  .tit_area{
+    padding:0 0 24px 0;
+    h2{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include fontStyle($color-white, $fs-lg, $fw-sb, 1.417); 
+    }
+    .ico_chevNext_24::before{
+      background-color:$color-white !important;
+    }
+    .desc{
+      @include fontStyle(#cccccc, $fs-s, $fw-m, 1.214)
+    }
+  }
   .sec_product{
     padding-top: 32px;
     position: relative;
@@ -31,6 +46,7 @@
       background-color: $color-primary;
     }
     &.is_noBack{
+      padding-top: 0;
       &::before{
         background-color: transparent;
       }
@@ -46,9 +62,13 @@
   }
   .sec_amount{
     padding: 24px 0 40px;
-    h2{
-      color: $color-white;
-      @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
+    background-color: $gray-950;
+    .tit_area{
+      h2{
+        justify-content: center;
+        color: $color-white;
+        font-weight: $fw-m;
+      }
     }
     ul{
       display: flex;
@@ -61,20 +81,16 @@
       border-radius: 8px;
       box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.03);
     }
-  }
-  .tit_area{
-    padding:0 0 24px 0;
-    h2{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      @include fontStyle($color-white, $fs-lg, $fw-sb, 1.417); 
-    }
-    .ico_chevNext_24::before{
-      background-color:$color-white !important;
-    }
-    .desc{
-      @include fontStyle(#cccccc, $fs-s, $fw-m, 1.214)
+    .price{
+      @include flexCenter;
+      width: 100%;
+      margin:20px 0 0 0;
+      padding: 12px 0 0 0;
+      border-top: 1px solid $gray-200;
+      @include fontStyle($gray-950, $fs-md, $fw-m, 20px);
+      em{
+        @include fontStyle($gray-950, $fs-s, $fw-sb, 20px);
+      }
     }
   }
 }
@@ -92,7 +108,6 @@
 }
 /* 메인 반원 그래프 */
 .half_progress {
-  //& > *{border:1px solid}
   width: 150px;
   height: 110px;
   margin: 0 auto;
@@ -113,7 +128,7 @@
   }
   .bar_overflow {
     position: relative;
-    //overflow: hidden;
+    overflow: hidden;
     width: 150px;
     height: 110px;
     margin-bottom: 10px;
@@ -125,7 +140,6 @@
       left: 0;
       width: 150px;
       height: 150px;
-      transform: rotate(45deg);
       border: 5px solid transparent;
       border-radius: 50%;
       border-color: #33ECA9;
@@ -143,32 +157,34 @@
       box-sizing: border-box;
       border: 5px solid $gray-100;
       border-bottom-color: transparent;
-      border-right-color: transparent;
-      transform: rotate(45deg);
+      transform: rotate(15deg);
     }
   }
   .left {
     z-index: 1;
     position: absolute;
-    background: $gray-100;
-    width: 5px;
-    height: 5px;
+    background: #33ECA9;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     left: 9px;
-    bottom: -3px;
+    bottom: -2px;
     overflow: hidden;
   }
   .right { 
     position: absolute;
     background: $gray-100;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
-    right: 9px;
-    bottom: -3px;
+    right : 9px;
+    bottom: -2px;
     overflow: hidden; 
   }
   &.orange{
+    .left {
+      background: $color-orange;
+    }
     .bar_overflow {
       &::before{
         border-color: $color-orange;
