@@ -1,3 +1,9 @@
+//Body
+body{
+  &.no_scroll{
+    overflow: hidden;
+  }
+}
 //Header
 header{
   background-color: $color-white;
@@ -8,6 +14,7 @@ header{
 
 //FOOTER
 footer{
+  margin-bottom: 100px;
   padding: 40px 0 60px;
   background-color: $gray-50;
   .accord{
