@@ -59,9 +59,10 @@ $(document).ready(function () {
       if (selectPos < boxHalf) {
           pos = 0;
       } else if (liWid - selectPos < boxHalf) {
-          pos = liWid - boxWid;
-      } else {
-          pos = selectPos - boxHalf;
+          pos = liWid - boxWid + 45;
+      } 
+      else {
+          pos = selectPos - boxHalf + 30;
       }
 
       $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
