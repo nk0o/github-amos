@@ -4421,16 +4421,16 @@ footer .f_company {
   color: #ED7531;
 }
 
-.thumb_tab {
+.tabs_area {
   padding-top: 20px;
 }
-.thumb_tab .tab_menu > .thumb_list {
+.tabs_area .tab_menu > .thumb_list {
   padding-left: 15px;
 }
-.thumb_tab .tab_menu .thumb_list > li {
+.tabs_area .tab_menu .thumb_list > li {
   opacity: 0.5;
 }
-.thumb_tab .tab_menu .thumb_list > li.current {
+.tabs_area .tab_menu .thumb_list > li.current {
   opacity: 1;
 }
 
