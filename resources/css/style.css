@@ -4774,25 +4774,25 @@ footer .f_company {
   margin-top: 10px;
 }
 
-.prd_list_md {
+.prd_list_sm {
   gap: 20px;
 }
-.prd_list_md .prd_box {
+.prd_list_sm .prd_box {
   position: relative;
   width: 100%;
 }
-.prd_list_md .prd_box .prd {
+.prd_list_sm .prd_box .prd {
   display: flex;
   gap: 16px;
 }
-.prd_list_md .prd_box .prd .img {
+.prd_list_sm .prd_box .prd .img {
   width: 73px;
   height: 73px;
 }
-.prd_list_md .prd_box .prd .info {
+.prd_list_sm .prd_box .prd .info {
   flex-grow: 1;
 }
-.prd_list_md .prd_box .bottom {
+.prd_list_sm .prd_box .bottom {
   position: absolute;
   right: 0;
   bottom: 0;
