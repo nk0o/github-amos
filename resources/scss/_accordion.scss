@@ -3,7 +3,7 @@
   &_tit {
     position: relative;
     padding: 12px 56px 12px 12px;
-    font-size: $fs-m;
+    @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
     &::before {
       content: "";
       display: block;
@@ -15,6 +15,7 @@
       height: 16px;
       @include iconImgPath("ico_accord_arr.svg");
       background-size: contain;
+      background-color: $color-primary !important;
       @include trans($prop: all, $duration: 0.3s, $type: ease-out, $delay: 0s);
     }
   }
@@ -67,7 +68,7 @@
           right: auto;
           left: 12px;
           mask:none;
-          background-color: transparent;
+          background-color: transparent !important;
          // @include iconImgPath("ico_faq_Q_16.svg");
         }
       }
@@ -94,6 +95,40 @@
           width: 12px;
           height: 12px;
           //@include iconImgPath("ico_faq_A_16.svg");
+        }
+      }
+    }
+    &.is_plus{
+      .accord_tit{
+        @include flexBetween;
+        padding: 16px 0 16px 12px;
+        .ico_plus{
+          &::before{
+            background-color:$color-primary;
+          }
+        }
+        &::before{
+          display: none;  
+          mask-image: url("../images/icon/ico_plus.svg");
+        }
+      }
+      .accord_head{
+        background-color:transparent;
+        border: 0;
+        border-bottom: 1px solid $color-primary;
+        cursor:default;
+        &.on{
+          .accord_tit{
+            padding-top: 12px;
+            padding-bottom: 8px;
+            font-size: $fs-s;
+            line-height: 1.58;
+            .ico_plus{
+              &::before{
+                mask-image: url("../images/icon/ico_minus.svg");
+              }              
+            }
+          }
         }
       }
     }

@@ -11,7 +11,7 @@
   <title>카테고리 | MAIN | 아모레뉴플렛폼</title>
 </head>
 <body>
-  <div id="wrap"  class="page_category">
+  <div id="wrap" class="page_category">
     <header>
       <script>include.mainAppBar();</script>
     </header>
@@ -19,19 +19,19 @@
     <main id="container">
       <div class="tab_menu line_tab">
         <ul>
-          <li class="tab_list" data-tab="tab1-1"><button>카테고리</button></li>
-          <li class="current tab_list" data-tab="tab1-2"><button>브랜드</button></li>
-          <li class="tab_list" data-tab="tab1-3"><button>서비스</button></li>
+          <li class="current tab_list" data-tab="ctCate"><button>카테고리</button></li>
+          <li class="tab_list" data-tab="ctBrand"><button>브랜드</button></li>
+          <li class="tab_list" data-tab="ctService"><button>서비스</button></li>
         </ul>
         <div class="tab_bar" style="width: 125px; left: 0px;"></div>
       </div>
       <div class="tab_cont">
-        <div id="tab1-1" class="tab_cont_item">
+        <div id="ctCate" class="tab_cont_item current"><!-- 열린탭 컨텐츠 current -->
           <div class="cate_wrap">
             <div class="cate_nav">
               <ul>
-                <li class="current"><a href="#ctColor" class="cate_tit">컬러</a></li>
-                <li><a href="#ctPermr" class="cate_tit">펌</a></li>
+                <li class="active"><a href="#ctColor" class="cate_tit">컬러</a></li>
+                <li><a href="#ctPerm" class="cate_tit">펌</a></li>
                 <li><a href="#ctClinic" class="cate_tit">클리닉</a></li>
                 <li><a href="#ctSalonsupport" class="cate_tit">살롱 서포트</a></li>
                 <li><a href="#ctScalpcare" class="cate_tit">스칼프 케어</a></li>
@@ -126,56 +126,134 @@
             </div><!-- //.cate_list -->
           </div><!-- //.cate_wrap -->
         </div><!-- //.tab_cont_item -->
-        <div id="tab1-2" class="tab_cont_item current">
-          <ul class="brand_list">
-            <li><a href="#">IT’S ABLE</a></li>
-            <li><a href="#">TRUE SYNC</a></li>
-            <li><a href="#">PRISM MIX</a></li>
-            <li><a href="#">IT'S GLOW</a></li>
-            <li><a href="#">GREEN TEA MILD</a></li>
-            <li><a href="#">COLOR LUCID</a></li>
-            <li><a href="#">COLOR SUPPORT</a></li>
-            <li><a href="#">HEAT PERM</a></li>
-            <li><a href="#">NORMAL/MULTI/DOWN  PERM</a></li>
-            <li><a href="#">REPAIR CICA</a></li>
-            <li><a href="#">PRO BASIC</a></li>
-            <li><a href="#">SALON MASTER</a></li>
-            <li><a href="#">THE GREEN TEA</a></li>
-            <li><a href="#">PURE SMART</a></li>
-            <li><a href="#">REPAIR CICA PAIR</a></li>
-            <li><a href="#">IT'S REPAIR CMC</a></li>
-            <li><a href="#">CURLING ESSENCE</a></li>
-            <li><a href="#">SILKY RADIANCE</a></li>
-            <li><a href="#">WAX/SPRAY</a></li>
-            <li><a href="#">STYLING</a></li>
+        <div id="ctBrand" class="tab_cont_item">
+          <ul class="cate_brand">
+            <li style="background-image: url('../../resources/images/category/img_cate_brand01.png');">
+              <a href="#">IT’S ABLE</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand02.png');">
+              <a href="#">
+              TRUE SYNC</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand03.png');">
+              <a href="#">
+              PRISM MIX</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand04.png');">
+              <a href="#">
+              IT'S GLOW</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand05.png');">
+              <a href="#">
+              GREEN TEA MILD</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand06.png');">
+              <a href="#">
+              COLOR LUCID</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand07.png');">
+              <a href="#">
+              COLOR SUPPORT</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand08.png');">
+              <a href="#">
+              HEAT PERM</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand09.png');">
+              <a href="#">
+              NORMAL/MULTI/DOWN  PERM</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand10.png');">
+              <a href="#">
+              REPAIR CICA</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand11.png');">
+              <a href="#">
+              PRO BASIC</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand12.png');">
+              <a href="#">
+              SALON MASTER</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand13.png');">
+              <a href="#">
+              THE GREEN TEA</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand14.png');">
+              <a href="#">
+              PURE SMART</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand15.png');">
+              <a href="#">
+              REPAIR CICA PAIR</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand16.png');">
+              <a href="#">
+              IT'S REPAIR CMC</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand17.png');">
+              <a href="#">
+              CURLING ESSENCE</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand18.png');">
+              <a href="#">
+              SILKY RADIANCE</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand19.png');">
+              <a href="#">
+              WAX/SPRAY</a>
+            </li>
+            <li style="background-image: url('../../resources/images/category/img_cate_brand20.png');">
+              <a href="#">
+              STYLING</a>
+            </li>
           </ul>
-
-
         </div><!-- //.tab_cont_item -->
-        <div id="tab1-3" class="tab_cont_item">
-
-
-
+        <div id="ctService" class="tab_cont_item">
+          <div class="cate_service">
+            <ul class="accord_list is_plus">
+              <li class="accord_head"><!-- 펼침상태: on -->
+                <div class="accord_tit">
+                  <a href="#">거래원장</a>
+                  <button type="button" class="ico_plus ico_20"><span class="hide">펼침버튼</span></button>
+                </div>
+                <div class="accord_cont">
+                  <div class="service_tit">결제내역</div>
+                </div>
+              </li>
+              <li class="accord_head">
+                <div class="accord_tit">
+                  <a href="#">정기교육</a>
+                  <button type="button" class="ico_plus ico_20"><span class="hide">펼침버튼</span></button>
+                </div>
+                <div class="accord_cont">
+                  <div class="service_tit">교육일정</div>
+                  <div class="service_tit">수강신청</div>
+                  <div class="service_tit">수강신청 내역</div>
+                </div>
+              </li>
+              <li class="accord_head no_open">
+                <div class="accord_tit">
+                  <a href="#">이벤트</a>
+                  <!-- <button type="button" class="ico_plus ico_20"><span class="hide">펼침버튼</span></button> -->
+                </div>
+                <div class="accord_cont"></div>
+              </li>
+              <li class="accord_head">
+                <div class="accord_tit">
+                  <a href="#">고객센터</a>
+                  <button type="button" class="ico_plus ico_20"><span class="hide">펼침버튼</span></button>
+                </div>
+                <div class="accord_cont">
+                  <div class="service_tit">공지사항</div>
+                  <div class="service_tit">1:1 문의</div>
+                  <div class="service_tit">의견 나눔의 장</div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div><!-- //.tab_cont_item -->
       </div><!-- //.tab_cont -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
     <!-- //#container -->
     <!-- footer -->
