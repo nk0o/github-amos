@@ -4444,7 +4444,7 @@ header {
 }
 
 footer {
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   padding: 40px 0 60px;
   background-color: #f6f6f6;
 }
@@ -4789,6 +4789,9 @@ footer .f_company {
 }
 
 /* 카테고리 페이지 */
+.page_category header, .page_category .appbar {
+  position: static;
+}
 .page_category .appbar .logo, .page_category .appbar .ico_cart {
   display: none;
 }
