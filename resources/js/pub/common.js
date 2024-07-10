@@ -161,24 +161,39 @@ $(document).ready(function () {
   };
 
   // 상품 담기
-  if($('.prd_box').length > 0) {
-    $('.prd_box .prd').on('click',function() {
+  if ($('.prd_list_wrap.ir').length > 0) {
+    $('.prd_box .prd').on('click', function() {
       let imgSrc = $(this).find('img').attr('src');
-      if($(this).parent().hasClass('checked')) {
-        $(this).parent().removeClass('checked');
-        $(this).parent().find('.ani_cart').remove();
+      let $parent = $(this).parent();
+      if ($parent.hasClass('checked')) {
+        $parent.removeClass('checked');
+        $parent.find('.ani_cart').remove();
       } else {
-        $(this).parent().addClass('checked');
-        $(this).parent().append(
-          '<div class="ani_cart active"><div class="ir_cart"><img scr="" alt=""></div></div>'
-        )
-        $(this).parent().find('.ani_cart img').attr('src',imgSrc)
+        $parent.addClass('checked');
+        $parent.append(
+          '<div class="ani_cart"><div class="ir_cart"><img scr="" alt=""></div></div>'
+        );
+        $parent.find('.ani_cart img').attr('src', imgSrc);
+        $parent.find('.ani_cart').addClass('active');
         setTimeout(function() {
-          $(this).parent().find('.ani_cart').removeClass('active');
-        },1000)
+          $parent.find('.ani_cart').removeClass('active');
+        }, 1000);
       }
       let count = $(this).parents('.prd_list_wrap').find('.prd_box.checked').length;
-      $('.prd_cart_btn .count').text('('+ count +')');
+      $('.prd_cart_btn .count').text('(' + count + ')');
+    });
+    
+    // 장바구니 버튼
+    $('.prd_cart_btn .btn_bottom').on('click',function() {
+      let cartTxt = $(this).siblings('.cart_txt');
+      if(cartTxt.hasClass('active')) {
+        cartTxt.removeClass('active')
+      } else {
+        cartTxt.addClass('active');
+        setTimeout(function() {
+          cartTxt.removeClass('active');
+        }, 2000);
+      }
     })
   }
 }) //ready
@@ -500,20 +515,20 @@ function floatingSideUI(){
 // 찜하기
 function like(event) {
   const target = $(event);
-  if (target.hasClass("active")) {    
-    if(!$('.ani_liked').hasClass('active')) {
-      target.removeClass("active");
-    }
+  if (target.hasClass("active")) {
+    target.removeClass("active");
+    target.parent('.bottom').find('.ani_liked').remove();
   } else {
     target.addClass("active");
-    $('.ani_liked').addClass('active');
+    target.parent('.bottom').append(
+      '<div class="ani_liked"><div class="ir_like"></div></div>'
+    );
+    target.parent('.bottom').find('.ani_liked').addClass('active');
     setTimeout(function() {
-      $('.ani_liked').removeClass('active');
-    },1500)
+      target.parent('.bottom').find('.ani_liked').removeClass('active');
+    }, 1000);
   }
 }
-
-
 
 function catecoryUI(){
   $(".cate_nav li").click(function(){

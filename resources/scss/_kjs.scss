@@ -158,193 +158,34 @@
 
 .prd_cart_btn {
   position: fixed;
-  left: 50%;
+  left: 0;
   bottom: 136px;
-  width: 200px;
-  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  .btn_bottom {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .cart_txt {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    background: rgba($color: #2A3136, $alpha: 5.0);
+    opacity: 0;
+    transition: 0.3s;
+    &.active {
+      opacity: 1;
+    }
+  }
 }
 .put_cart {
   position: inherit;
-}
-
-
-// 카트담기
-.put_cart {
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 10000;
-  &.active {
-    display: block;
-    .aniPut {
-      display: block;
-      animation: bounceIn 0.5s ease-in-out forwards, moveAndFadeOut 1.5s ease-in-out 1s forwards;
-    }
-    .put_text {
-      top: 56px;
-      animation: showTxt 0.5s 2s ease-in-out forwards, hideTxt 0.5s 3.7s ease-in-out forwards;
-    }
-    .ani_liked{
-      display: none;
-    }
-  }
-  &.active_like{//찜한상품
-    display: block;
-  }
-  .aniPut {
-    position: absolute;
-    top:166px;
-    left:50%;
-    margin: 0 0 0 -50px;
-    display: none;
-    .ani_img {
-      display: flex;
-      justify-self: center;
-      align-items: center;
-      width: 88px;
-      height: 88px;
-      background: url('../img/icon/ico_incart.svg') no-repeat;
-      background-size: 88px;
-      border-radius: 50%;
-      &::before {
-        position: absolute;
-        top:0;
-        right: 0;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: #E6313A url('../img/icon/ico_add_w.svg') center no-repeat;
-        background-size: 24px;
-        content: '';
-      }
-      i {
-        width: 35px;
-        height: 40px;
-        &::before {
-          width: 35px;
-          height: 40px;
-          background: #fff;
-        }
-      }
-    }
-  } 
-  .put_text {
-    position: fixed;
-    top: 56px;
-    left: 20px;
-    right:20px;
-    background: #333;
-    border-radius: 4px;
-    opacity: 0;
-    padding: 24px;
-    font-size: 14px;
-    font-weight: 400;
-    z-index: 1000;
-    transform: translate(0, 0);
-    text-align: center;
-    &::before {
-      position: absolute;
-      top:-10px;
-      right: 8px;
-      width: 0;
-      height: 0;
-      border-left: 7px solid transparent;
-      border-right: 7px solid transparent;
-      border-bottom: 12px solid #333; 
-      content: '';
-    }
-    p {
-      margin-bottom: 6px;
-      color :#fff;
-      line-height: 24px;
-    }
-    a {
-      display: block;
-      color: #333;
-      font-weight: 700;
-      border: 0;
-    } 
-  }
-
-  @keyframes bounceIn {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.3);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes moveAndFadeOut {
-    0% {
-      opacity: 1;
-      transform: translate(0, 0) scale(1);
-    }
-    45% {
-      transform: translate(45vw, -180px) scale(0.3); 
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  @keyframes showTxt {
-    0% {
-      opacity: 0;
-      transform: translate(0, -100%);
-    }
-    100% {
-      transform: translate(0, 0); 
-      opacity: 1;
-    }
-  }
-
-  @keyframes hideTxt {
-    0% {
-      transform: translate(0, 0); 
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(0, -100%);
-    }
-  }
-
-}
-
-@keyframes bounce {
-  0% {
-    opacity: 0;
-    transform: scale(.3);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  50% { transform: scale(.8); }
-  80% { transform: scale(1); }
-  100% { transform: scale(1); }
-}
-
-@keyframes dropDown {
-  0% {
-    opacity: 0;
-    transform: scale(.3);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  95% { opacity: .3; }
-  100% { transform: translateY(300px) scale(.5); opacity: 0; }
 }
 
 // 찜한 상품 
@@ -355,6 +196,8 @@
   left:50%;
   margin-top: -50px;
   transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: .9;
   &.active {
     display: block;
     .ir_like {
@@ -368,6 +211,20 @@
     background: url('../images/icon/ico_btn_heart_red.svg') no-repeat;
     background-size: cover;
   }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  50% { transform: scale(.8); }
+  90% { transform: scale(1);opacity: 1; }
+  100% { transform: scale(1);opacity: 0; }
 }
 
 //상품 체크
@@ -391,12 +248,28 @@
     height: 120px;
     border-radius: 50%;
     // background: #2A3136 url('../images/icon/ico_cart_float.svg') no-repeat center;
-    border: 2px solid #2A3136;
+    border: 2px solid #e2e2e2;
     background-size: 45%;
     overflow: hidden;
   }
 }
 
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% { opacity: .2; }
+  100% { transform: translateY(300px) scale(.3); opacity: 0; }
+}
 
 
 
