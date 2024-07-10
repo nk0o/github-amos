@@ -1056,6 +1056,22 @@ p {
   height: 100%;
   object-fit: cover;
 }
+.thumb_list > li .img.btn_icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-color: #e2e2e2;
+  background-color: #f6f6f6;
+}
+.thumb_list > li .img.btn_icon [class*=ico_]::before {
+  background-color: #bbbbbb !important;
+}
+.thumb_list > li .img.btn_icon span {
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.3333;
+}
 .thumb_list > li .img_tit {
   display: block;
   text-align: center;
@@ -4546,6 +4562,9 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.214;
 }
+.page_main .sec_visual {
+  margin: 0;
+}
 .page_main .sec_product {
   padding-top: 32px;
   position: relative;
@@ -4583,12 +4602,17 @@ footer .f_company {
   color: #ffffff;
   font-weight: 400;
 }
+.page_main .sec_amount > .inner {
+  overflow-x: auto;
+}
 .page_main .sec_amount ul {
   display: flex;
+  justify-content: center;
   gap: 8px;
 }
 .page_main .sec_amount li {
   flex: 1;
+  max-width: 162px;
   padding: 19px 14px;
   background-color: #ffffff;
   border-radius: 8px;
@@ -4602,7 +4626,6 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   width: 100%;
-  margin: 20px 0 0 0;
   padding: 12px 0 0 0;
   border-top: 1px solid #e2e2e2;
   color: #222222;
@@ -4636,7 +4659,7 @@ footer .f_company {
   opacity: 0.7;
 }
 .page_main #swiper2.swiper {
-  padding-left: 20px;
+  padding: 8px 20px 0 28px;
 }
 .page_main #swiper2 .swiper-wrapper.prd_list_lg {
   flex-wrap: nowrap;
@@ -4653,7 +4676,15 @@ footer .f_company {
   align-items: center;
   height: 40px;
 }
+.banner_line > .inner {
+  padding: 0 20px;
+}
 .banner_line > span {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   color: #eeeeee;
   font-size: 0.875rem;
   font-weight: 400;
@@ -4666,7 +4697,7 @@ footer .f_company {
 
 /* 메인 반원 그래프 */
 .half_progress {
-  width: 150px;
+  width: 110px;
   height: 110px;
   margin: 0 auto;
   position: relative;
@@ -4680,7 +4711,7 @@ footer .f_company {
 }
 .half_progress .txt_wrap {
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -4694,9 +4725,8 @@ footer .f_company {
 .half_progress .bar_overflow {
   position: relative;
   overflow: hidden;
-  width: 150px;
-  height: 110px;
-  margin-bottom: 10px;
+  width: 110px;
+  height: 90px;
 }
 .half_progress .bar_overflow::before {
   content: "";
@@ -4704,8 +4734,8 @@ footer .f_company {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   border: 5px solid transparent;
   border-radius: 50%;
   border-color: #33ECA9;
@@ -4717,8 +4747,8 @@ footer .f_company {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   box-sizing: border-box;
   border: 5px solid #eeeeee;
@@ -4729,21 +4759,21 @@ footer .f_company {
   z-index: 1;
   position: absolute;
   background: #33ECA9;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  left: 9px;
-  bottom: -2px;
+  left: 13px;
+  bottom: 18px;
   overflow: hidden;
 }
 .half_progress .right {
   position: absolute;
   background: #eeeeee;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  right: 9px;
-  bottom: -2px;
+  right: 13px;
+  bottom: 18px;
   overflow: hidden;
 }
 .half_progress.orange .left {

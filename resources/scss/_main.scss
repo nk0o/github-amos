@@ -17,6 +17,9 @@
       @include fontStyle(#cccccc, $fs-s, $fw-m, 1.214)
     }
   }
+  .sec_visual{
+    margin: 0;
+  }
   .sec_product{
     padding-top: 32px;
     position: relative;
@@ -57,12 +60,17 @@
         font-weight: $fw-m;
       }
     }
+    & > .inner{
+      overflow-x: auto;
+    }
     ul{
       display: flex;
+      justify-content: center;
       gap: 8px;
     }
     li{
       flex: 1;
+      max-width: 162px;
       padding: 19px 14px;
       background-color: $color-white;
       border-radius: 8px;
@@ -71,7 +79,6 @@
     .price{
       @include flexCenter;
       width: 100%;
-      margin:20px 0 0 0;
       padding: 12px 0 0 0;
       border-top: 1px solid $gray-200;
       @include fontStyle($gray-950, $fs-md, $fw-m, 20px);
@@ -101,7 +108,7 @@
   }
   #swiper2{
     &.swiper{
-      padding-left: 20px;
+      padding:8px 20px 0 28px;
     }
     .swiper-wrapper.prd_list_lg{
       flex-wrap: nowrap;
@@ -113,7 +120,15 @@
 .banner_line{
   @include flexCenter;
   height: 40px;
+  & > .inner{
+    padding: 0 20px;
+  }
   & > span{
+    white-space:normal;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
     @include fontStyle($gray-100, $fs-s, $fw-m, 1.357);
     letter-spacing: -0.28px;
     em{
@@ -123,7 +138,7 @@
 }
 /* 메인 반원 그래프 */
 .half_progress {
-  width: 150px;
+  width: 110px;
   height: 110px;
   margin: 0 auto;
   position: relative;
@@ -133,7 +148,7 @@
   }
   .txt_wrap {
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -144,17 +159,16 @@
   .bar_overflow {
     position: relative;
     overflow: hidden;
-    width: 150px;
-    height: 110px;
-    margin-bottom: 10px;
+    width: 110px;
+    height: 90px;
     &::before {
       content: "";
       display: block;
       position: absolute;
       top: 0;
       left: 0;
-      width: 150px;
-      height: 150px;
+      width: 110px;
+      height: 110px;
       border: 5px solid transparent;
       border-radius: 50%;
       border-color: #33ECA9;
@@ -166,8 +180,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 150px;
-      height: 150px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       box-sizing: border-box;
       border: 5px solid $gray-100;
@@ -179,21 +193,21 @@
     z-index: 1;
     position: absolute;
     background: #33ECA9;
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    left: 9px;
-    bottom: -2px;
+    left: 13px;
+    bottom: 18px;
     overflow: hidden;
   }
   .right { 
     position: absolute;
     background: $gray-100;
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    right : 9px;
-    bottom: -2px;
+    right : 13px;
+    bottom: 18px;
     overflow: hidden; 
   }
   &.orange{
