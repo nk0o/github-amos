@@ -159,6 +159,28 @@ $(document).ready(function () {
       });
     });
   };
+
+  // 상품 담기
+  if($('.prd_box').length > 0) {
+    $('.prd_box .prd').on('click',function() {
+      let imgSrc = $(this).find('img').attr('src');
+      if($(this).parent().hasClass('checked')) {
+        $(this).parent().removeClass('checked');
+        $(this).parent().find('.ani_cart').remove();
+      } else {
+        $(this).parent().addClass('checked');
+        $(this).parent().append(
+          '<div class="ani_cart active"><div class="ir_cart"><img scr="" alt=""></div></div>'
+        )
+        $(this).parent().find('.ani_cart img').attr('src',imgSrc)
+        setTimeout(function() {
+          $(this).parent().find('.ani_cart').removeClass('active');
+        },1000)
+      }
+      let count = $(this).parents('.prd_list_wrap').find('.prd_box.checked').length;
+      $('.prd_cart_btn .count').text('('+ count +')');
+    })
+  }
 }) //ready
 
 
@@ -474,6 +496,24 @@ function floatingSideUI(){
     $("body").removeClass("no_scroll");
   })
 }
+
+// 찜하기
+function like(event) {
+  const target = $(event);
+  if (target.hasClass("active")) {    
+    if(!$('.ani_liked').hasClass('active')) {
+      target.removeClass("active");
+    }
+  } else {
+    target.addClass("active");
+    $('.ani_liked').addClass('active');
+    setTimeout(function() {
+      $('.ani_liked').removeClass('active');
+    },1500)
+  }
+}
+
+
 
 function catecoryUI(){
   $(".cate_nav li").click(function(){
