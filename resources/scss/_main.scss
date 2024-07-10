@@ -210,25 +210,34 @@
 
 /* 카테고리 페이지 */
 .page_category{
+  .appbar {
+    .logo, .ico_cart{
+      display: none;
+    }
+  }
   .tab_cont{
     padding: 0;
   }
 }
 .cate{
   &_tit{
-    @include fontStyle($gray-600, $fs-s, $fw-m, 1.214);
+    @include fontStyle($gray-600, $fs-s, $fw-m, 2.285);
   }
   &_wrap{
     @include flexStart;
     align-items: flex-start;
-    height: calc(100vh - $btmbar-H);
+    height: calc(100vh - 190px);
     overflow-y: auto;
   }
   &_nav{
     flex:0 0 125px;
     height: 100%;
     background-color: $gray-50;
-    li.current{
+    ul{
+      height: 100%;
+      overflow-y: auto;
+    }
+    li.active{
       a{
         color: $gray-950;
         font-weight: $fw-sb;
@@ -244,9 +253,18 @@
   &_list{
     flex:1;
     padding: 0 22px 0 16px;
-    .cate_tit{
+    height: 100%;
+    overflow-y: auto;
+    & > div{
+      padding-bottom: 8px;
+      &:last-child{
+        padding-bottom: 24px;
+      }
+    }
+    .list_tit{
       @include flexBetween;
       gap: 8px;
+      margin: 0 0 4px 0;
       padding: 24px 0 16px;
       border-bottom: 1px solid $color-primary;
       span{
@@ -258,6 +276,52 @@
       }
       .ico_20::before{
         background-color: $color-primary;
+      }
+    }
+    .cate_tit{
+      display: block;
+      padding: 8px 20px 8px 8px;
+      color: $gray-950;
+      line-height: 1.714;
+    }
+  }
+  &_brand{
+    padding: 0 0 $btmbar-H 0;
+    li{
+      background-image: url("../images/contents/img_prd_list_lg_01.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    li+ li{
+      border-top: 1px solid $color-white;
+    }
+    a{
+      position: relative;
+      @include flexCenter;
+      height: 132px;
+      @include fontStyle($color-white, $fs-lg, $fw-b, 1.4166);
+      // &::before{
+      //   z-index: -1;
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: rgb(0, 0, 0, 0.6);
+      // }
+    }
+  }
+  &_service{
+    padding: 4px 16px 0;
+    .service_tit{
+      padding: 12px 20px;
+      @include fontStyle($gray-950, $fs-s, $fw-m, 1.214);
+    }
+    .accord{
+      &_cont{
+        padding:4px 0 8px 0;
       }
     }
   }

@@ -13,6 +13,7 @@ $(document).ready(function () {
   if ($('.modal_container').length > 0) { modalUI() }
   if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
   if ($('.floating_side').length > 0) { floatingSideUI() }
+  if ($('.cate_nav').length > 0) { catecoryUI() }
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
@@ -328,16 +329,28 @@ function paginationUI() {
 
 /****** Accordion ******/
 function accordionUI() {
-  $(".accord_head").click(function () { accordionAction(this) });
-  function accordionAction(el) {
-    if ($(el).hasClass("on")) {
-      $(el).removeClass("on");
-      $(el).find(".accord_cont").stop().slideUp();
-    } else {
-      $(el).parent('.accord_list').find('.accord_head').removeClass("on");
-      $(el).parent('.accord_list').find(".accord_cont").stop().slideUp();
-      $(el).addClass("on");
-      $(el).find(".accord_cont").stop().slideDown();
+  $(".accord_head").click(function (event) { accordionAction(this, event) });
+  function accordionAction(el, event) {
+    if($(el).hasClass("no_open")){
+      return false;
+    }
+    if($(el).parent(".accord_list").hasClass("is_plus")){
+      if($(event.target).hasClass("ico_plus")){
+        onOff(el);
+      }
+    }else{
+      onOff(el);
+    }
+    function onOff(item){
+      if ($(item).hasClass("on")) {
+        $(item).removeClass("on");
+        $(item).find(".accord_cont").stop().slideUp();
+      } else {
+        $(item).parent('.accord_list').find('.accord_head').removeClass("on");
+        $(item).parent('.accord_list').find(".accord_cont").stop().slideUp();
+        $(item).addClass("on");
+        $(item).find(".accord_cont").stop().slideDown();
+      }
     }
   }
 }
@@ -500,3 +513,15 @@ function like(event) {
   }
 }
 
+
+
+function catecoryUI(){
+  $(".cate_nav li").click(function(){
+    if($(this).hasClass("active")){
+      return false;
+    }else{
+      $(".cate_nav li").removeClass("active");
+      $(this).addClass("active");
+    }
+  })
+}
