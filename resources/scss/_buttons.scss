@@ -199,5 +199,17 @@ button {
       }
     }
   }
+  // like
+  &_like {
+    &.active {
+      i {
+        &::before {
+          mask-image: url(../images/icon/ico_btn_heart_red.svg);
+          background-size: cover;
+          background-color: #FF2E00 !important;
+        }
+      }
+    }
+  }
 }
 
