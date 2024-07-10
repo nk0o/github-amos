@@ -5095,198 +5095,37 @@ footer .f_company {
 
 .prd_cart_btn {
   position: fixed;
-  left: 50%;
+  left: 0;
   bottom: 136px;
+  width: 100%;
+  text-align: center;
+}
+.prd_cart_btn .btn_bottom {
+  display: block;
   width: 200px;
-  transform: translateX(-50%);
+  margin: 0 auto;
+}
+.prd_cart_btn .cart_txt {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  background: #2a3136;
+  opacity: 0;
+  transition: 0.3s;
+}
+.prd_cart_btn .cart_txt.active {
+  opacity: 1;
 }
 
 .put_cart {
   position: inherit;
 }
 
-.put_cart {
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 10000;
-}
-.put_cart.active {
-  display: block;
-}
-.put_cart.active .aniPut {
-  display: block;
-  animation: bounceIn 0.5s ease-in-out forwards, moveAndFadeOut 1.5s ease-in-out 1s forwards;
-}
-.put_cart.active .put_text {
-  top: 56px;
-  animation: showTxt 0.5s 2s ease-in-out forwards, hideTxt 0.5s 3.7s ease-in-out forwards;
-}
-.put_cart.active .ani_liked {
-  display: none;
-}
-.put_cart.active_like {
-  display: block;
-}
-.put_cart .aniPut {
-  position: absolute;
-  top: 166px;
-  left: 50%;
-  margin: 0 0 0 -50px;
-  display: none;
-}
-.put_cart .aniPut .ani_img {
-  display: flex;
-  justify-self: center;
-  align-items: center;
-  width: 88px;
-  height: 88px;
-  background: url("../img/icon/ico_incart.svg") no-repeat;
-  background-size: 88px;
-  border-radius: 50%;
-}
-.put_cart .aniPut .ani_img::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #E6313A url("../img/icon/ico_add_w.svg") center no-repeat;
-  background-size: 24px;
-  content: "";
-}
-.put_cart .aniPut .ani_img i {
-  width: 35px;
-  height: 40px;
-}
-.put_cart .aniPut .ani_img i::before {
-  width: 35px;
-  height: 40px;
-  background: #fff;
-}
-.put_cart .put_text {
-  position: fixed;
-  top: 56px;
-  left: 20px;
-  right: 20px;
-  background: #333;
-  border-radius: 4px;
-  opacity: 0;
-  padding: 24px;
-  font-size: 14px;
-  font-weight: 400;
-  z-index: 1000;
-  transform: translate(0, 0);
-  text-align: center;
-}
-.put_cart .put_text::before {
-  position: absolute;
-  top: -10px;
-  right: 8px;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 12px solid #333;
-  content: "";
-}
-.put_cart .put_text p {
-  margin-bottom: 6px;
-  color: #fff;
-  line-height: 24px;
-}
-.put_cart .put_text a {
-  display: block;
-  color: #333;
-  font-weight: 700;
-  border: 0;
-}
-@keyframes bounceIn {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes moveAndFadeOut {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1);
-  }
-  45% {
-    transform: translate(45vw, -180px) scale(0.3);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes showTxt {
-  0% {
-    opacity: 0;
-    transform: translate(0, -100%);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-@keyframes hideTxt {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(0, -100%);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes dropDown {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  95% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(300px) scale(0.5);
-    opacity: 0;
-  }
-}
 .ani_liked {
   display: none;
   position: fixed;
@@ -5294,6 +5133,8 @@ footer .f_company {
   left: 50%;
   margin-top: -50px;
   transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.9;
 }
 .ani_liked.active {
   display: block;
@@ -5309,6 +5150,27 @@ footer .f_company {
   background-size: cover;
 }
 
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 .ani_cart {
   display: none;
   position: fixed;
@@ -5329,7 +5191,29 @@ footer .f_company {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 2px solid #2A3136;
+  border: 2px solid #e2e2e2;
   background-size: 45%;
   overflow: hidden;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(300px) scale(0.3);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
