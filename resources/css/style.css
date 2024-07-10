@@ -5015,6 +5015,34 @@ footer .f_company {
   display: flex;
   gap: 12px;
 }
+.prd_box.prd_more {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 100%;
+}
+.prd_box.prd_more a {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+.prd_box.prd_more a [class*=ico_]::before {
+  background-color: #777777 !important;
+}
+.prd_box.prd_more a span {
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2142;
+}
 
 .prd_list_lg {
   display: flex;

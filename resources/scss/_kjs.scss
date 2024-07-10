@@ -101,6 +101,21 @@
     display: flex;
     gap: 12px;
   }
+  &.prd_more{
+    @include flexCenter;
+    height: 100%;
+    a{
+      @include flexCenter;
+      flex-direction: column;
+      gap: 4px;
+      [class*=ico_]::before{
+        background-color: $gray-700 !important;
+      }
+      span{
+        @include fontStyle($gray-600, $fs-s, $fw-sb, 1.2142);
+      }
+    }
+  }
 }
 
 //썸네일형
