@@ -492,6 +492,21 @@
         height: 100%;
         object-fit: cover;
       }
+      &.btn_icon{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border-color: $gray-200;
+        background-color: $gray-50;
+        [class*="ico_"] {
+          &::before{
+            background-color: $gray-400 !important;
+          }
+        }
+        span{
+          @include fontStyle($gray-600, $fs-xxs, $fw-m, 1.3333);
+        }
+      }
     }
     .img_tit {
       display: block;
