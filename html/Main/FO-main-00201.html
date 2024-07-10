@@ -8,16 +8,16 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>MAIN</title>
+  <title>MAIN | 아모레뉴플렛폼</title>
 </head>
 <body>
-  <div id="wrap">
+  <div id="wrap" class="page_main">
     <header>
       <script>include.mainAppBar();</script>
       <script>include.mainTabMenu();</script>
     </header>
     <!-- //header -->
-    <main id="container" class="page_main">
+    <main id="container">
       <section>
         <div id="swiper1" class="swiper swiper-container">
           <div class="swiper-wrapper">
@@ -74,8 +74,83 @@
           <div class="tit_area">
             <h2>최근 구매한 상품<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
           </div>
-          <div style="height: 375px; background-color: beige;"></div>
-        </div>
+        </div><!-- //.inner -->
+        <div id="swiper2" class="swiper swiper-container">
+          <div class="prd_list_lg swiper-wrapper">
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div><!-- //.info -->
+              </div><!-- //.prd -->
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div><!-- //.bottom -->
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">잇츠 글로우 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+          </div><!-- //.swiper-wrapper -->
+        </div><!-- //.swiper-container -->
       </section><!-- // section -->
       <section class="hr_divider"></section><!-- // section -->
       <section>
@@ -191,49 +266,8 @@
     <!-- //tabBar -->
   </div>
   <!-- floatingSide -->
-  <!-- <script>include.floatingSide();</script> -->
+  <script>include.floatingSide();</script>
   <!-- //floatingSide -->
-  <ul class="floating_side">
-    <li>
-      <span class="floating_tit">브랜드 소개</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
-    </li>
-    <li>
-      <span class="floating_tit">입점 상담</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
-    </li>
-    <li>
-      <span class="floating_tit">1:1 문의</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
-    </li>
-    <li class="anchor_close">
-      <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
-    </li>
-    <li class="item">
-      <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
-    </li>
-    <li class="item anchor">
-      <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
-    </li>
-  </ul>
-
-  <!-- <ul class="floating_side is_expanded">
-    <li>
-      <span class="floating_tit">브랜드 소개</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
-    </li>
-    <li>
-      <span class="floating_tit">입점 상담</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
-    </li>
-    <li>
-      <span class="floating_tit">1:1 문의</span>
-      <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
-    </li>
-    <li>
-      <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
-    </li>
-  </ul> -->
 </body>
 
 <script>
@@ -243,6 +277,10 @@
         el: "#swiper1 .swiper-pagination",
         type: "fraction",
       },
+    });
+    const mainSwiper2 = new Swiper('#swiper2', {
+      slidesPerView: 2.26,
+      spaceBetween: 8,
     });
     //분기금액 인터렉션
     $(".half_progress").each(function () {

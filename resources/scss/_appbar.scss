@@ -15,6 +15,11 @@
       height: 100%;
     }
   }
+  .btn_toggle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   &.is_line {
     border-bottom: 1px solid #eee;
   }
@@ -41,10 +46,11 @@
 }
 //Tab Bar
 .btm_bar{
+  z-index: 1;
   position: fixed;
   width: 100%;
   bottom: 0;
-  height: 100px;
+  height: $btmbar-H;
   padding: 16px 0 32px;
   background-color: $color-white;
   .inner{
@@ -95,8 +101,9 @@
 //Floating Area
 .floating{
   &_side{
+    z-index: 1;
     position: fixed;
-    bottom: 100px;
+    bottom: $btmbar-H;
     right: 0px;
     display: flex;
     flex-direction: column;

@@ -119,14 +119,29 @@ var include = {
   },
   floatingSide: function () {
     document.write(`
-      <ul class="floating_side">
-        <li>
-          <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
-        </li>
-        <li>
-          <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
-        </li>
-      </ul>
+    <ul class="floating_side">
+      <li>
+        <span class="floating_tit">브랜드 소개</span>
+        <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
+      </li>
+      <li>
+        <span class="floating_tit">입점 상담</span>
+        <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
+      </li>
+      <li>
+        <span class="floating_tit">1:1 문의</span>
+        <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
+      </li>
+      <li class="anchor_close">
+        <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
+      </li>
+      <li class="item">
+        <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+      </li>
+      <li class="item anchor">
+        <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
+      </li>
+    </ul><!-- //.floating_side -->
     `);
   },
 }
