@@ -14,7 +14,9 @@
 }
 
 .prd_cont {
-  padding-bottom: 500px;
+  position: relative;
+  margin-bottom: 100px;
+  padding-bottom: 120px;
   .prd_list_top {
     @include flexBetween;
     padding: 20px 0;
@@ -59,6 +61,7 @@
       display: block;
       margin-top: 4px;
       color: $gray-900;
+      font-family: $font-aritadt;
       font-size: $fs-s;
       font-weight: 400;
       letter-spacing: -0.28px;
@@ -74,7 +77,7 @@
       span {
         display: inline-block;
         font-size: $fs-sm;
-        font-weight: $fw-sb;
+        font-weight: $fw-b;
         vertical-align: 1px;
       }
     }
@@ -84,7 +87,6 @@
     gap: 12px;
   }
 }
-
 
 //썸네일형
 .prd_list_lg {
@@ -139,5 +141,12 @@
   }
 }
 
+.prd_cart_btn {
+  position: fixed;
+  left: 50%;
+  bottom: 136px;
+  width: 200px;
+  transform: translateX(-50%);
+}
 
 

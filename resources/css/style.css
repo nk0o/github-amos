@@ -4797,7 +4797,9 @@ footer .f_company {
 }
 
 .prd_cont {
-  padding-bottom: 500px;
+  position: relative;
+  margin-bottom: 100px;
+  padding-bottom: 120px;
 }
 .prd_cont .prd_list_top {
   display: -webkit-box;
@@ -4843,6 +4845,7 @@ footer .f_company {
   display: block;
   margin-top: 4px;
   color: #444444;
+  font-family: "aritadt";
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: -0.28px;
@@ -4859,7 +4862,7 @@ footer .f_company {
 .prd_box .prd .price span {
   display: inline-block;
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 700;
   vertical-align: 1px;
 }
 .prd_box .bottom {
@@ -4914,4 +4917,12 @@ footer .f_company {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.prd_cart_btn {
+  position: fixed;
+  left: 50%;
+  bottom: 136px;
+  width: 200px;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=style.css.map */
