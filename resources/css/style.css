@@ -3002,7 +3002,7 @@ select {
   font-size: 0.8125rem;
   line-height: 24px;
 }
-.tab_cont_item:first-child {
+.tab_cont_item.current {
   display: block;
 }
 
@@ -4726,7 +4726,7 @@ footer .f_company {
   color: #888888;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.214;
+  line-height: 2.285;
 }
 .cate_wrap {
   display: -webkit-box;
@@ -4735,13 +4735,17 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   align-items: flex-start;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 200px);
   overflow-y: auto;
 }
 .cate_nav {
   flex: 0 0 125px;
   height: 100%;
   background-color: #f6f6f6;
+}
+.cate_nav ul {
+  height: 100%;
+  overflow-y: auto;
 }
 .cate_nav li.current a {
   color: #222222;
@@ -4756,8 +4760,16 @@ footer .f_company {
 .cate_list {
   flex: 1;
   padding: 0 22px 0 16px;
+  height: 100%;
+  overflow-y: auto;
 }
-.cate_list .cate_tit {
+.cate_list > div {
+  padding-bottom: 8px;
+}
+.cate_list > div:last-child {
+  padding-bottom: 24px;
+}
+.cate_list .list_tit {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: space-between;
@@ -4765,21 +4777,28 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   gap: 8px;
+  margin: 0 0 4px 0;
   padding: 24px 0 16px;
   border-bottom: 1px solid #2A3136;
 }
-.cate_list .cate_tit span {
+.cate_list .list_tit span {
   margin-right: auto;
   color: #222222;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
 }
-.cate_list .cate_tit .ico_24::before {
+.cate_list .list_tit .ico_24::before {
   background-color: #222222;
 }
-.cate_list .cate_tit .ico_20::before {
+.cate_list .list_tit .ico_20::before {
   background-color: #2A3136;
+}
+.cate_list .cate_tit {
+  display: block;
+  padding: 8px 20px 8px 8px;
+  color: #222222;
+  line-height: 1.714;
 }
 
 .tabs_area {

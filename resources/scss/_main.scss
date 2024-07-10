@@ -216,18 +216,22 @@
 }
 .cate{
   &_tit{
-    @include fontStyle($gray-600, $fs-s, $fw-m, 1.214);
+    @include fontStyle($gray-600, $fs-s, $fw-m, 2.285);
   }
   &_wrap{
     @include flexStart;
     align-items: flex-start;
-    height: calc(100vh - $btmbar-H);
+    height: calc(100vh - 200px);
     overflow-y: auto;
   }
   &_nav{
     flex:0 0 125px;
     height: 100%;
     background-color: $gray-50;
+    ul{
+      height: 100%;
+      overflow-y: auto;
+    }
     li.current{
       a{
         color: $gray-950;
@@ -244,9 +248,18 @@
   &_list{
     flex:1;
     padding: 0 22px 0 16px;
-    .cate_tit{
+    height: 100%;
+    overflow-y: auto;
+    & > div{
+      padding-bottom: 8px;
+      &:last-child{
+        padding-bottom: 24px;
+      }
+    }
+    .list_tit{
       @include flexBetween;
       gap: 8px;
+      margin: 0 0 4px 0;
       padding: 24px 0 16px;
       border-bottom: 1px solid $color-primary;
       span{
@@ -259,6 +272,12 @@
       .ico_20::before{
         background-color: $color-primary;
       }
+    }
+    .cate_tit{
+      display: block;
+      padding: 8px 20px 8px 8px;
+      color: $gray-950;
+      line-height: 1.714;
     }
   }
 }
