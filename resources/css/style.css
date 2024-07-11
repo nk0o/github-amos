@@ -3144,9 +3144,6 @@ select {
   padding: 0;
 }
 
-.tab_center_wrap + .tab_center_wrap {
-  margin-top: 20px;
-}
 .tab_center_wrap .tab_center {
   white-space: nowrap;
 }
@@ -4947,10 +4944,9 @@ footer .f_company {
   padding: 4px 0 8px 0;
 }
 
-.tabs_area {
-  padding-top: 20px;
+.thumb_tab {
+  padding: 20px 0;
 }
-
 .thumb_tab .thumb_list {
   padding-left: 15px;
 }
