@@ -3159,9 +3159,6 @@ select {
   height: 1px;
   background-color: #e2e2e2;
 }
-.tab_center_wrap .tab_center.line ul {
-  padding-right: 15px;
-}
 .tab_center_wrap .tab_center.line ul .tab_list {
   padding: 0 12px;
 }
