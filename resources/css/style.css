@@ -1050,6 +1050,7 @@ p {
   margin: 0 auto;
   border-radius: 8px;
   overflow: hidden;
+  background-color: #F6F6F6;
 }
 .thumb_list > li .img img {
   width: 100%;
@@ -3154,6 +3155,7 @@ select {
   position: relative;
   flex-wrap: nowrap;
   overflow: auto;
+  padding-right: 15px;
 }
 .tab_center_wrap .tab_center ul::-webkit-scrollbar {
   display: none;
@@ -4953,6 +4955,10 @@ footer .f_company {
 .prd_cont .prd_list_top .count span em {
   color: #222222;
   font-weight: 600;
+}
+.prd_cont.type_list {
+  border-top: 1px solid #eee;
+  margin-top: 12px;
 }
 
 .prd_box.checked .img::before {
