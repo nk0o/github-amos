@@ -135,7 +135,7 @@ var include = {
       <li class="anchor_close">
         <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
       </li>
-      <li class="item">
+      <li class="item scrolltop">
         <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
       </li>
       <li class="item anchor">
