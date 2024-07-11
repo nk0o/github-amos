@@ -7,7 +7,32 @@ body{
 //Header
 header{
   background-color: $color-white;
+  z-index: 100;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  &.downscroll{
+    position: fixed;
+    animation: smoothUp 300ms forwards;
+  }
+  &.upscroll{
+    animation: smoothDwon 300ms forwards;
+  }
+  @keyframes smoothDwon {
+    from{transform: translateY(-100%);}
+    to{transform: translateY(0%);}
+  }
+  @keyframes smoothUp {
+    from{transform: translateY(0%);}
+    to{transform: translateY(-100%);}
+  }
+  &.fixed{
+    position: sticky;
+    top: 0;    
+  }
 }
+//Layout > Inner
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
   padding: 0 20px;
 }
