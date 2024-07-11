@@ -153,12 +153,12 @@
       }
       ul {
         .tab_list {
-          padding: 0 12px;
+          padding: 0 10px;
           &:first-child{
-            margin-left: 8px;
+            margin-left: 10px;
           }
           &:last-child{
-            margin-right: 8px;
+            margin-right: 10px;
           }
           &.current {
             &::after {
@@ -170,10 +170,13 @@
               transform: translateX(-50%);
               right: 0;
               bottom: 0px;
-              width: calc(100% - 24px);
+              width: calc(100% - 20px);
               height: 2px;
               background-color: #2A3136;
             }
+          }
+          button{
+            padding: 0;
           }
         }
       }
