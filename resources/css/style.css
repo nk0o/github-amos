@@ -3146,6 +3146,9 @@ select {
   flex: none;
   cursor: pointer;
 }
+.tab_center_wrap .tab_center.line {
+  position: relative;
+}
 .tab_center_wrap .tab_center.line::after {
   content: "";
   display: block;
