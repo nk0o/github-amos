@@ -5122,12 +5122,12 @@ footer .f_company {
   margin-top: 10px;
 }
 
-.prd_list_sm {
-  gap: 20px;
-}
 .prd_list_sm .prd_box {
   position: relative;
   width: 100%;
+}
+.prd_list_sm .prd_box + .prd_box {
+  margin-top: 20px;
 }
 .prd_list_sm .prd_box .prd {
   display: flex;
