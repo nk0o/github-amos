@@ -14,6 +14,8 @@ $(document).ready(function () {
   if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
   if ($('.floating_side').length > 0) { floatingSideUI() }
   if ($('.cate_nav').length > 0) { catecoryUI() }
+  if ($('.prd_list_wrap.swiper').length > 0) { PrdSlider() }
+  if ($('header').length > 0) { headerScroll() }
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
@@ -389,52 +391,6 @@ function dataTableSelect(dtable) {
 };
 
 
-
-
-
-
-
-/****** Framework Copy Snippet ******/
-function snippetCopy() {
-  //Snippet show/hide
-  $('.snippet_btn').click(function () {
-    $(this).parents('.snippet_btn_wrap').next('.snippet').stop().slideToggle();
-  });
-  //Prism textarea convert
-  $("textarea[name='code']").each(function (i, block) {
-    var className = $(block).attr('class');
-    var sourceCode = $(block).html();
-    var prefix = "<pre";
-    var commandOption = $(block).attr('command-line');
-    if (commandOption !== undefined) {
-      var user = commandOption.split(" ")[0] || "user";
-      var host = commandOption.split(" ")[1] || "localhost";
-      prefix += " class='command-line' data-user='" + user + "' data-host='" + host + "'>";
-    } else {
-      prefix += " class='line-numbers'>";
-    };
-    prefix += "<code class='" + className + "' id='textDiv'>";
-    var postfix = "</code></pre>";
-    $(block).after(prefix + sourceCode + postfix);
-    $(block).remove();
-  });
-  //Copy Button
-  $(".copy_btn").on("click", function () {
-    var textDiv = $(this).prev(".language-markup").find('#textDiv');
-    var txt = textDiv.text();
-    var createInput = $('<textarea></textarea>');
-    var copyAlert = $(this).next('.copy_alert');
-    textDiv.append(createInput);
-    createInput.val(txt);
-    createInput.select();
-    document.execCommand('copy');
-    createInput.remove();
-    copyAlert.addClass('show');
-    setTimeout(function () {
-      copyAlert.removeClass('show');
-    }, 500);
-  });
-}
 function addInputClearBtn(){
   $(".input_text").on('keyup', function () { 
     if($(this).parents('label').find('button').length){
@@ -500,7 +456,7 @@ function bottomSheetUI(){
     $(this).parents('.btm_sheet').removeClass('show')
   });
 }
-
+/* Floating UI */
 function floatingSideUI(){
   $('.floating_side .anchor').click(function(){
     $(this).parents('.floating_side').addClass('is_expanded');
@@ -509,6 +465,15 @@ function floatingSideUI(){
   $('.floating_side .anchor_close').click(function(){
     $(this).parents('.floating_side').removeClass('is_expanded');
     $("body").removeClass("no_scroll");
+  })
+  $(".floating_side").stop().hide();
+  $(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if(st > 0){
+      $(".floating_side").stop().fadeIn(150);
+    }else{
+      $(".floating_side").stop().fadeOut(150);
+    }
   })
 }
 
@@ -538,5 +503,43 @@ function catecoryUI(){
       $(".cate_nav li").removeClass("active");
       $(this).addClass("active");
     }
+  })
+}
+
+function PrdSlider(){
+  $(".prd_list_wrap.swiper").each(function (i, v) {
+    let sliderName = 'slider' + i;
+    $(".prd_list_wrap.swiper")[i].id = sliderName;
+    let sliderId = '#' + sliderName;
+    let PrdSwiper = new Swiper(sliderId, {
+      autoHeight: true,
+      slidesPerView: 2.26,
+      spaceBetween: -1,    
+    });
+  });
+}
+
+function headerScroll() {
+  var hd =$("header")
+  var headerH = hd.outerHeight();
+  var lastScrollTop = 0, delta = 15;
+  var isMainHeader = !($("header").find(".appbar_back").length > 0);
+  $(window).scroll(function (event) {
+    var st = $(this).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+    if ((st > lastScrollTop) && (lastScrollTop >= 0)) {
+      hd.addClass("fixed");
+      if( isMainHeader && lastScrollTop > headerH){
+        hd.removeClass("upscroll").addClass("downscroll");
+      }      
+    } else {     
+      if(isMainHeader){
+        hd.removeClass("downscroll").addClass("upscroll");
+        if(lastScrollTop <= headerH){
+            hd.removeClass("upscroll")
+        }
+      }
+    }
+    lastScrollTop = st;
   })
 }

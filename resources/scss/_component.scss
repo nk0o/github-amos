@@ -487,7 +487,7 @@
       margin: 0 auto;
       border-radius: 8px;
       overflow: hidden;
-      background-color: #F6F6F6;
+      background-color: $gray-50;
       img {
         width: 100%;
         height: 100%;
@@ -498,7 +498,6 @@
         flex-direction: column;
         gap: 4px;
         border-color: $gray-200;
-        background-color: $gray-50;
         [class*="ico_"] {
           &::before{
             background-color: $gray-400 !important;
