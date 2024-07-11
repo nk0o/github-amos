@@ -19,6 +19,9 @@ $(document).ready(function () {
 
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
+  $(window).resize(function () { 
+    tabMenu($('.tab_menu .tab_list'))
+  });
   function tabMenu(el) {
     var tab = $(el).parents('.tab_menu');
     var activeTab = $(el).attr('data-tab');
