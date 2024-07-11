@@ -117,9 +117,6 @@
 }
 
 .tab_center_wrap {
-  & + & {
-    // margin-top: 20px;
-  }
   .tab_center {
     white-space: nowrap;
     &::-webkit-scrollbar {
@@ -184,6 +181,9 @@
     }
   }
 }
+
+
+
 
 
 

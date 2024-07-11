@@ -121,9 +121,13 @@
     }
   }
   &.type3 {
+    display: flex;
+    justify-content: center;
     width: auto;
-    min-width: 0;
+    min-width: 95px;
     .select_box_value {
+      justify-content: end;
+      min-width: 95px;
       height: auto;
       padding:0 12px 0 0;
       font-size: 13px;
@@ -136,6 +140,7 @@
       }
     }
     .select_box_list {
+      min-width: 95px;
       top:24px;
     }
   }
