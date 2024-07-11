@@ -50,7 +50,7 @@ a, button {
   font-size: 100%;
   font: inherit;
   color: inherit;
-  line-height: 1.2;
+  line-height: inherit;
   text-decoration: none;
 }
 
@@ -4342,7 +4342,7 @@ div.dataTables_wrapper .btn_floating:focus {
   border: 1px solid #e2e2e2;
 }
 .btm_bar.is_nav {
-  background-color: #2A3136;
+  background-color: #111111;
 }
 .btm_bar_nav {
   display: flex;
@@ -4971,10 +4971,10 @@ footer .f_company {
   color: #222222;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.214;
+  line-height: 1.143;
 }
 .cate_service .accord_cont {
-  padding: 4px 0 8px 0;
+  padding: 0 0 8px 0;
 }
 
 .thumb_tab {

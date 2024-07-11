@@ -347,11 +347,11 @@
     padding: 4px 16px 0;
     .service_tit{
       padding: 12px 20px;
-      @include fontStyle($gray-950, $fs-s, $fw-m, 1.214);
+      @include fontStyle($gray-950, $fs-s, $fw-m, 1.143);
     }
     .accord{
       &_cont{
-        padding:4px 0 8px 0;
+        padding:0 0 8px 0;
       }
     }
   }
