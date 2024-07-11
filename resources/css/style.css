@@ -1950,26 +1950,15 @@ button {
   border-color: #2A3136 !important;
   background-color: #2A3136 !important;
 }
-.btn_primary:hover {
-  border-color: black !important;
-  background-color: black !important;
-}
 .btn_light {
   color: #ffffff !important;
   border-color: #bbbbbb !important;
   background-color: #bbbbbb !important;
 }
-.btn_light:hover {
-  border-color: #404b53 !important;
-  background-color: #404b53 !important;
-}
 .btn_border {
   color: #2A3136;
   border-color: #2A3136;
   background-color: #ffffff;
-}
-.btn_border:hover {
-  background-color: rgba(42, 49, 54, 0.051);
 }
 .btn_disabled {
   color: #ffffff !important;
@@ -1979,17 +1968,10 @@ button {
 .btn_disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
 }
-.btn_disabled:hover {
-  border-color: #bbbbbb;
-  background-color: #bbbbbb;
-}
 .btn_disabled.btn_border {
   color: #bbbbbb !important;
   border-color: #bbbbbb;
   background-color: #ffffff;
-}
-.btn_disabled.btn_border:hover {
-  border-color: #bbbbbb;
 }
 .btn_radius {
   border-radius: 4px;
