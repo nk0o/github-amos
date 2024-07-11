@@ -3058,6 +3058,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: "aritadt";
 }
 .tab_menu .tab_list.current button {
   z-index: 1;
@@ -4383,7 +4384,7 @@ div.dataTables_wrapper .btn_floating:focus {
   display: block;
   transition: background-color 0.2s;
 }
-.floating_side:focus, .floating_side:focus-within {
+.floating_side.focus {
   height: 56px;
   transition: height 0.2s;
 }

@@ -17,18 +17,20 @@ $(document).ready(function () {
   if ($('.prd_list_wrap.swiper').length > 0) { PrdSlider() }
   if ($('header').length > 0) { headerScroll() }
 
+  /****** Window Resize ******/
+  $(window).resize(function () {
+    LineTabMenuInit()
+  });
+
   /****** Tab Menu ******/
   $('.tab_menu .tab_list').click(function () { tabMenu(this) });
-  $(window).resize(function () { 
-    tabMenu($('.tab_menu .tab_list'))
-  });
   function tabMenu(el) {
     var tab = $(el).parents('.tab_menu');
     var activeTab = $(el).attr('data-tab');
     $(el).siblings('li').removeClass('current');
     $(el).addClass('current');
-    tab.next('.tab_cont').find('.tab_cont_item').stop().hide();
-    tab.next('.tab_cont').find('#' + activeTab).stop().show();
+    tab.next('.tab_cont').find('.tab_cont_item').removeClass("current");
+    tab.next('.tab_cont').find('#' + activeTab).addClass("current");
 
     if (tab.hasClass("line_tab")) {
       //클릭시 라인이동
@@ -461,7 +463,13 @@ function bottomSheetUI(){
 }
 /* Floating UI */
 function floatingSideUI(){
-  $('.floating_side .anchor').click(function(){
+  //expand
+  $('.floating_side .anchor').focusin(function(){ 
+    $(this).parents('.floating_side').addClass('focus')
+  }).focusout(function(){ 
+    $(this).parents('.floating_side').removeClass('focus')
+  });  
+  $('.floating_side .anchor').click(function(e){
     $(this).parents('.floating_side').addClass('is_expanded');
     $("body").addClass("no_scroll");
   })
@@ -469,6 +477,11 @@ function floatingSideUI(){
     $(this).parents('.floating_side').removeClass('is_expanded');
     $("body").removeClass("no_scroll");
   })
+  //scrollTop
+  $('.floating_side .scrolltop').click(function(){
+    $('html, body').animate({scrollTop: '0'}, 500,'swing');
+  });
+  //scroll
   $(".floating_side").stop().hide();
   $(window).scroll(function (event) {
     var st = $(this).scrollTop();
