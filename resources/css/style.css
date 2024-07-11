@@ -4994,8 +4994,11 @@ footer .f_company {
 
 .prd_cont {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   padding-bottom: 120px;
+}
+.prd_cont:has(.cate_brand.accord_list) {
+  padding-bottom: 0;
 }
 .prd_cont .prd_list_top {
   display: -webkit-box;
@@ -5364,6 +5367,25 @@ footer .f_company {
 .prd_list_wrap .prd_box.swiper-slide {
   padding: 8px 0 0 8px;
   background-color: #ffffff;
+}
+
+.cate_brand.accord_list {
+  padding-bottom: 0;
+}
+.cate_brand.accord_list .accord_tit {
+  padding: 0;
+}
+.cate_brand.accord_list .accord_tit::before {
+  display: none;
+}
+.cate_brand.accord_list .accord_cont .inner {
+  padding: 0 20px 32px;
+}
+.cate_brand.accord_list .accord_cont .prd_box .prd .tit {
+  white-space: normal;
+}
+.cate_brand.accord_list > li:last-child .accord_cont {
+  padding-bottom: 88px;
 }
 
 @media (min-width: 1024px) {

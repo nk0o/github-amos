@@ -186,7 +186,7 @@ $(document).ready(function () {
           $parent.find('.ani_cart').removeClass('active');
         }, 1000);
       }
-      let count = $(this).parents('.prd_list_wrap').find('.prd_box.checked').length;
+      let count = $('.prd_list_wrap').find('.prd_box.checked').length;
       $('.prd_cart_btn .count').text('(' + count + ')');
     });
     
@@ -208,13 +208,13 @@ $(document).ready(function () {
   if ($('.type_list .view_type').length > 0) {
     $('.view_type button').on('click',function() {
       if($(this).hasClass('btn_view_list')) { //리스트 상태
-        $(this).removeClass('active');
-        $(this).siblings('.btn_view_thumb').addClass('active');
-        $(this).parents('.type_list').find('.prd_list_sm').addClass('xs');
+        $('.btn_view_list').removeClass('active');
+        $('.btn_view_list').siblings('.btn_view_thumb').addClass('active');
+        $('.prd_list_sm').addClass('xs');
       } else if ($(this).hasClass('btn_view_thumb')) { //썸네일 상태
-        $(this).removeClass('active');
-        $(this).siblings('.btn_view_list').addClass('active');
-        $(this).parents('.type_list').find('.prd_list_sm').removeClass('xs');
+        $('.btn_view_thumb').removeClass('active');
+        $('.btn_view_thumb').siblings('.btn_view_list').addClass('active');
+        $('.prd_list_sm').removeClass('xs');
       }
     })
   }
@@ -366,7 +366,10 @@ function paginationUI() {
 
 /****** Accordion ******/
 function accordionUI() {
-  $(".accord_head .accord_tit").click(function (event) { accordionAction(this, event) });
+  $(".accord_head .accord_tit").click(function (event) { 
+    accordionAction(this, event);
+    event.preventDefault(); 
+  });
   function accordionAction(el, event) {
     if($(el).parents('.accord_head').hasClass("no_open")){
       return false;

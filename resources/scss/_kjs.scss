@@ -14,8 +14,11 @@
 
 .prd_cont {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   padding-bottom: 120px;
+  &:has(.cate_brand.accord_list) {
+    padding-bottom: 0
+  }
   .prd_list_top {
     @include flexBetween;
     padding: 20px 0;
@@ -383,6 +386,37 @@
     background-color: $color-white;
   }
 }
+
+.cate_brand.accord_list {
+  padding-bottom: 0;
+  .accord_tit {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+  .accord_cont {
+    .inner {
+      padding: 0 20px 32px;
+    }
+    .prd_box .prd .tit {
+      white-space: normal;
+    }
+  }
+  >li:last-child {
+    .accord_cont {
+      padding-bottom: 88px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 // PC
 @media (min-width: 1024px) {
