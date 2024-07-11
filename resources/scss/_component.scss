@@ -516,3 +516,11 @@
     }
   }
 }
+
+
+// PC
+@media (min-width: 1024px) {
+  .thumb_list > li {
+    width: 84px;
+  }
+}
