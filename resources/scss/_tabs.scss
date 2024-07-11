@@ -128,7 +128,7 @@
       position: relative;
       flex-wrap: nowrap; 
       overflow: auto;
-      padding-right: 15px;
+      
       &::-webkit-scrollbar {
         display: none;
       }
@@ -152,6 +152,7 @@
         background-color: #e2e2e2;
       }
       ul {
+        padding-right: 15px;
         .tab_list {
           padding: 0 12px;
           &:first-child{

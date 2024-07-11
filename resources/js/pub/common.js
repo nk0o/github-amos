@@ -60,23 +60,23 @@ $(document).ready(function () {
       }
       selectPos = leftPos + $(el).outerWidth()/2;
       if (selectPos < boxHalf) {
-          pos = 0;
+        pos = 0;
       } else if (liWid - selectPos < boxHalf) {
-          pos = liWid - boxWid;
-      } 
+        pos = liWid - boxWid + 60;
+      }  
       else {
-          pos = selectPos - boxHalf;
+        pos = selectPos - boxHalf + 30;
       }
 
-      //썸네일
-      if (tab.hasClass('thumb_tab')) {
+      //컨테인탭
+      if (tab.hasClass('contain_tab')) {
         if (selectPos < boxHalf) {
           pos = 0;
         } else if (liWid - selectPos < boxHalf) {
-          pos = liWid - boxWid + 45;
-        }  
+            pos = liWid - boxWid;
+        } 
         else {
-          pos = selectPos - boxHalf + 30;
+            pos = selectPos - boxHalf;
         }
       }
       $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});

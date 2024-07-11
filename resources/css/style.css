@@ -3136,7 +3136,6 @@ select {
   position: relative;
   flex-wrap: nowrap;
   overflow: auto;
-  padding-right: 15px;
 }
 .tab_center_wrap .tab_center ul::-webkit-scrollbar {
   display: none;
@@ -3159,6 +3158,9 @@ select {
   width: 100%;
   height: 1px;
   background-color: #e2e2e2;
+}
+.tab_center_wrap .tab_center.line ul {
+  padding-right: 15px;
 }
 .tab_center_wrap .tab_center.line ul .tab_list {
   padding: 0 12px;
@@ -4958,6 +4960,7 @@ footer .f_company {
 }
 .thumb_tab .thumb_list {
   padding-left: 15px;
+  padding-right: 15px;
 }
 .thumb_tab .thumb_list .tab_list {
   opacity: 0.5;
