@@ -4946,10 +4946,7 @@ footer .f_company {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.cate_brand li + li {
-  border-top: 1px solid #ffffff;
-}
-.cate_brand a {
+.cate_brand li > a {
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -4962,6 +4959,9 @@ footer .f_company {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4166;
+}
+.cate_brand li + li {
+  border-top: 1px solid #ffffff;
 }
 .cate_service {
   padding: 4px 16px 0;

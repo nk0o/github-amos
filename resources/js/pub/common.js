@@ -364,27 +364,28 @@ function paginationUI() {
 
 /****** Accordion ******/
 function accordionUI() {
-  $(".accord_head").click(function (event) { accordionAction(this, event) });
+  $(".accord_head .accord_tit").click(function (event) { accordionAction(this, event) });
   function accordionAction(el, event) {
-    if($(el).hasClass("no_open")){
+    if($(el).parents('.accord_head').hasClass("no_open")){
       return false;
     }
-    if($(el).parent(".accord_list").hasClass("is_plus")){
+    if($(el).parents(".accord_list").hasClass("is_plus")){
       if($(event.target).hasClass("ico_plus")){
         onOff(el);
       }
     }else{
       onOff(el);
-    }
+    } 
+
     function onOff(item){
-      if ($(item).hasClass("on")) {
-        $(item).removeClass("on");
-        $(item).find(".accord_cont").stop().slideUp();
+      if ($(item).parents('.accord_head').hasClass("on")) {
+        $(item).parents('.accord_head').removeClass("on");
+        $(item).parents('.accord_head').find(".accord_cont").stop().slideUp();
       } else {
-        $(item).parent('.accord_list').find('.accord_head').removeClass("on");
-        $(item).parent('.accord_list').find(".accord_cont").stop().slideUp();
-        $(item).addClass("on");
-        $(item).find(".accord_cont").stop().slideDown();
+        $(item).parents('.accord_list').find('.accord_head').removeClass("on");
+        $(item).parents('.accord_list').find(".accord_cont").stop().slideUp();
+        $(item).parents('.accord_head').addClass("on");
+        $(item).parents('.accord_head').find(".accord_cont").stop().slideDown();
       }
     }
   }
