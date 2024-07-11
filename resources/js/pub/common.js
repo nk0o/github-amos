@@ -198,6 +198,21 @@ $(document).ready(function () {
       }
     })
   }
+
+  //상품 리스트 타입 선택
+  if ($('.type_list .view_type').length > 0) {
+    $('.view_type button').on('click',function() {
+      if($(this).hasClass('btn_view_list')) { //리스트 상태
+        $(this).removeClass('active');
+        $(this).siblings('.btn_view_thumb').addClass('active');
+        $(this).parents('.type_list').find('.prd_list_sm').addClass('xs');
+      } else if ($(this).hasClass('btn_view_thumb')) { //썸네일 상태
+        $(this).removeClass('active');
+        $(this).siblings('.btn_view_list').addClass('active');
+        $(this).parents('.type_list').find('.prd_list_sm').removeClass('xs');
+      }
+    })
+  }
 }) //ready
 
 
