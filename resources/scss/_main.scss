@@ -1,4 +1,10 @@
 .page_main{
+  header{
+    .tab_menu{
+      display: inline-flex;
+      justify-content: center;
+    }
+  }
   section{
     margin:0 0 60px 0;
   }

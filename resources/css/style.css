@@ -3145,7 +3145,7 @@ select {
   flex: none;
   cursor: pointer;
 }
-.tab_center_wrap .tab_center.line ul .tab_list::after {
+.tab_center_wrap .tab_center.line::after {
   content: "";
   display: block;
   position: absolute;
@@ -3156,8 +3156,27 @@ select {
   height: 1px;
   background-color: #e2e2e2;
 }
-.tab_center_wrap .tab_center.line ul .tab_list.current {
-  border-bottom: 3px solid #2A3136;
+.tab_center_wrap .tab_center.line ul .tab_list {
+  padding: 0 12px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:first-child {
+  margin-left: 8px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:last-child {
+  margin-right: 8px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list.current::after {
+  content: "";
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  bottom: 0px;
+  width: calc(100% - 24px);
+  height: 2px;
+  background-color: #2A3136;
 }
 
 /* Badge */
@@ -4558,6 +4577,10 @@ footer .f_company {
 
 .page_main {
   /* 메인 스와이퍼 */
+}
+.page_main header .tab_menu {
+  display: inline-flex;
+  justify-content: center;
 }
 .page_main section {
   margin: 0 0 60px 0;
