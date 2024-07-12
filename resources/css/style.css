@@ -5177,6 +5177,7 @@ footer .f_company {
   left: 0;
 }
 .prd_box .prd .tit {
+  display: block;
   font-size: 0.9375rem;
   font-weight: 600;
   color: #222222;
@@ -5191,12 +5192,14 @@ footer .f_company {
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: -0.28px;
+  line-height: 1.0625rem;
 }
 .prd_box .prd .price {
-  margin-top: 8px;
+  margin: 9px 0 5px;
   color: #222222;
   font-size: 1.0625rem;
   letter-spacing: -0.34px;
+  line-height: 1.125rem;
 }
 .prd_box .prd .price span {
   display: inline-block;
@@ -5523,6 +5526,14 @@ footer .f_company {
   }
   .prd_list_sm .prd_box .prd .img {
     max-width: 100px;
+  }
+  .prd_list_sm .prd_box .prd .info {
+    position: relative;
+  }
+  .prd_list_sm .prd_box .prd .info .price {
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   .prd_list_sm.xs {
     gap: 32px 12px;

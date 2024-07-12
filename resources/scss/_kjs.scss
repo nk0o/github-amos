@@ -91,6 +91,7 @@
       }
     }
     .tit {
+      display: block;
       font-size: $fs-sm;
       font-weight: $fw-sb;
       color: $gray-950;
@@ -105,12 +106,14 @@
       font-size: $fs-s;
       font-weight: 400;
       letter-spacing: -0.28px;
+      line-height: 1.0625rem;
     }
     .price {
-      margin-top: 8px;
+      margin: 9px 0 5px;
       color: $gray-950;
       font-size: $fs-md;
       letter-spacing: -0.34px;
+      line-height: 1.125rem;
       span {
         display: inline-block;
         font-size: $fs-sm;
@@ -443,6 +446,14 @@
       .prd {
         .img {
           max-width: 100px;
+        }
+        .info {
+          position: relative;
+          .price {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
         }
       }
     }
