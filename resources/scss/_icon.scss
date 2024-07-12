@@ -3,6 +3,7 @@
    display: inline-block;
    position: relative;
    vertical-align: middle;
+   border: 1px solid;
    &::before {
       content: "";
       display: block;
@@ -83,9 +84,11 @@
 /* arrow 아이콘 */
 .ico {
   &_chev {
-    &_left {
-      &::before {
-        @include iconImgPath("ico_chev_left.svg");
+    &Prev {
+      &_24{
+        &::before {
+          @include iconImgPath("ico_chev_prev_24.svg");
+        }
       }
     }
     &Next {
@@ -280,8 +283,20 @@
     }
   }
   &_close{
-    &::before {
-      @include iconImgPath("ico_close.svg");
+    &_20{
+      &::before {
+        @include iconImgPath("ico_close_20.svg");
+      }
+      &_sm{
+        &::before {
+          @include iconImgPath("ico_close_20_sm.svg");
+        }
+      }
+    }
+    &_24{
+      &::before {
+        @include iconImgPath("ico_close_24.svg");
+      }
     }
     &_circle {
       &::before {

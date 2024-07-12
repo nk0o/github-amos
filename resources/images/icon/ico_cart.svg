@@ -1,7 +1,5 @@
-<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 202">
-<path id="Vector 22" d="M4.15989 3.5H12H20L17.5 13.5H6.5L3.41463 1H0" stroke="#2A3136" stroke-width="1.8"/>
-<path id="Rectangle 376" d="M6.3 17.75C6.3 16.9492 6.94919 16.3 7.75 16.3C8.55081 16.3 9.2 16.9492 9.2 17.75C9.2 18.5508 8.55081 19.2 7.75 19.2C6.94919 19.2 6.3 18.5508 6.3 17.75Z" stroke="#2A3136" stroke-width="1.6"/>
-<rect id="Rectangle 377" x="14.8" y="16.3" width="2.9" height="2.9" rx="1.45" stroke="#2A3136" stroke-width="1.6"/>
-</g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.15989 5.5H14H22L19.5 15.5H8.5L5.41463 3H2" stroke="#2A3136" stroke-width="1.8"/>
+<path d="M8.3 19.75C8.3 18.9492 8.94919 18.3 9.75 18.3C10.5508 18.3 11.2 18.9492 11.2 19.75C11.2 20.5508 10.5508 21.2 9.75 21.2C8.94919 21.2 8.3 20.5508 8.3 19.75Z" stroke="#2A3136" stroke-width="1.6"/>
+<rect x="16.8" y="18.3" width="2.9" height="2.9" rx="1.45" stroke="#2A3136" stroke-width="1.6"/>
 </svg>

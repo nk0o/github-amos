@@ -1093,6 +1093,7 @@ p {
   display: inline-block;
   position: relative;
   vertical-align: middle;
+  border: 1px solid;
 }
 *[class*=ico_]::before {
   content: "";
@@ -1188,14 +1189,14 @@ p {
 }
 
 /* arrow 아이콘 */
-.ico_chev_left::before {
-  background-image: url("../images/icon/ico_chev_left.svg");
+.ico_chevPrev_24::before {
+  background-image: url("../images/icon/ico_chev_prev_24.svg");
   background-size: cover;
 }
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-  .ico_chev_left::before {
+  .ico_chevPrev_24::before {
     background-color: #777777;
-    mask-image: url("../images/icon/ico_chev_left.svg");
+    mask-image: url("../images/icon/ico_chev_prev_24.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -1677,14 +1678,42 @@ p {
     background-image: none;
   }
 }
-.ico_close::before {
-  background-image: url("../images/icon/ico_close.svg");
+.ico_close_20::before {
+  background-image: url("../images/icon/ico_close_20.svg");
   background-size: cover;
 }
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-  .ico_close::before {
+  .ico_close_20::before {
     background-color: #777777;
-    mask-image: url("../images/icon/ico_close.svg");
+    mask-image: url("../images/icon/ico_close_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_close_20_sm::before {
+  background-image: url("../images/icon/ico_close_20_sm.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_close_20_sm::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_close_20_sm.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_close_24::before {
+  background-image: url("../images/icon/ico_close_24.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_close_24::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_close_24.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -3079,7 +3108,7 @@ select {
   white-space: nowrap;
   cursor: pointer;
   color: #888888;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   font-family: "aritadt";
