@@ -54,7 +54,7 @@ $(document).ready(function () {
           boxWid = $('.tab_center').outerWidth(),
           boxHalf = $('.tab_center').outerWidth() / 2,
           leftPos = 0,
-          pd = $(el).parent('ul').css('padding-left') * 2,
+          // pd = $(el).parent('ul').css('padding-left') * 2,
           selectPos,
           pos;
           $(el).parents('.tab_center').find('.tab_list').each(function() {
@@ -67,23 +67,12 @@ $(document).ready(function () {
       if (selectPos < boxHalf) {
         pos = 0;
       } else if (liWid - selectPos < boxHalf) {
-        pos = liWid - boxWid + 60;
+        pos = liWid - boxWid;
       }  
       else {
-        pos = selectPos - boxHalf + 30;
+        pos = selectPos - boxHalf ;
       }
 
-      //컨테인탭
-      if (tab.hasClass('contain_tab')) {
-        if (selectPos < boxHalf) {
-          pos = 0;
-        } else if (liWid - selectPos < boxHalf) {
-            pos = liWid - boxWid;
-        } 
-        else {
-            pos = selectPos - boxHalf;
-        }
-      }
       $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
     }
   }
