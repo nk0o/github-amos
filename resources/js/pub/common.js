@@ -530,20 +530,42 @@ function like(event) {
   }
 }
 
+/* 카테고리 페이지 */
 function catecoryUI(){
   $(".cate_nav li").click(function(){
     let elName = $(this).find('.cate_tit').attr('href');
     let elPos = $(elName).offset();
-    scrollTo(0, elPos.top, 'ease');
-    if($(this).hasClass("active")){
-      return false;
-    }else{
-      $(".cate_nav li").removeClass("active");
-      $(this).addClass("active");
+
+    scrollTo(0, elPos.top);
+    if(!$(this).hasClass("active")){
+      cateNavActive(this)
     }
+  })
+  cateScroll()
+}
+
+function cateNavActive(el){
+  $(".cate_nav li").removeClass("active");
+  $(el).addClass("active");
+}
+
+function cateScroll(){  
+  $('.cate_list').scroll(function () {
+    var list = $(this).children();
+    var top = $(this).offset().top;
+    var $toc;
+    list.each(function () {
+      let itemTop = $(this).position().top;
+      if(itemTop < top + 20){
+        $toc = $(this).attr("id");
+        var $findNav = $("a[href='#" + $toc + "']").parent('li');
+        cateNavActive($findNav)
+      }
+    })
   })
 }
 
+/* 제품 리스트 Swiper */
 function PrdSlider(){
   $(".prd_list_wrap.swiper").each(function (i, v) {
     let sliderName = 'slider' + i;
