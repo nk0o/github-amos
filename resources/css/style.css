@@ -3383,7 +3383,7 @@ button > .badge_round,
 i > .badge_round {
   position: absolute;
   top: -7px;
-  left: calc(100% - 7px);
+  left: 13px;
 }
 
 .avatar {
