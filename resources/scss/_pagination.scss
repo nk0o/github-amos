@@ -108,13 +108,18 @@
 //swiper-pagination-bullet
 .swiper-pagination {
    &-bullet {
-      background-color: $gray-100;
+      width: 6px;
+      height: 6px;
+      margin: 0 4px;
+      background-color: $gray-200;
+      vertical-align: bottom;
       opacity: 1;
       cursor: pointer;
    }
    &-bullet-active {
-      width: 16px;
-      border-radius: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
       background-color: $color-primary;
       @include trans($prop: width, $duration: 0.3s, $type: ease-out, $delay: 0s);
    }

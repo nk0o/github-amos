@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*****  Layout *****/
 /*****  FONT *****/
 /*****  Color *****/
 * {
@@ -3029,13 +3030,8 @@ select {
 }
 
 /* Tab Menu */
-.tab_cont {
-  padding: 16px;
-}
 .tab_cont_item {
   display: none;
-  font-size: 0.8125rem;
-  line-height: 24px;
 }
 .tab_cont_item.current {
   display: block;
@@ -3939,13 +3935,18 @@ div.dataTables_wrapper .btn_floating:focus {
 
 /* Swiper Pagination */
 .swiper-pagination-bullet {
-  background-color: #eeeeee;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background-color: #e2e2e2;
+  vertical-align: bottom;
   opacity: 1;
   cursor: pointer;
 }
 .swiper-pagination-bullet-active {
-  width: 16px;
-  border-radius: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
   background-color: #2A3136;
   -moztransition: width 0.3s ease-out 0s;
   -o-transition: width 0.3s ease-out 0s;
@@ -4498,6 +4499,12 @@ header.fixed {
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner {
   padding: 0 20px;
 }
+@media (min-width: 1024px) {
+  .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
 
 .hr_divider {
   width: 100%;
@@ -4549,7 +4556,7 @@ footer .f_info li, footer .f_info a {
   line-height: 1.33333;
 }
 footer .f_copyright {
-  margin-top: 8px;
+  padding-top: 8px;
   color: #777777;
   font-size: 0.75rem;
   font-weight: 300;
@@ -4602,6 +4609,50 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.5555;
   font-family: "aritadt", sans-serif;
+}
+@media (min-width: 1024px) {
+  footer {
+    padding: 32px 40px;
+  }
+  footer .inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .accord_list {
+    grid-column: 1/-1;
+  }
+  footer .accord_tit {
+    pointer-events: none;
+  }
+  footer .accord_tit::before {
+    display: none;
+  }
+  footer .accord_cont {
+    display: flex !important;
+    height: auto !important;
+    justify-content: space-between;
+    padding: 0 0 16px;
+  }
+  footer .f_cs ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+  }
+  footer .f_cs ul li + li {
+    margin-top: 0;
+  }
+  footer .f_cs ul li span {
+    margin-right: 4px;
+    padding-right: 4px;
+  }
+  footer .f_company, footer .f_copyright {
+    text-align: right;
+  }
+  footer .f_info, footer .f_copyright {
+    padding-top: 12px;
+  }
 }
 
 .page_main {
@@ -4663,6 +4714,28 @@ footer .f_company {
   height: 210px;
   background-color: #2A3136;
 }
+.page_main .sec_product .prd_list_wrap.swiper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .page_main .sec_product .prd_list_wrap.swiper {
+    padding: 0 20px 46px;
+  }
+}
+.page_main .sec_product .prd_box.swiper-slide {
+  padding: 8px 0 0 8px;
+  background-color: #ffffff;
+}
+.page_main .sec_product .swiper-pagination {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .page_main .sec_product .swiper-pagination {
+    display: block;
+    bottom: 0;
+  }
+}
 .page_main .sec_product.is_noBack {
   padding-top: 0;
 }
@@ -4675,12 +4748,22 @@ footer .f_company {
 .page_main .sec_product.is_noBack .tit_area .ico_chevNext_24::before {
   background-color: #2A3136 !important;
 }
+.page_main .sec_product.is_noBack .prd_box.swiper-slide {
+  padding: 0 0 0 8px;
+  background-color: #ffffff;
+}
+.page_main .sec_product.is_noBack .prd_box.swiper-slide:first-child {
+  padding-left: 0;
+}
 .page_main .sec_banner {
   margin: 0;
 }
 .page_main .sec_amount {
   padding: 24px 0 40px;
   background-color: #222222;
+}
+.page_main .sec_amount .tit_area {
+  padding: 0 0 16px 0;
 }
 .page_main .sec_amount .tit_area h2 {
   justify-content: center;
@@ -4724,12 +4807,25 @@ footer .f_company {
   font-weight: 600;
   line-height: 20px;
 }
-.page_main #swiper1.swiper-container {
+.page_main .sec_type {
+  padding: 12px 0 0 0;
+}
+.page_main .sec_type .tab_cont {
+  padding: 20px 0 0 0;
+}
+@media (min-width: 1024px) {
+  .page_main .sec_type .inner {
+    max-width: 715px;
+  }
+}
+.page_main #mainTopSwiper.swiper-container {
   height: 300px;
   color: #ffffff;
+}
+.page_main #mainTopSwiper .swiper-slide {
   background-color: #6E93BF;
 }
-.page_main #swiper1 .swiper-pagination {
+.page_main #mainTopSwiper .swiper-pagination {
   top: auto;
   bottom: 20px;
   right: 20px;
@@ -4740,7 +4836,7 @@ footer .f_company {
   font-weight: 400;
   line-height: normal;
 }
-.page_main #swiper1 .swiper-pagination-total {
+.page_main #mainTopSwiper .swiper-pagination-total {
   opacity: 0.7;
 }
 
@@ -5378,10 +5474,6 @@ footer .f_company {
 }
 .prd_list_wrap .prd_list_lg .prd_box {
   min-width: 150px;
-}
-.prd_list_wrap .prd_box.swiper-slide {
-  padding: 8px 0 0 8px;
-  background-color: #ffffff;
 }
 
 .cate_brand.accord_list {
