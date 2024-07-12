@@ -375,7 +375,7 @@ function accordionUI() {
       return false;
     }
     if($(el).parents(".accord_list").hasClass("is_plus")){
-      if($(event.target).hasClass("ico_plus")){
+      if($(event.target).hasClass("ico_plus_20")){
         onOff(el);
       }
     }else{

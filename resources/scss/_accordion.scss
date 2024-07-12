@@ -101,15 +101,16 @@
     &.is_plus{
       .accord_tit{
         @include flexBetween;
-        padding: 16px 0 16px 12px;
-        .ico_plus{
+        margin: 4px 0 0 0;
+        padding: 12px 0 16px 12px;
+        .ico_plus_20{
           &::before{
             background-color:$color-primary;
           }
         }
         &::before{
           display: none;  
-          mask-image: url("../images/icon/ico_plus.svg");
+          mask-image: url("../images/icon/ico_plus_20.svg");
         }
       }
       .accord_head{
@@ -119,13 +120,9 @@
         cursor:default;
         &.on{
           .accord_tit{
-            padding-top: 12px;
-            padding-bottom: 8px;
-            font-size: $fs-s;
-            line-height: 1.58;
-            .ico_plus{
+            .ico_plus_20{
               &::before{
-                mask-image: url("../images/icon/ico_minus.svg");
+                mask-image: url("../images/icon/ico_minus_20.svg");
               }              
             }
           }

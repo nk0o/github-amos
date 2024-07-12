@@ -60,6 +60,10 @@
   width: 14px;
   height: 14px;
 }
+*[class*="ico_12"] {
+  width: 12px;
+  height: 12px;
+}
 
 /********* 아이콘 svg 추가 *********/
 /* user아이콘 */
@@ -203,24 +207,31 @@
     }
   }
   &_plus{
-    &::before {
-      @include iconImgPath("ico_plus.svg");
-    }
-    &_white{
+    &_12{
       &::before {
-        @include iconImgPath("ico_plus_white.svg");
-        background-color: $color-white !important;
+        @include iconImgPath("ico_plus_12.svg");
+      }
+    }
+    &_20{
+      &::before {
+        @include iconImgPath("ico_plus_20.svg");
+      }
+    }
+    &_24{
+      &::before {
+        @include iconImgPath("ico_plus_24.svg");
       }
     }
   }
   &_minus{
-    &::before {
-      @include iconImgPath("ico_minus.svg");
-    }
-    &_white{
+    &_20{
       &::before {
-        @include iconImgPath("ico_minus_white.svg");
-        background-color: $color-white !important;
+        @include iconImgPath("ico_minus_20.svg");
+      }
+    }
+    &_24{
+      &::before {
+        @include iconImgPath("ico_minus_24.svg");
       }
     }
   }

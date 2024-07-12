@@ -139,7 +139,7 @@ var include = {
         <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
       </li>
       <li class="item anchor">
-        <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_white"></i></button>
+        <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_24"></i></button>
       </li>
     </ul><!-- //.floating_side -->
     `);
