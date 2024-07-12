@@ -5201,10 +5201,6 @@ footer .f_company {
 .prd_cont .view_type button.active {
   display: block;
 }
-.prd_cont .view_type button.btn_view_list i {
-  width: 14px;
-  height: 14px;
-}
 .prd_cont.type_list {
   border-top: 1px solid #eee;
 }
