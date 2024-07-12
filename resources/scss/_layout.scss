@@ -35,6 +35,10 @@ header{
 //Layout > Inner
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
   padding: 0 20px;
+  @media (min-width: $pc-point) {
+    max-width: $pc-point;
+    margin: 0 auto;
+  }
 }
 .hr_divider{
   width: 100%;
@@ -66,7 +70,7 @@ footer{
       padding: 0 0 20px;
       background-color: transparent;
     }
-  }
+  } 
   .logo{
     height: 24px;
     img{
@@ -84,7 +88,7 @@ footer{
     }
   }
   .f_copyright{
-    margin-top: 8px;
+    padding-top: 8px;
     @include fontStyle($gray-700, $fs-xxs, $fw-l, 1.3333);
     span{
       font-weight: $fw-m;
@@ -124,5 +128,53 @@ footer{
     margin-top: 17px;
     @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.5555);
     font-family: 'aritadt', sans-serif;
+  }
+  @media (min-width: $pc-point) {
+    padding: 32px 40px;
+    .inner{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    .accord{
+      &_list{
+        grid-column: 1/-1;
+      }
+      &_tit{
+        pointer-events: none;
+        &::before{
+          display: none;
+        }
+      }
+      &_cont{
+        display: flex !important;
+        height: auto !important;
+        justify-content: space-between;
+        padding: 0 0 16px;
+      }
+    }
+    .f_cs{
+      ul{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 5px;
+        li{
+          & + li{
+            margin-top: 0;
+          }
+          span{
+            margin-right: 4px;
+            padding-right: 4px;
+          }
+        }
+      }
+    }
+    .f_company, .f_copyright{
+      text-align: right;
+    }
+    .f_info, .f_copyright{
+      padding-top: 12px;
+    }
   }
 }

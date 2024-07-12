@@ -54,6 +54,24 @@
       height: 210px;
       background-color: $color-primary;
     }
+    .prd_list_wrap.swiper{
+      max-width: $pc-point;
+      margin: 0 auto;
+      @media (min-width: $pc-point) {
+        padding: 0 20px 46px;
+      }
+    }
+    .prd_box.swiper-slide{
+      padding: 8px 0 0 8px;
+      background-color: $color-white;    
+    }
+    .swiper-pagination{
+      display: none;
+      @media (min-width: $pc-point) {
+        display: block;
+        bottom: 0;
+      }
+    }
     &.is_noBack{
       padding-top: 0;
       &::before{
@@ -67,6 +85,13 @@
           background-color:$color-primary !important;
         }
       }
+      .prd_box.swiper-slide{
+        padding: 0 0 0 8px;
+        background-color: $color-white;  
+        &:first-child{
+          padding-left: 0;
+        }
+      }
     }
   }
   .sec_banner{
@@ -76,6 +101,7 @@
     padding: 24px 0 40px;
     background-color: $gray-950;
     .tit_area{
+      padding: 0 0 16px 0;
       h2{
         justify-content: center;
         color: $color-white;
@@ -109,22 +135,37 @@
       }
     }
   }
+  .sec_type{
+    padding: 12px 0 0 0;
+    .tab_cont{
+      padding: 20px 0 0 0;
+    }
+    @media (min-width: $pc-point) {
+      .inner{
+        max-width: 715px;
+      }
+    }
+  }
   /* 메인 스와이퍼 */
-  #swiper1 {
+  #mainTopSwiper {
     &.swiper-container{
       height: 300px;
       color:$color-white;
-      background-color: #6E93BF;
     }
-    .swiper-pagination{
-      top: auto;
-      bottom: 20px;
-      right: 20px;
-      left: auto;
-      text-align: right;
-      @include fontStyle($color-white, $fs-m, $fw-m);
-      &-total{
-        opacity: 0.7;
+    .swiper{
+      &-slide{
+        background-color: #6E93BF;
+      }
+      &-pagination{
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+        text-align: right;
+        @include fontStyle($color-white, $fs-m, $fw-m);
+        &-total{
+          opacity: 0.7;
+        }
       }
     }
   }  

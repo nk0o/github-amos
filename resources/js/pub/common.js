@@ -549,7 +549,15 @@ function PrdSlider(){
     let PrdSwiper = new Swiper(sliderId, {
       autoHeight: true,
       slidesPerView: 2.26,
-      spaceBetween: -1,    
+      spaceBetween: -1,
+      pagination: {
+        el: sliderId +" .swiper-pagination",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 5,
+        },
+      },
     });
   });
 }
