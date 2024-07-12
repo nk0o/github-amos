@@ -75,6 +75,23 @@ $(document).ready(function () {
 
       $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
     }
+
+    //브랜드 아코디언 앵커이동
+    if (tab.hasClass("thumb_tab")) {
+      let idx = $(el).index();    
+      if($('.cate_brand.accord_list').length > 0) {
+        let accorHead = $('.cate_brand.accord_list').find('.accord_head'),
+            accorHeadTitH = $('.cate_brand.accord_list').find('.accord_tit').outerHeight(),
+            tabsAreaH = $('.tabs_area').outerHeight();
+        $("html, body").animate({
+          scrollTop : accorHeadTitH *idx + tabsAreaH + 1*idx
+        },500)
+        accorHead.removeClass('on');
+        accorHead.eq(idx).addClass('on');
+        accorHead.find(".accord_cont").stop().slideUp();
+        accorHead.eq(idx).find(".accord_cont").stop().slideDown();
+      }
+    }
   }
   //Line Tab 초기화
   function LineTabMenuInit() {
