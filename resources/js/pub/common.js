@@ -521,6 +521,9 @@ function like(event) {
 
 function catecoryUI(){
   $(".cate_nav li").click(function(){
+    let elName = $(this).find('.cate_tit').attr('href');
+    let elPos = $(elName).offset();
+    scrollTo(0, elPos.top, 'ease');
     if($(this).hasClass("active")){
       return false;
     }else{

@@ -35,7 +35,7 @@
         text-align: center;
         white-space: nowrap;
         cursor: pointer;
-        @include fontStyle($gray-600, $fs-m, $fw-m, 1.5);
+        @include fontStyle($gray-600, $fs-s, $fw-m, 1.5);
         font-family: $font-aritadt;
       }
       &.current {

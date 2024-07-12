@@ -1,5 +1,3 @@
 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="minus=1px - 20">
-<path id="Vector 25" d="M2 10H18" stroke="#BBBBBB" stroke-linecap="square"/>
-</g>
+<path d="M4 10H16" stroke="#BBBBBB" stroke-linecap="square"/>
 </svg>
