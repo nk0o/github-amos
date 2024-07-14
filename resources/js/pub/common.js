@@ -50,30 +50,7 @@ $(document).ready(function () {
     
     // 가운데 정렬
     if (tab.hasClass('tab_center')) {
-      let liWid = 0,
-          boxWid = $('.tab_center').outerWidth(),
-          boxHalf = $('.tab_center').outerWidth() / 2,
-          leftPos = 0,
-          // pd = $(el).parent('ul').css('padding-left') * 2,
-          selectPos,
-          pos;
-          $(el).parents('.tab_center').find('.tab_list').each(function() {
-          liWid += $(this).outerWidth();
-      });
-      for (let i=0; i< $(el).index(); i++) {
-          leftPos += $(el).parents('.tab_center').find('.tab_list').eq(i).outerWidth();
-      }
-      selectPos = leftPos + $(el).outerWidth()/2;
-      if (selectPos < boxHalf) {
-        pos = 0;
-      } else if (liWid - selectPos < boxHalf) {
-        pos = liWid - boxWid;
-      }  
-      else {
-        pos = selectPos - boxHalf ;
-      }
-
-      $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
+      moveCenterTab(el)
     }
 
     //브랜드 아코디언 앵커이동
@@ -113,6 +90,7 @@ $(document).ready(function () {
       });
     })
   };
+  //
 
   /****** Toggle Button ******/
   $('.btn_toggle').click(function () {
@@ -377,6 +355,13 @@ function accordionUI() {
     event.preventDefault(); 
   });
   function accordionAction(el, event) {
+    if($(el).parents(".accord_list").hasClass("cate_brand")){
+      let idx = $(el).parents('.accord_head').index();
+      let tablist = $('.tabs_area .thumb_list').find('.tab_list');
+      tablist.removeClass('current')
+      tablist.eq(idx).addClass('current')
+      moveCenterTab(tablist.eq(idx))
+    }
     if($(el).parents('.accord_head').hasClass("no_open")){
       return false;
     }
@@ -616,4 +601,31 @@ function headerScroll() {
     }
     lastScrollTop = st;
   })
+}
+//Tab 가운데
+function moveCenterTab(el){
+  let liWid = 0,
+    boxWid = $('.tab_center').outerWidth(),
+    boxHalf = $('.tab_center').outerWidth() / 2,
+    leftPos = 0,
+    // pd = $(el).parent('ul').css('padding-left') * 2,
+    selectPos,
+    pos;
+    $(el).parents('.tab_center').find('.tab_list').each(function() {
+    liWid += $(this).outerWidth();
+  });
+  for (let i=0; i< $(el).index(); i++) {
+    leftPos += $(el).parents('.tab_center').find('.tab_list').eq(i).outerWidth();
+  }
+  selectPos = leftPos + $(el).outerWidth()/2;
+  if (selectPos < boxHalf) {
+  pos = 0;
+  } else if (liWid - selectPos < boxHalf) {
+  pos = liWid - boxWid;
+  }  
+  else {
+  pos = selectPos - boxHalf ;
+  }
+
+  $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
 }
