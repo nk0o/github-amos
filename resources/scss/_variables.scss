@@ -40,14 +40,14 @@ $fw-bb: 900; // extrabold, black
 $color-primary: #2A3136;
 $color-point: #FF2E00;
 
-$color-primary-lighten4: lighten($color-primary, 40%);;
-$color-primary-lighten3: lighten($color-primary, 30%);;
-$color-primary-lighten2: lighten($color-primary, 20%);;
-$color-primary-lighten1: lighten($color-primary, 10%);;
-$color-primary-darken1: darken($color-primary, 10%);;
-$color-primary-darken2: darken($color-primary, 20%);;
-$color-primary-darken3: darken($color-primary, 30%);;
-$color-primary-darken4: darken($color-primary, 40%);;
+$color-primary-lighten4: lighten($color-primary, 40%);
+$color-primary-lighten3: lighten($color-primary, 30%);
+$color-primary-lighten2: lighten($color-primary, 20%);
+$color-primary-lighten1: lighten($color-primary, 10%);
+$color-primary-darken1: darken($color-primary, 10%);
+$color-primary-darken2: darken($color-primary, 20%);
+$color-primary-darken3: darken($color-primary, 30%);
+$color-primary-darken4: darken($color-primary, 40%);
 
 // 시스템 색상
 $color-red: $color-point;
