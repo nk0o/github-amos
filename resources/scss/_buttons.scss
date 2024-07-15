@@ -139,6 +139,12 @@ button {
     border-color:$gray-100;
     color: $gray-700;
     gap: 2px;
+    &.btn_color{
+      @include fontStyle($gray-700, 0.6875rem, $fw-m, 1.3636);
+    }
+    &.with_txt{
+      padding: 6px 10px 6px 6px;
+    }
   }
   //Bottom Button
   &_bottom{
