@@ -5716,6 +5716,37 @@ footer .f_company {
     padding-top: 100px;
   }
 }
+.sign_img {
+  width: 120px;
+  margin: 80px auto 0;
+}
+
+.sign_state_wrap {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.sign_state {
+  padding: 20px 40px;
+  background: #F6F6F6;
+  border-radius: 8px;
+  text-align: center;
+}
+.sign_state dt {
+  color: #222222;
+  font-size: 0.8125rem;
+  line-height: 18px;
+  letter-spacing: -0.26px;
+}
+.sign_state dd {
+  margin-top: 4px;
+  color: #1A63D9;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.36px;
+}
+
 .page_sign .btn_group {
   padding: 60px 20px 30px;
 }

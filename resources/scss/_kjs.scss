@@ -571,8 +571,34 @@
   }
 }
 
-
-
+.sign_img {
+  width: 120px;
+  margin: 80px auto 0;
+}
+.sign_state_wrap {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+.sign_state {
+  padding: 20px 40px;
+  background: #F6F6F6;
+  border-radius: 8px;
+  text-align: center;
+  dt {
+    color: $gray-950;
+    font-size: $fs-xs;
+    line-height: 18px; 
+    letter-spacing: -0.26px;
+  }
+  dd {
+    margin-top: 4px;
+    color: #1A63D9;
+    font-size: $fs-ml;
+    font-weight: $fw-b;
+    line-height: 26px;
+    letter-spacing: -0.36px;
+  }
+}
 
 
 
