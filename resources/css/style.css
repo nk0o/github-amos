@@ -5780,4 +5780,20 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.4667;
+}
+
+@media (min-width: 1024px) {
+  .page_sign .btn_group {
+    max-width: 335px;
+    margin: 0 auto;
+  }
+  .sign_notice {
+    padding-top: 40px;
+  }
+  .sign_notice br {
+    display: none;
+  }
+  .page_sign .btn_group {
+    padding: 132px 0 0;
+  }
 }/*# sourceMappingURL=style.css.map */
