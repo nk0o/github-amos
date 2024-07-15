@@ -2054,10 +2054,16 @@ button {
 .btn_group {
   display: -webkit-box;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  padding: 0 20px;
   gap: 5px;
+}
+.btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm {
+  flex: 1;
+  justify-content: center;
 }
 .btn_icon {
   justify-content: center;
@@ -4260,7 +4266,6 @@ div.dataTables_wrapper .btn_floating:focus {
   padding: 0 24px 24px;
 }
 .modal_footer .btn_group {
-  justify-content: center;
   padding: 0 45px 0;
 }
 .modal_footer .btn_group button, .modal_footer .btn_group *[class*=btn_] {
@@ -5637,6 +5642,19 @@ footer .f_company {
     border-top: none;
   }
 }
+.page_sign .btn_group {
+  padding: 60px 20px 30px;
+}
+.page_sign .info_area {
+  padding: 50px 0px 0;
+}
+.page_sign .info_read {
+  padding: 0 20px 24px;
+}
+.page_sign .input_group {
+  padding: 24px 20px 0;
+}
+
 .sign_notice {
   padding: 32px 20px 0;
 }

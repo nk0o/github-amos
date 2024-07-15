@@ -121,8 +121,13 @@ button {
   }
   //Button Group
   &_group {
-    @include flexStart;
+    @include flexCenter;
+    padding: 0 20px;
     gap: 5px;
+    button, .btn{
+      flex: 1;
+      justify-content: center;
+    }
   }
   //Icon Button
   &_icon{
