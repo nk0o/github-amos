@@ -15,6 +15,9 @@
     max-width: 740px;
     margin: 0 auto;
   }
+  .p_tit {
+    display: none;
+  }
 }
 .sign_notice{
   padding: 32px 20px 0;
@@ -31,20 +34,24 @@
 
 @media (min-width: 1024px) {
   .page_sign {
+    .p_tit {
+      display: block;
+      padding: 60px 0 32px;
+      margin: 0 20px;
+      border-bottom: 2px solid $gray-950;
+      @include fontStyle($gray-950, 28px, $fw-sb, 38px);
+      text-align: center;
+    }
     .btn_group {
       max-width: 335px;
       margin: 0 auto;
+      padding: 132px 0 0;
     }
   }
   .sign_notice { 
     padding-top: 40px;
     br {
       display: none;
-    }
-  }
-  .page_sign {
-    .btn_group {
-      padding: 132px 0 0;
     }
   }
 }
