@@ -2590,6 +2590,7 @@ button {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: "aritadt";
 }
 .select_box_value > span {
   display: block;
@@ -2913,6 +2914,7 @@ select {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.214;
+  font-family: "aritadt";
 }
 .input_group .time {
   color: #FF2E00;
@@ -2979,6 +2981,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: "aritadt";
 }
 .input_text[type=text]::-moz-placeholder {
   color: #aaaaaa;
@@ -3046,6 +3049,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: "aritadt";
 }
 .input_writing_group textarea::-moz-placeholder {
   color: #aaaaaa;
@@ -5754,6 +5758,9 @@ footer .f_company {
   letter-spacing: -0.36px;
 }
 
+.page_sign .hr_divider {
+  height: 8px;
+}
 .page_sign .btn_group {
   padding: 60px 20px 30px;
 }
@@ -5780,7 +5787,7 @@ footer .f_company {
 .sign_notice p {
   color: #222222;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4167;
 }
 .sign_notice span {
@@ -5790,6 +5797,24 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.4667;
+}
+
+.info_read li {
+  display: flex;
+  gap: 12px;
+  padding: 4px 0;
+}
+.info_read li div {
+  flex: 1;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "aritadt";
+}
+.info_read li div:first-child {
+  flex: 0 0 100px;
+  color: #888888;
 }
 
 @media (min-width: 1024px) {
