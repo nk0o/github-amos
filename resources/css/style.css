@@ -5759,6 +5759,10 @@ footer .f_company {
 .page_sign .input_group {
   padding: 24px 20px 0;
 }
+.page_sign .inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
 
 .sign_notice {
   padding: 32px 20px 0;
