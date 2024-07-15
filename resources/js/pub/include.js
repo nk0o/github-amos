@@ -65,6 +65,16 @@ var include = {
       </div>
     `);
   },
+  subAppBarType2: function(){
+    document.write(`
+      <div class="appbar is_line">
+        <div class="inner">
+          <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
+          <h2 class="appbar_tit">서브 페이지(Type2) 제목</h2>
+        </div>
+      </div>
+    `);
+  },
   tabBar: function () {
     document.write(`
       <div class="btm_bar is_nav">

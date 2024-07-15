@@ -1,0 +1,11 @@
+.sign_notice{
+  padding: 32px 20px 0;
+  p{
+    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+  }
+  span{
+    display: inline-block;
+    margin-top: 12px;
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+  }
+}

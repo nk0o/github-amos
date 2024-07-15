@@ -123,7 +123,7 @@
     }
     .colorchip{
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-top: 6px;
       gap: 2px;
       @include fontStyle($gray-700, $fs-s, $fw-m, 1.2142);
@@ -131,6 +131,7 @@
       img{
         width: 14px;
         height: 14px;
+        margin-top: 2px;
         border-radius: 100%;
         object-fit: cover;
       }
