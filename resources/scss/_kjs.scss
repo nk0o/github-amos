@@ -419,14 +419,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
 // PC
 @media (min-width: 1024px) {
   .prd_cont {
@@ -508,11 +500,104 @@
   }
 }
 
+.page_sign {
+  .login_first {
+    max-width:  335px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+    .simbol {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
+    .info_area {
+      .input_group {
+        padding:0;
+        + .input_group  {
+          margin-top: 10px;
+        }
+        &:has(.input_check_wrap) {
+          margin-top: 16px;
+        }
+      }
+    }
+    .btn_group {
+      padding: 16px 0 0;
+    }
+    .list_btn_wrap {
+      margin-top: 24px;
+    }
+  }
+}
 
+// PC
+.list_btn_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >li {
+    + li {
+      &::before {
+        display: inline-block;
+        margin: 0 12px;
+        width: 1px;
+        height: 14px;
+        background: #E2E2E2;
+        vertical-align: -2px;
+        content: '';
+      }
+    }
+    >a {
+      color:$gray-950;
+      font-size: $fs-sm;
+      line-height: 20px;
+      letter-spacing: -0.3px;
+    }
+  }
+}
 
+//pc
+@media (min-width: 1024px) {
+  .page_sign {
+    .login_first {
+      padding-top: 100px;
+    }
+  }
+}
 
-
-
-
+.sign_img {
+  width: 120px;
+  margin: 80px auto 0;
+}
+.sign_state_wrap {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+.sign_state {
+  padding: 20px 40px;
+  background: #F6F6F6;
+  border-radius: 8px;
+  text-align: center;
+  dt {
+    color: $gray-950;
+    font-size: $fs-xs;
+    line-height: 18px; 
+    letter-spacing: -0.26px;
+  }
+  dd {
+    margin-top: 4px;
+    color: #1A63D9;
+    font-size: $fs-ml;
+    font-weight: $fw-b;
+    line-height: 26px;
+    letter-spacing: -0.36px;
+  }
+}
 
 
