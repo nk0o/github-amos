@@ -125,6 +125,13 @@ p {
   src: url("../fonts/AritaDotum/Arita-Dotum-SemiBold.eot"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.woff") format("woff"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.woff2") format("woff2"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.ttf") format("truetype"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.svg") format("svg");
   unicode-range: U+AC00-D7A3;
 }
+@font-face {
+  font-family: "aritadt";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/AritaDotum/Arita-Dotum-Bold.eot"), url("../fonts/AritaDotum/Arita-Dotum-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AritaDotum/Arita-Dotum-Bold.woff") format("woff"), url("../fonts/AritaDotum/Arita-Dotum-Bold.ttf") format("truetype");
+  unicode-range: U+AC00-D7A3;
+}
 /* Gotham */
 @font-face {
   font-family: "gotham";
