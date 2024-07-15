@@ -5570,6 +5570,9 @@ footer .f_company {
 .cate_brand.accord_list {
   padding-bottom: 0;
 }
+.cate_brand.accord_list li {
+  background-image: none;
+}
 .cate_brand.accord_list .accord_tit {
   padding: 0;
 }

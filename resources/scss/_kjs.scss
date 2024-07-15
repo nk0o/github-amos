@@ -395,6 +395,9 @@
 
 .cate_brand.accord_list {
   padding-bottom: 0;
+  li {
+    background-image: none;
+  }
   .accord_tit {
     padding: 0;
     &::before {
@@ -504,6 +507,9 @@
     }
   }
 }
+
+
+
 
 
 
