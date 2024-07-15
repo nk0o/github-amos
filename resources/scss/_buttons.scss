@@ -144,6 +144,7 @@ button {
     }
     &.with_txt{
       padding: 6px 10px 6px 6px;
+      @include fontStyle($gray-700, $fs-xs, $fw-m, 1.23);
     }
   }
   //Bottom Button

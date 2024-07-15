@@ -2082,6 +2082,10 @@ button {
 }
 .btn_icon.with_txt {
   padding: 6px 10px 6px 6px;
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
 }
 .btn_bottom {
   width: 100%;
