@@ -1,0 +1,25 @@
+.page_sign{
+  .btn_group{
+    padding: 60px 20px 30px;
+  }
+  .info_area{
+    padding: 50px 0px 0;
+  }
+  .info_read{
+    padding: 0 20px 24px;
+  }
+  .input_group{
+    padding: 24px 20px 0;
+  }
+}
+.sign_notice{
+  padding: 32px 20px 0;
+  p{
+    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+  }
+  span{
+    display: inline-block;
+    margin-top: 12px;
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+  }
+}
