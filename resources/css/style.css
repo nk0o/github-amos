@@ -2921,6 +2921,9 @@ select {
   line-height: 1.214;
   font-family: "aritadt";
 }
+.input_group label .line_red {
+  color: #FF2E00;
+}
 .input_group .time {
   color: #FF2E00;
   font-size: 0.9375rem;
@@ -5887,6 +5890,9 @@ footer .f_company {
 }
 .page_sign .input_group {
   padding: 24px 20px 0;
+}
+.page_sign .input_group.with_time {
+  padding-top: 6px;
 }
 .page_sign .inner {
   max-width: 740px;

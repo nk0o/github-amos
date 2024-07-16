@@ -30,6 +30,9 @@
     label{
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
       font-family: $font-aritadt;
+      .line_red{
+        color: #FF2E00;
+      }
     }
     .time{
       @include fontStyle($color-red, $fs-sm, $fw-m, 2);
@@ -185,4 +188,5 @@
       }
     }
   }
+  
 }
