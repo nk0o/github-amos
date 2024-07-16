@@ -573,7 +573,7 @@
 
 .sign_img {
   width: 120px;
-  margin: 80px auto 0;
+  margin: 80px auto 72px;
 }
 .sign_state_wrap {
   padding: 0 20px;
@@ -597,6 +597,63 @@
     font-weight: $fw-b;
     line-height: 26px;
     letter-spacing: -0.36px;
+  }
+}
+
+
+.complete_txt {
+  padding: 40px 0 36px;
+  background: #DFEDFF url('../images/contents/img_complete_txt.png') no-repeat top /100%;
+  .txt_box {
+    max-width: 261px;
+    margin: 0 auto;
+    text-align: center;
+    strong {
+      display: block;
+      font-size: 22px;
+      font-weight: $fw-b;
+      line-height: 32px;
+      letter-spacing: -0.44px;
+      span {
+        display: block;
+        font-size: 18px;
+        font-weight: $fw-b;
+        line-height: 26px;
+        letter-spacing: -0.36px;
+      }
+    }
+    p {
+      margin-top: 13px;
+      color: #1A63D9;
+      font-size: 14px;
+      font-weight: $fw-sb;
+      line-height: 19px;
+    }
+  }
+}
+
+.radio_btn_outer {
+  padding: 32px 0 0;
+  >li {
+    padding: 0 20px;
+    &+li {
+      margin-top: 40px;
+    }
+  }
+}
+.radio_btn_box {
+  .tit {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: $fw-sb;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+  }
+  .radio_btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }
 

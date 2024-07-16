@@ -34,9 +34,14 @@
 
 @media (min-width: 1024px) {
   .page_sign {
+    #container {
+      >.inner {
+        padding: 60px 0 82px;
+      }
+    }
     .p_tit {
       display: block;
-      padding: 60px 0 32px;
+      padding: 0 0 32px;
       margin: 0 20px;
       border-bottom: 2px solid $gray-950;
       @include fontStyle($gray-950, 28px, $fw-sb, 38px);
@@ -45,7 +50,7 @@
     .btn_group {
       max-width: 335px;
       margin: 0 auto;
-      padding: 132px 0 0;
+      padding: 60px 0 0;
     }
   }
   .sign_notice { 

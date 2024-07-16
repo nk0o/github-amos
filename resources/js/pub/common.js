@@ -202,8 +202,19 @@ $(document).ready(function () {
       }
     })
   }
-}) //ready
 
+  //checkbox 선택 2개 제한
+  $('.check_len2').each(function() {
+    $(this).find('input[type="checkbox"]').on('change', function() {
+      let parent = $(this).closest('.check_len2');
+      let count = parent.find('input[type="checkbox"]:checked').length;
+      if (count > 2) {
+        $(this).prop('checked', false);
+      }
+    });
+  });
+}) //ready
+ 
 
 /****** Select Box ******/
 function selectBoxUI(){
