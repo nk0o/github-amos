@@ -31,7 +31,7 @@
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
       font-family: $font-aritadt;
       .line_red{
-        color: #FF2E00;
+        color: $color-red;
       }
     }
     .time{

@@ -2640,7 +2640,7 @@ button:disabled *[class*=ico_]::before {
   padding: 0;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
-  background: #fff;
+  background: #ffffff;
   z-index: 10;
 }
 .select_box_list::before {
@@ -4389,11 +4389,11 @@ div.dataTables_wrapper .btn_floating:focus {
 .modal_container.is_scroll .scroll_inner::-webkit-scrollbar {
   opacity: 0;
   width: 7px;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 .modal_container.is_scroll .scroll_inner::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 .modal_container.is_scroll .scroll_inner::-webkit-scrollbar-thumb {
   width: 3px;
@@ -4494,7 +4494,7 @@ div.dataTables_wrapper .btn_floating:focus {
   transform: translateX(-50%);
 }
 .appbar.is_line {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 .appbar_util {
   margin-left: auto;
@@ -5921,6 +5921,9 @@ footer .f_company {
 .page_sign .info_area .input_group:first-child {
   padding-top: 0;
 }
+.page_sign .info_area .sign_state_wrap {
+  margin-top: 0;
+}
 .page_sign .info_read {
   padding: 0 20px 24px;
 }
@@ -5974,6 +5977,28 @@ footer .f_company {
   color: #888888;
 }
 
+.sign_guide {
+  padding: 24px 24px 0;
+}
+.sign_guide p {
+  color: #666666;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.3333;
+  text-align: center;
+}
+.sign_guide p .user_name {
+  color: #444444;
+  font-weight: 600;
+}
+.sign_guide p em {
+  color: #1A63D9;
+  font-weight: 600;
+}
+.sign_guide p + p {
+  margin-top: 16px;
+}
+
 .user_check.input_check_list li + li {
   margin-top: 10px;
 }
@@ -5998,7 +6023,7 @@ footer .f_company {
   width: 24px;
   height: 24px;
   mask-image: url(../images/icon/ico_check_24_on.svg);
-  background-color: #bbb !important;
+  background-color: #bbbbbb !important;
 }
 
 .agree_check {

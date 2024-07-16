@@ -205,7 +205,7 @@ button {
         &::before {
           mask-image: url(../images/icon/ico_btn_heart_red.svg);
           background-size: cover;
-          background-color: #FF2E00 !important;
+          background-color:$color-red !important;
         }
       }
     }

@@ -21,7 +21,7 @@
     transform: translateX(-50%);
   }
   &.is_line {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $gray-100;
   }
   &_util{
     margin-left: auto;

@@ -10,6 +10,9 @@
     .input_group:first-child {
       padding-top: 0;
     }
+    .sign_state_wrap{
+      margin-top: 0;
+    }
   }
   .info_read{
     padding: 0 20px 24px;
@@ -55,6 +58,24 @@
     }
   }
 }
+.sign_guide{
+  padding: 24px 24px 0;
+  p{
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.3333);
+    text-align: center;
+    .user_name{
+      color:$gray-900;
+      font-weight: $fw-sb;
+    }
+    em{
+      color:#1A63D9;
+      font-weight: $fw-sb;
+    }
+    & + p{
+      margin-top: 16px;
+    }
+  }
+}
 .user_check.input_check_list{
   li + li {
     margin-top: 10px;
@@ -76,7 +97,7 @@
           width: 24px;
           height: 24px;
           mask-image: url(../images/icon/ico_check_24_on.svg);
-          background-color: #bbb !important;
+          background-color: $gray-400 !important;
         }
       }
     }

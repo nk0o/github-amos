@@ -133,10 +133,10 @@
     &::-webkit-scrollbar {
       opacity: 0;
       width: 7px;
-      background-color: #ddd;
+      background-color: $gray-300;
       &-track {
         border-radius: 5px;
-        background-color: #ddd;
+        background-color: $gray-300;
       }
       &-thumb {
         width: 3px;
