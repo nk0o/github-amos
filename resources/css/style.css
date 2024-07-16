@@ -2509,7 +2509,7 @@ button:disabled *[class*=ico_]::before {
   border: 1px solid #e2e2e2;
   color: #666666;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1;
 }
 .input_radio_wrap.type_btn .input_radio + label::before {
