@@ -35,6 +35,7 @@
   padding: 32px 20px 0;
   p{
     @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+    font-family: $font-aritadt;
   }
   span{
     display: inline-block;

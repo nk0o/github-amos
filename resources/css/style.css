@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -203,7 +204,7 @@ p {
   background-color: #FFC107 !important;
 }
 .bg_info {
-  background-color: #0036B1 !important;
+  background-color: #1A63D9 !important;
 }
 .bg_light {
   background-color: #f6f6f6 !important;
@@ -218,7 +219,7 @@ p {
   background-color: #00B5AD !important;
 }
 .bg_blue {
-  background-color: #0036B1 !important;
+  background-color: #1A63D9 !important;
 }
 .bg_violet {
   background-color: #6435C9 !important;
@@ -241,6 +242,12 @@ p {
 .bg_white {
   background-color: #ffffff !important;
 }
+.bg_box {
+  background-color: #f6f6f6 !important;
+}
+.bg_box_blue {
+  background-color: #EFF6FF !important;
+}
 
 .line_primary {
   border: 1px solid #2A3136 !important;
@@ -258,7 +265,7 @@ p {
   border: 1px solid #FFC107 !important;
 }
 .line_info {
-  border: 1px solid #0036B1 !important;
+  border: 1px solid #1A63D9 !important;
 }
 .line_light {
   border: 1px solid #f6f6f6 !important;
@@ -273,7 +280,7 @@ p {
   border: 1px solid #00B5AD !important;
 }
 .line_blue {
-  border: 1px solid #0036B1 !important;
+  border: 1px solid #1A63D9 !important;
 }
 .line_violet {
   border: 1px solid #6435C9 !important;
@@ -307,7 +314,7 @@ p {
   color: #FFC107 !important;
 }
 .txt_info {
-  color: #0036B1 !important;
+  color: #1A63D9 !important;
 }
 .txt_light {
   color: #f6f6f6 !important;
@@ -322,7 +329,7 @@ p {
   color: #00B5AD !important;
 }
 .txt_blue {
-  color: #0036B1 !important;
+  color: #1A63D9 !important;
 }
 .txt_violet {
   color: #6435C9 !important;
@@ -3395,7 +3402,7 @@ select {
   color: #FFC107;
 }
 .badge.line_info {
-  color: #0036B1;
+  color: #1A63D9;
 }
 .badge.line_light {
   color: #f6f6f6;
@@ -3410,7 +3417,7 @@ select {
   color: #00B5AD;
 }
 .badge.line_blue {
-  color: #0036B1;
+  color: #1A63D9;
 }
 .badge.line_violet {
   color: #6435C9;
@@ -4221,7 +4228,7 @@ div.dataTables_wrapper .btn_floating:focus {
   background-color: #26A769;
 }
 .progress_bar_blue {
-  background-color: #0036B1;
+  background-color: #1A63D9;
 }
 .progress_label {
   margin-top: 4px;
@@ -5853,6 +5860,12 @@ footer .f_company {
   line-height: 26px;
   letter-spacing: -0.36px;
 }
+.sign_state.userID_box dd {
+  color: #222222;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.176;
+}
 
 .complete_txt {
   padding: 40px 0 36px;
@@ -5949,6 +5962,7 @@ footer .f_company {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.4167;
+  font-family: "aritadt";
 }
 .sign_notice span {
   display: inline-block;

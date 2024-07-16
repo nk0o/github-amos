@@ -599,6 +599,11 @@
     line-height: 26px;
     letter-spacing: -0.36px;
   }
+  &.userID_box{
+    dd{
+      @include fontStyle($gray-950, $fs-md, $fw-m, 1.176);
+    }
+  }
 }
 
 

@@ -148,6 +148,12 @@
   &_white {
     background-color: $color-white !important;
   }
+  &_box{
+    background-color: $gray-50 !important;
+  }
+  &_box_blue{ 
+    background-color: $color-blue-tertiary !important;
+  }
 }
 //Border Line Color
 .line {
