@@ -12,6 +12,7 @@
     padding-left: 28px;
     user-select: none;
     @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+    font-family: $font-aritadt;
     &::before {
       content: "";
       display: block;
@@ -88,6 +89,7 @@
     min-height: 20px;
     padding-left: 28px;
     @include fontStyle($gray-950, $fs-s, $fw-m, 1.429 );
+    font-family: $font-aritadt;
     user-select: none;
     cursor: pointer;
     &::before {

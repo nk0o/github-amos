@@ -27,7 +27,7 @@
       border-radius: 4px;
       @include fontStyle($gray-600, $fs-s, $fw-m, 1.357);
     }
-    label, .input_label{
+    label{
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
       font-family: $font-aritadt;
     }
@@ -165,6 +165,23 @@
         &.zero{
           color: $gray-600;
         }
+      }
+    }
+  }
+  &_label{
+    position: relative;
+    @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
+    font-family: $font-aritadt;
+    &.required{
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -6px;
+        width: 4px;
+        height: 4px;
+        background-color: $color-red;
+        border-radius: 100%;
       }
     }
   }
