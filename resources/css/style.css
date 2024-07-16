@@ -5809,6 +5809,7 @@ footer .f_company {
 .sign_state dt {
   color: #222222;
   font-size: 0.8125rem;
+  font-weight: 600;
   line-height: 18px;
   letter-spacing: -0.26px;
 }
