@@ -40,14 +40,14 @@ $fw-bb: 900; // extrabold, black
 $color-primary: #2A3136;
 $color-point: #FF2E00;
 
-$color-primary-lighten4: lighten($color-primary, 40%);;
-$color-primary-lighten3: lighten($color-primary, 30%);;
-$color-primary-lighten2: lighten($color-primary, 20%);;
-$color-primary-lighten1: lighten($color-primary, 10%);;
-$color-primary-darken1: darken($color-primary, 10%);;
-$color-primary-darken2: darken($color-primary, 20%);;
-$color-primary-darken3: darken($color-primary, 30%);;
-$color-primary-darken4: darken($color-primary, 40%);;
+$color-primary-lighten4: lighten($color-primary, 40%);
+$color-primary-lighten3: lighten($color-primary, 30%);
+$color-primary-lighten2: lighten($color-primary, 20%);
+$color-primary-lighten1: lighten($color-primary, 10%);
+$color-primary-darken1: darken($color-primary, 10%);
+$color-primary-darken2: darken($color-primary, 20%);
+$color-primary-darken3: darken($color-primary, 30%);
+$color-primary-darken4: darken($color-primary, 40%);
 
 // 시스템 색상
 $color-red: $color-point;
@@ -57,6 +57,7 @@ $color-olive: #B5CC18;
 $color-green: #26A769; 
 $color-teal: #00B5AD; 
 $color-blue: #0036B1;
+$color-blue-secondary: #DFEDFF;
 $color-violet: #6435C9;
 $color-purple: #A333C8;
 $color-pink: #E03997;

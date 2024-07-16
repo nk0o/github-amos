@@ -19,6 +19,7 @@
     @include trans($prop: all, $duration: 0.2s, $type: ease-out, $delay: 0s);
     cursor: pointer;
     @include fontStyle($gray-500, $fs-m, $fw-m, 1.5);
+    font-family: $font-aritadt;
     > span {
       @include text-ellipsis;
       font: inherit;

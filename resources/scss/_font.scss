@@ -25,6 +25,16 @@
   url('../fonts/AritaDotum/Arita-Dotum-SemiBold.svg') format('svg');
   unicode-range: U+AC00-D7A3;//한글
 }
+@font-face {
+  font-family: 'aritadt';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/AritaDotum/Arita-Dotum-Bold.eot'),
+  url('../fonts/AritaDotum/Arita-Dotum-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AritaDotum/Arita-Dotum-Bold.woff') format('woff'),
+  url('../fonts/AritaDotum/Arita-Dotum-Bold.ttf') format('truetype');
+  unicode-range: U+AC00-D7A3;//한글
+}
 
 /* Gotham */
 @font-face {

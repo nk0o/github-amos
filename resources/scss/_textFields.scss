@@ -27,8 +27,9 @@
       border-radius: 4px;
       @include fontStyle($gray-600, $fs-s, $fw-m, 1.357);
     }
-    label, .input_label{
+    label{
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
+      font-family: $font-aritadt;
     }
     .time{
       @include fontStyle($color-red, $fs-sm, $fw-m, 2);
@@ -95,6 +96,7 @@
     @include trans($prop: all, $duration: 0.2s, $type: ease-out, $delay: 0s);
     @include placeholder;
     @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+    font-family: $font-aritadt;
     &:focus {
       border: 1px solid $gray-950;
       & ~ button{
@@ -137,6 +139,7 @@
       //resize: none;
       @include placeholder;
       @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+      font-family: $font-aritadt;
     }
     &.disabled, &.disabled textarea {
       background-color: $gray-50;
@@ -162,6 +165,23 @@
         &.zero{
           color: $gray-600;
         }
+      }
+    }
+  }
+  &_label{
+    position: relative;
+    @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
+    font-family: $font-aritadt;
+    &.required{
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -6px;
+        width: 4px;
+        height: 4px;
+        background-color: $color-red;
+        border-radius: 100%;
       }
     }
   }

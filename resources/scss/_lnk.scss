@@ -1,4 +1,7 @@
 .page_sign{
+  .hr_divider{
+    height: 8px;
+  }
   .btn_group{
     padding: 60px 20px 30px;
   }
@@ -22,7 +25,7 @@
 .sign_notice{
   padding: 32px 20px 0;
   p{
-    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+    @include fontStyle($gray-950, $fs-lg, $fw-b, 1.4167);
   }
   span{
     display: inline-block;
@@ -30,8 +33,74 @@
     @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
   }
 }
-
-
+.info_read{
+  li{
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+    div{
+      flex:1;
+      @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+      font-family: $font-aritadt;
+      &:first-child{
+        flex: 0 0 100px;
+        color: $gray-600;
+      }
+    }
+  }
+}
+.user_check.input_check_list{
+  li + li {
+    margin-top: 10px;
+  }
+  .input_check_wrap{
+    height: auto;
+    .input_radio {
+      &:checked + label{
+        background-color: $color-blue-secondary;
+      }
+      & + label{
+        padding: 30px;
+        @include fontStyle($gray-950, $fs-ml, $fw-b, 1.444);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+        background-color: $color-white;
+        border-radius: 8px;
+        &::before{
+          right: 30px;
+          width: 24px;
+          height: 24px;
+          mask-image: url(../images/icon/ico_check_24_on.svg);
+          background-color: #bbb !important;
+        }
+      }
+    }
+  }
+}
+.agree_check{
+  padding: 0 20px;
+  & > p{
+    margin:10px 0 0;
+    @include fontStyle($gray-700, $fs-s, $fw-m, 1.357);
+  }
+  &_list{
+    padding: 16px 0 0;
+    margin: 16px 0 0;
+    border-top: 1px solid $gray-100;
+    li{
+      @include flexBetween;
+      padding: 8px 0;
+      button{
+        &::before{
+          background-color: $gray-950 !important;
+        }
+      }
+    }
+    .input_check_wrap{
+      flex: 1;
+      margin-right: 40px;
+    }
+  }
+}
 @media (min-width: 1024px) {
   .page_sign {
     #container {
