@@ -137,7 +137,7 @@
       border-radius: 9999px;
       background-color:$color-white;
       border:1px solid $gray-200;
-      @include fontStyle($gray-800, $fs-s, $fw-b, 1);
+      @include fontStyle($gray-800, $fs-s, $fw-m, 1);
       &::before{
         display: none !important;
       }

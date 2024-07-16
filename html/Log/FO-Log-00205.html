@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>본인인증 - 회원가입 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap" class="page_sign">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <div class="inner">
+        <!-- 탭 메뉴 -->
+        <div class="tab_menu line_tab">
+          <ul>
+            <li class="current tab_list" data-tab="tab2-1"><button>아이디 찾기</button></li>
+            <li class="tab_list" data-tab="tab2-2"><button>비밀번호 찾기</button></li>
+          </ul>
+          <div class="tab_bar"></div>
+        </div>
+        <!-- 탭 내용 -->
+        <div class="tab_cont">
+          <div id="tab2-1" class="tab_cont_item current">
+            <div class="sign_notice">
+              <p>회원정보에 등록한 휴대전화로 인증해 주세요.</p>
+              <span>회원정보에 등록한 휴대전화 번호와 입력한 휴대전화 번호가 일치해야, 인증번호를 받을 수 있습니다.</span>
+            </div><!-- //.sign_notice -->
+            <div class="info_area">
+              <div class="input_group">
+                <span class="input_label">이름</span>
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="이름을 입력해주세요">
+                </label>
+              </div><!-- //.input_group -->
+              <div class="input_group">
+                <span class="input_label">휴대폰 번호</span>
+                <div class="select_box">
+                  <div class="select_box_value" data-btmsheet="btmSheet02">
+                    <span>통신사를 선택해 주세요</span>
+                  </div><!-- //.select_box_value -->
+                  <div class="select_box_list">
+                    <ul>
+                      <li><span>SKT</span></li>
+                      <li><span>KT</span></li>
+                      <li><span>LGT U</span></li>
+                      <li><span>SKT 알뜰폰</span></li>
+                      <li><span>KT 알뜰폰</span></li>
+                      <li><span>LG 알뜰폰</span></li>
+                    </ul>
+                  </div><!-- //.select_box_list -->
+                </div><!-- //.select_box -->
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                  <button class="btn_sm btn_border">인증요청</button>
+                </label>
+                <!-- 인증재요청 -->
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                  <button class="btn_sm btn_border line_red">인증재요청</button>
+                </label>
+                <!-- //인증재요청 -->
+              </div><!-- //.input_group -->
+              <div class="input_group with_time input_error">
+                <label for="">
+                  <input type="text" id="" class="input_text input_error" value="" placeholder="">
+                  <span class="time">2:35</span>
+                </label>
+                <p class="txt_alert error">인증번호가 다릅니다.</p>
+              </div>
+            </div><!-- //.input_area -->
+            <div class="btn_group">
+              <button class="btn btn_lg btn_primary">다음</button>
+            </div>
+          </div>
+          <div id="tab2-2" class="tab_cont_item">
+            비밀번호 찾기
+          </div>
+        </div><!-- //tab_cont -->
+      </div>
+    </main>
+    <!-- //#container --> 
+  </div>
+
+<!-- Bottom Sheet -->
+<div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
+  <div class="btm_sheet_back"></div>
+  <div class="inner">
+    <div class="btm_sheet_head">
+      <p class="tit">통신사 선택</p>
+      <button type="button" class="btm_sheet_close ico_close_20"></button>
+    </div><!-- //.btm_sheet_head -->
+    <div class="btm_sheet_cont check_list">
+      <ul class="input_check_list">
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-1" class="input_radio" name="radio-item-2" checked="">
+            <label for="radio-2-1">SKT</label>
+          </div>
+        </li>
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-2" class="input_radio" name="radio-item-2">
+            <label for="radio-2-2">KT</label>
+          </div>
+        </li>
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-3" class="input_radio" name="radio-item-2">
+            <label for="radio-2-3">LGT U</label>
+          </div>
+        </li>
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-4" class="input_radio" name="radio-item-2">
+            <label for="radio-2-4">SKT 알뜰폰</label>
+          </div>
+        </li>
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-5" class="input_radio" name="radio-item-2">
+            <label for="radio-2-5">KT 알뜰폰</label>
+          </div>
+        </li>
+        <li>
+          <div class="input_radio_wrap without_box">
+            <input type="radio" id="radio-2-6" class="input_radio" name="radio-item-2">
+            <label for="radio-2-6">LG 알뜰폰</label>
+          </div>
+        </li>
+      </ul>
+    </div><!-- //.btm_sheet_cont -->
+    <div class="btm_sheet_btns">
+      <button type="button" class="btn_bottom btm_sheet_close">확인</button>
+    </div><!-- //.btm_sheet_btns -->
+  </div><!-- //.inner -->
+</div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+</body>
+</html>

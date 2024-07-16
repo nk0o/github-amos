@@ -30,6 +30,9 @@
     label{
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
       font-family: $font-aritadt;
+      .line_red{
+        color: #FF2E00;
+      }
     }
     .time{
       @include fontStyle($color-red, $fs-sm, $fw-m, 2);
@@ -86,8 +89,8 @@
       }
     }
   }
-  //타입 텍스트,파일 업로드
-  &_text[type="text"], &_text[type="file"] {
+  //타입 텍스트,파일 업로드, 비번
+  &_text[type="text"], &_text[type="file"], &_text[type="password"] {
     width: 100%;
     height: 50px;
     padding: 0px 12px;
@@ -239,6 +242,7 @@
       }
     }
   }
+  
 }
 @media (min-width: $pc-point) {
   .input_group{
