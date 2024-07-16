@@ -7,6 +7,11 @@
   }
   .info_area{
     padding: 50px 0px 0;
+    .input_group{
+      &:nth-child(1){
+        padding: 0 20px 0;
+      }
+    }
   }
   .info_read{
     padding: 0 20px 24px;

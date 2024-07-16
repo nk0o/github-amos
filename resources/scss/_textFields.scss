@@ -86,8 +86,8 @@
       }
     }
   }
-  //타입 텍스트
-  &_text[type="text"] {
+  //타입 텍스트,파일 업로드
+  &_text[type="text"], &_text[type="file"] {
     width: 100%;
     height: 50px;
     padding: 0px 12px;
@@ -121,6 +121,60 @@
       border: 1px solid $color-green;
     }
   } 
+  &_text[type="file"]{
+    .file_name {
+      position: relative;
+      input {
+         @include text-ellipsis;
+         min-width: 256px;
+         min-height: 38px;
+         padding: 9px 44px 9px 16px;
+         font-size: $fs-xs;
+         font-weight: $fw-m;
+         color: $gray-600;
+         border-radius: 4px;
+         background-color: $gray-50;
+         & + .input_delete {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            z-index: 10;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            &::after {
+               width: 12px;
+            }
+            &::before {
+               width: 12px;
+            }
+            &:hover {
+               &::after,
+               &::before {
+                  background-color: $gray-950;
+               }
+            }
+         }
+      }
+   }
+  }
+  &_text[type="file" i]{
+    cursor: pointer;
+    &::-webkit-file-upload-button {
+      height: 100%;
+      width: 0px;
+      padding: 0;
+      margin: 0;
+      margin-inline-end: 0;
+      padding-block: 1px;
+      padding-inline: 0;
+      border-width: 0;
+      & ~ span{
+        line-height: 50px;
+      }
+    }
+  }
   //Textarea
   &_writing_group {
     display: inline-block;
@@ -184,5 +238,21 @@
         border-radius: 100%;
       }
     }
+  }
+}
+@media (min-width: $pc-point) {
+  .input_group{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 8px 20px;
+    .select_box, label:not(.input_label), p, .txt_alert{
+      grid-column-start: 2;
+    }
+  }
+  .input_label{
+    display: block;
+    grid-column: 1/2;
+    grid-row:1/-1;
+    padding-top: 16px;
   }
 }
