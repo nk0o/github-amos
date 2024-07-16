@@ -3038,48 +3038,11 @@ select {
 .input_text[type=text].input_success, .input_text[type=file].input_success, .input_text[type=password].input_success {
   border: 1px solid #26A769;
 }
-.input_text[type=file] .file_name {
-  position: relative;
-}
-.input_text[type=file] .file_name input {
-  display: block;
-  overflow: hidden;
-  word-break: break-all;
-  word-wrap: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 256px;
-  min-height: 38px;
-  padding: 9px 44px 9px 16px;
-  font-size: 0.8125rem;
-  font-weight: 400;
+.input_text[type=file] {
+  cursor: pointer;
   color: #888888;
-  border-radius: 4px;
-  background-color: #f6f6f6;
 }
-.input_text[type=file] .file_name input + .input_delete {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  z-index: 10;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  cursor: pointer;
-}
-.input_text[type=file] .file_name input + .input_delete::after {
-  width: 12px;
-}
-.input_text[type=file] .file_name input + .input_delete::before {
-  width: 12px;
-}
-.input_text[type=file] .file_name input + .input_delete:hover::after, .input_text[type=file] .file_name input + .input_delete:hover::before {
-  background-color: #222222;
-}
-.input_text[type=file i] {
-  cursor: pointer;
-}
-.input_text[type=file i]::-webkit-file-upload-button {
+.input_text[type=file]::-webkit-file-upload-button {
   height: 100%;
   width: 0px;
   padding: 0;
@@ -3088,9 +3051,6 @@ select {
   padding-block: 1px;
   padding-inline: 0;
   border-width: 0;
-}
-.input_text[type=file i]::-webkit-file-upload-button ~ span {
-  line-height: 50px;
 }
 .input_writing_group {
   display: inline-block;
@@ -3176,13 +3136,15 @@ select {
 }
 .input_label.required::after {
   content: "";
-  position: absolute;
-  top: 0;
-  right: -6px;
+  position: relative;
+  display: inline-block;
+  top: 3px;
+  right: -2px;
   width: 4px;
   height: 4px;
   background-color: #FF2E00;
   border-radius: 100%;
+  vertical-align: top;
 }
 
 @media (min-width: 1024px) {

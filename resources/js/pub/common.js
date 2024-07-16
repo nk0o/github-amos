@@ -3,7 +3,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 $(document).ready(function () {
   if ($(".line_tab")) { LineTabMenuInit() }
   if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
-  if ($('.file_uploader') || $('[type="file"]')) { fileUploader() }
+  if ($('.file_uploader')) { fileUploader() }
   if ($('.input_writing_group textarea')) { initCountString() }
   if ($('.progress_bar')) { progressBarUI() }
   if ($('.pagination').length > 0) { paginationUI() }
@@ -129,9 +129,6 @@ $(document).ready(function () {
 
   /****** File Uploader ******/
   function fileUploader() {
-    $('.input_text[type="file"]').on('change', function(){
-      addFileName(this)
-    });
     $('.file_uploader').each(function (index, item) {
       $(item).find('.file_name .input_delete').on('click', function () {
         $(this).parents('.file_name').remove();
@@ -152,21 +149,6 @@ $(document).ready(function () {
         }
       });
     });
-    function addFileName(){
-      var fileCheck = $(this).val();
-      if (fileCheck == '') {
-        alert("파일을 첨부해 주세요");
-      } else {
-        var $div = $('<div class="file_name"><input type="text" readonly><i class="input_delete" onclick="removeFilename(this)"></i></div>');
-        $(item).append($div);
-        var fileName = $(this).val();
-        //경로가 있는경우
-        //$div.find('input').val(fileName);
-        //경로가 없어야 하는 경우
-        fileName = fileName.split("\\");
-        $div.find('input').val(fileName[fileName.length - 1]);
-      }
-    }
   };
 
   // 상품 담기
@@ -436,14 +418,21 @@ function dataTableSelect(dtable) {
 
 
 function addInputClearBtn(){
+  $('.input_text[type="file"]').on('change', function(){
+    addB(this)
+    $(this).css('color', '#222')
+  })
   $(".input_text").on('keyup', function () { 
-    if($(this).parents('label').find('button').length){
+    addB(this)
+  });
+  function addB(el){
+    if($(el).parents('label').find('button').length){
       return false
     }
-    if(!$(this).parents('label').find('.ico_close_circle').length){
-      $(this).parent('label').append(`<button class="ico_close_circle"></button>`)
+    if(!$(el).parents('label').find('.ico_close_circle').length){
+      $(el).parent('label').append(`<button class="ico_close_circle"></button>`)
     }
-  });
+  }
 }
 /****** Modal ******/
 function modalUI(){
