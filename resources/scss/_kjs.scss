@@ -567,6 +567,12 @@
   .page_sign {
     .login_first {
       padding-top: 100px;
+      .input_group{
+        grid-template-columns:1fr;
+        label:not(.input_label){
+          grid-column-start: 1;
+        }
+      }
     }
   }
 }

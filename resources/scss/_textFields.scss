@@ -206,19 +206,3 @@
   }
   
 }
-@media (min-width: $pc-point) {
-  .input_group{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 8px 20px;
-    .select_box, label:not(.input_label), p, .txt_alert{
-      grid-column-start: 2;
-    }
-  }
-  .input_label{
-    display: block;
-    grid-column: 1/2;
-    grid-row:1/-1;
-    padding-top: 16px;
-  }
-}
