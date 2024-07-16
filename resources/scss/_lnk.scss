@@ -7,6 +7,9 @@
   }
   .info_area{
     padding: 50px 0px 0;
+    .input_group:first-child {
+      padding-top: 0;
+    }
   }
   .info_read{
     padding: 0 20px 24px;
@@ -28,7 +31,7 @@
 .sign_notice{
   padding: 32px 20px 0;
   p{
-    @include fontStyle($gray-950, $fs-lg, $fw-b, 1.4167);
+    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
   }
   span{
     display: inline-block;

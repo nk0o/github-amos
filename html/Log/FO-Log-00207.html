@@ -21,19 +21,28 @@
         <!-- 탭 메뉴 -->
         <div class="tab_menu line_tab">
           <ul>
-            <li class="current tab_list" data-tab="tab2-1"><button>아이디 찾기</button></li>
-            <li class="tab_list" data-tab="tab2-2"><button>비밀번호 찾기</button></li>
+            <li class="tab_list" data-tab="tab2-1"><button>아이디 찾기</button></li>
+            <li class="current tab_list" data-tab="tab2-2"><button>비밀번호 찾기</button></li>
           </ul>
           <div class="tab_bar"></div>
         </div>
         <!-- 탭 내용 -->
         <div class="tab_cont">
-          <div id="tab2-1" class="tab_cont_item current">
+          <div id="tab2-1" class="tab_cont_item">
+            아이디 찾기
+          </div>
+          <div id="tab2-2" class="tab_cont_item current">
             <div class="sign_notice">
-              <p>회원정보에 등록한 휴대전화로 인증해 주세요.</p>
+              <p>임시 비밀번호 발송을 위해<br>아래 내용을 입력해 주세요.</p>
               <span>회원정보에 등록한 휴대전화 번호와 입력한 휴대전화 번호가 일치해야, 인증번호를 받을 수 있습니다.</span>
             </div><!-- //.sign_notice -->
             <div class="info_area">
+              <div class="input_group">
+                <span class="input_label">아이디</span>
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="아이디를 입력해주세요">
+                </label>
+              </div><!-- //.input_group -->
               <div class="input_group">
                 <span class="input_label">이름</span>
                 <label for="">
@@ -79,9 +88,6 @@
             <div class="btn_group">
               <button class="btn btn_lg btn_primary">다음</button>
             </div>
-          </div>
-          <div id="tab2-2" class="tab_cont_item">
-            비밀번호 찾기
           </div>
         </div><!-- //tab_cont -->
       </div>

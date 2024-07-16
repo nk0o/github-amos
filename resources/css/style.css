@@ -5885,6 +5885,9 @@ footer .f_company {
 .page_sign .info_area {
   padding: 50px 0px 0;
 }
+.page_sign .info_area .input_group:first-child {
+  padding-top: 0;
+}
 .page_sign .info_read {
   padding: 0 20px 24px;
 }
@@ -5908,7 +5911,7 @@ footer .f_company {
 .sign_notice p {
   color: #222222;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4167;
 }
 .sign_notice span {
