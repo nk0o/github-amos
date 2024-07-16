@@ -90,7 +90,8 @@
     }
   }
   //타입 텍스트
-  &_text[type="text"] {
+  &_text[type="text"],
+  &_text[type="password"] {
     width: 100%;
     height: 50px;
     padding: 0px 12px;
