@@ -152,7 +152,7 @@ $(document).ready(function () {
   };
 
   // 상품 담기
-  if ($('.prd_list_wrap.ir').length > 0) {
+  if ($('.prd_list_wrap.ir').length > 0 ) {
     $('.prd_box .prd').on('click', function() {
       let imgSrc = $(this).find('img').attr('src');
       let $parent = $(this).parent();
@@ -174,7 +174,14 @@ $(document).ready(function () {
       $('.prd_cart_btn .count').text('(' + count + ')');
     });
     
-    // 장바구니 버튼
+    putCart();
+  }
+  if ($('.btm_bar.type2').length > 0) {
+    putCart();
+  }
+
+  // 장바구니 버튼
+  function putCart() {
     $('.prd_cart_btn .btn_bottom').on('click',function() {
       let cartTxt = $(this).siblings('.cart_txt');
       if(cartTxt.hasClass('active')) {
@@ -526,16 +533,18 @@ function like(event) {
   const target = $(event);
   if (target.hasClass("active")) {
     target.removeClass("active");
-    target.parent('.bottom').find('.ani_liked').remove();
+    target.parent().find('.ani_liked').remove();
   } else {
     target.addClass("active");
-    target.parent('.bottom').append(
-      '<div class="ani_liked"><div class="ir_like"></div></div>'
-    );
-    target.parent('.bottom').find('.ani_liked').addClass('active');
-    setTimeout(function() {
-      target.parent('.bottom').find('.ani_liked').removeClass('active');
-    }, 1000);
+    if ($('.prd_list_wrap.ir').length > 0) {
+      target.parent().append(
+        '<div class="ani_liked"><div class="ir_like"></div></div>'
+      );
+      target.parent().find('.ani_liked').addClass('active');
+      setTimeout(function() {
+        target.parent().find('.ani_liked').remove();
+      }, 1000);
+    }
   }
 }
 

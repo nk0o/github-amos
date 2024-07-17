@@ -4529,13 +4529,57 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 
 .btm_bar {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   width: 100%;
   bottom: 0;
   height: 90px;
   padding: 16px 0 32px;
   background-color: #ffffff;
+}
+.btm_bar.type2 {
+  padding: 10px 20px 28px;
+  background-color: #2A3136;
+}
+.btm_bar.type2 > .inner {
+  justify-content: center;
+  padding: 0;
+  gap: 0;
+}
+.btm_bar.type2 .line {
+  display: inline-block;
+  width: 1px;
+  height: 32px;
+  background-color: #AAA;
+}
+.btm_bar.type2 .btn_like {
+  height: 52px;
+  padding: 0 26px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btm_bar.type2 .btn_like i {
+  margin-right: 6px;
+  vertical-align: -6px;
+}
+.btm_bar.type2 .btn_like i::before {
+  background-color: #fff;
+}
+.btm_bar.type2 .prd_cart_btn {
+  position: static;
+  transform: translateX(0);
+}
+.btm_bar.type2 .btn_bottom {
+  width: auto;
+  padding: 0;
+  justify-content: start;
+  gap: 0;
+  padding: 0 34px;
+}
+.btm_bar.type2 .btn_bottom i {
+  margin-right: 8px;
+  vertical-align: -6px;
 }
 .btm_bar .inner {
   display: flex;
@@ -4582,6 +4626,36 @@ div.dataTables_wrapper .btn_floating:focus {
   line-height: 1.333;
 }
 
+@media (min-width: 1024px) {
+  .btm_bar {
+    height: auto;
+  }
+  .btm_bar.type2 {
+    padding: 16px 0 32px;
+    background: #fff;
+    border-top: 1px solid #E2E2E2;
+  }
+  .btm_bar.type2 .inner {
+    gap: 8px;
+  }
+  .btm_bar.type2 .btn_like {
+    border: 1px solid #E2E2E2;
+    padding: 0 40px;
+    width: 278px;
+    color: #AAA;
+  }
+  .btm_bar.type2 .btn_like i::before {
+    background-color: #AAA;
+  }
+  .btm_bar.type2 .btn_bottom {
+    padding: 0 40px;
+    width: 278px;
+    justify-content: center;
+  }
+  .btm_bar.type2 .line {
+    display: none;
+  }
+}
 .floating_side {
   z-index: 1;
   position: fixed;
@@ -5326,7 +5400,6 @@ footer .f_company {
   font-weight: 600;
   color: #222222;
   line-height: 1.25rem;
-  letter-spacing: -0.3px;
 }
 .prd_box .prd .amount {
   display: block;
@@ -5335,14 +5408,12 @@ footer .f_company {
   font-family: "aritadt";
   font-size: 0.875rem;
   font-weight: 400;
-  letter-spacing: -0.28px;
   line-height: 1.0625rem;
 }
 .prd_box .prd .price {
   margin: 9px 0 5px;
   color: #222222;
   font-size: 1.0625rem;
-  letter-spacing: -0.34px;
   line-height: 1.125rem;
 }
 .prd_box .prd .price span {
@@ -5356,7 +5427,6 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 600;
   color: #222222;
-  letter-spacing: -0.3px;
 }
 .prd_box .prd .colorchip {
   display: flex;
@@ -5514,8 +5584,11 @@ footer .f_company {
 }
 .prd_cart_btn .cart_txt {
   display: none;
-  width: auto;
-  margin-bottom: 10px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   padding: 10px 20px;
   border-radius: 30px;
   color: #fff;
@@ -5778,7 +5851,6 @@ footer .f_company {
   color: #222222;
   font-size: 0.9375rem;
   line-height: 20px;
-  letter-spacing: -0.3px;
 }
 
 @media (min-width: 1024px) {
@@ -5813,7 +5885,6 @@ footer .f_company {
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 18px;
-  letter-spacing: -0.26px;
 }
 .sign_state dd {
   margin-top: 4px;
@@ -5821,7 +5892,6 @@ footer .f_company {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 26px;
-  letter-spacing: -0.36px;
 }
 .sign_state.userID_box dd {
   color: #222222;
@@ -5844,14 +5914,12 @@ footer .f_company {
   font-size: 22px;
   font-weight: 700;
   line-height: 32px;
-  letter-spacing: -0.44px;
 }
 .complete_txt .txt_box strong span {
   display: block;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  letter-spacing: -0.36px;
 }
 .complete_txt .txt_box p {
   margin-top: 13px;
@@ -5880,6 +5948,24 @@ footer .f_company {
     margin: 0 auto;
   }
 }
+.page_detail {
+  padding-bottom: 210px;
+}
+.page_detail .sec_product.is_noBack {
+  padding-top: 32px;
+}
+.page_detail .sec_product.is_noBack .tit_area {
+  margin-bottom: 20px;
+}
+.page_detail .sec_product.is_noBack .tit_area h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.page_detail .sec_product.is_noBack .tit_area h2 a {
+  display: none;
+}
+
 .prd_top_info .prd_img {
   background: #F6F6F6;
   width: 100%;
@@ -5959,6 +6045,7 @@ footer .f_company {
 
 .prd_detail_view {
   margin-top: 40px;
+  padding-bottom: 40px;
 }
 .prd_detail_view .tab_menu {
   overflow: hidden;
@@ -6302,5 +6389,5 @@ footer .f_company {
   background-color: #ffffff;
 }
 .sec_product.is_noBack .prd_box.swiper-slide:first-child {
-  padding-left: 0;
+  margin-left: -8px;
 }/*# sourceMappingURL=style.css.map */

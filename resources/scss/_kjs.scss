@@ -89,7 +89,6 @@
       font-weight: $fw-sb;
       color: $gray-950;
       line-height: 1.25rem;
-      letter-spacing: -0.3px;
     }
     .amount {
       display: block;
@@ -98,14 +97,12 @@
       font-family: $font-aritadt;
       font-size: $fs-s;
       font-weight: 400;
-      letter-spacing: -0.28px;
       line-height: 1.0625rem;
     }
     .price {
       margin: 9px 0 5px;
       color: $gray-950;
       font-size: $fs-md;
-      letter-spacing: -0.34px;
       line-height: 1.125rem;
       span {
         display: inline-block;
@@ -119,7 +116,6 @@
       font-size: $fs-sm;
       font-weight: $fw-sb;
       color: $gray-950;
-      letter-spacing: -0.3px;
     }
     .colorchip{
       display: flex;
@@ -272,8 +268,11 @@
   }
   .cart_txt {
     display: none;
-    width: auto;
-    margin-bottom: 10px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     padding: 10px 20px;
     border-radius: 30px;
     color: #fff;
@@ -557,7 +556,6 @@
       color:$gray-950;
       font-size: $fs-sm;
       line-height: 20px;
-      letter-spacing: -0.3px;
     }
   }
 }
@@ -595,7 +593,6 @@
     font-size: $fs-xs;
     font-weight: $fw-sb;
     line-height: 18px; 
-    letter-spacing: -0.26px;
   }
   dd {
     margin-top: 4px;
@@ -603,7 +600,6 @@
     font-size: $fs-ml;
     font-weight: $fw-b;
     line-height: 26px;
-    letter-spacing: -0.36px;
   }
   &.userID_box{
     dd{
@@ -625,13 +621,11 @@
       font-size: 22px;
       font-weight: $fw-b;
       line-height: 32px;
-      letter-spacing: -0.44px;
       span {
         display: block;
         font-size: 18px;
         font-weight: $fw-b;
         line-height: 26px;
-        letter-spacing: -0.36px;
       }
     }
     p {
@@ -665,6 +659,24 @@
   .complete_txt {
     max-width: 700px;
     margin: 0 auto;
+  }
+}
+
+.page_detail {
+  padding-bottom: 210px;
+  .sec_product.is_noBack  {
+    padding-top: 32px;
+    .tit_area {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 18px;
+        font-weight: $fw-sb;
+        line-height: 26px;
+        a {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -727,6 +739,7 @@
 }
 .prd_detail_view {
   margin-top: 40px;
+  padding-bottom: 40px;
   .tab_menu {
     overflow: hidden;
     >ul {
@@ -736,4 +749,11 @@
     }
   }
 }
+
+
+
+
+
+
+
 
