@@ -646,14 +646,7 @@
     }
   }
 }
-.radio_btn_box {
-  .tit {
-    display: block;
-    margin-bottom: 12px;
-    font-size: 20px;
-    font-weight: $fw-sb;
-    line-height: 28px;
-  }
+.radio_btn_box {  
   .radio_btn_wrap {
     display: flex;
     flex-wrap: wrap;
@@ -755,4 +748,6 @@
     }
   }
 }
+
+
 

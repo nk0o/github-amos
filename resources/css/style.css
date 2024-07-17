@@ -1979,7 +1979,7 @@ button:disabled *[class*=ico_]::before {
   margin: 0;
   padding: 8px 20px;
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   vertical-align: middle;
   border: 1px solid transparent;
@@ -2534,7 +2534,8 @@ button:disabled *[class*=ico_]::before {
   cursor: default;
 }
 .input_radio_wrap.type_btn .input_radio[disabled][checked] + label {
-  background-color: #e2e2e2;
+  border-color: #2A3136;
+  background-color: #2A3136;
   color: #ffffff;
 }
 
@@ -5921,13 +5922,6 @@ footer .f_company {
   margin-top: 40px;
 }
 
-.radio_btn_box .tit {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-}
 .radio_btn_box .radio_btn_wrap {
   display: flex;
   flex-wrap: wrap;
@@ -6058,12 +6052,6 @@ footer .f_company {
 .page_form .info_area {
   padding: 50px 0px 0;
 }
-.page_form .info_area .input_group:first-child {
-  padding-top: 0;
-}
-.page_form .info_area .sign_state_wrap {
-  margin-top: 0;
-}
 .page_form .input_group {
   padding: 24px 20px 0;
 }
@@ -6076,6 +6064,14 @@ footer .f_company {
 }
 .page_form .p_tit {
   display: none;
+}
+.page_form .ask_tit {
+  display: block;
+  color: #222222;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 .sign_notice {
@@ -6095,6 +6091,19 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.4667;
+}
+
+.info_area {
+  padding: 50px 0px 0;
+}
+.info_area .input_group:first-child {
+  padding-top: 0;
+}
+.info_area .sign_state_wrap {
+  margin-top: 0;
+}
+.info_area .radio_btn_outer:nth-of-type(1) {
+  padding-top: 0;
 }
 
 .info_read {

@@ -154,7 +154,8 @@
       cursor: default;
     }
     &[disabled][checked] + label {
-      background-color: $gray-200;
+      border-color: $color-primary;
+      background-color: $color-primary;
       color: $color-white;
     }
   }

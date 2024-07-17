@@ -11,12 +11,6 @@
   }
   .info_area{
     padding: 50px 0px 0;
-    .input_group:first-child {
-      padding-top: 0;
-    }
-    .sign_state_wrap{
-      margin-top: 0;
-    }
   }
   .input_group{
     padding: 24px 20px 0;
@@ -31,6 +25,11 @@
   .p_tit {
     display: none;
   }
+  .ask_tit {
+    display: block;
+    @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
+    margin-bottom: 12px;
+  }
 }
 .sign_notice{
   padding: 32px 20px 0;
@@ -42,6 +41,18 @@
     display: inline-block;
     margin-top: 12px;
     @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+  }
+}
+.info_area{
+  padding: 50px 0px 0;
+  .input_group:first-child {
+    padding-top: 0;
+  }
+  .sign_state_wrap{
+    margin-top: 0;
+  }
+  .radio_btn_outer:nth-of-type(1){
+    padding-top: 0;
   }
 }
 .info_read{
@@ -220,7 +231,7 @@
     }
   }
 }
-
+//제품 리스트 스와이퍼 섹션 공통
 .sec_product{
   padding-top: 32px;
   position: relative;
