@@ -593,7 +593,7 @@ function PrdSlider(){
     let PrdSwiper = new Swiper(sliderId, {
       autoHeight: true,
       slidesPerView: 2.26,
-      spaceBetween: -1,
+      spaceBetween: 8,
       pagination: {
         el: sliderId +" .swiper-pagination",
       },

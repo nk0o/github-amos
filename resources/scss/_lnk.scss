@@ -252,19 +252,17 @@
 .prd_list_wrap{
   &.swiper{
     padding: 0 0 0 20px;
+    @media (min-width: $pc-point) {
+      max-width: calc($pc-point - 40px);
+      margin: 0 auto;
+      padding: 0 0 46px;
+    }
   }
   .prd_list_lg.swiper-wrapper{
     flex-wrap: nowrap;
     gap: 0;
-  }
-  .prd_box.swiper-slide{
-    padding: 8px 0 0 8px;
-    background-color: $color-white;    
-  }
-  @media (min-width: $pc-point) {
-    max-width: $pc-point;
-    margin: 0 auto;
-    padding: 0 20px 46px;
+    padding: 8px 0 0 9px;
+    background-color: $color-white;
   }
 }
 .sec_product{
@@ -299,12 +297,14 @@
         background-color:$color-primary !important;
       }
     }
+    .prd_list_lg.swiper-wrapper{
+      margin-left: -4px;
+      padding: 0;
+      background-color: $color-white;
+    }
     .prd_box.swiper-slide{
-      padding: 0 0 0 8px;
-      background-color: $color-white;  
-      &:first-child{
-        margin-left: -8px;
-      }
+      max-width: none;
+      padding-left: 4px;
     }
   }
 }

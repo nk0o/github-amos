@@ -6391,20 +6391,18 @@ footer .f_company {
 .prd_list_wrap.swiper {
   padding: 0 0 0 20px;
 }
+@media (min-width: 1024px) {
+  .prd_list_wrap.swiper {
+    max-width: 984px;
+    margin: 0 auto;
+    padding: 0 0 46px;
+  }
+}
 .prd_list_wrap .prd_list_lg.swiper-wrapper {
   flex-wrap: nowrap;
   gap: 0;
-}
-.prd_list_wrap .prd_box.swiper-slide {
-  padding: 8px 0 0 8px;
+  padding: 8px 0 0 9px;
   background-color: #ffffff;
-}
-@media (min-width: 1024px) {
-  .prd_list_wrap {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px 46px;
-  }
 }
 
 .sec_product {
@@ -6441,10 +6439,12 @@ footer .f_company {
 .sec_product.is_noBack .tit_area .ico_chevNext_24::before {
   background-color: #2A3136 !important;
 }
-.sec_product.is_noBack .prd_box.swiper-slide {
-  padding: 0 0 0 8px;
+.sec_product.is_noBack .prd_list_lg.swiper-wrapper {
+  margin-left: -4px;
+  padding: 0;
   background-color: #ffffff;
 }
-.sec_product.is_noBack .prd_box.swiper-slide:first-child {
-  margin-left: -8px;
+.sec_product.is_noBack .prd_box.swiper-slide {
+  max-width: none;
+  padding-left: 4px;
 }/*# sourceMappingURL=style.css.map */
