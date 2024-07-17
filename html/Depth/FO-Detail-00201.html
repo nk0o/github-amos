@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div id="wrap">
+  <div id="wrap" class="page_detail">
     <header>
       <script>include.subAppBarType1();</script>
     </header>    
@@ -53,6 +53,8 @@
           <!-- //상품 정보 -->
         </div>
       </section>
+
+      <!-- 상품 상세 -->
       <section class="prd_detail_view">
         <!-- 탭 -->
         <div class="tab_menu contain_tab">
@@ -78,13 +80,193 @@
         </div>
         <!-- //탭 -->
       </section>
-      <section class="">
+      <!-- //상품 상세 -->
 
+      <!-- 찜하기 / 장바구니 담기 -->
+      <section>
+        <div class="btm_bar type2">
+          <div class="inner">
+            <button class="btn_like" onclick="like(this);"><i class="ico_btn_heart ico_24"></i>찜하기</button>
+            <span class="line"></span>
+            
+            <div class="prd_cart_btn">
+              <p class="cart_txt">나의 장바구니에 담았습니다.</p>
+              <button class="btn_bottom"><i class="ico_cart_actionbar ico_24"></i><span>장바구니 담기</span></button>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- //찜하기 / 장바구니 담기 -->
+
+      <section class="hr_divider"></section><!-- //.hr_divider -->
+
+      <!-- 연관 상품 -->
+      <section class="sec_product is_noBack">
+        <div class="inner">
+          <div class="tit_area">
+            <h2>고객님을 위한 추천상품<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
+          </div>
+        </div><!-- //.inner -->
+        <div class="prd_list_wrap swiper swiper-container">
+          <div class="prd_list_lg swiper-wrapper">
+            <!-- 20개까지 노출이후 전체보기 버튼 -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">잇츠 그로우</strong>
+                  <span class="amount">80g</span>
+                  <div class="price">
+                    <em>7,500</em><span>원</span>
+                  </div>
+                </div><!-- //.info --> 
+              </div><!-- //.prd -->
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div><!-- //.bottom -->
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">잇츠 글로우 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <!-- 20개까지 노출이후 전체보기 버튼 -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">잇츠 그로우</strong>
+                  <span class="amount">80g</span>
+                  <div class="price">
+                    <em>7,500</em><span>원</span>
+                  </div>
+                </div><!-- //.info --> 
+              </div><!-- //.prd -->
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div><!-- //.bottom -->
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">잇츠 글로우 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_box swiper-slide">
+              <div class="prd">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                </div>
+                <div class="info">
+                  <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                  <span class="amount">500ml</span>
+                  <div class="price">
+                    <em>27,500</em><span>원</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="btn_icon"><i class="ico_btn_heart ico_16"></i></button>
+                <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+              </div>
+            </div><!-- //.prd_box -->
+            <div class="prd_more prd_box swiper-slide">
+              <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
+            </div><!-- //.prd_box -->
+          </div><!-- //.swiper-wrapper -->
+          <div class="swiper-pagination"></div>
+        </div><!-- //.swiper-container -->
+      </section><!-- //.sec_product.is_noBack -->
+      <!-- //연관 상품 -->
     </main>
     <!-- //#container -->
-
   </div>
+
   <!-- floatingSide -->
   <script>include.floatingSide();</script>
   <!-- //floatingSide -->

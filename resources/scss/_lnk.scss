@@ -268,7 +268,7 @@
       padding: 0 0 0 8px;
       background-color: $color-white;  
       &:first-child{
-        padding-left: 0;
+        margin-left: -8px;
       }
     }
   }
