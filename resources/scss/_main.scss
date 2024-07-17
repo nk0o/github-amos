@@ -37,7 +37,7 @@
       background-color:$color-white !important;
     }
     .desc{
-      @include fontStyle(#cccccc, $fs-s, $fw-m, 1.214)
+      @include fontStyle($gray-400, $fs-s, $fw-m, 1.214)
     }
   }
   .sec_visual{
@@ -92,6 +92,9 @@
     @media (min-width: $pc-point) {
       .inner{
         max-width: 715px;
+      }
+      .tab_menu{
+        overflow: hidden;
       }
     }
   }

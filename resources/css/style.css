@@ -4963,7 +4963,7 @@ footer .f_company {
   background-color: #ffffff !important;
 }
 .page_main .tit_area .desc {
-  color: #cccccc;
+  color: #bbbbbb;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.214;
@@ -5032,6 +5032,9 @@ footer .f_company {
 @media (min-width: 1024px) {
   .page_main .sec_type .inner {
     max-width: 715px;
+  }
+  .page_main .sec_type .tab_menu {
+    overflow: hidden;
   }
 }
 .page_main #mainTopSwiper.swiper-container {
