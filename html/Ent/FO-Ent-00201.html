@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>회원구분 - 회원가입 | 아모레뉴플렛폼</title>
+  <title>입점상담 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap" class="page_form">
@@ -17,63 +17,49 @@
     </header>    
     <!-- //header -->
     <main id="container">
-      <div class="inner">
-        <div class="sign_notice">
-          <p>회원님의<br/>직급은 어떻게 되시나요?</p>
-        </div><!-- //.sign_notice -->
+      <section class="login_first">
+        <div class="simbol">
+          <img src="../../resources/images/img_ent.svg" alt="amos">
+        </div>
         <div class="info_area">
-          <ul class="input_check_list user_check">
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="radio" id="radio-2-1" class="input_radio" name="radio-item-6">
-                <label for="radio-2-1">살롱원장</label>
-              </div>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="radio" id="radio-2-2" class="input_radio" name="radio-item-6">
-                <label for="radio-2-2">디자이너</label>
-              </div>
-            </li>
-          </ul>
+          <div class="input_group">
+            <div class="select_box">
+              <div class="select_box_value" data-btmsheet="btmSheet01">
+                <span>통신사를 선택해 주세요</span>
+              </div><!-- //.select_box_value -->
+              <div class="select_box_list">
+                <ul>
+                  <li><span>SKT</span></li>
+                  <li><span>KT</span></li>
+                  <li><span>LGT U</span></li>
+                  <li><span>SKT 알뜰폰</span></li>
+                  <li><span>KT 알뜰폰</span></li>
+                  <li><span>LG 알뜰폰</span></li>
+                </ul>
+              </div><!-- //.select_box_list -->
+            </div><!-- //.select_box -->
+          </div><!-- //.input_group -->
+          <div class="input_group">
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="아이디를 입력해주세요">
+            </label>
+          </div><!-- //.input_group -->
+          <div class="input_group">
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="비밀번호를 입력해주세요.">
+            </label>
+          </div><!-- //.input_group -->
         </div><!-- //.input_area -->
         <div class="btn_group">
-          <button class="btn btn_lg btn_primary">다음</button>
-          <!-- <button class="btn btn_lg btn_primary">다음</button> -->
+          <button class="btn_lg btn_primary">상담신청</button>
         </div>
-      </div>
+      </section>
     </main>
-    <!-- //#container --> 
+    <!-- //#container -->
   </div>
 
 <!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
-    <div class="btm_sheet_back"></div>
-    <div class="inner">
-      <div class="btm_sheet_head">
-        <p class="tit">내/외국인</p>
-        <button type="button" class="btm_sheet_close ico_close_20"></button>
-      </div><!-- //.btm_sheet_head -->
-      <div class="btm_sheet_cont check_list">
-        <ul class="input_check_list">
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked="">
-              <label for="radio-1-1">내국인</label>
-            </div>
-          </li>
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
-              <label for="radio-1-2">외국인</label>
-            </div>
-          </li>
-        </ul>
-      </div><!-- //.btm_sheet_cont -->
-    </div><!-- //.inner -->
-  </div><!-- //.btm_sheet -->
-
-  <div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet02" -->
     <div class="btm_sheet_back"></div>
     <div class="inner">
       <div class="btm_sheet_head">
