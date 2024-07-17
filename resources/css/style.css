@@ -6031,6 +6031,7 @@ footer .f_company {
 
 .prd_detail_view {
   margin-top: 40px;
+  padding-bottom: 40px;
 }
 .prd_detail_view .tab_menu {
   overflow: hidden;
