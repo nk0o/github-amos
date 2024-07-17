@@ -530,13 +530,14 @@ function floatingSideUI(){
 
 // 찜하기
 function like(event) {
-  const target = $(event);
+  const target = $(event),
+        parent = target.parents();
   if (target.hasClass("active")) {
     target.removeClass("active");
     target.parent().find('.ani_liked').remove();
   } else {
     target.addClass("active");
-    if ($('.prd_list_wrap.ir').length > 0) {
+    if ($('.prd_list_wrap.ir').length > 0 || parent.hasClass('btm_bar type2')) {
       target.parent().append(
         '<div class="ani_liked"><div class="ir_like"></div></div>'
       );
