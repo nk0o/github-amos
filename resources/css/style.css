@@ -6183,7 +6183,6 @@ footer .f_company {
 @media (min-width: 1024px) {
   .page_form #container > .inner {
     padding: 60px 0 82px;
-    border: 1px solid;
   }
   .page_form .tab_menu {
     display: block;
