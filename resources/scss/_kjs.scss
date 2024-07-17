@@ -100,15 +100,17 @@
       line-height: 1.0625rem;
     }
     .price {
+      display: flex;
+      align-items: center;
       margin: 9px 0 5px;
       color: $gray-950;
       font-size: $fs-md;
-      line-height: 1.125rem;
+      line-height: 1.25rem;
       span {
         display: inline-block;
         font-size: $fs-sm;
         font-weight: $fw-b;
-        vertical-align: 1px;
+        line-height: normal;
       }
     }
     .color_num {

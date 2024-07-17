@@ -5414,16 +5414,18 @@ footer .f_company {
   line-height: 1.0625rem;
 }
 .prd_box .prd .price {
+  display: flex;
+  align-items: center;
   margin: 9px 0 5px;
   color: #222222;
   font-size: 1.0625rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
 }
 .prd_box .prd .price span {
   display: inline-block;
   font-size: 0.9375rem;
   font-weight: 700;
-  vertical-align: 1px;
+  line-height: normal;
 }
 .prd_box .prd .color_num {
   display: none;
