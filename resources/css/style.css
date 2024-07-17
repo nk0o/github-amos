@@ -5305,6 +5305,20 @@ footer .f_company {
   padding: 0 0 8px 0;
 }
 
+.tab_cont_item .thumb_list > li {
+  width: 25%;
+  padding: 0 2.5px;
+}
+@media (min-width: 1024px) {
+  .tab_cont_item .thumb_list {
+    justify-content: center;
+  }
+  .tab_cont_item .thumb_list li {
+    flex: 1;
+    max-width: 82px;
+  }
+}
+
 .thumb_tab {
   padding: 20px 0;
 }

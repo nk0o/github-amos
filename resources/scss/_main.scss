@@ -350,3 +350,18 @@
   }
 }
 
+.tab_cont_item{
+  .thumb_list{
+    & > li{
+      width: calc(100% / 4);
+      padding: 0 2.5px;
+    }
+    @media (min-width: $pc-point) {
+      justify-content: center;
+      li{
+        flex: 1;
+        max-width: 82px;
+      }
+    }
+  }
+}
