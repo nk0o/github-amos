@@ -173,13 +173,11 @@ $(document).ready(function () {
       let count = $('.prd_list_wrap').find('.prd_box.checked').length;
       $('.prd_cart_btn .count').text('(' + count + ')');
     });
-    
     putCart();
   }
   if ($('.btm_bar.type2').length > 0) {
     putCart();
   }
-
   // 장바구니 버튼
   function putCart() {
     $('.prd_cart_btn .btn_bottom').on('click',function() {
@@ -211,17 +209,19 @@ $(document).ready(function () {
   }
 
   //checkbox 선택 2개 제한
-  $('.check_len2').each(function() {
-    $(this).find('input[type="checkbox"]').on('change', function() {
-      let parent = $(this).closest('.check_len2');
-      let count = parent.find('input[type="checkbox"]:checked').length;
-      if (count > 2) {
-        $(this).prop('checked', false);
-      }
+  if ($('.check_len2').length > 0) {
+    $('.check_len2').each(function() {
+      $(this).find('input[type="checkbox"]').on('change', function() {
+        let parent = $(this).closest('.check_len2');
+        let count = parent.find('input[type="checkbox"]:checked').length;
+        if (count > 2) {
+          $(this).prop('checked', false);
+        }
+      });
     });
-  });
+  }
 }) //ready
- 
+
 
 /****** Select Box ******/
 function selectBoxUI(){

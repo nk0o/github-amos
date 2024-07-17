@@ -666,6 +666,18 @@
   padding-bottom: 210px;
   .sec_product.is_noBack  {
     padding-top: 32px;
+    .recommend_prd {
+      max-width: 1024px;
+      padding: 0 20px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .prd_box.swiper-slide {
+      padding: 12px 0 0 12px;
+      &:first-child {
+        margin-left: -12px;
+      }
+    }
     .tit_area {
       margin-bottom: 20px;
       h2 {

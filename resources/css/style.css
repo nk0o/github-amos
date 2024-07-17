@@ -5940,6 +5940,18 @@ footer .f_company {
 .page_detail .sec_product.is_noBack {
   padding-top: 32px;
 }
+.page_detail .sec_product.is_noBack .recommend_prd {
+  max-width: 1024px;
+  padding: 0 20px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.page_detail .sec_product.is_noBack .prd_box.swiper-slide {
+  padding: 12px 0 0 12px;
+}
+.page_detail .sec_product.is_noBack .prd_box.swiper-slide:first-child {
+  margin-left: -12px;
+}
 .page_detail .sec_product.is_noBack .tit_area {
   margin-bottom: 20px;
 }
