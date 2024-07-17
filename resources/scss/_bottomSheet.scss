@@ -2,8 +2,11 @@
 .btm_sheet {
   //변수
   $BtmSheetRadius: 32px;
-  display: none;
+  //display: none;
   position: relative;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
   .inner {
     //min-height: 200px;
     position:fixed;
@@ -12,13 +15,16 @@
     border-top-right-radius: $BtmSheetRadius;
     transition: all 0.2s ease-in-out;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -100%);
     bottom: -110%;
     width: 100%;
     background: $color-white;
   }
   &.show {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.2s ease-in-out;
+    //display: block;
     z-index: 1002;
     .btm_sheet_back {
       z-index: 1000;
@@ -28,6 +34,7 @@
     .inner {
       z-index: 1001;
       bottom: 0;
+      transform: translate(-50%, 0%);
     }
   }
   &_back {
