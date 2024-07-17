@@ -249,6 +249,24 @@
   }
 }
 //제품 리스트 스와이퍼 섹션 공통
+.prd_list_wrap{
+  &.swiper{
+    padding: 0 0 0 20px;
+  }
+  .prd_list_lg.swiper-wrapper{
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .prd_box.swiper-slide{
+    padding: 8px 0 0 8px;
+    background-color: $color-white;    
+  }
+  @media (min-width: $pc-point) {
+    max-width: $pc-point;
+    margin: 0 auto;
+    padding: 0 20px 46px;
+  }
+}
 .sec_product{
   padding-top: 32px;
   position: relative;
@@ -260,17 +278,6 @@
     width: 100%;
     height: 210px;
     background-color: $color-primary;
-  }
-  .prd_list_wrap.swiper{
-    max-width: $pc-point;
-    margin: 0 auto;
-    @media (min-width: $pc-point) {
-      padding: 0 20px 46px;
-    }
-  }
-  .prd_box.swiper-slide{
-    padding: 8px 0 0 8px;
-    background-color: $color-white;    
   }
   .swiper-pagination{
     display: none;

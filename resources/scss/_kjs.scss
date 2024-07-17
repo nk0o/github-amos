@@ -381,19 +381,6 @@
   100% { transform: translateY(300px) scale(.3); opacity: 0; }
 }
 
-.prd_list_wrap{
-  &.swiper{
-    padding: 0 0 0 20px;
-  }
-  .swiper-wrapper.prd_list_lg{
-    flex-wrap: nowrap;
-    gap: 0;
-  }
-  .prd_list_lg .prd_box{
-    min-width: 150px;
-  }
-}
-
 .cate_brand.accord_list {
   padding-bottom: 0;
   li {
