@@ -522,10 +522,10 @@
         + .input_group  {
           margin-top: 10px;
         }
-        &:has(.input_check_wrap) {
-          margin-top: 16px;
-        }
       }
+    }
+    .input_check_wrap {
+      margin-top: 16px;
     }
     .btn_group {
       padding: 16px 0 0;
@@ -645,9 +645,8 @@
 }
 
 .radio_btn_outer {
-  padding: 32px 0 0;
+  padding: 32px 20px 0;
   >li {
-    padding: 0 20px;
     &+li {
       margin-top: 40px;
     }
@@ -669,7 +668,13 @@
   }
 }
 
-
+//pc
+@media (min-width: 1024px) {
+  .complete_txt {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
 
 
 

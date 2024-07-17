@@ -5784,7 +5784,7 @@ footer .f_company {
 .page_sign .login_first .info_area .input_group + .input_group {
   margin-top: 10px;
 }
-.page_sign .login_first .info_area .input_group:has(.input_check_wrap) {
+.page_sign .login_first .input_check_wrap {
   margin-top: 16px;
 }
 .page_sign .login_first .btn_group {
@@ -5896,10 +5896,7 @@ footer .f_company {
 }
 
 .radio_btn_outer {
-  padding: 32px 0 0;
-}
-.radio_btn_outer > li {
-  padding: 0 20px;
+  padding: 32px 20px 0;
 }
 .radio_btn_outer > li + li {
   margin-top: 40px;
@@ -5919,6 +5916,12 @@ footer .f_company {
   gap: 8px;
 }
 
+@media (min-width: 1024px) {
+  .complete_txt {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
 .page_sign .hr_divider {
   height: 8px;
 }
