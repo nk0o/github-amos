@@ -5978,6 +5978,12 @@ footer .f_company {
   display: none;
 }
 
+.prd_top_info > .inner {
+  padding: 0;
+}
+.prd_top_info > .inner .inner {
+  padding: 0 20px;
+}
 .prd_top_info .prd_img {
   background: #F6F6F6;
   width: 100%;
@@ -6060,12 +6066,51 @@ footer .f_company {
   padding-bottom: 40px;
 }
 .prd_detail_view .tab_menu {
+  position: sticky;
+  top: 60px;
   overflow: hidden;
 }
 .prd_detail_view .tab_menu > ul > li {
   flex: 1;
 }
 
+@media (min-width: 1024px) {
+  .prd_top_info {
+    padding-top: 40px;
+  }
+  .prd_top_info .inner {
+    display: flex;
+    gap: 82px;
+    padding: 0 20px;
+  }
+  .prd_top_info .inner .inner {
+    max-width: 100%;
+    margin: 0;
+  }
+  .prd_top_info .prd_img {
+    width: 430px;
+    height: 430px;
+  }
+  .prd_top_info .prd_info {
+    padding-top: 40px;
+  }
+  .prd_detail_view .tab_menu {
+    display: flex;
+    justify-content: center;
+  }
+  .prd_detail_view .tab_menu ul {
+    width: 1024px;
+    padding: 0 20px;
+  }
+  .prd_detail_view .tab_cont .inner {
+    max-width: 1024px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  .prd_detail_view .tab_cont_item {
+    padding-top: 40px;
+  }
+}
 .page_form .hr_divider {
   height: 8px;
   margin: 24px 0 !important;
