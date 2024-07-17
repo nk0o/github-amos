@@ -569,7 +569,7 @@
       padding-top: 100px;
       .input_group{
         grid-template-columns:1fr;
-        label:not(.input_label){
+        .select_box, label:not(.input_label), p, .txt_alert{
           grid-column-start: 1;
         }
       }

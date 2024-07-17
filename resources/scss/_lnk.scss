@@ -54,6 +54,9 @@
   .radio_btn_outer:nth-of-type(1){
     padding-top: 0;
   }
+  .input_check_list{
+    padding: 0 20px;
+  }
 }
 .info_read{
   padding: 0 20px 24px;
@@ -193,7 +196,13 @@
     #container {
       >.inner {
         padding: 60px 0 82px;
+        border: 1px solid;
       }
+    }
+    .tab_menu {
+      display: block;
+      max-width: 700px;
+      margin: 0 auto;
     }
     .p_tit {
       display: block;
@@ -216,6 +225,12 @@
       .select_box, label:not(.input_label), p, .txt_alert{
         grid-column-start: 2;
       }
+      &.pc_full{
+        grid-template-columns: 1fr;
+        .select_box, label:not(.input_label), p, .txt_alert{
+          grid-column-start: 1;
+        }
+      }
     }
     .input_label{
       display: block;
@@ -229,6 +244,9 @@
     br {
       display: none;
     }
+  }
+  .info_read{
+    border-bottom-width: 1px;
   }
 }
 //제품 리스트 스와이퍼 섹션 공통
