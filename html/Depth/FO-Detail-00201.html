@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>상품 리스트</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">      
+      <section class="prd_top_info">
+        <div class="inner">
+          ddd
+        </div>
+      </section>
+      <section class="prd_detail_view">
+        <!-- 탭 -->
+        <div class="tab_menu contain_tab">
+          <ul>
+            <li class="tab_list current" data-tab="tab5-11"><button>제품상세</button></li>
+            <li class="tab_list" data-tab="tab5-22"><button>주요정보</button></li>
+            <li class="tab_list" data-tab="tab5-33"><button>판매자정보</button></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <!-- 탭 내용 -->
+          <div class="tab_cont">
+            <div id="tab5-11" class="tab_cont_item current">
+              tab1 <br>...
+            </div>
+            <div id="tab5-22" class="tab_cont_item">
+              tab2 <br>...
+            </div>
+            <div id="tab5-33" class="tab_cont_item">
+              tab3 <br>...
+            </div>
+          </div>
+        </div>
+        <!-- //탭 -->
+      </section>
+    </main>
+    <!-- //#container -->
+
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+</body>
+
+</html>
