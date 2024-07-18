@@ -6390,6 +6390,7 @@ footer .f_company {
 }
 .prd_list_wrap.swiper {
   padding: 0 0 0 20px;
+  background-color: #ffffff;
 }
 @media (min-width: 1024px) {
   .prd_list_wrap.swiper {

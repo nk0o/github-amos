@@ -252,6 +252,7 @@
 .prd_list_wrap{
   &.swiper{
     padding: 0 0 0 20px;
+    background-color: $color-white;
     @media (min-width: $pc-point) {
       max-width: calc($pc-point - 40px);
       margin: 0 auto;
