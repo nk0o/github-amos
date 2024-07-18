@@ -6466,7 +6466,7 @@ footer .f_company {
   flex-wrap: wrap;
   padding: 24px 0 20px;
 }
-.page_point .prd_list_top .count {
+.page_point .prd_list_top .count, .page_point .prd_list_top .view_type {
   margin-top: 20px;
 }
 .page_point .point_option {
@@ -6485,10 +6485,10 @@ footer .f_company {
 }
 .page_point .point_option::after {
   content: "";
-  display: inline-block;
+  display: block;
   width: 20px;
-  height: 30px;
-  mask: url("../images/icon/ico_point_circle.svg") center left/contain no-repeat;
+  height: 20px;
+  mask: url("../images/icon/ico_point_circle.svg") center/contain no-repeat;
   background-color: #2A3136;
 }
 .page_point .prd_cont {
@@ -6500,6 +6500,9 @@ footer .f_company {
   border-bottom: 0;
   padding-bottom: 120px;
   margin-bottom: 90px;
+}
+.page_point .prd_cont.type_list {
+  border-top: 0;
 }
 
 @media (min-width: 1024px) {

@@ -236,7 +236,7 @@
   .prd_list_top{
     flex-wrap: wrap;
     padding: 24px 0 20px;
-    .count{
+    .count, .view_type{
       margin-top: 20px;
     }
   }
@@ -252,10 +252,10 @@
     border-bottom: 1px solid $color-primary;
     &::after{
       content: '';
-      display: inline-block;
+      display: block;
       width: 20px;
-      height: 30px;
-      mask: url('../images/icon/ico_point_circle.svg') center left/contain no-repeat;
+      height: 20px;
+      mask: url('../images/icon/ico_point_circle.svg') center/contain no-repeat;
       background-color: $color-primary
     }
   }
@@ -267,6 +267,9 @@
       border-bottom: 0;
       padding-bottom: 120px;
       margin-bottom: $btmbar-H;
+    }
+    &.type_list{
+      border-top: 0;
     }
   }
 }
