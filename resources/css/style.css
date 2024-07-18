@@ -3839,25 +3839,25 @@ div.dataTables_wrapper .btn_floating:focus {
 /* Accordion */
 .accord_tit {
   position: relative;
-  padding: 12px 56px 12px 12px;
+  padding: 16px 40px 16px 0px;
   color: #222222;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
+  border-bottom: 1px solid #2A3136;
 }
 .accord_tit::before {
   content: "";
-  display: block;
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 0;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/icon/ico_accord_arr.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon/ico_dropdown_arr_24.svg");
   background-size: cover;
   background-size: contain;
-  background-color: #2A3136 !important;
+  background-color: #aaaaaa !important;
   -moztransition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -3866,7 +3866,7 @@ div.dataTables_wrapper .btn_floating:focus {
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
   .accord_tit::before {
     background-color: #777777;
-    mask-image: url("../images/icon/ico_accord_arr.svg");
+    mask-image: url("../images/icon/ico_dropdown_arr_24.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -3884,11 +3884,6 @@ div.dataTables_wrapper .btn_floating:focus {
   position: relative;
   font-size: 1rem;
   line-height: 1.5;
-  border-top: 1px solid #F2F2F2;
-  background-color: #fafafa;
-}
-.accord_head:last-child {
-  border-bottom: 1px solid #F2F2F2;
 }
 .accord_head.on .accord_tit::before {
   -webkit-transform: rotate(-180deg) translateY(50%);
@@ -3897,13 +3892,6 @@ div.dataTables_wrapper .btn_floating:focus {
 .accord_cont {
   display: none;
   position: relative;
-  background-color: #ffffff;
-}
-.accord_cont > p {
-  line-height: 1.571;
-  padding: 12px;
-  font-size: 0.875rem;
-  color: #666666;
 }
 .accord_list.arr_left_list .accord_tit {
   padding: 12px 12px 12px 56px;
@@ -3913,10 +3901,11 @@ div.dataTables_wrapper .btn_floating:focus {
   left: 12px;
 }
 .accord_list.faq_list .accord_tit {
-  padding: 12px 12px 12px 56px;
+  padding: 16px 16px 16px 40px;
 }
 .accord_list.faq_list .accord_tit::before {
   content: "Q.";
+  text-align: center;
   right: auto;
   left: 12px;
   mask: none;
@@ -3928,17 +3917,20 @@ div.dataTables_wrapper .btn_floating:focus {
   transform: translateY(-50%);
 }
 .accord_list.faq_list .accord_cont {
-  padding-left: 56px;
+  padding: 0 40px 20px;
 }
 .accord_list.faq_list .accord_cont::before {
   content: "A.";
   display: block;
   position: absolute;
-  top: 12px;
+  top: 16px;
   right: auto;
-  left: 12px;
-  width: 12px;
-  height: 12px;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+}
+.accord_list.faq_list .accord_cont > p {
+  padding-top: 16px;
 }
 .accord_list.is_plus .accord_tit {
   display: -webkit-box;
@@ -3947,21 +3939,31 @@ div.dataTables_wrapper .btn_floating:focus {
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
-  margin: 4px 0 0 0;
-  padding: 12px 0 16px 12px;
+  padding: 16px 0 16px 12px;
+  border: 0;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.accord_list.is_plus .accord_tit .ico_plus_20 {
+  transition: transform 0.3s;
 }
 .accord_list.is_plus .accord_tit .ico_plus_20::before {
-  background-color: #2A3136;
+  mask-position: center right;
+  background-color: #2A3136 !important;
 }
 .accord_list.is_plus .accord_tit::before {
   display: none;
   mask-image: url("../images/icon/ico_plus_20.svg");
 }
 .accord_list.is_plus .accord_head {
-  background-color: transparent;
   border: 0;
   border-bottom: 1px solid #2A3136;
   cursor: default;
+}
+.accord_list.is_plus .accord_head.on .accord_tit .ico_plus_20 {
+  transform: rotate(-180deg);
 }
 .accord_list.is_plus .accord_head.on .accord_tit .ico_plus_20::before {
   mask-image: url("../images/icon/ico_minus_20.svg");
@@ -4795,6 +4797,7 @@ footer .accord_head {
 footer .accord_tit {
   padding: 0;
   margin: 0 0 28px 0;
+  border: 0;
 }
 footer .accord_tit::before {
   width: 24px;
@@ -5297,15 +5300,12 @@ footer .f_company {
 .cate_service .service_tit {
   padding: 12px 20px;
   color: #222222;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.143;
 }
-.cate_service .service_tit:first-child {
-  padding-top: 0;
-}
 .cate_service .accord_cont {
-  padding: 0 0 8px 0;
+  padding: 0 0 16px 0;
 }
 
 .tab_cont_item .thumb_list > li {
@@ -5716,6 +5716,7 @@ footer .f_company {
 }
 .cate_brand.accord_list .accord_tit {
   padding: 0;
+  border: 0;
 }
 .cate_brand.accord_list .accord_tit::before {
   display: none;

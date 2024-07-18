@@ -2,20 +2,20 @@
 .accord {
   &_tit {
     position: relative;
-    padding: 12px 56px 12px 12px;
-    @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+    padding: 16px 40px 16px 0px;
+    @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+    border-bottom: 1px solid $color-primary;
     &::before {
       content: "";
-      display: block;
       position: absolute;
       top: 50%;
-      right: 16px;
+      right: 0;
       transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      @include iconImgPath("ico_accord_arr.svg");
+      width: 24px;
+      height: 24px;
+      @include iconImgPath("ico_dropdown_arr_24.svg");
       background-size: contain;
-      background-color: $color-primary !important;
+      background-color: $gray-500 !important;
       @include trans($prop: all, $duration: 0.3s, $type: ease-out, $delay: 0s);
     }
   }
@@ -25,11 +25,6 @@
     position: relative;
     font-size: $fs-m;
     line-height: 1.5;
-    border-top: 1px solid #F2F2F2;
-    background-color: #fafafa;
-    &:last-child {
-      border-bottom: 1px solid #F2F2F2;
-    }
     &.on {
       .accord_tit {
         &::before {
@@ -42,15 +37,9 @@
   &_cont {
     display: none;
     position: relative;
-    background-color: $color-white;
-    & > p {
-      line-height: 1.571;
-      padding: 12px;
-      font-size: $fs-s;
-      color: $gray-800;
-    }
   }
   &_list {
+    //아이콘 왼쪽일때
     &.arr_left_list {
       .accord_tit {
         padding: 12px 12px 12px 56px;
@@ -60,11 +49,13 @@
         }
       }
     }
+    //FAQ 아코디언(예시)
     &.faq_list {
       .accord_tit {
-        padding: 12px 12px 12px 56px;
+        padding: 16px 16px 16px 40px;
         &::before {
-          content: 'Q.';   
+          content: 'Q.';
+          text-align: center;
           right: auto;
           left: 12px;
           mask:none;
@@ -84,28 +75,34 @@
         }
       }
       .accord_cont {
-        padding-left: 56px;
+        padding:0 40px 20px;
         &::before {
           content: "A.";
           display: block;
           position: absolute;
-          top: 12px;
+          top: 16px;
           right: auto;
-          left: 12px;
-          width: 12px;
-          height: 12px;
-          //@include iconImgPath("ico_faq_A_16.svg");
+          left: 16px;
+          width: 24px;
+          height: 24px;
+        }
+        & > p{
+          padding-top: 16px;
         }
       }
     }
+    //Plus 아이콘일때
     &.is_plus{
       .accord_tit{
         @include flexBetween;
-        margin: 4px 0 0 0;
-        padding: 12px 0 16px 12px;
+        padding: 16px 0 16px 12px;
+        border: 0;
+        @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
         .ico_plus_20{
+          transition: transform .3s;
           &::before{
-            background-color:$color-primary;
+            mask-position: center right;
+            background-color:$color-primary !important;
           }
         }
         &::before{
@@ -114,13 +111,13 @@
         }
       }
       .accord_head{
-        background-color:transparent;
         border: 0;
         border-bottom: 1px solid $color-primary;
         cursor:default;
         &.on{
           .accord_tit{
             .ico_plus_20{
+              transform: rotate(-180deg);
               &::before{
                 mask-image: url("../images/icon/ico_minus_20.svg");
               }              

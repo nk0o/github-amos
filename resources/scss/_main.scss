@@ -340,14 +340,11 @@
     padding: 4px 16px 0;
     .service_tit{
       padding: 12px 20px;
-      @include fontStyle($gray-950, $fs-s, $fw-m, 1.143);
-      &:first-child{
-        padding-top: 0;
-      }
+      @include fontStyle($gray-950, $fs-sm, $fw-m, 1.143);
     }
     .accord{
       &_cont{
-        padding:0 0 8px 0;
+        padding:0 0 16px 0;
       }
     }
   }
