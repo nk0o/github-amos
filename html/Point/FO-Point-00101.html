@@ -10,21 +10,426 @@
   <script>include.style();</script>
   <title>포인트몰 | 아모레뉴플렛폼</title>
 </head>
-<body>
-  <div id="wrap">
+<body>  
+  <div id="wrap" class="page_point">
     <header>
       <script>include.subAppBarType1();</script>
     </header>    
     <!-- //header -->
     <main id="container">
-      <section></section>
-      <section></section>
-      <section></section>
+      <button type="button" data-btmsheet="btmSheet02">클릭!</button>
+      <section class="user_area">
+        <div class="inner">
+          <div class="user">
+            <p>김모스 님</p>
+            <span>용산아모레살롱</span>
+          </div>
+          <div class="point">
+            <div class="point_txt">사용가능 포인트</div>
+            <div class="point_num"><span>2,350,000</span>P</div>
+          </div>
+        </div>
+      </section><!-- //.user_area -->
+      <div class="tab_center_wrap">
+        <div class="inner">
+          <div class="tab_menu contain_tab tab_center clickTab">
+            <ul>
+              <li class="tab_list current"><button>50,000P</button></li>
+              <li class="tab_list"><button>100,000P</button></li>
+              <li class="tab_list"><button>150,000P</button></li>
+              <li class="tab_list"><button>150,000P</button></li>
+            </ul>
+          </div>
+        </div><!-- //.tab_center_wrap -->
+      </div>
+      <section class="prd_cont toCont">
+        <div class="inner">
+          <div class="prd_list_top">
+            <!-- 포인트 옵션 -->
+            <div class="point_option"><span>50,000</span></div>
+            <!-- //포인트 옵션 -->
+            <p class="count"><span><em>4</em>개</span>의 상품이 있습니다.</p>
+          </div>
+          <!-- 상품 리스트 -->
+          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+            <!-- 썸네일형 -->
+            <div class="prd_list_lg">
+              <!-- 상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <!-- //상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일형 -->
+          </div>
+          <!-- //상품 리스트 -->
+        </div>
+      </section><!-- //.prd_cont -->
+      <section class="prd_cont toCont">
+        <div class="inner">
+          <div class="prd_list_top">
+            <!-- 포인트 옵션 -->
+            <div class="point_option"><span>100,000</span></div>
+            <!-- //포인트 옵션 -->
+            <p class="count"><span><em>4</em>개</span>의 상품이 있습니다.</p>
+          </div>
+          <!-- 상품 리스트 -->
+          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+            <!-- 썸네일형 -->
+            <div class="prd_list_lg">
+              <!-- 상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <!-- //상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일형 -->
+          </div>
+          <!-- //상품 리스트 -->
+        </div>
+      </section><!-- //.prd_cont -->
+      <section class="prd_cont toCont">
+        <div class="inner">
+          <div class="prd_list_top">
+            <!-- 포인트 옵션 -->
+            <div class="point_option"><span>150,000</span></div>
+            <!-- //포인트 옵션 -->
+            <p class="count"><span><em>4</em>개</span>의 상품이 있습니다.</p>
+          </div>
+          <!-- 상품 리스트 -->
+          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+            <!-- 썸네일형 -->
+            <div class="prd_list_lg">
+              <!-- 상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <!-- //상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일형 -->
+          </div>
+          <!-- //상품 리스트 -->
+        </div>
+      </section><!-- //.prd_cont -->
+      <section class="prd_cont toCont">
+        <div class="inner">
+          <div class="prd_list_top">
+            <!-- 포인트 옵션 -->
+            <div class="point_option"><span>150,000</span></div>
+            <!-- //포인트 옵션 -->
+            <p class="count"><span><em>4</em>개</span>의 상품이 있습니다.</p>
+          </div>
+          <!-- 상품 리스트 -->
+          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+            <!-- 썸네일형 -->
+            <div class="prd_list_lg">
+              <!-- 상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_01.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <!-- //상품 -->
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_02.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_03.png" alt="">
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+              <div class="prd_box">
+                <div class="prd">
+                  <div class="img">
+                    <img src="../../resources/images/contents/img_prd_list_lg_04.png" alt="">
+                    <span class="badge bg_primary">묶음</span>
+                  </div>
+                  <div class="info">
+                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                    <span class="amount">500ml</span>
+                    <div class="price">
+                      <em>27,500</em><span>원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                </div>
+              </div>
+            </div>
+            <!-- //썸네일형 -->
+          </div>
+          <!-- //상품 리스트 -->
+        </div>
+      </section><!-- //.prd_cont -->
+      <!-- 상품담기 버튼 -->
+      <div class="prd_cart_btn">
+        <p class="cart_txt">나의 장바구니에 담았습니다.</p>
+        <button class="btn_bottom">
+          <i class="ico_cart_float ico_24"></i>
+          <span>상품담기</span>
+          <span class="count">(0)</span>
+        </button>
+      </div>
+      <!-- //상품담기 버튼 -->
     </main>
     <!-- //#container -->
-    <!-- footer -->
-    <script>include.footer();</script>
-    <!-- //footer -->
     <!-- tabBar -->
     <script>include.tabBar();</script>
     <!-- //tabBar -->
@@ -32,5 +437,86 @@
   <!-- floatingSide -->
   <script>include.floatingSide();</script>
   <!-- //floatingSide -->
+
+
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">통신사 선택</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <label for="datepicker" class="btn_modal_open" id="modal01" style="cursor: pointer;">start Date</label>
+        <input type="text" data-cal="datepicker" style="border: 1px solid;"/>&nbsp; - &nbsp;
+        <br>
+        <label for="datepicker" class="btn_modal_open" id="modal02" style="cursor: pointer;">end Date</label>
+        <input type="text" data-cal="datepicker2" style="border: 1px solid;"/>
+      </div><!-- //.btm_sheet_cont -->
+      <div class="btm_sheet_btns">
+        <button type="button" class="btn_bottom btm_sheet_close">확인</button>
+      </div><!-- //.btm_sheet_btns -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+  
+  <div class="modal_container" data-modal="modal01" style="z-index: 111111111;">
+    <div class="modal_overlay" style="height: 1086px;"></div>
+    <div class="modal_content" style="position: relative; top: auto;">
+      <div class="modal_body">
+        <div type="text" id="datepicker" class="inp_cal" readonly=""></div>        
+      </div>
+    </div>
+    <!-- /.modal_content -->
+  </div>
+  <div class="modal_container" data-modal="modal02" style="z-index: 111111111;">
+    <div class="modal_overlay" style="height: 1086px;"></div>
+    <div class="modal_content" style="position: relative; top: auto;">
+      <div class="modal_body">
+        <div type="text" id="datepicker2" class="inp_cal" readonly=""></div>        
+      </div>
+    </div>
+    <!-- /.modal_content -->
+  </div>
+
+  <script>
+    $('#datepicker').datepicker({
+          dateFormat: 'yy-mm-dd',
+          showOtherMonths: true,
+          showMonthAfterYear: true,
+          changeYear: true,
+          changeMonth: true,
+          showOn: 'both',
+          buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+          buttonImageOnly: true,
+          showAnim: '',
+          onSelect: function () {
+            let calName =$(this).attr('id');
+            let selectValue = this.value;
+            let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+            $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+            $("body").removeClass("no_scroll");
+          }
+      });
+    $('#datepicker2').datepicker({
+          dateFormat: 'yy-mm-dd',
+          showOtherMonths: true,
+          showMonthAfterYear: true,
+          changeYear: true,
+          changeMonth: true,
+          showOn: 'both',
+          buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+          buttonImageOnly: true,
+          showAnim: '',
+          onSelect: function () {
+            let calName =$(this).attr('id');
+            let selectValue = this.value;
+            let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+            $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+            $("body").removeClass("no_scroll");
+          }
+      });
+  </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 
 .prd_cont {
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: $btmbar-H;
   padding-bottom: 120px;
   // &:has(.cate_brand.accord_list) {
   //   padding-bottom: 0
@@ -411,11 +411,11 @@
 // PC
 @media (min-width: 1024px) {
   .prd_cont {
-    margin-bottom: 90px;
+    margin-bottom: $btmbar-H;
     padding-bottom: 140px;
     &.type_list {
       max-width: 1024px;
-      margin: 0 auto 90px;
+      margin: 0 auto $btmbar-H;
     }
   }
   .prd_cart_btn {

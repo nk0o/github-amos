@@ -36,8 +36,12 @@
     }
   }
   &_tit{
+    @include text-ellipsis;
     @include pos_center;
+    width: 100%;
+    padding: 0 80px 0 80px;
     @include fontStyle($color-primary, $fs-ml, $fw-sb, 1.444);
+    text-align: center;
   }
   &_close{
     &::before{

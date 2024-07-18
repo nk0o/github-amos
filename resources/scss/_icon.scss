@@ -136,6 +136,11 @@
         background-color: $color-white !important;
       }
     }
+    &_circle{
+      &::before{
+        @include iconImgPath("ico_point_circle.svg");
+      }
+    }
   }
   &_wish {
     &::before {
