@@ -128,7 +128,7 @@ footer{
   .f_company{
     margin-top: 17px;
     @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.5555);
-    font-family: 'aritadt', sans-serif;
+    font-family:$font-aritadt;
   }
   @media (min-width: $pc-point) {
     padding: 32px 40px;

@@ -53,6 +53,7 @@
 .btm_bar{
   z-index: 2;
   position: fixed;
+  display: block;
   width: 100%;
   bottom: 0;
   height: $btmbar-H;
@@ -60,7 +61,7 @@
   background-color: $color-white;
   &.type2 {
     padding: 10px 20px 28px;
-    background-color: #2A3136;
+    background-color: $color-primary;
     >.inner {
       justify-content: center;
       padding: 0;
@@ -70,7 +71,7 @@
       display: inline-block;
       width: 1px;
       height: 32px;
-      background-color: #AAA;
+      background-color: $gray-500;
     }
     .btn_like {
       height: 52px;
@@ -82,7 +83,7 @@
         margin-right: 6px;
         vertical-align: -6px;
         &::before {
-          background-color: #fff;
+          background-color: $color-white;
         }
       }
     }
@@ -144,6 +145,14 @@
     .nav_tit{
       @include fontStyle($gray-500, $fs-xxs, $fw-m, 1.333);
     }
+  }
+  &.type_btn{
+    background-color: $color-primary;
+    padding: 24px 0 40px;
+    .inner{
+      justify-content: center;
+    }
+    @include fontStyle($color-white, $fs-m, $fw-b, 1.5);
   }
 }
 

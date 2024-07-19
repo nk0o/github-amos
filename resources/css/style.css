@@ -37,7 +37,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html, body {
-  font-family: "aritadt", "gotham", sans-serif;
+  font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   min-width: 280px;
   line-height: 1.2;
   font-size: 16px;
@@ -94,7 +94,7 @@ table {
 }
 
 input[type=text], textarea, input[type=button], input[type=submit], input[type=search] {
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -113,21 +113,21 @@ p {
 
 /* Arita-Dotum */
 @font-face {
-  font-family: "aritadt";
+  font-family: "Arita-dotum";
   font-weight: 400;
   font-style: normal;
   src: url("../fonts/AritaDotum/Arita-Dotum-Medium.eot"), url("../fonts/AritaDotum/Arita-Dotum-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AritaDotum/Arita-Dotum-Medium.woff") format("woff"), url("../fonts/AritaDotum/Arita-Dotum-Medium.woff2") format("woff2"), url("../fonts/AritaDotum/Arita-Dotum-Medium.ttf") format("truetype"), url("../fonts/AritaDotum/Arita-Dotum-Medium.svg") format("svg");
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-  font-family: "aritadt";
+  font-family: "Arita-dotum";
   font-weight: 600;
   font-style: normal;
   src: url("../fonts/AritaDotum/Arita-Dotum-SemiBold.eot"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.woff") format("woff"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.woff2") format("woff2"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.ttf") format("truetype"), url("../fonts/AritaDotum/Arita-Dotum-SemiBold.svg") format("svg");
   unicode-range: U+AC00-D7A3;
 }
 @font-face {
-  font-family: "aritadt";
+  font-family: "Arita-dotum";
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/AritaDotum/Arita-Dotum-Bold.eot"), url("../fonts/AritaDotum/Arita-Dotum-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AritaDotum/Arita-Dotum-Bold.woff") format("woff"), url("../fonts/AritaDotum/Arita-Dotum-Bold.ttf") format("truetype");
@@ -135,21 +135,21 @@ p {
 }
 /* Gotham */
 @font-face {
-  font-family: "gotham";
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/Gotham/Gotham-Book.woff") format("woff"), url("../fonts/Gotham/Gotham-Book.ttf") format("truetype"), url("../fonts/Gotham/Gotham-Book.otf") format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
-  font-family: "gotham";
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Gotham/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham/Gotham-Medium.ttf") format("truetype"), url("../fonts/Gotham/Gotham-Medium.otf") format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 @font-face {
-  font-family: "gotham";
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Gotham/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham/Gotham-Bold.otf") format("opentype");
@@ -158,10 +158,10 @@ p {
 /** Font **/
 /** Font Family **/
 .font_kr {
-  font-family: "aritadt" !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
 }
 .font_en {
-  font-family: "gotham" !important;
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
 }
 
 /** Font weight **/
@@ -2404,7 +2404,7 @@ button:disabled *[class*=ico_]::before {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .input_check + label::before {
   content: "";
@@ -2481,7 +2481,7 @@ button:disabled *[class*=ico_]::before {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.429;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   user-select: none;
   cursor: pointer;
 }
@@ -2576,6 +2576,7 @@ button:disabled *[class*=ico_]::before {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  border-radius: 8px;
 }
 .input_check_list .input_check_wrap.without_box .input_radio + label::before, .input_check_list .input_check_wrap.without_box .input_check + label::before, .input_check_list .input_radio_wrap.without_box .input_radio + label::before, .input_check_list .input_radio_wrap.without_box .input_check + label::before {
   background-image: none;
@@ -2617,7 +2618,7 @@ button:disabled *[class*=ico_]::before {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .select_box_value > span {
   display: block;
@@ -2948,7 +2949,7 @@ select {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.214;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .input_group label .line_red {
   color: #FF2E00;
@@ -3018,7 +3019,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .input_text[type=text]::-moz-placeholder, .input_text[type=file]::-moz-placeholder, .input_text[type=password]::-moz-placeholder {
   color: #aaaaaa;
@@ -3100,7 +3101,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .input_writing_group textarea::-moz-placeholder {
   color: #aaaaaa;
@@ -3161,7 +3162,7 @@ select {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.214;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .input_label.required::after {
   content: "";
@@ -4176,7 +4177,7 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 .progress_ratio {
   min-width: 25px !important;
-  font-family: "gotham";
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .progress_back {
   position: relative;
@@ -4386,7 +4387,7 @@ div.dataTables_wrapper .btn_floating:focus {
   overflow-y: scroll;
   padding: 12px 10px;
   text-align: left;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .modal_container.is_scroll .scroll_inner p {
   color: #666666;
@@ -4399,7 +4400,7 @@ div.dataTables_wrapper .btn_floating:focus {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.3333;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .modal_container.is_scroll .scroll_inner::-webkit-scrollbar {
   opacity: 0;
@@ -4433,6 +4434,7 @@ div.dataTables_wrapper .btn_floating:focus {
   transform: translate(-50%, -100%);
   bottom: -110%;
   width: 100%;
+  padding: 0 0 32px 0;
   background: #ffffff;
 }
 .btm_sheet.show {
@@ -4556,6 +4558,7 @@ div.dataTables_wrapper .btn_floating:focus {
 .btm_bar {
   z-index: 2;
   position: fixed;
+  display: block;
   width: 100%;
   bottom: 0;
   height: 90px;
@@ -4575,7 +4578,7 @@ div.dataTables_wrapper .btn_floating:focus {
   display: inline-block;
   width: 1px;
   height: 32px;
-  background-color: #AAA;
+  background-color: #aaaaaa;
 }
 .btm_bar.type2 .btn_like {
   height: 52px;
@@ -4589,7 +4592,7 @@ div.dataTables_wrapper .btn_floating:focus {
   vertical-align: -6px;
 }
 .btm_bar.type2 .btn_like i::before {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .btm_bar.type2 .prd_cart_btn {
   position: static;
@@ -4649,6 +4652,17 @@ div.dataTables_wrapper .btn_floating:focus {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.333;
+}
+.btm_bar.type_btn {
+  background-color: #2A3136;
+  padding: 24px 0 40px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.btm_bar.type_btn .inner {
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -4903,7 +4917,7 @@ footer .f_company {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.5555;
-  font-family: "aritadt", sans-serif;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 @media (min-width: 1024px) {
   footer {
@@ -5493,7 +5507,7 @@ footer .f_company {
   display: block;
   margin-top: 4px;
   color: #444444;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.0625rem;
@@ -5527,7 +5541,7 @@ footer .f_company {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.2142;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .prd_box .prd .colorchip img {
   width: 14px;
@@ -6234,7 +6248,7 @@ footer .f_company {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.4167;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .sign_notice span {
   display: inline-block;
@@ -6276,11 +6290,53 @@ footer .f_company {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  font-family: "aritadt";
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .info_read dl dt {
   flex: 0 0 100px;
   color: #888888;
+}
+.info_read.type_row dl {
+  display: block;
+  padding: 20px 0 0 0;
+}
+.info_read.type_row dl:first-child {
+  padding-top: 0;
+}
+.info_read.type_row dt, .info_read.type_row dd {
+  color: #222222;
+}
+.info_read.type_row dt {
+  font-weight: 600;
+}
+.info_read.type_row dd {
+  margin-top: 4px;
+}
+@media (min-width: 1024px) {
+  .info_read.type_row {
+    gap: 8px 30px;
+  }
+  .info_read.type_row dl {
+    padding: 0;
+  }
+}
+.info_read_wrap {
+  padding: 32px 0 0;
+}
+.info_read_wrap .tit {
+  padding: 0 20px 20px;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4444;
+}
+.info_read_wrap > .info_read {
+  border-bottom: 0;
+  padding: 0 20px 8px;
+}
+.info_read_wrap > .info_read dl:last-child {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
 }
 @media (min-width: 1024px) {
   .info_read {
@@ -6300,40 +6356,6 @@ footer .f_company {
   .info_read dl:nth-child(3) {
     order: 1;
   }
-}
-.info_read.type_row dl {
-  display: block;
-  padding: 20px 0 0 0;
-}
-.info_read.type_row dl:first-child {
-  padding-top: 0;
-}
-.info_read.type_row dt, .info_read.type_row dd {
-  color: #222222;
-}
-.info_read.type_row dt {
-  font-weight: 600;
-}
-.info_read.type_row dd {
-  margin-top: 4px;
-}
-.info_read_wrap {
-  padding: 32px 0 0;
-}
-.info_read_wrap .tit {
-  padding: 0 20px 20px;
-  color: #222222;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.4444;
-}
-.info_read_wrap > .info_read {
-  border-bottom: 0;
-  padding: 0 20px 8px;
-}
-.info_read_wrap > .info_read dl:last-child {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
 }
 
 .sign_guide {
@@ -6418,6 +6440,12 @@ footer .f_company {
   background-color: #bbbbbb !important;
 }
 
+.page_point .user_area {
+  position: sticky;
+  top: 61px;
+  z-index: 1111;
+  background-color: #ffffff;
+}
 .page_point .user_area .user {
   padding: 24px 0 20px;
   border-bottom: 1px solid #eeeeee;
@@ -6503,6 +6531,55 @@ footer .f_company {
 }
 .page_point .prd_cont.type_list {
   border-top: 0;
+}
+
+.page_order .tab_menu li {
+  flex: 1;
+}
+.page_order .tab_menu li button, .page_order .tab_menu li a {
+  gap: 6px;
+  justify-content: center;
+}
+
+.order_bnr {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 40px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: #EFF6FF;
+}
+.order_bnr span {
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #1A63D9;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.333;
+}
+.order_bnr button, .order_bnr a {
+  margin-left: auto;
+  color: #1A63D9;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.333;
+  text-decoration: underline;
+}
+
+.gift_bnr {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 12px;
+  background-color: #f6f6f6;
+}
+.gift_bnr button, .gift_bnr a {
+  margin-left: auto;
 }
 
 @media (min-width: 1024px) {

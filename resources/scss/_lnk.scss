@@ -75,17 +75,6 @@
       color: $gray-600;
     }
   }
-  @media (min-width: $pc-point) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 30px;
-    dl{
-      flex: calc(50% - 30px);
-      &:nth-child(n){order: 2;}
-      &:nth-child(1){order: 0;}        
-      &:nth-child(3){order: 1;}
-    }
-  }
   &.type_row{
     dl{
       display: block;
@@ -103,6 +92,12 @@
     dd{
       margin-top: 4px;
     }
+    @media (min-width: $pc-point) {
+      gap: 8px 30px;
+      dl{
+        padding: 0;
+      }
+    }
   }
   &_wrap{
     padding: 32px 0 0;
@@ -117,6 +112,17 @@
         padding-bottom: 20px;
         border-bottom: 1px solid $gray-100;
       }
+    }
+  }
+  @media (min-width: $pc-point) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    dl{
+      flex: calc(50% - 30px);
+      &:nth-child(n){order: 2;}
+      &:nth-child(1){order: 0;}        
+      &:nth-child(3){order: 1;}
     }
   }
 }
@@ -198,7 +204,11 @@
   //   position: sticky;
   //   top:60px;
   // }
-  .user_area{    
+  .user_area{
+    position: sticky;
+    top: 61px;
+    z-index: 1111;
+    background-color: $color-white;
     .user{
       padding: 24px 0 20px;
       border-bottom: 1px solid $gray-100;
@@ -271,6 +281,46 @@
     &.type_list{
       border-top: 0;
     }
+  }
+}
+//장바구니
+.page_order{
+  .tab_menu{
+    li{
+      flex: 1;
+      button, a{
+        gap: 6px;
+        justify-content: center;
+      }
+    }
+  }
+}
+.order_bnr{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 40px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: $color-blue-tertiary;
+  span{
+    @include text-ellipsis;
+    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
+  }
+  button, a{
+    margin-left: auto;
+    @include fontStyle($color-blue, $fs-xxs, $fw-m, 1.333);
+    text-decoration: underline;
+  }
+}
+.gift_bnr{
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 12px;
+  background-color: $gray-50;
+  button, a{
+    margin-left: auto;
   }
 }
 @media (min-width: 1024px) {

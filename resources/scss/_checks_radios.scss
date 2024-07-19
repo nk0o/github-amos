@@ -181,6 +181,7 @@
         height: 100%;
         padding:0 16px;
         @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+        border-radius: 8px;
         &::before{
           background-image: none;
           left: auto;
