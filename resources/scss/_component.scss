@@ -96,7 +96,6 @@
   &_secondary {
     background-color: $gray-700 !important;
   }
-  &_success,
   &_green {
     background-color: $color-green !important;
   }
@@ -123,6 +122,7 @@
   &_teal {
     background-color: $color-teal !important;
   }
+  &_success,
   &_blue {
     background-color: $color-blue !important;
   }
@@ -163,7 +163,6 @@
   &_secondary {
     border: 1px solid $gray-700 !important;
   }
-  &_success,
   &_green {
     border: 1px solid $color-green !important;
   }
@@ -190,6 +189,7 @@
   &_teal {
     border: 1px solid $color-teal !important;
   }
+  &_success,
   &_blue {
     border: 1px solid $color-blue !important;
   }
@@ -218,7 +218,6 @@
 }
 //Text Color
 .txt {
-  &_success,
   &_green {
     color: $color-green !important;
   }
@@ -245,6 +244,7 @@
   &_teal {
     color: $color-teal !important;
   }
+  &_success,
   &_blue {
     color: $color-blue !important;
   }
@@ -279,7 +279,7 @@
     color: $color-red;
   }
   &.success {
-    color: $color-green;
+    color: $color-blue;
   }
 }
 //텍스트 요소 가리기

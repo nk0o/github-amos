@@ -194,7 +194,7 @@ p {
 .bg_secondary {
   background-color: #777777 !important;
 }
-.bg_success, .bg_green {
+.bg_green {
   background-color: #26A769 !important;
 }
 .bg_red, .bg_danger {
@@ -218,7 +218,7 @@ p {
 .bg_teal {
   background-color: #00B5AD !important;
 }
-.bg_blue {
+.bg_success, .bg_blue {
   background-color: #1A63D9 !important;
 }
 .bg_violet {
@@ -255,7 +255,7 @@ p {
 .line_secondary {
   border: 1px solid #777777 !important;
 }
-.line_success, .line_green {
+.line_green {
   border: 1px solid #26A769 !important;
 }
 .line_red, .line_danger {
@@ -279,7 +279,7 @@ p {
 .line_teal {
   border: 1px solid #00B5AD !important;
 }
-.line_blue {
+.line_success, .line_blue {
   border: 1px solid #1A63D9 !important;
 }
 .line_violet {
@@ -304,7 +304,7 @@ p {
   border: 1px solid #ffffff !important;
 }
 
-.txt_success, .txt_green {
+.txt_green {
   color: #26A769 !important;
 }
 .txt_red, .txt_danger {
@@ -328,7 +328,7 @@ p {
 .txt_teal {
   color: #00B5AD !important;
 }
-.txt_blue {
+.txt_success, .txt_blue {
   color: #1A63D9 !important;
 }
 .txt_violet {
@@ -365,7 +365,7 @@ p {
   color: #FF2E00;
 }
 .txt_alert.success {
-  color: #26A769;
+  color: #1A63D9;
 }
 
 .blind {
@@ -3066,7 +3066,7 @@ select {
   border: 1px solid #FF2E00;
 }
 .input_text[type=text].input_success, .input_text[type=file].input_success, .input_text[type=password].input_success {
-  border: 1px solid #26A769;
+  border: 1px solid #1A63D9;
 }
 .input_text[type=file] {
   cursor: pointer;
@@ -3399,7 +3399,7 @@ select {
 .badge.line_secondary {
   color: #777777;
 }
-.badge.line_success, .badge.line_green {
+.badge.line_green {
   color: #26A769;
 }
 .badge.line_red, .badge.line_danger {
@@ -3423,7 +3423,7 @@ select {
 .badge.line_teal {
   color: #00B5AD;
 }
-.badge.line_blue {
+.badge.line_success, .badge.line_blue {
   color: #1A63D9;
 }
 .badge.line_violet {
