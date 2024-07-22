@@ -6241,13 +6241,13 @@ footer .f_company {
 }
 
 .sign_notice {
-  padding: 32px 20px 0;
+  padding: 24px 20px 0;
 }
 .sign_notice p {
   color: #222222;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.4167;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3636;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .sign_notice span {
