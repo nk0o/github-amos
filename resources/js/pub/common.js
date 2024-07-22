@@ -664,16 +664,17 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
   let headerH = $('header').outerHeight();
   let tabListH = clickTab.outerHeight();
   let moveTab = clickTab.hasClass('clickTab')
-  let userAreaH;
+  let userAreaH = 0;
   if(!moveTab){return false}
   if($('.page_point').length > 0 ){
     userAreaH = $('.user_area').outerHeight();
+    console.log(userAreaH);
   }
   clickTab.find('.tab_list').click(function(){
     let idx = $(this).index();
     let toEl = clickTab.find('.tab_list').length > 0 && $('.toCont').eq(idx);
     $("html, body").animate({
-      scrollTop : toEl.offset().top - headerH + userAreaH
+      scrollTop : toEl.offset().top - (headerH + userAreaH)
     },500)
   })
 }
