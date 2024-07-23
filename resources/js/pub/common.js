@@ -672,6 +672,26 @@ function moveCenterTab(el){
 
   $(el).parents('.tab_center').find('>ul').animate({scrollLeft:pos});
 }
+//탭클릭 앵커이동
+function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
+  let clickTab = $('.tab_menu');
+  let headerH = $('header').outerHeight();
+  let tabListH = clickTab.outerHeight();
+  let moveTab = clickTab.hasClass('clickTab')
+  let userAreaH = 0;
+  if(!moveTab){return false}
+  if($('.page_point').length > 0 ){
+    userAreaH = $('.user_area').outerHeight();
+    console.log(userAreaH);
+  }
+  clickTab.find('.tab_list').click(function(){
+    let idx = $(this).index();
+    let toEl = clickTab.find('.tab_list').length > 0 && $('.toCont').eq(idx);
+    $("html, body").animate({
+      scrollTop : toEl.offset().top - (headerH + userAreaH)
+    },500)
+  })
+}
 
 //카트 담기
 function putInCart() {
@@ -712,3 +732,4 @@ function tabContPos() {
     })
   })
 }
+

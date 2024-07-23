@@ -32,9 +32,9 @@
   }
 }
 .sign_notice{
-  padding: 32px 20px 0;
+  padding: 24px 20px 0;
   p{
-    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+    @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
     font-family: $font-aritadt;
   }
   span{
