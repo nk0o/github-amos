@@ -210,5 +210,18 @@ button {
       }
     }
   }
+  &_delete{
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      mask: url("../images/icon/ico_delete.svg") left center / contain no-repeat;
+      background-color:$gray-600 !important;
+    }
+    @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
+  }
 }
 

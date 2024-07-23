@@ -1622,6 +1622,20 @@ p {
     background-image: none;
   }
 }
+.ico_delete::before {
+  background-image: url("../images/icon/ico_delete.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_delete::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_delete.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_heart::before {
   background-image: url("../images/icon/ico_heart.svg");
   background-size: cover;
@@ -1818,6 +1832,20 @@ p {
   .ico_listview_thumb::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_listview_thumb.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_bnr_line::before {
+  background-image: url("../images/icon/ico_bnr_line.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_bnr_line::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_bnr_line.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -2160,6 +2188,22 @@ button:disabled *[class*=ico_]::before {
   mask-image: url(../images/icon/ico_btn_heart_red.svg);
   background-size: cover;
   background-color: #FF2E00 !important;
+}
+.btn_delete {
+  display: flex;
+  align-items: center;
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+}
+.btn_delete::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask: url("../images/icon/ico_delete.svg") left center/contain no-repeat;
+  background-color: #888888 !important;
 }
 
 /* Toggle Button*/
@@ -6852,16 +6896,48 @@ footer .f_company {
   justify-content: center;
 }
 
+.cart_empty {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0;
+  text-align: center;
+}
+.cart_empty img {
+  margin-bottom: 20px;
+}
+.cart_empty p {
+  color: #222222;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+.cart_empty span {
+  color: #666666;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+}
+
 .order_bnr {
   display: flex;
   align-items: center;
-  gap: 24px;
   min-height: 40px;
-  padding: 10px 12px;
+  padding: 0 12px;
+  gap: 8px 24px;
   border-radius: 8px;
   background-color: #EFF6FF;
 }
-.order_bnr span {
+.order_bnr_area {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.order_bnr .txt_extra {
   display: block;
   overflow: hidden;
   word-break: break-all;
@@ -6873,7 +6949,7 @@ footer .f_company {
   font-weight: 600;
   line-height: 1.333;
 }
-.order_bnr button, .order_bnr a {
+.order_bnr .btn_view {
   margin-left: auto;
   color: #1A63D9;
   font-size: 0.75rem;
@@ -6881,16 +6957,38 @@ footer .f_company {
   line-height: 1.333;
   text-decoration: underline;
 }
-
-.gift_bnr {
-  display: flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 6px 12px;
-  background-color: #f6f6f6;
+.order_bnr .txt_gift {
+  padding: 12px;
+  color: #1A63D9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
-.gift_bnr button, .gift_bnr a {
-  margin-left: auto;
+.order_bnr .ico_bnr_line {
+  padding-left: 16px;
+}
+.order_bnr .ico_bnr_line::before {
+  width: 14px;
+  height: 14px;
+  top: 12px;
+  transform: translateY(0);
+  background-color: #1A63D9 !important;
+}
+
+.order_check {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.order_check label {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.133;
 }
 
 @media (min-width: 1024px) {
