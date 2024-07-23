@@ -20,7 +20,7 @@ td {
    color: $gray-950;
    line-height: 19px;
    vertical-align: middle;
-   white-space: nowrap;
+   // white-space: nowrap;
    > * {
       font-size: $fs-xs;
       color: $gray-950;
@@ -31,8 +31,13 @@ th {
 }
 
 .tbl {
-   //테이블 감싸는 테두리
-   border: 1px solid $gray-100;
+   colgroup {
+      col {
+         &:nth-child(1) {
+            width: 120px;
+         }
+      }
+   }
    thead {
       vertical-align: bottom;
       th,
@@ -60,9 +65,22 @@ th {
    tbody {
       vertical-align: inherit;
       border-top: 1px solid $gray-100;
+      th {
+         color: #222;
+         font-size: 13px;
+         font-weight: $fw-sb;
+         text-align: left;
+         border-left: none;
+      }
+      td {
+         color: #666;
+         font-size: 13px;
+         font-weight: $fw-m;
+         border-right: none;
+      }
    }
    & > :not(caption) > * > * {
-      padding: 12px 16px;
+      padding: 10px 8px;
       //th td의 테두리
       border-bottom-width: 1px;
       border-right-width: 1px;
@@ -302,6 +320,23 @@ div.dataTables {
       .btn:active:focus,
       .btn:focus {
          outline: none;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .tbl {
+      //테이블 감싸는 테두리
+      border: 1px solid $gray-100;
+      colgroup {
+         col {
+            &:nth-child(1) {
+               width: 160px;
+            }
+         }
+      }
+      th {
+         background: none;
       }
    }
 }

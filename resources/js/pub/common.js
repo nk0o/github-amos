@@ -16,7 +16,8 @@ $(document).ready(function () {
   if ($('.cate_nav').length > 0) { catecoryUI() }
   if ($('.prd_list_wrap.swiper').length > 0) { PrdSlider() }
   if ($('header').length > 0) { headerScroll() }
-  if ($('.tab_menu.clickTab').length > 0) { tabMoveAnchor() }
+  if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
+  if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -177,7 +178,7 @@ $(document).ready(function () {
     putCart();
   }
   if ($('.btm_bar.type2').length > 0) {
-    putCart();
+    putInCart();
   }
   // 장바구니 버튼
   function putCart() {
@@ -589,18 +590,31 @@ function cateScroll(){
 function PrdSlider(){
   $(".prd_list_wrap.swiper").each(function (i, v) {
     let sliderName = 'slider' + i;
-    $(".prd_list_wrap.swiper")[i].id = sliderName;
+    $(v).attr('id', sliderName);
     let sliderId = '#' + sliderName;
+  
+    // Swiper 컨테이너 내에 .colorchip 클래스 있는지 확인
+    let swiperContainer = $(sliderId);
+    let hasColorchip = swiperContainer && swiperContainer.hasClass('colorchip');
+    let slidesPerViewValue = hasColorchip ? 4.235 : 2.26;
+    let spaceBetweenwValue = hasColorchip ? 5 : 8;
+
+    // spaceBetweenValue2 부모에 .is_noBack 클래스가 있는지 확인
+    let hasIsNoBack = swiperContainer && swiperContainer.parents('.sec_product').hasClass('is_noBack');
+    let spaceBetweenValue2 = hasIsNoBack ? 12 : 8;  
+  
+    // Swiper 초기화
     let PrdSwiper = new Swiper(sliderId, {
       autoHeight: true,
-      slidesPerView: 2.26,
-      spaceBetween: 8,
+      slidesPerView: slidesPerViewValue,
+      spaceBetween: spaceBetweenwValue,
       pagination: {
-        el: sliderId +" .swiper-pagination",
+        el: sliderId + " .swiper-pagination",
       },
       breakpoints: {
         1024: {
           slidesPerView: 5,
+          spaceBetween: spaceBetweenValue2
         },
       },
     });
@@ -678,3 +692,44 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
     },500)
   })
 }
+
+//카트 담기
+function putInCart() {
+  $('.prd_cart_btn').on('click',function() {
+    $('.appbar .appbar_util').append('<div class="prd_put_cart"><div class="aniPut"> <div class="ani_img"><i class="ico_cart_float ico_24"></i></div></div><div class="put_text"><p>나의 장바구니에 담았습니다</p></div></div>')
+    $('.prd_put_cart').addClass('active');
+    setTimeout(function() {
+      $('.prd_put_cart').removeClass('active');
+      // $('.prd_put_cart').remove();
+    },4500)
+  })
+}
+
+function prdImgFix() {
+  let winW = $(window).width();
+  if(winW < 1024) {
+    $(window).on('scroll',function() {
+      let scroll = $(this).scrollTop();
+      console.log(scroll)
+      if(scroll > 0) {
+        $('.prd_top_info .prd_img').addClass('fix')
+      } else {
+        $('.prd_top_info .prd_img').removeClass('fix')
+      }
+      
+    })
+  }
+}
+
+function tabContPos() {
+  let tabContPos = $('.tab_cont').offset().top;
+  let headeH = $('header').height();
+  let tabMenuH = $('.tab_menu').height();
+  console.log(tabContPos)
+  $('.tab_list ').on('click',function() {
+    $('html,body').animate({
+      scrollTop : tabContPos - headeH - tabMenuH
+    })
+  })
+}
+
