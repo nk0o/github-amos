@@ -6666,6 +6666,13 @@ footer .f_company {
     border-bottom: none;
   }
 }
+.sticky_tab {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
 .page_form .hr_divider {
   height: 8px;
   margin: 24px 0 !important;

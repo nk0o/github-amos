@@ -58,13 +58,14 @@ $(document).ready(function () {
 
     //브랜드 아코디언 앵커이동
     if (tab.hasClass("thumb_tab")) {
-      let idx = $(el).index();    
+      let idx = $(el).index();
+      let tabH= $('.sticky_tab').outerHeight();
       if($('.cate_brand.accord_list').length > 0) {
         let accorHead = $('.cate_brand.accord_list').find('.accord_head'),
             accorHeadTitH = $('.cate_brand.accord_list').find('.accord_tit').outerHeight(),
             tabsAreaH = $('.tabs_area').outerHeight();
         $("html, body").animate({
-          scrollTop : accorHeadTitH *idx + tabsAreaH + 1*idx
+          scrollTop : accorHeadTitH *idx + tabsAreaH + 1*idx - tabH + 1
         },500)
         accorHead.removeClass('on');
         accorHead.eq(idx).addClass('on');

@@ -1,3 +1,9 @@
+.sticky_tab{
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  background-color: $color-white;
+}
 .page_form{
   .hr_divider{
     height: 8px;
