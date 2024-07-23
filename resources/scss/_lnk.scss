@@ -295,34 +295,66 @@
     }
   }
 }
+.cart_empty{
+  @include flexCenter;
+  flex-direction: column;
+  padding: 80px 0;
+  text-align: center;
+  img{
+    margin-bottom: 20px;
+  }
+  p{
+    @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
+    margin-bottom: 2px;
+  }
+  span{
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+  }
+}
 .order_bnr{
   display: flex;
   align-items: center;
-  gap: 24px;
   min-height: 40px;
-  padding: 10px 12px;
+  padding: 0 12px;
+  gap: 8px 24px;
   border-radius: 8px;
   background-color: $color-blue-tertiary;
-  span{
+  &_area{
+    padding: 20px 0;
+    border-bottom: 1px solid $gray-100;
+  }
+  .txt_extra{
     @include text-ellipsis;
     @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
   }
-  button, a{
+  .btn_view{
     margin-left: auto;
     @include fontStyle($color-blue, $fs-xxs, $fw-m, 1.333);
     text-decoration: underline;
   }
-}
-.gift_bnr{
-  display: flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 6px 12px;
-  background-color: $gray-50;
-  button, a{
-    margin-left: auto;
+  .txt_gift{
+    padding: 12px;
+    @include fontStyle($color-blue, $fs-s, $fw-m, 1.357);
+    font-family: $font-aritadt;
+  }
+  .ico_bnr_line{
+    padding-left: 16px;
+    &::before{
+      width: 14px;
+      height: 14px;
+      top: 12px;
+      transform: translateY(0);
+      background-color: $color-blue !important;
+    }
   }
 }
+.order_check{
+  @include flexBetween;
+  label{
+    @include fontStyle($gray-950, $fs-sm, $fw-b, 1.133);
+  }
+}
+
 @media (min-width: 1024px) {
   .page_form {
     #container {

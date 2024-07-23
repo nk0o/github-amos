@@ -248,6 +248,11 @@
       background-color: $color-point !important;
     } 
   }
+  &_delete{
+    &::before {
+      @include iconImgPath("ico_delete.svg");
+    } 
+  }
   &_heart{
     &::before {
       @include iconImgPath("ico_heart.svg");
@@ -328,6 +333,11 @@
       &::before {
         @include iconImgPath("ico_listview_thumb.svg");
       }
+    }
+  }
+  &_bnr_line{
+    &::before {
+      @include iconImgPath("ico_bnr_line.svg");
     }
   }
   &_float{
