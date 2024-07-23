@@ -153,6 +153,15 @@
       justify-content: center;
     }
     @include fontStyle($color-white, $fs-m, $fw-b, 1.5);
+    .color_txt{
+      color: #FFE7A9;
+      display: flex;
+      align-items: center;
+      line-height: 26px;
+      em{
+        @include fontStyle(inherit, $fs-ml, $fw-m, normal);
+      }
+    }
   }
 }
 

@@ -222,6 +222,71 @@ button {
       background-color:$gray-600 !important;
     }
     @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
+    &.type_x{
+      &::before {
+        width: 20px;
+        height: 20px;
+        mask: url("../images/icon/ico_close_20_sm.svg") left center / contain no-repeat;
+        background-color:$gray-400 !important;
+      }
+    }
   }
 }
 
+.spinner{
+  @include flexBetween;
+  gap: 2px;
+  width: 120px;
+  height: 40px;
+  border: 1px solid $gray-200;
+  &.disabled{
+    .input_spinner{
+      background-color:transparent;
+      color: $gray-500;
+    }
+    .btn_spinner{
+      background-color:transparent !important;
+      &::before{
+        background-color:$gray-300 !important;
+      }
+    }
+  }
+}
+.input_spinner{
+  width:100%;
+  @include fontStyle($gray-950, $fs-sm, $fw-m, 1.2);
+  font-family: $font-gotham !important;
+  text-transform: capitalize;
+  text-align: center;
+  &:disabled{
+    background-color:transparent;
+    color: $gray-500;
+  }
+}
+.btn_spinner{
+  width: 24px;
+  height: 24px;
+  &::before{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    mask: url("../images/icon/ico_spinner_down.svg") center / contain no-repeat;
+    background-color:$gray-900 !important;
+  }
+  &:disabled{
+    background-color:transparent !important;
+    &::before{
+      background-color:$gray-300 !important;
+    }
+  }
+  &_up{
+    @extend .btn_spinner;
+    &::before{
+      mask: url("../images/icon/ico_spinner_up.svg") center / contain no-repeat;
+    }
+  }
+  &_down{
+    @extend .btn_spinner;
+  }
+}

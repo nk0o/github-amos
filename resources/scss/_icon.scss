@@ -208,6 +208,18 @@
 }
 /* UI actions */
 .ico {  
+  &_spinner{
+    &_down{
+      &::before {
+        @include iconImgPath("ico_spinner_down.svg");
+      }
+    }
+    &_up{
+      &::before {
+        @include iconImgPath("ico_spinner_up.svg");
+      }
+    }
+  }
   &_clip{
     &::before {
       @include iconImgPath("ico_clip.svg");
