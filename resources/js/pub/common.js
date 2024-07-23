@@ -18,6 +18,7 @@ $(document).ready(function () {
   if ($('header').length > 0) { headerScroll() }
   if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
   if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
+  if ($('.prd_cart_btn').length > 0) { putInCart() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -175,25 +176,23 @@ $(document).ready(function () {
       let count = $('.prd_list_wrap').find('.prd_box.checked').length;
       $('.prd_cart_btn .count').text('(' + count + ')');
     });
-    putCart();
+    // putCart();
   }
-  if ($('.btm_bar.type2').length > 0) {
-    putInCart();
-  }
+  
   // 장바구니 버튼
-  function putCart() {
-    $('.prd_cart_btn .btn_bottom').on('click',function() {
-      let cartTxt = $(this).siblings('.cart_txt');
-      if(cartTxt.hasClass('active')) {
-        cartTxt.removeClass('active')
-      } else {
-        cartTxt.addClass('active');
-        setTimeout(function() {
-          cartTxt.removeClass('active');
-        }, 2000);
-      }
-    })
-  }
+  // function putCart() {
+  //   $('.prd_cart_btn .btn_bottom').on('click',function() {
+  //     let cartTxt = $(this).siblings('.cart_txt');
+  //     if(cartTxt.hasClass('active')) {
+  //       cartTxt.removeClass('active')
+  //     } else {
+  //       cartTxt.addClass('active');
+  //       setTimeout(function() {
+  //         cartTxt.removeClass('active');
+  //       }, 2000);
+  //     }
+  //   })
+  // }
 
   //상품 리스트 타입 선택
   if ($('.type_list .view_type').length > 0) {
