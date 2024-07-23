@@ -18,6 +18,7 @@ $(document).ready(function () {
   if ($('header').length > 0) { headerScroll() }
   if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
   if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
+  if ($('.prd_cart_btn').length > 0) { putInCart() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -175,25 +176,23 @@ $(document).ready(function () {
       let count = $('.prd_list_wrap').find('.prd_box.checked').length;
       $('.prd_cart_btn .count').text('(' + count + ')');
     });
-    putCart();
+    // putCart();
   }
-  if ($('.btm_bar.type2').length > 0) {
-    putInCart();
-  }
+  
   // 장바구니 버튼
-  function putCart() {
-    $('.prd_cart_btn .btn_bottom').on('click',function() {
-      let cartTxt = $(this).siblings('.cart_txt');
-      if(cartTxt.hasClass('active')) {
-        cartTxt.removeClass('active')
-      } else {
-        cartTxt.addClass('active');
-        setTimeout(function() {
-          cartTxt.removeClass('active');
-        }, 2000);
-      }
-    })
-  }
+  // function putCart() {
+  //   $('.prd_cart_btn .btn_bottom').on('click',function() {
+  //     let cartTxt = $(this).siblings('.cart_txt');
+  //     if(cartTxt.hasClass('active')) {
+  //       cartTxt.removeClass('active')
+  //     } else {
+  //       cartTxt.addClass('active');
+  //       setTimeout(function() {
+  //         cartTxt.removeClass('active');
+  //       }, 2000);
+  //     }
+  //   })
+  // }
 
   //상품 리스트 타입 선택
   if ($('.type_list .view_type').length > 0) {
@@ -696,12 +695,13 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
 //카트 담기
 function putInCart() {
   $('.prd_cart_btn').on('click',function() {
-    $('.appbar .appbar_util').append('<div class="prd_put_cart"><div class="aniPut"> <div class="ani_img"><i class="ico_cart_float ico_24"></i></div></div><div class="put_text"><p>나의 장바구니에 담았습니다</p></div></div>')
-    $('.prd_put_cart').addClass('active');
-    setTimeout(function() {
-      $('.prd_put_cart').removeClass('active');
-      // $('.prd_put_cart').remove();
-    },4500)
+    if($('.prd_put_cart').length == 0) {
+      $('.appbar > .inner').append('<div class="prd_put_cart"><div class="aniPut"> <div class="ani_img"><i class="ico_cart_float ico_24"></i></div></div><div class="put_text"><p>나의 장바구니에 담았습니다</p></div></div>')
+      $('.prd_put_cart').addClass('active');
+      setTimeout(function() {
+        $('.prd_put_cart').removeClass('active').remove();
+      },4500)
+    }
   })
 }
 
@@ -723,13 +723,24 @@ function prdImgFix() {
 
 function tabContPos() {
   let tabContPos = $('.tab_cont').offset().top;
-  let headeH = $('header').height();
-  let tabMenuH = $('.tab_menu').height();
+  let headeH = $('header').outerHeight();
+  let tabMenuH = $('.tab_menu').outerHeight();
   console.log(tabContPos)
   $('.tab_list ').on('click',function() {
-    $('html,body').animate({
-      scrollTop : tabContPos - headeH - tabMenuH
-    })
+    //아이폰 확인
+    function isIphone() {
+      return /iPhone/.test(navigator.userAgent);
+    }
+    if (isIphone()) {
+      $('html,body').animate({
+        scrollTop : tabContPos - headeH - tabMenuH + 20
+      })
+    } else {
+      $('html,body').animate({
+        scrollTop : tabContPos - headeH - tabMenuH
+      })
+    }
   })
+  
 }
 
