@@ -6319,7 +6319,7 @@ footer .f_company {
   animation: bounceIn 0.5s ease-in-out forwards, moveAndFadeOut 1.5s ease-in-out 1s forwards;
 }
 .prd_put_cart.active .put_text {
-  top: 56px;
+  top: 80px;
   animation: showTxt 0.5s 2s ease-in-out forwards, hideTxt 0.5s 3.7s ease-in-out forwards;
 }
 .prd_put_cart .aniPut {
@@ -6336,39 +6336,41 @@ footer .f_company {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
   background: #222;
   border-radius: 50%;
 }
 .prd_put_cart .aniPut .ani_img i {
-  width: 40px;
-  height: 45px;
+  width: 55px;
+  height: 50px;
 }
 .prd_put_cart .aniPut .ani_img i::before {
-  width: 40px;
-  height: 45px;
+  width: 55px;
+  height: 50px;
   background: #fff;
 }
 .prd_put_cart .put_text {
   position: fixed;
   top: 56px;
   left: 50%;
-  padding: 8px 20px 6px;
-  border-radius: 30px;
-  color: #fff;
-  text-align: center;
-  font-size: 13px;
+  white-space: nowrap;
   background: #2a3136;
+  border-radius: 30px;
   opacity: 0;
-  transition: 0.3s;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 13px;
   z-index: 1000;
+  color: #fff;
+  transform: translate(0, 0);
+  text-align: center;
   text-align: center;
 }
 .prd_put_cart .put_text p {
   margin-bottom: 6px;
   color: #fff;
-  line-height: 24px;
+  line-height: 50px;
 }
 .prd_put_cart .put_text a {
   display: block;
@@ -6393,11 +6395,11 @@ footer .f_company {
     transform: translate(0, 0) scale(1);
   }
   45% {
-    transform: translate(45vw, -180px) scale(0.3);
-    opacity: 0;
+    transform: translate(43vw, -187px) scale(0.3);
   }
   100% {
     opacity: 0;
+    transform: translate(43vw, -187px) scale(0);
   }
 }
 @keyframes showTxt {
@@ -6423,13 +6425,12 @@ footer .f_company {
 
 @media (min-width: 1024px) {
   .prd_put_cart {
-    position: fixed;
-    max-width: 1024px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
   }
   .prd_put_cart .aniPut {
-    top: 50%;
-    margin: -60px 0 0 0;
+    top: 250px;
+    transition: 0.3s;
   }
   .prd_put_cart .aniPut .ani_img {
     display: -webkit-box;
@@ -6449,20 +6450,21 @@ footer .f_company {
     width: 50px;
     height: 55px;
   }
-  .prd_put_cart .put_text {
-    position: absolute;
-  }
   @keyframes moveAndFadeOut {
     0% {
       opacity: 1;
-      transform: translate(0, 0) scale(1);
+      transform: scale(1);
     }
-    45% {
-      transform: translate(22vw, -440px) scale(0.3);
-      opacity: 0;
+    40% {
+      transform: scale(0.3);
+      left: 96%;
+      top: -60px;
     }
     100% {
       opacity: 0;
+      left: 96%;
+      top: -60px;
+      transform: scale(0);
     }
   }
   .swiper-container .prd_list_lg .prd_box .bottom .btn_icon {
