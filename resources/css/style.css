@@ -3387,6 +3387,12 @@ select {
 .tab_menu.contain_tab .tab_list.current button, .tab_menu.contain_tab .tab_list.current a {
   color: #ffffff;
 }
+.tab_menu.contain_tab_type2 .tab_list.current {
+  background: none;
+}
+.tab_menu.contain_tab_type2 .tab_list.current button, .tab_menu.contain_tab_type2 .tab_list.current a {
+  color: #222;
+}
 .tab_menu.line_tab {
   position: relative;
 }
