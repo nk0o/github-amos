@@ -66,6 +66,19 @@
     }
     &_type2 {
       .tab_list{
+        button,a {
+          padding: 0 12px;
+        }
+        &:first-child {
+          button,a {
+            padding-left: 20px;
+          }
+        }
+        &:last-child {
+          button,a {
+            padding-right: 20px;
+          }
+        }
         &.current{
           background: none;
           button,a {
@@ -162,9 +175,17 @@
           padding: 0 10px;
           &:first-child{
             padding-left: 20px;
+            &::after {
+              width: calc(100% - 25px);
+              margin-left: 5px;
+            }
           }
           &:last-child{
             padding-right: 20px;
+            &::after {
+              width: calc(100% - 25px) !important;
+              margin-left: -5px;
+            }
           }
           &.current {
             &::after {

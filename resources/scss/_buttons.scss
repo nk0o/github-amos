@@ -85,6 +85,23 @@ button {
       height: 46px;
     }
   }
+  &_xs {
+    @extend .btn;
+    height: 40px;
+    padding: 0 26px;
+    font-size: $fs-sm;
+    line-height: 3.0666;
+    &.btn_icon {
+      width: 40px;
+      height: 40px;
+      padding: 6px;
+      border-color: transparent;
+    }
+    &.btn_circle{
+      width: 40px;
+      height: 40px;
+    }
+  }
   //Color
   &_primary {
     color: $color-white !important;

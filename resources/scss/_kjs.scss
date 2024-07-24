@@ -1150,7 +1150,7 @@
 
 
 .top_exchange_wrap {
-  padding: 20px 0;
+  padding: 20px 0 32px;
   .exchange_box {
     margin-top: 16px;
     padding: 20px;
@@ -1163,8 +1163,8 @@
       dt {
         color: #222;
         font-size: 15px;
-        font-weight: 400;
-        line-height: 20px;
+        font-weight: $fw-sb;
+        line-height: 26px;
       }
       dd {
         color: #1A63D9;
@@ -1172,21 +1172,24 @@
         em {
           display: inline-block;
           font-size: 18px;
-          font-weight: 400;
+          font-weight: $fw-m;
           line-height: 26px;
         }
         span {
           display: inline-block;
           font-size: 16px;
-          font-weight: 400;
+          font-weight: $fw-b;
           line-height: 25px;    vertical-align: 1px;
         }
       }
     }
   }
+  .txt_notice_list {
+    margin-top: 20px;
+  }
 }
 .exchange_detail {
-  padding: 8px 0 28px;
+  padding: 8px 0 130px;
   >ul {
     >li{
       display: flex;
@@ -1201,17 +1204,18 @@
           display: block;
           color: #888;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 300;
           line-height: 17px;
         }
         .price {
           margin-top: 4px;
           em {
             font-size: 17px;
-            font-size: 400;
+            font-weight: 400;
           }
           span {
             font-size: 15px;
+            font-weight: $fw-b;
           }
         }
       }
