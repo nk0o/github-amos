@@ -532,6 +532,30 @@
   }
 }
 
+//주의 문구
+.txt_notice{
+  position: relative;
+  padding-left: 22px;
+  margin-top: 16px;
+  @include fontStyle($gray-700, $fs-s, $fw-m, 1.357);
+  font-family: $font-aritadt;
+  em{
+    color: $color-blue;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    mask: url('../images/icon/ico_notice.svg') center/contain no-repeat;
+    background-color: $gray-400 !important;
+  }
+  &:first-child{
+    margin-top: 0 ;
+  }
+}
 
 // PC
 @media (min-width: 1024px) {

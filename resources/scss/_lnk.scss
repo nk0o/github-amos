@@ -71,15 +71,15 @@
     display: flex;
     gap: 12px;
     padding: 4px 0;
-    dt, dd{
-      flex:1;
-      @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
-      font-family: $font-aritadt;
-    }
-    dt{
-      flex: 0 0 100px;
-      color: $gray-600;
-    }
+  }
+  dt, dd{
+    flex:1;
+    @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+    font-family: $font-aritadt;
+  }
+  dt{
+    flex: 0 0 100px;
+    color: $gray-600;
   }
   &.type_row{
     dl{
@@ -303,18 +303,27 @@
       }
     }
   }
+  .btn_group{
+    padding: 60px 20px 30px;
+  }
 }
 .order_bnr{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   min-height: 40px;
   padding: 0 12px;
-  gap: 8px 24px;
-  border-radius: 8px;
+  gap: 0px 24px;
   background-color: $color-blue-tertiary;
+  white-space:normal;
   &_area{
     padding: 20px 0;
     border-bottom: 1px solid $gray-100;
+    .order_bnr{
+      border-radius: 8px;
+      flex-direction: row;
+      align-items: center;
+    }
   }
   .txt_extra{
     @include text-ellipsis;
@@ -341,18 +350,27 @@
       background-color: $color-blue !important;
     }
   }
+  .gift_list{
+    padding-bottom: 16px;
+  }
 }
 .order_prd_area{
   .inner{
     padding: 0 20px;
+    @media (min-width: $pc-point) {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
   }
 }
-.order_price_area{
-  border-top: 10px solid $gray-50;
-  margin-bottom: $btmbar-H;
-  padding: 32px 20px 40px;
+.order_price{
+  &_area{
+    border-top: 10px solid $gray-50;
+    margin-bottom: $btmbar-H;
+    padding: 32px 0px 40px;
+  }
   .price{
-    &_sum, &_by li, &_order{
+    &_sum, &_by li, &_total{
       @include flexBetween;
       em{
         margin-left: auto;
@@ -364,7 +382,7 @@
         @include fontStyle(inherit, $fs-ml, $fw-m, 1.444);
       }
     }
-    &_order{
+    &_total{
       margin-top: 16px;
       padding-top: 16px;
       border-top: 1px solid $gray-200;
@@ -392,6 +410,13 @@
       }
     }
   }
+  .inner{
+    padding: 0 20px;
+    @media (min-width: $pc-point) {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
 }
 .cart{
   &_empty{
@@ -416,7 +441,7 @@
       display: inline-flex;
       align-items: center;
     }
-    .input_check + label{
+    label{
       min-height: 20px;
       @include fontStyle($gray-950, $fs-sm, $fw-b, 1.133);
       font-family: $font-aritadt;
@@ -446,6 +471,7 @@
             @include fontStyle($gray-950, $fs-xs, $fw-b, 1.384);
           }
           &.prd_sum{
+            margin-top: 16px;
             @include fontStyle($gray-950, $fs-m, $fw-b, 1.562);
             em{
               margin-left: 2px;
@@ -469,11 +495,166 @@
   &_qnty{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     margin-top: 16px;
+    span{
+      display: flex;
+      align-items: center;
+      @include fontStyle($gray-950, $fs-xs, $fw-m, 1.385);
+      &:nth-child(1){
+        font-weight: $fw-b;
+      }
+      &:nth-child(2){
+        position: relative;
+        &::before{
+          content: '';
+          @include pos_Ycenter;
+          left: -8px;
+          width: 1px;
+          height: 10px;
+          background-color: $gray-400;
+        }
+        em{
+          font-weight: $fw-l;
+        }
+      }
+    }
+    em{
+      @include fontStyle($gray-950, $fs-sm, $fw-m, 1.2);
+    }
+    .prd{
+      &_price{
+        font-weight: $fw-b;
+      }
+      &_qnty{
+        position: relative;
+        &::before{
+          content: '';
+          @include pos_Ycenter;
+          left: -8px;
+          width: 1px;
+          height: 10px;
+          background-color: $gray-400;
+        }
+        em{
+          font-weight: $fw-l;
+        }
+      }
+    }
   }
 }
-
+.order_accord{
+  .accord{
+    &_list{
+      border-top: 10px solid $gray-50;
+      &:first-child{
+        border: 0;
+      }
+    }
+    &_head{
+      &.on{
+        .prd_summary{
+          display: none;
+        }
+      }
+    }
+    &_tit{
+      @include flexBetween;
+      padding: 20px 52px 20px 20px;
+      @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
+      font-family: $font-aritadt;
+      border-bottom: 0;
+      &::before{
+        right: 20px;
+      }
+    }
+    &_cont{
+      display: block;
+      & > .inner{
+        padding: 0 20px 20px;
+      }
+    }
+  }
+  .cart_check_prd{
+    border: 0;
+    padding:0
+  }
+  .prd_summary{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    width: 42%;
+    @include fontStyle($gray-950, $fs-sm, $fw-m, 1.4667);
+    span{
+      @include text-ellipsis;
+    }
+  }
+  .info_read{
+    padding: 0;
+    border-bottom: 0;
+    dl{
+      padding: 5px 0;
+    }
+    dt, dd{
+      @include fontStyle($gray-950, $fs-sm, $fw-m, 1.467);
+      white-space: normal;
+    }
+    dt{
+      color: $gray-600;
+      &.hide{
+        flex: 0;
+        margin-left: -12px;
+      }
+    }
+  }
+  .cart_check_prd{
+    &:last-of-type{
+      .cart_list{
+        &:last-child{
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  &.no_fold{
+    .accord_tit::before{
+      display: none ;
+    }
+  }
+  @media (min-width: $pc-point) {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+.gift_list{
+  @extend .prd_list_sm;
+  .prd{
+    .info{
+      white-space: normal;
+    }
+    .tit{
+      @include fontStyle($gray-950, $fs-s, $fw-sb, 1.357);
+    }
+    .detail{
+      margin-top: 0;
+      @include fontStyle($gray-700, $fs-s, $fw-m, 1.2143);
+    }
+  }
+  .prd_box{
+    .prd{
+      .img{
+        min-width: 60px;
+        min-height: 60px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  .cart_qnty{
+    margin-top: 3px;
+  }
+}
 @media (min-width: 1024px) {
   .page_form {
     #container {

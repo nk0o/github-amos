@@ -371,7 +371,10 @@ function paginationUI() {
 /****** Accordion ******/
 function accordionUI() {
   $(".accord_head .accord_tit").click(function (event) { 
-    accordionAction(this, event);
+    let noFoldAccordion = $(this).parents().hasClass('no_fold');
+    if(!noFoldAccordion){
+      accordionAction(this, event);
+    }
     event.preventDefault(); 
   });
   function accordionAction(el, event) {
