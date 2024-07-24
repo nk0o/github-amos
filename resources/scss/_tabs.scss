@@ -64,6 +64,16 @@
         }
       }
     }
+    &_type2 {
+      .tab_list{
+        &.current{
+          background: none;
+          button,a {
+            color: #222;
+          }
+        }
+      }
+    }
   }
   &.line_tab {
     position: relative;
