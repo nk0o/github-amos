@@ -1149,6 +1149,74 @@
 }
 
 
-
+.top_exchange_wrap {
+  padding: 20px 0;
+  .exchange_box {
+    margin-top: 16px;
+    padding: 20px;
+    background: #EFF6FF;
+    border-radius: 8px;
+    dl {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+      gap: 8px;
+      dt {
+        color: #222;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      dd {
+        color: #1A63D9;
+        text-align: right;
+        em {
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+        }
+        span {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25px;    vertical-align: 1px;
+        }
+      }
+    }
+  }
+}
+.exchange_detail {
+  padding: 8px 0 28px;
+  >ul {
+    >li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      &+li {
+        border-top: 1px solid #eee;
+      }
+      .left {
+        .date {
+          display: block;
+          color: #888;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17px;
+        }
+        .price {
+          margin-top: 4px;
+          em {
+            font-size: 17px;
+            font-size: 400;
+          }
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
 
 

@@ -52,13 +52,146 @@
 
       <section>
         <div class="inner">
-          <div class="">
-
+          <div class="top_exchange_wrap">
+            <div class="monthpicker">
+              <input type="text" data-btmsheet="btmSheet02" value="2024. 06">
+            </div>
+            <div class="exchange_box">
+              <dl>
+                <dt>당월 매입 금액</dt>
+                <dd><em>1,500,000</em><span>원</span></dd>
+                <dt>당월 결제 금액</dt>
+                <dd><em>2,000,000</em><span>원</span></dd>
+                <dt>미 결제 금액</dt>
+                <dd><em>500,000</em><span>원</span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hr_divider"></section>
+      <section>
+        <div class="inner">
+          <div class="exchange_detail">
+            <ul>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.03</span>
+                  <div class="price">
+                    <em>1,500,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_border btn_radius">주문</button>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.10</span>
+                  <div class="price">
+                    <em>-100,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_border btn_radius">반품</button>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.17</span>
+                  <div class="price">
+                    <em>800,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_border btn_radius">주문</button>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.21</span>
+                  <div class="price">
+                    <em>1,000,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_primary btn_radius">결제</button>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.24</span>
+                  <div class="price">
+                    <em>300,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_border btn_radius">주문</button>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.28</span>
+                  <div class="price">
+                    <em>1,000,000</em><span>원</span>
+                  </div>
+                </div>
+                <button class="btn_sm btn_primary btn_radius">결제</button>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
     <!-- //#container -->
   </div>
+
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet02">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">연월 선택</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <div class="datepicker">
+          <input type="text" id="monthpicker" />
+        </div>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+  <!-- //Bottom Sheet -->
+  
+  <!-- <script>
+    $(function () {
+      var months = [];
+        var dateObj = new Date();
+        var selectYear = dateObj.getFullYear();
+        var disableYear = dateObj.getFullYear();
+        var month = dateObj.getMonth() + 1;
+
+        /* MonthPicker 옵션 */
+        var options = {
+            pattern: 'yyyy. mm',
+            selectedYear: selectYear,
+            startYear: selectYear - 2,
+            finalYear: disableYear,
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            showOn: "button",
+            buttonImage: "../../images/btn/btn_calendar.gif",
+            buttonImageOnly: true,
+            changeYear: false,
+            dateFormat: 'yy-mm',
+        };
+
+        /* MonthPicker Set */
+        $('#monthpicker').monthpicker(options);
+        if (disableYear === selectYear) {
+            $("#monthpicker").monthpicker('disableMonths', months);
+        }
+    });
+  </script> -->
+  
+  <script>
+    $(function() {
+      $('#monthpicker').monthpicker({
+        altFormat: 'yy. mm',
+        monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      });
+    })
+  </script>
 </body>
 </html>
