@@ -8,6 +8,7 @@ var include = {
     document.write('<script src="../../resources/js/libs/jquery- v1.11.1.min.js"></script>');
     document.write('<script src="../../resources/js/libs/jquery-ui.min.js"></script>');
     document.write('<script src="../../resources/js/libs/swiper.min.js"></script>');
+    document.write('<script src="../../resources/js/libs/monthpicker.js"></script>');
     document.write('<script src="../../resources/js/pub/common.js"></script>');
   },
   style: function () {
