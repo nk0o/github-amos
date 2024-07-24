@@ -225,6 +225,11 @@
       @include iconImgPath("ico_clip.svg");
     }
   }
+  &_notice{
+    &::before {
+      @include iconImgPath("ico_notice.svg");
+    }
+  }
   &_plus{
     &_12{
       &::before {
