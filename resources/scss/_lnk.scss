@@ -303,6 +303,13 @@
       }
     }
   }
+  .txt_notice_wrap{
+    padding: 8px 20px 0;
+    @media (min-width: $pc-point) {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
   .btn_group{
     padding: 60px 20px 30px;
   }
@@ -443,7 +450,7 @@
     }
     label{
       min-height: 20px;
-      @include fontStyle($gray-950, $fs-sm, $fw-b, 1.133);
+      @include fontStyle($gray-950, $fs-sm, $fw-b, 1.333);
       font-family: $font-aritadt;
     }
     &_all{
@@ -650,9 +657,46 @@
         height: 60px;
       }
     }
+    & + .prd_box{
+      margin-top: 16px;
+    }
+    &.is_dim{
+      opacity: 0.4;
+    }
   }
   .cart_qnty{
     margin-top: 3px;
+  }
+  .select_box_defalut{
+    margin-top: 12px;
+  }
+  .cart_check{
+    align-items: flex-start;
+  }
+}
+.gift_check{
+  &_wrap{
+    margin-top: 8px;
+    padding: 24px 0 0;
+    border-top: 1px solid $gray-100;
+    &:first-child{
+      padding-top: 20px;
+      margin-top: 0px;
+    }
+    .gift_list{
+      padding: 24px 0 0px;
+      .cart_check{
+        padding: 0 0 24px;
+      }
+    }
+  }
+  &_tit{
+    .tit{
+      @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);
+    }
+    .txt_blue{
+      @include fontStyle($color-blue, $fs-s, $fw-m, 1.2143);
+    }
   }
 }
 @media (min-width: 1024px) {
