@@ -1152,7 +1152,6 @@
 .top_exchange_wrap {
   padding: 20px 0 32px;
   .exchange_box {
-    margin-top: 16px;
     padding: 20px;
     background: #EFF6FF;
     border-radius: 8px;
@@ -1204,7 +1203,7 @@
           display: block;
           color: #888;
           font-size: 14px;
-          font-weight: 300;
+          font-weight: $fw-l;
           line-height: 17px;
         }
         .price {
@@ -1223,3 +1222,104 @@
   }
 }
 
+.order_view {
+  padding: 20px 0 60px;
+  .order_info_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .date {
+      font-size: 18px;
+      font-weight: $fw-m;
+      line-height: 26px;
+    }
+    .order_num {
+      color: #777;
+      font-size: 12px;
+      font-weight: $fw-m;
+      line-height: 26px;
+      span {
+        margin-left: 6px;
+        font-size: 14px;
+        font-weight: $fw-l;
+        line-height: 17px;
+        vertical-align: -1px;
+      }
+    }
+  }
+  .order_detail_box {
+    margin-top: 16px;
+    width: 100%;
+    height: 463px;
+    background-color:#F6F6F6;
+  }
+}
+
+.page_exchange {
+  .btn_group {
+    padding-bottom: 30px;
+  }
+  .accord_list_tit {
+    display: block;
+    font-size: 16px;
+    font-weight: $fw-b;
+    line-height: 24px
+  }
+  .accord_list {
+    .accord_tit {
+      .time {
+        margin-left: 8px;
+        color: #777;
+        font-size: 14px;
+        font-weight: $fw-l;
+        line-height: 17px; 
+        vertical-align: 1px;
+      }
+    }
+    .accord_cont {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.order_info_list {
+  margin-top: 12px;
+  >li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &+li {
+      margin-top: 10px;
+    }
+    em {
+      width: 100px;
+      color: #888;
+      font-size: 15px;
+      font-weight: $fw-m;
+      line-height: 22px;
+    }
+    div {
+      color: #222;
+      font-size: 15px;
+      font-weight: $fw-l;
+      line-height: 22px;
+      em,span {
+        color: #222;
+        font-size: 15px;
+        font-weight: $fw-l;
+        line-height: 22px;
+      }
+    }
+  }
+  &+.info_accord {
+    margin-top: 16px;
+  }
+}
+
+.info_accord {
+  border-top: 1px solid #E2E2E2;
+  .accord_tit {
+    border-bottom: none;
+    font-weight: $fw-b;
+  }
+}

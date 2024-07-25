@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Layout | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap" class="page_exchange">
+    <header>
+      <script>include.mainAppBar();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <!-- 탭 영역 -->
+      <section class="tabs_area"> 
+        <!-- 라인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="inner">
+            <div class="tab_menu tab_center line"><!-- line 있을시 line 클래스 추가 -->
+              <ul>
+                <li class="tab_list"><button>상품구매</button></li>
+                <li class="current tab_list"><button>거래원장</button></li>
+                <li class="tab_list"><button>정기교육</button></li>
+                <li class="tab_list"><button>이벤트</button></li>
+                <li class="tab_list"><button>고객센터</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //라인 탭 -->
+
+        <!-- 컨테인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="inner">
+            <div class="tab_menu contain_tab contain_tab_type2 tab_center">
+              <ul>
+                <li class="tab_list"><button>거래원장</button></li>
+                <li class="current tab_list"><button>결제내역</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //컨테인 탭 -->
+      </section>
+      <!-- //탭 영역 -->
+
+      <section>
+        <div class="inner">
+          <div class="top_exchange_wrap">
+            <div class="monthpicker">
+              <input type="text" data-btmsheet="btmSheet02" value="2024. 06">
+            </div>
+            <div class="exchange_box">
+              <dl>
+                <dt>당월 매입 금액</dt>
+                <dd><em>1,500,000</em><span>원</span></dd>
+                <dt>당월 결제 금액</dt>
+                <dd><em>2,000,000</em><span>원</span></dd>
+                <dt>미 결제 금액</dt>
+                <dd><em>500,000</em><span>원</span></dd>
+              </dl>
+            </div>
+            <ul class="txt_notice_list">
+              <li class="txt_notice">거래원장은 월단위 거래 명세를 보여주는 표로서, 당월 매입금액 / 결제금액 / 미결제금액 반영에 최대 OO일 소요됩니다.</li>
+              <li class="txt_notice">하나의 주문/결제건은 주문건과 결제건이 각각 분리되어 표기됩니다.</li>
+              <li class="txt_notice">신용카드 결제내역은 <em>“결제내역”</em> 페이지에서 즉시 확인 가능합니다.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr_divider"></section>
+
+      <section>
+        <div class="inner">
+          <div class="order_view">
+            <strong class="accord_list_tit">상세 결제 내역</strong>
+            <ul class="accord_list">
+              <li class="accord_head on">
+                <p class="accord_tit">2024.06.24<span class="time">15:34:43</span></p>
+                <div class="accord_cont" style="display: block;">
+                  <ul class="order_info_list">
+                    <li>
+                      <em>아이디 (성명)</em>
+                      <div>1400024201 (성춘향)</div>
+                    </li>
+                    <li>
+                      <em>결제금액</em>
+                      <div class="price">
+                        <em>1,000,000</em><span>원</span>
+                      </div>
+                    </li>
+                    <li>
+                      <em>미결제금액</em>
+                      <div class="price">
+                        <em>500,000</em><span>원</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accord_head">
+                <p class="accord_tit">2024.06.21<span class="time">15:34:43</span></p>
+                <div class="accord_cont">
+                  <ul class="order_info_list">
+                    <li>
+                      <em>SA코드 (SA명)</em>
+                      <div>1400024201 (성춘향)</div>
+                    </li>
+                    <li>
+                      <em>결제금액</em>
+                      <div class="price">
+                        <em>1,000,000</em><span>원</span>
+                      </div>
+                    </li>
+                    <li>
+                      <em>미결제금액</em>
+                      <div class="price">
+                        <em>500,000</em><span>원</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accord_head">
+                <p class="accord_tit">2024-06-20 <span class="time">15:34:43</span></p>
+                <div class="accord_cont">
+                  <ul class="order_info_list">
+                    <li>
+                      <em>아이디 (성명)</em>
+                      <div>1400024201 (성춘향)</div>
+                    </li>
+                    <li>
+                      <em>결제금액</em>
+                      <div class="price">
+                        <em>1,000,000</em><span>원</span>
+                      </div>
+                    </li>
+                    <li>
+                      <em>미결제금액</em>
+                      <div class="price">
+                        <em>500,000</em><span>원</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accord_head">
+                <p class="accord_tit">2024-06-14<span class="time">15:34:43</span></p>
+                <div class="accord_cont">
+                  <ul class="order_info_list">
+                    <li>
+                      <em>SA코드 (SA명)</em>
+                      <div>1400024201 (성춘향)</div>
+                    </li>
+                    <li>
+                      <em>결제금액</em>
+                      <div class="price">
+                        <em>1,000,000</em><span>원</span>
+                      </div>
+                    </li>
+                    <li>
+                      <em>미결제금액</em>
+                      <div class="price">
+                        <em>500,000</em><span>원</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accord_head">
+                <p class="accord_tit">2024-06-12<span class="time">15:34:43</span></p>
+                <div class="accord_cont">
+                  <ul class="order_info_list">
+                    <li>
+                      <em>SA코드 (SA명)</em>
+                      <div>1400024201 (성춘향)</div>
+                    </li>
+                    <li>
+                      <em>결제금액</em>
+                      <div class="price">
+                        <em>1,000,000</em><span>원</span>
+                      </div>
+                    </li>
+                    <li>
+                      <em>미결제금액</em>
+                      <div class="price">
+                        <em>500,000</em><span>원</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- //#container -->
+  </div>
+
+
+</body>
+</html>
