@@ -247,6 +247,7 @@
       }
     }
     &.is_expanded{
+      z-index: 100;
       height: 230px;
       li{
         display: flex;

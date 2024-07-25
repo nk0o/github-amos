@@ -253,9 +253,10 @@ button {
 .spinner{
   @include flexBetween;
   gap: 2px;
-  width: 120px;
+  min-width: 120px;
   height: 40px;
   border: 1px solid $gray-200;
+  border-radius: 4px;
   &.disabled{
     .input_spinner{
       background-color:transparent;

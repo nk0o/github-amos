@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>일반상품 | 구매 | 아모레뉴플렛폼</title>
+  <title>주문완료(포인트몰) | 구매 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap" class="page_order">
@@ -17,7 +17,14 @@
     </header>    
     <!-- //header -->
     <main id="container">
-      <section class="order_accord">
+      <section class="order_complete">
+        <div class="inner">
+          <img src="../../resources/images/img_order_complete.svg" alt>
+          <p>주문이 정상적으로 완료되었습니다.</p>
+          <span>주문번호<em>20241220010101</em></span>
+        </div>
+      </section>
+      <section class="order_accord no_fold">
         <!-- 주문자 정보 -->
         <div class="accord_list">
           <div class="on accord_head">
@@ -75,22 +82,39 @@
           </div><!-- //accord_head -->
         </div><!-- //.accord_list -->
         <!-- //요청사항 -->
+        <!-- 요청사항 주문완료 -->
+        <div class="accord_list">
+          <div class="on accord_head">
+            <p class="accord_tit">요청사항 </p>
+            <div class="accord_cont">
+              <div class="inner">
+                <div class="info_read">
+                  <dl>
+                    <dt class="hide">요청사항</dt>
+                    <dd>매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다.</dd>
+                  </dl>
+                </div>
+              </div><!-- //.inner -->
+            </div><!-- //.accord_cont -->
+          </div><!-- //accord_head -->
+        </div><!-- //.accord_list -->
+        <!-- //요청사항 주문완료 -->
         <!-- 주문상품 -->
         <div class="accord_list">
           <div class="on accord_head">
             <div class="accord_tit">주문상품<div class="prd_summary"><span>새치커버 컬러컬러 서포트 스칼프</span><em>외 2건</em></div></div>
             <div class="accord_cont" style="display: block;">
               <div class="inner">
-                <!-- 브랜드별 상품리스트 -->
+                <!-- 포인트별 상품리스트 -->
                 <div class="cart_check_prd">
                   <div class="inner">
                     <div class="cart_check">
                       <div class="input_check_wrap">
-                        <label>새치커버 컬러</label>
+                        <label>50,000P</label>
                       </div>
                     </div><!-- //.cart_check -->
                     <ul class="cart_list_wrap">
-                      <!-- 상품 -->
+                      <!-- 장바구니 상품 -->
                       <li class="cart_list">
                         <div class="prd_list_sm">
                           <div class="prd_box">
@@ -100,56 +124,27 @@
                                 <strong class="tit">퓨어스마트 샴푸 프레시</strong>
                                 <span class="colorchip">7NB - 내추럴 브라운 </span>
                                 <div class="cart_qnty">
-                                  <span><em>1,000</em>원</span>
-                                  <span><em>20</em>개</span>
+                                  <span><em>2</em>개 구성</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>20,000</em>원</div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
                         </div><!-- //.prd_list_sm -->
-                        <div class="order_bnr bg_box">
-                          <div class="txt_gift ico_bnr_line">새치커버 컬러 제품 20개 구매 당 4개 증정</div>
-                        </div><!-- //.order_bnr -->
                       </li><!-- //.cart_list -->
-                      <!-- //상품 -->
-                      <!-- 상품 -->
-                      <li class="cart_list">
-                        <div class="prd_list_sm">
-                          <div class="prd_box">
-                            <div class="prd">
-                              <div class="img"><img src="../../resources/images/contents/img_color_type03.png" alt=""></div>
-                              <div class="info">
-                                <strong class="tit">퓨어스마트 샴푸 프레시</strong>
-                                <span class="colorchip">7NB - 내추럴 브라운 </span>
-                                <div class="price"><em>27,500</em><span>원</span></div>
-                                <div class="cart_qnty">
-                                  <span><em>1,000</em>원</span>
-                                  <span><em>20</em>개</span>
-                                </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>20,000</em>원</div>
-                              </div><!-- //.info -->
-                            </div><!-- //.prd -->
-                          </div><!-- //.prd_box -->
-                        </div><!-- //.prd_list_sm -->
-                        <div class="order_bnr bg_box">
-                          <div class="txt_gift ico_bnr_line">새치커버 컬러 제품 20개 구매 당 4개 증정</div>
-                        </div><!-- //.order_bnr -->
-                      </li><!-- //.cart_list -->
-                      <!-- //상품 -->
+                      <!-- //장바구니 상품 -->
                     </ul>
                   </div><!-- //.inner -->
                 </div><!-- //.cart_check_prd -->
-                <!-- 브랜드별 상품리스트 -->
+                <!-- 포인트별 상품리스트 -->
                 <div class="cart_check_prd">
                   <div class="inner">
                     <div class="cart_check">
                       <div class="input_check_wrap">
-                        <label>컬러 서포트</label>
+                        <label>100,000P</label>
                       </div>
                     </div><!-- //.cart_check -->
                     <ul class="cart_list_wrap">
-                      <!-- 상품 -->
+                      <!-- 장바구니 상품 -->
                       <li class="cart_list">
                         <div class="prd_list_sm">
                           <div class="prd_box">
@@ -159,41 +154,14 @@
                                 <strong class="tit">퓨어스마트 샴푸 프레시</strong>
                                 <span class="colorchip">7NB - 내추럴 브라운 </span>
                                 <div class="cart_qnty">
-                                  <span><em>1,000</em>원</span>
-                                  <span><em>20</em>개</span>
+                                  <span><em>1</em>개 구성</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>20,000</em>원</div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
                         </div><!-- //.prd_list_sm -->
-                        <div class="order_bnr bg_box">
-                          <div class="txt_gift ico_bnr_line">새치커버 컬러 제품 20개 구매 당 4개 증정</div>
-                        </div><!-- //.order_bnr -->
                       </li><!-- //.cart_list -->
-                      <!-- //상품 -->
-                      <li class="cart_list">
-                        <div class="prd_list_sm">
-                          <div class="prd_box">
-                            <div class="prd">
-                              <div class="img"><img src="../../resources/images/contents/img_color_type03.png" alt=""></div>
-                              <div class="info">
-                                <strong class="tit">퓨어스마트 샴푸 프레시</strong>
-                                <span class="colorchip">7NB - 내추럴 브라운 </span>
-                                <div class="price"><em>27,500</em><span>원</span></div>
-                                <div class="cart_qnty">
-                                  <span><em>1,000</em>원</span>
-                                  <span><em>20</em>개</span>
-                                </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>20,000</em>원</div>
-                              </div><!-- //.info -->
-                            </div><!-- //.prd -->
-                          </div><!-- //.prd_box -->
-                        </div><!-- //.prd_list_sm -->
-                        <div class="order_bnr bg_box">
-                          <div class="txt_gift ico_bnr_line">새치커버 컬러 제품 20개 구매 당 4개 증정</div>
-                        </div><!-- //.order_bnr -->
-                      </li><!-- //.cart_list -->
+                      <!-- //장바구니 상품 -->
                     </ul>
                   </div><!-- //.inner -->
                 </div><!-- //.cart_check_prd -->
@@ -202,58 +170,36 @@
           </div><!-- //accord_head -->
         </div><!-- //.accord_list -->
         <!-- //주문상품 -->
-        <!-- 사은품 -->
+        <!-- 주문금액 -->
         <div class="accord_list">
           <div class="on accord_head">
-            <p class="accord_tit">사은품</p>
+            <p class="accord_tit">주문금액</p>
             <div class="accord_cont">
               <div class="inner">
-                <div class="order_bnr bg_box">
-                  <div class="txt_gift ico_bnr_line">새치커버 컬러 제품 20개 구매 당 4개 증정</div>
-                  <div class="gift_list">
-                    <div class="prd_box">
-                      <div class="prd">
-                        <div class="img"><img src="../../resources/images/img_noimg_thumb.svg" alt></div>
-                        <div class="info">
-                          <strong class="tit">[증정상품] 컬러제닉 브라운 토닝 칼라 헤어 쿠션</strong>
-                          <span class="detail">COLORGEMIC BROWN TONING COLOR CUSHION</span>
-                          <div class="cart_qnty">
-                            <span><em>0</em>원</span>
-                            <span><em>2</em>개</span>
-                          </div><!-- //.cart_qnty -->
-                        </div><!-- //.info -->
-                      </div><!-- //.prd -->
-                    </div><!-- //.prd_box -->
-                  </div><!-- //.gift_list -->
-                </div>
+                <div class="order_price">
+                  <ul class="price_by">
+                    <li>잔여 포인트 <em>30,000</em>P</li>
+                  </ul>
+                  <div class="price_total">최종 사용 포인트 <em>70,000</em>P</div>
+                </div><!-- //.order_price -->
               </div><!-- //.inner -->
             </div><!-- //.accord_cont -->
           </div><!-- //accord_head -->
         </div><!-- //.accord_list -->
-        <!-- //사은품 -->
+        <!-- //주문금액 -->
       </section>
-      <section class="order_price_area">
-        <div class="inner">
-          <div class="order_price">
-            <div class="price_sum">총 상품금액 <em>2,575,000</em>원</div>
-            <ul class="price_by">
-              <li class="ico_bnr_line">새치커버 컬러 <em>25,000</em>원</li>
-              <li class="ico_bnr_line">컬러 서포트 <em>2,500,000</em>원</li>
-              <li class="ico_bnr_line">스칼프 <em>50,000</em>원</li>
-            </ul>
-            <div class="price_total">주문예정금액 <em>2,575,000</em>원</div>
-          </div><!-- //.order_price -->
-        </div><!-- //.inner -->
-      </section><!-- //.order_price_area -->
+      <!-- 주문유의사항 -->
+      <ul class="txt_notice_wrap">
+        <li class="txt_notice">모든 주문은 A-CONNECT 승인이 필요하며, 주문취소는 A-CONNECT 승인 전 까지만 가능합니다.</li>
+        <li class="txt_notice">최종 결제 금액에 따른 적립 포인트는 매월 정산하여 익월 OO일에 적용될 예정입니다.</li>
+      </ul>
+      <!-- //주문유의사항 -->
+      <div class="btn_group">
+        <button class="btn_lg btn_border">주문내역 조회</button>
+        <button class="btn_lg btn_primary">쇼핑 계속하기</button>
+      </div><!-- //.btn_group -->
     </main>
     <!-- //#container -->
-    <!-- tabBar -->
-    <a href="" class="btm_bar type_btn">
-      <div class="inner">
-        <span class="color_txt"><em>2,575,000</em>원</span>주문하기
-      </div>
-    </a>
-    <!-- //tabBar -->
   </div>
 </body>
 </html>

@@ -5,10 +5,9 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 20px;
+    height: 22px;
     padding: 0 4px;
-    font-size: $fs-xxs;
-    color: $color-white;
+    @include fontStyle($color-white, $fs-xxs, $fw-sb, 1.3333);
     text-align: center;
   }
   @include badge;

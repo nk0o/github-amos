@@ -205,15 +205,10 @@
 }
 //포인트몰
 .page_point{
-  // .tab_center_wrap {
-  //   z-index: 1;
-  //   position: sticky;
-  //   top:60px;
-  // }
   .user_area{
     position: sticky;
     top: 61px;
-    z-index: 1111;
+    z-index: 1;
     background-color: $color-white;
     .user{
       padding: 24px 0 20px;
@@ -313,6 +308,12 @@
   .btn_group{
     padding: 60px 20px 30px;
   }
+  .order_coupon{
+    padding-bottom: $btmbar-H;
+    .accord_cont > .inner {
+      padding: 0 20px 44px;
+    }
+  }
 }
 .order_bnr{
   display: flex;
@@ -400,19 +401,21 @@
     }
     &_by{
       margin-top: 8px;
-      li{
-        margin-bottom: 4px;
+      .ico_bnr_line{
         padding-left: 16px;
-        @include fontStyle($gray-600, $fs-s, $fw-m, 1.35714);
-        em{
-          @include fontStyle(inherit, $fs-s, $fw-l, 1.2143);
-        }
         &::before{
           width: 14px;
           height: 14px;
           top: 0;
           transform: translateY(0);
           background-color: $gray-600 !important;
+        }
+      }
+      li{
+        margin-bottom: 4px;
+        @include fontStyle($gray-600, $fs-s, $fw-m, 1.35714);
+        em{
+          @include fontStyle(inherit, $fs-s, $fw-l, 1.2143);
         }
       }
     }
@@ -429,17 +432,20 @@
   &_empty{
     @include flexCenter;
     flex-direction: column;
-    padding: 80px 0;
+    padding: 80px 0 40px;
     text-align: center;
-    img{
-      margin-bottom: 20px;
-    }
     p{
+      margin-top: 20px;
       @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
-      margin-bottom: 2px;
     }
     span{
+      @include flexCenter;
+      gap: 8px;
+      margin-top: 2px;
       @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+      em{
+        @include fontStyle($color-blue, $fs-s, $fw-l, 1.2143);
+      }
     }
   }
   &_check{
@@ -451,7 +457,7 @@
     label{
       min-height: 20px;
       @include fontStyle($gray-950, $fs-sm, $fw-b, 1.333);
-      font-family: $font-aritadt;
+      font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
     }
     &_all{
       padding: 20px 0;
@@ -459,6 +465,11 @@
     &_prd{
       border-top: 10px solid $gray-50;
       padding-top: 20px;
+      &.prd_sample{
+        .cart_list .order_bnr{
+          margin-top: 0;
+        }
+      }
     }
   }
   &_list{
@@ -499,11 +510,17 @@
       margin-top: 16px;
     }
   }
-  &_qnty{
+  &_qnty{ 
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-top: 16px;
+    margin-top: 12px;
+    &.is_control{
+      gap: 8px;
+      & > *{
+        flex:1;
+      }
+    }
     span{
       display: flex;
       align-items: center;
@@ -549,6 +566,10 @@
       }
     }
   }
+}
+.order_complete{
+  @extend .cart_empty;
+  border-bottom: 10px solid $gray-50;
 }
 .order_accord{
   .accord{
@@ -629,6 +650,20 @@
       display: none ;
     }
   }
+  .coupon{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    &_tit{
+      @include fontStyle($gray-950, $fs-xs, $fw-sb, 1.385);
+      @include text-ellipsis;
+    }
+    &_type{
+      margin-left: auto;
+      @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
+    }
+  }
   @media (min-width: $pc-point) {
     max-width: 1024px;
     margin: 0 auto;
@@ -669,6 +704,10 @@
   }
   .select_box_defalut{
     margin-top: 12px;
+    .select_box_value{
+      @include fontStyle($gray-950, $fs-s, $fw-sb, 1.2143);
+      font-family: $font-aritadt;
+    }
   }
   .cart_check{
     align-items: flex-start;
@@ -691,6 +730,7 @@
     }
   }
   &_tit{
+    font-family: $font-aritadt;
     .tit{
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);
     }
