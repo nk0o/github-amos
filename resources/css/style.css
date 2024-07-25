@@ -6768,7 +6768,6 @@ footer .f_company {
   padding: 20px 0 32px;
 }
 .top_exchange_wrap .exchange_box {
-  margin-top: 16px;
   padding: 20px;
   background: #EFF6FF;
   border-radius: 8px;
@@ -6833,6 +6832,102 @@ footer .f_company {
 }
 .exchange_detail > ul > li .left .price span {
   font-size: 15px;
+  font-weight: 700;
+}
+
+.order_view {
+  padding: 20px 0 60px;
+}
+.order_view .order_info_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_view .order_info_top .date {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.order_view .order_info_top .order_num {
+  color: #777;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.order_view .order_info_top .order_num span {
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  vertical-align: -1px;
+}
+.order_view .order_detail_box {
+  margin-top: 16px;
+  width: 100%;
+  height: 463px;
+  background-color: #F6F6F6;
+}
+
+.page_exchange .btn_group {
+  padding-bottom: 30px;
+}
+.page_exchange .accord_list_tit {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.page_exchange .accord_list .accord_tit .time {
+  margin-left: 8px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  vertical-align: 1px;
+}
+.page_exchange .accord_list .accord_cont {
+  padding-bottom: 20px;
+}
+
+.order_info_list {
+  margin-top: 12px;
+}
+.order_info_list > li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.order_info_list > li + li {
+  margin-top: 10px;
+}
+.order_info_list > li em {
+  width: 100px;
+  color: #888;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.order_info_list > li div {
+  color: #222;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.order_info_list > li div em, .order_info_list > li div span {
+  color: #222;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.order_info_list + .info_accord {
+  margin-top: 16px;
+}
+
+.info_accord {
+  border-top: 1px solid #E2E2E2;
+}
+.info_accord .accord_tit {
+  border-bottom: none;
   font-weight: 700;
 }
 
