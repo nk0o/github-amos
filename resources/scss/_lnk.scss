@@ -67,6 +67,9 @@
 .info_read{
   padding: 0 20px 24px;
   border-bottom: 8px solid $gray-50;
+  @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+  font-family: $font-aritadt;
+  white-space: normal;
   dl{
     display: flex;
     gap: 12px;
@@ -273,7 +276,7 @@
   .prd_cont{
     margin-bottom: 8px;
     padding-bottom: 40px;
-    border-bottom: 10px solid $gray-50;
+    border-bottom: 8px solid $gray-50;
     &:last-of-type{
       border-bottom: 0;
       padding-bottom: 120px;
@@ -315,6 +318,7 @@
     }
   }
 }
+
 .order_bnr{
   display: flex;
   align-items: flex-start;
@@ -373,7 +377,7 @@
 }
 .order_price{
   &_area{
-    border-top: 10px solid $gray-50;
+    border-top: 8px solid $gray-50;
     margin-bottom: $btmbar-H;
     padding: 32px 0px 40px;
   }
@@ -450,6 +454,7 @@
   }
   &_check{
     @include flexBetween;
+    margin-bottom: 8px;
     .input_check_wrap{
       display: inline-flex;
       align-items: center;
@@ -461,9 +466,12 @@
     }
     &_all{
       padding: 20px 0;
+      .cart_check{
+        margin-bottom: 0;
+      }
     }
     &_prd{
-      border-top: 10px solid $gray-50;
+      border-top: 8px solid $gray-50;
       padding-top: 20px;
       &.prd_sample{
         .cart_list .order_bnr{
@@ -480,7 +488,9 @@
       border-top-color:$gray-950;
     }
     .prd_list_sm{
-      margin-top: 8px;
+      .info{
+        white-space: normal;
+      }
       .prd_box .prd {
         .price{
           margin-top: 12px;
@@ -508,6 +518,9 @@
     }
     .order_bnr{
       margin-top: 16px;
+      .gift_list{
+        margin-top: -4px;
+      }
     }
   }
   &_qnty{ 
@@ -516,12 +529,13 @@
     gap: 16px;
     margin-top: 12px;
     &.is_control{
+      margin-top: 16px;
       gap: 8px;
       & > *{
         flex:1;
       }
     }
-    span{
+    & > span{
       display: flex;
       align-items: center;
       @include fontStyle($gray-950, $fs-xs, $fw-m, 1.385);
@@ -569,12 +583,12 @@
 }
 .order_complete{
   @extend .cart_empty;
-  border-bottom: 10px solid $gray-50;
+  border-bottom: 8px solid $gray-50;
 }
 .order_accord{
   .accord{
     &_list{
-      border-top: 10px solid $gray-50;
+      border-top: 8px solid $gray-50;
       &:first-child{
         border: 0;
       }
@@ -621,6 +635,7 @@
   .info_read{
     padding: 0;
     border-bottom: 0;
+    @include fontStyle($gray-950, $fs-sm, $fw-m, 1.467);
     dl{
       padding: 5px 0;
     }
@@ -679,17 +694,16 @@
       @include fontStyle($gray-950, $fs-s, $fw-sb, 1.357);
     }
     .detail{
-      margin-top: 0;
       @include fontStyle($gray-700, $fs-s, $fw-m, 1.2143);
     }
   }
   .prd_box{
     .prd{
       .img{
-        min-width: 60px;
-        min-height: 60px;
-        width: 60px;
-        height: 60px;
+        min-width: 60px !important;
+        min-height: 60px !important;
+        width: 60px !important;
+        height: 60px !important;
       }
     }
     & + .prd_box{

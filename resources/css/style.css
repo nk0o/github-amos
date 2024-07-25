@@ -2095,7 +2095,7 @@ button:disabled *[class*=ico_]::before {
   line-height: 1.4;
   vertical-align: middle;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   background: inherit;
   white-space: nowrap;
   outline: none;
@@ -5806,6 +5806,9 @@ footer .f_company {
   border-radius: 100%;
   object-fit: cover;
 }
+.prd_box .prd .detail {
+  margin-top: 0;
+}
 .prd_box .bottom {
   display: flex;
   gap: 12px;
@@ -7011,6 +7014,12 @@ footer .f_company {
 .info_read {
   padding: 0 20px 24px;
   border-bottom: 8px solid #f6f6f6;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  white-space: normal;
 }
 .info_read dl {
   display: flex;
@@ -7255,7 +7264,7 @@ footer .f_company {
 .page_point .prd_cont {
   margin-bottom: 8px;
   padding-bottom: 40px;
-  border-bottom: 10px solid #f6f6f6;
+  border-bottom: 8px solid #f6f6f6;
 }
 .page_point .prd_cont:last-of-type {
   border-bottom: 0;
@@ -7368,7 +7377,7 @@ footer .f_company {
 }
 
 .order_price_area {
-  border-top: 10px solid #f6f6f6;
+  border-top: 8px solid #f6f6f6;
   margin-bottom: 90px;
   padding: 32px 0px 40px;
 }
@@ -7491,6 +7500,7 @@ footer .f_company {
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
+  margin-bottom: 8px;
 }
 .cart_check .input_check_wrap {
   display: inline-flex;
@@ -7507,8 +7517,11 @@ footer .f_company {
 .cart_check_all {
   padding: 20px 0;
 }
+.cart_check_all .cart_check {
+  margin-bottom: 0;
+}
 .cart_check_prd {
-  border-top: 10px solid #f6f6f6;
+  border-top: 8px solid #f6f6f6;
   padding-top: 20px;
 }
 .cart_check_prd.prd_sample .cart_list .order_bnr {
@@ -7522,8 +7535,8 @@ footer .f_company {
   margin-top: 12px;
   border-top-color: #222222;
 }
-.cart_list .prd_list_sm, .cart_list .gift_list {
-  margin-top: 8px;
+.cart_list .prd_list_sm .info, .cart_list .gift_list .info {
+  white-space: normal;
 }
 .cart_list .prd_list_sm .prd_box .prd .price, .cart_list .gift_list .prd_box .prd .price {
   margin-top: 12px;
@@ -7562,6 +7575,9 @@ footer .f_company {
 .cart_list .order_bnr {
   margin-top: 16px;
 }
+.cart_list .order_bnr .gift_list {
+  margin-top: -4px;
+}
 .cart_qnty {
   display: flex;
   align-items: center;
@@ -7569,12 +7585,13 @@ footer .f_company {
   margin-top: 12px;
 }
 .cart_qnty.is_control {
+  margin-top: 16px;
   gap: 8px;
 }
 .cart_qnty.is_control > * {
   flex: 1;
 }
-.cart_qnty span {
+.cart_qnty > span {
   display: flex;
   align-items: center;
   color: #222222;
@@ -7582,13 +7599,13 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.385;
 }
-.cart_qnty span:nth-child(1) {
+.cart_qnty > span:nth-child(1) {
   font-weight: 700;
 }
-.cart_qnty span:nth-child(2) {
+.cart_qnty > span:nth-child(2) {
   position: relative;
 }
-.cart_qnty span:nth-child(2)::before {
+.cart_qnty > span:nth-child(2)::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -7598,7 +7615,7 @@ footer .f_company {
   height: 10px;
   background-color: #bbbbbb;
 }
-.cart_qnty span:nth-child(2) em {
+.cart_qnty > span:nth-child(2) em {
   font-weight: 300;
 }
 .cart_qnty em {
@@ -7628,11 +7645,11 @@ footer .f_company {
 }
 
 .order_complete {
-  border-bottom: 10px solid #f6f6f6;
+  border-bottom: 8px solid #f6f6f6;
 }
 
 .order_accord .accord_list {
-  border-top: 10px solid #f6f6f6;
+  border-top: 8px solid #f6f6f6;
 }
 .order_accord .accord_list:first-child {
   border: 0;
@@ -7690,6 +7707,10 @@ footer .f_company {
 .order_accord .info_read {
   padding: 0;
   border-bottom: 0;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.467;
 }
 .order_accord .info_read dl {
   padding: 5px 0;
@@ -7756,17 +7777,16 @@ footer .f_company {
   line-height: 1.357;
 }
 .gift_list .prd .detail {
-  margin-top: 0;
   color: #777777;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.2143;
 }
 .gift_list .prd_box .prd .img {
-  min-width: 60px;
-  min-height: 60px;
-  width: 60px;
-  height: 60px;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  width: 60px !important;
+  height: 60px !important;
 }
 .gift_list .prd_box + .prd_box {
   margin-top: 16px;
