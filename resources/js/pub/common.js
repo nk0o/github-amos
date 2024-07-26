@@ -20,6 +20,7 @@ $(document).ready(function () {
   if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
   if ($('.prd_cart_btn').length > 0) { putInCart() }
   if ($('.clickTab').length > 0) {  tabMoveAnchor() }
+  if ($('.open_month').length > 0) {  monthPicker() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -746,6 +747,24 @@ function tabContPos() {
       })
     }
   })
-  
+}
+
+function monthPicker() {
+  $('.open_month').on('click',function() {
+    $('[data-type="picker"]').monthpicker('show')
+  })
+  $('[data-type="picker"]').monthpicker({
+    altFormat: 'yy',
+    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    minDate: new Date(2021, 1 - 1, 1),
+    maxDate: "+Y",
+    dateFormat:'yy. mm',
+    onSelect: function () {
+      let calName =$(this).attr('data-type');
+      let selectValue = this.value;
+      $("div[data-cal='" + calName + "']").text(selectValue)
+    }
+  });
 }
 

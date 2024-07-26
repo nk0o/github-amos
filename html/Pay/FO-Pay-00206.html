@@ -53,8 +53,9 @@
       <section>
         <div class="inner">
           <div class="top_exchange_wrap">
-            <div class="monthpicker">
-              <input type="text" data-btmsheet="btmSheet02" value="2024. 06">
+            <div class="monthpicker_cont">
+              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet02">2024. 06</div>
+              <div data-type="picker" class="pc"></div>
             </div>
             <div class="exchange_box">
               <dl>
@@ -205,6 +206,22 @@
     <!-- //#container -->
   </div>
 
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet02">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">연월 선택</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <div class="picker_wrap">
+          <div data-type="picker"></div>
+        </div>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+  <!-- //Bottom Sheet -->
 
 </body>
 </html>
