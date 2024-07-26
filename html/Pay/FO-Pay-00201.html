@@ -53,8 +53,9 @@
       <section>
         <div class="inner">
           <div class="top_exchange_wrap">
-            <div class="monthpicker">
-              <input type="text" data-btmsheet="btmSheet02" value="2024. 06">
+            <div class="monthpicker_cont">
+              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet02">2024. 06</div>
+              <div data-type="picker" class="pc"></div>
             </div>
             <div class="exchange_box">
               <dl>
@@ -159,52 +160,34 @@
         <button type="button" class="btm_sheet_close ico_close_20"></button>
       </div><!-- //.btm_sheet_head -->
       <div class="btm_sheet_cont">
-        <div class="datepicker">
-          <input type="text" id="monthpicker" />
+        <div class="picker_wrap">
+          <div data-type="picker"></div>
         </div>
       </div><!-- //.btm_sheet_cont -->
     </div><!-- //.inner -->
   </div><!-- //.btm_sheet -->
   <!-- //Bottom Sheet -->
   
-  <!-- <script>
-    $(function () {
-      var months = [];
-        var dateObj = new Date();
-        var selectYear = dateObj.getFullYear();
-        var disableYear = dateObj.getFullYear();
-        var month = dateObj.getMonth() + 1;
-
-        /* MonthPicker 옵션 */
-        var options = {
-            pattern: 'yyyy. mm',
-            selectedYear: selectYear,
-            startYear: selectYear - 2,
-            finalYear: disableYear,
-            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            showOn: "button",
-            buttonImage: "../../images/btn/btn_calendar.gif",
-            buttonImageOnly: true,
-            changeYear: false,
-            dateFormat: 'yy-mm',
-        };
-
-        /* MonthPicker Set */
-        $('#monthpicker').monthpicker(options);
-        if (disableYear === selectYear) {
-            $("#monthpicker").monthpicker('disableMonths', months);
-        }
-    });
-  </script> -->
-  
   <script>
     $(function() {
-      $('#monthpicker').monthpicker({
-        altFormat: 'yy. mm',
+      $('.open_month').on('click',function() {
+        $('[data-type="picker"]').monthpicker('show')
+      })
+      $('[data-type="picker"]').monthpicker({
+        altFormat: 'yy',
         monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
         monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        minDate: new Date(2021, 1 - 1, 1),
+        maxDate: "+Y",
+        dateFormat:'yy. mm',
+        onSelect: function () {
+          let calName =$(this).attr('data-type');
+          let selectValue = this.value;
+          console.log(calName)
+          $("div[data-cal='" + calName + "']").text(selectValue)
+        }
       });
+
     })
   </script>
 </body>

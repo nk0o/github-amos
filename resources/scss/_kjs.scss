@@ -1188,13 +1188,16 @@
   }
 }
 .exchange_detail {
-  padding: 8px 0 130px;
+  padding: 20px 0 130px;
   >ul {
     >li{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
+      padding: 16px 0;
+      &:first-child {
+        padding-top: 0;
+      }
       &+li {
         border-top: 1px solid #eee;
       }
@@ -1324,5 +1327,96 @@
   }
 }
 
+.monthpicker_cont {
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 34px; 
+  .open_month {
+    display: inline-block;
+    cursor: pointer;
+    &::after {
+      display: inline-block;
+      width:16px;
+      height:16px;
+      margin-left: 8px;
+      vertical-align: 0;
+      background:url('../images/icon/ico_arrow.svg') no-repeat center/16px;
+      content: '';
+    }
+  }
+  .pc {
+    display: none;
+  }
+}
 
+.picker_wrap {
+  padding: 0 32px;
+}
+
+.ui-widget.ui-widget-content {
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+.ui-datepicker  {
+  .ui-datepicker-header {
+    padding: 0;
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+  }
+  .ui-datepicker-title {
+    line-height: 26px;
+    font-family: "Gotham";
+    .ui-datepicker-month {
+      display: none;
+    }
+    .ui-datepicker-year {
+      font-size: 18px;
+      line-height: 26px; 
+    }
+  }
+  .ui-datepicker-prev {
+    top:5px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icon/ico_chev_next_16.svg') no-repeat center/16px;
+    transform: rotate(180deg);
+  }
+  .ui-datepicker-next {
+    top:2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icon/ico_chev_next_16.svg') no-repeat center/16px;
+  }
+  .ui-state-default {
+    height: 48px;
+    padding: 0;
+    background:none;
+    border-color: #eee;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 48px;
+    &.ui-state-active {
+      background: #eee !important;
+      color: #222;
+    }
+    a {
+      color: #777;
+      font-size: 16px;
+    }
+  }
+  td {
+    padding: 4px;
+    font-family: "Gotham";
+  }
+}
+
+@media (min-width: 1024px) {
+  .monthpicker_cont {
+    .pc {
+      display: block;
+    }
+  }
+}
 
