@@ -8,29 +8,89 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Layout | 아모레뉴플렛폼</title>
+  <title>체험상품 | 장바구니 | 아모레뉴플렛폼</title>
 </head>
 <body>
-  <div id="wrap">
+  <div id="wrap" class="page_order">
     <header>
       <script>include.subAppBarType1();</script>
     </header>    
     <!-- //header -->
     <main id="container">
-      <section></section>
-      <section></section>
-      <section></section>
+      <section class="tabs_area"> 
+        <!-- 컨테인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="inner">
+            <div class="tab_menu contain_tab">
+              <ul>
+                <li class="tab_list"><a href="#">일반상품<span>0</span></a></li>
+                <li class="tab_list"><a href="#">포인트몰<span>2</span></a></li>
+                <li class="tab_list current"><a href="#">체험상품<span>1</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //컨테인 탭 -->
+      </section><!-- //.tabs_area -->
+      <section class="order_prd_area">
+        <div class="cart_check_all">
+          <div class="inner cart_check">
+            <div class="input_check_wrap">
+              <input type="checkbox" id="check-all" class="input_check" name="check-item-1" checked="">
+              <label for="check-all">전체 선택(<span>1</span>/<span>1</span>)</label>
+            </div>
+            <button type="button" class="btn_delete">선택삭제</button>
+          </div><!-- //.inner.cart_check -->
+        </div>
+        <!-- 포인트별 상품리스트 -->
+        <div class="cart_check_prd">
+          <div class="inner">
+            <div class="cart_check">
+              <div class="input_check_wrap">
+                <input type="checkbox" id="check-1-all" class="input_check" name="check-item-1" checked="">
+                <label for="check-1-all">스타일링 기타</label>
+              </div>
+            </div><!-- //.cart_check -->
+            <ul class="cart_list_wrap">
+              <!-- 상품 -->
+              <li class="cart_list">
+                <div class="cart_check">
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked="">
+                    <label for="check-1-1"></label>
+                  </div>
+                  <button class="btn_delete type_x"><div class="hide">삭제</div></button>
+                </div><!-- //.cart_check -->
+                <div class="prd_list_sm">
+                  <div class="prd_box">
+                    <div class="prd">
+                      <div class="img"><img src="../../resources/images/contents/img_color20.png" alt=""></div>
+                      <div class="info">
+                        <strong class="tit">COLORGENIC BROWN TONING COLOR CUSHION</strong>
+                        <span class="colorchip">컬러제닉 브라운 토닝 칼라 헤어 쿠션</span>
+                        <div class="price"><em>2</em><span>개</span></div>
+                      </div><!-- //.info -->
+                    </div><!-- //.prd -->
+                  </div><!-- //.prd_box -->
+                </div><!-- //.prd_list_sm -->
+                <div class="order_bnr bg_box">
+                  <div class="txt_gift ico_bnr_line">[체험] 칼라헤어쿠션 무료 증정</div>
+                </div><!-- //.order_bnr -->
+              </li><!-- //.cart_list -->
+              <!-- //상품 -->
+            </ul>
+          </div><!-- //.inner -->
+        </div><!-- //.cart_check_prd -->
+      </section><!-- //.order_prd_area -->
     </main>
     <!-- //#container -->
-    <!-- footer -->
-    <script>include.footer();</script>
-    <!-- //footer -->
     <!-- tabBar -->
-    <script>include.tabBar();</script>
+    <a href="" class="btm_bar type_btn">
+      <div class="inner">
+        <span class="color_txt">체험상품</span>주문하기
+      </div>
+    </a>
     <!-- //tabBar -->
   </div>
-  <!-- floatingSide -->
-  <script>include.floatingSide();</script>
-  <!-- //floatingSide -->
 </body>
 </html>

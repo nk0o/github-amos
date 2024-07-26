@@ -19,6 +19,7 @@ $(document).ready(function () {
   if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
   if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
   if ($('.prd_cart_btn').length > 0) { putInCart() }
+  if ($('.clickTab').length > 0) {  tabMoveAnchor() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
