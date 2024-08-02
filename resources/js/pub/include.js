@@ -42,12 +42,11 @@ var include = {
     <div class="tab_center_wrap">
       <div class="tab_menu tab_center line">
         <ul>
-          <li class="current tab_list"><button>홈</button></li>
-        <li class="tab_list"><button>상품구매</button></li>
-        <li class="tab_list"><button>거래원장</button></li>
-        <li class="tab_list"><button>정기교육</button></li>
-        <li class="tab_list"><button>아모스TV</button></li>
-        <li class="tab_list"><button>이벤트</button></li>
+        <li class="current tab_list"><a href="">상품구매</a></li>
+        <li class="tab_list"><a href="">거래원장</a></li>
+        <li class="tab_list"><a href="">정기교육</a></li>
+        <li class="tab_list"><a href="">아모스TV</a></li>
+        <li class="tab_list"><a href="">이벤트</a></li>
         </ul>
       </div>
     </div><!-- //.tab_center_wrap -->
