@@ -6410,14 +6410,14 @@ footer .f_company {
   line-height: 19px;
 }
 
-.radio_btn_outer {
+.inquiry_outer {
   padding: 32px 20px 0;
 }
-.radio_btn_outer > li + li {
+.inquiry_outer > li + li {
   margin-top: 40px;
 }
 
-.radio_btn_box .radio_btn_wrap {
+.inquiry_box .radio_btn_wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -7276,7 +7276,7 @@ footer .f_company {
 .page_form .hr_divider {
   margin: 24px 0 !important;
 }
-.page_form .hr_divider + .radio_btn_outer {
+.page_form .hr_divider + .inquiry_outer {
   padding-top: 0;
 }
 .page_form .btn_group {
@@ -7335,7 +7335,7 @@ footer .f_company {
 .info_area .sign_state_wrap {
   margin-top: 0;
 }
-.info_area .radio_btn_outer:nth-of-type(1) {
+.info_area .inquiry_outer:nth-of-type(1) {
   padding-top: 0;
 }
 .info_area .input_check_list {

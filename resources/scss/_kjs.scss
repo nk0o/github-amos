@@ -635,7 +635,7 @@
   }
 }
 
-.radio_btn_outer {
+.inquiry_outer {
   padding: 32px 20px 0;
   >li {
     &+li {
@@ -643,7 +643,7 @@
     }
   }
 }
-.radio_btn_box {  
+.inquiry_box {  
   .radio_btn_wrap {
     display: flex;
     flex-wrap: wrap;
