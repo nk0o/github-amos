@@ -152,11 +152,17 @@ button {
     @include flexCenter;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 60px 20px 30px;
     gap: 5px;
     button, .btn{
       flex: 1;
       justify-content: center;
+    }
+    &.btm_fixed{
+      position: fixed;
+      inset:auto;
+      bottom: 0;
+      left: 0;
+      width: 100%
     }
   }
 
@@ -274,7 +280,6 @@ button {
     }
   }
 }
-
 .spinner{
   @include flexBetween;
   gap: 2px;

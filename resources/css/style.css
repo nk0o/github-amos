@@ -2225,12 +2225,18 @@ button:disabled *[class*=ico_]::before {
   align-items: center;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 60px 20px 30px;
   gap: 5px;
 }
 .btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs, .btn_group .btn_xxs {
   flex: 1;
   justify-content: center;
+}
+.btn_group.btm_fixed {
+  position: fixed;
+  inset: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .btn_icon {
   justify-content: center;
