@@ -1423,5 +1423,39 @@
   }
 }
 
-
+.page_edu {
+  padding-bottom: 30px;
+  .btn_group {
+    margin-top: 48px;
+  }
+}
+.edu_list {
+  >li {
+    &+li {
+      border-top: 1px solid #eee;
+    }
+    >a {
+      display: block;
+      padding: 20px 0;
+      background: url('../images/icon/ico_chev_next_16.svg') no-repeat right center;
+      background-size: 16px;
+    }
+    .date {
+      display: block;
+      margin-bottom: 8px;
+      @include fontStyle($gray-600, $fs-s, $fw-l, 17px);
+    }
+    .tit {
+      display: block;
+      @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      overflow: hidden;
+    }
+  }
+}
 

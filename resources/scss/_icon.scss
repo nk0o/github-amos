@@ -123,6 +123,13 @@
       background: url("../images/icon/ico_btn_back.svg") center/contain no-repeat;
     }
   }
+  &_drop {
+    &Down {
+      &::before {
+        @include iconImgPath("ico_dropdown_arr_24.svg");
+      }
+    }
+  }
 }
 /* Commerce */
 .ico {
