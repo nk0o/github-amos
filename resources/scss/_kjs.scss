@@ -1527,3 +1527,106 @@
   }
 }
 
+.edu_regist {
+  margin: 0 -20px;
+  .accord_list {
+    .accord_head {
+      padding: 0 20px;
+      border-bottom: 8px solid #F6F6F6;
+      cursor: auto;
+      .accord_tit {
+        border-bottom: none;
+        @include fontStyle($gray-950, $fs-ml, $fw-b, );
+        cursor: pointer;
+        .num {
+          display: inline-block;
+          padding: 0 12px;
+          margin-left: 6px;
+          height: 26px;
+          background: #DFEDFF;
+          border-radius: 50px;
+          vertical-align: -1px;
+          @include fontStyle(#1A63D9, $fs-ml, $fw-m, 24px);
+        }
+      }
+      .accord_cont {
+        padding-bottom: 20px;
+      }
+      &.none {
+        .accord_tit {
+          cursor: auto;
+          .num {
+            background: #eee;
+            color: #888;
+          }
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.edu_regist_box  {
+  border-radius: 8px;
+  border: 1px solid #E2E2E2;
+  overflow: hidden;
+  & + .edu_regist_box {
+    margin-top: 20px;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 12px 20px;
+    background-color: #EFF6FF;
+    .state {
+      @include fontStyle(#1A63D9, $fs-sm, $fw-sb, 20px);
+    }
+    .cate {
+      font-size: 0;
+      span {
+        @include fontStyle($gray-900, $fs-xs, $fw-m, 18px);
+      }
+      i {
+        vertical-align: -3px;
+      }
+      em {
+        @include fontStyle($gray-900, $fs-xs, $fw-sb, 18px);
+      }
+    }
+  }
+  .cont {
+    padding: 20px;
+    .tit {
+      display: block;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    dl {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 12px 20px;
+      dt {
+        @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
+      }
+      dd {
+        @include fontStyle($gray-700, $fs-s, $fw-m, 20px);
+      }
+    }
+  }
+  &.end {
+    .top {
+      background-color: #eee;
+      .state {
+        color: $gray-800;
+      }
+    }
+    .cont {
+      opacity: 0.7;
+    }
+  }
+}
