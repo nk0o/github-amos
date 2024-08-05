@@ -2756,20 +2756,20 @@ button:disabled *[class*=ico_]::before {
 }
 
 .input_radio_wrap.type_btn {
-  height: 40px;
+  height: 35px;
 }
 .input_radio_wrap.type_btn .input_radio + label {
   display: inline-flex;
   align-items: center;
   height: 100%;
-  padding: 6px 16px;
+  padding: 8px 12px;
   border-radius: 9999px;
   background-color: #ffffff;
   border: 1px solid #e2e2e2;
   color: #666666;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.357;
 }
 .input_radio_wrap.type_btn .input_radio + label::before {
   display: none !important;
@@ -2786,6 +2786,42 @@ button:disabled *[class*=ico_]::before {
   cursor: default;
 }
 .input_radio_wrap.type_btn .input_radio[disabled][checked] + label {
+  border-color: #2A3136;
+  background-color: #2A3136;
+  color: #ffffff;
+}
+
+.input_check_wrap.type_btn {
+  height: 35px;
+}
+.input_check_wrap.type_btn .input_check + label {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
+}
+.input_check_wrap.type_btn .input_check + label::before {
+  display: none !important;
+}
+.input_check_wrap.type_btn .input_check:checked + label {
+  background-color: #2A3136;
+  border-color: #2A3136;
+  color: #ffffff;
+}
+.input_check_wrap.type_btn .input_check:disabled + label {
+  border-color: #e2e2e2;
+  background-color: #f6f6f6;
+  color: #888888;
+  cursor: default;
+}
+.input_check_wrap.type_btn .input_check[disabled][checked] + label {
   border-color: #2A3136;
   background-color: #2A3136;
   color: #ffffff;
@@ -7400,6 +7436,12 @@ footer .f_company {
   background-color: #bbbbbb !important;
 }
 
+/*** 입점상담 ***/
+.page_enter .info_area {
+  padding-top: 32px;
+}
+
+/*** 포인트몰 ***/
 .page_point .user_area {
   position: sticky;
   top: 61px;
@@ -7493,6 +7535,7 @@ footer .f_company {
   border-top: 0;
 }
 
+/*** 장바구니 ***/
 .page_order .hr_divider {
   margin-bottom: 20px !important;
 }

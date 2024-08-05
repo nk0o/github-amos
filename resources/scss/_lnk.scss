@@ -205,7 +205,13 @@
     }
   }
 }
-//포인트몰
+/*** 입점상담 ***/
+.page_enter{
+  .info_area{
+    padding-top: 32px;
+  }
+}
+/*** 포인트몰 ***/
 .page_point{
   .user_area{
     position: sticky;
@@ -286,7 +292,7 @@
     }
   }
 }
-//장바구니
+/*** 장바구니 ***/
 .page_order{
   .hr_divider{
     margin-bottom: 20px !important;
