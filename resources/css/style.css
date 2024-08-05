@@ -1335,6 +1335,20 @@ p {
 .ico_btn_back::before {
   background: url("../images/icon/ico_btn_back.svg") center/contain no-repeat;
 }
+.ico_dropDown::before {
+  background-image: url("../images/icon/ico_dropdown_arr_24.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_dropDown::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_dropdown_arr_24.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 
 /* Commerce */
 .ico_point::before {
@@ -2204,7 +2218,9 @@ button:disabled *[class*=ico_]::before {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 0 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 60px 20px 30px;
   gap: 5px;
 }
 .btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs {
@@ -2296,6 +2312,25 @@ button:disabled *[class*=ico_]::before {
   height: 20px;
   mask: url("../images/icon/ico_close_20_sm.svg") left center/contain no-repeat;
   background-color: #bbbbbb !important;
+}
+.btn_more {
+  width: 100%;
+  height: 48px;
+  padding: 12px 40px;
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 17px;
+  border-radius: 4px;
+  border: 1px solid #EEE;
+  background: #F6F6F6;
+  text-align: center;
+}
+.btn_more *[class*=ico_].point::before {
+  background-color: #BBB !important;
+}
+.btn_more:hover {
+  color: #888888;
 }
 
 .spinner {
@@ -7064,6 +7099,54 @@ footer .f_company {
     display: block;
   }
 }
+.edu_list > li + li {
+  border-top: 1px solid #eee;
+}
+.edu_list > li > a {
+  display: block;
+  padding: 20px 0;
+  background: url("../images/icon/ico_chev_next_16.svg") no-repeat right center;
+  background-size: 16px;
+}
+.edu_list > li .date {
+  display: block;
+  margin-bottom: 8px;
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 17px;
+}
+.edu_list > li .tit {
+  display: block;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.no_data {
+  padding-top: 100px;
+  text-align: center;
+}
+.no_data img {
+  width: 40px;
+  height: 40px;
+}
+.no_data p {
+  margin-top: 8px;
+  color: #aaaaaa;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
