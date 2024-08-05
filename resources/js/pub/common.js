@@ -631,6 +631,11 @@ function headerScroll() {
   var headerH = hd.outerHeight();
   var lastScrollTop = 0, delta = 15;
   var isMainHeader = !($("header").find(".appbar_back").length > 0);
+  if ($(window).scrollTop() > lastScrollTop) {
+    hd.addClass("fixed");
+  }else{
+    hd.removeClass("fixed");
+  }
   $(window).scroll(function (event) {
     var st = $(this).scrollTop();
     if (Math.abs(lastScrollTop - st) <= delta) return;

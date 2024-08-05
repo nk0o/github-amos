@@ -12,11 +12,11 @@ header{
   position: relative;
   top: 0;
   left: 0;
-  &.downscroll{
+  &.downscroll, &.fixed.downscroll{
     position: fixed;
     animation: smoothUp 300ms forwards;
   }
-  &.upscroll{
+  &.upscroll, &.fixed.upscroll{
     animation: smoothDwon 300ms forwards;
   }
   @keyframes smoothDwon {

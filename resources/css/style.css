@@ -5127,11 +5127,11 @@ header {
   top: 0;
   left: 0;
 }
-header.downscroll {
+header.downscroll, header.fixed.downscroll {
   position: fixed;
   animation: smoothUp 300ms forwards;
 }
-header.upscroll {
+header.upscroll, header.fixed.upscroll {
   animation: smoothDwon 300ms forwards;
 }
 @keyframes smoothDwon {
