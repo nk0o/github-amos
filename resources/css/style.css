@@ -7405,10 +7405,10 @@ footer .f_company {
 }
 .info_read_wrap > .info_read {
   border-bottom: 0;
-  padding: 0 20px 8px;
+  padding: 0 20px 48px;
 }
 .info_read_wrap > .info_read dl:last-child {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #eeeeee;
 }
 @media (min-width: 1024px) {
