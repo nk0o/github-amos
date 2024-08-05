@@ -2218,6 +2218,8 @@ button:disabled *[class*=ico_]::before {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 60px 20px 30px;
   gap: 5px;
 }

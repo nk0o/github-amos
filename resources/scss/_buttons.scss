@@ -144,6 +144,8 @@ button {
   //Button Group
   &_group {
     @include flexCenter;
+    max-width: 1024px;
+    margin: 0 auto;
     padding: 60px 20px 30px;
     gap: 5px;
     button, .btn{
@@ -151,7 +153,7 @@ button {
       justify-content: center;
     }
   }
-  
+
   //Icon Button
   &_icon{
     @extend .btn;
