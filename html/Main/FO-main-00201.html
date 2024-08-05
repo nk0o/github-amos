@@ -21,12 +21,11 @@
       <section class="sec_visual">
         <div id="mainTopSwiper" class="swiper swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Promotion Area-1</div>
-            <div class="swiper-slide">Promotion Area-2</div>
-            <div class="swiper-slide">Promotion Area-3</div>
-            <div class="swiper-slide">Promotion Area-4</div>
-            <div class="swiper-slide">Promotion Area-5</div>
-            <div class="swiper-slide">Promotion Area-6</div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_main_promotion_01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_main_promotion_02.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_main_promotion_04.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_main_promotion_05.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_main_promotion_02.png" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div><!-- //.swiper-container -->
@@ -847,9 +846,12 @@
         el: "#mainTopSwiper .swiper-pagination",
         type: "fraction",
       },
+      loop:true,
+      observer: true,
+      observeParents: true,
       breakpoints: {
         1024: {
-          slidesPerView: 4,
+          slidesPerView: "auto",
           spaceBetween: 2,
         },
       },
