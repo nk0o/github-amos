@@ -4212,11 +4212,18 @@ div.dataTables_wrapper .btn_floating:focus {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
+  gap: 24px;
 }
 .accord_list.is_plus .accord_tit .ico_plus_20 {
-  transition: transform 0.3s;
+  flex: 1;
 }
 .accord_list.is_plus .accord_tit .ico_plus_20::before {
+  transition: all 0.3s;
+  left: auto;
+  right: 0;
+  width: 20px;
+  transform-origin: 50% 0%;
+  transform: rotate(0deg) translateY(-50%);
   mask-position: center right;
   background-color: #2A3136 !important;
 }
@@ -4229,10 +4236,8 @@ div.dataTables_wrapper .btn_floating:focus {
   border-bottom: 1px solid #2A3136;
   cursor: default;
 }
-.accord_list.is_plus .accord_head.on .accord_tit .ico_plus_20 {
-  transform: rotate(-180deg);
-}
 .accord_list.is_plus .accord_head.on .accord_tit .ico_plus_20::before {
+  transform: rotate(180deg) translateY(-50%);
   mask-image: url("../images/icon/ico_minus_20.svg");
 }
 

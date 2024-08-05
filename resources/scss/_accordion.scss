@@ -98,9 +98,16 @@
         padding: 16px 0 16px 12px;
         border: 0;
         @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+        gap:24px;
         .ico_plus_20{
-          transition: transform .3s;
+          flex:1;
           &::before{
+            transition: all .3s;
+            left: auto;
+            right: 0;
+            width: 20px;
+            transform-origin: 50% 0%;
+            transform: rotate(0deg) translateY(-50%);
             mask-position: center right;
             background-color:$color-primary !important;
           }
@@ -117,8 +124,8 @@
         &.on{
           .accord_tit{
             .ico_plus_20{
-              transform: rotate(-180deg);
               &::before{
+                transform: rotate(180deg) translateY(-50%);
                 mask-image: url("../images/icon/ico_minus_20.svg");
               }              
             }
