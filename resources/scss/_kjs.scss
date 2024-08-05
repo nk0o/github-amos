@@ -1465,3 +1465,65 @@
     @include fontStyle($gray-500, $fs-sm, $fw-m, 22px);
   }
 }
+
+.edu_detail {
+  .detail_top {
+    padding: 24px 0 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      .date {
+        @include fontStyle($gray-500, $fs-xs, $fw-l, 1);
+      }
+      .view {
+        @include fontStyle($gray-700, $fs-xs, $fw-l, 1);
+        &::before {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin-right: 2px;
+          background:url('../../resources/images/icon/ico_view.svg') no-repeat center;
+          vertical-align: -3px;
+          content: '';
+        }
+      }
+    }
+    .tit {
+      display: block;
+      @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
+    }
+  }
+  .detail_cont {
+    img {
+      margin-bottom: 24px;
+    }
+    p {
+      @include fontStyle($gray-900, $fs-m, $fw-m, 24px);
+    }
+  }
+  .detail_bottom {
+    margin-top: 40px;
+  }
+}
+
+.file_wrap {
+  >div +div {
+    margin-top: 8px;
+  }
+  .file {
+    padding: 0 12px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F6F6F6;
+    .name {
+      @include fontStyle($gray-950, $fs-s, $fw-m, 19px);
+    }
+  }
+}
+
