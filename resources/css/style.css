@@ -47,6 +47,7 @@ html, body {
   word-wrap: break-word;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  scroll-behavior: smooth;
 }
 
 a, button {
@@ -4200,6 +4201,7 @@ div.dataTables_wrapper .btn_floating:focus {
   padding-top: 16px;
 }
 .accord_list.is_plus .accord_tit {
+  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: space-between;
@@ -4215,6 +4217,11 @@ div.dataTables_wrapper .btn_floating:focus {
   gap: 24px;
 }
 .accord_list.is_plus .accord_tit .ico_plus_20 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   flex: 1;
 }
 .accord_list.is_plus .accord_tit .ico_plus_20::before {
@@ -5076,7 +5083,7 @@ header.fixed {
 
 .hr_divider {
   width: 100%;
-  height: 10px;
+  height: 8px;
   background-color: #f6f6f6;
   margin: 0 !important;
   padding: 0 !important;
@@ -5227,7 +5234,6 @@ footer .f_company {
 
 .prd_list_wrap.swiper {
   padding: 0 0 0 20px;
-  background-color: #ffffff;
 }
 @media (min-width: 1024px) {
   .prd_list_wrap.swiper {
@@ -5401,11 +5407,33 @@ footer .f_company {
   }
 }
 .page_main #mainTopSwiper.swiper-container {
-  height: 300px;
   color: #ffffff;
 }
 .page_main #mainTopSwiper .swiper-slide {
   background-color: #6E93BF;
+  height: 0;
+  padding-bottom: 80%;
+}
+.page_main #mainTopSwiper .swiper-slide > a, .page_main #mainTopSwiper .swiper-slide > img {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page_main #mainTopSwiper .swiper-slide > a img, .page_main #mainTopSwiper .swiper-slide > img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1024px) {
+  .page_main #mainTopSwiper .swiper-slide {
+    min-width: 375px;
+    max-width: 375px;
+    height: 300px;
+    padding-bottom: 0;
+  }
 }
 .page_main #mainTopSwiper .swiper-pagination {
   top: auto;
@@ -5658,11 +5686,14 @@ footer .f_company {
   padding: 4px 16px 0;
 }
 .cate_service .service_tit {
-  padding: 12px 20px;
+  padding: 12px 0 12px 20px;
   color: #222222;
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.143;
+}
+.cate_service .service_tit a {
+  display: block;
 }
 .cate_service .accord_cont {
   padding: 0 0 16px 0;
@@ -7039,7 +7070,6 @@ footer .f_company {
 }
 
 .page_form .hr_divider {
-  height: 8px;
   margin: 24px 0 !important;
 }
 .page_form .hr_divider + .radio_btn_outer {
