@@ -1423,12 +1423,6 @@
   }
 }
 
-.page_edu {
-  padding-bottom: 30px;
-  .btn_group {
-    margin-top: 48px;
-  }
-}
 .edu_list {
   >li {
     &+li {
@@ -1459,3 +1453,15 @@
   }
 }
 
+.no_data {
+  padding-top: 100px;
+  text-align: center;
+  img {
+    width: 40px;
+    height: 40px; 
+  }
+  p {
+    margin-top: 8px;
+    @include fontStyle($gray-500, $fs-sm, $fw-m, 22px);
+  }
+}

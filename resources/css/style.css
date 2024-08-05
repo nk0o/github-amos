@@ -7098,13 +7098,6 @@ footer .f_company {
     display: block;
   }
 }
-.page_edu {
-  padding-bottom: 30px;
-}
-.page_edu .btn_group {
-  margin-top: 48px;
-}
-
 .edu_list > li + li {
   border-top: 1px solid #eee;
 }
@@ -7135,6 +7128,22 @@ footer .f_company {
   text-overflow: ellipsis;
   word-wrap: normal;
   overflow: hidden;
+}
+
+.no_data {
+  padding-top: 100px;
+  text-align: center;
+}
+.no_data img {
+  width: 40px;
+  height: 40px;
+}
+.no_data p {
+  margin-top: 8px;
+  color: #aaaaaa;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .sticky_tab {
