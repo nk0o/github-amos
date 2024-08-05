@@ -7266,6 +7266,125 @@ footer .f_company {
   line-height: 19px;
 }
 
+.edu_regist {
+  margin: 0 -20px;
+}
+.edu_regist .accord_list .accord_head {
+  padding: 0 20px;
+  border-bottom: 8px solid #F6F6F6;
+  cursor: auto;
+}
+.edu_regist .accord_list .accord_head .accord_tit {
+  border-bottom: none;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+.edu_regist .accord_list .accord_head .accord_tit .num {
+  display: inline-block;
+  padding: 0 12px;
+  margin-left: 6px;
+  height: 26px;
+  background: #DFEDFF;
+  border-radius: 50px;
+  vertical-align: -1px;
+  color: #1A63D9;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+.edu_regist .accord_list .accord_head .accord_cont {
+  padding-bottom: 20px;
+}
+.edu_regist .accord_list .accord_head.none .accord_tit {
+  cursor: auto;
+}
+.edu_regist .accord_list .accord_head.none .accord_tit .num {
+  background: #eee;
+  color: #888;
+}
+.edu_regist .accord_list .accord_head.none .accord_tit::before {
+  display: none;
+}
+
+.edu_regist_box {
+  border-radius: 8px;
+  border: 1px solid #E2E2E2;
+  overflow: hidden;
+}
+.edu_regist_box + .edu_regist_box {
+  margin-top: 20px;
+}
+.edu_regist_box .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding: 12px 20px;
+  background-color: #EFF6FF;
+}
+.edu_regist_box .top .state {
+  color: #1A63D9;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 20px;
+}
+.edu_regist_box .top .cate {
+  font-size: 0;
+}
+.edu_regist_box .top .cate span {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 18px;
+}
+.edu_regist_box .top .cate i {
+  vertical-align: -3px;
+}
+.edu_regist_box .top .cate em {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 18px;
+}
+.edu_regist_box .cont {
+  padding: 20px;
+}
+.edu_regist_box .cont .tit {
+  display: block;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+.edu_regist_box .cont dl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px 20px;
+}
+.edu_regist_box .cont dl dt {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 20px;
+}
+.edu_regist_box .cont dl dd {
+  color: #777777;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+.edu_regist_box.end .top {
+  background-color: #eee;
+}
+.edu_regist_box.end .top .state {
+  color: #666666;
+}
+.edu_regist_box.end .cont {
+  opacity: 0.7;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
