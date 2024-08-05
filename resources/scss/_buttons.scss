@@ -102,6 +102,12 @@ button {
       height: 40px;
     }
   }
+  &_xxs {
+    @extend .btn;
+    height: 30px;
+    padding: 0 12px;
+    font-size: $fs-s;
+  }
   //Color
   &_primary {
     color: $color-white !important;
@@ -274,7 +280,6 @@ button {
     }
   }
 }
-
 .spinner{
   @include flexBetween;
   gap: 2px;

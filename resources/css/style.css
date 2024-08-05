@@ -2097,7 +2097,7 @@ button:disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
 }
 
-.btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xs, .btn_sm, .btn_md, .btn_lg {
+.btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xxs, .btn_xs, .btn_sm, .btn_md, .btn_lg {
   display: inline-flex;
   align-items: center;
   overflow: visible;
@@ -2178,6 +2178,11 @@ button:disabled *[class*=ico_]::before {
   width: 40px;
   height: 40px;
 }
+.btn_xxs {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 0.875rem;
+}
 .btn_primary {
   color: #ffffff !important;
   border-color: #2A3136 !important;
@@ -2222,7 +2227,7 @@ button:disabled *[class*=ico_]::before {
   margin: 0 auto;
   gap: 5px;
 }
-.btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs {
+.btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs, .btn_group .btn_xxs {
   flex: 1;
   justify-content: center;
 }
@@ -3208,7 +3213,7 @@ select {
   width: 24px;
   height: 24px;
 }
-.input_group .time, .input_group .btn, .input_group .btn_xs, .input_group .btn_icon, .input_group .btn_bottom, .input_group .btn_floating, .input_group .btn_sm, .input_group .btn_md, .input_group .btn_lg {
+.input_group .time, .input_group .btn, .input_group .btn_xs, .input_group .btn_xxs, .input_group .btn_icon, .input_group .btn_bottom, .input_group .btn_floating, .input_group .btn_sm, .input_group .btn_md, .input_group .btn_lg {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -4154,6 +4159,7 @@ div.dataTables_wrapper .focus.btn_lg,
 div.dataTables_wrapper .focus.btn_md,
 div.dataTables_wrapper .focus.btn_sm,
 div.dataTables_wrapper .focus.btn_xs,
+div.dataTables_wrapper .focus.btn_xxs,
 div.dataTables_wrapper .focus.btn_icon,
 div.dataTables_wrapper .focus.btn_bottom,
 div.dataTables_wrapper .focus.btn_floating,
@@ -4164,6 +4170,7 @@ div.dataTables_wrapper .btn_lg:focus,
 div.dataTables_wrapper .btn_md:focus,
 div.dataTables_wrapper .btn_sm:focus,
 div.dataTables_wrapper .btn_xs:focus,
+div.dataTables_wrapper .btn_xxs:focus,
 div.dataTables_wrapper .btn_icon:focus,
 div.dataTables_wrapper .btn_bottom:focus,
 div.dataTables_wrapper .btn_floating:focus {
@@ -7187,6 +7194,76 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 22px;
+}
+
+.edu_detail .detail_top {
+  padding: 24px 0 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+.edu_detail .detail_top .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.edu_detail .detail_top .top .date {
+  color: #aaaaaa;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.edu_detail .detail_top .top .view {
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1;
+}
+.edu_detail .detail_top .top .view::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  background: url("../../resources/images/icon/ico_view.svg") no-repeat center;
+  vertical-align: -3px;
+  content: "";
+}
+.edu_detail .detail_top .tit {
+  display: block;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 26px;
+}
+.edu_detail .detail_cont img {
+  margin-bottom: 24px;
+}
+.edu_detail .detail_cont p {
+  color: #444444;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+.edu_detail .detail_bottom {
+  margin-top: 40px;
+}
+
+.file_wrap > div + div {
+  margin-top: 8px;
+}
+.file_wrap .file {
+  padding: 0 12px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #F6F6F6;
+}
+.file_wrap .file .name {
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 19px;
 }
 
 .sticky_tab {
