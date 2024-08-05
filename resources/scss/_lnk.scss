@@ -7,7 +7,7 @@
 .page_form{
   .hr_divider{
     margin: 24px 0 !important;
-    & + .radio_btn_outer{
+    & + .inquiry_outer{
       padding-top: 0;
     }
   }
@@ -56,7 +56,7 @@
   .sign_state_wrap{
     margin-top: 0;
   }
-  .radio_btn_outer:nth-of-type(1){
+  .inquiry_outer:nth-of-type(1){
     padding-top: 0;
   }
   .input_check_list{
@@ -115,9 +115,9 @@
     }
     & > .info_read{
       border-bottom: 0;
-      padding: 0 20px 8px;
+      padding: 0 20px 48px;
       dl:last-child{
-        padding-bottom: 20px;
+        padding-bottom: 16px;
         border-bottom: 1px solid $gray-100;
       }
     }
@@ -205,7 +205,13 @@
     }
   }
 }
-//포인트몰
+/*** 입점상담 ***/
+.page_enter{
+  .info_area{
+    padding-top: 32px;
+  }
+}
+/*** 포인트몰 ***/
 .page_point{
   .user_area{
     position: sticky;
@@ -286,7 +292,7 @@
     }
   }
 }
-//장바구니
+/*** 장바구니 ***/
 .page_order{
   .hr_divider{
     margin-bottom: 20px !important;

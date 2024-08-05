@@ -2761,20 +2761,20 @@ button:disabled *[class*=ico_]::before {
 }
 
 .input_radio_wrap.type_btn {
-  height: 40px;
+  height: 35px;
 }
 .input_radio_wrap.type_btn .input_radio + label {
   display: inline-flex;
   align-items: center;
   height: 100%;
-  padding: 6px 16px;
+  padding: 8px 12px;
   border-radius: 9999px;
   background-color: #ffffff;
   border: 1px solid #e2e2e2;
   color: #666666;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.357;
 }
 .input_radio_wrap.type_btn .input_radio + label::before {
   display: none !important;
@@ -2791,6 +2791,42 @@ button:disabled *[class*=ico_]::before {
   cursor: default;
 }
 .input_radio_wrap.type_btn .input_radio[disabled][checked] + label {
+  border-color: #2A3136;
+  background-color: #2A3136;
+  color: #ffffff;
+}
+
+.input_check_wrap.type_btn {
+  height: 35px;
+}
+.input_check_wrap.type_btn .input_check + label {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
+}
+.input_check_wrap.type_btn .input_check + label::before {
+  display: none !important;
+}
+.input_check_wrap.type_btn .input_check:checked + label {
+  background-color: #2A3136;
+  border-color: #2A3136;
+  color: #ffffff;
+}
+.input_check_wrap.type_btn .input_check:disabled + label {
+  border-color: #e2e2e2;
+  background-color: #f6f6f6;
+  color: #888888;
+  cursor: default;
+}
+.input_check_wrap.type_btn .input_check[disabled][checked] + label {
   border-color: #2A3136;
   background-color: #2A3136;
   color: #ffffff;
@@ -5091,11 +5127,11 @@ header {
   top: 0;
   left: 0;
 }
-header.downscroll {
+header.downscroll, header.fixed.downscroll {
   position: fixed;
   animation: smoothUp 300ms forwards;
 }
-header.upscroll {
+header.upscroll, header.fixed.upscroll {
   animation: smoothDwon 300ms forwards;
 }
 @keyframes smoothDwon {
@@ -6374,14 +6410,14 @@ footer .f_company {
   line-height: 19px;
 }
 
-.radio_btn_outer {
+.inquiry_outer {
   padding: 32px 20px 0;
 }
-.radio_btn_outer > li + li {
+.inquiry_outer > li + li {
   margin-top: 40px;
 }
 
-.radio_btn_box .radio_btn_wrap {
+.inquiry_box .radio_btn_wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -7359,7 +7395,7 @@ footer .f_company {
 .page_form .hr_divider {
   margin: 24px 0 !important;
 }
-.page_form .hr_divider + .radio_btn_outer {
+.page_form .hr_divider + .inquiry_outer {
   padding-top: 0;
 }
 .page_form .btn_group {
@@ -7418,7 +7454,7 @@ footer .f_company {
 .info_area .sign_state_wrap {
   margin-top: 0;
 }
-.info_area .radio_btn_outer:nth-of-type(1) {
+.info_area .inquiry_outer:nth-of-type(1) {
   padding-top: 0;
 }
 .info_area .input_check_list {
@@ -7488,10 +7524,10 @@ footer .f_company {
 }
 .info_read_wrap > .info_read {
   border-bottom: 0;
-  padding: 0 20px 8px;
+  padding: 0 20px 48px;
 }
 .info_read_wrap > .info_read dl:last-child {
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #eeeeee;
 }
 @media (min-width: 1024px) {
@@ -7596,6 +7632,12 @@ footer .f_company {
   background-color: #bbbbbb !important;
 }
 
+/*** 입점상담 ***/
+.page_enter .info_area {
+  padding-top: 32px;
+}
+
+/*** 포인트몰 ***/
 .page_point .user_area {
   position: sticky;
   top: 61px;
@@ -7689,6 +7731,7 @@ footer .f_company {
   border-top: 0;
 }
 
+/*** 장바구니 ***/
 .page_order .hr_divider {
   margin-bottom: 20px !important;
 }
