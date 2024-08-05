@@ -359,6 +359,7 @@
   &_service{
     padding: 4px 16px 0;
     .service_tit{
+      display: block;
       padding: 12px 0 12px 20px;
       @include fontStyle($gray-950, $fs-sm, $fw-m, 1.143);
       a{

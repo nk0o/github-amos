@@ -5234,6 +5234,7 @@ footer .f_company {
 
 .prd_list_wrap.swiper {
   padding: 0 0 0 20px;
+  background-color: #ffffff;
 }
 @media (min-width: 1024px) {
   .prd_list_wrap.swiper {
@@ -5686,6 +5687,7 @@ footer .f_company {
   padding: 4px 16px 0;
 }
 .cate_service .service_tit {
+  display: block;
   padding: 12px 0 12px 20px;
   color: #222222;
   font-size: 0.9375rem;
