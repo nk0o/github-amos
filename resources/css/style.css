@@ -1304,14 +1304,28 @@ p {
     background-image: none;
   }
 }
-.ico_chevUp::before {
+.ico_chevUp_24::before {
   background-image: url("../images/icon/ico_chev_up_24.svg");
   background-size: cover;
 }
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-  .ico_chevUp::before {
+  .ico_chevUp_24::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_chev_up_24.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_chevUp_24_thick::before {
+  background-image: url("../images/icon/ico_chev_up_24_thick.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_chevUp_24_thick::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_chev_up_24_thick.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -2226,6 +2240,7 @@ button:disabled *[class*=ico_]::before {
   max-width: 1024px;
   margin: 0 auto;
   gap: 5px;
+  padding: 60px 20px 30px;
 }
 .btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs, .btn_group .btn_xxs {
   flex: 1;
@@ -2237,6 +2252,11 @@ button:disabled *[class*=ico_]::before {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+@media (min-width: 1024px) {
+  .btn_group.btm_fixed {
+    position: static;
+  }
 }
 .btn_icon {
   justify-content: center;
@@ -3472,7 +3492,6 @@ select {
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 .tab_menu::-webkit-scrollbar {
@@ -5192,6 +5211,7 @@ footer .accord_tit::before {
   width: 24px;
   height: 24px;
   mask-image: url("../images/icon/ico_chev_up_24.svg");
+  background-color: #2A3136 !important;
 }
 footer .accord_cont {
   padding: 0 0 20px;
@@ -5261,7 +5281,7 @@ footer .f_cs li span {
   margin-right: 8px;
   border-right: 1px solid #777777;
   line-height: 12px;
-  font-weight: 400;
+  font-weight: 600;
 }
 footer .f_company {
   margin-top: 17px;
@@ -5318,7 +5338,6 @@ footer .f_company {
 
 .prd_list_wrap.swiper {
   padding: 0 0 0 20px;
-  background-color: #ffffff;
 }
 @media (min-width: 1024px) {
   .prd_list_wrap.swiper {
@@ -5383,7 +5402,12 @@ footer .f_company {
 }
 .page_main header .tab_menu.line {
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+@media (min-width: 1024px) {
+  .page_main header .tab_menu.line {
+    justify-content: center;
+  }
 }
 .page_main header .tab_menu.line ul .tab_list {
   padding: 0 12px;

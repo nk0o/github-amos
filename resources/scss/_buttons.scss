@@ -153,6 +153,7 @@ button {
     max-width: 1024px;
     margin: 0 auto;
     gap: 5px;
+    padding: 60px 20px 30px;
     button, .btn{
       flex: 1;
       justify-content: center;
@@ -162,7 +163,10 @@ button {
       inset:auto;
       bottom: 0;
       left: 0;
-      width: 100%
+      width: 100%;
+      @media (min-width: $pc-point) {
+        position: static;
+      }
     }
   }
 

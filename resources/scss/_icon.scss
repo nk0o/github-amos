@@ -108,8 +108,15 @@
       }
     }
     &Up{
-      &::before {
-        @include iconImgPath("ico_chev_up_24.svg");
+      &_24{
+        &::before {
+          @include iconImgPath("ico_chev_up_24.svg");
+        }
+        &_thick{
+          &::before {
+            @include iconImgPath("ico_chev_up_24_thick.svg");
+          }
+        }
       }
     }
     &Down {

@@ -2,7 +2,10 @@
   header{
     .tab_menu.line{
       display: inline-flex;
-      justify-content: center;
+      justify-content: flex-start;
+      @media (min-width: $pc-point) {
+        justify-content: center;
+      }
       ul {
         .tab_list {
           padding: 0 12px;
