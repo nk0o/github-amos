@@ -13,7 +13,7 @@ header{
   top: 0;
   left: 0;
   &.downscroll, &.fixed.downscroll{
-    position: fixed;
+    //position: fixed;
     animation: smoothUp 300ms forwards;
   }
   &.upscroll, &.fixed.upscroll{

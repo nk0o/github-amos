@@ -632,12 +632,16 @@ function headerScroll() {
   var lastScrollTop = 0, delta = 15;
   var isMainHeader = !($("header").find(".appbar_back").length > 0);
   
+
+  if( $(window).scrollTop() > 0){
+    !hd.hasClass('fixed') && hd.addClass("fixed");
+  }      
   $(window).scroll(function (event) {
     var st = $(this).scrollTop();
     if (Math.abs(lastScrollTop - st) <= delta) return;
     if ((st > lastScrollTop) && (lastScrollTop >= 0)) {
       hd.addClass("fixed");
-      if( isMainHeader && lastScrollTop > 0){
+      if( isMainHeader && lastScrollTop > headerH){
         hd.removeClass("upscroll").addClass("downscroll");
       }      
     } else {     

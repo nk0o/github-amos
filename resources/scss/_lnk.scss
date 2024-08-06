@@ -565,7 +565,7 @@
     em{
       @include fontStyle($gray-950, $fs-sm, $fw-m, 1.2);
     }
-    .prd{
+    /* .prd{
       &_price{
         font-weight: $fw-b;
       }
@@ -583,7 +583,7 @@
           font-weight: $fw-l;
         }
       }
-    }
+    } */
   }
 }
 .order_complete{

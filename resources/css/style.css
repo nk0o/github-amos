@@ -5168,7 +5168,6 @@ header {
   left: 0;
 }
 header.downscroll, header.fixed.downscroll {
-  position: fixed;
   animation: smoothUp 300ms forwards;
 }
 header.upscroll, header.fixed.upscroll {
@@ -8112,6 +8111,25 @@ footer .f_company {
   align-items: center;
   gap: 16px;
   margin-top: 12px;
+  /* .prd{
+    &_price{
+      font-weight: $fw-b;
+    }
+    &_qnty{
+      position: relative;
+      &::before{
+        content: '';
+        @include pos_Ycenter;
+        left: -8px;
+        width: 1px;
+        height: 10px;
+        background-color: $gray-400;
+      }
+      em{
+        font-weight: $fw-l;
+      }
+    }
+  } */
 }
 .cart_qnty.is_control {
   margin-top: 16px;
@@ -8152,25 +8170,6 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.2;
-}
-.cart_qnty .prd_price {
-  font-weight: 700;
-}
-.cart_qnty .prd_qnty {
-  position: relative;
-}
-.cart_qnty .prd_qnty::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -8px;
-  width: 1px;
-  height: 10px;
-  background-color: #bbbbbb;
-}
-.cart_qnty .prd_qnty em {
-  font-weight: 300;
 }
 
 .order_complete {
