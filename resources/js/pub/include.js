@@ -39,14 +39,14 @@ var include = {
   },
   mainTabMenu: function () {
     document.write(`
-    <div class="tab_center_wrap">
+    <div class="tab_center_wrap appbar_tabmenu">
       <div class="tab_menu tab_center line">
         <ul>
         <li class="current tab_list"><button>상품구매</button></li>
         <li class="tab_list"><button>거래원장</button></li>
         <li class="tab_list"><button>정기교육</button></li>
-        <li class="tab_list"><button>아모스TV</button></li>
         <li class="tab_list"><button>이벤트</button></li>
+        <li class="tab_list"><button>고객센터</button></li>
         </ul>
       </div>
     </div><!-- //.tab_center_wrap -->

@@ -637,7 +637,7 @@ function headerScroll() {
     if (Math.abs(lastScrollTop - st) <= delta) return;
     if ((st > lastScrollTop) && (lastScrollTop >= 0)) {
       hd.addClass("fixed");
-      if( isMainHeader && lastScrollTop > headerH){
+      if( isMainHeader && lastScrollTop > 0){
         hd.removeClass("upscroll").addClass("downscroll");
       }      
     } else {     
