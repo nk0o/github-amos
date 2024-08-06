@@ -827,38 +827,6 @@
   }
 }
 
-.swiper-container {
-  .prd_list_lg {
-    &.swiper-wrapper {
-      margin-left: 0 !important;
-    }
-    .prd_box {
-      &.swiper-slide {
-        padding-left: 0;
-      }
-      .bottom {
-        .btn_icon {
-          font-size: 0;
-          gap: 0;
-          padding: 6px;
-        }
-      }
-    }
-  }
-  .prd_list_sm.xs {
-    flex-wrap: nowrap;
-    gap: 0;
-    .prd_box {
-      .amount {
-        display: block;
-      }
-      .price {
-        display: block;
-        margin: 12px 0 0 0;
-      }
-    }
-  }
-}
 
 //pc
 @media (min-width: 1024px) {

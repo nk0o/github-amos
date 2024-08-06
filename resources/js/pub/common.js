@@ -600,26 +600,26 @@ function PrdSlider(){
   
     // Swiper 컨테이너 내에 .colorchip 클래스 있는지 확인
     let swiperContainer = $(sliderId);
-    let hasColorchip = swiperContainer && swiperContainer.hasClass('colorchip');
-    let slidesPerViewValue = hasColorchip ? 4.235 : 2.26;
-    let spaceBetweenwValue = hasColorchip ? 5 : 8;
-
+    //let hasColorchip = swiperContainer && swiperContainer.hasClass('colorchip');
+    //let slidesPerViewValue = hasColorchip ? 4.235 : 2.26;
+    //let spaceBetweenwValue = hasColorchip ? 5 : 8;
+    
     // spaceBetweenValue2 부모에 .is_noBack 클래스가 있는지 확인
     let hasIsNoBack = swiperContainer && swiperContainer.parents('.sec_product').hasClass('is_noBack');
-    let spaceBetweenValue2 = hasIsNoBack ? 12 : 8;  
+    let slidesPerViewValue = hasIsNoBack ? 2.26 : 2.47;
+    let spaceBetweenValue = hasIsNoBack ? 8 : 0;
   
     // Swiper 초기화
     let PrdSwiper = new Swiper(sliderId, {
       autoHeight: true,
       slidesPerView: slidesPerViewValue,
-      spaceBetween: spaceBetweenwValue,
+      spaceBetween: spaceBetweenValue,
       pagination: {
         el: sliderId + " .swiper-pagination",
       },
       breakpoints: {
         1024: {
           slidesPerView: 5,
-          spaceBetween: spaceBetweenValue2
         },
       },
     });
