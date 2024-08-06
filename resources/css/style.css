@@ -6020,7 +6020,7 @@ footer .f_company {
 .prd_list_lg .prd_box .prd .info {
   display: flex;
   flex-direction: column;
-  height: 145px;
+  height: 117px;
   margin-top: 12px;
 }
 .prd_list_lg .prd_box .prd .info .price {
@@ -6637,9 +6637,6 @@ footer .f_company {
 }
 .swiper-container .prd_list_lg .prd_box.swiper-slide {
   padding-left: 0;
-}
-.swiper-container .prd_list_lg .prd_box.swiper-slide .prd .info {
-  height: 117px;
 }
 .swiper-container .prd_list_lg .prd_box .bottom .btn_icon {
   font-size: 0;

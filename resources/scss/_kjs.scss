@@ -150,7 +150,7 @@
       }
     }
   }
-  
+
   .bottom {
     display: flex;
     gap: 12px;
@@ -190,7 +190,7 @@
       .info {
         display: flex;
         flex-direction: column;
-        height: 145px;
+        height: 117px;
         margin-top: 12px;
         .tit {
           // display: block;
@@ -836,11 +836,6 @@
     .prd_box {
       &.swiper-slide {
         padding-left: 0;
-        .prd {
-          .info {
-            height: 117px;
-          }
-        }
       }
       .bottom {
         .btn_icon {
