@@ -3792,7 +3792,7 @@ select {
   border-radius: 20px;
   color: #ffffff;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1;
 }
 .badge_dot {
@@ -4947,6 +4947,10 @@ div.dataTables_wrapper .btn_floating:focus {
 .appbar_tabmenu .tab_menu.line ul .tab_list:last-child {
   margin-right: 8px;
 }
+.appbar_tabmenu .tab_list button {
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 .btm_bar {
   z-index: 2;
@@ -5474,7 +5478,7 @@ footer .f_company {
 .page_main .sec_amount .tit_area h2 {
   justify-content: center;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 600;
 }
 .page_main .sec_amount > .inner {
   overflow-x: auto;
@@ -5563,9 +5567,9 @@ footer .f_company {
   left: auto;
   text-align: right;
   color: #ffffff;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: normal;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.3333;
 }
 .page_main #mainTopSwiper .swiper-pagination-total {
   opacity: 0.7;
@@ -5608,18 +5612,18 @@ footer .f_company {
   position: relative;
   text-align: center;
 }
-.half_progress .num {
-  color: #222222;
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
 .half_progress .txt_wrap {
   position: absolute;
   top: 20px;
   left: 0;
   width: 100%;
   text-align: center;
+}
+.half_progress .txt_wrap p {
+  color: #222222;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 .half_progress .txt_index {
   color: #666666;

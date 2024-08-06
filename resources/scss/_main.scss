@@ -31,7 +31,7 @@
       h2{
         justify-content: center;
         color: $color-white;
-        font-weight: $fw-m;
+        font-weight: $fw-sb;
       }
     }
     & > .inner{
@@ -111,7 +111,7 @@
         right: 20px;
         left: auto;
         text-align: right;
-        @include fontStyle($color-white, $fs-m, $fw-m);
+        @include fontStyle($color-white, $fs-xxs, $fw-l, 1.3333);
         &-total{
           opacity: 0.7;
         }
@@ -146,15 +146,15 @@
   margin: 0 auto;
   position: relative;
   text-align: center;
-  .num{
-    @include fontStyle($gray-950, $fs-xlg, $fw-b, 1.4);
-  }
   .txt_wrap {
     position: absolute;
     top: 20px;
     left: 0;
     width: 100%;
     text-align: center;
+    p{
+      @include fontStyle($gray-950, $fs-xlg, $fw-b, 1.4);
+    }
   }
   .txt_index {
     @include fontStyle($gray-800, $fs-xxs, $fw-m, 1.333);
