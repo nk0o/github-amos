@@ -192,11 +192,29 @@ footer{
       padding: 0 0 46px;
     }
   }
+  .prd_box.swiper-slide{
+    min-width: 159px;
+    max-width: none;
+    background-color: $color-white;
+    padding: 8px 0 0 9px;
+    margin-left: -1px;
+  }
   .prd_list_lg.swiper-wrapper{
     flex-wrap: nowrap;
     gap: 0;
-    padding: 8px 0 0 9px;
-    background-color: $color-white;
+  }
+  .prd_list_sm.xs {
+    flex-wrap: nowrap;
+    gap: 0;
+    .prd_box {
+      .amount {
+        display: block;
+      }
+      .price {
+        display: block;
+        margin: 12px 0 0 0;
+      }
+    }
   }
 }
 .sec_product{
@@ -231,14 +249,10 @@ footer{
         background-color:$color-primary !important;
       }
     }
-    .prd_list_lg.swiper-wrapper{
-      margin-left: -4px;
-      padding: 0;
-      background-color: $color-white;
-    }
     .prd_box.swiper-slide{
-      max-width: none;
-      padding-left: 4px;
+      min-width: 150px;
+      padding: 0;
+      margin-left: 0;
     }
   }
 }
