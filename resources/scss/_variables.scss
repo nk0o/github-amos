@@ -3,6 +3,8 @@
 //Breakpoint : (1024px ~)
 //@media (min-width: $pc-point) {}
 $pc-point:1024px;
+//@media (max-width: $mo-point) {}
+$mo-point:375px;
 //Bottom Tabbar Height
 $btmbar-H: 90px;
 

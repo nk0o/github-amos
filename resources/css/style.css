@@ -1054,20 +1054,16 @@ p {
 .thumb_list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px 0;
+  gap: 16px 0px;
 }
 .thumb_list > li {
-  width: calc((100% - 15px) / 4);
+  width: calc(23.2558139535% - 8px);
+  min-width: 80px;
+  margin-left: 4px;
   height: auto;
-  padding: 0 2.5px;
 }
-.thumb_list > li:first-child {
-  padding-left: 15.5px;
-  width: calc((100% - 15.5px) / 4 + 13px);
-}
-.thumb_list > li:last-child {
-  padding-right: 15.5px;
-  width: calc((100% - 15.5px) / 4 + 13px);
+.thumb_list > li:first-child, .thumb_list > li:last-child {
+  margin-left: 15px;
 }
 .thumb_list > li .img {
   width: calc(100% - 8px);
@@ -1105,7 +1101,7 @@ p {
   color: #222222;
   font-size: 0.8125rem;
   font-weight: 600;
-  line-height: normal;
+  line-height: 1.23;
 }
 
 .txt_notice {
@@ -1137,15 +1133,10 @@ p {
 
 @media (min-width: 1024px) {
   .thumb_list > li {
-    width: 84px !important;
+    width: 80px !important;
   }
-  .thumb_list > li:first-child {
-    padding-left: 15px;
-    width: 96.5px !important;
-  }
-  .thumb_list > li:last-child {
-    padding-right: 15px;
-    width: 96.5px !important;
+  .thumb_list > li:first-child, .thumb_list > li:last-child {
+    margin-left: 15px;
   }
 }
 /* Icon */
@@ -5827,9 +5818,18 @@ footer .f_company {
   padding: 0 0 16px 0;
 }
 
+.tab_cont_item .thumb_list {
+  gap: 16px 5px;
+}
 .tab_cont_item .thumb_list > li {
-  width: 25%;
-  padding: 0 2.5px;
+  margin-left: 0;
+  width: auto;
+  flex: 0 0 calc((100% - 15px) / 4);
+}
+@media (max-width: 375px) {
+  .tab_cont_item .thumb_list > li {
+    min-width: auto;
+  }
 }
 @media (min-width: 1024px) {
   .tab_cont_item .thumb_list {
@@ -5837,7 +5837,7 @@ footer .f_company {
   }
   .tab_cont_item .thumb_list li {
     flex: 1;
-    max-width: 82px;
+    max-width: 80px;
   }
 }
 

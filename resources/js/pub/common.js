@@ -654,19 +654,19 @@ function headerScroll() {
 //Tab 가운데
 function moveCenterTab(el){
   let liWid = 0,
-    boxWid = $('.tab_center').outerWidth(),
-    boxHalf = $('.tab_center').outerWidth() / 2,
+    boxWid = $('.tab_center').outerWidth(true),
+    boxHalf = $('.tab_center').outerWidth(true) / 2,
     leftPos = 0,
     // pd = $(el).parent('ul').css('padding-left') * 2,
     selectPos,
     pos;
-    $(el).parents('.tab_center').find('.tab_list').each(function() {
-    liWid += $(this).outerWidth();
+  $(el).parents('.tab_center').find('.tab_list').each(function() {
+    liWid += $(this).outerWidth(true);
   });
   for (let i=0; i< $(el).index(); i++) {
-    leftPos += $(el).parents('.tab_center').find('.tab_list').eq(i).outerWidth();
+    leftPos += $(el).parents('.tab_center').find('.tab_list').eq(i).outerWidth(true);
   }
-  selectPos = leftPos + $(el).outerWidth()/2;
+  selectPos = leftPos + $(el).outerWidth(true)/2;
   if (selectPos < boxHalf) {
   pos = 0;
   } else if (liWid - selectPos < boxHalf) {

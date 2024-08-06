@@ -353,15 +353,20 @@
 
 .tab_cont_item{
   .thumb_list{
+    gap: 16px 5px;
     & > li{
-      width: calc(100% / 4);
-      padding: 0 2.5px;
+      margin-left: 0;
+      width: auto;
+      flex: 0 0 calc((100% - 15px)/4);
+      @media (max-width: $mo-point) {
+        min-width: auto;
+      }
     }
     @media (min-width: $pc-point) {
       justify-content: center;
       li{
         flex: 1;
-        max-width: 82px;
+        max-width: 80px;
       }
     }
   }
