@@ -3602,6 +3602,9 @@ select {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.tab_menu.line_tab.is_scroll {
+  overflow-x: auto;
+}
 .tab_menu.line_tab.is_scroll ul {
   width: fit-content;
   padding: 0 20px;
@@ -3651,20 +3654,6 @@ select {
 .tab_center_wrap .tab_center.line ul .tab_list {
   padding: 0 10px;
 }
-.tab_center_wrap .tab_center.line ul .tab_list:first-child {
-  padding-left: 20px;
-}
-.tab_center_wrap .tab_center.line ul .tab_list:first-child::after {
-  width: calc(100% - 25px);
-  margin-left: 5px;
-}
-.tab_center_wrap .tab_center.line ul .tab_list:last-child {
-  padding-right: 20px;
-}
-.tab_center_wrap .tab_center.line ul .tab_list:last-child::after {
-  width: calc(100% - 25px) !important;
-  margin-left: -5px;
-}
 .tab_center_wrap .tab_center.line ul .tab_list.current::after {
   content: "";
   display: block;
@@ -3677,6 +3666,20 @@ select {
   width: calc(100% - 20px);
   height: 2px;
   background-color: #2A3136;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:first-child {
+  padding-left: 20px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:first-child::after {
+  width: calc(100% - 30px);
+  margin-left: 5px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:last-child {
+  padding-right: 20px;
+}
+.tab_center_wrap .tab_center.line ul .tab_list:last-child::after {
+  width: calc(100% - 25px) !important;
+  margin-left: -5px;
 }
 .tab_center_wrap .tab_center.line ul .tab_list button, .tab_center_wrap .tab_center.line ul .tab_list a {
   padding: 0;
@@ -4925,6 +4928,25 @@ div.dataTables_wrapper .btn_floating:focus {
 .appbar_close::before {
   background-color: #2A3136 !important;
 }
+.appbar_tabmenu .tab_menu.line {
+  display: inline-flex;
+  justify-content: flex-start;
+}
+@media (min-width: 1024px) {
+  .appbar_tabmenu .tab_menu.line {
+    justify-content: center;
+  }
+}
+.appbar_tabmenu .tab_menu.line ul .tab_list {
+  padding: 0 12px;
+}
+.appbar_tabmenu .tab_menu.line ul .tab_list:first-child {
+  padding-left: 12px;
+  padding-left: 20px;
+}
+.appbar_tabmenu .tab_menu.line ul .tab_list:last-child {
+  margin-right: 8px;
+}
 
 .btm_bar {
   z-index: 2;
@@ -5399,28 +5421,6 @@ footer .f_company {
 
 .page_main {
   /* 메인 스와이퍼 */
-}
-.page_main header .tab_menu.line {
-  display: inline-flex;
-  justify-content: flex-start;
-}
-@media (min-width: 1024px) {
-  .page_main header .tab_menu.line {
-    justify-content: center;
-  }
-}
-.page_main header .tab_menu.line ul .tab_list {
-  padding: 0 12px;
-}
-.page_main header .tab_menu.line ul .tab_list:first-child {
-  margin-left: 8px;
-  padding-left: 12px;
-}
-.page_main header .tab_menu.line ul .tab_list:last-child {
-  margin-right: 8px;
-}
-.page_main header .tab_menu.line ul .tab_list.current::after {
-  width: calc(100% - 24px);
 }
 .page_main section {
   margin: 0 0 60px 0;
