@@ -6054,6 +6054,13 @@ footer .f_company {
 .prd_list_sm .prd_box .prd .info, .gift_list .prd_box .prd .info {
   flex-grow: 1;
 }
+.prd_list_sm .prd_box .prd .info .amount, .gift_list .prd_box .prd .info .amount {
+  margin-top: 4px;
+}
+.prd_list_sm .prd_box .prd .info .price, .gift_list .prd_box .prd .info .price {
+  padding: 4px 0 5px;
+  margin-top: 3px;
+}
 .prd_list_sm .prd_box .bottom, .gift_list .prd_box .bottom {
   position: absolute;
   right: 0;

@@ -233,6 +233,13 @@
       }
       .info {
         flex-grow: 1;
+        .amount {
+          margin-top: 4px;
+        }
+        .price {
+          padding: 4px 0 5px;
+          margin-top: 3px;
+        }
       }
     }
     .bottom {
