@@ -6632,32 +6632,6 @@ footer .f_company {
   width: 100%;
 }
 
-.swiper-container .prd_list_lg.swiper-wrapper {
-  margin-left: 0 !important;
-}
-.swiper-container .prd_list_lg .prd_box.swiper-slide {
-  padding-left: 0;
-}
-.swiper-container .prd_list_lg .prd_box.swiper-slide .prd .info {
-  height: 117px;
-}
-.swiper-container .prd_list_lg .prd_box .bottom .btn_icon {
-  font-size: 0;
-  gap: 0;
-  padding: 6px;
-}
-.swiper-container .prd_list_sm.xs, .swiper-container .xs.gift_list {
-  flex-wrap: nowrap;
-  gap: 0;
-}
-.swiper-container .prd_list_sm.xs .prd_box .amount, .swiper-container .xs.gift_list .prd_box .amount {
-  display: block;
-}
-.swiper-container .prd_list_sm.xs .prd_box .price, .swiper-container .xs.gift_list .prd_box .price {
-  display: block;
-  margin: 12px 0 0 0;
-}
-
 @media (min-width: 1024px) {
   .prd_top_info {
     padding-top: 40px;
