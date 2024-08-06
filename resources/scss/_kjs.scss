@@ -299,9 +299,10 @@
 .prd_cart_btn {
   position: fixed;
   left: 50%;
-  bottom: 106px;
+  bottom: 126px;
   transform: translateX(-50%);
   text-align: center;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
   .btn_bottom {
     display: block;
     width: 200px;
