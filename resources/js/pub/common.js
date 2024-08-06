@@ -695,7 +695,7 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
     let toEl = clickTab.find('.tab_list').length > 0 && $('.toCont').eq(idx);
     $("html, body").animate({
       scrollTop : toEl.offset().top - (headerH + userAreaH)
-    },500)
+    },500, 'easeOutBounce')
   })
 }
 
