@@ -5945,7 +5945,7 @@ footer .f_company {
 .prd_box .prd .colorchip, .prd_box .prd .detail {
   display: flex;
   align-items: flex-start;
-  margin-top: 6px;
+  margin-top: 4px;
   gap: 2px;
   color: #777777;
   font-size: 0.875rem;
@@ -5966,9 +5966,6 @@ footer .f_company {
   margin-top: 2px;
   border-radius: 100%;
   object-fit: cover;
-}
-.prd_box .prd .detail {
-  margin-top: 4px;
 }
 .prd_box .bottom {
   display: flex;
