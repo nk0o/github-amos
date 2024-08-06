@@ -34,7 +34,7 @@
         text-align: center;
         white-space: nowrap;
         cursor: pointer;
-        @include fontStyle($gray-600, $fs-s, $fw-m, 1.5);
+        @include fontStyle($gray-600, $fs-m, $fw-m, 1.5);
         //font-family: $font-aritadt;
       }
       &.current {
@@ -52,6 +52,7 @@
     background-color: $gray-50;
     button, a{
       padding: 0 20px;
+      font-size: $fs-s;
       color:$gray-800;
     }
     .tab_list{
@@ -203,6 +204,7 @@
           }
           button, a{
             padding: 0;
+            font-size: $fs-sm;
           }
         }
       }

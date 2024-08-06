@@ -66,12 +66,12 @@
           &:last-child{
             margin-right: 8px;
           }
+          button, a{
+            font-size: $fs-m;
+            line-height: 1.5;
+          }
         }
       }
-    }
-    .tab_list button{
-      font-size: $fs-m;
-      line-height: 1.5;
     }
   }
 }

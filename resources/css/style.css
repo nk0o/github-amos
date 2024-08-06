@@ -3521,7 +3521,7 @@ select {
   white-space: nowrap;
   cursor: pointer;
   color: #888888;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -3535,6 +3535,7 @@ select {
 }
 .tab_menu.contain_tab button, .tab_menu.contain_tab a {
   padding: 0 20px;
+  font-size: 0.875rem;
   color: #666666;
 }
 .tab_menu.contain_tab .tab_list.current {
@@ -3675,6 +3676,7 @@ select {
 }
 .tab_center_wrap .tab_center.line ul .tab_list button, .tab_center_wrap .tab_center.line ul .tab_list a {
   padding: 0;
+  font-size: 0.9375rem;
 }
 
 @media (min-width: 1024px) {
@@ -4940,7 +4942,7 @@ div.dataTables_wrapper .btn_floating:focus {
 .appbar_tabmenu .tab_menu.line ul .tab_list:last-child {
   margin-right: 8px;
 }
-.appbar_tabmenu .tab_list button {
+.appbar_tabmenu .tab_menu.line ul .tab_list button, .appbar_tabmenu .tab_menu.line ul .tab_list a {
   font-size: 1rem;
   line-height: 1.5;
 }
