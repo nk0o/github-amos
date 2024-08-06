@@ -5904,17 +5904,9 @@ footer .f_company {
   font-weight: 600;
   color: #222222;
   line-height: 1.25rem;
-}
-.prd_box .prd .desc {
-  display: block;
-  margin-top: 4px;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #444444;
-  line-height: 1.0625rem;
   white-space: normal;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   word-wrap: normal;
@@ -5923,6 +5915,7 @@ footer .f_company {
 .prd_box .prd .amount {
   display: block;
   margin-top: 6px;
+  margin-bottom: 12px;
   color: #777777;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   font-size: 0.8125rem;
@@ -5959,6 +5952,13 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.2142;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  overflow: hidden;
 }
 .prd_box .prd .colorchip img, .prd_box .prd .detail img {
   width: 14px;
@@ -6011,7 +6011,7 @@ footer .f_company {
 .prd_list_lg .prd_box {
   position: relative;
   width: calc((100% - 9px) / 2);
-  height: 362px;
+  min-height: 330px;
 }
 .prd_list_lg .prd_box .prd {
   position: relative;
@@ -6021,28 +6021,16 @@ footer .f_company {
   background-color: #f6f6f6;
 }
 .prd_list_lg .prd_box .prd .info {
+  display: flex;
+  flex-direction: column;
+  height: 145px;
   margin-top: 12px;
-}
-.prd_list_lg .prd_box .prd .info .tit {
-  display: block;
-  white-space: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  word-wrap: normal;
-  overflow: hidden;
 }
 .prd_list_lg .prd_box .prd .info .price {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-top: 12px;
+  margin-top: auto;
 }
 .prd_list_lg .prd_box .bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  margin-top: 10px;
 }
 
 .prd_list_sm .prd_box, .gift_list .prd_box {
@@ -6652,6 +6640,9 @@ footer .f_company {
 }
 .swiper-container .prd_list_lg .prd_box.swiper-slide {
   padding-left: 0;
+}
+.swiper-container .prd_list_lg .prd_box.swiper-slide .prd .info {
+  height: 117px;
 }
 .swiper-container .prd_list_lg .prd_box .bottom .btn_icon {
   font-size: 0;
