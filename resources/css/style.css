@@ -2298,6 +2298,7 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_bottom .count {
   margin-left: -4px;
+  font-weight: 400;
 }
 .btn_floating {
   display: block;
@@ -3717,7 +3718,7 @@ select {
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.3333;
+  line-height: 21px;
   text-align: center;
 }
 .badge.bg_light {
@@ -3784,7 +3785,7 @@ select {
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.3333;
+  line-height: 21px;
   text-align: center;
   height: 18px;
   min-width: 18px;
@@ -3921,6 +3922,7 @@ th {
   border-left: none;
 }
 .tbl tbody td {
+  font-family: "Arita-dotum";
   color: #666;
   font-size: 13px;
   font-weight: 400;
@@ -5853,7 +5855,7 @@ footer .f_company {
 }
 .prd_cont .prd_list_top .count span em {
   color: #222222;
-  font-weight: 600;
+  font-weight: 400;
 }
 .prd_cont .view_type {
   display: flex;
@@ -6098,6 +6100,7 @@ footer .f_company {
 .prd_list_sm.xs .prd_box .prd .color_num, .xs.gift_list .prd_box .prd .color_num {
   display: block;
   margin-top: 6px;
+  font-family: "Arita-dotum";
 }
 .prd_list_sm.xs .prd_box .bottom, .xs.gift_list .prd_box .bottom {
   position: static;
@@ -6550,6 +6553,7 @@ footer .f_company {
 .prd_top_info .prd_info .vol {
   display: block;
   margin-top: 4px;
+  font-family: "Arita-dotum";
   color: #444444;
   font-size: 0.9375rem;
   font-weight: 400;
@@ -6914,6 +6918,7 @@ footer .f_company {
 .info_box .info_list li {
   padding: 10px 8px;
   color: #666;
+  font-family: "Arita-dotum";
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -6921,6 +6926,7 @@ footer .f_company {
 .info_box .info_list li em {
   display: block;
   color: #444;
+  font-family: "Arita-dotum";
   font-size: 13px;
   font-weight: 600;
   line-height: 18px;
@@ -7216,6 +7222,7 @@ footer .f_company {
 }
 .edu_list > li .tit {
   display: block;
+  font-family: "Arita-dotum";
   color: #222222;
   font-size: 0.9375rem;
   font-weight: 600;
@@ -7278,6 +7285,7 @@ footer .f_company {
 }
 .edu_detail .detail_top .tit {
   display: block;
+  font-family: "Arita-dotum";
   color: #222222;
   font-size: 1.125rem;
   font-weight: 600;
@@ -7287,6 +7295,7 @@ footer .f_company {
   margin-bottom: 24px;
 }
 .edu_detail .detail_cont p {
+  font-family: "Arita-dotum";
   color: #444444;
   font-size: 1rem;
   font-weight: 400;
@@ -7309,13 +7318,14 @@ footer .f_company {
   background-color: #F6F6F6;
 }
 .file_wrap .file .name {
+  font-family: "Arita-dotum";
   color: #222222;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 19px;
 }
 
-.edu_regist {
+.edu_regist .accord_list {
   margin: 0 -20px;
 }
 .edu_regist .accord_list .accord_head {
@@ -7380,19 +7390,19 @@ footer .f_company {
   font-weight: 600;
   line-height: 20px;
 }
-.edu_regist_box .top .cate {
+.edu_regist_box .cate {
   font-size: 0;
 }
-.edu_regist_box .top .cate span {
+.edu_regist_box .cate span {
   color: #444444;
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 18px;
 }
-.edu_regist_box .top .cate i {
+.edu_regist_box .cate i {
   vertical-align: -3px;
 }
-.edu_regist_box .top .cate em {
+.edu_regist_box .cate em {
   color: #444444;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -7401,11 +7411,18 @@ footer .f_company {
 .edu_regist_box .cont {
   padding: 20px;
 }
-.edu_regist_box .cont .tit {
-  display: block;
+.edu_regist_box .cont .edu_regist_tit {
   padding-bottom: 16px;
   margin-bottom: 16px;
   border-bottom: 1px solid #eee;
+}
+.edu_regist_box .cont .tit {
+  display: block;
+  font-family: "Arita-dotum";
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 22px;
 }
 .edu_regist_box .cont dl {
   display: grid;
@@ -7421,7 +7438,7 @@ footer .f_company {
 .edu_regist_box .cont dl dd {
   color: #777777;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 20px;
 }
 .edu_regist_box.end .top {
@@ -7432,6 +7449,17 @@ footer .f_company {
 }
 .edu_regist_box.end .cont {
   opacity: 0.7;
+}
+
+.edu_regist_tit .dday {
+  margin-bottom: 5px;
+  color: #1A63D9;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+}
+.edu_regist_tit .cate {
+  margin-top: 8px;
 }
 
 .sticky_tab {

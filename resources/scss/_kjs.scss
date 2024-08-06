@@ -28,7 +28,7 @@
       span {
         em {
           color: $gray-950;
-          font-weight: $fw-sb;
+          font-weight: $fw-m;
         }
       }
     }
@@ -275,6 +275,7 @@
         .color_num {
           display: block;
           margin-top: 6px;
+          font-family: 'Arita-dotum';
         }
       }
       .bottom {
@@ -757,6 +758,7 @@
     .vol {
       display: block;
       margin-top: 4px;
+      font-family: 'Arita-dotum';
       @include fontStyle($gray-900, $fs-sm, $fw-m, 20px);
     }
     .summary {
@@ -1151,12 +1153,14 @@
     li {
       padding: 10px 8px;
       color: #666;
+      font-family: 'Arita-dotum';
       font-size: 13px;
       font-weight: $fw-m;
       line-height: 18px;
       em {
         display: block;
         color: #444;
+        font-family: 'Arita-dotum';
         font-size: 13px;
         font-weight: $fw-sb;
         line-height: 18px;
@@ -1468,6 +1472,7 @@
     }
     .tit {
       display: block;
+      font-family: 'Arita-dotum';
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
       white-space: normal;
       display: -webkit-box;
@@ -1520,6 +1525,7 @@
     }
     .tit {
       display: block;
+      font-family: 'Arita-dotum';
       @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
     }
   }
@@ -1528,6 +1534,7 @@
       margin-bottom: 24px;
     }
     p {
+      font-family: 'Arita-dotum';
       @include fontStyle($gray-900, $fs-m, $fw-m, 24px);
     }
   }
@@ -1549,14 +1556,15 @@
     border-radius: 4px;
     background-color: #F6F6F6;
     .name {
+      font-family: 'Arita-dotum';
       @include fontStyle($gray-950, $fs-s, $fw-m, 19px);
     }
   }
 }
 
 .edu_regist {
-  margin: 0 -20px;
   .accord_list {
+    margin: 0 -20px;
     .accord_head {
       padding: 0 20px;
       border-bottom: 8px solid #F6F6F6;
@@ -1612,26 +1620,30 @@
     .state {
       @include fontStyle(#1A63D9, $fs-sm, $fw-sb, 20px);
     }
-    .cate {
-      font-size: 0;
-      span {
-        @include fontStyle($gray-900, $fs-xs, $fw-m, 18px);
-      }
-      i {
-        vertical-align: -3px;
-      }
-      em {
-        @include fontStyle($gray-900, $fs-xs, $fw-sb, 18px);
-      }
+  }
+  .cate {
+    font-size: 0;
+    span {
+      @include fontStyle($gray-900, $fs-xs, $fw-m, 18px);
+    }
+    i {
+      vertical-align: -3px;
+    }
+    em {
+      @include fontStyle($gray-900, $fs-xs, $fw-sb, 18px);
     }
   }
   .cont {
     padding: 20px;
-    .tit {
-      display: block;
+    .edu_regist_tit {
       padding-bottom: 16px;
       margin-bottom: 16px;
       border-bottom: 1px solid #eee;
+    }  
+    .tit {
+      display: block;
+      font-family: 'Arita-dotum';
+      @include fontStyle($gray-950, $fs-ml, $fw-sb, 22px);
     }
     dl {
       display: grid;
@@ -1641,7 +1653,7 @@
         @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
       }
       dd {
-        @include fontStyle($gray-700, $fs-s, $fw-m, 20px);
+        @include fontStyle($gray-700, $fs-s, $fw-l, 20px);
       }
     }
   }
@@ -1655,6 +1667,15 @@
     .cont {
       opacity: 0.7;
     }
+  }
+}
+.edu_regist_tit {
+  .dday {
+    margin-bottom: 5px;
+    @include fontStyle(#1A63D9, $fs-m, $fw-b, 24px);
+  }
+  .cate {
+    margin-top: 8px;
   }
 }
 
