@@ -89,6 +89,13 @@
       font-weight: $fw-sb;
       color: $gray-950;
       line-height: 1.25rem;
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+      overflow: hidden;
     }
     .amount {
       display: block;
@@ -188,14 +195,7 @@
         height: 145px;
         margin-top: 12px;
         .tit {
-          display: block;
-          white-space: normal;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          word-wrap: normal;
-          overflow: hidden;
+          // display: block;
         }
         .price {
           margin-top: auto;

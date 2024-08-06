@@ -5904,6 +5904,13 @@ footer .f_company {
   font-weight: 600;
   color: #222222;
   line-height: 1.25rem;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  overflow: hidden;
 }
 .prd_box .prd .amount {
   display: block;
@@ -6018,16 +6025,6 @@ footer .f_company {
   flex-direction: column;
   height: 145px;
   margin-top: 12px;
-}
-.prd_list_lg .prd_box .prd .info .tit {
-  display: block;
-  white-space: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  word-wrap: normal;
-  overflow: hidden;
 }
 .prd_list_lg .prd_box .prd .info .price {
   margin-top: auto;
