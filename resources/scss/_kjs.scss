@@ -100,7 +100,6 @@
     .amount {
       display: block;
       margin-top: 6px;
-      margin-bottom: 12px;
       color: $gray-700;
       font-family: $font-aritadt;
       font-size: $fs-xs;
@@ -150,7 +149,7 @@
       }
     }
   }
-  
+
   .bottom {
     display: flex;
     gap: 12px;
@@ -190,7 +189,7 @@
       .info {
         display: flex;
         flex-direction: column;
-        height: 145px;
+        height: 117px;
         margin-top: 12px;
         .tit {
           // display: block;
@@ -836,11 +835,6 @@
     .prd_box {
       &.swiper-slide {
         padding-left: 0;
-        .prd {
-          .info {
-            height: 117px;
-          }
-        }
       }
       .bottom {
         .btn_icon {
