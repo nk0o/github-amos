@@ -5427,6 +5427,7 @@ footer .f_company {
 .sec_product.is_noBack .prd_box.swiper-slide {
   min-width: 150px;
   padding: 0;
+  margin-left: 0;
 }
 
 .page_main {
