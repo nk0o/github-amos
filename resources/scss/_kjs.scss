@@ -1646,3 +1646,13 @@
   }
 }
 
+.page_edu {
+  .round_tab {
+    &+.tab_cont {
+      padding-bottom: 30px;
+      .btn_group {
+        padding:60px 0 0;
+      }
+    }
+  }
+}
