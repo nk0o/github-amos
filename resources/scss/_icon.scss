@@ -403,6 +403,11 @@
       }
     }
   }
+  &_share {
+    &::before {
+      @include iconImgPath("ico_share.svg");
+    }
+  }
 }
 .ico_btn { 
   &_cart{

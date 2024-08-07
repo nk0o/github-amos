@@ -2025,6 +2025,20 @@ p {
     background-image: none;
   }
 }
+.ico_share::before {
+  background-image: url("../images/icon/ico_share.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_share::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_share.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 
 .ico_btn_cart::before {
   background-image: url("../images/icon/ico_btn_cart.svg");
@@ -3756,7 +3770,7 @@ select {
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 21px;
+  line-height: 1.3333;
   text-align: center;
 }
 .badge.bg_light {
@@ -3823,7 +3837,7 @@ select {
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 21px;
+  line-height: 1.3333;
   text-align: center;
   height: 18px;
   min-width: 18px;
@@ -3831,7 +3845,7 @@ select {
   border-radius: 20px;
   color: #ffffff;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
 }
 .badge_dot {
@@ -7440,24 +7454,6 @@ footer .f_company {
   font-weight: 600;
   line-height: 20px;
 }
-.edu_regist_box .cate {
-  font-size: 0;
-}
-.edu_regist_box .cate span {
-  color: #444444;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 18px;
-}
-.edu_regist_box .cate i {
-  vertical-align: -3px;
-}
-.edu_regist_box .cate em {
-  color: #444444;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 18px;
-}
 .edu_regist_box .cont {
   padding: 20px;
 }
@@ -7465,14 +7461,6 @@ footer .f_company {
   padding-bottom: 16px;
   margin-bottom: 16px;
   border-bottom: 1px solid #eee;
-}
-.edu_regist_box .cont .tit {
-  display: block;
-  font-family: "Arita-dotum";
-  color: #222222;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 22px;
 }
 .edu_regist_box .cont dl {
   display: grid;
@@ -7501,6 +7489,21 @@ footer .f_company {
   opacity: 0.7;
 }
 
+.edu_regist_tit {
+  position: relative;
+}
+.edu_regist_tit .tit {
+  display: flex;
+  gap: 8px;
+  font-family: "Arita-dotum";
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 26px;
+}
+.edu_regist_tit .tit .badge {
+  margin-top: 4px;
+}
 .edu_regist_tit .dday {
   margin-bottom: 5px;
   color: #1A63D9;
@@ -7508,15 +7511,121 @@ footer .f_company {
   font-weight: 700;
   line-height: 24px;
 }
-.edu_regist_tit .cate {
+.edu_regist_tit .edu_cate {
   margin-top: 8px;
 }
 
+.page_edu:has(.btm_bar) {
+  padding-bottom: 133px;
+}
+.page_edu .order_accord .accord_cont:first-child {
+  margin-top: 20px;
+}
+.page_edu .txt_notice_wrap {
+  padding: 8px 20px 0;
+}
+.page_edu .txt_notice_wrap button {
+  font-weight: 600;
+  color: #444;
+  vertical-align: top;
+}
+.page_edu .edu_cate {
+  font-size: 0;
+}
+.page_edu .edu_cate span {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 18px;
+}
+.page_edu .edu_cate i {
+  vertical-align: -3px;
+}
+.page_edu .edu_cate em {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 18px;
+}
 .page_edu .round_tab + .tab_cont {
   padding-bottom: 30px;
 }
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
+}
+
+.edu_detail_top {
+  padding: 24px 0 32px;
+}
+
+.edu_regist_tit .btn_share {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.edu_info_box {
+  padding: 20px;
+  margin-top: 28px;
+  border-radius: 8px;
+  background: #EFF6FF;
+}
+.edu_info_box dl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 12px 16px;
+}
+.edu_info_box dl dt {
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.edu_info_box dl dd {
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  color: #777;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.edu_desc_wrap {
+  padding: 32px 0;
+}
+.edu_desc_wrap > ul > li + li {
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.edu_desc_wrap > ul > li .tit {
+  display: block;
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.edu_desc_wrap > ul > li .txt {
+  color: #444;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.edu_desc_wrap > ul > li .txt + .txt {
+  margin-top: 8px;
+}
+.edu_desc_wrap > ul > li .list li {
+  color: #444;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  text-indent: -35px;
+  margin-left: 35px;
+}
+.edu_desc_wrap > ul > li .list li + li {
+  margin-top: 8px;
 }
 
 .sticky_tab {
