@@ -6031,7 +6031,7 @@ footer .f_company {
 .prd_box .prd .colorchip img, .prd_box .prd .detail img {
   width: 14px;
   height: 14px;
-  margin-top: 2px;
+  margin: 2px 2px 0 0;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -6314,7 +6314,16 @@ footer .f_company {
   }
 }
 .cate_brand.accord_list {
+  background-color: #ffffff;
   padding-bottom: 0;
+}
+.cate_brand.accord_list::after {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  padding-top: 32px;
+  background-color: #000000;
 }
 .cate_brand.accord_list li {
   background-image: none;

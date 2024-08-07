@@ -1,5 +1,21 @@
 //모바일체크
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+$(document).ready(function() {
+  checkIsMobile();
+  let timer = null;
+    $(window).resize(function() {
+      clearTimeout(timer);
+      timer = setTimeout(checkIsMobile, 100);
+      console.log(isMobile);
+    });
+});
+function checkIsMobile(){
+  if ($(window).width() < 1024) {
+    return  isMobile = true;
+  }else{
+    return  isMobile = false;
+  }
+}
 $(document).ready(function () {
   if ($(".line_tab")) { LineTabMenuInit() }
   if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
@@ -230,6 +246,9 @@ $(document).ready(function () {
 /****** Select Box ******/
 function selectBoxUI(){
   $('.select_box_value').click(function (e) {
+    if(isMobile && $(this)[0].hasAttribute('data-btmsheet')) {
+      return false;
+    }
     const t = $(this);
     if ($(this).parents('.select_box').hasClass('on')) {
       dropDownClose(t);
@@ -494,12 +513,13 @@ function modalUI(){
 }
 
 function bottomSheetUI(){
-  $('[data-btmsheet]').click(function() {
+  $('[data-btmsheet]').on('click touch',function() {
     if(isMobile){
       $("#"+ $(this).data('btmsheet')).addClass('show');
     }
   });
-  $('.btm_sheet_close').click(function() {
+  $('.btm_sheet_close, .btm_sheet_back').on('click touch',function() {
+    console.log('dk');
     $(this).parents('.btm_sheet').removeClass('show')
   });
 }
