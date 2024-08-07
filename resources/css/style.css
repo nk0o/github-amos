@@ -5800,7 +5800,7 @@ footer .f_company {
   height: 132px;
   color: #ffffff;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4166;
 }
 .cate_brand li + li {
@@ -6286,9 +6286,6 @@ footer .f_company {
 }
 .cate_brand.accord_list .accord_cont .prd_box .prd .tit {
   white-space: normal;
-}
-.cate_brand.accord_list > li:last-child .accord_cont {
-  padding-bottom: 88px;
 }
 
 @media (min-width: 1024px) {
