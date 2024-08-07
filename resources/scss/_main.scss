@@ -316,7 +316,7 @@
         position: relative;
         @include flexCenter;
         height: 132px;
-        @include fontStyle($color-white, $fs-lg, $fw-b, 1.4166);
+        @include fontStyle($color-white, $fs-lg, $fw-sb, 1.4166);
         // &::before{
         //   z-index: -1;
         //   content: '';
@@ -355,7 +355,7 @@
   .thumb_list{
     gap: 16px 5px;
     & > li{
-      margin-left: 0;
+      margin: 0;
       width: auto;
       flex: 0 0 calc((100% - 15px)/4);
       @media (max-width: $mo-point) {
@@ -367,6 +367,7 @@
       li{
         flex: 1;
         max-width: 80px;
+
       }
     }
   }
