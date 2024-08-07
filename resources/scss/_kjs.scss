@@ -1588,18 +1588,6 @@
       @include fontStyle(#1A63D9, $fs-sm, $fw-sb, 20px);
     }
   }
-  .cate {
-    font-size: 0;
-    span {
-      @include fontStyle($gray-900, $fs-xs, $fw-m, 18px);
-    }
-    i {
-      vertical-align: -3px;
-    }
-    em {
-      @include fontStyle($gray-900, $fs-xs, $fw-sb, 18px);
-    }
-  }
   .cont {
     padding: 20px;
     .edu_regist_tit {
@@ -1607,11 +1595,6 @@
       margin-bottom: 16px;
       border-bottom: 1px solid #eee;
     }  
-    .tit {
-      display: block;
-      font-family: 'Arita-dotum';
-      @include fontStyle($gray-950, $fs-ml, $fw-sb, 22px);
-    }
     dl {
       display: grid;
       grid-template-columns: 100px 1fr;
@@ -1637,16 +1620,54 @@
   }
 }
 .edu_regist_tit {
+  position: relative;
+  .tit {
+    display: flex;
+    gap: 8px;
+    font-family: 'Arita-dotum';
+    @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
+    .badge {
+      margin-top: 4px;
+    }
+  }
   .dday {
     margin-bottom: 5px;
     @include fontStyle(#1A63D9, $fs-m, $fw-b, 24px);
   }
-  .cate {
+  .edu_cate {
     margin-top: 8px;
   }
 }
 
 .page_edu {
+  &:has(.btm_bar) {
+    padding-bottom: 133px;
+  }
+  .order_accord {
+    .accord_cont:first-child {
+      margin-top: 20px;
+    }
+  }
+  .txt_notice_wrap {
+    padding: 8px 20px 0;
+    button {
+      font-weight: $fw-sb;
+      color: #444;
+      vertical-align: top;
+    }
+  }
+  .edu_cate {
+    font-size: 0;
+    span {
+      @include fontStyle($gray-900, $fs-xs, $fw-m, 18px);
+    }
+    i {
+      vertical-align: -3px;
+    }
+    em {
+      @include fontStyle($gray-900, $fs-xs, $fw-sb, 18px);
+    }
+  }
   .round_tab {
     &+.tab_cont {
       padding-bottom: 30px;
@@ -1657,3 +1678,82 @@
   }
 }
 
+.edu_detail_top {
+  padding: 24px 0 32px;
+}
+.edu_regist_tit {
+  .btn_share {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.edu_info_box {
+  padding: 20px;
+  margin-top: 28px;
+  border-radius: 8px;
+  background:#EFF6FF;
+  dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 16px;
+    dt {
+      color: #222;
+      font-size: 15px;
+      font-weight: $fw-sb;
+      line-height: 20px;
+    }
+    dd {
+      font-family: $font-aritadt;
+      color: #777;
+      font-size: 15px;
+      font-weight: $fw-m;
+      line-height: 20px;
+    }
+  }
+}
+
+.edu_desc_wrap {
+  padding: 32px 0;
+  >ul {
+    >li {
+      &+li {
+        border-top: 1px solid #eee;
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+      .tit {
+        display: block;
+        margin-bottom: 8px;
+        color: #222;
+        font-size: 16px;
+        font-weight: $fw-b;
+        line-height: 24px;
+      }
+      .txt {
+        color: #444;
+        font-family: $font-aritadt;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        &+.txt {
+          margin-top: 8px;
+        }
+      }
+      .list {
+        li {
+          color: #444;
+          font-family: $font-aritadt;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 22px;
+          text-indent: -35px;
+          margin-left: 35px;
+          &+li {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
