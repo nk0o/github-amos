@@ -358,6 +358,15 @@
       border-radius: 8px;
       flex-direction: row;
       align-items: center;
+      gap: 4px;
+      .txt_extra{
+        margin-right: auto;
+      }
+      [class*="ico_"]{
+        &::before{
+          background: $color-blue !important;
+        }
+      }
     }
   }
   .txt_extra{
@@ -401,8 +410,8 @@
 .order_price{
   &_area{
     border-top: 8px solid $gray-50;
-    margin-bottom: $btmbar-H;
-    padding: 32px 0px 40px;
+    margin-bottom: calc($btmbar-H + 12px);
+    padding: 32px 0px 28px;
   }
   .price{
     &_sum, &_by li, &_total{
@@ -446,7 +455,7 @@
       }
       li{
         margin-bottom: 4px;
-        @include fontStyle($gray-600, $fs-s, $fw-m, 1.35714);
+        @include fontStyle($gray-600, $fs-s, $fw-l, 1.35714);
         em{
           @include fontStyle(inherit, $fs-s, $fw-l, 1.2143);
         }
@@ -523,6 +532,7 @@
       .prd_box .prd {
         .price{
           margin-top: 12px;
+          padding: 0;
           @include fontStyle($gray-950, $fs-sm, $fw-m, 1.2);
           span{
             @include fontStyle($gray-950, $fs-xs, $fw-b, 1.384);
@@ -542,6 +552,11 @@
           min-height: auto;
           min-width: auto;
           margin-top: 2px;
+        }
+        .colorchip, .detail, .amount{
+          display: block;
+          margin-top: 6px;
+          @include fontStyle($gray-700, $fs-xs, $fw-m, 1.2142);
         }
       }
       @media (min-width: $pc-point) {

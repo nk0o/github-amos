@@ -1356,6 +1356,20 @@ p {
 }
 
 /* Commerce */
+.ico_promotion::before {
+  background-image: url("../images/icon/ico_promotion.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_promotion::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_promotion.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_point::before {
   background-image: url("../images/icon/ico_point.svg");
   background-size: cover;
@@ -7914,6 +7928,13 @@ footer .f_company {
   border-radius: 8px;
   flex-direction: row;
   align-items: center;
+  gap: 4px;
+}
+.order_bnr_area .order_bnr .txt_extra {
+  margin-right: auto;
+}
+.order_bnr_area .order_bnr [class*=ico_]::before {
+  background: #1A63D9 !important;
 }
 .order_bnr .txt_extra {
   display: block;
@@ -7970,8 +7991,8 @@ footer .f_company {
 
 .order_price_area {
   border-top: 8px solid #f6f6f6;
-  margin-bottom: 90px;
-  padding: 32px 0px 40px;
+  margin-bottom: 102px;
+  padding: 32px 0px 28px;
 }
 .order_price .price_sum, .order_price .price_by li, .order_price .price_total {
   display: -webkit-box;
@@ -8034,7 +8055,7 @@ footer .f_company {
   margin-bottom: 4px;
   color: #888888;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.35714;
 }
 .order_price .price_by li em {
@@ -8138,6 +8159,7 @@ footer .f_company {
 }
 .cart_list .prd_list_sm .prd_box .prd .price, .cart_list .gift_list .prd_box .prd .price {
   margin-top: 12px;
+  padding: 0;
   color: #222222;
   font-size: 0.9375rem;
   font-weight: 400;
@@ -8169,6 +8191,14 @@ footer .f_company {
   min-height: auto;
   min-width: auto;
   margin-top: 2px;
+}
+.cart_list .prd_list_sm .prd_box .prd .colorchip, .cart_list .gift_list .prd_box .prd .colorchip, .cart_list .prd_list_sm .prd_box .prd .detail, .cart_list .gift_list .prd_box .prd .detail, .cart_list .prd_list_sm .prd_box .prd .amount, .cart_list .gift_list .prd_box .prd .amount {
+  display: block;
+  margin-top: 6px;
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.2142;
 }
 @media (min-width: 1024px) {
   .cart_list .prd_list_sm .prd_box, .cart_list .gift_list .prd_box {

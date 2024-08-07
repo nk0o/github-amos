@@ -628,15 +628,19 @@ function PrdSlider(){
     let hasIsNoBack = swiperContainer && swiperContainer.parents('.sec_product').hasClass('is_noBack');
     let slidesPerViewValue = hasIsNoBack ? 2.26 : 2.47;
     let spaceBetweenValue = hasIsNoBack ? 8 : 0;
-  
+    //let slidesOffsetAfterValue = /iPhone/i.test(navigator.userAgent) && hasIsNoBack ? 80 : 0;
+    
     // Swiper 초기화
     let PrdSwiper = new Swiper(sliderId, {
-      autoHeight: true,
+      //autoHeight: true,
       slidesPerView: slidesPerViewValue,
       spaceBetween: spaceBetweenValue,
+      //slidesOffsetAfter : slidesOffsetAfterValue,
       pagination: {
         el: sliderId + " .swiper-pagination",
       },
+      observer: true,
+      observeParents: true,
       breakpoints: {
         1024: {
           slidesPerView: 5,

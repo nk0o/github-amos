@@ -67,7 +67,7 @@
                       <div class="img"><img src="../../resources/images/contents/img_color_type04.png" alt=""></div>
                       <div class="info">
                         <strong class="tit">트루싱크 트루싱크</strong>
-                        <span class="colorchip">7NB - 내추럴 브라운</span>
+                        <span class="detail">7NB - 내추럴 브라운</span>
                         <div class="price"><em>2</em><span>개 구성</span></div>
                         <div class="cart_qnty is_control"><!-- 선택박스 있는경우: is_control -->
                           <div class="spinner">
@@ -109,8 +109,8 @@
                     <div class="prd">
                       <div class="img"><img src="../../resources/images/contents/img_color_type03.png" alt=""></div>
                       <div class="info">
-                        <strong class="tit">퓨어스마트 샴푸 프레시</strong>
-                        <span class="colorchip">7NB - 내추럴 브라운 </span>
+                        <strong class="tit">칼라 앤 펌 샴퓨</strong>
+                        <span class="detail">1000g</span>
                         <div class="price"><em>27,500</em><span>원</span></div>
                         <div class="cart_qnty is_control"><!-- 선택박스 있는경우: is_control -->
                           <div class="spinner">
@@ -137,7 +137,7 @@
             <ul class="price_by">
               <li class="ico_bnr_line">잔여 포인트<em>30,000</em>P</li>
             </ul>
-            <div class="price_total">사용 포인트<em>70,000</em>P</div>
+            <div class="price_total">사용 포인트<em>70,000P</em></div><!-- "P"는 em 안/"원"은 em 밖 -->
           </div><!-- //.order_price -->
         </div><!-- //.inner -->
       </section><!-- //.order_price_area -->
@@ -151,5 +151,14 @@
     </a>
     <!-- //tabBar -->
   </div>
+  
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("장바구니")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
 </body>
 </html>

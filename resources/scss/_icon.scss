@@ -140,6 +140,11 @@
 }
 /* Commerce */
 .ico {
+  &_promotion {
+    &::before {
+      @include iconImgPath("ico_promotion.svg");
+    }
+  }
   &_point {
     &::before {
       @include iconImgPath("ico_point.svg");
