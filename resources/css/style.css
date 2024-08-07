@@ -3610,6 +3610,37 @@ select {
 .tab_menu.line_tab.is_scroll .tab_list button, .tab_menu.line_tab.is_scroll .tab_list a {
   padding: 0;
 }
+.tab_menu.round_tab {
+  padding: 24px 0 20px;
+}
+.tab_menu.round_tab.dark .tab_list button {
+  border-color: #eee;
+  background: #eee;
+  color: #777;
+}
+.tab_menu.round_tab.dark .tab_list.current button {
+  border-color: #2A3136;
+  background: #2A3136;
+  color: #fff;
+}
+.tab_menu.round_tab > ul {
+  gap: 8px;
+}
+.tab_menu.round_tab .tab_list button {
+  height: 35px;
+  padding: 0 12px;
+  border-radius: 50px;
+  border: 1px solid #E2E2E2;
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 35px;
+}
+.tab_menu.round_tab .tab_list.current button {
+  border-color: #222;
+  color: #222;
+  font-weight: 600;
+}
 
 .tab_center_wrap .tab_center {
   white-space: nowrap;
@@ -7467,6 +7498,13 @@ footer .f_company {
   margin-top: 8px;
 }
 
+.page_edu .round_tab + .tab_cont {
+  padding-bottom: 30px;
+}
+.page_edu .round_tab + .tab_cont .btn_group {
+  padding: 60px 0 0;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
@@ -7960,6 +7998,9 @@ footer .f_company {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.444;
+}
+.order_price .price_sum + .price_sum {
+  margin-top: 12px;
 }
 .order_price .price_total {
   margin-top: 16px;

@@ -419,6 +419,9 @@
       em{
         @include fontStyle(inherit, $fs-ml, $fw-m, 1.444);
       }
+      &+.price_sum {
+        margin-top: 12px;
+      }
     }
     &_total{
       margin-top: 16px;
