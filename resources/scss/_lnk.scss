@@ -541,6 +541,21 @@
           margin-top: 2px;
         }
       }
+      @media (min-width: $pc-point) {
+        .prd_box{
+          width: 100%;
+          .prd{
+            .price{
+              &, &.prd_sum{
+                position: static;
+              }
+              &.prd_sum{
+                justify-content: end;
+              }
+            }
+          }
+        }
+      }
     }
     .order_bnr{
       margin-top: 16px;
@@ -713,6 +728,7 @@
 }
 .gift_list{
   @extend .prd_list_sm;
+  width: 100%;
   .prd{
     .info{
       white-space: normal;
@@ -725,6 +741,7 @@
     }
   }
   .prd_box{
+    width: 100%;
     .prd{
       .img{
         min-width: 60px !important;
@@ -752,6 +769,12 @@
   }
   .cart_check{
     align-items: flex-start;
+  }
+}
+.modal_container {
+  .gift_list{
+    display: block;
+    width: 100%;
   }
 }
 .gift_check{
