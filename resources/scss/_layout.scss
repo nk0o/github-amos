@@ -191,6 +191,19 @@ footer{
       margin: 0 auto;
       padding: 0 0 46px;
     }
+    /* .prd_list_sm.xs {
+      flex-wrap: nowrap;
+      gap: 0;
+      .prd_box {
+        .amount {
+          display: block;
+        }
+        .price {
+          display: block;
+          margin: 12px 0 0 0;
+        }
+      }
+    } */
   }
   .prd_box.swiper-slide{
     min-width: 159px;
@@ -202,19 +215,6 @@ footer{
   .prd_list_lg.swiper-wrapper{
     flex-wrap: nowrap;
     gap: 0;
-  }
-  .prd_list_sm.xs {
-    flex-wrap: nowrap;
-    gap: 0;
-    .prd_box {
-      .amount {
-        display: block;
-      }
-      .price {
-        display: block;
-        margin: 12px 0 0 0;
-      }
-    }
   }
 }
 .sec_product{

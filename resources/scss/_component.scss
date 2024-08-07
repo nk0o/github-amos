@@ -488,8 +488,11 @@
     min-width: 80px;
     margin-left: 4px;
     height: auto;
-    &:first-child, &:last-child {
+    &:first-child{
       margin-left: 15px;
+    }
+    &:last-child {
+      margin-right: 15px;
     }
     .img {
       width: calc(100% - 8px);
@@ -557,8 +560,5 @@
 @media (min-width: 1024px) {
   .thumb_list > li {
     width: 80px !important;
-    &:first-child, &:last-child {
-      margin-left: 15px;
-    }
   }
 }
