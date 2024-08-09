@@ -1639,7 +1639,7 @@
       margin-top: 4px;
     }
   }
-  .dday {
+  .state {
     margin-bottom: 5px;
     @include fontStyle(#1A63D9, $fs-m, $fw-b, 24px);
   }
@@ -1651,15 +1651,17 @@
 
 .page_edu {
   &:has(.btm_bar) {
-    padding-bottom: 133px;
+    margin-bottom: 133px;
   }
   .order_accord {
     .accord_cont:first-child {
-      margin-top: 20px;
+      margin-top: 32px;
     }
   }
   .txt_notice_wrap {
     padding: 8px 20px 0;
+    max-width: 1024px;
+    margin: 0 auto;
     button {
       font-weight: $fw-sb;
       color: #444;
@@ -1680,7 +1682,7 @@
   }
   .round_tab {
     &+.tab_cont {
-      padding-bottom: 30px;
+      margin-bottom: 30px;
       .btn_group {
         padding:60px 0 0;
       }
@@ -1690,6 +1692,11 @@
 
 .edu_detail_top {
   padding: 24px 0 32px;
+  .edu_info_box + .btn_md {
+    width: 100%;
+    margin-top: 32px;
+    justify-content: center;
+  }
 }
 .edu_regist_tit {
   .btn_share {
@@ -1724,7 +1731,7 @@
 }
 
 .edu_desc_wrap {
-  padding: 32px 0;
+  margin: 32px 0;
   >ul {
     >li {
       &+li {
@@ -1746,6 +1753,7 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 22px;
+        word-break: break-all;
         &+.txt {
           margin-top: 8px;
         }
@@ -1763,6 +1771,151 @@
             margin-top: 8px;
           }
         }
+      }
+    }
+  }
+}
+
+.order_price {
+  .buy_list {
+    margin-top: 24px;
+    >li {
+      display: flex;
+      justify-content: space-between;
+      color: #888;
+      font-weight: 300;
+      padding: 8px 0;
+      .input_check_wrap {
+        label {
+          color: #888;
+        }
+      }
+      &+li {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+.card_pay {
+  &+.card_pay {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top:1px solid #E2E2E2;
+  }
+  .date {
+    display: flex;
+    margin-bottom: 8px;
+    color: #888;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px; 
+    .state {
+      margin-left: 8px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      &.pay {
+        color: #1A63D9;
+      }
+      &.refund {
+        color: #FF2E00;
+      }
+    }
+  }
+  .price_sum {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px; 
+    em {
+      margin-left: auto;
+      line-height:20px;
+    }
+  }
+  .card_num {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    color: #888;
+    font-family: $font-aritadt;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+}
+.tab_cont {
+  .tab_cont_item  {
+    .inner {
+      padding: 0 20px;
+    }
+  }
+  .edu_desc_wrap {
+    margin-top: 24px;
+  }
+  .no_data {
+    padding-top: 52px;
+  }
+}
+
+.sub_tab_wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  .tab_menu {
+    padding: 20px 20px 0;
+  }
+  .txt_notice_wrap {
+    max-width:none;
+    padding: 28px 0 12px;
+    white-space: wrap;
+  }
+}
+
+.attendance {
+  padding: 0 20px;
+  max-width: 1024px;
+  margin: 24px auto 0;
+  >strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: $fw-b;
+    line-height: 24px;
+  }
+  .list {
+    >li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &+li {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #eee;
+      }
+      .cont {
+        >span {
+          display: block;
+          color: #888;
+          font-size: 14px;
+          font-weight: $fw-l;
+          line-height: 17px;
+        }
+        >em {
+          display: block;
+          margin-top: 4px;
+          font-size: 15px;
+          font-weight: $fw-sb;
+          line-height: 20px;
+        }
+      }
+    }
+    .status {
+      color: #888;
+      font-size: 14px;
+      font-weight: $fw-sb;
+      line-height: 19px; 
+      &.complete {
+        color: #1A63D9;
       }
     }
   }

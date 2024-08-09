@@ -7504,7 +7504,7 @@ footer .f_company {
 .edu_regist_tit .tit .badge {
   margin-top: 4px;
 }
-.edu_regist_tit .dday {
+.edu_regist_tit .state {
   margin-bottom: 5px;
   color: #1A63D9;
   font-size: 1rem;
@@ -7516,13 +7516,15 @@ footer .f_company {
 }
 
 .page_edu:has(.btm_bar) {
-  padding-bottom: 133px;
+  margin-bottom: 133px;
 }
 .page_edu .order_accord .accord_cont:first-child {
-  margin-top: 20px;
+  margin-top: 32px;
 }
 .page_edu .txt_notice_wrap {
   padding: 8px 20px 0;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .page_edu .txt_notice_wrap button {
   font-weight: 600;
@@ -7548,7 +7550,7 @@ footer .f_company {
   line-height: 18px;
 }
 .page_edu .round_tab + .tab_cont {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
@@ -7556,6 +7558,11 @@ footer .f_company {
 
 .edu_detail_top {
   padding: 24px 0 32px;
+}
+.edu_detail_top .edu_info_box + .btn_md {
+  width: 100%;
+  margin-top: 32px;
+  justify-content: center;
 }
 
 .edu_regist_tit .btn_share {
@@ -7590,7 +7597,7 @@ footer .f_company {
 }
 
 .edu_desc_wrap {
-  padding: 32px 0;
+  margin: 32px 0;
 }
 .edu_desc_wrap > ul > li + li {
   border-top: 1px solid #eee;
@@ -7611,6 +7618,7 @@ footer .f_company {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
+  word-break: break-all;
 }
 .edu_desc_wrap > ul > li .txt + .txt {
   margin-top: 8px;
@@ -7626,6 +7634,139 @@ footer .f_company {
 }
 .edu_desc_wrap > ul > li .list li + li {
   margin-top: 8px;
+}
+
+.order_price .buy_list {
+  margin-top: 24px;
+}
+.order_price .buy_list > li {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-weight: 300;
+  padding: 8px 0;
+}
+.order_price .buy_list > li .input_check_wrap label {
+  color: #888;
+}
+.order_price .buy_list > li + li {
+  margin-top: 8px;
+}
+
+.card_pay + .card_pay {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E2E2E2;
+}
+.card_pay .date {
+  display: flex;
+  margin-bottom: 8px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+.card_pay .date .state {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.card_pay .date .state.pay {
+  color: #1A63D9;
+}
+.card_pay .date .state.refund {
+  color: #FF2E00;
+}
+.card_pay .price_sum {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.card_pay .price_sum em {
+  margin-left: auto;
+  line-height: 20px;
+}
+.card_pay .card_num {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  color: #888;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.tab_cont .tab_cont_item .inner {
+  padding: 0 20px;
+}
+.tab_cont .edu_desc_wrap {
+  margin-top: 24px;
+}
+.tab_cont .no_data {
+  padding-top: 52px;
+}
+
+.sub_tab_wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.sub_tab_wrap .tab_menu {
+  padding: 20px 20px 0;
+}
+.sub_tab_wrap .txt_notice_wrap {
+  max-width: none;
+  padding: 28px 0 12px;
+  white-space: wrap;
+}
+
+.attendance {
+  padding: 0 20px;
+  max-width: 1024px;
+  margin: 24px auto 0;
+}
+.attendance > strong {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.attendance .list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.attendance .list > li + li {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+.attendance .list > li .cont > span {
+  display: block;
+  color: #888;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+.attendance .list > li .cont > em {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.attendance .list .status {
+  color: #888;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.attendance .list .status.complete {
+  color: #1A63D9;
 }
 
 .sticky_tab {
@@ -8128,6 +8269,10 @@ footer .f_company {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.444;
+}
+.order_price .price_sum em.txt {
+  font-weight: 700;
+  font-size: 16px;
 }
 .order_price .price_sum + .price_sum {
   margin-top: 12px;

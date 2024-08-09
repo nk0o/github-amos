@@ -427,6 +427,10 @@
       @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
       em{
         @include fontStyle(inherit, $fs-ml, $fw-m, 1.444);
+        &.txt {
+          font-weight: $fw-b;
+          font-size: 16px;
+        }
       }
       &+.price_sum {
         margin-top: 12px;
