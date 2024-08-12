@@ -8802,4 +8802,38 @@ footer .f_company {
   .info_read {
     border-bottom-width: 1px;
   }
+}
+/* 정기교육 만족도 조사 */
+.survey_intro {
+  padding-top: 80px;
+  text-align: center;
+}
+.survey_intro .intro_img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.survey_intro .intro_about {
+  margin-bottom: 4px;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.survey_intro .intro_thanks {
+  margin-bottom: 16px;
+  color: #222222;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3636;
+}
+.survey_intro .intro_guide {
+  color: #1A63D9;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.survey_intro .btn_group {
+  padding-top: 32px;
 }/*# sourceMappingURL=style.css.map */

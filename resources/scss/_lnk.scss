@@ -882,3 +882,31 @@
     border-bottom-width: 1px;
   }
 }
+
+/* 정기교육 만족도 조사 */
+.survey_intro{
+  padding-top: 80px;
+  text-align: center;
+  .intro{
+    &_img{
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    &_about{
+      margin-bottom: 4px;
+      @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+      font-family: $font-aritadt;
+    }
+    &_thanks{
+      margin-bottom: 16px;
+      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+    }
+    &_guide{
+      @include fontStyle($color-blue, $fs-m, $fw-sb, 1.5);
+    }
+  }
+  .btn_group{
+    padding-top: 32px;
+  }
+}
