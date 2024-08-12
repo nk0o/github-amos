@@ -910,3 +910,21 @@
     padding-top: 32px;
   }
 }
+.inquiry_box.type_page{
+  padding-top: 24px;
+  .ask_tit{
+    margin-bottom: 32px;
+  }
+  .radio_btn_wrap, .check_btn_wrap{
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.ask_tit{
+  &::before{
+    content: attr(data-asknum);
+    display: block;
+    margin-bottom: 8px;
+    @include fontStyle($gray-950, $fs-23, $fw-b, 1.3913);
+  }
+}
