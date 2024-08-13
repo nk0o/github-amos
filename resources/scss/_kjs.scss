@@ -1920,3 +1920,112 @@
     }
   }
 }
+
+.page_my_cupon {
+  .cupon_top {
+    padding: 24px 0;
+    .member_grade{
+      font-size: 22px;
+      font-weight: $fw-b;
+      line-height: 30px;
+      .grade {
+        color: #1A63D9;
+      }
+    }
+    .info_txt {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      i {
+        vertical-align: text-bottom;
+      }
+    }
+    .input_group {
+      margin-top: 20px;
+    }
+  }
+}
+
+.cupon_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+.cupon_box {
+  max-width: 335px;
+  margin-top: 16px;
+  background: url('../images/img_cupon_box.svg') no-repeat;
+  background-size: contain;
+  border-radius: 16px;
+  overflow: hidden;
+  &:first-child {
+    margin-top: 24px;
+  }
+  &.end {
+    .cont {
+      opacity: 0.5;
+    }
+    .bottom {
+      background-color: #eee;
+      em {
+        color: #666;
+      }
+      span {
+        color: #666;
+      }
+    }
+  }
+  .cont {
+    padding: 22px 28px 29px;
+    .badge {
+      margin-bottom: 8px;
+    }
+    .tit {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+      font-weight: $fw-sb;
+      line-height: 24px;
+    }
+    .txt {
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: $fw-m;
+      font-family: $font-aritadt;
+      line-height: 19px;
+    }
+    .date {
+      display: block;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      color: #777;
+      font-size: 13px;
+      font-weight: $fw-l;
+      line-height: 16px; 
+    }
+  }
+  .bottom {
+    margin-top: 8px;
+    padding: 11px 10px;
+    background-color: #DFEDFF;
+    text-align: center;
+    border: 1px solid #E2E2E2;
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    em {
+      color: #1A63D9;
+      font-weight: $fw-sb;
+      font-size: 13px;
+      line-height: 18px;
+    }
+    span {
+      font-family: $font-aritadt;
+      font-size: 13px;
+      font-weight: $fw-m;
+      line-height: 18px;
+    }
+  }
+}

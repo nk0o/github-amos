@@ -2143,6 +2143,20 @@ p {
     background-image: none;
   }
 }
+.ico_cupon::before {
+  background-image: url("../images/icon/ico_cupon.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_cupon::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_cupon.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 
 .ico_btn_cart::before {
   background-image: url("../images/icon/ico_btn_cart.svg");
@@ -2229,6 +2243,7 @@ button:disabled {
   color: #ffffff !important;
   border-color: #bbbbbb !important;
   background-color: #bbbbbb !important;
+  cursor: auto;
 }
 button:disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
@@ -3355,6 +3370,12 @@ select {
   gap: 6px;
   min-width: 240px;
 }
+.input_group.width_btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 12px;
+}
 .input_group label {
   position: relative;
   width: 100%;
@@ -3367,7 +3388,7 @@ select {
   width: 24px;
   height: 24px;
 }
-.input_group .time, .input_group .btn, .input_group .btn_xs, .input_group .btn_xxs, .input_group .btn_icon, .input_group .btn_bottom, .input_group .btn_floating, .input_group .btn_sm, .input_group .btn_md, .input_group .btn_lg {
+.input_group .time, .input_group .btn_sm {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -7885,6 +7906,112 @@ footer .f_company {
 }
 .attendance .list .status.complete {
   color: #1A63D9;
+}
+
+.page_my_cupon .cupon_top {
+  padding: 24px 0;
+}
+.page_my_cupon .cupon_top .member_grade {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.page_my_cupon .cupon_top .member_grade .grade {
+  color: #1A63D9;
+}
+.page_my_cupon .cupon_top .info_txt {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.page_my_cupon .cupon_top .info_txt i {
+  vertical-align: text-bottom;
+}
+.page_my_cupon .cupon_top .input_group {
+  margin-top: 20px;
+}
+
+.cupon_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.cupon_box {
+  max-width: 335px;
+  margin-top: 16px;
+  background: url("../images/img_cupon_box.svg") no-repeat;
+  background-size: contain;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.cupon_box:first-child {
+  margin-top: 24px;
+}
+.cupon_box.end .cont {
+  opacity: 0.5;
+}
+.cupon_box.end .bottom {
+  background-color: #eee;
+}
+.cupon_box.end .bottom em {
+  color: #666;
+}
+.cupon_box.end .bottom span {
+  color: #666;
+}
+.cupon_box .cont {
+  padding: 22px 28px 29px;
+}
+.cupon_box .cont .badge {
+  margin-bottom: 8px;
+}
+.cupon_box .cont .tit {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.cupon_box .cont .txt {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  line-height: 19px;
+}
+.cupon_box .cont .date {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.cupon_box .bottom {
+  margin-top: 8px;
+  padding: 11px 10px;
+  background-color: #DFEDFF;
+  text-align: center;
+  border: 1px solid #E2E2E2;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+}
+.cupon_box .bottom em {
+  color: #1A63D9;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+}
+.cupon_box .bottom span {
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .sticky_tab {

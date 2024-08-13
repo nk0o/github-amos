@@ -10,6 +10,7 @@ button {
     color: $color-white !important;
     border-color: $gray-400 !important;
     background-color: $gray-400 !important;
+    cursor: auto;
     *[class*="ico_"] {
       &::before {
         background-color: $gray-300 !important;
