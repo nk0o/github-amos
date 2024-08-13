@@ -408,6 +408,11 @@
       @include iconImgPath("ico_share.svg");
     }
   }
+  &_cupon {
+    &::before {
+      @include iconImgPath("ico_cupon.svg");
+    }
+  }
 }
 .ico_btn { 
   &_cart{

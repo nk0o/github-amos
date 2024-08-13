@@ -8,6 +8,12 @@
     flex-wrap: nowrap;
     gap: 6px;
     min-width: 240px;
+    &.width_btn {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 12px;
+    }
     label{
       position: relative;
       width: 100%;
@@ -18,7 +24,7 @@
       width: 24px;
       height: 24px;
     }
-    .time, .btn, .btn_sm, .btn_md, .btn_lg{
+    .time, .btn_sm {
       @include pos_Ycenter;
       right:12px;
       height: 30px;
