@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap" class="page_mypage">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <div class="tab_center_wrap">
+        <div class="inner">
+          <div class="tab_menu contain_tab tab_center">
+            <ul>
+              <li class="tab_list current"><button>주문관리</button></li>
+              <li class="tab_list"><button>혜택관리</button></li>
+              <li class="tab_list"><button>활동관리</button></li>
+              <li class="tab_list"><button>정보관리</button></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- //.tab_center_wrap -->
+      <section class="mypage_user_box">
+        <div class="inner">
+          <div class="user_info">
+            <div class="avatar">
+              <img src="../../resources/images/img_avatar_owner.svg" alt>
+            </div><!-- //.avatar -->
+            <div class="user_detail">
+              <a href="#" class="user_name"><span>김모스</span>님</a>
+              <div class="user_id">
+                <span class="user_grade">살롱원장</span>
+                <span>amospro1234</span>
+              </div><!-- //.user_id -->
+            </div><!-- //.user_detail -->
+            <div class="app_notice on"><!-- 알림 있을 경우: on -->
+              <i class="ico_24 ico_bell"></i>
+            </div><!-- //.app_notice -->
+          </div><!-- //.user_info -->
+          <ul class="user_menu">
+            <li>
+              <i class="ico_20 ico_point_20"></i>
+              <p class="tit">포인트</p>
+              <div class="count">8,000P</div>
+            </li>
+            <li>
+              <i class="ico_20 ico_coupon_20"></i>
+              <p class="tit">쿠폰</p>
+              <div class="count">23</div>
+            </li>
+            <li>
+              <i class="ico_20 ico_calendar_20"></i>
+              <p class="tit">정기교육</p>
+              <div class="count">2</div>
+            </li>
+            <li>
+              <i class="ico_20 ico_approval_20"></i>
+              <p class="tit">디자이너승인</p>
+              <div class="count">7</div>
+            </li>
+          </ul><!-- //.user_menu -->
+        </div>
+      </section><!-- //.mypage_user_box -->
+      <div class="hr_divider"></div>
+      <section class="mypage_order_box">
+        <div class="inner">
+          <ul class="order_state"><!-- 상태값이 있는경우 li에 on -->
+            <li>
+              <a href="#">
+                <div class="count">0</div>
+                <div class="state">주문완료</div>
+              </a>
+            </li>
+            <li class="on">
+              <a href="#">
+                <div class="count">2</div>
+                <div class="state">상품준비중</div>
+              </a>
+            </li>
+            <li class="on">
+              <a href="#">
+                <div class="count">1</div>
+                <div class="state">배송중</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="count">0</div>
+                <div class="state">배송완료</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section><!-- //.mypage_order_box -->
+      <div class="hr_divider"></div>
+      <section class="center_area">
+        <a href="#" class="center_link">고객센터<i class="ico_20 ico_chevNext_20_20"></i></a>
+        <a href="tel:+0800230707" class="center_tel">080-023-0707</a>
+        <ul class="center_hour">
+          <li>평일  09:00~16:00</li>
+          <li>점심시간  12:00~13:00</li>
+        </ul>
+        <p class="center_notice">주말 및 공휴일은 휴무</p>
+      </section>
+    </main>
+    <!-- //#container -->
+  </div>
+
+
+
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("마이페이지")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

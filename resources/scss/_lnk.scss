@@ -928,7 +928,7 @@
     @include fontStyle($gray-950, $fs-23, $fw-b, 1.3913);
   }
 }
-
+//출석체크
 .attendance_check{
   padding-top: 80px;
   text-align: center;
@@ -961,6 +961,188 @@
     }
     .state{
       @include fontStyle($color-blue, $fs-m, $fw-b, 1.5625);
+    }
+  }
+}
+/* 마이페이지 */
+.center{
+  &_area{
+    padding: 24px 20px 40px 20px;
+    background-color: $gray-50;
+    .center{
+      &_link{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 8px;
+        @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
+        .ico_chevNext_20_20{
+          margin-top: 1px;
+          &::before{
+            background-color: $color-primary;
+          }
+        }
+      }
+      &_tel{
+        display: inline-flex;
+        margin-bottom: 8px;
+        @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      }
+      &_hour{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 4px;
+        li{
+          @include fontStyle($gray-700, $fs-xs, $fw-m, 1.23);
+          font-family: $font-aritadt;
+        }
+      }
+      &_notice{
+        margin-bottom: 2px;
+        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
+      }
+    }
+  }
+}
+.user_info{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0;
+  .avatar{
+    flex: none;
+    width: 66px;
+    height: 66px;
+    border: 1px solid $color-blue-secondary;
+    border-radius: 100%;
+    background-color: $color-blue-tertiary;
+    & >img{
+      object-fit: none;
+    }
+  }
+  .app_notice{
+    position: absolute;
+    right: 0;
+    margin:10px 0 0 auto;
+    .ico_bell::before{
+      background-color: $color-primary;
+    }
+    &.on{
+      .ico_bell::before{
+        mask-image: none;
+        background: transparent url("../../resources/images/icon/ico_bell_on.svg") center/contain no-repeat !important;
+      }
+    }
+  }
+}
+.user_detail{
+  margin-top: 8px;
+  .user{
+    &_name{
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      &::after{
+        content: '';
+        background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
+      }
+    }
+    &_id{
+      span{
+        display: inline-block;
+        vertical-align: middle;
+        @include fontStyle($gray-950, $fs-s, $fw-m, 1.357);
+        font-family: $font-aritadt;
+      }
+      .user_grade{
+        position: relative;
+        font-weight: $fw-sb;
+        padding-right: 6px;
+        margin-right: 2px;
+        &::after{
+          content:'';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 12px;         
+          background-color:$gray-300;
+        }
+      }
+    }
+  }
+}
+.user_menu{
+  padding: 24px 0;
+  border-top: 1px solid $gray-100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  li{
+    flex:1;
+    min-width: 0;
+    display: grid;
+    grid-template:repeat(3, auto) / 1fr;
+    justify-items: center;
+  }
+  i{
+    &::before{
+      background-color: $color-primary;
+    }
+  }
+  .tit{
+    margin-top: 10px;
+    @include fontStyle($gray-950, $fs-s, $fw-m, 1.2143);
+  }
+  .count{
+    margin-top: 4px;
+    @include fontStyle($color-blue, $fs-m, $fw-m, 1.25);
+  }
+}
+//주문조회 영역
+.mypage_order_box{
+  padding: 20px 0 24px;
+}
+.order_state{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  .count{
+    position: relative;
+    @include fontStyle($gray-500, $fs-lg, $fw-b, 1.4167);
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 4px);
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      mask: url('../images/icon/ico_chev_next_24.svg') center/contain no-repeat;      
+      background-color: $gray-400 !important;
+    }
+  }
+  .state{
+    @include fontStyle($gray-700, $fs-xs, $fw-m, 1.3846);
+  }
+  li{
+    flex:1;
+    min-width: 0;
+    text-align: center;
+    &.on{
+      .count,.state{
+        color: $gray-950;
+      }
+    }
+    &:first-child{
+      .count::after{
+        display: none;
+      }
     }
   }
 }
