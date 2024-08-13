@@ -76,6 +76,15 @@ var include = {
       </div>
     `);
   },
+  popUpAppBar:function(){
+    document.write(`
+      <div class="appbar is_line">
+        <div class="inner">
+          <h2 class="appbar_tit">전체팝업제목</h2>
+        </div>
+      </div>
+    `)
+  },
   tabBar: function () {
     document.write(`
       <div class="btm_bar is_nav">

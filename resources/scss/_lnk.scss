@@ -928,3 +928,39 @@
     @include fontStyle($gray-950, $fs-23, $fw-b, 1.3913);
   }
 }
+
+.attendance_check{
+  padding-top: 80px;
+  text-align: center;
+  .check_img{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+  }
+  .tit{
+    @include fontStyle($gray-950, $fs-lg, $fw-sb, 1.4167);
+    font-family: $font-aritadt;
+    margin-bottom: 12px;
+  }
+  .sub_tit{
+    @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+    font-family: $font-aritadt;
+  }
+  .period{
+    margin-bottom: 20px;
+    @include fontStyle($gray-700, $fs-sm, $fw-m, 1.467);
+    font-family: $font-aritadt;
+  }
+  .state_box{
+    padding: 22px 40px 21px;
+    border-radius: 8px;
+    .user{
+      @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);      
+      font-family: $font-aritadt;
+      margin-bottom: 4px;
+    }
+    .state{
+      @include fontStyle($color-blue, $fs-m, $fw-b, 1.5625);
+    }
+  }
+}

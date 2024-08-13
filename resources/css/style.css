@@ -8871,4 +8871,55 @@ footer .f_company {
   font-size: 1.4375rem;
   font-weight: 700;
   line-height: 1.3913;
+}
+
+.attendance_check {
+  padding-top: 80px;
+  text-align: center;
+}
+.attendance_check .check_img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+}
+.attendance_check .tit {
+  color: #222222;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4167;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  margin-bottom: 12px;
+}
+.attendance_check .sub_tit {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.attendance_check .period {
+  margin-bottom: 20px;
+  color: #777777;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.467;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.attendance_check .state_box {
+  padding: 22px 40px 21px;
+  border-radius: 8px;
+}
+.attendance_check .state_box .user {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.333;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  margin-bottom: 4px;
+}
+.attendance_check .state_box .state {
+  color: #1A63D9;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5625;
 }/*# sourceMappingURL=style.css.map */
