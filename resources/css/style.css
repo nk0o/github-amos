@@ -9170,8 +9170,19 @@ footer .f_company {
 }
 
 /********** 마이페이지 메인 **********/
+.page_mypage #container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 61px);
+}
+.page_mypage .mypage_menu_wrap {
+  flex: 1 1 auto;
+}
+
 .center_area {
+  margin-top: auto;
   margin-bottom: 90px;
+  width: 100%;
   padding: 24px 20px 40px 20px;
   background-color: #EFF6FF;
 }
@@ -9264,6 +9275,8 @@ footer .f_company {
 }
 .user_detail .user_name::after {
   content: "";
+  width: 20px;
+  height: 20px;
   background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
 }
 .user_detail .user_id span {
@@ -9324,9 +9337,46 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.25;
 }
+.user_item.is_horizen li {
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  justify-content: center;
+}
+.user_item.is_horizen li i {
+  grid-column: span 2;
+}
+.user_item.is_horizen .count {
+  margin: 10px 0 0 4px;
+}
 
 .mypage_order_wrap {
   padding: 20px 0 24px;
+}
+.mypage_order_wrap .tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.mypage_order_wrap .tit a {
+  width: auto;
+  height: auto;
+  padding-right: 16px;
+  text-align: right;
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+}
+.mypage_order_wrap .tit a::before {
+  right: 0;
+  width: 16px;
+  height: 16px;
+  left: auto;
+  background-color: #aaaaaa;
 }
 
 .order_state {
@@ -9354,6 +9404,7 @@ footer .f_company {
   background-color: #bbbbbb !important;
 }
 .order_state .state {
+  margin-top: 4px;
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 400;

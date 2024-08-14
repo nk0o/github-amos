@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap" class="page_mypage">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <div class="tab_center_wrap">
+        <div class="inner">
+          <div class="tab_menu contain_tab tab_center">
+            <ul>
+              <li class="tab_list current"><button>주문관리</button></li>
+              <li class="tab_list"><button>혜택관리</button></li>
+              <li class="tab_list"><button>활동관리</button></li>
+              <li class="tab_list"><button>정보관리</button></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- //.tab_center_wrap -->
+      <section class="mypage_user_wrap">
+        <div class="inner">
+          <div class="user_info">
+            <div class="user_detail">
+              <a href="#" class="user_name"><span>김모스</span>님</a>
+              <div class="user_id">
+                <span class="user_grade">디자이너(회원)</span>
+                <span>amospro1234</span>
+              </div><!-- //.user_id -->
+            </div><!-- //.user_detail -->
+            <div class="app_notice on"><!-- 알림 있을 경우: on -->
+              <i class="ico_24 ico_bell"></i>
+            </div><!-- //.app_notice -->
+          </div><!-- //.user_info -->
+        </div>
+      </section><!-- //.mypage_user_box -->
+      <div class="hr_divider"></div>
+      <section class="mypage_menu_wrap">
+        <div class="inner">
+          <ul>
+            <li class="mypage_menu">
+              <div class="tit">정보관리</div>
+              <a href="#">회원정보 수정</a>
+              <a href="#">로그아웃</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="center_area">
+        <a href="#" class="center_link">고객센터<i class="ico_20 ico_chevNext_20_20"></i></a>
+        <a href="tel:+0800230707" class="center_tel">080-023-0707</a>
+        <ul class="center_hour">
+          <li>평일  09:00~16:00</li>
+          <li>점심시간  12:00~13:00</li>
+        </ul>
+        <p class="center_notice">주말 및 공휴일은 휴무</p>
+      </section>
+    </main>
+    <!-- //#container -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+
+
+
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("마이페이지")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

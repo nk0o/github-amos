@@ -965,9 +965,21 @@
   }
 }
 /********** 마이페이지 메인 **********/
+.page_mypage{
+  #container{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 61px);
+  }
+  .mypage_menu_wrap{
+    flex: 1 1 auto;
+  }
+}
 .center{
   &_area{
+    margin-top: auto;
     margin-bottom: $btmbar-H;
+    width: 100%;
     padding: 24px 20px 40px 20px;
     background-color: $color-blue-tertiary;
     .center{
@@ -1047,6 +1059,8 @@
       @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
       &::after{
         content: '';
+        width: 20px;
+        height: 20px;
         background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
       }
     }
@@ -1103,10 +1117,43 @@
     margin-top: 4px;
     @include fontStyle($color-blue, $fs-m, $fw-m, 1.25);
   }
+  &.is_horizen{
+    li{
+      grid-template: repeat(2, auto)/ repeat(2, auto);
+      justify-content: center;
+      i{
+        grid-column: span 2;
+      }
+    }
+    .count{
+      margin: 10px 0 0 4px;
+    }
+  }
 }
 //주문조회 영역
 .mypage_order_wrap{
   padding: 20px 0 24px;
+  .tit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
+    a{
+      width: auto;
+      height: auto;
+      padding-right: 16px;
+      text-align: right;
+      @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
+      &::before{
+        right: 0;
+        width: 16px;
+        height: 16px;
+        left: auto;
+        background-color: $gray-500;
+      }
+    }
+  }
 }
 .order_state{
   display: flex;
@@ -1129,6 +1176,7 @@
     }
   }
   .state{
+    margin-top: 4px;
     @include fontStyle($gray-700, $fs-xs, $fw-m, 1.3846);
   }
   li{
