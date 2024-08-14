@@ -206,7 +206,8 @@ p {
   background-color: #777777 !important;
 }
 .bg_green {
-  background-color: #26A769 !important;
+  background-color: #EEFFF2 !important;
+  color: #01BE2B !important;
 }
 .bg_red, .bg_danger {
   background-color: #FF2E00 !important;
@@ -2174,6 +2175,20 @@ p {
   .ico_cupon::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_cupon.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_cal::before {
+  background-image: url("../images/icon/ico_cal.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_cal::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_cal.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -7658,14 +7673,17 @@ footer .f_company {
 .edu_regist_tit .tit {
   display: flex;
   gap: 8px;
+}
+.edu_regist_tit .tit .badge {
+  margin-top: 4px;
+}
+.edu_regist_tit .tit strong {
   font-family: "Arita-dotum";
   color: #222222;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 26px;
-}
-.edu_regist_tit .tit .badge {
-  margin-top: 4px;
+  word-break: break-all;
 }
 .edu_regist_tit .state {
   margin-bottom: 5px;
