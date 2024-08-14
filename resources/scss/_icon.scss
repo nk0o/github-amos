@@ -82,6 +82,15 @@
 }
 /* arrow 아이콘 */
 .ico {
+  &_caret {
+    &Next {
+      &_12{
+        &::before {
+          @include iconImgPath("ico_caret_next_12.svg");
+        }
+      }
+    }
+  }
   &_chev {
     &Prev {
       &_24{
@@ -99,6 +108,16 @@
       &_20{
         &::before {
           @include iconImgPath("ico_chev_next_20.svg");
+        }
+        &_15{
+          &::before {
+            @include iconImgPath("ico_chev_next_20_15.svg");
+          }
+        }
+        &_20{
+          &::before {
+            @include iconImgPath("ico_chev_next_20_20.svg");
+          }
         }
       }
       &_24{
@@ -224,6 +243,26 @@
       }
     }
   }
+  &_point_20{
+    &::before {
+      @include iconImgPath("ico_point_20.svg");
+    }
+  }
+  &_approval_20{
+    &::before {
+      @include iconImgPath("ico_approval_20.svg");
+    }
+  }
+  &_calendar_20{
+    &::before {
+      @include iconImgPath("ico_calendar_20.svg");
+    }
+  }
+  &_coupon_20{
+    &::before {
+      @include iconImgPath("ico_coupon_20.svg");
+    }
+  }
 }
 /* UI actions */
 .ico {  
@@ -247,6 +286,21 @@
   &_notice{
     &::before {
       @include iconImgPath("ico_notice.svg");
+    }
+  }
+  &_speaker{
+    &::before {
+      background: transparent url("../../resources/images/icon/ico_speaker.svg") center/contain no-repeat !important;
+    }
+  }
+  &_bell{
+    &::before {
+      @include iconImgPath("ico_bell.svg");
+    }
+    &_on{
+      &::before {
+        background: transparent url("../../resources/images/icon/ico_bell_on.svg") center/contain no-repeat !important;
+      }
     }
   }
   &_plus{

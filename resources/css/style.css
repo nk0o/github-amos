@@ -1240,6 +1240,20 @@ p {
 }
 
 /* arrow 아이콘 */
+.ico_caretNext_12::before {
+  background-image: url("../images/icon/ico_caret_next_12.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_caretNext_12::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_caret_next_12.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_chevPrev_24::before {
   background-image: url("../images/icon/ico_chev_prev_24.svg");
   background-size: cover;
@@ -1276,6 +1290,34 @@ p {
   .ico_chevNext_20::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_chev_next_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_chevNext_20_15::before {
+  background-image: url("../images/icon/ico_chev_next_20_15.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_chevNext_20_15::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_chev_next_20_15.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_chevNext_20_20::before {
+  background-image: url("../images/icon/ico_chev_next_20_20.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_chevNext_20_20::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_chev_next_20_20.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -1583,6 +1625,62 @@ p {
     background-image: none;
   }
 }
+.ico_point_20::before {
+  background-image: url("../images/icon/ico_point_20.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_point_20::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_point_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_approval_20::before {
+  background-image: url("../images/icon/ico_approval_20.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_approval_20::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_approval_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_calendar_20::before {
+  background-image: url("../images/icon/ico_calendar_20.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_calendar_20::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_calendar_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_coupon_20::before {
+  background-image: url("../images/icon/ico_coupon_20.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_coupon_20::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_coupon_20.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 
 /* UI actions */
 .ico_spinner_down::before {
@@ -1640,6 +1738,26 @@ p {
     mask-position: center;
     background-image: none;
   }
+}
+.ico_speaker::before {
+  background: transparent url("../../resources/images/icon/ico_speaker.svg") center/contain no-repeat !important;
+}
+.ico_bell::before {
+  background-image: url("../images/icon/ico_bell.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_bell::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_bell.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_bell_on::before {
+  background: transparent url("../../resources/images/icon/ico_bell_on.svg") center/contain no-repeat !important;
 }
 .ico_plus_12::before {
   background-image: url("../images/icon/ico_plus_12.svg");
@@ -9067,4 +9185,292 @@ footer .f_company {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5625;
+}
+
+/********** 마이페이지 메인 **********/
+.page_mypage #container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 61px);
+}
+.page_mypage .mypage_menu_wrap {
+  flex: 1 1 auto;
+}
+
+.center_area {
+  margin-top: auto;
+  margin-bottom: 90px;
+  width: 100%;
+  padding: 24px 20px 40px 20px;
+  background-color: #EFF6FF;
+}
+.center_area .center_link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.center_area .center_link .ico_chevNext_20_20 {
+  margin-top: 1px;
+}
+.center_area .center_link .ico_chevNext_20_20::before {
+  background-color: #2A3136;
+}
+.center_area .center_tel {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: #222222;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3636;
+}
+.center_area .center_hour {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 4px;
+}
+.center_area .center_hour li {
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.center_area .center_notice {
+  margin-bottom: 2px;
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+}
+
+.user_info {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 0;
+}
+.user_info .avatar {
+  flex: none;
+  width: 66px;
+  height: 66px;
+  border: 1px solid #DFEDFF;
+  border-radius: 100%;
+  background-color: #EFF6FF;
+}
+.user_info .avatar > img {
+  object-fit: none;
+}
+.user_info .app_notice {
+  position: absolute;
+  right: 0;
+  margin: 10px 0 0 auto;
+}
+.user_info .app_notice .ico_bell::before {
+  background-color: #2A3136;
+}
+.user_info .app_notice.on .ico_bell::before {
+  mask-image: none;
+  background: transparent url("../../resources/images/icon/ico_bell_on.svg") center/contain no-repeat !important;
+}
+
+.user_detail {
+  margin-top: 8px;
+}
+.user_detail .user_name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #222222;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3636;
+}
+.user_detail .user_name::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
+}
+.user_detail .user_id span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.user_detail .user_id .user_grade {
+  position: relative;
+  font-weight: 600;
+  padding-right: 6px;
+  margin-right: 2px;
+}
+.user_detail .user_id .user_grade::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: #dddddd;
+}
+
+.user_item {
+  padding: 24px 0;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+}
+.user_item li {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template: repeat(3, auto)/1fr;
+  justify-items: center;
+}
+.user_item i::before {
+  background-color: #2A3136;
+}
+.user_item .tit {
+  margin-top: 10px;
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2143;
+}
+.user_item .count {
+  margin-top: 4px;
+  color: #1A63D9;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.user_item.is_horizen li {
+  grid-template: repeat(2, auto)/repeat(2, auto);
+  justify-content: center;
+}
+.user_item.is_horizen li i {
+  grid-column: span 2;
+}
+.user_item.is_horizen .count {
+  margin: 10px 0 0 4px;
+}
+
+.mypage_order_wrap {
+  padding: 20px 0 24px;
+}
+.mypage_order_wrap .tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.mypage_order_wrap .tit a {
+  width: auto;
+  height: auto;
+  padding-right: 16px;
+  text-align: right;
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+}
+.mypage_order_wrap .tit a::before {
+  right: 0;
+  width: 16px;
+  height: 16px;
+  left: auto;
+  background-color: #aaaaaa;
+}
+
+.order_state {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+.order_state .count {
+  position: relative;
+  color: #aaaaaa;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4167;
+}
+.order_state .count::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 4px);
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  mask: url("../images/icon/ico_chev_next_24.svg") center/contain no-repeat;
+  background-color: #bbbbbb !important;
+}
+.order_state .state {
+  margin-top: 4px;
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.3846;
+}
+.order_state li {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.order_state li.on .count, .order_state li.on .state {
+  color: #222222;
+}
+.order_state li:first-child .count::after {
+  display: none;
+}
+
+.mypage_menu {
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+}
+.mypage_menu:first-child {
+  border-top: none;
+}
+.mypage_menu .tit {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.mypage_menu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+}
+.mypage_menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url("../images/icon/ico_caret_next_12.svg") center/contain no-repeat;
 }/*# sourceMappingURL=style.css.map */
