@@ -1239,6 +1239,20 @@ p {
 }
 
 /* arrow 아이콘 */
+.ico_caretNext_12::before {
+  background-image: url("../images/icon/ico_caret_next_12.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_caretNext_12::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_caret_next_12.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_chevPrev_24::before {
   background-image: url("../images/icon/ico_chev_prev_24.svg");
   background-size: cover;
@@ -9155,10 +9169,11 @@ footer .f_company {
   line-height: 1.5625;
 }
 
-/* 마이페이지 */
+/********** 마이페이지 메인 **********/
 .center_area {
+  margin-bottom: 90px;
   padding: 24px 20px 40px 20px;
-  background-color: #f6f6f6;
+  background-color: #EFF6FF;
 }
 .center_area .center_link {
   display: flex;
@@ -9277,7 +9292,7 @@ footer .f_company {
   background-color: #dddddd;
 }
 
-.user_menu {
+.user_item {
   padding: 24px 0;
   border-top: 1px solid #eeeeee;
   display: flex;
@@ -9285,24 +9300,24 @@ footer .f_company {
   justify-content: space-between;
   gap: 4px;
 }
-.user_menu li {
+.user_item li {
   flex: 1;
   min-width: 0;
   display: grid;
   grid-template: repeat(3, auto)/1fr;
   justify-items: center;
 }
-.user_menu i::before {
+.user_item i::before {
   background-color: #2A3136;
 }
-.user_menu .tit {
+.user_item .tit {
   margin-top: 10px;
   color: #222222;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.2143;
 }
-.user_menu .count {
+.user_item .count {
   margin-top: 4px;
   color: #1A63D9;
   font-size: 1rem;
@@ -9310,7 +9325,7 @@ footer .f_company {
   line-height: 1.25;
 }
 
-.mypage_order_box {
+.mypage_order_wrap {
   padding: 20px 0 24px;
 }
 
@@ -9354,4 +9369,39 @@ footer .f_company {
 }
 .order_state li:first-child .count::after {
   display: none;
+}
+
+.mypage_menu {
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+}
+.mypage_menu:first-child {
+  border-top: none;
+}
+.mypage_menu .tit {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.mypage_menu a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+}
+.mypage_menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url("../images/icon/ico_caret_next_12.svg") center/contain no-repeat;
 }/*# sourceMappingURL=style.css.map */

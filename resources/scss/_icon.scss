@@ -82,6 +82,15 @@
 }
 /* arrow 아이콘 */
 .ico {
+  &_caret {
+    &Next {
+      &_12{
+        &::before {
+          @include iconImgPath("ico_caret_next_12.svg");
+        }
+      }
+    }
+  }
   &_chev {
     &Prev {
       &_24{
