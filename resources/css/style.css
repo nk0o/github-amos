@@ -157,7 +157,16 @@ p {
   src: url("../fonts/Gotham/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham/Gotham-Bold.ttf") format("truetype"), url("../fonts/Gotham/Gotham-Bold.otf") format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
-/** Font **/
+/** Width **/
+.w_80 {
+  width: 80px !important;
+  flex: 0 0 80px !important;
+}
+.w_145 {
+  width: 145px !important;
+  flex: 0 0 145px !important;
+}
+
 /** Font Family **/
 .font_kr {
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
@@ -2266,6 +2275,7 @@ button:disabled *[class*=ico_]::before {
 .btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xxs, .btn_xs, .btn_sm, .btn_md, .btn_lg {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   overflow: visible;
   position: relative;
   height: 46px;
@@ -2330,7 +2340,7 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_xs {
   height: 40px;
-  padding: 0 26px;
+  padding: 0 12px;
   font-size: 0.9375rem;
   line-height: 3.0666;
 }
@@ -2581,15 +2591,15 @@ button:disabled *[class*=ico_]::before {
 .btn_toggle {
   display: inline-block;
   position: relative;
-  height: 28px;
+  height: 24px;
 }
 .btn_toggle label {
   display: inline-block;
   position: relative;
   width: 46px;
-  height: 28px;
+  height: 24px;
   border-radius: 9999999px;
-  background: #eeeeee;
+  background: #dddddd;
   -moztransition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   -webkit-transition: all 0.4s ease-out 0s;
@@ -2601,8 +2611,8 @@ button:disabled *[class*=ico_]::before {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   background: #ffffff;
   z-index: 2;
@@ -2625,7 +2635,7 @@ button:disabled *[class*=ico_]::before {
   background: #2A3136;
 }
 .btn_toggle input:checked + label:after {
-  left: 20px;
+  left: 24px;
 }
 .btn_toggle input:disabled {
   cursor: default;
@@ -2665,7 +2675,7 @@ button:disabled *[class*=ico_]::before {
   left: 18px;
 }
 .btn_toggle.txt_in_toggle {
-  height: 28px;
+  height: 24px;
 }
 .btn_toggle.txt_in_toggle input:checked + label {
   background-color: #eeeeee;
@@ -9455,4 +9465,117 @@ footer .f_company {
   width: 12px;
   height: 12px;
   background: url("../images/icon/ico_caret_next_12.svg") center/contain no-repeat;
+}
+
+/********** APP 설정 **********/
+.app_setting_wrap {
+  padding: 24px 0;
+}
+.app_setting_wrap .tit {
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.app_setting_wrap .tit .btn_toggle {
+  margin-left: auto;
+}
+.app_setting_wrap .desc {
+  margin-top: 20px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+}
+.app_setting_wrap .setting_guide {
+  margin-top: 16px;
+}
+.app_setting_wrap .setting_guide li {
+  position: relative;
+  padding-left: 9px;
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
+}
+.app_setting_wrap .setting_guide li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #aaaaaa;
+  border-radius: 100%;
+}
+
+.app_version {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 0;
+  margin-top: 20px;
+  border-top: 1px solid #eeeeee;
+}
+.app_version .version {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+
+.app_notice_wrap {
+  padding: 20px 0;
+}
+.app_notice_wrap .tit {
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.notice_box {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  padding: 20px 0;
+  border-top: 1px solid #eeeeee;
+}
+.notice_box:first-child {
+  border-top: none;
+}
+.notice_box::before {
+  content: "";
+  display: block;
+  grid-row: -1 1;
+  width: 36px;
+  height: 24px;
+  background: url("../images/icon/ico_speaker.svg") left/24px no-repeat;
+}
+.notice_box .notice_txt {
+  color: #444444;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.notice_box .notice_date {
+  margin-top: 6px;
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.notice_box .notice_img {
+  margin-top: 6px;
+}
+.notice_box .notice_img img {
+  max-width: 300px;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

@@ -1,59 +1,14 @@
-/** Font **/
-//Font Size
-// h1 {
-//   font-size: $fs-xlg;
-//   font-weight: $fw-b;
-//   line-height: 74px;
-// }
-// h2 {
-//   font-size: $fs-xlg;
-//   font-weight: $fw-sb;
-//   line-height: 64px;
-// }
-// h3 {
-//   font-size: $fs-l;
-//   font-weight: $fw-m;
-//   line-height: 48px;
-// }
-// h4 {
-//   font-size: $fs-md;
-//   font-weight: $fw-m;
-//   line-height: 34px;
-// }
-// h5 {
-//   font-size: $fs-m;
-//   font-weight: $fw-m;
-//   line-height: 32px;
-// }
-// h6 {
-//   font-size: $fs-sm;
-//   font-weight: $fw-m;
-//   line-height: 26px;
-// }
-// caption {
-//   font-size: $fs-xxs;
-//   line-height: 24px;
-// }
-// .txt {
-//   &_body1 {
-//     font-size: $fs-s;
-//     font-weight: $fw-m;
-//     line-height: 26px;
-//   }
-//   &_body2 {
-//     font-size: $fs-xs;
-//     font-weight: $fw-m;
-//     line-height: 24px;
-//   }
-//   &_btn {
-//     font-size: $fs-xs;
-//     line-height: 24px;
-//   }
-//   &_caption {
-//     font-size: $fs-xxs;
-//     line-height: 24px;
-//   }
-// }
+/** Width **/
+.w{
+  &_80{
+    width: 80px !important;
+    flex:0 0 80px !important;
+  }
+  &_145{
+    width: 145px !important;
+    flex:0 0 145px !important;
+  }
+}
 /** Font Family **/
 .font {
   &_kr {

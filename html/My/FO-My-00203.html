@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>APP 설정 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap" class="page_app">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <section class="app_setting_wrap">
+        <div class="inner">
+          <div class="tit">
+            PUSH 설정
+            <div class="btn_toggle">
+              <input type="checkbox" checked="">
+              <label></label>
+            </div>
+          </div>
+          <p class="desc">내 휴대폰에서 앱 알림 설정이 꺼져 있다면 알림이 오지 않을수 있습니다. 아래 설정에서 알림을 허용해 주세요.</p>
+          <ul class="setting_guide">
+            <li>아이폰 : 설정 &gt; 알림 &gt; (뉴플랫폼)</li>
+            <li>안드로이드 : 설정 &gt; 애플리케이션 &gt; (뉴플랫폼) &gt; 알림</li>
+          </ul>
+          <dl class="app_version">
+            <dt class="tit">앱 버전</dt>
+            <dd class="version">V 3.2.13</dd>
+          </dl>
+        </div>
+      </section><!-- //.mypage_user_box -->
+      <div class="hr_divider"></div>
+      <section class="app_notice_wrap">
+        <div class="inner">
+          <div class="tit">알림함</div>
+          <ul>
+            <li class="notice_box">
+              <div class="notice_txt">
+                [본사/VIP] 6월 곱슬몽 슬릭펌의 모든것 With 더클래스 모나크 서애원장 강의가 3일 남았습니다.
+                수강신청 수강신청내역에서 내 강의를 확인해 보세요.
+              </div>
+              <div class="notice_date">2024-06-13 11:45</div>
+            </li>
+            <li class="notice_box">
+              <div class="notice_txt">
+                [본사/VIP] 6월 곱슬몽 슬릭펌의 모든것 With 더클래스 모나크 서애원장 강의가 3일 남았습니다.
+                수강신청 수강신청내역에서 내 강의를 확인해 보세요.
+              </div>
+              <div class="notice_date">2024-06-13 11:45</div>
+              <div class="notice_img">
+                <img src="../../resources/images/@sample_notice.png" alt="이미지 예시 (가로 299px 이하)">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- //#container -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+
+
+
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("APP 설정")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

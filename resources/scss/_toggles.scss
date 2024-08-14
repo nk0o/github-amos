@@ -2,14 +2,14 @@
 .btn_toggle {
   display: inline-block;
   position: relative;
-  height: 28px;
+  height: 24px;
   label {
     display: inline-block;
     position: relative;
     width: 46px;
-    height: 28px;
+    height: 24px;
     border-radius: 9999999px;
-    background: $gray-100;
+    background: $gray-300;
     @include trans($prop: all, $duration: 0.4s, $type: ease-out, $delay: 0s);
     &:after {
       content: "";
@@ -17,8 +17,8 @@
       position: absolute;
       top: 2px;
       left: 2px;
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       border-radius: 100%;
       background: $color-white;
       z-index: 2;
@@ -38,7 +38,7 @@
     &:checked + label {
       background: $color-primary;
       &:after {
-        left: 20px;
+        left: 24px;
       }
     }
     &:disabled{
@@ -81,7 +81,7 @@
   }
   //글자 품은 토글버튼
   &.txt_in_toggle{
-    height: 28px;
+    height: 24px;
     input{
       &:checked + label{
         background-color: $gray-100;
