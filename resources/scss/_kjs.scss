@@ -1633,10 +1633,13 @@
   .tit {
     display: flex;
     gap: 8px;
-    font-family: 'Arita-dotum';
-    @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
     .badge {
       margin-top: 4px;
+    }
+    strong {
+      font-family: 'Arita-dotum';
+      @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
+      word-break: break-all;
     }
   }
   .state {

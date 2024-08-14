@@ -413,6 +413,11 @@
       @include iconImgPath("ico_cupon.svg");
     }
   }
+  &_cal {
+    &::before {
+      @include iconImgPath("ico_cal.svg");
+    }
+  }
 }
 .ico_btn { 
   &_cart{
