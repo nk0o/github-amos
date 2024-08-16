@@ -35,6 +35,10 @@
     @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
     margin-bottom: 12px;
   }
+  .dot_list{
+    margin-top: 40px;
+    padding: 0 20px;
+  }
 }
 .sign_notice{
   padding: 24px 20px 0;
@@ -211,6 +215,7 @@
     }
   }
 }
+
 /*** 입점상담 ***/
 .page_enter{
   .info_area{
