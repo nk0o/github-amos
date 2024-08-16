@@ -8146,6 +8146,9 @@ footer .f_company {
 .dot_list > li + li {
   margin-top: 4px;
 }
+.dot_list > li strong {
+  color: #444444;
+}
 
 .sticky_tab {
   position: sticky;
@@ -8186,6 +8189,10 @@ footer .f_company {
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 12px;
+}
+.page_form .dot_list {
+  margin-top: 40px;
+  padding: 0 20px;
 }
 
 .sign_notice {
