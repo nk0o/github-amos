@@ -8148,7 +8148,8 @@ footer .f_company {
   margin-top: 4px;
 }
 .dot_list > li strong {
-  color: #444444;
+  color: #222222;
+  text-decoration: underline;
 }
 
 .sticky_tab {
