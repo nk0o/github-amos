@@ -276,6 +276,7 @@
 .txt_alert {
   position: relative;
   @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
+  font-family: $font-aritadt;
   &.error {
     color: $color-red;
   }
