@@ -2033,4 +2033,112 @@
   }
 }
 
+.history_search {
+  padding: 24px 0 32px;
+  .input_group {
+    .select_box {
+      min-width: 0;
+    }
+    &.width_btn {
+      button {
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  .dot_list {
+    margin-top: 16px;
+  }
+  .view_point {
+    padding: 20px;
+    margin-top: 22px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    .point_list {
+      display: flex;
+      justify-content: space-between;
+      &+.point_list {
+        margin-top: 8px;
+      }
+      em {
+        font-size: 15px;
+        font-weight: $fw-sb;
+        line-height: 20px;
+      }
+      .point {
+        font-size: 18px;
+        font-weight: $fw-m;
+        line-height: 20px;
+        color: #1A63D9;
+        &.used {
+          color: #777;
+        }
+      }
+    }
+  }
+}
 
+.history_result {
+  padding: 20px 20px 40px;
+  margin: 0 -20px;
+  border-top: 8px solid #F6F6F6;
+  >ul {
+    >li {
+      &+li {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #eee;
+      }
+      .date {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #888;
+        font-weight: $fw-l;
+        line-height: 17px;
+      }
+      .detail{
+        display: flex;
+        justify-content: space-between;
+        em {
+          font-size: 15px;
+          font-weight: $fw-sb;
+          line-height: 20px;
+        }
+        .point {
+          font-size: 18px;
+          font-weight: $fw-m;
+          line-height: 20px;
+          color: #1A63D9;
+          &.used {
+            color: #777;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dot_list {
+  >li {
+    font-family: $font-aritadt; 
+    @include fontStyle($gray-800, $fs-s, $fw-m, 1.1875);
+    text-indent: -10px;
+    margin-left: 10px;
+    word-break: break-all;
+    &::before {
+      display: inline-block;
+      width:3px;
+      height:3px;
+      margin-right: 6px;
+      vertical-align: 3px;
+      background:#aaa;
+      border-radius: 50%;
+      content: '';
+    }
+    &+li {
+      margin-top: 4px;
+    }
+  }
+}

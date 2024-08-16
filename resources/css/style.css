@@ -8046,6 +8046,107 @@ footer .f_company {
   line-height: 18px;
 }
 
+.history_search {
+  padding: 24px 0 32px;
+}
+.history_search .input_group .select_box {
+  min-width: 0;
+}
+.history_search .input_group.width_btn button i {
+  margin-right: 4px;
+}
+.history_search .dot_list {
+  margin-top: 16px;
+}
+.history_search .view_point {
+  padding: 20px;
+  margin-top: 22px;
+  border-radius: 8px;
+  background: #EFF6FF;
+}
+.history_search .view_point .point_list {
+  display: flex;
+  justify-content: space-between;
+}
+.history_search .view_point .point_list + .point_list {
+  margin-top: 8px;
+}
+.history_search .view_point .point_list em {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.history_search .view_point .point_list .point {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1A63D9;
+}
+.history_search .view_point .point_list .point.used {
+  color: #777;
+}
+
+.history_result {
+  padding: 20px 20px 40px;
+  margin: 0 -20px;
+  border-top: 8px solid #F6F6F6;
+}
+.history_result > ul > li + li {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+.history_result > ul > li .date {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #888;
+  font-weight: 300;
+  line-height: 17px;
+}
+.history_result > ul > li .detail {
+  display: flex;
+  justify-content: space-between;
+}
+.history_result > ul > li .detail em {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.history_result > ul > li .detail .point {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1A63D9;
+}
+.history_result > ul > li .detail .point.used {
+  color: #777;
+}
+
+.dot_list > li {
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  color: #666666;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.1875;
+  text-indent: -10px;
+  margin-left: 10px;
+  word-break: break-all;
+}
+.dot_list > li::before {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-right: 6px;
+  vertical-align: 3px;
+  background: #aaa;
+  border-radius: 50%;
+  content: "";
+}
+.dot_list > li + li {
+  margin-top: 4px;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
