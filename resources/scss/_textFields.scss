@@ -77,14 +77,15 @@
         right: 67px;
       }
     }
+    .dash{
+      color:$gray-200;
+      text-align: center;
+    }
     &.input_social_num{
       label{
         @include flexStart;
         gap: 6px;
         color:$gray-500;
-      }
-      .dash{
-        color:$gray-200;
       }
       .input_text{
         flex: 1;
@@ -92,6 +93,27 @@
         &.birth_date{
           max-width: 120px;
         }
+      }
+    }
+    &.is_date{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap:6px;
+      input{
+        flex: auto;
+        width: auto !important;
+        min-width: 0;
+        max-width: none;
+        cursor: pointer;
+        user-select: none;
+        padding-right: 48px;
+        background: url('../images/icon/ico_calendar_24.svg') center right 12px/24px no-repeat;
+        @include fontStyle($gray-500, $fs-m, $fw-m, 1.5);
+      }
+      &.hidden{
+        display: none;
       }
     }
   }

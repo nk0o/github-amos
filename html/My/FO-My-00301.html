@@ -99,9 +99,9 @@
     </div><!-- //.btm_sheet_head -->
     <div class="btm_sheet_cont check_list">
       <div class="radio_btn_wrap">
-        <div>조회기간</div>
+        <div class="tit">조회기간</div>
         <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1" class="input_radio" name="radio-item-1">
+          <input type="radio" id="radio-1" class="input_radio" name="radio-item-1" checked>
           <label for="radio-1">1개월</label>
         </div>
         <div class="input_radio_wrap type_btn">
@@ -116,15 +116,20 @@
           <input type="radio" id="radio-4" class="input_radio" name="radio-item-1">
           <label for="radio-4">12개월</label>
         </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-4" class="input_radio" name="radio-item-1">
-          <label for="radio-4">기간 설정</label>
+        <div class="input_radio_wrap type_btn show_picker">
+          <input type="radio" id="radio-5" class="input_radio" name="radio-item-1">
+          <label for="radio-5">기간 설정</label>
+        </div> 
+        <div class="input_group is_date hidden">
+          <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01">
+          <span class="dash">-</span>
+          <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02">
         </div>
       </div><!-- //.radio_btn_wrap -->
       <div class="check_btn_wrap">
-        <div>상품유형</div>
+        <div class="tit">상품유형</div>
         <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-1" class="input_check" name="check-item-1">
+          <input type="checkbox" id="check-1" class="input_check" name="check-item-1" checked>
           <label for="check-1">일반</label>
         </div>
         <div class="input_check_wrap type_btn">
@@ -135,27 +140,11 @@
           <input type="checkbox" id="check-3" class="input_check" name="check-item-1">
           <label for="check-3">체험상품</label>
         </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-4" class="input_check" name="check-item-1">
-          <label for="check-4">12개월</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-5" class="input_check" name="check-item-1">
-          <label for="check-5">기간 설정</label>
-        </div> 
-        
-        <label for="datepicker" class="btn_modal_open" id="modal01" style="cursor: pointer;">start Date</label>
-        <input type="text" data-cal="datepicker" class="input_text">&nbsp; - &nbsp;
-        <br>
-        <label for="datepicker" class="btn_modal_open" id="modal02" style="cursor: pointer;">end Date</label>
-        <input type="text" data-cal="datepicker2"  class="input_text">
-
-
       </div><!-- //.check_btn_wrap -->
       <div class="check_btn_wrap">
-        <div>주문상태</div>
+        <div class="tit">주문상태</div>
         <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-all" class="input_check" name="check-item-2">
+          <input type="checkbox" id="check-2-all" class="input_check" name="check-item-2" checked>
           <label for="check-2-all">전체</label>
         </div>
         <div class="input_check_wrap type_btn">
@@ -180,24 +169,26 @@
 </div><!-- //.btm_sheet -->
 <!-- //Bottom Sheet -->
 
-<div class="modal_container" data-modal="modal01" style="z-index: 111111111;">
-  <div class="modal_overlay" style="height: 1086px;"></div>
-  <div class="modal_content" style="position: relative; top: auto;">
-    <div class="modal_body">
-      <div type="text" id="datepicker" class="inp_cal" readonly=""></div>        
-    </div>
-  </div>
-  <!-- /.modal_content -->
-</div>
-<div class="modal_container" data-modal="modal02" style="z-index: 111111111;">
-  <div class="modal_overlay" style="height: 1086px;"></div>
-  <div class="modal_content" style="position: relative; top: auto;">
-    <div class="modal_body">
-      <div type="text" id="datepicker2" class="inp_cal" readonly=""></div>        
-    </div>
-  </div>
-  <!-- /.modal_content -->
 
+<!-------- Modal -------->
+<div class="modal_container is_pickermodal" data-modal="modal01">
+  <div class="modal_overlay"></div>
+  <div class="modal_content">
+    <div class="modal_body">
+      <div type="text" id="datepicker" class="inp_cal"></div>  
+    </div>
+  </div><!-- //.modal_content -->
+</div><!-- //.modal_container -->
+
+<div class="modal_container is_pickermodal" data-modal="modal02">
+  <div class="modal_overlay"></div>
+  <div class="modal_content">
+    <div class="modal_body">
+      <div type="text" id="datepicker2" class="inp_cal"></div>
+    </div>
+  </div><!-- //.modal_content -->
+</div><!-- //.modal_container -->
+<!-------- // Modal -------->
 
 
 
@@ -209,42 +200,29 @@
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
-    $('#datepicker').datepicker({
-          dateFormat: 'yy-mm-dd',
-          showOtherMonths: true,
-          showMonthAfterYear: true,
-          changeYear: true,
-          changeMonth: true,
-          showOn: 'both',
-          buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
-          buttonImageOnly: true,
-          showAnim: '',
-          onSelect: function () {
-            let calName =$(this).attr('id');
-            let selectValue = this.value;
-            let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
-            $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
-            $("body").removeClass("no_scroll");
-          }
-      });
-    $('#datepicker2').datepicker({
-          dateFormat: 'yy-mm-dd',
-          showOtherMonths: true,
-          showMonthAfterYear: true,
-          changeYear: true,
-          changeMonth: true,
-          showOn: 'both',
-          buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
-          buttonImageOnly: true,
-          showAnim: '',
-          onSelect: function () {
-            let calName =$(this).attr('id');
-            let selectValue = this.value;
-            let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
-            $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
-            $("body").removeClass("no_scroll");
-          }
-      });
-  </script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy.mm.dd',
+      showOtherMonths: true,
+      showMonthAfterYear: true,
+      currentText:'오늘',
+      changeYear: false,
+      changeMonth: false,
+      monthNames: [ ".01", ".02", ".03", ".04", ".05", ".06",".07", ".08", ".09", ".10", ".11", ".12" ],
+      showOn: 'both',
+      dayNamesMin:['일','월','화', '수', '목','금','토'],
+      buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+      buttonImageOnly: true,
+      showAnim: '',
+      onSelect: function () {
+        let calName =$(this).attr('id');
+        let selectValue = this.value;
+        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+        $("body").removeClass("no_scroll");
+      }
+    });
+    $('#datepicker').datepicker();
+    $('#datepicker2').datepicker();
+    </script>
 </body>
 </html>

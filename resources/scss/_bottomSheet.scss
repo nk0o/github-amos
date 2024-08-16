@@ -73,4 +73,27 @@
   &_btns{
     padding:0 32px 32px;
   }
+  &_cont{
+    .tit{
+      @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3333)
+    }
+  }
+  .radio_btn_wrap .tit, .check_btn_wrap .tit{
+    margin-bottom: 2px;
+    flex: 0 0 100%;
+  }
+  .radio_btn_wrap, .check_btn_wrap{
+    padding: 12px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;    
+    .tit{
+      margin-bottom: 2px;
+      flex: 0 0 100%;
+    }
+    .input_group.is_date{
+      flex: 0 0 100%;
+      margin-top: 4px;
+    }
+  }
 }

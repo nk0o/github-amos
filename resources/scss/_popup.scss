@@ -149,12 +149,20 @@
     }
   }  
 }
-
 .scroll_inner{
   .gift_list{
     padding: 20px 10px;
   }
   .gift_check_wrap{
     padding: 24px 5px 0;
+  }
+}
+
+.modal_container.is_pickermodal{
+  z-index: 1003;
+  .modal{
+    &_body{
+      padding: 0 10px 20px;
+    }
   }
 }
