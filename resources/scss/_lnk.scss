@@ -1281,24 +1281,28 @@
 //APP 알림함
 .app_notice_wrap{
   padding: 20px 0;
+  padding: 20px 0 40px;
+  margin-bottom: $btmbar-H;
   .tit{
     display: flex;
     align-items: center;
     @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
   }
+  .no_data{
+    padding-top:36px;
+  }
 }
 .notice_box{
-  display: grid;
-  grid-template-columns: 36px 1fr;
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 0 20px 36px;
   border-top: 1px solid $gray-100;
   &:first-child{
     border-top: none;
   }
   &::before{
     content: '';
-    display: block;
-    grid-row: -1 1;
+    position: absolute;
+    left:0;
     width: 36px;
     height: 24px;
     background:url('../images/icon/ico_speaker.svg') left/24px no-repeat;
@@ -1316,6 +1320,7 @@
     &_img{
       margin-top: 6px;
       img{
+        width: 100%;
         max-width: 300px;
         height: auto;
       }

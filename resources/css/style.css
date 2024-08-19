@@ -9809,6 +9809,8 @@ footer .f_company {
 
 .app_notice_wrap {
   padding: 20px 0;
+  padding: 20px 0 40px;
+  margin-bottom: 90px;
 }
 .app_notice_wrap .tit {
   display: flex;
@@ -9818,11 +9820,13 @@ footer .f_company {
   font-weight: 700;
   line-height: 1.5;
 }
+.app_notice_wrap .no_data {
+  padding-top: 36px;
+}
 
 .notice_box {
-  display: grid;
-  grid-template-columns: 36px 1fr;
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 0 20px 36px;
   border-top: 1px solid #eeeeee;
 }
 .notice_box:first-child {
@@ -9830,8 +9834,8 @@ footer .f_company {
 }
 .notice_box::before {
   content: "";
-  display: block;
-  grid-row: -1 1;
+  position: absolute;
+  left: 0;
   width: 36px;
   height: 24px;
   background: url("../images/icon/ico_speaker.svg") left/24px no-repeat;
@@ -9855,6 +9859,7 @@ footer .f_company {
   margin-top: 6px;
 }
 .notice_box .notice_img img {
+  width: 100%;
   max-width: 300px;
   height: auto;
 }/*# sourceMappingURL=style.css.map */
