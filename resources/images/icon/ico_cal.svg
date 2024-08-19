@@ -1,15 +1,9 @@
-<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 29064">
-<g id="Rectangle 2907">
-<mask id="path-1-inside-1_1955_18013" fill="white">
-<rect x="0.75" y="2.35547" width="14.4516" height="12.6452" rx="1"/>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_869_836" fill="white">
+<rect x="0.75" y="2.35474" width="14.4516" height="12.6452" rx="1"/>
 </mask>
-<rect x="0.75" y="2.35547" width="14.4516" height="12.6452" rx="1" stroke="white" stroke-width="2.4" mask="url(#path-1-inside-1_1955_18013)"/>
-</g>
-<path id="Vector 50" d="M1.65332 6.87109H14.7501" stroke="white" stroke-width="1.2"/>
-<g id="Group 29063">
-<path id="Vector 51" d="M4.81445 1V4.43226" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-<path id="Vector 52" d="M11.1372 1V4.43226" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
-</g>
-</g>
+<rect x="0.75" y="2.35474" width="14.4516" height="12.6452" rx="1" stroke="white" stroke-width="2.4" mask="url(#path-1-inside-1_869_836)"/>
+<path d="M1.6532 6.87085H14.75" stroke="white" stroke-width="1.2"/>
+<path d="M4.81451 1V4.43226" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M11.1371 1V4.43226" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

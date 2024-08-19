@@ -6,7 +6,6 @@ $(document).ready(function() {
     $(window).resize(function() {
       clearTimeout(timer);
       timer = setTimeout(checkIsMobile, 100);
-      console.log(isMobile);
     });
 });
 function checkIsMobile(){
@@ -515,12 +514,13 @@ function modalUI(){
 
 function bottomSheetUI(){
   $('[data-btmsheet]').on('click touch',function() {
-    if(isMobile){
-      $("#"+ $(this).data('btmsheet')).addClass('show');
+    if($(this).hasClass('select_box_value') && !isMobile){
+      //셀렉트는 모바일일때만 열림
+      return false;
     }
+    $("#"+ $(this).data('btmsheet')).addClass('show');
   });
   $('.btm_sheet_close, .btm_sheet_back').on('click touch',function() {
-    console.log('dk');
     $(this).parents('.btm_sheet').removeClass('show')
   });
 }
