@@ -152,6 +152,7 @@ button {
   //Button Group
   &_group {
     @include flexCenter;
+    flex-wrap: wrap;
     max-width: 1024px;
     margin: 0 auto;
     gap: 5px;

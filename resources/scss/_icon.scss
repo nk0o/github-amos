@@ -283,6 +283,11 @@
       }
     }
   }
+  &_info{
+    &::before {
+      @include iconImgPath("ico_info.svg");
+    }
+  }
   &_clip{
     &::before {
       @include iconImgPath("ico_clip.svg");

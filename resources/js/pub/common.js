@@ -37,6 +37,7 @@ $(document).ready(function () {
   if ($('.clickTab').length > 0) {  tabMoveAnchor() }
   if ($('.open_month').length > 0) {  monthPicker() }
   if ($('.show_picker').length > 0) {  showPicker() }
+  if ($('.show_etcinput').length > 0) {  showEtc() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -799,11 +800,48 @@ function monthPicker() {
 }
 
 function showPicker(){
-  $('.input_radio_wrap').click(function(e){
-    if(!$(this).hasClass('show_picker')){
+  $('.input_radio_wrap label, .input_check_wrap label').click(function(e){
+    if(!$(this).parents().hasClass('show_picker')){
       $('.is_date.hidden').css('display','none');
     }else{
       $('.is_date.hidden').css('display','flex');
     }
+  })
+}
+
+function showEtc(){
+  $('.input_radio_wrap label, .input_check_wrap label').click(function(e){
+    let isShowTrigger = $(this).parent().hasClass('show_etcinput');
+    let radioType = $(this).siblings('input').prop("type") == "radio";
+    let checkType = $(this).siblings('input').prop("type") == "checkbox";
+
+    if(radioType){
+      isShowTrigger ? uiShow(this) : uiHide(this);
+    }
+    
+    if(checkType){
+      if(isShowTrigger){
+        if($(this).parents('.inquiry_box').hasClass('check_len2')){
+          if($(this).parents('.check_len2').find('input[type="checkbox"]:checked').length < 2){
+            uiShow(this);
+          }else{
+            uiHide(this);
+          }
+        }else{
+          uiShow(this)
+        }
+        
+        $(this).siblings('input').prop("checked") && uiHide(this);
+      }
+    }
+  
+    function uiShow(el) {  
+      $(el).parents('.inquiry_box').find('.input_etc.hidden').css('display','flex');
+    }
+    function uiHide(el) {  
+      $(el).parents('.inquiry_box').find('.input_etc.hidden').css('display','none');
+    }
+
+
   })
 }

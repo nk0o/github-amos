@@ -18,12 +18,21 @@
     <!-- //header -->
     <main id="container">
       <div class="inner">
+        <div class="complete_txt">
+          <div class="txt_box">
+            <strong>
+              AMOS NEW PLATFORM
+              <span>회원이 되신것을 축하드립니다.</span>
+            </strong>
+            <p>보다 나은 서비스를 위한 추가정보&nbsp;입력단계&nbsp;입니다.<br>아래&nbsp;정보를&nbsp;입력해주세요.</p>
+          </div>
+        </div><!-- //.complete_txt -->
         <ul class="inquiry_outer">
           <li class="inquiry_box">
-            <strong class="ask_tit">규모(디자이너 수)가 어떻게 되는지 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q1">규모(디자이너 수)가 어떻게 되는지 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-0-1" class="input_radio" name="radio-item-0">
+                <input type="radio" id="radio-0-1" class="input_radio" name="radio-item-0" checked>
                 <label for="radio-0-1">일인샵(1인)</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -38,13 +47,13 @@
                 <input type="radio" id="radio-4" class="input_radio" name="radio-item-0">
                 <label for="radio-0-4">대형(6인 이상)</label>
               </div>
-            </div>
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">남성커트 가격을 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q2">남성커트 가격을 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-01-1" class="input_radio" name="radio-item-01">
+                <input type="radio" id="radio-01-1" class="input_radio" name="radio-item-01" checked>
                 <label for="radio-1">10,000원 미만</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -59,13 +68,13 @@
                 <input type="radio" id="radio-01-4" class="input_radio" name="radio-item-01">
                 <label for="radio-01-4">20,000원 ~ 29,000원 이상</label>
               </div>
-            </div>
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">주요 고객연령층이 어떻게 되는지 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q3">주요 고객연령층이 어떻게 되는지 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-02-1" class="input_radio" name="radio-item-02">
+                <input type="radio" id="radio-02-1" class="input_radio" name="radio-item-02" checked>
                 <label for="radio-02-1">10대</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -80,35 +89,34 @@
                 <input type="radio" id="radio-02-4" class="input_radio" name="radio-item-02">
                 <label for="radio-02-4">50대 이상</label>
               </div>
-            </div>
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">관심있는 시술 카테고리 알려주세요.
-            </strong>
+            <strong class="ask_tit" data-asknum="Q4">관심있는 시술 카테고리 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-1" class="input_radio" name="radio-item-1">
-                <label for="radio-1">염모</label>
+                <input type="radio" id="radio-03-1" class="input_radio" name="radio-item-03" checked>
+                <label for="radio-03-1">염모</label>
               </div>
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-2" class="input_radio" name="radio-item-1">
-                <label for="radio-2">펌</label>
+                <input type="radio" id="radio-03-2" class="input_radio" name="radio-item-03">
+                <label for="radio-03-2">펌</label>
               </div>
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-3" class="input_radio" name="radio-item-1">
-                <label for="radio-3">클리닉</label>
+                <input type="radio" id="radio-03-3" class="input_radio" name="radio-item-03">
+                <label for="radio-03-3">클리닉</label>
               </div>
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-4" class="input_radio" name="radio-item-1">
-                <label for="radio-4">점판</label>
+                <input type="radio" id="radio-03-4" class="input_radio" name="radio-item-03">
+                <label for="radio-03-4">점판</label>
               </div>
-            </div>
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">주력 시술 카테고리 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q5">주력 시술 카테고리 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-21" class="input_radio" name="radio-item-2">
+                <input type="radio" id="radio-21" class="input_radio" name="radio-item-2" checked>
                 <label for="radio-21">염색커버</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -127,62 +135,70 @@
                 <input type="radio" id="radio-25" class="input_radio" name="radio-item-2">
                 <label for="radio-25">클리닉</label>
               </div>
-            </div>
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box check_len2">
-            <strong class="ask_tit">염모 주력 사용브랜드 알려주세요. (2개까지 선택 가능합니다.)</strong>
+            <strong class="ask_tit" data-asknum="Q6">염모 주력 사용브랜드 알려주세요. (2개까지 선택 가능합니다.)</strong>
             <div class="radio_btn_wrap">
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-1" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-1" class="input_check" name="check-item-1">
                 <label for="check-1">데미</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-2" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-2" class="input_check" name="check-item-1">
                 <label for="check-2">래삐</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-3" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-3" class="input_check" name="check-item-1">
                 <label for="check-3">로레알</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-4" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-4" class="input_check" name="check-item-1">
                 <label for="check-4">미엘</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-5" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-5" class="input_check" name="check-item-1">
                 <label for="check-5">밀본</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-6" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-6" class="input_check" name="check-item-1">
                 <label for="check-6">시세이도</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-7" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-7" class="input_check" name="check-item-1">
                 <label for="check-7">아모스</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-8" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-8" class="input_check" name="check-item-1">
                 <label for="check-8">웰라</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-9" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-9" class="input_check" name="check-item-1">
                 <label for="check-9">파이모아</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-10" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-10" class="input_check" name="check-item-1">
                 <label for="check-10">호유</label>
               </div>
-              <div class="input_radio_wrap type_btn">
-                <input type="checkbox" id="check-11" class="input_radio" name="check-item-1">
+              <div class="input_check_wrap type_btn show_etcinput">
+                <input type="checkbox" id="check-11" class="input_check" name="check-item-1">
                 <label for="check-11">기타</label>
-              </div>
-            </div>
+              </div><!-- //.show_etcinput -->
+              <div class="input_writing_group input_etc hidden">
+                <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                <div class="txt_count">
+                  <p class="current zero">0</p>
+                  <span>/</span>
+                  <p class="total">30</p>
+                </div>
+              </div><!-- //.input_writing_group.input_etc -->
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">열펌 주력 사용브랜드 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q7">열펌 주력 사용브랜드 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-31" class="input_radio" name="radio-item-3">
+                <input type="radio" id="radio-31" class="input_radio" name="radio-item-3" checked>
                 <label for="radio-31">그리에이트(ATS)</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -213,17 +229,25 @@
                 <input type="radio" id="radio-38" class="input_radio" name="radio-item-3">
                 <label for="radio-38">카디뷰(서프라리스)</label>
               </div>
-              <div class="input_radio_wrap type_btn">
+              <div class="input_radio_wrap type_btn show_etcinput">
                 <input type="radio" id="radio-39" class="input_radio" name="radio-item-3">
                 <label for="radio-39">기타</label>
-              </div>
-            </div>
+              </div><!-- //.show_etcinput -->
+              <div class="input_writing_group input_etc hidden">
+                <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                <div class="txt_count">
+                  <p class="current zero">0</p>
+                  <span>/</span>
+                  <p class="total">30</p>
+                </div>
+              </div><!-- //.input_writing_group.input_etc -->
+            </div><!-- //.radio_btn_wrap -->
           </li>
           <li class="inquiry_box">
-            <strong class="ask_tit">헤어케어(클리닉) 주력 사용브랜드 알려주세요.</strong>
+            <strong class="ask_tit" data-asknum="Q8">헤어케어(클리닉) 주력 사용브랜드 알려주세요.</strong>
             <div class="radio_btn_wrap">
               <div class="input_radio_wrap type_btn">
-                <input type="radio" id="radio-41" class="input_radio" name="radio-item-4">
+                <input type="radio" id="radio-41" class="input_radio" name="radio-item-4" checked>
                 <label for="radio-41">로레알</label>
               </div>
               <div class="input_radio_wrap type_btn">
@@ -250,16 +274,26 @@
                 <input type="radio" id="radio-48" class="input_radio" name="radio-item-4">
                 <label for="radio-48">하오니코</label>
               </div>
-              <div class="input_radio_wrap type_btn">
+              <div class="input_radio_wrap type_btn show_etcinput">
                 <input type="radio" id="radio-49" class="input_radio" name="radio-item-4">
                 <label for="radio-49">기타</label>
-              </div>
-            </div>
+              </div><!-- //.show_etcinput -->
+              <div class="input_writing_group input_etc hidden">
+                <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                <div class="txt_count">
+                  <p class="current zero">0</p>
+                  <span>/</span>
+                  <p class="total">30</p>
+                </div>
+              </div><!-- //.input_writing_group.input_etc -->
+            </div><!-- //.radio_btn_wrap -->
           </li>
         </ul>
+        <ul class="dot_list">
+          <li>추가정보를 입력해 주셔야, 사이트를 원활히 사용 가능합니다.</li>
+        </ul>
         <div class="btn_group">
-          <a href="#" class="btn_lg btn_border">취소</a>
-          <a href="#" class="btn_lg btn_primary">입력완료</a>
+          <a href="#" class="btn_lg btn_primary">가입하기</a>
         </div>
       </div>
     </main>
@@ -271,7 +305,7 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("회원가입 (추가정보 입력)")
+      $(".appbar_tit").html("회원가입 (추가정보)")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

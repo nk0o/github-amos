@@ -44,12 +44,19 @@
           </div><!-- //.input_group -->
           <div class="input_group input_social_num">
             <span class="input_label">생년월일</span>
+            <!-- 동의한 사람만 뒷자리 성별구분인풋 노출 -->
             <label for="">
               <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
               <span class="dash">-</span>
               <input type="text" id="" class="input_text" value="" placeholder="0">
-              <span>******</span>
+              <span class="hidden_num">******</span>
             </label>
+            <!-- 동의 안 한 경우 -->
+            <!-- <label for="">
+              <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+              <span class="dash">-</span>
+              <span class="hidden_num">*******</span>
+            </label> -->
           </div><!-- //.input_group -->
           <div class="input_group">
             <span class="input_label">휴대폰 번호</span>

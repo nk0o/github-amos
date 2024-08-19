@@ -166,6 +166,10 @@ p {
   width: 145px !important;
   flex: 0 0 145px !important;
 }
+.w_full {
+  width: 100% !important;
+  flex: 100% !important;
+}
 
 /** Font Family **/
 .font_kr {
@@ -1735,6 +1739,20 @@ p {
     background-image: none;
   }
 }
+.ico_info::before {
+  background-image: url("../images/icon/ico_info.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_info::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_info.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_clip::before {
   background-image: url("../images/icon/ico_clip.svg");
   background-size: cover;
@@ -2429,6 +2447,7 @@ button:disabled *[class*=ico_]::before {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 1024px;
   margin: 0 auto;
   gap: 5px;
@@ -3518,6 +3537,9 @@ select {
 .input_group.input_social_num .input_text.birth_date {
   max-width: 120px;
 }
+.input_group.input_social_num .hidden_num {
+  height: 10px;
+}
 .input_group.is_date {
   display: flex;
   flex-direction: row;
@@ -3716,6 +3738,27 @@ select {
   background-color: #FF2E00;
   border-radius: 100%;
   vertical-align: top;
+}
+.input_label .info_tooltip {
+  position: absolute;
+  right: -24px;
+}
+.input_label .info_tooltip::before {
+  background-color: #bbbbbb !important;
+}
+.input_etc {
+  min-height: 92px;
+}
+.input_etc textarea {
+  min-height: 66px;
+}
+.input_etc.hidden {
+  display: none;
+}
+
+.tooltip_box {
+  padding: 20px 16px;
+  border: 1px solid #666666;
 }
 
 /* Tab Menu */
@@ -6744,7 +6787,7 @@ footer .f_company {
 }
 
 .sign_state {
-  padding: 20px 40px;
+  padding: 20px 40px 24px;
   background: #F6F6F6;
   border-radius: 8px;
   text-align: center;
@@ -6762,6 +6805,9 @@ footer .f_company {
   font-weight: 700;
   line-height: 26px;
 }
+.sign_state.userID_box {
+  padding: 25px 40px;
+}
 .sign_state.userID_box dd {
   color: #222222;
   font-size: 1.0625rem;
@@ -6774,7 +6820,7 @@ footer .f_company {
   background: #DFEDFF url("../images/contents/img_complete_txt.png") no-repeat top/100%;
 }
 .complete_txt .txt_box {
-  max-width: 261px;
+  padding: 0 10px;
   margin: 0 auto;
   text-align: center;
 }
@@ -8290,7 +8336,7 @@ footer .f_company {
   color: #666666;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.1875;
+  line-height: 1.357;
   text-indent: -10px;
   margin-left: 10px;
   word-break: break-all;
@@ -8337,6 +8383,10 @@ footer .f_company {
 }
 .page_form .input_group.with_time {
   padding-top: 6px;
+}
+.page_form .input_group .dot_list {
+  margin-top: 0;
+  padding: 0;
 }
 .page_form .inner {
   max-width: 740px;
