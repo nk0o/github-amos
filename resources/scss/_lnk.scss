@@ -934,7 +934,7 @@
     content: attr(data-asknum);
     display: block;
     margin-bottom: 8px;
-    @include fontStyle($gray-950, $fs-23, $fw-b, 1.3913);
+    @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
   }
 }
 //출석체크
