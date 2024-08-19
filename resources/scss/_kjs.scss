@@ -1368,57 +1368,134 @@
   padding: 0;
   border: none;
 }
+
+//UI Datepicker 공통
 .ui-datepicker  {
+  .ui-datepicker-year, .ui-datepicker-month {
+    display: inline-block;
+    user-select: none;
+    @include fontStyle($gray-950, $fs-ml, $fw-m, 1.444);
+    font-family: "Gotham";
+  } 
   .ui-datepicker-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     background: none;
     border: none;
   }
-  .ui-datepicker-title {
-    line-height: 26px;
-    font-family: "Gotham";
-    .ui-datepicker-month {
-      display: none;
-    }
-    .ui-datepicker-year {
-      font-size: 18px;
-      line-height: 26px; 
+  .ui-datepicker-title{
+    min-width: 100px;
+    margin: 0 16px;
+    line-height: 1;
+  }
+  .ui-datepicker-next,
+  .ui-datepicker-prev {
+    cursor: pointer;
+    position: relative;
+    inset: auto;
+    width: 20px;
+    height: 20px;
+    background: url('../images/icon/ico_chev_next_20_20.svg') no-repeat center/20px;
+    &-hover{
+      border:none;
     }
   }
   .ui-datepicker-prev {
-    top:5px;
-    width: 16px;
-    height: 16px;
-    background: url('../images/icon/ico_chev_next_16.svg') no-repeat center/16px;
     transform: rotate(180deg);
   }
-  .ui-datepicker-next {
-    top:2px;
-    width: 16px;
-    height: 16px;
-    background: url('../images/icon/ico_chev_next_16.svg') no-repeat center/16px;
+  .ui-datepicker-next{
+    order: 1;
+  }
+  table{
+    font-size: 0;
+    margin:0;
+  }
+  thead{
+    border-top:1px solid $gray-100;
+  }
+  td{
+    padding:3px 2px;
+    &.ui-state-disabled{
+      opacity: 0;
+    }
+  }
+  th{
+    padding:16px 2px 10px;
+    background-color: transparent;
+    @include fontStyle($gray-800, $fs-xs, $fw-sb, 1.3846);
+    span{
+      font:inherit;
+      color: inherit;
+    }
   }
   .ui-state-default {
     height: 48px;
-    padding: 0;
+    padding: 7px 4px;
     background:none;
-    border-color: #eee;
+    border-color: transparent;
     border-radius: 8px;
     text-align: center;
-    line-height: 48px;
-    &.ui-state-active {
-      background: #eee !important;
-      color: #222;
-    }
-    a {
-      color: #777;
-      font-size: 16px;
+    @include fontStyle($gray-900, $fs-m, $fw-m, 18px);
+    font-family: $font-gotham;
+  }
+  .ui-datepicker-today{
+    .ui-state-default.ui-state-active{
+      background-color: $color-primary !important;
+      color: $color-white;
+      &::after{
+        content: '오늘';
+        font-family: $font-aritadt;
+        display: block;
+        @include fontStyle($color-white, 10px, $fw-m, 1.2);
+      }
     }
   }
-  td {
-    padding: 4px;
-    font-family: "Gotham";
+  //UI Datepicker 월선택
+  &.ui-monthpicker{
+    .ui-datepicker-month {
+      display: none;
+    }
+    td {
+      padding: 4px;
+    }
+    .ui-state-default {
+      padding: 0;
+      border-color: #eee;
+      font-family: $font-aritadt;
+      line-height: 48px;
+      color: $gray-700;
+    }
+    .ui-datepicker-header {
+      margin-bottom: 20px;
+    }
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+      position: absolute;
+      top: 50%;
+      width: 16px;
+      height: 16px;
+      background: url('../images/icon/ico_chev_next_16.svg') no-repeat center/16px;
+      transform: translateY(-50%);
+    }
+    .ui-datepicker-prev {
+      left: 0;
+      transform: translateY(-50%) rotate(180deg);
+    }
+    .ui-datepicker-next {
+      right: 0;
+    }
+    .ui-datepicker-today{
+      .ui-state-default.ui-state-active{
+        background: $gray-100 !important;
+        color: $gray-950;
+        &::after{
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -2033,4 +2110,116 @@
   }
 }
 
+.history_search {
+  padding: 24px 0 32px;
+  .input_group {
+    .select_box {
+      min-width: 0;
+    }
+    &.width_btn {
+      button {
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  .dot_list {
+    margin-top: 16px;
+  }
+  .view_point {
+    padding: 20px;
+    margin-top: 22px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    .point_list {
+      display: flex;
+      justify-content: space-between;
+      &+.point_list {
+        margin-top: 8px;
+      }
+      em {
+        font-size: 15px;
+        font-weight: $fw-sb;
+        line-height: 20px;
+      }
+      .point {
+        font-size: 18px;
+        font-weight: $fw-m;
+        line-height: 20px;
+        color: #1A63D9;
+        &.used {
+          color: #777;
+        }
+      }
+    }
+  }
+}
 
+.history_result {
+  padding: 20px 20px 40px;
+  margin: 0 -20px;
+  border-top: 8px solid #F6F6F6;
+  >ul {
+    >li {
+      &+li {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid #eee;
+      }
+      .date {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #888;
+        font-weight: $fw-l;
+        line-height: 17px;
+      }
+      .detail{
+        display: flex;
+        justify-content: space-between;
+        em {
+          font-size: 15px;
+          font-weight: $fw-sb;
+          line-height: 20px;
+        }
+        .point {
+          font-size: 18px;
+          font-weight: $fw-m;
+          line-height: 20px;
+          color: #1A63D9;
+          &.used {
+            color: #777;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dot_list {
+  >li {
+    font-family: $font-aritadt; 
+    @include fontStyle($gray-800, $fs-s, $fw-m, 1.1875);
+    text-indent: -10px;
+    margin-left: 10px;
+    word-break: break-all;
+    &::before {
+      display: inline-block;
+      width:3px;
+      height:3px;
+      margin-right: 6px;
+      vertical-align: 3px;
+      background:#aaa;
+      border-radius: 50%;
+      content: '';
+    }
+    &+li {
+      margin-top: 4px;
+    }
+    strong{
+      color: $gray-950;
+      text-decoration: underline;
+    }
+  }
+}

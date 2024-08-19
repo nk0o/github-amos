@@ -37,6 +37,7 @@ $(document).ready(function () {
   if ($('.prd_cart_btn').length > 0) { putInCart() }
   if ($('.clickTab').length > 0) {  tabMoveAnchor() }
   if ($('.open_month').length > 0) {  monthPicker() }
+  if ($('.show_picker').length > 0) {  showPicker() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -797,3 +798,12 @@ function monthPicker() {
   });
 }
 
+function showPicker(){
+  $('.input_radio_wrap').click(function(e){
+    if(!$(this).hasClass('show_picker')){
+      $('.is_date.hidden').css('display','none');
+    }else{
+      $('.is_date.hidden').css('display','flex');
+    }
+  })
+}

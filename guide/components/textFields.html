@@ -55,7 +55,7 @@
         <p class="txt_alert success">사용이 가능한 닉네임입니다.</p>
       </div>
 
-      <h1>Width 인증 시간</h1>
+      <h1>With 인증 시간</h1>
       <div class="input_group with_time">
         <label for="">
           <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
@@ -63,7 +63,7 @@
         </label>
       </div>
 
-      <h1>Width 인증 실패</h1>
+      <h1>With 인증 실패</h1>
       <div class="input_group with_time input_error">
         <label for="">
           <input type="text" id="" class="input_text input_error" value="" placeholder="휴대폰번호">
@@ -72,7 +72,7 @@
         <p class="txt_alert error">인증번호가 다릅니다.</p>
       </div>
 
-      <h1>Width Button</h1>
+      <h1>With Button</h1>
       <div class="input_group">
         <label for="">
           <input type="text" id="" class="input_text" value="dfds" placeholder="휴대폰번호">
@@ -80,7 +80,7 @@
         </label>
       </div>
 
-      <h1>Width Button - Disabled</h1>
+      <h1>With Button - Disabled</h1>
       <div class="input_group">
         <label for="">
           <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호" disabled>
@@ -96,6 +96,22 @@
           <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
         </label>
       </div> -->
+
+      
+      <h1>Input 옆 버튼</h1>
+      <div class="input_group width_btn">
+        <label for="">
+          <input type="text" id="" class="input_text" value="" placeholder="쿠폰번호 입력">
+        </label>
+        <button class="btn_md btn_primary" disabled>쿠폰등록</button>
+      </div>
+
+      <h1>Input DatePicker - modal로 열림</h1>
+      <div class="input_group is_date">
+        <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01">
+        <span class="dash"></span>
+        <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02">
+      </div>
 
       <!-- 아이콘 오른쪽 -->
       <h1>ICON - Right</h1>
@@ -186,6 +202,65 @@
       
     </div><!--// contnets -->
   </div>
-</body>
 
+<!-- Modal -->
+  <div class="modal_container" data-modal="modal01">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_body">
+        <div type="text" id="datepicker" class="inp_cal" readonly=""></div>        
+      </div>
+    </div>
+    <!-- /.modal_content -->
+  </div>
+  <div class="modal_container" data-modal="modal02">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_body">
+        <div type="text" id="datepicker2" class="inp_cal" readonly=""></div>        
+      </div>
+    </div>
+    <!-- /.modal_content -->
+<!-- //Modal -->
+
+
+  <script>
+    $('#datepicker').datepicker({
+      dateFormat: 'yy-mm-dd',
+      showOtherMonths: true,
+      showMonthAfterYear: true,
+      changeYear: true,
+      changeMonth: true,
+      showOn: 'both',
+      buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+      buttonImageOnly: true,
+      showAnim: '',
+      onSelect: function () {
+        let calName =$(this).attr('id');
+        let selectValue = this.value;
+        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+        $("body").removeClass("no_scroll");
+      }
+      });
+    $('#datepicker2').datepicker({
+      dateFormat: 'yy-mm-dd',
+      showOtherMonths: true,
+      showMonthAfterYear: true,
+      changeYear: true,
+      changeMonth: true,
+      showOn: 'both',
+      buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
+      buttonImageOnly: true,
+      showAnim: '',
+      onSelect: function () {
+        let calName =$(this).attr('id');
+        let selectValue = this.value;
+        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+        $("body").removeClass("no_scroll");
+      }
+      });
+  </script>
+</body>
 </html>
