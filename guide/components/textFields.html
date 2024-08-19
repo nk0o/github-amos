@@ -109,9 +109,9 @@
 
       <h1>Input DatePicker - modal로 열림</h1>
       <div class="input_group is_date">
-        <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01">
+        <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
         <span class="dash"></span>
-        <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02">
+        <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
       </div>
 
       <!-- 아이콘 오른쪽 -->
@@ -211,8 +211,8 @@
         </div>
       </div>
       
-    </div><!--// contnets -->
-  </div>
+    </div><!--// guide_contnets -->
+  </div><!-- //.container -->
 
 <!-- Modal -->
   <div class="modal_container" data-modal="modal01">
@@ -223,7 +223,8 @@
       </div>
     </div>
     <!-- /.modal_content -->
-  </div>
+  </div><!-- //.modal_content -->
+
   <div class="modal_container" data-modal="modal02">
     <div class="modal_overlay"></div>
     <div class="modal_content">
@@ -231,47 +232,32 @@
         <div type="text" id="datepicker2" class="inp_cal" readonly=""></div>        
       </div>
     </div>
-    <!-- /.modal_content -->
+  </div><!-- //.modal_content -->
 <!-- //Modal -->
 
-
-  <script>
-    $('#datepicker').datepicker({
-      dateFormat: 'yy-mm-dd',
-      showOtherMonths: true,
-      showMonthAfterYear: true,
-      changeYear: true,
-      changeMonth: true,
-      showOn: 'both',
-      buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
-      buttonImageOnly: true,
-      showAnim: '',
-      onSelect: function () {
-        let calName =$(this).attr('id');
-        let selectValue = this.value;
-        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
-        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
-        $("body").removeClass("no_scroll");
-      }
-      });
-    $('#datepicker2').datepicker({
-      dateFormat: 'yy-mm-dd',
-      showOtherMonths: true,
-      showMonthAfterYear: true,
-      changeYear: true,
-      changeMonth: true,
-      showOn: 'both',
-      buttonImage: ('https://cdn-icons-png.flaticon.com/512/2838/2838779.png'),
-      buttonImageOnly: true,
-      showAnim: '',
-      onSelect: function () {
-        let calName =$(this).attr('id');
-        let selectValue = this.value;
-        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
-        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
-        $("body").removeClass("no_scroll");
-      }
-      });
+<script>
+  $.datepicker.setDefaults({
+    dateFormat: 'yy.mm.dd',
+    showOtherMonths: true,
+    showMonthAfterYear: true,
+    currentText:'오늘',
+    changeYear: false,
+    changeMonth: false,
+    monthNames: [ ".01", ".02", ".03", ".04", ".05", ".06",".07", ".08", ".09", ".10", ".11", ".12" ],
+    showOn: 'both',
+    dayNamesMin:['일','월','화', '수', '목','금','토'],
+    buttonImageOnly: true,
+    showAnim: '',
+    onSelect: function () {
+      let calName =$(this).attr('id');
+      let selectValue = this.value;
+      let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+      $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+      $("body").removeClass("no_scroll");
+    }
+  });
+  $('#datepicker').datepicker();
+  $('#datepicker2').datepicker();
   </script>
 </body>
 </html>
