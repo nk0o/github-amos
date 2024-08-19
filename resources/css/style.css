@@ -1484,6 +1484,20 @@ p {
     background-image: none;
   }
 }
+.ico_wish_is::before {
+  background-image: url("../images/icon/ico_wish_is.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_wish_is::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_wish_is.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_wish_on::before {
   background-image: url("../images/icon/ico_wish_on.svg");
   background-size: cover;

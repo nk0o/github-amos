@@ -184,6 +184,11 @@
     &::before {
       @include iconImgPath("ico_wish.svg");
     }
+    &_is{
+      &::before {
+        @include iconImgPath("ico_wish_is.svg");
+      }
+    }
     &_on{
       &::before {
         @include iconImgPath("ico_wish_on.svg");
