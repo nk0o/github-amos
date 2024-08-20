@@ -154,6 +154,7 @@ button {
     @include flexCenter;
     flex-wrap: wrap;
     max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
     gap: 5px;
     padding: 60px 20px 30px;
@@ -285,6 +286,19 @@ button {
     }
     &:hover {
       color: $gray-600;
+    }
+  }
+  &_txt_detail{
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    @include fontStyle($gray-600, $fs-xs, $fw-m, 1.2307);
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url('../images/icon/ico_chev_next_16.svg') center/contain no-repeat;
     }
   }
 }

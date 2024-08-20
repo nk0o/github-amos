@@ -1737,16 +1737,6 @@
       margin-top: 32px;
     }
   }
-  .txt_notice_wrap {
-    padding: 8px 20px 0;
-    max-width: 1024px;
-    margin: 0 auto;
-    button {
-      font-weight: $fw-sb;
-      color: #444;
-      vertical-align: top;
-    }
-  }
   .edu_cate {
     font-size: 0;
     span {
@@ -1946,7 +1936,6 @@
   .txt_notice_wrap {
     max-width:none;
     padding: 28px 0 12px;
-    white-space: wrap;
   }
 }
 

@@ -497,8 +497,19 @@
   position: relative;
   padding-left: 22px;
   margin-top: 16px;
-  @include fontStyle($gray-700, $fs-s, $fw-m, 1.357);
+  @include fontStyle($gray-700, $fs-xs, $fw-m, 1.3846);
   font-family: $font-aritadt;
+  &_wrap{
+    padding: 8px 20px 0;
+    max-width: 1024px;
+    margin: 0 auto;
+    white-space: wrap;
+    button {
+      font-weight: $fw-sb;
+      color: #444;
+      vertical-align: top;
+    }
+  }
   em{
     color: $color-blue;
   }

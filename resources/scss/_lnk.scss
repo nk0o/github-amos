@@ -332,14 +332,7 @@
         justify-content: center;
       }
     }
-  }
-  .txt_notice_wrap{
-    padding: 8px 20px 0;
-    @media (min-width: $pc-point) {
-      max-width: 1024px;
-      margin: 0 auto;
-    }
-  }
+  } 
   .btn_group{
     padding: 60px 20px 30px;
   }
@@ -549,21 +542,6 @@
       .info{
         white-space: normal;
       }
-      .prd_box{
-        .order_btn_area{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-top: 12px;
-          gap: 16px;
-          .prd_sum.price{
-            margin-top: 0;
-          }
-          @media (min-width: $pc-point) {
-            justify-content: flex-end;
-          }
-        }
-      }
       .prd_box .prd {
         .price{
           margin-top: 12px;
@@ -592,6 +570,19 @@
           display: block;
           margin-top: 6px;
           @include fontStyle($gray-700, $fs-s, $fw-m, 1.2142);
+        }
+        .order_btn_area{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 12px;
+          gap: 16px;
+          .prd_sum.price{
+            margin-top: 0;
+          }
+          @media (min-width: $pc-point) {
+            justify-content: flex-end;
+          }
         }
       }
       @media (min-width: $pc-point) {
@@ -995,53 +986,51 @@
 }
 /********** 마이페이지 메인 **********/
 .page_mypage{
+  margin-bottom: $btmbar-H;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 61px);
+  min-height: calc(100vh - ($subheader-H + $btmbar-H));
   align-items: stretch;
   .mypage_menu_wrap{
     flex: 1 1 auto;
   }
 }
-.center{
-  &_area{
-    margin-top: auto;
-    margin-bottom: $btmbar-H;
-    width: 100%;
-    padding: 24px 20px 40px 20px;
-    background-color: $color-blue-tertiary;
-    .center{
-      &_link{
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-bottom: 8px;
-        @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
-        .ico_chevNext_20_20{
-          margin-top: 1px;
-          &::before{
-            background-color: $color-primary;
-          }
+.center_area{
+  margin-top: auto;
+  width: 100%;
+  padding: 24px 20px 40px 20px;
+  background-color: $color-blue-tertiary;
+  .center{
+    &_link{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 8px;
+      @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
+      .ico_chevNext_20_20{
+        margin-top: 1px;
+        &::before{
+          background-color: $color-primary;
         }
       }
-      &_tel{
-        display: inline-flex;
-        margin-bottom: 8px;
-        @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+    }
+    &_tel{
+      display: inline-flex;
+      margin-bottom: 8px;
+      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+    }
+    &_hour{
+      display: flex;
+      gap: 20px;
+      margin-bottom: 4px;
+      li{
+        @include fontStyle($gray-700, $fs-xs, $fw-m, 1.23);
+        font-family: $font-aritadt;
       }
-      &_hour{
-        display: flex;
-        gap: 20px;
-        margin-bottom: 4px;
-        li{
-          @include fontStyle($gray-700, $fs-xs, $fw-m, 1.23);
-          font-family: $font-aritadt;
-        }
-      }
-      &_notice{
-        margin-bottom: 2px;
-        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
-      }
+    }
+    &_notice{
+      margin-bottom: 2px;
+      @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
     }
   }
 }
@@ -1355,4 +1344,26 @@
   @include fontStyle($gray-600, $fs-sm, $fw-l, 1);
   text-decoration: line-through;
   margin-right: 4px;
+}
+.order_history{
+  .cart_list{
+    padding: 20px 0 24px;
+  }
+}
+.order_info{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 20px 0 12px;
+  .inner{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .date{
+    @include fontStyle($gray-950, $fs-m, $fw-m, 1.25);
+  }
+  .state{
+    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
+  }
 }
