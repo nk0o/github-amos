@@ -9022,12 +9022,35 @@ footer .f_company {
   padding: 20px 0 32px;
   border-top: 1px solid #eeeeee;
 }
+.cart_list .prd .order_count {
+  margin-top: 6px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.333;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
 .cart_list:nth-of-type(1) {
   margin-top: 12px;
   border-top-color: #222222;
 }
 .cart_list .prd_list_sm .info, .cart_list .gift_list .info {
   white-space: normal;
+}
+.cart_list .prd_list_sm .prd_box .order_btn_area, .cart_list .gift_list .prd_box .order_btn_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 16px;
+}
+.cart_list .prd_list_sm .prd_box .order_btn_area .prd_sum.price, .cart_list .gift_list .prd_box .order_btn_area .prd_sum.price {
+  margin-top: 0;
+}
+@media (min-width: 1024px) {
+  .cart_list .prd_list_sm .prd_box .order_btn_area, .cart_list .gift_list .prd_box .order_btn_area {
+    justify-content: flex-end;
+  }
 }
 .cart_list .prd_list_sm .prd_box .prd .price, .cart_list .gift_list .prd_box .prd .price {
   margin-top: 12px;
@@ -9068,7 +9091,7 @@ footer .f_company {
   display: block;
   margin-top: 6px;
   color: #777777;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.2142;
 }
@@ -9529,11 +9552,10 @@ footer .f_company {
 
 /********** 마이페이지 메인 **********/
 .page_mypage {
-  /*  #container{
-     display: flex;
-     flex-direction: column;
-     min-height: calc(100vh - 61px);
-   } */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 61px);
+  align-items: stretch;
 }
 .page_mypage .mypage_menu_wrap {
   flex: 1 1 auto;

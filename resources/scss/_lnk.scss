@@ -534,6 +534,13 @@
   &_list{
     padding: 20px 0 32px;
     border-top: 1px solid $gray-100;
+    .prd{
+      .order_count{
+        margin-top: 6px;
+        @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);
+        font-family: $font-aritadt;
+      }
+    }
     &:nth-of-type(1){
       margin-top: 12px;
       border-top-color:$gray-950;
@@ -541,6 +548,21 @@
     .prd_list_sm{
       .info{
         white-space: normal;
+      }
+      .prd_box{
+        .order_btn_area{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 12px;
+          gap: 16px;
+          .prd_sum.price{
+            margin-top: 0;
+          }
+          @media (min-width: $pc-point) {
+            justify-content: flex-end;
+          }
+        }
       }
       .prd_box .prd {
         .price{
@@ -569,7 +591,7 @@
         .colorchip, .detail, .amount{
           display: block;
           margin-top: 6px;
-          @include fontStyle($gray-700, $fs-xs, $fw-m, 1.2142);
+          @include fontStyle($gray-700, $fs-s, $fw-m, 1.2142);
         }
       }
       @media (min-width: $pc-point) {
@@ -973,11 +995,10 @@
 }
 /********** 마이페이지 메인 **********/
 .page_mypage{
- /*  #container{
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 61px);
-  } */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 61px);
+  align-items: stretch;
   .mypage_menu_wrap{
     flex: 1 1 auto;
   }
