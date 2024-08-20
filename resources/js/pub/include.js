@@ -37,6 +37,24 @@ var include = {
       </div><!-- //.appbar -->
     `)
   },
+  mainCategoryAppBar: function () {
+    document.write(`
+      <div class="appbar">
+        <div class="inner">
+          <div class="btn_toggle txt_in_toggle">
+            <input type="checkbox"/>
+            <label>
+              <span>뉴플랫폼</span>
+              <span>AMOS TV</span>
+            </label>
+          </div>
+          <div class="appbar_util">
+            <button class="ico_search ico_24"><div class="hide">검색</div></button>
+          </div>
+        </div>
+      </div><!-- //.appbar -->
+    `)
+  },
   mainTabMenu: function () {
     document.write(`
     <div class="tab_center_wrap appbar_tabmenu">

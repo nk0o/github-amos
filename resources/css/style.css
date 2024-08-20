@@ -6069,12 +6069,6 @@ footer .f_company {
 }
 
 /* 카테고리 페이지 */
-.page_category header, .page_category .appbar {
-  position: static;
-}
-.page_category .appbar .logo, .page_category .appbar .ico_cart {
-  display: none;
-}
 .page_category .tab_cont {
   padding: 0;
 }
@@ -9372,7 +9366,7 @@ footer .f_company {
 }
 
 @media (min-width: 1024px) {
-  .page_form #container > .inner {
+  .page_form > .inner {
     padding: 60px 0 82px;
   }
   .page_form .tab_menu {
@@ -9534,10 +9528,12 @@ footer .f_company {
 }
 
 /********** 마이페이지 메인 **********/
-.page_mypage #container {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 61px);
+.page_mypage {
+  /*  #container{
+     display: flex;
+     flex-direction: column;
+     min-height: calc(100vh - 61px);
+   } */
 }
 .page_mypage .mypage_menu_wrap {
   flex: 1 1 auto;

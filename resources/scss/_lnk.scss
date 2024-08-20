@@ -836,10 +836,8 @@
 }
 @media (min-width: 1024px) {
   .page_form {
-    #container {
-      >.inner {
-        padding: 60px 0 82px;
-      }
+    >.inner {
+      padding: 60px 0 82px;
     }
     .tab_menu {
       display: block;
@@ -975,11 +973,11 @@
 }
 /********** 마이페이지 메인 **********/
 .page_mypage{
-  #container{
+ /*  #container{
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 61px);
-  }
+  } */
   .mypage_menu_wrap{
     flex: 1 1 auto;
   }
