@@ -1350,3 +1350,9 @@
     }
   }
 }
+//이전 가격
+.price_prev{
+  @include fontStyle($gray-600, $fs-sm, $fw-l, 1);
+  text-decoration: line-through;
+  margin-right: 4px;
+}

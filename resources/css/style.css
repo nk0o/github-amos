@@ -7914,7 +7914,7 @@ footer .f_company {
   margin-top: 8px;
 }
 
-.page_edu:has(.btm_bar) {
+.page_edu {
   margin-bottom: 133px;
 }
 .page_edu .order_accord .accord_cont:first-child {
@@ -9955,4 +9955,13 @@ footer .f_company {
   width: 100%;
   max-width: 300px;
   height: auto;
+}
+
+.price_prev {
+  color: #888888;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1;
+  text-decoration: line-through;
+  margin-right: 4px;
 }/*# sourceMappingURL=style.css.map */
