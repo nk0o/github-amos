@@ -864,7 +864,7 @@
       grid-template-columns: 150px 1fr;
       gap: 8px 20px;
       padding:20px 20px 0;
-      .select_box, label:not(.input_label), p, .txt_alert{
+      .select_box, label:not(.input_label), p, .txt_alert, .dot_list{
         grid-column-start: 2;
       }
       &.pc_full{
@@ -875,7 +875,7 @@
       }
     }
     .input_label{
-      display: block;
+      //display: block;
       grid-column: 1/2;
       grid-row:1/-1;
       padding-top: 16px;

@@ -221,6 +221,7 @@
   }
   &_label{
     position: relative;
+    display: inline-flex;
     @include fontStyle($gray-950, $fs-s, $fw-sb, 1.214);
     font-family: $font-aritadt;
     &.required{
@@ -238,8 +239,9 @@
       }
     }
     .info_tooltip{
-      position: absolute;
-      right: -24px;
+      order: 1;
+      align-self: center;
+      margin-left: 8px;
       &::before{
         background-color: $gray-400 !important;
       }
@@ -258,6 +260,16 @@
 }
 
 .tooltip_box{
+  display: none;
+  z-index: 1;
+  position: absolute;
+  max-width: 253px;
   padding: 20px 16px;
+  margin-right: 16px;
   border: 1px solid $gray-800;
+  border-radius: 8px;
+  background-color: $color-white;
+  &.show{
+    display: block;
+  }
 }
