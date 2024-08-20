@@ -836,10 +836,8 @@
 }
 @media (min-width: 1024px) {
   .page_form {
-    #container {
-      >.inner {
-        padding: 60px 0 82px;
-      }
+    >.inner {
+      padding: 60px 0 82px;
     }
     .tab_menu {
       display: block;
@@ -864,7 +862,7 @@
       grid-template-columns: 150px 1fr;
       gap: 8px 20px;
       padding:20px 20px 0;
-      .select_box, label:not(.input_label), p, .txt_alert{
+      .select_box, label:not(.input_label), p, .txt_alert, .dot_list{
         grid-column-start: 2;
       }
       &.pc_full{
@@ -875,7 +873,7 @@
       }
     }
     .input_label{
-      display: block;
+      //display: block;
       grid-column: 1/2;
       grid-row:1/-1;
       padding-top: 16px;
@@ -975,11 +973,11 @@
 }
 /********** 마이페이지 메인 **********/
 .page_mypage{
-  #container{
+ /*  #container{
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 61px);
-  }
+  } */
   .mypage_menu_wrap{
     flex: 1 1 auto;
   }

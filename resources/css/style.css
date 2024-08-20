@@ -3735,6 +3735,7 @@ select {
 }
 .input_label {
   position: relative;
+  display: inline-flex;
   color: #222222;
   font-size: 0.875rem;
   font-weight: 600;
@@ -3754,8 +3755,9 @@ select {
   vertical-align: top;
 }
 .input_label .info_tooltip {
-  position: absolute;
-  right: -24px;
+  order: 1;
+  align-self: center;
+  margin-left: 8px;
 }
 .input_label .info_tooltip::before {
   background-color: #bbbbbb !important;
@@ -3771,8 +3773,18 @@ select {
 }
 
 .tooltip_box {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  max-width: 253px;
   padding: 20px 16px;
+  margin-right: 16px;
   border: 1px solid #666666;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.tooltip_box.show {
+  display: block;
 }
 
 /* Tab Menu */
@@ -6057,12 +6069,6 @@ footer .f_company {
 }
 
 /* 카테고리 페이지 */
-.page_category header, .page_category .appbar {
-  position: static;
-}
-.page_category .appbar .logo, .page_category .appbar .ico_cart {
-  display: none;
-}
 .page_category .tab_cont {
   padding: 0;
 }
@@ -9360,7 +9366,7 @@ footer .f_company {
 }
 
 @media (min-width: 1024px) {
-  .page_form #container > .inner {
+  .page_form > .inner {
     padding: 60px 0 82px;
   }
   .page_form .tab_menu {
@@ -9390,7 +9396,7 @@ footer .f_company {
     gap: 8px 20px;
     padding: 20px 20px 0;
   }
-  .page_form .input_group .select_box, .page_form .input_group label:not(.input_label), .page_form .input_group p, .page_form .input_group .txt_alert {
+  .page_form .input_group .select_box, .page_form .input_group label:not(.input_label), .page_form .input_group p, .page_form .input_group .txt_alert, .page_form .input_group .dot_list {
     grid-column-start: 2;
   }
   .page_form .input_group.pc_full {
@@ -9400,7 +9406,6 @@ footer .f_company {
     grid-column-start: 1;
   }
   .page_form .input_label {
-    display: block;
     grid-column: 1/2;
     grid-row: 1/-1;
     padding-top: 16px;
@@ -9523,10 +9528,12 @@ footer .f_company {
 }
 
 /********** 마이페이지 메인 **********/
-.page_mypage #container {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 61px);
+.page_mypage {
+  /*  #container{
+     display: flex;
+     flex-direction: column;
+     min-height: calc(100vh - 61px);
+   } */
 }
 .page_mypage .mypage_menu_wrap {
   flex: 1 1 auto;

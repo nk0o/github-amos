@@ -38,6 +38,7 @@ $(document).ready(function () {
   if ($('.open_month').length > 0) {  monthPicker() }
   if ($('.show_picker').length > 0) {  showPicker() }
   if ($('.show_etcinput').length > 0) {  showEtc() }
+  if ($('.tooltip_box').length > 0) {  tooltipUI() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -844,4 +845,28 @@ function showEtc(){
 
 
   })
+}
+
+function tooltipUI() {
+  $('.info_tooltip').click(function(e){
+    if(!$('.tooltip_box').hasClass('show')){
+      e.preventDefault(); showTooltipBox(e.target); e.stopPropagation();
+    }
+  });
+
+  $('body').on('click', function (e) {
+    $('.tooltip_box').hasClass('show') && $('.tooltip_box').removeClass('show');
+  });
+
+  function showTooltipBox(el){
+    let trigerOfffsetBtm = $(el).offset().top + $(el).innerHeight();
+    let trigerOfffsetLeft = $(el).offset().left;
+    let tooltipName = $(el).attr('data-tooltip');
+    let tipBox = $('#'+tooltipName);
+    tipBox.addClass('show');
+    tipBox.offset().top = trigerOfffsetBtm;
+    tipBox.offset({
+      left: trigerOfffsetLeft, top: trigerOfffsetBtm + 8
+    });
+  };
 }
