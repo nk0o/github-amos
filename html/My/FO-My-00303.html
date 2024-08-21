@@ -17,12 +17,33 @@
     </header>    
     <!-- //header -->
     <main id="container" class="page_mypage">
+      <!-- 주문상세: 주문완료 - 최종결제금액,변경이력 없음 -->
       <section class="order_info bg_box_blue">
         <div class="inner">
           <span class="date">2024.06.30</span><span class="state">주문완료</span>
         </div>
       </section>
       <section class="order_accord">
+        <!-- 주문번호&결제금액 -->
+        <div class="accord_list">
+          <div class="on accord_head">
+            <div class="accord_cont">
+              <div class="inner">
+                <div class="info_read order_summary"><!-- .order_summary -->
+                  <dl>
+                    <dt>주문번호</dt>
+                    <dd>20241220010101</dd>
+                  </dl>
+                  <dl>
+                    <dt class="txt_black">총 결제 금액</dt>
+                    <dd class="price"><em>1,250,000</em>원</dd>
+                  </dl>
+                </div><!-- //.info_read -->
+              </div><!-- //.inner -->
+            </div><!-- //.accord_cont -->
+          </div><!-- //accord_head -->
+        </div><!-- //.accord_list -->
+        <!-- //주문번호&결제금액 -->
         <!-- 주문자 정보 -->
         <div class="accord_list">
           <div class="on accord_head">
@@ -100,7 +121,7 @@
                                   <span><em>25,000</em>원</span>
                                   <span><em>20</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>500,000</em>원</div>
+                                <div class="prd_sum">합계 :<span class="price"><em>500,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -138,7 +159,7 @@
                                   <span><em>25,000</em>원</span>
                                   <span><em>10</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>250,000</em>원</div>
+                                <div class="prd_sum">합계 :<span class="price"><em>250,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -170,7 +191,7 @@
                                   <span><em>25,000</em>원</span>
                                   <span><em>10</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>250,000</em>원</div>
+                                <div class="prd_sum">합계 :<span class="price"><em>250,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -219,7 +240,7 @@
                                   <span><em>25,000</em>원</span>
                                   <span><em>20</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum price">합계 :<em>250,000</em>원</div>
+                                <div class="prd_sum">합계 :<span class="price"><em>250,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -274,7 +295,7 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("주문서")
+      $(".appbar_tit").html("주문상세")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

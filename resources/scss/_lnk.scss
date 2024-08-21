@@ -34,11 +34,6 @@
   .p_tit {
     display: none;
   }
-  .ask_tit {
-    display: block;
-    @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
-    margin-bottom: 12px;
-  }
   .dot_list{
     margin-top: 40px;
     padding: 0 20px;
@@ -399,11 +394,15 @@
   .gift_list{
     padding-bottom: 16px;
   }
+  & + .order_bnr{
+    margin-top: 12px;
+  }
 }
 .order_prd_area{
   .inner{
     padding: 0 20px;
     @media (min-width: $pc-point) {
+      width: 100%;
       max-width: 1024px;
       margin: 0 auto;
     }
@@ -471,6 +470,7 @@
   .inner{
     padding: 0 20px;
     @media (min-width: $pc-point) {
+      width: 100%;
       max-width: 1024px;
       margin: 0 auto;
     }
@@ -550,13 +550,18 @@
           span{
             @include fontStyle($gray-950, $fs-xs, $fw-b, 1.384);
           }
-          &.prd_sum{
+        }
+        .prd_sum{
+          display: flex;
+          align-items: flex-end;
+          @include fontStyle($gray-950, $fs-m, $fw-b, 1.77);
+          .price{
             margin-top: 16px;
             @include fontStyle($gray-950, $fs-m, $fw-b, 1.562);
-            em{
-              margin-left: 2px;
-              @include fontStyle($gray-950, $fs-ml, $fw-m, 1.4444);
-            }
+          }
+          em{
+            margin-left: 2px;
+            @include fontStyle($gray-950, $fs-ml, $fw-m, 1.4444);
           }
         }
         .img {
@@ -577,8 +582,10 @@
           justify-content: space-between;
           margin-top: 12px;
           gap: 16px;
-          .prd_sum.price{
-            margin-top: 0;
+          .prd_sum{
+            .price{
+              margin-top: 0;
+            }
           }
           @media (min-width: $pc-point) {
             justify-content: flex-end;
@@ -687,6 +694,7 @@
       }
     }
     &_tit{
+      flex-wrap: wrap;
       @include flexBetween;
       padding: 20px 52px 20px 20px;
       @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
@@ -766,6 +774,7 @@
     }
   }
   @media (min-width: $pc-point) {
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
   }
@@ -941,7 +950,10 @@
   }
 }
 .ask_tit{
-  &::before{
+  display: block;
+  @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
+  margin-bottom: 12px;
+  &[data-asknum]::before{
     content: attr(data-asknum);
     display: block;
     margin-bottom: 8px;
@@ -1339,11 +1351,25 @@
     }
   }
 }
-//이전 가격
-.price_prev{
-  @include fontStyle($gray-600, $fs-sm, $fw-l, 1);
+//변경이력
+.change_checkbox{
+  padding: 4px 0 20px;
+}
+.is_changed, .is_changed *{
+  color: $color-blue !important;
+  &.hidden, &.hidden *{
+    color: $gray-950 !important;
+  }
+}
+.change_prev{
+  @include fontStyle($gray-600 !important, $fs-sm !important, $fw-l !important, 1);
+  font-family: $font-gotham !important;
   text-decoration: line-through;
   margin-right: 4px;
+  &.hidden{
+    font-size: 0 !important;
+    opacity: 0;
+  }
 }
 .order_history{
   .cart_list{
@@ -1365,5 +1391,27 @@
   }
   .state{
     @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
+  }
+  &.bg_box_blue{
+    height: 40px;
+    padding: 0;
+    .inner{
+      gap: 8px;
+    }
+  }
+}
+.order_summary{
+  &.info_read{
+    padding-top: 20px;    
+    .price{
+      display: flex;
+      align-items: flex-start;
+      @include fontStyle($gray-950, $fs-m, $fw-b, 1.375);
+      em{
+        display: block;
+        @include fontStyle(inherit, $fs-ml, $fw-m, 1.223);
+        font-family: $font-gotham;
+      }
+    }
   }
 }

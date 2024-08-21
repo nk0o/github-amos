@@ -39,6 +39,7 @@ $(document).ready(function () {
   if ($('.show_picker').length > 0) {  showPicker() }
   if ($('.show_etcinput').length > 0) {  showEtc() }
   if ($('.tooltip_box').length > 0) {  tooltipUI() }
+  if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -869,4 +870,10 @@ function tooltipUI() {
       left: trigerOfffsetLeft, top: trigerOfffsetBtm + 8
     });
   };
+}
+function orderChangeHistoryUI(){
+  $('.history_toggle').on('click change',function(){
+    $(this).prop('checked') == false ? $('.change_prev').addClass('hidden') : $('.change_prev').removeClass('hidden');
+    $(this).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
+  })
 }
