@@ -41,6 +41,7 @@
     width: 100%;
     padding: 0 80px 0 80px;
     @include fontStyle($color-primary, $fs-ml, $fw-sb, 1.444);
+    font-family: $font-aritadt;
     text-align: center;
   }
   &_close{

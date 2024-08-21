@@ -5333,6 +5333,7 @@ div.dataTables_wrapper .btn_floating:focus {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.444;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   text-align: center;
 }
 .appbar_close::before {
