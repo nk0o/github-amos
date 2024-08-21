@@ -522,9 +522,11 @@ function bottomSheetUI(){
       return false;
     }
     $("#"+ $(this).data('btmsheet')).addClass('show');
+    $("body").addClass("no_scroll");
   });
   $('.btm_sheet_close, .btm_sheet_back').on('click touch',function() {
     $(this).parents('.btm_sheet').removeClass('show')
+    $("body").removeClass("no_scroll");
   });
 }
 /* Floating UI */
@@ -872,8 +874,12 @@ function tooltipUI() {
   };
 }
 function orderChangeHistoryUI(){
+  change('.history_toggle');
   $('.history_toggle').on('click change',function(){
-    $(this).prop('checked') == false ? $('.change_prev').addClass('hidden') : $('.change_prev').removeClass('hidden');
-    $(this).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
+    change(this);
   })
+  function change(el){
+    $(el).prop('checked') == false ? $('.change_prev').addClass('hidden') : $('.change_prev').removeClass('hidden');
+    $(el).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
+  }
 }

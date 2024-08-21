@@ -580,6 +580,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
+          flex-wrap: wrap;
           margin-top: 12px;
           gap: 16px;
           .prd_sum{
@@ -771,6 +772,11 @@
     &_type{
       margin-left: auto;
       @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
+    }
+  }
+  .input_radio_wrap{
+    & + .info_read {
+      margin-top: 12px;
     }
   }
   @media (min-width: $pc-point) {
@@ -1411,7 +1417,11 @@
         display: block;
         @include fontStyle(inherit, $fs-ml, $fw-m, 1.223);
         font-family: $font-gotham;
-      }
+      } 
     }
   }
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+  display: none;
 }

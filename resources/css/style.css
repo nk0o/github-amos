@@ -162,13 +162,19 @@ p {
   width: 80px !important;
   flex: 0 0 80px !important;
 }
+
 .w_145 {
   width: 145px !important;
   flex: 0 0 145px !important;
 }
+
 .w_full {
   width: 100% !important;
   flex: 100% !important;
+}
+
+.w_half {
+  width: 50% !important;
 }
 
 /** Font Family **/
@@ -395,14 +401,6 @@ p {
   text-indent: -9999px;
   border: 0;
   clip: rect(0, 0, 0, 0);
-}
-
-.w_full {
-  width: 100% !important;
-}
-
-.w_half {
-  width: 50% !important;
 }
 
 .spp_t_2 {
@@ -2616,6 +2614,9 @@ button:disabled *[class*=ico_]::before {
   width: 16px;
   height: 16px;
   background: url("../images/icon/ico_chev_next_16.svg") center/contain no-repeat;
+}
+.btn_reset {
+  flex: 0 1 30.75% !important;
 }
 
 .spinner {
@@ -5184,7 +5185,8 @@ div.dataTables_wrapper .btn_floating:focus {
   pointer-events: none;
   z-index: -1;
 }
-.btm_sheet .inner {
+.btm_sheet > .inner {
+  max-width: 700px;
   position: fixed;
   z-index: 2;
   border-top-left-radius: 32px;
@@ -5248,8 +5250,11 @@ div.dataTables_wrapper .btn_floating:focus {
 .btm_sheet_head .btm_sheet_close::before {
   background-color: #2A3136 !important;
 }
-.btm_sheet_btns {
-  padding: 0 32px 32px;
+.btm_sheet_footer {
+  padding: 20px 20px 0;
+}
+.btm_sheet_footer .btn_group {
+  padding: 0;
 }
 .btm_sheet_cont .tit {
   color: #222222;
@@ -7902,6 +7907,7 @@ footer .f_company {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 12px 20px;
+  white-space: normal;
 }
 .edu_regist_box .cont dl dt {
   color: #222222;
@@ -9109,6 +9115,7 @@ footer .f_company {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 12px;
   gap: 16px;
 }
@@ -9320,6 +9327,9 @@ footer .f_company {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.333;
+}
+.order_accord .input_radio_wrap + .info_read {
+  margin-top: 12px;
 }
 @media (min-width: 1024px) {
   .order_accord {
@@ -10070,4 +10080,8 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.223;
   font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

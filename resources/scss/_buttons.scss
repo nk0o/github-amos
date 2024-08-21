@@ -301,6 +301,9 @@ button {
       background: url('../images/icon/ico_chev_next_16.svg') center/contain no-repeat;
     }
   }
+  &_reset{
+    flex: 0 1 30.75% !important;
+  }
 }
 .spinner{
   @include flexBetween;

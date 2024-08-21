@@ -7,8 +7,9 @@
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-  .inner {
+  & > .inner {
     //min-height: 200px;
+    max-width: 700px;
     position:fixed;
     z-index: 2;
     border-top-left-radius: $BtmSheetRadius;
@@ -70,8 +71,11 @@
       }
     }
   }
-  &_btns{
-    padding:0 32px 32px;
+  &_footer{
+    padding:20px 20px 0;
+    .btn_group{
+      padding: 0;
+    }
   }
   &_cont{
     .tit{

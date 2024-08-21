@@ -1689,6 +1689,7 @@
       display: grid;
       grid-template-columns: 100px 1fr;
       gap: 12px 20px;
+      white-space: normal;
       dt {
         @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
       }
