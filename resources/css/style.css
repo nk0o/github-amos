@@ -1144,6 +1144,7 @@ p {
 }
 .txt_notice a {
   color: #444;
+  font-weight: 600;
   text-decoration-line: underline;
 }
 .txt_notice::before {
@@ -7508,7 +7509,22 @@ footer .f_company {
 }
 
 .order_view {
-  padding: 20px 0 60px;
+  padding: 20px 0 0;
+}
+.order_view .accord_head {
+  border-bottom: 1px solid #eee;
+}
+.order_view .accord_head:last-child {
+  border-bottom: 0;
+}
+.order_view .accord_tit {
+  border-bottom: 0;
+}
+.order_view .accord_cont .order_info_list {
+  margin-top: 0;
+}
+.order_view .accord_cont .btn_group {
+  padding: 20px 0 0;
 }
 .order_view .order_info_top {
   display: flex;
@@ -7570,11 +7586,12 @@ footer .f_company {
   gap: 12px;
 }
 .order_info_list > li + li {
-  margin-top: 10px;
+  margin-top: 12px;
 }
-.order_info_list > li em {
+.order_info_list > li > em {
   width: 100px;
   color: #888;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -8305,12 +8322,34 @@ footer .f_company {
 }
 
 .cupon_box {
+  position: relative;
   max-width: 335px;
   margin-top: 16px;
-  background: url("../images/img_cupon_box.svg") no-repeat;
-  background-size: contain;
-  border-radius: 16px;
   overflow: hidden;
+}
+.cupon_box::before {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #E2E2E2;
+  content: "";
+}
+.cupon_box::after {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #E2E2E2;
+  content: "";
 }
 .cupon_box:first-child {
   margin-top: 24px;
@@ -8328,7 +8367,9 @@ footer .f_company {
   color: #666;
 }
 .cupon_box .cont {
-  padding: 22px 28px 29px;
+  padding: 22px 28px 37px;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid #E2E2E2;
 }
 .cupon_box .cont .badge {
   margin-bottom: 8px;
@@ -8337,7 +8378,7 @@ footer .f_company {
   display: block;
   margin-bottom: 4px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 24px;
 }
 .cupon_box .cont .txt {
@@ -8358,7 +8399,6 @@ footer .f_company {
   line-height: 16px;
 }
 .cupon_box .bottom {
-  margin-top: 8px;
   padding: 11px 10px;
   background-color: #DFEDFF;
   text-align: center;
@@ -8568,6 +8608,8 @@ footer .f_company {
 .amount_box_detail > ul > li .cont ul li {
   width: calc(50% - 6px);
   white-space: normal;
+  font-weight: 300;
+  font-size: 14px;
 }
 .amount_box_detail > ul > li .cont ul li em {
   width: 56px;
@@ -8578,7 +8620,7 @@ footer .f_company {
 }
 
 .payment_plan {
-  padding: 0 32px 42px;
+  padding: 0 32px 22px;
 }
 .payment_plan > li {
   display: flex;
