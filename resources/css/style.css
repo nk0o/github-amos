@@ -5659,8 +5659,9 @@ header.fixed {
 .hr_divider {
   width: 100%;
   height: 8px;
+  max-width: 984px;
+  margin: 0 auto !important;
   background-color: #f6f6f6;
-  margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;
 }
