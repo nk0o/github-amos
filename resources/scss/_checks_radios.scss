@@ -13,10 +13,14 @@
     user-select: none;
     @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
     font-family: $font-aritadt;
+    white-space: normal;
+    word-break: keep-all;
     &::before {
       content: "";
       display: block;
-      @include pos_Ycenter;
+      //@include pos_Ycenter;
+      position: absolute;
+      top: 2px;
       left: 0;
       width: 20px;
       height: 20px;
@@ -53,6 +57,7 @@
       padding-left: 24px;
       @include fontStyle(inherit, $fs-s, $fw-m, 1.357);
       &::before{
+        top: 0;
         background-image: url("../images/icon/ico_check_24.svg");
       }
     }

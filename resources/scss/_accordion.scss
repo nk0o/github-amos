@@ -1,6 +1,8 @@
 /* Accordion */
 .accord {
   &_tit {
+    @include text-ellipsis;
+    cursor: pointer;
     position: relative;
     padding: 16px 40px 16px 0px;
     @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
@@ -19,9 +21,7 @@
       @include trans($prop: all, $duration: 0.3s, $type: ease-out, $delay: 0s);
     }
   }
-  &_head {
-    cursor: pointer;
-    @include text-ellipsis;
+  &_head {    
     position: relative;
     font-size: $fs-m;
     line-height: 1.5;
@@ -126,7 +126,6 @@
       .accord_head{
         border: 0;
         border-bottom: 1px solid $color-primary;
-        cursor:default;
         &.on{
           .accord_tit{
             .ico_plus_20{

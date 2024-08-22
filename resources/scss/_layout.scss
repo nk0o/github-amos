@@ -33,7 +33,7 @@ header{
   }
 }
 //Layout > Inner
-.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
+.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner{
   padding: 0 20px;
   @media (min-width: $pc-point) {
     max-width: $pc-point;
@@ -44,8 +44,9 @@ header{
 .hr_divider{
   width: 100%;
   height: 8px;
+  max-width: 984px;
+  margin: 0 auto !important;
   background-color: $gray-50;
-  margin: 0 !important;
   padding: 0 !important;
   border: 0 !important;;
 }
@@ -255,5 +256,11 @@ footer{
       padding: 0;
       margin-left: 0;
     }
+  }
+}
+
+@media (min-width: $pc-point) {
+  .page_form{
+    padding-bottom: 82px;
   }
 }

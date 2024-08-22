@@ -227,6 +227,10 @@
 
 /* 카테고리 페이지 */
 .page_category{
+  .tab_menu ul, .tab_cont{
+    max-width: 700px;
+    margin: 0 auto;
+  }
   .tab_cont{
     padding: 0;
   }
@@ -263,6 +267,7 @@
     }
   }
   &_list{
+    @include verticalScroll;
     flex:1;
     padding: 0 22px 0 16px;
     height: 100%;

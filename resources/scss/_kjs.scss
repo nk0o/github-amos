@@ -2168,6 +2168,7 @@
       }
     }
   }
+  
   .cont {
     padding: 22px 28px 37px;
     border-radius: 16px 16px 0 0;
@@ -2317,6 +2318,7 @@
     text-indent: -10px;
     margin-left: 10px;
     word-break: break-all;
+    white-space: normal;
     &::before {
       display: inline-block;
       width:3px;

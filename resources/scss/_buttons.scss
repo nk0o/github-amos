@@ -301,6 +301,10 @@ button {
       background: url('../images/icon/ico_chev_next_16.svg') center/contain no-repeat;
     }
   }
+  &_detail{
+    border:1px solid $gray-300;
+    @include fontStyle($gray-600, $fs-s, $fw-m, 1.357);
+  }
   &_reset{
     flex: 0 1 30.75% !important;
   }

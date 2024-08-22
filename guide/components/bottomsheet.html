@@ -22,7 +22,7 @@
       <div class="guide_contnets">
 
         <h1>Bottom Sheet</h1>
-          <h2>셀렉트박스로 Bottom Sheet 열기</h2>
+          <h2>셀렉트박스로 Bottom Sheet 열기 - 개발자도구 모바일화면으로 보기</h2>
           <div class="select_box" style="width: 375px;">
             <div class="select_box_value" data-btmsheet="btmSheet01"><!-- class="btm_sheet" id="btmSheet01" -->
               <span>Open Bottom Sheet At Mobile</span>
@@ -37,8 +37,10 @@
             </div><!-- //.select_box_list -->
           </div><!-- //.select_box -->
         <br>
-        <h2>버튼으로 Bottom Sheet 열기 - 개발자도구 모바일화면으로 보기</h2>
+        <h2>버튼으로 Bottom Sheet 열기 </h2>
         <button class="btn_primary btn_md" data-btmsheet="btmSheet02">Open Bottom Sheet At Mobile</button><!-- class="btm_sheet" id="btmSheet02" -->
+        <h2>Bottom Sheet 초기화, 확인 버튼</h2>
+        <button class="btn_primary btn_md" data-btmsheet="btmSheet03">Open Bottom Sheet At Mobile</button><!-- class="btm_sheet" id="btmSheet02" -->
 
       </div>
       <!--// contnets -->
@@ -172,6 +174,80 @@
               </div>
             </div><!-- //.check_btn_wrap -->
           </div><!-- //.btm_sheet_cont -->
+        </div><!-- //.inner -->
+      </div><!-- //.btm_sheet -->
+      <div class="btm_sheet" id="btmSheet03"><!-- data-btmsheet="btmSheet03" -->
+        <div class="btm_sheet_back"></div>
+        <div class="inner">
+          <div class="btm_sheet_head">
+            <p class="tit">상세 조회</p>
+            <button type="button" class="btm_sheet_close ico_close_20"></button>
+          </div><!-- //.btm_sheet_head -->
+          <div class="btm_sheet_cont check_list">
+            <div class="radio_btn_wrap">
+              <div class="tit">조회기간</div>
+              <div class="input_radio_wrap type_btn">
+                <input type="radio" id="radio-01" class="input_radio" name="radio-item-1" checked>
+                <label for="radio-01">1개월</label>
+              </div>
+              <div class="input_radio_wrap type_btn">
+                <input type="radio" id="radio-02" class="input_radio" name="radio-item-1">
+                <label for="radio-02">3개월</label>
+              </div>
+              <div class="input_radio_wrap type_btn">
+                <input type="radio" id="radio-03" class="input_radio" name="radio-item-1">
+                <label for="radio-03">6개월</label>
+              </div>
+              <div class="input_radio_wrap type_btn">
+                <input type="radio" id="radio-04" class="input_radio" name="radio-item-1">
+                <label for="radio-04">12개월</label>
+              </div>
+            </div><!-- //.radio_btn_wrap -->
+            <div class="check_btn_wrap">
+              <div class="tit">상품유형</div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-01" class="input_check" name="check-item-1" checked>
+                <label for="check-01">일반</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02" class="input_check" name="check-item-1">
+                <label for="check-02">포인트몰</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-03" class="input_check" name="check-item-1">
+                <label for="check-03">체험상품</label>
+              </div>
+            </div><!-- //.check_btn_wrap -->
+            <div class="check_btn_wrap">
+              <div class="tit">주문상태</div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02-all" class="input_check" name="check-item-2" checked>
+                <label for="check-02-all">전체</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02-1" class="input_check" name="check-item-2">
+                <label for="check-02-1">주문완료</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02-2" class="input_check" name="check-item-2">
+                <label for="check-02-2">상품 준비중</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02-3" class="input_check" name="check-item-2">
+                <label for="check-02-3">배송중</label>
+              </div>
+              <div class="input_check_wrap type_btn">
+                <input type="checkbox" id="check-02-4" class="input_check" name="check-item-2">
+                <label for="check-02-4">배송완료</label>
+              </div>
+            </div><!-- //.check_btn_wrap -->
+          </div><!-- //.btm_sheet_cont -->
+          <div class="btm_sheet_footer">
+            <div class="btn_group">
+              <button class="btn_sm btn_border btn_reset">초기화</button>
+              <button class="btn_sm btn_primary ">확인</button>
+            </div>
+          </div>
         </div><!-- //.inner -->
       </div><!-- //.btm_sheet -->
     <!-- //Bottom Sheet -->

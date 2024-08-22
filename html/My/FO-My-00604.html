@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <div class="sign_notice">
+          <p>정말 탈퇴하시겠습니까?</p>
+          <span class="txt_black">고객님께서 회원 탈퇴를 원하신다니 저희 서비스가 많이 부족하고 미흡했나 봅니다. <br>
+            불편하셨던 점이나 불만사항을 알려주시면 적극 반영해서 고객님의 불편함을 해결해 드리도록 노력하겠습니다.
+          </span>
+          <span class="txt_black">아울러 회원 탈퇴시의 아래 사항을 숙지하시기 바랍니다.</span>
+          <ul class="dot_list">
+            <li>회원 탈퇴 시 고객님의 정보는 전자상거래 등에서의 소비자 보호에 관한 법률에 의거한 고객정보 보호정책에 따라 관리합니다.</li>
+            <li>탈퇴 시 고객님께서 보유하셨던 포인트는 모두 삭제됩니다.</li>
+            <li>회원 탈퇴 후 1년간 재가입이 불가능합니다.</li>
+          </ul>
+        </div><!-- //.sign_notice -->
+        <hr class="hr_divider">
+        <section class="user_leave_box">
+          <div class="inner">
+            <div class="tit">탈퇴 사유를 선택해 주세요.</div>
+            <div class="input_group">
+              <div class="select_box">
+                <div class="select_box_value"><span>선택해 주세요.</span></div>
+                <div class="select_box_list">
+                  <ul>
+                    <li><span>Option 1</span></li>
+                    <li><span>Option 2</span></li>
+                    <li><span>Option 3</span></li>
+                    <li><span>Option 4</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- //.input_group -->
+            <div class="input_writing_group">
+              <textarea name="" id="" placeholder="위의 사유이외에 기타 불만사항이나 의견 있으시면 남겨주세요."></textarea>
+              <div class="txt_count">
+                <p class="current zero">0</p>
+                <span>/</span>
+                <p class="total">1000</p>
+              </div>
+            </div><!-- //.input_writing_group -->
+            <div class="input_check_wrap">
+              <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1">
+              <label for="check-1-1">위 유의사항을 모두 확인하였으며, 회원탈퇴에 동의합니다.</label>
+            </div>
+          </div><!-- //.inner -->
+        </section>
+        <div class="btn_group">
+          <button class="btn btn_lg btn_border">취소</button>
+          <button class="btn btn_lg btn_primary">확인</button>
+        </div>
+      </div>
+    </main>
+    <!-- //#container --> 
+  </div><!-- //#wrap.page_form -->
+
+<!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">유입경로</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
+              <label for="radio-4-1">뉴플랫폼</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
+              <label for="radio-4-2">CONNECT</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+
+
+  
+
+
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("회원정보 수정")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>
