@@ -39,6 +39,7 @@ $(document).ready(function () {
   if ($('.show_picker').length > 0) {  showPicker() }
   if ($('.show_etcinput').length > 0) {  showEtc() }
   if ($('.tooltip_box').length > 0) {  tooltipUI() }
+  if ($('.accord_list .amount_box').length > 0) {  allView() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -870,3 +871,19 @@ function tooltipUI() {
     });
   };
 }
+
+// function allView() {
+//   $('.exchange_cont input[type=radio]').on('change', function() {
+//     var $container = $(this).closest('.exchange_cont');
+  
+//     var checked = $container.find('input[type=radio]:checked').length > 0;
+  
+//     if (checked) {
+//       console.log('ddd');  
+//       $container.find('.accord_head').addClass('on');
+//     } else {
+//       console.log('ss');
+//       $container.find('.accord_head').removeClass('on');
+//     }
+//   });
+// }

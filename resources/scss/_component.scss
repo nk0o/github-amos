@@ -74,7 +74,8 @@
     background-color: $gray-50 !important;
   }
   &_orange {
-    background-color: $color-orange !important;
+    background-color: #FFF5E9 !important;
+    color: #F18200 !important;
   }
   &_olive {
     background-color: $color-olive !important;
@@ -510,8 +511,9 @@
       vertical-align: top;
     }
   }
-  em{
-    color: $color-blue;
+  a {
+    color: #444;
+    text-decoration-line: underline;
   }
   &::before{
     content: '';
