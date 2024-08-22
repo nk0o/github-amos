@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <section class="order_accord">
+          <!-- 기본정보 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">기본정보</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <div class="input_group">
+                    <span class="input_label required">이름</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="김모스" placeholder="이름" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">휴대폰 번호</span>
+                    <div class="select_box disabled">
+                      <div class="select_box_value" data-btmsheet="btmSheet02">
+                        <span>통신사를 선택해 주세요</span>
+                      </div><!-- //.select_box_value -->
+                      <div class="select_box_list">
+                        <ul>
+                          <li><span>SKT</span></li>
+                          <li><span>KT</span></li>
+                          <li><span>LGT U</span></li>
+                          <li><span>SKT 알뜰폰</span></li>
+                          <li><span>KT 알뜰폰</span></li>
+                          <li><span>LG 알뜰폰</span></li>
+                        </ul>
+                      </div><!-- //.select_box_list -->
+                    </div><!-- //.select_box -->
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호" disabled>
+                      <button class="btn_sm btn_border" style="display: block;">변경하기</button>
+                    </label>
+                  </div><!-- //.input_group -->
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //기본정보 -->
+          <!-- 계정정보 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">계정정보</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <div class="input_group">
+                    <span class="input_label required">아이디</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="amos1234" placeholder="아이디" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">현재 비밀번호</span>
+                    <label for="">
+                      <input type="password" id="" class="input_text" value="" placeholder="현재 비밀번호를 입력해주세요">
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">새비밀번호</span>
+                    <label for="">
+                      <input type="password" id="" class="input_text" value="" placeholder="신규 비밀번호를 입력해주세요">
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">새비밀번호 확인</span>
+                    <label for="">
+                      <input type="password" id="" class="input_text" value="" placeholder="신규 비밀번호를 입력해주세요">
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">이메일</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="amos1234@naver.com" placeholder="이메일을 입력해주세요">
+                    </label>
+                  </div><!-- //.input_group -->
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //계정정보 -->
+          <!-- 살롱 정보 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">살롱 정보</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <div class="input_group">
+                    <span class="input_label">일반 전화번호</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="02-1234-5678" placeholder="전화번호를 입력해주세요">
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label">유입경로</span>
+                    <div class="select_box">
+                      <div class="select_box_value"><span style="color: rgb(34, 34, 34);">뉴플랫폼</span></div>
+                      <div class="select_box_list">
+                        <ul>
+                          <li><span>선택안함</span></li>
+                          <li><span>뉴플랫폼</span></li>
+                          <li><span>CONNECT</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><!-- //.input_group -->
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //살롱 정보 -->
+          <!-- 소속살롱/회원등급 변경 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">소속살롱/회원등급 변경</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <p class="txt_alert refer_mark">아래 정보 변경이 필요하시면,<br>소속살롱/회원등급 변경버튼을 클릭해 주세요.</p>
+                  <div class="input_group">
+                    <span class="input_label required">살롱명</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="용산 아모스살롱" placeholder="살롱명을 입력해주세요" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">사업자 번호</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="123-45-67890" placeholder="사업자 번호를 입력해주세요" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">살롱 주소</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="04386" placeholder="우편번호" disabled>
+                      <button class="btn_sm btn_border">주소찾기</button>
+                    </label>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="서울특별시 용산구 한강대로 100" placeholder="상세 주소 입력" disabled>
+                    </label>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="아모레퍼시픽 3층" placeholder="상세 주소 입력" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group input_icon_right">
+                    <span class="input_label required">사업자등록증</span>
+                    <label for="file-01">
+                      <input type="file" id="file-01" class="input_text" value="아모스살롱 사업자 등록증.jpg" disabled>
+                      <i class="ico_clip ico_24"></i>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="btn_group">
+                    <a href="#" class="btn_md btn_primary w_220">소속살롱 / 회원등급 변경</a>
+                  </div><!-- //.btn_group -->
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //소속살롱/회원등급 변경 -->
+          <!-- 추가 정보 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">추가 정보</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <ul class="inquiry_outer">
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">규모(디자이너 수)가 어떻게 되는지 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-0-1" class="input_radio" name="radio-item-0" checked="">
+                          <label for="radio-0-1">일인샵(1인)</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-2" class="input_radio" name="radio-item-0">
+                          <label for="radio-0-2">소형(2~3인)</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-3" class="input_radio" name="radio-item-0">
+                          <label for="radio-0-3">중형(4~5인)</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-4" class="input_radio" name="radio-item-0">
+                          <label for="radio-0-4">대형(6인 이상)</label>
+                        </div>
+                      </div><!-- //.radio_btn_wrap -->
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">남성커트 가격을 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-01-1" class="input_radio" name="radio-item-01" checked="">
+                          <label for="radio-1">10,000원 미만</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-01-2" class="input_radio" name="radio-item-01">
+                          <label for="radio-01-2">10,000원~1,4000원</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-01-3" class="input_radio" name="radio-item-01">
+                          <label for="radio-01-3">15,000원~19,000원</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-01-4" class="input_radio" name="radio-item-01">
+                          <label for="radio-01-4">20,000원 ~ 29,000원 이상</label>
+                        </div>
+                      </div><!-- //.radio_btn_wrap -->
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">주요 고객연령층이 어떻게 되는지 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-02-1" class="input_radio" name="radio-item-02" checked="">
+                          <label for="radio-02-1">10대</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-02-2" class="input_radio" name="radio-item-02">
+                          <label for="radio-02-2">20대</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-02-3" class="input_radio" name="radio-item-02">
+                          <label for="radio-02-3">30대~40대</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-02-4" class="input_radio" name="radio-item-02">
+                          <label for="radio-02-4">50대 이상</label>
+                        </div>
+                      </div><!-- //.radio_btn_wrap -->
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">관심있는 시술 카테고리 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-51" class="input_radio" name="radio-item-5" checked>
+                          <label for="radio-51">염모</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-52" class="input_radio" name="radio-item-5">
+                          <label for="radio-52">펌</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-53" class="input_radio" name="radio-item-5">
+                          <label for="radio-53">클리닉</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-54" class="input_radio" name="radio-item-5">
+                          <label for="radio-54">점판</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">주력 시술 카테고리 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-61" class="input_radio" name="radio-item-6" checked>
+                          <label for="radio-61">염색커버</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-62" class="input_radio" name="radio-item-6">
+                          <label for="radio-62">염색멋내기</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-63" class="input_radio" name="radio-item-6">
+                          <label for="radio-63">열펌</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-64" class="input_radio" name="radio-item-6">
+                          <label for="radio-64">일반펌</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-65" class="input_radio" name="radio-item-6">
+                          <label for="radio-65">클리닉</label>
+                        </div>
+                      </div>
+                    </li><li class="inquiry_box check_len2">
+                      <strong class="ask_tit">염모 주력 사용브랜드 알려주세요. (2개까지 선택 가능합니다.)</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-1" class="input_check" name="check-item-1" checked>
+                          <label for="check-1">데미</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-2" class="input_check" name="check-item-1">
+                          <label for="check-2">래삐</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-3" class="input_check" name="check-item-1">
+                          <label for="check-3">로레알</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-4" class="input_check" name="check-item-1">
+                          <label for="check-4">미엘</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-5" class="input_check" name="check-item-1">
+                          <label for="check-5">밀본</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-6" class="input_check" name="check-item-1">
+                          <label for="check-6">시세이도</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-7" class="input_check" name="check-item-1">
+                          <label for="check-7">아모스</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-8" class="input_check" name="check-item-1">
+                          <label for="check-8">웰라</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-9" class="input_check" name="check-item-1">
+                          <label for="check-9">파이모아</label>
+                        </div>
+                        <div class="input_check_wrap type_btn">
+                          <input type="checkbox" id="check-10" class="input_check" name="check-item-1">
+                          <label for="check-10">호유</label>
+                        </div>
+                        <div class="input_check_wrap type_btn show_etcinput">
+                          <input type="checkbox" id="check-11" class="input_check" name="check-item-1">
+                          <label for="check-11">기타</label>
+                        </div>
+                        <div class="input_writing_group input_etc hidden">
+                          <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                          <div class="txt_count">
+                            <p class="current zero">0</p>
+                            <span>/</span>
+                            <p class="total">30</p>
+                          </div>
+                        </div><!-- //.input_writing_group.input_etc -->
+                      </div>
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">열펌 주력 사용브랜드 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-71" class="input_radio" name="radio-item-7" checked>
+                          <label for="radio-71">그리에이트(ATS)</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-72" class="input_radio" name="radio-item-7">
+                          <label for="radio-72">래삐</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-73" class="input_radio" name="radio-item-7">
+                          <label for="radio-73">로레알</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-74" class="input_radio" name="radio-item-7">
+                          <label for="radio-74">밀본</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-75" class="input_radio" name="radio-item-7">
+                          <label for="radio-75">시세이도</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-76" class="input_radio" name="radio-item-7">
+                          <label for="radio-76">아모스</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-77" class="input_radio" name="radio-item-7">
+                          <label for="radio-77">웰라</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-78" class="input_radio" name="radio-item-7">
+                          <label for="radio-78">카디뷰(서프라리스)</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn show_etcinput">
+                          <input type="radio" id="radio-79" class="input_radio" name="radio-item-7">
+                          <label for="radio-79">기타</label>
+                        </div>
+                        <div class="input_writing_group input_etc hidden">
+                          <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                          <div class="txt_count">
+                            <p class="current zero">0</p>
+                            <span>/</span>
+                            <p class="total">30</p>
+                          </div>
+                        </div><!-- //.input_writing_group.input_etc -->
+                      </div>
+                    </li>
+                    <li class="inquiry_box">
+                      <strong class="ask_tit">헤어케어(클리닉) 주력 사용브랜드 알려주세요.</strong>
+                      <div class="radio_btn_wrap">
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-81" class="input_radio" name="radio-item-8" checked>
+                          <label for="radio-81">로레알</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-82" class="input_radio" name="radio-item-8">
+                          <label for="radio-82">르미네상스</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-83" class="input_radio" name="radio-item-8">
+                          <label for="radio-83">밀본</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-84" class="input_radio" name="radio-item-8">
+                          <label for="radio-84">시세이도</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-85" class="input_radio" name="radio-item-8">
+                          <label for="radio-85">아윤채</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-87" class="input_radio" name="radio-item-8">
+                          <label for="radio-87">웰라</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn">
+                          <input type="radio" id="radio-88" class="input_radio" name="radio-item-8">
+                          <label for="radio-88">하오니코</label>
+                        </div>
+                        <div class="input_radio_wrap type_btn show_etcinput">
+                          <input type="radio" id="radio-89" class="input_radio" name="radio-item-8">
+                          <label for="radio-89">기타</label>
+                        </div>
+                        <div class="input_writing_group input_etc hidden">
+                          <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                          <div class="txt_count">
+                            <p class="current zero">0</p>
+                            <span>/</span>
+                            <p class="total">30</p>
+                          </div>
+                        </div><!-- //.input_writing_group.input_etc -->
+                      </div>
+                    </li>
+                  </ul>
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //추가 정보 -->
+        </section>
+        <section class="order_accord no_fold">
+          <!-- 정보 동의 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">정보 동의</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <div class="agree_check_list">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked>
+                      <label for="check-1-1">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의&nbsp;-&nbsp;SMS</label>
+                      <a href="#" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></a>
+                    </div>
+                  </div>
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //정보 동의 -->
+          <!-- 회원 탈퇴 -->
+          <div class="accord_list">
+            <div class="on accord_head">
+              <div class="accord_tit">회원 탈퇴</div>
+              <div class="accord_cont">
+                <div class="inner">
+                  <ul class="dot_list">
+                    <li>회원탈퇴 시 1년간 AMOS 뉴플랫폼 회원가입이 제한됩니다.</li>
+                    <li>유의사항 및 상세 안내를 확인하신 후 신중하게 진행해 주시길 바랍니다.</li>
+                  </ul>
+                  <div class="btn_group">
+                    <button class="btn_md btn_border w_220">회원 탈퇴</button>
+                  </div><!-- //.btn_group -->
+                </div><!-- //.inner -->
+              </div><!-- //.accord_cont -->
+            </div><!-- //accord_head -->
+          </div><!-- //.accord_list -->
+          <!-- //회원 탈퇴 -->
+        </section>
+        <div class="btn_group">
+          <button class="btn btn_lg btn_border">취소</button>
+          <button class="btn btn_lg btn_primary">변경</button>
+        </div><!-- //.btn_group -->
+      </div>
+    </main>
+    <!-- //#container --> 
+  </div><!-- //#wrap.page_form -->
+
+<!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">유입경로</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
+              <label for="radio-4-1">뉴플랫폼</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
+              <label for="radio-4-2">CONNECT</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+
+
+  
+
+
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("회원정보 수정")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

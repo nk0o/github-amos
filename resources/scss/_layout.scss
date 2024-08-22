@@ -33,7 +33,7 @@ header{
   }
 }
 //Layout > Inner
-.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner{
+.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner #container > .inner{
   padding: 0 20px;
   @media (min-width: $pc-point) {
     max-width: $pc-point;

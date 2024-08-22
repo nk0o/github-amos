@@ -6,7 +6,8 @@
 }
 .page_form{
   .hr_divider{
-    margin: 24px 0 !important;
+    max-width: 740px;
+    margin: 24px auto !important;
     & + .inquiry_outer{
       padding-top: 0;
     }
@@ -38,6 +39,9 @@
     margin-top: 40px;
     padding: 0 20px;
   }
+  .order_accord + .order_accord.no_fold{
+    border-top:8px solid $gray-50;
+  }
 }
 .sign_notice{
   padding: 24px 20px 0;
@@ -49,6 +53,16 @@
     display: inline-block;
     margin-top: 12px;
     @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+    & + span{
+      margin-top: 8px;
+    }
+  }
+  .dot_list{
+    margin-top: 16px;
+    padding: 0;
+    &> li + li{
+      margin-top: 10px;
+    }
   }
 }
 .tab_cont{
@@ -167,22 +181,39 @@
     margin:10px 0 0;
     @include fontStyle($gray-700, $fs-s, $fw-m, 1.357);
   }
-  &_list{
+  .agree_check_list{
+    position: relative;
     padding: 16px 0 0;
     margin: 16px 0 0;
     border-top: 1px solid $gray-100;
+  }
+  &_list{
     li{
       @include flexBetween;
       padding: 8px 0;
-      button{
+      button, a{
         &::before{
-          background-color: $gray-950 !important;
+          background-color: $gray-700 !important;
         }
       }
     }
     .input_check_wrap{
       flex: 1;
       margin-right: 40px;
+    }
+    & > .input_check_wrap{
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-right: 0;
+      .input_check + label{
+        padding-right: 40px;
+      }
+      .ico_chevNext_16{
+        position: absolute;
+        top: 2px;
+        right: 0;
+      }
     }
   }
 }
@@ -710,6 +741,40 @@
       & > .inner{
         padding: 0 20px 20px;
       }
+      .input_group {
+        padding: 20px 0px 0;
+        &:first-child{
+          padding-top: 0;
+        }
+      }
+      .btn_group{
+        padding: 20px 0px 0px;
+      }
+      .inquiry_outer{
+        padding: 0;
+      }
+      .inquiry_box + .inquiry_box{
+        margin-top: 20px;
+      }
+      .ask_tit{
+        margin-bottom: 10px;
+        @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);
+      }
+      .agree_check_list{
+        label{
+          @include fontStyle($gray-950, $fs-s, $fw-m, 1.357);
+          &::before{
+            top: 0;
+          }
+        }
+      }
+      .dot_list{
+        margin-top: 0;
+        padding: 0;
+        & > li + li{
+          margin-top: 10px;
+        }
+      }
     }
   }
   .cart_check_prd{
@@ -756,6 +821,9 @@
     }
   }
   &.no_fold{
+    .accord_tit{
+      cursor: default;
+    }
     .accord_tit::before{
       display: none ;
     }
@@ -958,7 +1026,9 @@
 .ask_tit{
   display: block;
   @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
+  font-family: $font-aritadt;
   margin-bottom: 12px;
+  white-space: normal;
   &[data-asknum]::before{
     content: attr(data-asknum);
     display: block;
@@ -1424,4 +1494,33 @@
 
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
   display: none;
+}
+//회원탈퇴
+.user_leave_box, .user_modify_box{
+  .input_group{
+    padding: 0;
+  }
+  .tit{
+    margin-bottom: 6px;
+    @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+  }
+  .input_writing_group{
+    margin-top: 8px;
+  }
+  .input_check_wrap{
+    margin-top: 12px;
+    label{
+      @include fontStyle($gray-800, $fs-sm, $fw-m, 1.333);
+    }
+  }
+}
+//회원정보 수정
+.user_modify_box{
+  .tit{
+    padding:24px 0 20px;
+    @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
+  }
+  .refer_mark{
+    margin-top: 20px;
+  }
 }

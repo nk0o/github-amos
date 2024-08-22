@@ -7,6 +7,10 @@
   width: 145px !important;
   flex:0 0 145px !important;
 }
+.w_220{
+  width: 220px !important;
+  flex:0 0 220px !important;
+}
 .w_full{
   width: 100% !important;
   flex: 100% !important;
@@ -242,6 +246,18 @@
   }
   &.success {
     color: $color-blue;
+  }
+  &.refer_mark{
+    position: relative;
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.3333);
+    word-break: break-all;
+    white-space: normal;
+    padding-left: 18px;
+    &::before{
+      content: "※";
+      position: absolute;
+      left:0;
+    }
   }
 }
 //텍스트 요소 가리기

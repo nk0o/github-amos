@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <section class="user_modify_box">
+          <div class="inner">
+            <div class="tit">인증 받으실 휴대전화 번호를 입력해 주세요.</div>
+            <div class="input_group">
+              <span class="input_label required">휴대폰 번호</span>
+              <div class="select_box">
+                <div class="select_box_value" data-btmsheet="btmSheet02">
+                  <span>통신사를 선택해 주세요</span>
+                </div><!-- //.select_box_value -->
+                <div class="select_box_list">
+                  <ul>
+                    <li><span>SKT</span></li>
+                    <li><span>KT</span></li>
+                    <li><span>LGT U</span></li>
+                    <li><span>SKT 알뜰폰</span></li>
+                    <li><span>KT 알뜰폰</span></li>
+                    <li><span>LG 알뜰폰</span></li>
+                  </ul>
+                </div><!-- //.select_box_list -->
+              </div><!-- //.select_box -->
+              <!-- 인증재요청 -->
+              <label for="">
+                <input type="text" id="" class="input_text" value="01012345678" placeholder="휴대폰번호">
+                <button class="btn_sm btn_border line_red">인증재요청</button>
+              </label>
+              <!-- //인증재요청 -->
+            </div><!-- //.input_group -->
+            <div class="input_group with_time">
+              <label for="">
+                <input type="text" id="" class="input_text" value="1234" placeholder="휴대폰번호">
+                <span class="time">2:35</span>
+              </label>
+            </div><!-- //.input_group -->
+            <p class="txt_alert refer_mark">인증 완료 후 기본정보를 저장하시려면 인증 완료 버튼을 반드시 눌러주시기 바랍니다.</p>
+          </div><!-- //.inner -->
+        </section>
+        <div class="btn_group btm_fixed">
+          <button class="btn btn_lg btn_primary">인증 완료</button>
+        </div>
+      </div>
+    </main>
+    <!-- //#container --> 
+  </div><!-- //#wrap.page_form -->
+
+<!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">유입경로</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
+              <label for="radio-4-1">뉴플랫폼</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
+              <label for="radio-4-2">CONNECT</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+
+
+  
+
+
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("회원정보 수정")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>
