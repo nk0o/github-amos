@@ -39,6 +39,7 @@ $(document).ready(function () {
   if ($('.show_picker').length > 0) {  showPicker() }
   if ($('.show_etcinput').length > 0) {  showEtc() }
   if ($('.tooltip_box').length > 0) {  tooltipUI() }
+  if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
   if ($('.accord_list .amount_box').length > 0) {  allView() }
 
   /****** Window Resize ******/
@@ -522,9 +523,11 @@ function bottomSheetUI(){
       return false;
     }
     $("#"+ $(this).data('btmsheet')).addClass('show');
+    $("body").addClass("no_scroll");
   });
   $('.btm_sheet_close, .btm_sheet_back').on('click touch',function() {
     $(this).parents('.btm_sheet').removeClass('show')
+    $("body").removeClass("no_scroll");
   });
 }
 /* Floating UI */
@@ -884,4 +887,14 @@ function allView() {
       $container.find('.accord_cont').slideUp();
     }
   });
+}
+function orderChangeHistoryUI(){
+  change('.history_toggle');
+  $('.history_toggle').on('click change',function(){
+    change(this);
+  })
+  function change(el){
+    $(el).prop('checked') == false ? $('.change_prev').addClass('hidden') : $('.change_prev').removeClass('hidden');
+    $(el).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
+  }
 }

@@ -681,7 +681,10 @@
     }
   }
 }
-.inquiry_box {  
+.inquiry_box {
+  & + .inquiry_box{
+    margin-top: 40px;
+  }
   .radio_btn_wrap {
     display: flex;
     flex-wrap: wrap;
@@ -1763,6 +1766,7 @@
       display: grid;
       grid-template-columns: 100px 1fr;
       gap: 12px 20px;
+      white-space: normal;
       dt {
         @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
       }
@@ -2395,6 +2399,7 @@
     }
   }
 }
+
 
 .payment_plan {
   padding: 0 32px 42px;

@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>일반상품 | 구매 | 아모레뉴플렛폼</title>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -16,8 +16,34 @@
       <script>include.subAppBarType2();</script>
     </header>    
     <!-- //header -->
-    <main id="container" class="page_order">
+    <main id="container" class="page_mypage">
+      <!-- 주문상세: 주문완료 - 최종결제금액,변경이력 없음 -->
+      <section class="order_info bg_box_blue">
+        <div class="inner">
+          <span class="date">2024.06.30</span><span class="state">주문취소</span>
+        </div>
+      </section>
       <section class="order_accord">
+        <!-- 주문번호&결제금액 -->
+        <div class="accord_list">
+          <div class="on accord_head">
+            <div class="accord_cont">
+              <div class="inner">
+                <div class="info_read order_summary"><!-- .order_summary -->
+                  <dl>
+                    <dt>주문번호</dt>
+                    <dd>20241220010101</dd>
+                  </dl>
+                  <dl>
+                    <dt class="txt_black">총 취소 금액</dt>
+                    <dd class="price"><em>1,250,000</em>원</dd>
+                  </dl>
+                </div><!-- //.info_read -->
+              </div><!-- //.inner -->
+            </div><!-- //.accord_cont -->
+          </div><!-- //accord_head -->
+        </div><!-- //.accord_list -->
+        <!-- //주문번호&결제금액 -->
         <!-- 주문자 정보 -->
         <div class="accord_list">
           <div class="on accord_head">
@@ -57,14 +83,7 @@
             <p class="accord_tit">요청사항</p>
             <div class="accord_cont">
               <div class="inner">
-                <div class="input_writing_group">
-                  <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
-                  <div class="txt_count">
-                    <p class="current zero">0</p>
-                    <span>/</span>
-                    <p class="total">1000</p>
-                  </div>
-                </div><!-- //.input_writing_group -->
+                <div class="info_read">매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다.</div>
               </div><!-- //.inner -->
             </div><!-- //.accord_cont -->
           </div><!-- //accord_head -->
@@ -264,35 +283,34 @@
           </div><!-- //accord_head -->
         </div><!-- //.accord_list -->
         <!-- //사은품 -->
+        <!-- 취소 내역 -->
+        <div class="accord_list">
+          <div class="on accord_head">
+            <p class="accord_tit">취소 내역</p>
+            <div class="accord_cont">
+              <div class="inner">
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" class="input_radio" checked>
+                  <label>고객 변심</label>
+                </div>
+                <div class="info_read">주문한 컬러 상품명을 잘못 입력하여 다시 주문하기 위해 취소합니다.</div>
+              </div><!-- //.inner -->
+            </div><!-- //.accord_cont -->
+          </div><!-- //accord_head -->
+        </div><!-- //.accord_list -->
+        <!-- //취소 내역 -->
       </section>
-      <section class="order_price_area">
-        <div class="inner">
-          <div class="order_price">
-            <div class="price_sum">총 상품금액<em>1,250,000</em>원</div>
-            <ul class="price_by">
-              <li class="ico_bnr_line">새치커버 컬러<em>750,000</em>원</li>
-              <li class="ico_bnr_line">컬러 서포트<em>250,000</em>원</li>
-              <li class="ico_bnr_line">스칼프<em>250,000</em>원</li>
-            </ul>
-            <div class="price_total">주문예정금액<em>1,250,000</em>원</div><!-- "P"는 em 안/"원"은 em 밖 -->
-          </div><!-- //.order_price -->
-        </div><!-- //.inner -->
-      </section><!-- //.order_price_area -->
+      <div class="btn_group">
+         <a href="#" class="btn_lg btn_primary">목록</a>
+      </div><!-- //.btn_group -->
     </main>
     <!-- //#container -->
-    <!-- tabBar -->
-    <a href="" class="btm_bar type_btn">
-      <div class="inner">
-        <span class="color_txt"><em>2,575,000</em>원</span>주문하기
-      </div>
-    </a>
-    <!-- //tabBar -->
   </div><!-- //#wrap -->
   
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("주문서")
+      $(".appbar_tit").html("주문상세")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

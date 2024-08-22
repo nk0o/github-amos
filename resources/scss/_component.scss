@@ -1,17 +1,18 @@
 /** Width **/
-.w{
-  &_80{
-    width: 80px !important;
-    flex:0 0 80px !important;
-  }
-  &_145{
-    width: 145px !important;
-    flex:0 0 145px !important;
-  }
-  &_full{
-    width: 100% !important;
-    flex: 100% !important;
-  }
+.w_80{
+  width: 80px !important;
+  flex:0 0 80px !important;
+}
+.w_145{
+  width: 145px !important;
+  flex:0 0 145px !important;
+}
+.w_full{
+  width: 100% !important;
+  flex: 100% !important;
+}
+.w_half {
+  width: 50% !important;
 }
 /** Font Family **/
 .font {
@@ -247,13 +248,6 @@
 //텍스트 요소 가리기
 .blind {
   @include blind;
-}
-//너비
-.w_full {
-  width: 100% !important;
-}
-.w_half {
-  width: 50% !important;
 }
 //Spacing Padding
 //variables.scss와 $sp동일하게

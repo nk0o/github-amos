@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>일반상품 | 구매 | 아모레뉴플렛폼</title>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -16,8 +16,37 @@
       <script>include.subAppBarType2();</script>
     </header>    
     <!-- //header -->
-    <main id="container" class="page_order">
+    <main id="container" class="page_mypage">
+      <section class="order_info bg_box_blue">
+        <div class="inner">
+          <span class="date">2024.06.30</span><span class="state">상품준비중</span>
+        </div>
+      </section>
       <section class="order_accord">
+        <!-- 주문번호&결제금액 -->
+        <div class="accord_list">
+          <div class="on accord_head">
+            <div class="accord_cont">
+              <div class="inner">
+                <div class="info_read order_summary"><!-- .order_summary -->
+                  <dl>
+                    <dt>주문번호</dt>
+                    <dd>20241220010101</dd>
+                  </dl>
+                  <dl>
+                    <dt class="txt_black">총 결제 금액</dt>
+                    <dd class="price"><em>1,250,000</em>원</dd>
+                  </dl>
+                  <dl>
+                    <dt class="txt_black">최종 결제 금액</dt>
+                    <dd class="price txt_blue"><em>335,000</em>원</dd>
+                  </dl>
+                </div><!-- //.info_read -->
+              </div><!-- //.inner -->
+            </div><!-- //.accord_cont -->
+          </div><!-- //accord_head -->
+        </div><!-- //.accord_list -->
+        <!-- //주문번호&결제금액 -->
         <!-- 주문자 정보 -->
         <div class="accord_list">
           <div class="on accord_head">
@@ -57,14 +86,7 @@
             <p class="accord_tit">요청사항</p>
             <div class="accord_cont">
               <div class="inner">
-                <div class="input_writing_group">
-                  <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
-                  <div class="txt_count">
-                    <p class="current zero">0</p>
-                    <span>/</span>
-                    <p class="total">1000</p>
-                  </div>
-                </div><!-- //.input_writing_group -->
+                <div class="info_read">매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다. 매장 앞에 두고 가주세요. 감사합니다.</div>
               </div><!-- //.inner -->
             </div><!-- //.accord_cont -->
           </div><!-- //accord_head -->
@@ -80,6 +102,12 @@
             </div><!-- //.accord_tit -->
             <div class="accord_cont" style="display: block;">
               <div class="inner">
+                <div class="change_checkbox">
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1" class="input_check history_toggle" name="">
+                    <label for="check-1">변경이력 포함</label>
+                  </div>
+                </div><!-- //.change_checkbox -->
                 <!-- 브랜드별 상품리스트 -->
                 <div class="cart_check_prd">
                   <div class="inner">
@@ -96,13 +124,13 @@
                             <div class="prd">
                               <div class="img"><img src="../../resources/images/contents/img_color_type04.png" alt=""></div>
                               <div class="info">
-                                <strong class="tit">트루싱크 트루싱크</strong>
+                                <strong class="tit">잇츠글로우</strong>
                                 <span class="detail">7NB - 내추럴 브라운 </span>
                                 <div class="cart_qnty">
                                   <span><em>25,000</em>원</span>
-                                  <span><em>20</em>개</span>
+                                  <span class="is_changed"><span class="change_prev">20</span><em>40</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum">합계 :<span class="price"><em>500,000</em>원</span></div>
+                                <div class="prd_sum">합계 :<span class="price is_changed"><span class="change_prev">500,000</span><em>1,000,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -118,7 +146,7 @@
                                   <span class="detail">트루 싱크 – 11.08 (내추럴 블루 바이올렛)​</span>
                                   <div class="cart_qnty">
                                     <span><em>0</em>원</span>
-                                    <span><em>20</em>개</span>
+                                    <span class="is_changed"><span class="change_prev">20</span><em>40</em>개</span>
                                   </div><!-- //.cart_qnty -->
                                 </div><!-- //.info -->
                               </div><!-- //.prd -->
@@ -138,9 +166,9 @@
                                 <span class="detail">L74 - 시에나 오렌지 브라운 시에나 오렌지 브라운</span>
                                 <div class="cart_qnty">
                                   <span><em>25,000</em>원</span>
-                                  <span><em>10</em>개</span>
+                                  <span class="is_changed"><span class="change_prev">10</span><em>0</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum">합계 :<span class="price"><em>250,000</em>원</span></div>
+                                <div class="prd_sum">합계 :<span class="price is_changed"><span class="change_prev">250,000</span><em>500,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -196,19 +224,6 @@
                           </div><!-- //.gift_list -->
                         </div><!-- //.order_bnr -->
                       </li><!-- //.cart_list -->
-                    </ul>
-                  </div><!-- //.inner -->
-                </div><!-- //.cart_check_prd -->
-                <!-- 브랜드별 상품리스트 -->
-                <div class="cart_check_prd">
-                  <div class="inner">
-                    <div class="cart_check">
-                      <div class="input_check_wrap">
-                        <label>스칼프</label>
-                      </div>
-                    </div><!-- //.cart_check -->
-                    <ul class="cart_list_wrap">
-                      <!-- 상품 -->
                       <li class="cart_list">
                         <div class="prd_list_sm">
                           <div class="prd_box">
@@ -219,9 +234,9 @@
                                 <span class="detail">500g</span>
                                 <div class="cart_qnty">
                                   <span><em>25,000</em>원</span>
-                                  <span><em>20</em>개</span>
+                                  <span class="is_changed"><span class="change_prev">0</span><em>5</em>개</span>
                                 </div><!-- //.cart_qnty -->
-                                <div class="prd_sum">합계 :<span class="price"><em>250,000</em>원</span></div>
+                                <div class="prd_sum">합계 :<span class="price is_changed"><span class="change_prev">0</span><em>45,000</em>원</span></div>
                               </div><!-- //.info -->
                             </div><!-- //.prd -->
                           </div><!-- //.prd_box -->
@@ -259,40 +274,41 @@
                     </div><!-- //.prd_box -->
                   </div><!-- //.gift_list -->
                 </div>
+                <div class="order_bnr bg_box">
+                  <div class="txt_gift ico_bnr_line">[증정] 30,000원 이상 구매시, OOO(사은품) 증정​​</div>
+                  <div class="gift_list">
+                    <div class="prd_box">
+                      <div class="prd">
+                        <div class="img"><img src="../../resources/images/img_noimg_thumb.svg" alt></div>
+                        <div class="info">
+                          <strong class="tit">[증정상품] 아모스 컬링 빗 세트​</strong>
+                          <span class="detail">아모스 컬링 빗 세트​</span>
+                          <div class="cart_qnty">
+                            <span><em>0</em>원</span>
+                            <span class="is_changed"><span class="change_prev">20</span><em>40</em>개</span>
+                          </div><!-- //.cart_qnty -->
+                        </div><!-- //.info -->
+                      </div><!-- //.prd -->
+                    </div><!-- //.prd_box -->
+                  </div><!-- //.gift_list -->
+                </div>
               </div><!-- //.inner -->
             </div><!-- //.accord_cont -->
           </div><!-- //accord_head -->
         </div><!-- //.accord_list -->
         <!-- //사은품 -->
       </section>
-      <section class="order_price_area">
-        <div class="inner">
-          <div class="order_price">
-            <div class="price_sum">총 상품금액<em>1,250,000</em>원</div>
-            <ul class="price_by">
-              <li class="ico_bnr_line">새치커버 컬러<em>750,000</em>원</li>
-              <li class="ico_bnr_line">컬러 서포트<em>250,000</em>원</li>
-              <li class="ico_bnr_line">스칼프<em>250,000</em>원</li>
-            </ul>
-            <div class="price_total">주문예정금액<em>1,250,000</em>원</div><!-- "P"는 em 안/"원"은 em 밖 -->
-          </div><!-- //.order_price -->
-        </div><!-- //.inner -->
-      </section><!-- //.order_price_area -->
+      <div class="btn_group">
+        <a href="#" class="btn_lg btn_primary">목록</a>
+      </div><!-- //.btn_group -->
     </main>
     <!-- //#container -->
-    <!-- tabBar -->
-    <a href="" class="btm_bar type_btn">
-      <div class="inner">
-        <span class="color_txt"><em>2,575,000</em>원</span>주문하기
-      </div>
-    </a>
-    <!-- //tabBar -->
   </div><!-- //#wrap -->
   
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("주문서")
+      $(".appbar_tit").html("주문상세")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
