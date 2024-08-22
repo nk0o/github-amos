@@ -2365,6 +2365,10 @@ button:disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
 }
 
+*[class*=btn_].line_gray {
+  color: #888888 !important;
+}
+
 .btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xxs, .btn_xs, .btn_sm, .btn_md, .btn_lg {
   display: inline-flex;
   align-items: center;

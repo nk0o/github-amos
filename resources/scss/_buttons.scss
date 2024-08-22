@@ -18,6 +18,11 @@ button {
     }
   }
 }
+*[class*="btn_"] {
+  &.line_gray{
+    color: $gray-600 !important;
+  }
+}
 .btn {
   display: inline-flex;
   align-items: center;
