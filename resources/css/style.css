@@ -2394,6 +2394,16 @@ button:disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
 }
 
+*[class*=btn_].with_icon {
+  gap: 4px;
+}
+*[class*=btn_].with_icon.btn_primary *[class*=ico_]::before {
+  background-color: #ffffff !important;
+}
+*[class*=btn_].with_icon.btn_border *[class*=ico_]::before {
+  background-color: #2A3136 !important;
+}
+
 .btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xxs, .btn_xs, .btn_sm, .btn_md, .btn_lg {
   display: inline-flex;
   align-items: center;
@@ -2406,6 +2416,7 @@ button:disabled *[class*=ico_]::before {
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.4;
+  line-height: 1;
   vertical-align: middle;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -2454,7 +2465,6 @@ button:disabled *[class*=ico_]::before {
   width: 46px;
   height: 46px;
   padding: 6px;
-  border-color: transparent;
 }
 .btn_sm.btn_circle {
   width: 46px;
@@ -3546,15 +3556,15 @@ select {
   gap: 6px;
   min-width: 240px;
 }
+.input_group label {
+  position: relative;
+  width: 100%;
+}
 .input_group.width_btn {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   gap: 12px;
-}
-.input_group label {
-  position: relative;
-  width: 100%;
 }
 .input_group .ico_close_circle {
   position: absolute;
@@ -3594,7 +3604,7 @@ select {
   font-weight: 400;
   line-height: 2;
 }
-.input_group[class*=input_icon] label > i {
+.input_group[class*=input_icon] label > i, .input_group[class*=input_icon] label > button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -3874,6 +3884,37 @@ select {
 }
 .tooltip_box.show {
   display: block;
+}
+
+.search_bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 6px;
+  min-width: 240px;
+}
+.search_bar label {
+  position: relative;
+  width: 100%;
+}
+.search_bar label > i, .search_bar label > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  min-width: 24px;
+  min-height: 24px;
+}
+.search_bar .input_text {
+  height: 44px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  border: 0;
+}
+.search_bar .input_text:focus, .search_bar .input_text:focus-visible {
+  border: 0;
 }
 
 /* Tab Menu */

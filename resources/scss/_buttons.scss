@@ -18,6 +18,25 @@ button {
     }
   }
 }
+*[class*="btn_"] {
+  &.with_icon{
+    gap: 4px;
+    &.btn_primary{
+      *[class*="ico_"] {
+        &::before {
+          background-color: $color-white !important;
+        }
+      }
+    }
+    &.btn_border{
+      *[class*="ico_"] {
+        &::before {
+          background-color: $color-primary !important;
+        }
+      }
+    }
+  }
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -30,6 +49,7 @@ button {
   font-size: $fs-xs;
   font-weight: $fw-sb;
   line-height: 1.4;
+  line-height: 1;
   vertical-align: middle;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -80,7 +100,6 @@ button {
       width: 46px;
       height: 46px;
       padding: 6px;
-      border-color: transparent;
     }
     &.btn_circle{
       width: 46px;

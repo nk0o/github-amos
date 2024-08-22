@@ -19,30 +19,25 @@
     <main id="container" class="page_mypage">
       <section>
         <div class="inner">
-          <div class="history_search">
-            <div class="input_group width_btn">
-              <div class="select_box">
-                <div class="select_box_value" data-btmsheet="btmSheet01">
-                  <span>최근 1개월</span>
-                </div>
-                <div class="select_box_list">
-                  <ul>
-                    <li><span>최근 1개월</span></li>
-                    <li><span>최근 3개월</span></li>
-                    <li><span>최근 6개월</span></li>
-                    <li><span>기간설정</span></li>
-                  </ul>
-                </div>
-              </div>
-              <button class="btn_md btn_primary" data-btmsheet="btmSheet02">
-                <i class="ico_cal white ico_16"></i> 상세조회
-              </button>
-            </div>
-            <ul class="dot_list">
-              <li>아모스 프로에서 주문하신 내역만 확인이 가능하십니다. 영업사원을 통해 주문하신 정보는 <a href="#">거래원장</a>에서 함께 확인이 가능하십니다.</li>
-              <li>주문상태별 상세한 정보는 <a href="#">주문상세보기</a>를 통해서 확인해 주세요.</li>
+          <div class="search_bar">
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+              <button class="ico_search ico_20"></button>
+            </label>
+          </div><!-- //.search_bar -->
+          <div class="tab_menu round_tab">
+            <ul>
+              <li class="current tab_list" data-tab="tab2-1"><button>학습대기</button></li>
+              <li class="tab_list" data-tab="tab2-2"><button>학습중</button></li>
+              <li class="tab_list" data-tab="tab2-3"><button>학습완료</button></li>
+              <li class="tab_list" data-tab="tab2-4"><button>취소내역</button></li>
             </ul>
-          </div><!-- //.history_search -->
+          </div><!-- //.tab_menu -->
+          <div class="input_check_wrap">
+            <input type="checkbox" id="check-all-1" class="input_check" name="check-item-1" checked="">
+            <label for="check-all">전체 동의하기</label>
+            <button class="btn_xs btn_primary with_icon"><i class="ico_cart ico_16"></i>전체 담기</button>
+          </div>
         </div><!-- //.inner -->
       </section>
       <div class="hr_divider"></div>

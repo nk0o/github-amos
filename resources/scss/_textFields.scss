@@ -1,22 +1,35 @@
 /* Input */
+@mixin inputGroup(){
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 6px;
+  min-width: 240px;
+  label{
+    position: relative;
+    width: 100%;
+  }
+}
+@mixin inputIcon(){
+  label{
+    & > i, & > button {
+      @include pos_Ycenter;
+      right: 12px;
+      min-width: 24px;
+      min-height: 24px;
+    }
+  }
+}
 .input {
   &_group {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 6px;
-    min-width: 240px;
+    @include inputGroup();
     &.width_btn {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       gap: 12px;
-    }
-    label{
-      position: relative;
-      width: 100%;
     }
     .ico_close_circle{
       @include pos_Ycenter;
@@ -42,16 +55,9 @@
     }
     .time{
       @include fontStyle($color-red, $fs-sm, $fw-m, 2);
-    }
+    }   
     &[class*="input_icon"] {
-      label{
-        > i {
-          @include pos_Ycenter;
-          right: 12px;
-          min-width: 24px;
-          min-height: 24px;
-        }
-      }
+      @include inputIcon;
     }
     &.input_icon_left {
       .input_text {
@@ -258,7 +264,7 @@
     }
   }
 }
-
+//툴팁박스
 .tooltip_box{
   display: none;
   z-index: 1;
@@ -271,5 +277,19 @@
   background-color: $color-white;
   &.show{
     display: block;
+  }
+}
+//검색바
+.search_bar{
+  @include inputGroup;
+  @include inputIcon;
+  .input_text{
+    height: 44px;
+    border-radius: 8px;
+    background-color: $gray-50;
+    border: 0;
+    &:focus, &:focus-visible{
+      border: 0;
+    }
   }
 }

@@ -460,9 +460,16 @@ function addInputClearBtn(){
     $(this).css('color', '#222')
   })
   $(".input_text").on('keyup', function () { 
-    addB(this)
+    addB(this);
   });
+  $(".search_bar input").focusout(function(){
+    $(this).parents('label').find('button').removeClass('ico_close_circle').addClass('ico_search');
+  });
+  
   function addB(el){
+    if($(el).parents('.search_bar') && $(el).parents('label').find('button').length){
+      $(el).parents('label').find('button').removeClass('ico_search').addClass('ico_close_circle');
+    }
     if($(el).parents('label').find('button').length){
       return false
     }
