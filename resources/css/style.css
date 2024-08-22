@@ -8560,6 +8560,40 @@ footer .f_company {
   font-weight: 400;
 }
 
+.payment_plan {
+  padding: 0 32px 42px;
+}
+.payment_plan > li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.payment_plan > li:nth-child(2) {
+  align-items: start;
+}
+.payment_plan > li + li {
+  margin-top: 20px;
+}
+.payment_plan > li em {
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+}
+.payment_plan > li .inp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+}
+.payment_plan > li .input_radio_outer .input_radio_wrap {
+  display: block;
+}
+.payment_plan > li .input_radio_outer .input_radio_wrap + .input_radio_wrap {
+  margin-top: 12px;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;

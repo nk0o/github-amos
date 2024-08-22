@@ -39,7 +39,7 @@
         <div class="inner">
           <div class="top_exchange_wrap">
             <div class="monthpicker_cont">
-              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet02">2024. 07</div>
+              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet01">2024. 07</div>
             </div>
             <div class="exchange_box">
               <dl>
@@ -800,16 +800,16 @@
     </main>
     <!-- //#container -->
     <!-- tabBar -->
-    <a href="" class="btm_bar type_btn">
+    <button class="btm_bar type_btn" data-btmsheet="btmSheet02">
       <div class="inner">
         <span class="color_txt"><em>500,000</em>원</span>주문하기
       </div>
-    </a>
+    </button>
     <!-- //tabBar -->
   </div>
 
   <!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet02">
+  <div class="btm_sheet" id="btmSheet01">
     <div class="btm_sheet_back"></div>
     <div class="inner">
       <div class="btm_sheet_head">
@@ -819,6 +819,47 @@
       <div class="btm_sheet_cont">
         <div class="picker_wrap">
           <div data-type="picker"></div>
+        </div>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+
+  <div class="btm_sheet" id="btmSheet02">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">결제방식 및 금액 설정</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <ul class="payment_plan">
+          <li>
+            <em>결제금액</em>
+            <div class="inp">
+              <div class="input_group">
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="결제금액을 입력해 주세요.">
+                </label>
+              </div>
+              원
+            </div>
+          </li>
+          <li>
+            <em>결제방식</em>
+            <div class="input_radio_outer">
+              <div class="input_radio_wrap">
+                <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1">
+                <label for="radio-1-1">카드번호 입력(Key-In)</label>
+              </div>
+              <div class="input_radio_wrap">
+                <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+                <label for="radio-1-2">간편결제</label>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="btn_group">
+          <a href="#" class="btn_lg btn_primary">목록</a>
         </div>
       </div><!-- //.btm_sheet_cont -->
     </div><!-- //.inner -->

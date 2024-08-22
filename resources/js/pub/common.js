@@ -872,18 +872,16 @@ function tooltipUI() {
   };
 }
 
-// function allView() {
-//   $('.exchange_cont input[type=radio]').on('change', function() {
-//     var $container = $(this).closest('.exchange_cont');
-  
-//     var checked = $container.find('input[type=radio]:checked').length > 0;
-  
-//     if (checked) {
-//       console.log('ddd');  
-//       $container.find('.accord_head').addClass('on');
-//     } else {
-//       console.log('ss');
-//       $container.find('.accord_head').removeClass('on');
-//     }
-//   });
-// }
+function allView() {
+  $('.exchange_cont input[type=checkbox]').on('change', function() {
+    let $container = $(this).closest('.exchange_cont');
+    let checked = $container.find('input[type=checkbox]:checked').length > 0;
+    if (checked) {
+      $container.find('.accord_head').addClass('on');
+      $container.find('.accord_cont').slideDown();
+    } else {
+      $container.find('.accord_head').removeClass('on');
+      $container.find('.accord_cont').slideUp();
+    }
+  });
+}
