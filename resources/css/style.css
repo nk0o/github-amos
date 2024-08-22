@@ -2365,10 +2365,6 @@ button:disabled *[class*=ico_]::before {
   background-color: #dddddd !important;
 }
 
-*[class*=btn_].line_gray {
-  color: #888888 !important;
-}
-
 .btn, .btn_floating, .btn_bottom, .btn_icon, .btn_xxs, .btn_xs, .btn_sm, .btn_md, .btn_lg {
   display: inline-flex;
   align-items: center;
@@ -2640,6 +2636,13 @@ button:disabled *[class*=ico_]::before {
   width: 16px;
   height: 16px;
   background: url("../images/icon/ico_chev_next_16.svg") center/contain no-repeat;
+}
+.btn_detail {
+  border: 1px solid #dddddd;
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.357;
 }
 .btn_reset {
   flex: 0 1 30.75% !important;
