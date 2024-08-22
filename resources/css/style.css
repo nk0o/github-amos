@@ -5186,14 +5186,13 @@ div.dataTables_wrapper .btn_floating:focus {
   background-color: #dddddd;
 }
 .modal_container .scroll_inner::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #dddddd;
+  background-color: #f6f6f6;
 }
 .modal_container .scroll_inner::-webkit-scrollbar-thumb {
   height: 3px;
   margin: 0 auto;
-  border-radius: 5px;
   background-color: #aaaaaa;
+  cursor: pointer;
 }
 
 .modal_content .gift_check_wrap:first-child {
@@ -5645,11 +5644,11 @@ header.fixed {
   top: 0;
 }
 
-.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner #container > .inner {
+.appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
   padding: 0 20px;
 }
 @media (min-width: 1024px) {
-  .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner #container > .inner {
+  .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
@@ -5884,6 +5883,11 @@ footer .f_company {
   margin-left: 0;
 }
 
+@media (min-width: 1024px) {
+  .page_form {
+    padding-bottom: 82px;
+  }
+}
 .page_main {
   /* 메인 스와이퍼 */
 }
@@ -6142,6 +6146,10 @@ footer .f_company {
 }
 
 /* 카테고리 페이지 */
+.page_category .tab_menu ul, .page_category .tab_cont {
+  max-width: 700px;
+  margin: 0 auto;
+}
 .page_category .tab_cont {
   padding: 0;
 }
@@ -6186,6 +6194,20 @@ footer .f_company {
   padding: 0 22px 0 16px;
   height: 100%;
   overflow-y: auto;
+}
+.cate_list::-webkit-scrollbar {
+  opacity: 0;
+  width: 7px;
+  background-color: #dddddd;
+}
+.cate_list::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+.cate_list::-webkit-scrollbar-thumb {
+  height: 3px;
+  margin: 0 auto;
+  background-color: #aaaaaa;
+  cursor: pointer;
 }
 .cate_list > div {
   padding-bottom: 8px;
@@ -9723,8 +9745,10 @@ footer .f_company {
 }
 
 @media (min-width: 1024px) {
-  .page_form > .inner {
-    padding: 60px 0 82px;
+  .page_form {
+    /* >.inner {
+      padding: 60px 0 82px;
+    } */
   }
   .page_form .tab_menu {
     display: block;
