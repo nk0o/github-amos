@@ -159,9 +159,19 @@
 }
 /* Commerce */
 .ico {
+  &_buy {
+    &::before {
+      @include iconImgPath("ico_buy.svg");
+    }
+  }
   &_promotion {
     &::before {
       @include iconImgPath("ico_promotion.svg");
+    }
+    &_12{
+      &::before {
+        @include iconImgPath("ico_promotion_12.svg");
+      }
     }
   }
   &_point {

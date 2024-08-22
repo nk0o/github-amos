@@ -215,11 +215,11 @@
   }
   &.orange{
     .left {
-      background: $color-orange;
+      background: #FF7E36;
     }
     .bar_overflow {
       &::before{
-        border-color: $color-orange;
+        border-color: #FF7E36;
       }
     }
   }

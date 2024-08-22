@@ -5,9 +5,10 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 22px;
+    height: 20px;
+    border-radius: 2px;
     padding: 0 4px;
-    @include fontStyle($color-white, $fs-xxs, $fw-sb, 1.3333);
+    @include fontStyle($color-white, $fs-xxs, $fw-sb, 1);
     text-align: center;
   }
   @include badge;
@@ -83,6 +84,40 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
+  }
+  &_history{
+    height: 20px;
+    background: $color-orange-secondary;
+    color: $color-orange;
+    font-family: $font-aritadt;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      @include iconImgPath("ico_buy.svg");
+      background-color: $color-orange !important;
+    }
+  }
+  &_promotion{
+    background: $color-blue-tertiary;
+    color: $color-blue;
+    font-family: $font-aritadt;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      @include iconImgPath("ico_promotion_12.svg");
+      background-color: $color-blue !important;
+    }
+  }
+  &_notice{
+    padding: 0 8px;
+    border-radius: 9999px;
+    border: 1px solid $gray-100;
+    background: $gray-50;
+    color: $gray-500;
   }
 }
 

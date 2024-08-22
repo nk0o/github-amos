@@ -60,7 +60,10 @@ $color-primary-darken4: darken($color-primary, 40%);
 
 // 시스템 색상
 $color-red: $color-point;
-$color-orange: #FF7E36; 
+$color-orange: #ED5828; 
+$color-orange-secondary: #FFF2EE; 
+$color-orange-light: #F18200; 
+$color-orange-light-secondary:#FFF5E9; 
 $color-yellow: #FFC107; 
 $color-olive: #B5CC18; 
 $color-green: #26A769; 
@@ -72,6 +75,7 @@ $color-violet: #6435C9;
 $color-purple: #A333C8;
 $color-pink: #E03997;
 $color-brown: #A5673F;
+$color-mint: #15AEB4;
 
 // Grayscale
 $gray-50: #f6f6f6;

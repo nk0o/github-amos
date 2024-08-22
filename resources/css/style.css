@@ -299,7 +299,7 @@ p {
   border: 1px solid #f6f6f6 !important;
 }
 .line_orange {
-  border: 1px solid #FF7E36 !important;
+  border: 1px solid #ED5828 !important;
 }
 .line_olive {
   border: 1px solid #B5CC18 !important;
@@ -348,7 +348,7 @@ p {
   color: #f6f6f6 !important;
 }
 .txt_orange {
-  color: #FF7E36 !important;
+  color: #ED5828 !important;
 }
 .txt_olive {
   color: #B5CC18 !important;
@@ -1444,6 +1444,20 @@ p {
 }
 
 /* Commerce */
+.ico_buy::before {
+  background-image: url("../images/icon/ico_buy.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_buy::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_buy.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_promotion::before {
   background-image: url("../images/icon/ico_promotion.svg");
   background-size: cover;
@@ -1452,6 +1466,20 @@ p {
   .ico_promotion::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_promotion.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_promotion_12::before {
+  background-image: url("../images/icon/ico_promotion_12.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_promotion_12::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_promotion_12.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -4112,12 +4140,13 @@ select {
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 22px;
+  height: 20px;
+  border-radius: 2px;
   padding: 0 4px;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.3333;
+  line-height: 1;
   text-align: center;
 }
 .badge.bg_light {
@@ -4145,7 +4174,7 @@ select {
   color: #f6f6f6;
 }
 .badge.line_orange {
-  color: #FF7E36;
+  color: #ED5828;
 }
 .badge.line_olive {
   color: #B5CC18;
@@ -4179,12 +4208,13 @@ select {
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 22px;
+  height: 20px;
+  border-radius: 2px;
   padding: 0 4px;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.3333;
+  line-height: 1;
   text-align: center;
   height: 18px;
   min-width: 18px;
@@ -4199,6 +4229,62 @@ select {
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
+.badge_history {
+  height: 20px;
+  background: #FFF2EE;
+  color: #ED5828;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.badge_history::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon/ico_buy.svg");
+  background-size: cover;
+  background-color: #ED5828 !important;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .badge_history::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_buy.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.badge_promotion {
+  background: #EFF6FF;
+  color: #1A63D9;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.badge_promotion::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon/ico_promotion_12.svg");
+  background-size: cover;
+  background-color: #1A63D9 !important;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .badge_promotion::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_promotion_12.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.badge_notice {
+  padding: 0 8px;
+  border-radius: 9999px;
+  border: 1px solid #eeeeee;
+  background: #f6f6f6;
+  color: #aaaaaa;
 }
 
 button > .badge {
@@ -6387,6 +6473,8 @@ footer .f_company {
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 0px;
+  height: 22px;
 }
 .prd_box .prd .tit {
   display: block;
@@ -6401,6 +6489,7 @@ footer .f_company {
   text-overflow: ellipsis;
   word-wrap: normal;
   overflow: hidden;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .prd_box .prd .amount {
   display: block;
@@ -6487,6 +6576,12 @@ footer .f_company {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2142;
+}
+.prd_box .badge_wrap {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .prd_list_lg {

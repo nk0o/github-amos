@@ -81,6 +81,8 @@
         position: absolute;
         top:0;
         left: 0;
+        border-radius: 0px;
+        height: 22px;
       }
     }
     .tit {
@@ -96,6 +98,7 @@
       text-overflow: ellipsis;
       word-wrap: normal;
       overflow: hidden;
+      font-family: $font-aritadt;
     }
     .amount {
       display: block;
@@ -168,6 +171,12 @@
         @include fontStyle($gray-600, $fs-s, $fw-sb, 1.2142);
       }
     }
+  }
+  .badge_wrap{
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
   }
 }
 
