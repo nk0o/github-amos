@@ -40,6 +40,7 @@ $(document).ready(function () {
   if ($('.show_etcinput').length > 0) {  showEtc() }
   if ($('.tooltip_box').length > 0) {  tooltipUI() }
   if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
+  if ($('.accord_list .amount_box').length > 0) {  allView() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -872,6 +873,20 @@ function tooltipUI() {
       left: trigerOfffsetLeft, top: trigerOfffsetBtm + 8
     });
   };
+}
+
+function allView() {
+  $('.exchange_cont input[type=checkbox]').on('change', function() {
+    let $container = $(this).closest('.exchange_cont');
+    let checked = $container.find('input[type=checkbox]:checked').length > 0;
+    if (checked) {
+      $container.find('.accord_head').addClass('on');
+      $container.find('.accord_cont').slideDown();
+    } else {
+      $container.find('.accord_head').removeClass('on');
+      $container.find('.accord_cont').slideUp();
+    }
+  });
 }
 function orderChangeHistoryUI(){
   change('.history_toggle');

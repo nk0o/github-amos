@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>거래원장 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.mainAppBar();</script>
+      <script>include.mainTabMenu();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_exchange">
+      <!-- 탭 영역 -->
+      <section class="tabs_area"> 
+        <!-- 컨테인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="inner">
+            <div class="tab_menu contain_tab contain_tab_type2 tab_center">
+              <ul>
+                <li class="current tab_list"><button>거래원장</button></li>
+                <li class="tab_list"><button>결제내역</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //컨테인 탭 -->
+      </section>
+      <!-- //탭 영역 -->
+
+      <section>
+        <div class="inner">
+          <div class="top_exchange_wrap">
+            <div class="monthpicker_cont">
+              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet02">2024. 07</div>
+            </div>
+            <div class="exchange_box">
+              <dl>
+                <dt>전월미수금</dt>
+                <dd><em>75,000</em><span>원</span></dd>
+                <dt>당월미수금</dt>
+                <dd><em>60,000</em><span>원</span></dd>
+              </dl>
+            </div>
+            <div class="col_box color_type2">
+              <div class="col">
+                <div class="tit">
+                  <em>매입</em>
+                </div>
+                <div class="cont">
+                  170,000
+                </div>
+              </div>
+              <div class="col">
+                <div class="tit">
+                  <em>결제</em>
+                </div>
+                <div class="cont">
+                  185,000
+                </div>
+              </div>
+              <div class="col">
+                <div class="tit">
+                  <em>조정</em>
+                </div>
+                <div class="cont">
+                  0
+                </div>
+              </div>
+            </div>
+            <ul class="txt_notice_list">
+              <li class="txt_notice">신용카드 결제내역은 <a href="#">결제내역</a> 페이지에서 즉시 확인 가능합니다.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr_divider"></section>
+
+      <section>
+        <div class="inner">
+          <div class="exchange_detail">
+            <ul>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.03</span>
+                  <div class="price">
+                    <em>1,500,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.10</span>
+                  <div class="price">
+                    <em>-100,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_border btn_radius line_gray w_80 ">반품</a>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.17</span>
+                  <div class="price">
+                    <em>800,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.21</span>
+                  <div class="price">
+                    <em>1,000,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_primary btn_radius w_80">결제</a>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.24</span>
+                  <div class="price">
+                    <em>300,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
+              </li>
+              <li>
+                <div class="left">
+                  <span class="date">2024.06.28</span>
+                  <div class="price">
+                    <em>1,000,000</em><span>원</span>
+                  </div>
+                </div>
+                <a href="#" class="btn_xs btn_primary btn_radius w_80">결제</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- //#container -->
+    <!-- tabBar -->
+    <a href="" class="btm_bar type_btn">
+      <div class="inner">
+        <span class="color_txt"><em>500,000</em>원</span>주문하기
+      </div>
+    </a>
+    <!-- //tabBar -->
+  </div>
+
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet02">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">연월 선택</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <div class="picker_wrap">
+          <div data-type="picker"></div>
+        </div>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+  <!-- //Bottom Sheet -->
+
+</body>
+</html>

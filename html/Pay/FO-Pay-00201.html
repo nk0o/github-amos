@@ -39,23 +39,44 @@
         <div class="inner">
           <div class="top_exchange_wrap">
             <div class="monthpicker_cont">
-              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet02">2024. 06</div>
-              <div data-type="picker" class="pc"></div>
+              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet01">2024. 07</div>
             </div>
             <div class="exchange_box">
               <dl>
-                <dt>당월 매입 금액</dt>
-                <dd><em>1,500,000</em><span>원</span></dd>
-                <dt>당월 결제 금액</dt>
-                <dd><em>2,000,000</em><span>원</span></dd>
-                <dt>미 결제 금액</dt>
-                <dd><em>500,000</em><span>원</span></dd>
+                <dt>전월미수금</dt>
+                <dd><em>75,000</em><span>원</span></dd>
+                <dt>당월미수금</dt>
+                <dd><em>60,000</em><span>원</span></dd>
               </dl>
             </div>
+            <div class="col_box color_type2">
+              <div class="col">
+                <div class="tit">
+                  <em>매입</em>
+                </div>
+                <div class="cont">
+                  170,000
+                </div>
+              </div>
+              <div class="col">
+                <div class="tit">
+                  <em>결제</em>
+                </div>
+                <div class="cont">
+                  185,000
+                </div>
+              </div>
+              <div class="col">
+                <div class="tit">
+                  <em>조정</em>
+                </div>
+                <div class="cont">
+                  0
+                </div>
+              </div>
+            </div>
             <ul class="txt_notice_list">
-              <li class="txt_notice">거래원장은 월단위 거래 명세를 보여주는 표로서, 당월 매입금액 / 결제금액 / 미결제금액 반영에 최대 OO일 소요됩니다.</li>
-              <li class="txt_notice">하나의 주문/결제건은 주문건과 결제건이 각각 분리되어 표기됩니다.</li>
-              <li class="txt_notice">신용카드 결제내역은 <em>“결제내역”</em> 페이지에서 즉시 확인 가능합니다.</li>
+              <li class="txt_notice">신용카드 결제내역은 <a href="#">결제내역</a> 페이지에서 즉시 확인 가능합니다.</li>
             </ul>
           </div>
         </div>
@@ -63,81 +84,732 @@
 
       <section class="hr_divider"></section>
 
-      <section>
+      <section class="exchange_cont">
         <div class="inner">
-          <div class="exchange_detail">
-            <ul>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.03</span>
-                  <div class="price">
-                    <em>1,500,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
-              </li>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.10</span>
-                  <div class="price">
-                    <em>-100,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_border btn_radius line_gray w_80 ">반품</a>
-              </li>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.17</span>
-                  <div class="price">
-                    <em>800,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
-              </li>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.21</span>
-                  <div class="price">
-                    <em>1,000,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_primary btn_radius w_80">결제</a>
-              </li>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.24</span>
-                  <div class="price">
-                    <em>300,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_border btn_radius w_80">주문</a>
-              </li>
-              <li>
-                <div class="left">
-                  <span class="date">2024.06.28</span>
-                  <div class="price">
-                    <em>1,000,000</em><span>원</span>
-                  </div>
-                </div>
-                <a href="#" class="btn_xs btn_primary btn_radius w_80">결제</a>
-              </li>
-            </ul>
+          <div class="input_check_wrap">
+            <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1">
+            <label for="check-1-1">일괄 보기</label>
           </div>
+
+          <!-- 미수 내역 -->
+          <ul class="accord_list">
+            <li class="accord_head">
+              <div class="accord_tit">
+                <div class="amount_box">
+                  <div class="top">
+                    <div class="date">2024.07.01</div>
+                    <ul class="list">
+                      <li>
+                        <em>전월미수</em>
+                        <span>1,000,000</span>
+                      </li>
+                      <li>
+                        <em>당월미수</em>
+                        <span>1,000,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col_box">
+                    <div class="col">
+                      <div class="tit">
+                        <em>매입</em>
+                      </div>
+                      <div class="cont">
+                        1,000,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>결제</em>
+                      </div>
+                      <div class="cont">
+                        1,000,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>조정</em>
+                      </div>
+                      <div class="cont">
+                        1,000,000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accord_cont">
+                <div class="amount_box_detail">
+                  <ul>
+                    <!-- 조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <em>조정사유</em>
+                      </div>
+                      <div class="cont">
+                        <p class="txt">조정사유가 노출됩니다. 조정사유가 노출됩니다.조정사유가 노출됩니다. 조정사유가 노출됩니다.</p>
+                      </div>
+                    </li>
+                    <!-- //조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <span class="num">766001777</span>
+                        <span class="prd">아. 엑스퍼트 하이 블리치 500g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            50,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            2
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001493</span>
+                        <span class="prd">아. 살롱마스터 프렙 샴푸 1000g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            0
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            0
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            1
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001560</span>
+                        <span class="prd">아. 잇츠에이블 1.5디벨로퍼 1000ml(
+                          2023)</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            1
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="accord_head">
+              <div class="accord_tit">
+                <div class="amount_box">
+                  <div class="top">
+                    <div class="date">2024.07.04</div>
+                    <ul class="list">
+                      <li>
+                        <em>전월미수</em>
+                        <span>75,000</span>
+                      </li>
+                      <li>
+                        <em>당월미수</em>
+                        <span>185,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col_box">
+                    <div class="col">
+                      <div class="tit">
+                        <em>매입</em>
+                      </div>
+                      <div class="cont">
+                        110,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>결제</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>조정</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accord_cont">
+                <div class="amount_box_detail">
+                  <ul>
+                    <!-- 조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <em>조정사유</em>
+                      </div>
+                      <div class="cont">
+                        <p class="txt">조정사유가 노출됩니다. 조정사유가 노출됩니다.조정사유가 노출됩니다. 조정사유가 노출됩니다.</p>
+                      </div>
+                    </li>
+                    <!-- //조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <span class="num">766001777</span>
+                        <span class="prd">아. 엑스퍼트 하이 블리치 500g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            50,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            2
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001493</span>
+                        <span class="prd">아. 살롱마스터 프렙 샴푸 1000g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            0
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            0
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            1
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001560</span>
+                        <span class="prd">아. 잇츠에이블 1.5디벨로퍼 1000ml(
+                          2023)</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            1
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="accord_head">
+              <div class="accord_tit">
+                <div class="amount_box">
+                  <div class="top">
+                    <div class="date">2024.07.05</div>
+                    <ul class="list">
+                      <li>
+                        <em>전월미수</em>
+                        <span>185,000</span>
+                      </li>
+                      <li>
+                        <em>당월미수</em>
+                        <span>110,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col_box">
+                    <div class="col">
+                      <div class="tit">
+                        <em>매입</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>결제 <span class="badge bg_green">현금</span></em>
+                      </div>
+                      <div class="cont">
+                        75,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>조정</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accord_cont">
+                <div class="amount_box_detail">
+                  <ul>
+                    <!-- 조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <em>조정사유</em>
+                      </div>
+                      <div class="cont">
+                        <p class="txt">조정사유가 노출됩니다. 조정사유가 노출됩니다.조정사유가 노출됩니다. 조정사유가 노출됩니다.</p>
+                      </div>
+                    </li>
+                    <!-- //조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <span class="num">766001777</span>
+                        <span class="prd">아. 엑스퍼트 하이 블리치 500g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            50,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            2
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001493</span>
+                        <span class="prd">아. 살롱마스터 프렙 샴푸 1000g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            0
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            0
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            1
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001560</span>
+                        <span class="prd">아. 잇츠에이블 1.5디벨로퍼 1000ml(
+                          2023)</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            1
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="accord_head">
+              <div class="accord_tit">
+                <div class="amount_box">
+                  <div class="top">
+                    <div class="date">2024.07.16</div>
+                    <ul class="list">
+                      <li>
+                        <em>전월미수</em>
+                        <span>110,000</span>
+                      </li>
+                      <li>
+                        <em>당월미수</em>
+                        <span>0</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col_box">
+                    <div class="col">
+                      <div class="tit">
+                        <em>매입</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>결제 <span class="badge bg_orange">카드</span></em>
+                      </div>
+                      <div class="cont">
+                        110,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>조정</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accord_cont">
+                <div class="amount_box_detail">
+                  <ul>
+                    <!-- 조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <em>조정사유</em>
+                      </div>
+                      <div class="cont">
+                        <p class="txt">조정사유가 노출됩니다. 조정사유가 노출됩니다.조정사유가 노출됩니다. 조정사유가 노출됩니다.</p>
+                      </div>
+                    </li>
+                    <!-- //조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <span class="num">766001777</span>
+                        <span class="prd">아. 엑스퍼트 하이 블리치 500g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            50,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            2
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001493</span>
+                        <span class="prd">아. 살롱마스터 프렙 샴푸 1000g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            0
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            0
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            1
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001560</span>
+                        <span class="prd">아. 잇츠에이블 1.5디벨로퍼 1000ml(
+                          2023)</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            1
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="accord_head">
+              <div class="accord_tit">
+                <div class="amount_box">
+                  <div class="top">
+                    <div class="date">2024.07.16</div>
+                    <ul class="list">
+                      <li>
+                        <em>전월미수</em>
+                        <span>0</span>
+                      </li>
+                      <li>
+                        <em>당월미수</em>
+                        <span>60,000</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col_box">
+                    <div class="col">
+                      <div class="tit">
+                        <em>매입</em>
+                      </div>
+                      <div class="cont">
+                        60,000
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>결제</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tit">
+                        <em>조정</em>
+                      </div>
+                      <div class="cont">
+                        0
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accord_cont">
+                <div class="amount_box_detail">
+                  <ul>
+                    <!-- 조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <em>조정사유</em>
+                      </div>
+                      <div class="cont">
+                        <p class="txt">조정사유가 노출됩니다. 조정사유가 노출됩니다.조정사유가 노출됩니다. 조정사유가 노출됩니다.</p>
+                      </div>
+                    </li>
+                    <!-- //조정 사유 -->
+                    <li>
+                      <div class="top">
+                        <span class="num">766001777</span>
+                        <span class="prd">아. 엑스퍼트 하이 블리치 500g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            50,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            2
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001493</span>
+                        <span class="prd">아. 살롱마스터 프렙 샴푸 1000g</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            25,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            0
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            0
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            1
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="top">
+                        <span class="num">766001560</span>
+                        <span class="prd">아. 잇츠에이블 1.5디벨로퍼 1000ml(
+                          2023)</span>
+                      </div>
+                      <div class="cont">
+                        <ul>
+                          <li>
+                            <em>상품단가</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입금액</em>
+                            10,000
+                          </li>
+                          <li>
+                            <em>매입수량</em>
+                            1
+                          </li>
+                          <li>
+                            <em>증정수량</em>
+                            0
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- //미수 내역 -->
         </div>
       </section>
     </main>
     <!-- //#container -->
     <!-- tabBar -->
-    <a href="" class="btm_bar type_btn">
+    <button class="btm_bar type_btn" data-btmsheet="btmSheet02">
       <div class="inner">
         <span class="color_txt"><em>500,000</em>원</span>주문하기
       </div>
-    </a>
+    </button>
     <!-- //tabBar -->
   </div>
 
   <!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet02">
+  <div class="btm_sheet" id="btmSheet01">
     <div class="btm_sheet_back"></div>
     <div class="inner">
       <div class="btm_sheet_head">
@@ -147,6 +819,47 @@
       <div class="btm_sheet_cont">
         <div class="picker_wrap">
           <div data-type="picker"></div>
+        </div>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+
+  <div class="btm_sheet" id="btmSheet02">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">결제방식 및 금액 설정</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <ul class="payment_plan">
+          <li>
+            <em>결제금액</em>
+            <div class="inp">
+              <div class="input_group">
+                <label for="">
+                  <input type="text" id="" class="input_text" value="" placeholder="결제금액을 입력해 주세요.">
+                </label>
+              </div>
+              원
+            </div>
+          </li>
+          <li>
+            <em>결제방식</em>
+            <div class="input_radio_outer">
+              <div class="input_radio_wrap">
+                <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1">
+                <label for="radio-1-1">카드번호 입력(Key-In)</label>
+              </div>
+              <div class="input_radio_wrap">
+                <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+                <label for="radio-1-2">간편결제</label>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="btn_group">
+          <a href="#" class="btn_lg btn_primary">목록</a>
         </div>
       </div><!-- //.btm_sheet_cont -->
     </div><!-- //.inner -->
