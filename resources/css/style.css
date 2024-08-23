@@ -8078,29 +8078,29 @@ footer .f_company {
   line-height: 22px;
 }
 
-.edu_detail .detail_top {
+.board_detail .detail_top {
   padding: 24px 0 20px;
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
 }
-.edu_detail .detail_top .top {
+.board_detail .detail_top .top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
 }
-.edu_detail .detail_top .top .date {
+.board_detail .detail_top .top .date {
   color: #aaaaaa;
   font-size: 0.8125rem;
   font-weight: 300;
   line-height: 1;
 }
-.edu_detail .detail_top .top .view {
+.board_detail .detail_top .top .view {
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 300;
   line-height: 1;
 }
-.edu_detail .detail_top .top .view::before {
+.board_detail .detail_top .top .view::before {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -8109,7 +8109,7 @@ footer .f_company {
   vertical-align: -3px;
   content: "";
 }
-.edu_detail .detail_top .tit {
+.board_detail .detail_top .tit {
   display: block;
   font-family: "Arita-dotum";
   color: #222222;
@@ -8117,17 +8117,17 @@ footer .f_company {
   font-weight: 600;
   line-height: 26px;
 }
-.edu_detail .detail_cont img {
+.board_detail .detail_cont img {
   margin-bottom: 24px;
 }
-.edu_detail .detail_cont p {
+.board_detail .detail_cont p {
   font-family: "Arita-dotum";
   color: #444444;
   font-size: 1rem;
   font-weight: 400;
   line-height: 24px;
 }
-.edu_detail .detail_bottom {
+.board_detail .detail_bottom {
   margin-top: 40px;
 }
 
