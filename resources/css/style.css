@@ -2983,7 +2983,7 @@ button:disabled *[class*=ico_]::before {
   cursor: pointer;
   position: relative;
   display: block;
-  min-height: 24px;
+  min-height: 20px;
   padding-left: 28px;
   user-select: none;
   color: #222222;
@@ -3028,9 +3028,11 @@ button:disabled *[class*=ico_]::before {
   color: inherit;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.357;
+  line-height: 1.714;
 }
 .input_check_wrap.without_box .input_check + label::before {
+  width: 24px;
+  height: 24px;
   top: 0;
   background-image: url("../images/icon/ico_check_24.svg");
 }
@@ -3038,7 +3040,6 @@ button:disabled *[class*=ico_]::before {
   background-image: url("../images/icon/ico_check_24_on.svg");
 }
 .input_check_wrap.without_box_sm .input_check + label {
-  min-height: 20px;
   padding-left: 24px;
   color: inherit;
   font-size: 0.875rem;
@@ -3046,6 +3047,7 @@ button:disabled *[class*=ico_]::before {
   line-height: 1.357;
 }
 .input_check_wrap.without_box_sm .input_check + label::before {
+  top: 0;
   background-image: url("../images/icon/ico_check_20.svg");
 }
 .input_check_wrap.without_box_sm .input_check:checked + label::before {
@@ -3216,6 +3218,8 @@ button:disabled *[class*=ico_]::before {
   background-image: none;
   left: auto;
   right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_check_wrap.without_box .input_check:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box .input_check:checked + label {
   background-color: #f6f6f6;
@@ -9478,12 +9482,14 @@ footer .f_company {
   align-items: center;
 }
 .cart_check label {
-  min-height: 20px;
   color: #222222;
   font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.333;
   font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.cart_check label::before {
+  top: 0;
 }
 .cart_check_all {
   padding: 20px 0;
@@ -10620,4 +10626,26 @@ footer .f_company {
 }
 .user_modify_box .refer_mark {
   margin-top: 20px;
+}
+
+.promotion_view_wrap {
+  border-top: 1px solid #eeeeee;
+}
+.promotion_view_wrap > .inner {
+  padding: 12px 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.promotion_view_wrap .input_check + label {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.3334;
+}
+.promotion_view_wrap .input_check + label::before {
+  top: 0;
 }/*# sourceMappingURL=style.css.map */

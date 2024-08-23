@@ -531,9 +531,11 @@
       align-items: center;
     }
     label{
-      min-height: 20px;
       @include fontStyle($gray-950, $fs-sm, $fw-b, 1.333);
       font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+      &::before{
+        top: 0;
+      }
     }
     &_all{
       padding: 20px 0;
@@ -1518,5 +1520,19 @@
   }
   .refer_mark{
     margin-top: 20px;
+  }
+}
+//프로모션 상품만 보기
+.promotion_view_wrap{
+  border-top: 1px solid $gray-100;
+  & > .inner{
+    padding: 12px 20px;
+    @include flexBetween;
+  }
+  .input_check + label{
+    @include fontStyle($gray-950, $fs-sm, $fw-b, 1.3334);
+    &::before{
+      top: 0;
+    }
   }
 }
