@@ -5791,6 +5791,12 @@ header.fixed {
   max-width: 740px;
   margin: 0 auto;
 }
+@media (max-width: 375px) {
+  #container.page_form > .inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .hr_divider {
   width: 100%;
@@ -7991,16 +7997,19 @@ footer .f_company {
     display: block;
   }
 }
-.edu_list > li + li {
+.board_list > li + li {
   border-top: 1px solid #eee;
 }
-.edu_list > li > a {
+.board_list > li:first-child > a {
+  padding-top: 24px;
+}
+.board_list > li > a {
   display: block;
   padding: 20px 0;
   background: url("../images/icon/ico_chev_next_16.svg") no-repeat right center;
   background-size: 16px;
 }
-.edu_list > li .date {
+.board_list > li .date {
   display: block;
   margin-bottom: 8px;
   color: #888888;
@@ -8008,8 +8017,9 @@ footer .f_company {
   font-weight: 300;
   line-height: 17px;
 }
-.edu_list > li .tit {
+.board_list > li .tit {
   display: block;
+  padding-right: 35px;
   font-family: "Arita-dotum";
   color: #222222;
   font-size: 0.9375rem;
@@ -9930,11 +9940,6 @@ footer .f_company {
 }
 
 @media (min-width: 1024px) {
-  .page_form {
-    /* >.inner {
-      padding: 60px 0 82px;
-    } */
-  }
   .page_form .tab_menu {
     display: block;
     max-width: 700px;
@@ -10628,10 +10633,24 @@ footer .f_company {
   margin-top: 20px;
 }
 
-.promotion_view_wrap {
+.recent_search .search_wrap {
+  padding: 24px 0 0;
+}
+.recent_search .tab_menu.round_tab {
+  padding: 20px 0;
+}
+
+.recent_product .prd_list_sm .prd_box, .recent_product .gift_list .prd_box {
+  margin-top: 20px;
+}
+.recent_product .prd_cont {
+  margin-bottom: 0;
+}
+
+.list_option {
   border-top: 1px solid #eeeeee;
 }
-.promotion_view_wrap > .inner {
+.list_option > .inner {
   padding: 12px 20px;
   display: -webkit-box;
   display: flex;
@@ -10640,12 +10659,12 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
 }
-.promotion_view_wrap .input_check + label {
+.list_option .input_check + label {
   color: #222222;
   font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.3334;
 }
-.promotion_view_wrap .input_check + label::before {
+.list_option .input_check + label::before {
   top: 0;
 }/*# sourceMappingURL=style.css.map */

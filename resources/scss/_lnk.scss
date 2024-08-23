@@ -930,9 +930,6 @@
 }
 @media (min-width: 1024px) {
   .page_form {
-    /* >.inner {
-      padding: 60px 0 82px;
-    } */
     .tab_menu {
       display: block;
       max-width: 700px;
@@ -1522,8 +1519,25 @@
     margin-top: 20px;
   }
 }
+//최근 구매한 상품
+.recent_search{
+  .search_wrap{
+    padding: 24px 0 0;
+  }
+  .tab_menu.round_tab{
+    padding: 20px 0;
+  }
+}
+.recent_product{
+  .prd_list_sm .prd_box{
+    margin-top: 20px;
+  }
+  .prd_cont{
+    margin-bottom: 0;
+  }
+}
 //프로모션 상품만 보기
-.promotion_view_wrap{
+.list_option{
   border-top: 1px solid $gray-100;
   & > .inner{
     padding: 12px 20px;
