@@ -1650,6 +1650,18 @@
       overflow: hidden;
     }
   }
+  .badge_notice{
+    margin-right: 4px;
+  }
+  .board_info{
+    display: flex; 
+    align-items: center;    
+    gap: 8px;
+    .state{
+      margin-bottom: 8px;
+      @include fontStyle($gray-600, $fs-s, $fw-sb, 1.3571);
+    }
+  }
 }
 
 .no_data {
@@ -2351,6 +2363,9 @@
       color: $gray-950;
       text-decoration: underline;
     }
+  }
+  &_wrap{
+    padding: 24px 0;
   }
 }
 

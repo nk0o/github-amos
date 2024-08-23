@@ -237,6 +237,64 @@
     color: $color-white !important;
   }
 }
+//Text Language
+.txt {
+  &_kor{
+    font-family: $font-aritadt !important;
+  }
+  &_eng{
+    font-family: $font-gotham !important;
+  }
+}
+//Text align
+.txt {
+  &_left {
+    text-align: left !important;
+  }
+  &_right {
+    text-align: right !important;
+  }
+  &_center {
+    text-align: center !important;
+  }
+}
+//주의 문구
+.txt_notice{
+  position: relative;
+  padding-left: 22px;
+  margin-top: 16px;
+  @include fontStyle($gray-700, $fs-xs, $fw-m, 1.3846);
+  font-family: $font-aritadt;
+  &_wrap{
+    padding: 8px 20px 0;
+    max-width: 1024px;
+    margin: 0 auto;
+    white-space: wrap;
+    button {
+      font-weight: $fw-sb;
+      color: #444;
+      vertical-align: top;
+    }
+  }
+  a {
+    color: #444;
+    font-weight: $fw-sb;
+    text-decoration-line: underline;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    mask: url('../images/icon/ico_notice.svg') center/contain no-repeat;
+    background-color: $gray-400 !important;
+  }
+  &:first-child{
+    margin-top: 0 ;
+  }
+}
 /* Alert Text */
 .txt_alert {
   position: relative;
@@ -437,18 +495,6 @@
 .align_items_end {
   align-items: flex-end !important;
 }
-//Text align
-.txt {
-  &_left {
-    text-align: left !important;
-  }
-  &_right {
-    text-align: right !important;
-  }
-  &_center {
-    text-align: center !important;
-  }
-}
 
 // 썸네일 리스트
 .thumb_list {
@@ -502,45 +548,6 @@
     }
   }
 }
-
-//주의 문구
-.txt_notice{
-  position: relative;
-  padding-left: 22px;
-  margin-top: 16px;
-  @include fontStyle($gray-700, $fs-xs, $fw-m, 1.3846);
-  font-family: $font-aritadt;
-  &_wrap{
-    padding: 8px 20px 0;
-    max-width: 1024px;
-    margin: 0 auto;
-    white-space: wrap;
-    button {
-      font-weight: $fw-sb;
-      color: #444;
-      vertical-align: top;
-    }
-  }
-  a {
-    color: #444;
-    font-weight: $fw-sb;
-    text-decoration-line: underline;
-  }
-  &::before{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    mask: url('../images/icon/ico_notice.svg') center/contain no-repeat;
-    background-color: $gray-400 !important;
-  }
-  &:first-child{
-    margin-top: 0 ;
-  }
-}
-
 // PC
 @media (min-width: 1024px) {
   .thumb_list > li {
