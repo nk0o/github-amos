@@ -1650,6 +1650,18 @@
       overflow: hidden;
     }
   }
+  .badge_notice{
+    margin-right: 4px;
+  }
+  .board_info{
+    display: flex; 
+    align-items: center;    
+    gap: 8px;
+    .state{
+      margin-bottom: 8px;
+      @include fontStyle($gray-600, $fs-s, $fw-sb, 1.3571);
+    }
+  }
 }
 
 .no_data {
@@ -1665,7 +1677,7 @@
   }
 }
 
-.edu_detail {
+.board_detail {
   .detail_top {
     padding: 24px 0 20px;
     border-bottom: 1px solid #eee;
@@ -2352,6 +2364,9 @@
       text-decoration: underline;
     }
   }
+  &_wrap{
+    padding: 24px 0;
+  }
 }
 
 .page_exchange {
@@ -2555,3 +2570,5 @@
     }
   }
 }
+
+
