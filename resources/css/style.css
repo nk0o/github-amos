@@ -7707,7 +7707,7 @@ footer .f_company {
 }
 .exchange_cont .amount_box .top .list > li {
   display: flex;
-  width: calc(50% - 10px);
+  flex-wrap: wrap;
   gap: 4px;
 }
 .exchange_cont .amount_box .top .list > li em {
@@ -8292,6 +8292,9 @@ footer .f_company {
 .page_edu {
   margin-bottom: 133px;
 }
+.page_edu .tab_menu.round_tab > ul {
+  margin: 0 -20px;
+}
 .page_edu .order_accord .accord_cont:first-child {
   margin-top: 32px;
 }
@@ -8318,6 +8321,9 @@ footer .f_company {
 }
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
+}
+.page_edu .tab_cont .btn_group {
+  padding: 60px 0 30px;
 }
 
 .edu_detail_top {
@@ -8805,6 +8811,7 @@ footer .f_company {
   font-size: 15px;
   font-weight: 400;
   line-height: 16px;
+  white-space: normal;
 }
 
 #wrap:has(.page_exchange + .btm_bar.type_btn) #container {
