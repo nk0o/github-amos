@@ -2524,6 +2524,9 @@
       &+li {
         border-top: 1px solid #eee;
       }
+      &:last-child {
+        padding-bottom: 0;
+      }
       .img {
         width:100px;
         height: 100px;
@@ -2571,4 +2574,8 @@
   }
 }
 
-
+.page_mypage {
+  .top_outer {
+    padding:24px 0;
+  }
+}
