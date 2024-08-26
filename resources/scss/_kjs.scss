@@ -2520,3 +2520,60 @@
   }
 }
 
+.designer_list_wrap {
+  .designer_list {
+    >li{
+      display: flex;
+      gap: 19px;
+      padding: 24px 0;
+      &+li {
+        border-top: 1px solid #eee;
+      }
+      .img {
+        width:100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 1px;
+        img {
+          width:100%;
+          height:100%;
+          object-fit: cover;
+        }
+      }
+      .info {
+        flex-grow: 1;
+        max-width: 216px;
+        .name {
+          color: #222;
+          font-size: 16px;
+          font-weight: $fw-sb;
+          line-height: 24px;
+        }
+        .tel {
+          font-family: $font-aritadt;
+          color: #222;
+          font-size: 16px;
+          font-weight: $fw-m;
+          line-height: 24px;
+        }
+        .btn_group {
+          padding: 12px 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+.modal_container {
+  .designer_img_view{
+    aspect-ratio: 1;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
