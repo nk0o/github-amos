@@ -1299,7 +1299,8 @@
         gap: 20px;
         >li {
           display: flex;
-          width: calc(50% - 10px);
+          flex-wrap: wrap;
+          // width: calc(50% - 10px);
           gap: 4px;
           em {
             color: #666;
@@ -1863,6 +1864,13 @@
 
 .page_edu {
   margin-bottom: 133px;
+  .tab_menu {
+    &.round_tab {
+      >ul {
+        margin: 0 -20px;
+      }
+    }
+  }
   .order_accord {
     .accord_cont:first-child {
       margin-top: 32px;
@@ -1886,6 +1894,11 @@
       .btn_group {
         padding:60px 0 0;
       }
+    }
+  }
+  .tab_cont {
+    .btn_group {
+      padding: 60px 0 30px;
     }
   }
 }
@@ -2410,6 +2423,7 @@
         font-size: 15px;
         font-weight: $fw-m;
         line-height: 16px;
+        white-space: normal;
       }
     }
   }
