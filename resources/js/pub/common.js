@@ -748,7 +748,7 @@ function moveCenterTab(el){
 }
 //탭클릭 앵커이동
 function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
-  let clickTab = $('.tab_menu');
+  let clickTab = $('.clickTab');
   let headerH = $('header').outerHeight();
   let tabListH = clickTab.outerHeight();
   let moveTab = clickTab.hasClass('clickTab')
@@ -757,12 +757,12 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
   if($('.page_point').length > 0 ){
     userAreaH = $('.user_area').outerHeight();
   }
-  clickTab.find('.tab_list').click(function(){
+  $(document).on('click touchend', '.tab_menu .tab_list', function(){
     let idx = $(this).index();
-    let toEl = clickTab.find('.tab_list').length > 0 && $('.toCont').eq(idx);
+    let toEl = $(this).parents('.clickTab').length > 0 && $('.toCont').eq(idx);
     $("html, body").animate({
       scrollTop : toEl.offset().top - (headerH + userAreaH)
-    },500, 'easeOutBounce')
+    },500)
   })
 }
 
