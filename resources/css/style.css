@@ -8086,6 +8086,7 @@ footer .f_company {
 .board_detail .detail_top .top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 8px;
 }
 .board_detail .detail_top .top .date {
@@ -8093,6 +8094,13 @@ footer .f_company {
   font-size: 0.8125rem;
   font-weight: 300;
   line-height: 1;
+}
+.board_detail .detail_top .top .state {
+  margin: 0 auto 0 8px;
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.143;
 }
 .board_detail .detail_top .top .view {
   color: #777777;

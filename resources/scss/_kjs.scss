@@ -1685,9 +1685,14 @@
     .top {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 8px;
       .date {
         @include fontStyle($gray-500, $fs-xs, $fw-l, 1);
+      }
+      .state{
+        margin: 0 auto 0 8px;
+        @include fontStyle($gray-600, $fs-s, $fw-sb, 1.143);
       }
       .view {
         @include fontStyle($gray-700, $fs-xs, $fw-l, 1);
@@ -2514,7 +2519,6 @@
     }
   }
 }
-
 .designer_list_wrap {
   .designer_list {
     >li{
