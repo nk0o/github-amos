@@ -16,39 +16,64 @@ function checkIsMobile(){
   }
 }
 $(document).ready(function () {
-  if ($(".line_tab")) { LineTabMenuInit() }
-  if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
-  if ($('.file_uploader')) { fileUploader() }
-  if ($('.input_writing_group textarea')) { initCountString() }
-  if ($('.progress_bar')) { progressBarUI() }
-  if ($('.pagination').length > 0) { paginationUI() }
-  if ($('.accord_head').length > 0) { accordionUI() }
-  if ($('.select_box').length > 0) { selectBoxUI() }
-  if ($('.input_text').length > 0) { addInputClearBtn() }
-  if ($('.modal_container').length > 0) { modalUI() }
-  if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
-  if ($('.floating_side').length > 0) { floatingSideUI() }
-  if ($('.cate_nav').length > 0) { catecoryUI() }
-  if ($('.prd_list_wrap.swiper').length > 0) { PrdSlider() }
-  if ($('header').length > 0) { headerScroll() }
-  if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
-  if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
-  if ($('.prd_cart_btn').length > 0) { putInCart() }
-  if ($('.clickTab').length > 0) {  tabMoveAnchor() }
-  if ($('.open_month').length > 0) {  monthPicker() }
-  if ($('.show_picker').length > 0) {  showPicker() }
-  if ($('.show_etcinput').length > 0) {  showEtc() }
-  if ($('.tooltip_box').length > 0) {  tooltipUI() }
-  if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
-  if ($('.accord_list .amount_box').length > 0) {  allView() }
+  LineTabMenuInit();
+  toggleBtnDisabled();
+
+  initCountString();
+  progressBarUI();
+  paginationUI();
+  accordionUI();
+  selectBoxUI();
+  addInputClearBtn();
+  modalUI();
+  bottomSheetUI();
+  floatingSideUI();
+  catecoryUI();
+  prdSlider();
+  headerScroll();
+  prdImgFix();
+  tabContPos();
+  putInCart();
+  tabMoveAnchor();
+  monthPicker();
+  showPicker();
+  showEtc();
+  tooltipUI();
+  orderChangeHistoryUI();
+  allView();
+  // if ($(".line_tab")) { LineTabMenuInit() }
+  // if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
+  // if ($('.file_uploader')) { fileUploader() }
+  // if ($('.input_writing_group textarea')) { initCountString() }
+  // if ($('.progress_bar')) { progressBarUI() }
+  // if ($('.pagination').length > 0) { paginationUI() }
+  // if ($('.accord_head').length > 0) { accordionUI() }
+  // if ($('.select_box').length > 0) { selectBoxUI() }
+  // if ($('.input_text').length > 0) { addInputClearBtn() }
+  // if ($('.modal_container').length > 0) { modalUI() }
+  // if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
+  // if ($('.floating_side').length > 0) { floatingSideUI() }
+  // if ($('.cate_nav').length > 0) { catecoryUI() }
+  // if ($('.prd_list_wrap.swiper').length > 0) { prdSlider() }
+  // if ($('header').length > 0) { headerScroll() }
+  // if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
+  // if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
+  // if ($('.prd_cart_btn').length > 0) { putInCart() }
+  // if ($('.clickTab').length > 0) {  tabMoveAnchor() }
+  // if ($('.open_month').length > 0) {  monthPicker() }
+  // if ($('.show_picker').length > 0) {  showPicker() }
+  // if ($('.show_etcinput').length > 0) {  showEtc() }
+  // if ($('.tooltip_box').length > 0) {  tooltipUI() }
+  // if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
+  // if ($('.accord_list .amount_box').length > 0) {  allView() }
 
   /****** Window Resize ******/
   $(window).resize(function () {
-    LineTabMenuInit()
+    LineTabMenuInit();
   });
 
   /****** Tab Menu ******/
-  $('.tab_menu .tab_list').click(function () { tabMenu(this) });
+  $(document).on('click touchend', '.tab_menu .tab_list', function(){ tabMenu(this) });
   function tabMenu(el) {
     var tab = $(el).parents('.tab_menu');
     var activeTab = $(el).attr('data-tab');
@@ -119,7 +144,7 @@ $(document).ready(function () {
   //
 
   /****** Toggle Button ******/
-  $('.btn_toggle').click(function () {
+  $(document).on('click touchend', '.btn_toggle', function(){
     if ($(this).next('.btn_toggle_txt')) { toggelBtnText(this) }
   })
   //Toggle Button Change Text
@@ -154,7 +179,7 @@ $(document).ready(function () {
   }
 
   /****** File Uploader ******/
-  function fileUploader() {
+/*   function fileUploader() {
     $('.file_uploader').each(function (index, item) {
       $(item).find('.file_name .input_delete').on('click', function () {
         $(this).parents('.file_name').remove();
@@ -175,11 +200,11 @@ $(document).ready(function () {
         }
       });
     });
-  };
+  }; */
 
   // 상품 담기
   if ($('.prd_list_wrap.ir').length > 0 ) {
-    $('.prd_box .prd').on('click', function() {
+    $(document).on('click touchend', '.prd_box .prd', function(){
       let imgSrc = $(this).find('img').attr('src');
       let $parent = $(this).parent();
       if ($parent.hasClass('checked')) {
@@ -455,14 +480,14 @@ function dataTableSelect(dtable) {
 
 
 function addInputClearBtn(){
-  $('.input_text[type="file"]').on('change', function(){
+  $(document).on('change', '.input_text[type="file"]', function(){
     addB(this)
     $(this).css('color', '#222')
   })
-  $(".input_text").on('keyup', function () { 
+  $(document).on('keyup', '.input_text', function(){
     addB(this);
   });
-  $(".search_bar input").focusout(function(){
+  $(document).on('focusout', '.search_bar input', function(){
     $(this).parents('label').find('button').removeClass('ico_close_circle').addClass('ico_search');
   });
   
@@ -480,9 +505,9 @@ function addInputClearBtn(){
 }
 /****** Modal ******/
 function modalUI(){
-  $('.btn_modal_open').click((e) => { e.preventDefault(); openModal(e.target) }); //open modal
+  $(document).on('click touchend', '.btn_modal_open', function(e){ e.preventDefault(); openModal(e.target) }); //open modal
 
-  $('.modal_container').on('click', '.btn_modal_close, .modal_overlay', (e)=>{ //close modal
+  $(document).on('click touchend', '.btn_modal_close, .modal_overlay', function(e){
     e.preventDefault();
     closeModal(e.target);
   });
@@ -524,7 +549,7 @@ function modalUI(){
 }
 
 function bottomSheetUI(){
-  $('[data-btmsheet]').on('click touch',function() {
+  $(document).on('click touchend', '[data-btmsheet]', function(){
     if($(this).hasClass('select_box_value') && !isMobile){
       //셀렉트는 모바일일때만 열림
       return false;
@@ -532,7 +557,7 @@ function bottomSheetUI(){
     $("#"+ $(this).data('btmsheet')).addClass('show');
     $("body").addClass("no_scroll");
   });
-  $('.btm_sheet_close, .btm_sheet_back').on('click touch',function() {
+  $(document).on('click touchend', '.btm_sheet_close, .btm_sheet_back', function(){
     $(this).parents('.btm_sheet').removeClass('show')
     $("body").removeClass("no_scroll");
   });
@@ -540,21 +565,22 @@ function bottomSheetUI(){
 /* Floating UI */
 function floatingSideUI(){
   //expand
-  $('.floating_side .anchor').focusin(function(){ 
+  $(document).on('focusin', '.floating_side .anchor', function(){
     $(this).parents('.floating_side').addClass('focus')
-  }).focusout(function(){ 
+  })
+  $(document).on('focusout', '.floating_side .anchor', function(){
     $(this).parents('.floating_side').removeClass('focus')
   });  
-  $('.floating_side .anchor').click(function(e){
+  $(document).on('click touchend', '.floating_side .anchor', function(){
     $(this).parents('.floating_side').addClass('is_expanded');
     $("body").addClass("no_scroll");
   })
-  $('.floating_side .anchor_close').click(function(){
+  $(document).on('click touchend', '.floating_side .anchor_close', function(){
     $(this).parents('.floating_side').removeClass('is_expanded');
     $("body").removeClass("no_scroll");
   })
   //scrollTop
-  $('.floating_side .scrolltop').click(function(){
+  $(document).on('click touchend', '.floating_side .scrolltop', function(){
     $('html, body').animate({scrollTop: '0'}, 500,'swing');
   });
   //scroll
@@ -592,7 +618,7 @@ function like(event) {
 
 /* 카테고리 페이지 */
 function catecoryUI(){
-  $(".cate_nav li").click(function(){
+  $(document).on('click touchend', '.cate_nav li', function(){
     let elName = $(this).find('.cate_tit').attr('href');
     let elPos = $(elName).offset();
 
@@ -626,7 +652,7 @@ function cateScroll(){
 }
 
 /* 제품 리스트 Swiper */
-function PrdSlider(){
+function prdSlider(){  
   $(".prd_list_wrap.swiper").each(function (i, v) {
     let sliderName = 'slider' + i;
     $(v).attr('id', sliderName);
@@ -730,7 +756,6 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
   if(!moveTab){return false}
   if($('.page_point').length > 0 ){
     userAreaH = $('.user_area').outerHeight();
-    console.log(userAreaH);
   }
   clickTab.find('.tab_list').click(function(){
     let idx = $(this).index();
@@ -743,7 +768,7 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
 
 //카트 담기
 function putInCart() {
-  $('.prd_cart_btn').on('click',function() {
+  $(document).on('click touchend', '.prd_cart_btn', function(){
     if($('.prd_put_cart').length == 0) {
       $('.appbar > .inner').append('<div class="prd_put_cart"><div class="aniPut"> <div class="ani_img"><i class="ico_cart_float ico_24"></i></div></div><div class="put_text"><p>나의 장바구니에 담았습니다</p></div></div>')
       $('.prd_put_cart').addClass('active');
@@ -759,7 +784,6 @@ function prdImgFix() {
   if(winW < 1024) {
     $(window).on('scroll',function() {
       let scroll = $(this).scrollTop();
-      console.log(scroll)
       if(scroll > 0) {
         $('.prd_top_info .prd_img').addClass('fix')
       } else {
@@ -771,29 +795,30 @@ function prdImgFix() {
 }
 
 function tabContPos() {
-  let tabContPos = $('.tab_cont').offset().top;
-  let headeH = $('header').outerHeight();
-  let tabMenuH = $('.tab_menu').outerHeight();
-  console.log(tabContPos)
-  $('.tab_list ').on('click',function() {
-    //아이폰 확인
-    function isIphone() {
-      return /iPhone/.test(navigator.userAgent);
-    }
-    if (isIphone()) {
-      $('html,body').animate({
-        scrollTop : tabContPos - headeH - tabMenuH + 20
-      })
-    } else {
-      $('html,body').animate({
-        scrollTop : tabContPos - headeH - tabMenuH
-      })
-    }
-  })
+  if($('.tab_cont').length > 0){
+    let tabContPos = $('.tab_cont').offset().top;
+    let headeH = $('header').outerHeight();
+    let tabMenuH = $('.tab_menu').outerHeight();
+    $(document).on('click touchend', '.tab_list', function(){
+      //아이폰 확인
+      function isIphone() {
+        return /iPhone/.test(navigator.userAgent);
+      }
+      if (isIphone()) {
+        $('html,body').animate({
+          scrollTop : tabContPos - headeH - tabMenuH + 20
+        })
+      } else {
+        $('html,body').animate({
+          scrollTop : tabContPos - headeH - tabMenuH
+        })
+      }
+    })
+  }
 }
 
 function monthPicker() {
-  $('.open_month').on('click',function() {
+  $(document).on('click touch', '.open_month', function(){
     $('[data-type="picker"]').monthpicker('show')
   })
   $('[data-type="picker"]').monthpicker({
@@ -812,7 +837,7 @@ function monthPicker() {
 }
 
 function showPicker(){
-  $('.input_radio_wrap label, .input_check_wrap label').click(function(e){
+  $(document).on('click touchend', '.input_radio_wrap label, .input_check_wrap label', function(){
     if(!$(this).parents().hasClass('show_picker')){
       $('.is_date.hidden').css('display','none');
     }else{
@@ -822,7 +847,7 @@ function showPicker(){
 }
 
 function showEtc(){
-  $('.input_radio_wrap label, .input_check_wrap label').click(function(e){
+  $(document).on('click touchend', '.input_radio_wrap label, .input_check_wrap label', function(){
     let isShowTrigger = $(this).parent().hasClass('show_etcinput');
     let radioType = $(this).siblings('input').prop("type") == "radio";
     let checkType = $(this).siblings('input').prop("type") == "checkbox";
@@ -853,13 +878,11 @@ function showEtc(){
     function uiHide(el) {  
       $(el).parents('.inquiry_box').find('.input_etc.hidden').css('display','none');
     }
-
-
   })
 }
 
 function tooltipUI() {
-  $('.info_tooltip').click(function(e){
+  $(document).on('click touchend', '.info_tooltip', function(){
     if(!$('.tooltip_box').hasClass('show')){
       e.preventDefault(); showTooltipBox(e.target); e.stopPropagation();
     }
@@ -883,7 +906,7 @@ function tooltipUI() {
 }
 
 function allView() {
-  $('.exchange_cont input[type=checkbox]').on('change', function() {
+  $(document).on('change', '.exchange_cont input[type=checkbox]', function(){
     let $container = $(this).closest('.exchange_cont');
     let checked = $container.find('input[type=checkbox]:checked').length > 0;
     if (checked) {
@@ -897,7 +920,7 @@ function allView() {
 }
 function orderChangeHistoryUI(){
   change('.history_toggle');
-  $('.history_toggle').on('click change',function(){
+  $(document).on('click change', '.history_toggle', function(){
     change(this);
   })
   function change(el){
