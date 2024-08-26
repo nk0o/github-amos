@@ -47,7 +47,6 @@ html, body {
   word-wrap: break-word;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  scroll-behavior: smooth;
 }
 
 a, button {
@@ -6039,11 +6038,6 @@ footer .f_company {
   margin-left: 0;
 }
 
-@media (min-width: 1024px) {
-  .page_form {
-    padding-bottom: 82px;
-  }
-}
 .page_main {
   /* 메인 스와이퍼 */
 }
@@ -8970,6 +8964,9 @@ footer .f_company {
   background-color: #ffffff;
 }
 
+.page_form {
+  padding-bottom: 90px;
+}
 .page_form .hr_divider {
   max-width: 740px;
   margin: 24px auto !important;

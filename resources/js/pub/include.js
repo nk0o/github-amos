@@ -112,6 +112,8 @@ var include = {
             <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
             <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
             <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
+            <!-- 240826 찜한 상품 있는경우 -->
+            <!-- <li><i class="ico_wish_is ico_24"><span class="badge_round bg_red">7</span></i><span class="nav_tit">찜한상품</span></li> -->
             <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
           </ul>
         </div>
