@@ -8118,9 +8118,6 @@ footer .f_company {
   font-weight: 600;
   line-height: 26px;
 }
-.board_detail .detail_cont {
-  padding-bottom: 40px;
-}
 .board_detail .detail_cont img {
   margin-bottom: 24px;
 }
@@ -8133,7 +8130,7 @@ footer .f_company {
   line-height: 24px;
 }
 .board_detail .detail_bottom {
-  padding-bottom: 32px;
+  margin: 40px 0 32px;
 }
 
 .file_wrap > div + div {
@@ -8974,7 +8971,8 @@ footer .f_company {
   padding-top: 0;
 }
 .page_form .btn_group {
-  padding: 60px 20px 30px;
+  padding: 0 20px 0;
+  margin: 60px 0 30px;
 }
 .page_form .info_area {
   padding: 50px 0px 0;
