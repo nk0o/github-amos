@@ -8769,6 +8769,9 @@ footer .f_company {
 .dot_list_wrap {
   padding: 24px 0;
 }
+.dot_list_wrap .dot_list {
+  margin-top: 0 !important;
+}
 
 .page_exchange .col_box {
   display: flex;

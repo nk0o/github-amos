@@ -2387,6 +2387,9 @@
   }
   &_wrap{
     padding: 24px 0;
+    .dot_list{
+      margin-top: 0 !important;
+    }
   }
 }
 
