@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>MAIN | 아모스 TV</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.mainAppBar();</script>
+      <script>include.mainTabMenu();</script>
+    </header>
+    <!-- //header -->
+    <main id="container" class="page_tv_main">
+      <section class="sec_visual">
+        <div id="mainTopSwiper" class="swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div><!-- //.swiper-container -->
+      </section><!-- //.sec_visual -->
+    
+      <section class="sec_conts">
+        <div class="inner">
+          <div class="tit_area">
+            <h2>카테고리1<a href="#" class="ico_chevNext_24 ico_24"></a></h2>
+          </div>
+        </div><!-- //.inner -->
+        <div class="conts_box_list_wrap swiper swiper-container">
+          <div class="conts_box_list swiper-wrapper">
+            <div class="conts_box swiper-slide">
+              <div class="visual">
+                <!-- 영상 -->
+                <div class="video_box">
+                  <video class="video_cont" src="../../resources/images/main/V33148649.mp4" poster="../../resources/images/main/img_tv_main_video_thumb.png" controls>
+                  </video>
+                </div>
+                <!-- // 영상 -->
+              </div>
+              <div class="info">
+                <div class="cate">
+                  <span>컬러</span><em>잇츠에이블</em>
+                </div>
+                <strong class="tit"> 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개익스프레스 다운펌</strong>
+                <p class="txt">
+                  프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블
+                </p>
+                <div class="bottom">
+                  <div class="date">2024.02.14</div>
+                  <div class="right">
+                    <div class="view"><i class="ico_view ico_16"></i> 156</div>
+                    <div class="share"><i class="ico_share ico_16"></i> 127</div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div><!-- //.swiper-wrapper -->
+        </div><!-- //.swiper-container -->
+      </section><!-- //.sec_product -->
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+</body>
+
+<script>
+  $(document).ready(function () {
+    const mainSwiper1 = new Swiper('#mainTopSwiper', {
+      slidesPerView: 1,
+      pagination: {
+        el: "#mainTopSwiper .swiper-pagination",
+        type: "fraction",
+      },
+      loop:true,
+      observer: true,
+      observeParents: true,
+      breakpoints: {
+        1024: {
+          slidesPerView: "auto",
+          spaceBetween: 2,
+        },
+      },
+    });
+  })
+</script>
+
+</html>

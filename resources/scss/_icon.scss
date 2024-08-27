@@ -487,6 +487,11 @@
       @include iconImgPath("ico_share.svg");
     }
   }
+  &_view {
+    &::before {
+      @include iconImgPath("ico_view.svg");
+    }
+  }
   &_cupon {
     &::before {
       @include iconImgPath("ico_cupon.svg");
