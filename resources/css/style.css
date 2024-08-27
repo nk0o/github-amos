@@ -5820,7 +5820,7 @@ header.fixed {
   height: 8px;
   max-width: 984px;
   background-color: #f6f6f6;
-  margin: 0 auto !important;
+  margin: 0 auto;
   padding: 0 !important;
   border: 0 !important;
 }
@@ -8961,7 +8961,6 @@ footer .f_company {
 
 .page_form .hr_divider {
   max-width: 740px;
-  margin: 24px auto !important;
 }
 .page_form .hr_divider + .inquiry_outer {
   padding-top: 0;
@@ -8978,6 +8977,9 @@ footer .f_company {
 .page_form .input_group .dot_list {
   margin-top: 0;
   padding: 0;
+}
+.page_form .input_group + .hr_divider {
+  margin: 24px 0;
 }
 .page_form .p_tit {
   display: none;
@@ -9017,6 +9019,9 @@ footer .f_company {
 }
 .sign_notice .dot_list > li + li {
   margin-top: 10px;
+}
+.sign_notice + .hr_divider {
+  margin: 24px 0;
 }
 
 .tab_cont .sign_notice {

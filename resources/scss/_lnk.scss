@@ -8,7 +8,7 @@
   //padding-bottom: $btmbar-H;
   .hr_divider{
     max-width: 740px;
-    margin: 24px auto !important;
+    //margin: 24px auto !important;
     & + .inquiry_outer{
       padding-top: 0;
     }
@@ -24,6 +24,9 @@
     .dot_list{
       margin-top: 0;
       padding: 0;
+    }
+    & + .hr_divider{
+      margin: 24px 0;
     }
   }
   .p_tit {
@@ -57,6 +60,9 @@
     &> li + li{
       margin-top: 10px;
     }
+  }
+  & + .hr_divider{
+    margin: 24px 0;
   }
 }
 .tab_cont{
