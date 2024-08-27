@@ -487,16 +487,17 @@ function addInputClearBtn(){
   $(document).on('keyup', '.input_text', function(){
     addB(this);
   });
+
   $(document).on('focusout', '.search_bar input', function(){
     $(this).parents('label').find('button').removeClass('ico_close_circle').addClass('ico_search');
   });
   
   function addB(el){
+    if($(el).parents('label').find('button').length > 0){
+      return false;
+    }
     if($(el).parents('.search_bar') && $(el).parents('label').find('button').length){
       $(el).parents('label').find('button').removeClass('ico_search').addClass('ico_close_circle');
-    }
-    if($(el).parents('label').find('button').length){
-      return false
     }
     if(!$(el).parents('label').find('.ico_close_circle').length){
       $(el).parent('label').append(`<button class="ico_close_circle"></button>`)

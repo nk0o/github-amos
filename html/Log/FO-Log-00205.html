@@ -40,41 +40,45 @@
                   <input type="text" id="" class="input_text" value="" placeholder="이름을 입력해주세요">
                 </label>
               </div><!-- //.input_group -->
-              <div class="input_group">
-                <span class="input_label">휴대폰 번호</span>
-                <div class="select_box">
-                  <div class="select_box_value" data-btmsheet="btmSheet02">
-                    <span>통신사를 선택해 주세요</span>
-                  </div><!-- //.select_box_value -->
-                  <div class="select_box_list">
-                    <ul>
-                      <li><span>SKT</span></li>
-                      <li><span>KT</span></li>
-                      <li><span>LGT U</span></li>
-                      <li><span>SKT 알뜰폰</span></li>
-                      <li><span>KT 알뜰폰</span></li>
-                      <li><span>LG 알뜰폰</span></li>
-                    </ul>
-                  </div><!-- //.select_box_list -->
-                </div><!-- //.select_box -->
-                <label for="">
-                  <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
-                  <button class="btn_sm btn_border">인증요청</button>
-                </label>
-                <!-- 인증재요청 -->
-                <label for="">
-                  <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
-                  <button class="btn_sm btn_border line_red">인증재요청</button>
-                </label>
-                <!-- //인증재요청 -->
-              </div><!-- //.input_group -->
-              <div class="input_group with_time input_error">
-                <label for="">
-                  <input type="text" id="" class="input_text input_error" value="" placeholder="">
-                  <span class="time">2:35</span>
-                </label>
-                <p class="txt_alert error">인증번호 6자리를 정확하게 입력해 주세요.</p>
-              </div>
+              <!-- 20240827 수정 -->
+            <div class="input_group">
+              <span class="input_label required">휴대폰 번호</span>
+              <div class="select_box">
+                <div class="select_box_value" data-btmsheet="btmSheet02">
+                  <span>통신사를 선택해 주세요</span>
+                </div><!-- //.select_box_value -->
+                <div class="select_box_list">
+                  <ul>
+                    <li><span>SKT</span></li>
+                    <li><span>KT</span></li>
+                    <li><span>LGT U</span></li>
+                    <li><span>SKT 알뜰폰</span></li>
+                    <li><span>KT 알뜰폰</span></li>
+                    <li><span>LG 알뜰폰</span></li>
+                  </ul>
+                </div><!-- //.select_box_list -->
+              </div><!-- //.select_box -->
+              <label for="">
+                <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                <button class="btn_sm btn_border">인증요청</button>
+              </label>
+            </div><!-- //.input_group -->
+            <div class="input_group with_time">
+              <label for="">
+                <input type="text" id="" class="input_text" value="899944" placeholder="">
+                <span class="time">2:35</span>
+                <!-- <button class="btn_sm btn_border">인증완료</button> -->
+              </label>
+            </div><!-- //.input_group -->
+            <div class="input_group with_time">
+              <label for="">
+                <input type="text" id="" class="input_text input_error" value="899944" placeholder="">
+                <span class="time">2:35</span>
+                <button class="btn_sm btn_border">인증완료</button>
+              </label>
+              <p class="txt_alert error">인증번호가 다릅니다.</p>
+            </div><!-- //.input_group -->
+            <!-- // 20240827 수정 -->
             </div><!-- //.input_area -->
             <div class="btn_group">
               <button class="btn btn_lg btn_primary">다음</button>
