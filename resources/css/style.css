@@ -8118,6 +8118,9 @@ footer .f_company {
   font-weight: 600;
   line-height: 26px;
 }
+.board_detail .detail_cont {
+  margin-bottom: 40px;
+}
 .board_detail .detail_cont img {
   margin-bottom: 24px;
 }
