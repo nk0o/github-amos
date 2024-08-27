@@ -1715,16 +1715,18 @@
     }
   }
   .detail_cont {
+    padding-bottom: 40px;
     img {
       margin-bottom: 24px;
     }
     p {
+      padding: 0 4px;
       font-family: 'Arita-dotum';
       @include fontStyle($gray-900, $fs-m, $fw-m, 24px);
     }
   }
   .detail_bottom {
-    margin-top: 40px;
+    padding-bottom: 32px;
   }
 }
 
@@ -2592,8 +2594,3 @@
   }
 }
 
-.page_mypage {
-  .top_outer {
-    padding:24px 0;
-  }
-}

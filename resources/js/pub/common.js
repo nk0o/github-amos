@@ -274,7 +274,7 @@ $(document).ready(function () {
 
 /****** Select Box ******/
 function selectBoxUI(){
-  $('.select_box_value').click(function (e) {
+  $(document).on('click', '.select_box_value', function(e){
     if(isMobile && $(this)[0].hasAttribute('data-btmsheet')) {
       return false;
     }

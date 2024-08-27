@@ -5803,7 +5803,7 @@ header.fixed {
   max-width: 740px;
   margin: 0 auto;
 }
-@media (max-width: 375px) {
+@media (max-width: 1024px) {
   #container.page_form > .inner {
     padding-left: 0;
     padding-right: 0;
@@ -5814,7 +5814,6 @@ header.fixed {
   width: 100%;
   height: 8px;
   max-width: 984px;
-  margin: 0 auto !important;
   background-color: #f6f6f6;
   padding: 0 !important;
   border: 0 !important;
@@ -8119,10 +8118,14 @@ footer .f_company {
   font-weight: 600;
   line-height: 26px;
 }
+.board_detail .detail_cont {
+  padding-bottom: 40px;
+}
 .board_detail .detail_cont img {
   margin-bottom: 24px;
 }
 .board_detail .detail_cont p {
+  padding: 0 4px;
   font-family: "Arita-dotum";
   color: #444444;
   font-size: 1rem;
@@ -8130,7 +8133,7 @@ footer .f_company {
   line-height: 24px;
 }
 .board_detail .detail_bottom {
-  margin-top: 40px;
+  padding-bottom: 32px;
 }
 
 .file_wrap > div + div {
@@ -8951,10 +8954,6 @@ footer .f_company {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.page_mypage .top_outer {
-  padding: 24px 0;
 }
 
 .sticky_tab {

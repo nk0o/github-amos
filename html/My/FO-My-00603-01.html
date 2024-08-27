@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>작성완료 | 회원가입 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <div class="sign_notice">
+          <p>회원가입 요청이 완료되었습니다.</p>
+        </div><!-- //.sign_notice -->
+        <div class="info_area">
+          <div class="sign_state_wrap">
+            <dl class="sign_state userID_box bg_box_blue">
+              <dt>아이디</dt>
+              <dd>amos1234</dd>
+            </dl>
+          </div>
+        </div><!-- //.input_area -->
+        <div class="sign_guide">
+          <p><span class="user_name">홍길동</span>님 회원가입을&nbsp;신청해주셔서&nbsp;감사합니다. 
+            <br/><em>본사에서&nbsp;확인&nbsp;후, 회원가입이&nbsp;완료</em>될&nbsp;예정입니다.</p>
+        </div><!-- //.sign_guide -->
+        <div class="btn_group"><!-- //240826 btm_fixed 클래스 삭제 -->
+          <button class="btn btn_lg btn_primary">메인으로 가기</button>
+        </div><!-- //.btn_group -->
+      </div>
+    </main>
+    <!-- //#container --> 
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div><!-- //#wrap -->
+
+
+  
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("회원가입 완료")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>
