@@ -558,9 +558,10 @@ function bottomSheetUI(){
     $("#"+ $(this).data('btmsheet')).addClass('show');
     $("body").addClass("no_scroll");
   });
-  $(document).on('click touchend', '.btm_sheet_close, .btm_sheet_back', function(){
+  $(document).on('click touchend', '.btm_sheet_close, .btm_sheet_back', function(e){
     $(this).parents('.btm_sheet').removeClass('show')
     $("body").removeClass("no_scroll");
+    e.preventDefault();
   });
 }
 /* Floating UI */
@@ -801,6 +802,9 @@ function tabContPos() {
     let headeH = $('header').outerHeight();
     let tabMenuH = $('.tab_menu').outerHeight();
     $(document).on('click touchend', '.tab_list', function(){
+      if($(this).parents('.prd_detail_view').length <= 0){
+        return false;
+      }
       //아이폰 확인
       function isIphone() {
         return /iPhone/.test(navigator.userAgent);

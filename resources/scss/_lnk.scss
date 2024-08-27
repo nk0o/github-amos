@@ -5,10 +5,10 @@
   background-color: $color-white;
 }
 .page_form{
-  padding-bottom: $btmbar-H;
+  //padding-bottom: $btmbar-H;
   .hr_divider{
     max-width: 740px;
-    margin: 24px auto !important;
+    //margin: 24px auto !important;
     & + .inquiry_outer{
       padding-top: 0;
     }
@@ -24,6 +24,9 @@
     .dot_list{
       margin-top: 0;
       padding: 0;
+    }
+    & + .hr_divider{
+      margin: 24px 0;
     }
   }
   .p_tit {
@@ -57,6 +60,9 @@
     &> li + li{
       margin-top: 10px;
     }
+  }
+  & + .hr_divider{
+    margin: 24px 0;
   }
 }
 .tab_cont{
@@ -320,9 +326,9 @@
     padding-bottom: 40px;
     border-bottom: 8px solid $gray-50;
     &:last-of-type{
+      margin-bottom: 0;
       border-bottom: 0;
-      padding-bottom: 120px;
-      margin-bottom: $btmbar-H;
+      padding-bottom: 0;
     }
     &.type_list{
       border-top: 0;
@@ -330,6 +336,9 @@
   }
 }
 .point_prd_area{
+  & > .inner{
+    padding-bottom: 120px;
+  }
   .prd_list_sm.xs .prd_box .prd .info{
     display: flex;
     flex-direction: column;
@@ -353,11 +362,8 @@
       }
     }
   } 
-  .btn_group{
-    padding: 60px 20px 30px;
-  }
   .order_coupon{
-    padding-bottom: $btmbar-H;
+   // padding-bottom: $btmbar-H;
     .accord_cont > .inner {
       padding: 0 20px 44px;
     }
@@ -436,8 +442,11 @@
 .order_price{
   &_area{
     border-top: 8px solid $gray-50;
-    margin-bottom: calc($btmbar-H + 12px);
-    padding: 32px 0px 28px;
+    //margin-bottom: calc($btmbar-H + 12px);
+    padding: 32px 0px 40px;
+    .txt_notice_wrap{
+      padding-top: 28px;
+    }
   }
   .price{
     &_sum, &_by li, &_total{
@@ -1067,7 +1076,6 @@
 }
 /********** 마이페이지 메인 **********/
 .page_mypage{
-  margin-bottom: $btmbar-H;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - ($subheader-H + $btmbar-H));
@@ -1373,9 +1381,7 @@
 }
 //APP 알림함
 .app_notice_wrap{
-  padding: 20px 0;
   padding: 20px 0 40px;
-  margin-bottom: $btmbar-H;
   .tit{
     display: flex;
     align-items: center;

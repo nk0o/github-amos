@@ -33,6 +33,11 @@ header{
   }
 }
 //Layout > Inner
+#wrap{
+  &:has(.btm_bar){
+    margin-bottom: $btmbar-H;
+  }
+}
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner{
   padding: 0 20px;
   @media (min-width: $pc-point) {
@@ -54,12 +59,13 @@ header{
   height: 8px;
   max-width: 984px;
   background-color: $gray-50;
+  margin: 0 auto;
   padding: 0 !important;
-  border: 0 !important;;
+  border: 0 !important;
 }
 //FOOTER
 footer{
-  margin-bottom: $btmbar-H;
+  //margin-bottom: $btmbar-H;
   padding: 40px 0 60px;
   background-color: $gray-50;
   .accord{

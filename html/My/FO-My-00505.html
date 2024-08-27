@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>
+    <!-- //header -->
+    <main id="container" class="page_mypage page_form"> 
+      <section class="dot_list_wrap">
+        <ul class="dot_list">
+          <li>1:1문의는 24시간 신청 가능하며, 접수된 내용은 빠른 시간내 답변을 드리도록 하겠습니다.</li>
+          <li>개인정보 보호를 위하여 최근 3개월 이내의 문의내역만 확인 가능합니다.</li>
+        </ul>
+      </section>
+      <section class="hr_divider"></section>
+      <section>
+        <div class="input_group">
+          <span class="input_label required">제목</span>
+          <label for="">
+            <input type="text" id="" class="input_text" value="" placeholder="제목을 입력해주세요. (최대 20자)">
+          </label>
+        </div><!-- //.input_group -->
+        <div class="input_group">
+          <span class="input_label required">문의 내용</span>
+          <div class="input_writing_group">
+            <textarea name="" id="" placeholder="문의하실 내용을 입력해주세요."></textarea>
+            <div class="txt_count">
+              <p class="current zero">0</p>
+              <span>/</span>
+              <p class="total">1,000</p>
+            </div>
+          </div>
+        </div><!-- //.input_group -->
+        <div class="input_group input_icon_right">
+          <span class="input_label required">첨부파일</span>
+          <label for="file-01">
+            <input type="file" id="file-01" class="input_text" value="">
+            <i class="ico_clip ico_24"></i>
+          </label>
+          <ul class="dot_list">
+            <li>첨부파일은 최대 5개까지 업로드 가능합니다.</li>
+            <li>첨부파일 용량은 파일당 5MB를 초과하실 수 없습니다.</li>
+            <li>이미지(JPG, PNG, HEIC(HEIF)), PDF 파일만 업로드 가능합니다.</li>
+          </ul>
+        </div><!-- //.input_group -->
+      </section>
+      <div class="btn_group">
+        <button class="btn btn_lg btn_border">수정</button>
+        <button class="btn btn_lg btn_primary">삭제</button>
+      </div><!-- //.btn_group -->
+    </main>
+    <!-- //#container -->
+  </div>
+
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("디자이너 관리")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

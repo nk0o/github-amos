@@ -2555,8 +2555,8 @@ button:disabled *[class*=ico_]::before {
   max-width: 1024px;
   width: 100%;
   gap: 5px;
-  padding: 0 20px 0;
-  margin: 60px auto 30px;
+  padding: 0 20px 30px;
+  margin: 60px auto 0;
 }
 .btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs, .btn_group .btn_xxs {
   flex: 1;
@@ -5241,6 +5241,7 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 .modal_container .modal_footer .btn_group {
   padding: 0;
+  margin: 0;
 }
 .modal_content {
   width: calc(100% - 40px);
@@ -5802,6 +5803,10 @@ header.fixed {
   top: 0;
 }
 
+#wrap:has(.btm_bar) {
+  margin-bottom: 90px;
+}
+
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
   padding: 0 20px;
 }
@@ -5829,12 +5834,12 @@ header.fixed {
   height: 8px;
   max-width: 984px;
   background-color: #f6f6f6;
+  margin: 0 auto;
   padding: 0 !important;
   border: 0 !important;
 }
 
 footer {
-  margin-bottom: 90px;
   padding: 40px 0 60px;
   background-color: #f6f6f6;
 }
@@ -6409,9 +6414,6 @@ footer .f_company {
   color: #222222;
   line-height: 1.714;
 }
-.cate_brand {
-  padding: 0 0 90px 0;
-}
 .cate_brand li {
   background-image: url("../images/contents/img_prd_list_lg_01.png");
   background-position: center;
@@ -6488,7 +6490,6 @@ footer .f_company {
 
 .prd_cont {
   position: relative;
-  margin-bottom: 90px;
   padding-bottom: 120px;
 }
 .prd_cont .prd_list_top {
@@ -6937,12 +6938,11 @@ footer .f_company {
 
 @media (min-width: 1024px) {
   .prd_cont {
-    margin-bottom: 90px;
     padding-bottom: 140px;
   }
   .prd_cont.type_list {
     max-width: 1024px;
-    margin: 0 auto 90px;
+    margin: 0 auto 0;
   }
   .prd_cart_btn .btn_bottom {
     width: 260px;
@@ -7003,7 +7003,7 @@ footer .f_company {
 .page_form .login_first {
   max-width: 335px;
   margin: 0 auto;
-  padding: 50px 0 0 0;
+  padding: 50px 0 30px 0;
 }
 .page_form .login_first .simbol {
   display: flex;
@@ -7671,7 +7671,7 @@ footer .f_company {
 }
 
 .exchange_cont {
-  padding-top: 24px;
+  padding: 24px 0 40px;
 }
 .exchange_cont .accord_list {
   margin-top: 20px;
@@ -7731,7 +7731,7 @@ footer .f_company {
 }
 
 .order_view {
-  padding: 20px 0 0;
+  padding: 20px 0 20px;
 }
 .order_view .accord_head {
   border-bottom: 1px solid #eee;
@@ -8170,6 +8170,9 @@ footer .f_company {
   line-height: 19px;
 }
 
+.edu_regist {
+  padding-bottom: 40px;
+}
 .edu_regist .accord_list {
   margin: 0 -20px;
 }
@@ -8300,9 +8303,6 @@ footer .f_company {
   margin-top: 8px;
 }
 
-.page_edu {
-  margin-bottom: 133px;
-}
 .page_edu .tab_menu.round_tab > ul {
   margin: 0 -20px;
 }
@@ -8332,9 +8332,6 @@ footer .f_company {
 }
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
-}
-.page_edu .tab_cont .btn_group {
-  padding: 60px 0 30px;
 }
 
 .edu_detail_top {
@@ -8786,6 +8783,9 @@ footer .f_company {
 .dot_list_wrap {
   padding: 24px 0;
 }
+.dot_list_wrap .dot_list {
+  margin-top: 0 !important;
+}
 
 .page_exchange .col_box {
   display: flex;
@@ -8823,10 +8823,6 @@ footer .f_company {
   font-weight: 400;
   line-height: 16px;
   white-space: normal;
-}
-
-#wrap:has(.page_exchange + .btm_bar.type_btn) #container {
-  padding-bottom: 130px;
 }
 
 .amount_box_detail > ul > li .top {
@@ -9155,12 +9151,8 @@ footer .f_company {
   background-color: #ffffff;
 }
 
-.page_form {
-  padding-bottom: 90px;
-}
 .page_form .hr_divider {
   max-width: 740px;
-  margin: 24px auto !important;
 }
 .page_form .hr_divider + .inquiry_outer {
   padding-top: 0;
@@ -9177,6 +9169,9 @@ footer .f_company {
 .page_form .input_group .dot_list {
   margin-top: 0;
   padding: 0;
+}
+.page_form .input_group + .hr_divider {
+  margin: 24px 0;
 }
 .page_form .p_tit {
   display: none;
@@ -9216,6 +9211,9 @@ footer .f_company {
 }
 .sign_notice .dot_list > li + li {
   margin-top: 10px;
+}
+.sign_notice + .hr_divider {
+  margin: 24px 0;
 }
 
 .tab_cont .sign_notice {
@@ -9517,14 +9515,17 @@ footer .f_company {
   border-bottom: 8px solid #f6f6f6;
 }
 .page_point .prd_cont:last-of-type {
+  margin-bottom: 0;
   border-bottom: 0;
-  padding-bottom: 120px;
-  margin-bottom: 90px;
+  padding-bottom: 0;
 }
 .page_point .prd_cont.type_list {
   border-top: 0;
 }
 
+.point_prd_area > .inner {
+  padding-bottom: 120px;
+}
 .point_prd_area .prd_list_sm.xs .prd_box .prd .info, .point_prd_area .xs.gift_list .prd_box .prd .info {
   display: flex;
   flex-direction: column;
@@ -9544,12 +9545,6 @@ footer .f_company {
 .page_order .tab_menu li button, .page_order .tab_menu li a {
   gap: 6px;
   justify-content: center;
-}
-.page_order .btn_group {
-  padding: 60px 20px 30px;
-}
-.page_order .order_coupon {
-  padding-bottom: 90px;
 }
 .page_order .order_coupon .accord_cont > .inner {
   padding: 0 20px 44px;
@@ -9640,8 +9635,10 @@ footer .f_company {
 
 .order_price_area {
   border-top: 8px solid #f6f6f6;
-  margin-bottom: 102px;
-  padding: 32px 0px 28px;
+  padding: 32px 0px 40px;
+}
+.order_price_area .txt_notice_wrap {
+  padding-top: 28px;
 }
 .order_price .price_sum, .order_price .price_by li, .order_price .price_total {
   display: -webkit-box;
@@ -10398,7 +10395,6 @@ footer .f_company {
 
 /********** 마이페이지 메인 **********/
 .page_mypage {
-  margin-bottom: 90px;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 151px);
@@ -10747,9 +10743,7 @@ footer .f_company {
 }
 
 .app_notice_wrap {
-  padding: 20px 0;
   padding: 20px 0 40px;
-  margin-bottom: 90px;
 }
 .app_notice_wrap .tit {
   display: flex;

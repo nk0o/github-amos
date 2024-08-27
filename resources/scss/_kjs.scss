@@ -14,8 +14,8 @@
 
 .prd_cont {
   position: relative;
-  margin-bottom: $btmbar-H;
   padding-bottom: 120px;
+  //margin-bottom: $btmbar-H;
   // &:has(.cate_brand.accord_list) {
   //   padding-bottom: 0
   // }
@@ -464,11 +464,11 @@
 // PC
 @media (min-width: 1024px) {
   .prd_cont {
-    margin-bottom: $btmbar-H;
+    //margin-bottom: $btmbar-H;
     padding-bottom: 140px;
     &.type_list {
       max-width: 1024px;
-      margin: 0 auto $btmbar-H;
+      margin: 0 auto 0;
     }
   }
   .prd_cart_btn {
@@ -546,7 +546,7 @@
   .login_first {
     max-width:  335px;
     margin: 0 auto;
-    padding: 50px 0 0 0;
+    padding: 50px 0 30px 0;
     .simbol {
       display: flex;
       justify-content: center;
@@ -1252,7 +1252,7 @@
 } 
 
 .exchange_cont {
-  padding-top: 24px;
+  padding: 24px 0 40px;
   .accord_list {
     margin-top: 20px;
     >li {
@@ -1322,7 +1322,7 @@
 }
 
 .order_view {
-  padding: 20px 0 0;
+  padding: 20px 0 20px;
   .accord_head {
     border-bottom: 1px solid #eee;
     &:last-child {
@@ -1750,6 +1750,7 @@
 }
 
 .edu_regist {
+  padding-bottom: 40px;
   .accord_list {
     margin: 0 -20px;
     .accord_head {
@@ -1865,7 +1866,7 @@
 
 
 .page_edu {
-  margin-bottom: 133px;
+  //margin-bottom: 133px;
   .tab_menu {
     &.round_tab {
       >ul {
@@ -1898,11 +1899,11 @@
       }
     }
   }
-  .tab_cont {
-    .btn_group {
-      padding: 60px 0 30px;
-    }
-  }
+  // .tab_cont {
+  //   .btn_group {
+  //     padding: 60px 0 30px;
+  //   }
+  // }
 }
 
 .edu_detail_top {
@@ -2386,6 +2387,9 @@
   }
   &_wrap{
     padding: 24px 0;
+    .dot_list{
+      margin-top: 0 !important;
+    }
   }
 }
 
@@ -2431,13 +2435,6 @@
   }
 }
 
-#wrap {
-  &:has(.page_exchange + .btm_bar.type_btn) {
-    #container {
-      padding-bottom: 130px;
-    }
-  }
-}
 
 .amount_box_detail {
   >ul {
@@ -2767,3 +2764,5 @@
     }
   }
 }
+
+
