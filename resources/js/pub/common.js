@@ -30,6 +30,7 @@ $(document).ready(function () {
   floatingSideUI();
   catecoryUI();
   prdSlider();
+  tvSlider();
   headerScroll();
   prdImgFix();
   tabContPos();
@@ -927,4 +928,55 @@ function orderChangeHistoryUI(){
     $(el).prop('checked') == false ? $('.change_prev').addClass('hidden') : $('.change_prev').removeClass('hidden');
     $(el).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
   }
+}
+
+// 아모스 tv 메인 슬라이드
+function tvSlider(){  
+  $(".conts_box_list_wrap.swiper").each(function (i, v) {
+    let sliderName = 'slider' + i;
+    $(v).attr('id', sliderName);
+    let sliderId = '#' + sliderName;  
+    
+    let tvSwiper = new Swiper(sliderId, {
+      slidesPerView: 1.1,
+      spaceBetween: 7.5,
+      observer: true,
+      observeParents: true,
+      // loop: true,
+      breakpoints: {
+        1024: {
+          slidesPerView: 1,
+        },
+      },
+      on: {
+        slideChange: function () {
+          // 모든 슬라이드의 썸네일 표시 및 동영상 정지
+          $('.conts_box_list_wrap .swiper-slide').each(function () {
+            let video = $(this).find('video').get(0);
+            let thumbnail = $(this).find('.thumbnail');
+            let videoBox = $(this).find('.video_box');
+
+            if (video) {
+                video.pause();
+                video.currentTime = 0; // 동영상을 처음으로 돌림
+            }
+            thumbnail.show(); // 썸네일 표시
+            videoBox.hide(); // 동영상 숨기기
+          });
+
+          // 현재 활성화된 슬라이드의 썸네일 숨기고 동영상 재생
+          let activeSlide = $(this.slides[this.activeIndex]);
+          let activeThumbnail = activeSlide.find('.thumbnail');
+          let activeVideoBox = activeSlide.find('.video_box');
+          let activeVideo = activeSlide.find('video').get(0);
+
+          activeThumbnail.hide(); // 썸네일 숨기기
+          activeVideoBox.show(); // 동영상 표시
+          if (activeVideo) {
+            activeVideo.play(); // 동영상 재생
+          }
+        }
+      }
+    });
+  });
 }
