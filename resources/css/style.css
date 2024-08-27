@@ -2540,9 +2540,9 @@ button:disabled *[class*=ico_]::before {
   flex-wrap: wrap;
   max-width: 1024px;
   width: 100%;
-  margin: 0 auto;
   gap: 5px;
-  padding: 60px 20px 30px;
+  padding: 0 20px 0;
+  margin: 60px auto 30px;
 }
 .btn_group button, .btn_group .btn, .btn_group .btn_floating, .btn_group .btn_bottom, .btn_group .btn_icon, .btn_group .btn_lg, .btn_group .btn_md, .btn_group .btn_sm, .btn_group .btn_xs, .btn_group .btn_xxs {
   flex: 1;
@@ -8969,10 +8969,6 @@ footer .f_company {
 }
 .page_form .hr_divider + .inquiry_outer {
   padding-top: 0;
-}
-.page_form .btn_group {
-  padding: 0 20px 0;
-  margin: 60px 0 30px;
 }
 .page_form .info_area {
   padding: 50px 0px 0;
