@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>최근구매상품 | 마이페이지 | 아모레뉴플렛폼</title>
+  <title>찜한 상품 | 마이페이지 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -82,8 +82,8 @@
                     </div>
                   </div>
                   <div class="bottom">
-                    <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                    <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+                    <button class="btn_icon btn_cart"><i class="ico_btn_cart ico_16"></i></button><!-- interaction 클래스: btn_cart -->
+                    <button class="btn_icon with_txt"><i class="ico_delete ico_16"></i>삭제하기</button>
                   </div>
                 </div><!-- //.prd_box -->
                 <!-- //상품 -->
@@ -104,8 +104,8 @@
                     </div>
                   </div>
                   <div class="bottom">
-                    <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                    <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+                    <button class="btn_icon btn_cart"><i class="ico_btn_cart ico_16"></i></button>
+                    <button class="btn_icon with_txt"><i class="ico_delete ico_16"></i>삭제하기</button>
                   </div>
                 </div><!-- //.prd_box -->
                 <div class="prd_box">
@@ -128,8 +128,8 @@
                     </div>
                   </div>
                   <div class="bottom">
-                    <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                    <a href="#" class="btn_icon"><i class="ico_btn_cart ico_16"></i></a>
+                    <button class="btn_icon btn_cart"><i class="ico_btn_cart ico_16"></i></button>
+                    <button class="btn_icon with_txt"><i class="ico_delete ico_16"></i>삭제하기</button>
                   </div>
                 </div><!-- //.prd_box -->
               </div><!-- //.prd_list_sm -->
@@ -152,7 +152,7 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("최근 구매한 상품")
+      $(".appbar_tit").html("찜한 상품")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

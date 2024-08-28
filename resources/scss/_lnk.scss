@@ -53,6 +53,9 @@
     & + span{
       margin-top: 8px;
     }
+    &.user_name{
+      margin-top: 0;
+    }
   }
   .dot_list{
     margin-top: 16px;
@@ -722,6 +725,15 @@
       &:first-child{
         border: 0;
       }
+      &.no_fold{
+        border-top: 1px solid $gray-100;
+        .accord_tit{
+          cursor: default;
+        }
+        .accord_tit::before{
+          display: none ;
+        }
+      }
     }
     &_head{
       &.on{
@@ -781,7 +793,7 @@
           margin-top: 10px;
         }
       }
-    }
+    }   
   }
   .cart_check_prd{
     border: 0;
@@ -852,6 +864,10 @@
     & + .info_read {
       margin-top: 12px;
     }
+  }
+  .btn_group{
+    margin: 4px 0px 24px;
+    padding: 0 20px 0;
   }
   @media (min-width: $pc-point) {
     width: 100%;
@@ -953,8 +969,8 @@
     }
     .btn_group {
       max-width: 335px;
-      margin: 0 auto;
-      padding: 60px 0 0;
+      margin: 60px auto 0;
+      padding: 0 0 24px 0;
     }
     .input_group{
       display: grid;
@@ -987,6 +1003,13 @@
   .info_read{
     border-bottom-width: 1px;
   }
+  .order_accord {
+    .accord_cont {
+      .btn_group{
+        margin:20px auto 0px;
+      }
+    }
+  }
 }
 
 /* 정기교육 만족도 조사 */
@@ -1013,7 +1036,8 @@
     }
   }
   .btn_group{
-    padding-top: 32px;
+    margin-top: 32px;
+    padding: 0;
   }
 }
 .inquiry_box.type_page{
@@ -1518,6 +1542,7 @@
 .user_modify_box{
   .tit{
     padding:24px 0 20px;
+    margin: 0;
     @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
   }
   .refer_mark{
