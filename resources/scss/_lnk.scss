@@ -36,7 +36,7 @@
     margin-top: 40px;
     padding: 0 20px;
   }
-  .order_accord + .order_accord.no_fold{
+  .order_accord + .order_accord{
     border-top:8px solid $gray-50;
   }
 }
@@ -753,7 +753,8 @@
         }
       }
       .btn_group{
-        padding: 20px 0px 0px;
+        margin: 20px 0px 0px;
+        padding: 0;
       }
       .inquiry_outer{
         padding: 0;

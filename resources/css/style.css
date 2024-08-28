@@ -9180,7 +9180,7 @@ footer .f_company {
   margin-top: 40px;
   padding: 0 20px;
 }
-.page_form .order_accord + .order_accord.no_fold {
+.page_form .order_accord + .order_accord {
   border-top: 8px solid #f6f6f6;
 }
 
@@ -10014,7 +10014,8 @@ footer .f_company {
   padding-top: 0;
 }
 .order_accord .accord_cont .btn_group {
-  padding: 20px 0px 0px;
+  margin: 20px 0px 0px;
+  padding: 0;
 }
 .order_accord .accord_cont .inquiry_outer {
   padding: 0;

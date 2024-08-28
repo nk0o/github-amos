@@ -76,7 +76,12 @@ $(document).ready(function () {
   /****** Tab Menu ******/
   $(document).on('click touchend', '.tab_menu .tab_list', function(){ tabMenu(this) });
   function tabMenu(el) {
-    var tab = $(el).parents('.tab_menu');
+    var tab;
+    if($(el).parents('.tab_center_wrap').length > 0){
+      tab= $(el).parents('.tab_center_wrap');
+    }else{
+      tab= $(el).parents('.tab_menu');
+    }
     var activeTab = $(el).attr('data-tab');
     $(el).siblings('li').removeClass('current');
     $(el).addClass('current');
