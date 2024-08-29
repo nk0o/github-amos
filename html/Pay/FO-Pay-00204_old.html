@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>거래원장 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_exchange">
+      <section>
+        <div class="inner">
+          <div class="top_exchange_wrap">
+            <div class="exchange_box">
+              <dl>
+                <dt>당월 매입 금액</dt>
+                <dd><em>2,000,000</em><span>원</span></dd>
+              </dl>
+            </div>
+            <ul class="txt_notice_list">
+              <li class="txt_notice">신용카드 결제내역은 <a href="#">결제내역</a> 페이지에서 즉시 확인 가능합니다.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hr_divider"></section>
+
+      <section>
+        <div class="inner">
+          <div class="order_view">
+            <div class="order_info_top">
+              <div class="date">2024.06.24</div>
+            </div>
+            <ul class="order_info_list">
+              <li>
+                <em>아이디 (성명)</em>
+                <div>Honggil (홍길동)</div>
+              </li>
+              <li>
+                <em>결제금액</em>
+                <div class="price">
+                  <em>1,000,000</em><span>원</span>
+                </div>
+              </li>
+              <li>
+                <em>수금후 미수액</em>
+                <div class="price">
+                  <em>500,000</em><span>원</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="info_accord">
+              <ul class="accord_list">
+                <li class="on accord_head on">
+                  <p class="accord_tit">결제 정보</p>
+                  <div class="accord_cont" style="display: block;">
+                    <ul class="order_info_list">
+                      <li>
+                        <em>결제일시</em>
+                        <div>2024.06.24 15:34:43</div>
+                      </li>
+                      <li>
+                        <em>플랫폼</em>
+                        <div>(뉴플랫폼)</div>
+                      </li>
+                      <li>
+                        <em>결제수단</em>
+                        <div>신용카드</div>
+                      </li>
+                      <li>
+                        <em>카드명</em>
+                        <div>현대카드</div>
+                      </li>
+                      <li>
+                        <em>일시불여부</em>
+                        <div>Y</div>
+                      </li>
+                      <li>
+                        <em>승인번호</em>
+                        <div>123456789 (TID : 987654321)</div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn_group">
+        <a href="#" class="btn_lg btn_primary">목록</a>
+      </div>
+    </main>
+    <!-- //#container -->
+  </div>
+  
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("결제내역")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>
