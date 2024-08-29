@@ -41,6 +41,7 @@ var include = {
     document.write(`
       <div class="appbar">
         <div class="inner">
+          <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
           <div class="btn_toggle txt_in_toggle">
             <input type="checkbox"/>
             <label>

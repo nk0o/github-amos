@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>마이페이지 | 아모레뉴플렛폼</title>
+  <title>휴대전화번호변경 | 마이페이지 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -21,6 +21,7 @@
         <section class="user_modify_box">
           <div class="inner">
             <div class="tit">인증 받으실 휴대전화 번호를 입력해 주세요.</div>
+            <!-- 20240827 수정 -->
             <div class="input_group">
               <span class="input_label required">휴대폰 번호</span>
               <div class="select_box">
@@ -38,26 +39,34 @@
                   </ul>
                 </div><!-- //.select_box_list -->
               </div><!-- //.select_box -->
-              <!-- 인증재요청 -->
               <label for="">
-                <input type="text" id="" class="input_text" value="01012345678" placeholder="휴대폰번호">
-                <button class="btn_sm btn_border line_red">인증재요청</button>
+                <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                <button class="btn_sm btn_border">인증요청</button>
               </label>
-              <!-- //인증재요청 -->
             </div><!-- //.input_group -->
             <div class="input_group with_time">
               <label for="">
-                <input type="text" id="" class="input_text" value="1234" placeholder="휴대폰번호">
+                <input type="text" id="" class="input_text" value="899944" placeholder="">
                 <span class="time">2:35</span>
+                <!-- <button class="btn_sm btn_border">인증완료</button> -->
               </label>
             </div><!-- //.input_group -->
+            <div class="input_group with_time">
+              <label for="">
+                <input type="text" id="" class="input_text input_error" value="899944" placeholder="">
+                <span class="time">2:35</span>
+                <button class="btn_sm btn_border">인증완료</button>
+              </label>
+              <p class="txt_alert error">인증번호가 다릅니다.</p>
+            </div><!-- //.input_group -->
+            <!-- // 20240827 수정 -->
             <p class="txt_alert refer_mark">인증 완료 후 기본정보를 저장하시려면 인증 완료 버튼을 반드시 눌러주시기 바랍니다.</p>
           </div><!-- //.inner -->
         </section>
         <div class="btn_group btm_fixed">
           <button class="btn btn_lg btn_primary">인증 완료</button>
-        </div>
-      </div>
+        </div><!-- //.btn_group -->
+      </div><!-- //.inner -->
     </main>
     <!-- //#container --> 
   </div><!-- //#wrap.page_form -->
@@ -98,7 +107,7 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("회원정보 수정")
+      $(".appbar_tit").html("휴대전화 번호 변경")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

@@ -7026,7 +7026,8 @@ footer .f_company {
   margin-top: 16px;
 }
 .page_form .login_first .btn_group {
-  padding: 16px 0 0;
+  padding: 0;
+  margin: 16px 0 0;
 }
 .page_form .login_first .list_btn_wrap {
   margin-top: 24px;
@@ -7789,9 +7790,6 @@ footer .f_company {
   padding-bottom: 70px;
 }
 
-.page_exchange .btn_group {
-  padding-bottom: 30px;
-}
 .page_exchange .accord_list_tit {
   display: block;
   font-size: 16px;
@@ -8595,12 +8593,25 @@ footer .f_company {
   align-items: center;
   flex-direction: column;
   padding-bottom: 40px;
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .cupon_list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+  }
 }
 
 .cupon_box {
   position: relative;
-  max-width: 335px;
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 480px;
+  min-height: 208px;
   overflow: hidden;
 }
 .cupon_box::before {
@@ -8643,9 +8654,10 @@ footer .f_company {
   color: #666;
 }
 .cupon_box .cont {
-  padding: 22px 28px 37px;
+  padding: 22px 28px 8px;
   border-radius: 16px 16px 0 0;
   border: 1px solid #E2E2E2;
+  flex: 1;
 }
 .cupon_box .cont .badge {
   margin-bottom: 8px;
@@ -8693,6 +8705,13 @@ footer .f_company {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
+}
+@media (min-width: 1024px) {
+  .cupon_box {
+    margin-top: 0 !important;
+    flex: 0 1 calc(50% - 8px);
+    max-width: none;
+  }
 }
 
 .history_search {
@@ -8949,11 +8968,13 @@ footer .f_company {
   height: 100px;
   overflow: hidden;
   border-radius: 1px;
+  cursor: pointer;
 }
 .designer_list_wrap .designer_list > li .img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: top;
 }
 .designer_list_wrap .designer_list > li .info {
   flex-grow: 1;
@@ -8973,7 +8994,8 @@ footer .f_company {
   line-height: 24px;
 }
 .designer_list_wrap .designer_list > li .info .btn_group {
-  padding: 12px 0 0 0;
+  margin: 12px 0 0 0;
+  padding: 0;
 }
 
 .modal_container .designer_img_view {
@@ -9292,7 +9314,7 @@ footer .f_company {
   margin-top: 40px;
   padding: 0 20px;
 }
-.page_form .order_accord + .order_accord.no_fold {
+.page_form .order_accord + .order_accord {
   border-top: 8px solid #f6f6f6;
 }
 
@@ -9316,6 +9338,9 @@ footer .f_company {
 }
 .sign_notice span + span {
   margin-top: 8px;
+}
+.sign_notice span.user_name {
+  margin-top: 0;
 }
 .sign_notice .dot_list {
   margin-top: 16px;
@@ -10091,6 +10116,15 @@ footer .f_company {
 .order_accord .accord_list:first-child {
   border: 0;
 }
+.order_accord .accord_list.no_fold {
+  border-top: 1px solid #eeeeee;
+}
+.order_accord .accord_list.no_fold .accord_tit {
+  cursor: default;
+}
+.order_accord .accord_list.no_fold .accord_tit::before {
+  display: none;
+}
 .order_accord .accord_head.on .prd_summary {
   display: none;
 }
@@ -10126,7 +10160,8 @@ footer .f_company {
   padding-top: 0;
 }
 .order_accord .accord_cont .btn_group {
-  padding: 20px 0px 0px;
+  margin: 20px 0px 0px;
+  padding: 0;
 }
 .order_accord .accord_cont .inquiry_outer {
   padding: 0;
@@ -10242,6 +10277,10 @@ footer .f_company {
 .order_accord .input_radio_wrap + .info_read {
   margin-top: 12px;
 }
+.order_accord .btn_group {
+  margin: 4px 0px 24px;
+  padding: 0 20px 0;
+}
 @media (min-width: 1024px) {
   .order_accord {
     width: 100%;
@@ -10355,8 +10394,8 @@ footer .f_company {
   }
   .page_form .btn_group {
     max-width: 335px;
-    margin: 0 auto;
-    padding: 60px 0 0;
+    margin: 60px auto 0;
+    padding: 0 0 24px 0;
   }
   .page_form .input_group {
     display: grid;
@@ -10386,6 +10425,9 @@ footer .f_company {
   }
   .info_read {
     border-bottom-width: 1px;
+  }
+  .order_accord .accord_cont .btn_group {
+    margin: 20px auto 0px;
   }
 }
 /* 정기교육 만족도 조사 */
@@ -10420,7 +10462,8 @@ footer .f_company {
   line-height: 1.5;
 }
 .survey_intro .btn_group {
-  padding-top: 32px;
+  margin-top: 32px;
+  padding: 0;
 }
 
 .inquiry_box.type_page {
@@ -11018,6 +11061,7 @@ footer .f_company {
 
 .user_modify_box .tit {
   padding: 24px 0 20px;
+  margin: 0;
   color: #222222;
   font-size: 1rem;
   font-weight: 700;

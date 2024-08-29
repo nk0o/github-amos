@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>마이페이지 | 아모레뉴플렛폼</title>
+  <title>살롱정보수정 | 마이페이지 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -26,13 +26,13 @@
               <div class="accord_cont">
                 <div class="inner">
                   <div class="input_group">
-                    <span class="input_label">이름</span>
+                    <span class="input_label required">이름</span>
                     <label for="">
                       <input type="text" id="" class="input_text" value="김모스" placeholder="이름" disabled>
                     </label>
                   </div><!-- //.input_group -->
                   <div class="input_group">
-                    <span class="input_label">휴대폰 번호</span>
+                    <span class="input_label required">휴대폰 번호</span>
                     <div class="select_box disabled">
                       <div class="select_box_value" data-btmsheet="btmSheet02">
                         <span>통신사를 선택해 주세요</span>
@@ -124,50 +124,18 @@
           <!-- //살롱 정보 -->
         </section>
         <div class="btn_group">
-          <button class="btn btn_lg btn_border">다음</button>
+          <button class="btn btn_lg btn_primary">다음</button>
         </div><!-- //.btn_group -->
       </div>
     </main>
     <!-- //#container --> 
   </div><!-- //#wrap.page_form -->
 
-<!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
-    <div class="btm_sheet_back"></div>
-    <div class="inner">
-      <div class="btm_sheet_head">
-        <p class="tit">유입경로</p>
-        <button type="button" class="btm_sheet_close ico_close_20"></button>
-      </div><!-- //.btm_sheet_head -->
-      <div class="btm_sheet_cont check_list">
-        <ul class="input_check_list">
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
-              <label for="radio-4-1">뉴플랫폼</label>
-            </div>
-          </li>
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
-              <label for="radio-4-2">CONNECT</label>
-            </div>
-          </li>
-        </ul>
-      </div><!-- //.btm_sheet_cont -->
-    </div><!-- //.inner -->
-  </div><!-- //.btm_sheet -->
-<!-- //Bottom Sheet -->
-
-
-  
-
-
     
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("회원정보 수정")
+      $(".appbar_tit").html("살롱정보 수정")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

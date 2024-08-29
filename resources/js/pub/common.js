@@ -75,13 +75,15 @@ $(document).ready(function () {
 
   /****** Tab Menu ******/
   $(document).on('click touchend', '.tab_menu .tab_list', function(){ tabMenu(this) });
+
   function tabMenu(el) {
-    var tab = $(el).parents('.tab_menu');
+    var tab= $(el).parents('.tab_menu');
+
     var activeTab = $(el).attr('data-tab');
     $(el).siblings('li').removeClass('current');
     $(el).addClass('current');
-    tab.next('.tab_cont').find('.tab_cont_item').removeClass("current");
-    tab.next('.tab_cont').find('#' + activeTab).addClass("current");
+    $('#' + activeTab).siblings('.tab_cont_item').removeClass("current");
+    $('#' + activeTab).addClass("current");
 
     if (tab.hasClass("line_tab")) {
       //클릭시 라인이동
@@ -488,16 +490,17 @@ function addInputClearBtn(){
   $(document).on('keyup', '.input_text', function(){
     addB(this);
   });
+
   $(document).on('focusout', '.search_bar input', function(){
     $(this).parents('label').find('button').removeClass('ico_close_circle').addClass('ico_search');
   });
   
   function addB(el){
+    if($(el).parents('label').find('button').length > 0){
+      return false;
+    }
     if($(el).parents('.search_bar') && $(el).parents('label').find('button').length){
       $(el).parents('label').find('button').removeClass('ico_search').addClass('ico_close_circle');
-    }
-    if($(el).parents('label').find('button').length){
-      return false
     }
     if(!$(el).parents('label').find('.ico_close_circle').length){
       $(el).parent('label').append(`<button class="ico_close_circle"></button>`)
@@ -771,6 +774,12 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
 //카트 담기
 function putInCart() {
   $(document).on('click touchend', '.prd_cart_btn', function(){
+    putInCartAction()
+  })
+  $(document).on('click touchend', '.btn_cart', function(){
+      putInCartAction()
+  })
+  function putInCartAction(){
     if($('.prd_put_cart').length == 0) {
       $('.appbar > .inner').append('<div class="prd_put_cart"><div class="aniPut"> <div class="ani_img"><i class="ico_cart_float ico_24"></i></div></div><div class="put_text"><p>나의 장바구니에 담았습니다</p></div></div>')
       $('.prd_put_cart').addClass('active');
@@ -778,7 +787,7 @@ function putInCart() {
         $('.prd_put_cart').removeClass('active').remove();
       },4500)
     }
-  })
+  }
 }
 
 function prdImgFix() {
