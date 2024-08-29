@@ -72,12 +72,39 @@
     }
   }
   &_footer{
-    padding:20px 20px 0;
+    padding:20px 20px 0;    
     .btn_group{
+      margin: 0;
       padding: 0;
+    }
+    .color_txt{
+      color: #FFE7A9;
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+      margin-right: 4px;
+      em{
+        @include fontStyle(inherit, $fs-m, $fw-m, normal);
+      }
     }
   }
   &_cont{
+    max-height: 53.94dvh;
+    overflow-y:auto;
+    .tab_center_wrap{
+      position: relative;
+      .tab_menu{
+        z-index: 1;
+        position: sticky;
+        top: -1px;
+        background-color: $color-white;
+      }
+      .tab_cont_item{
+        .input_check_wrap.without_box .input_check:checked + label{
+          background-color: transparent;
+        }
+      }
+    }
     .tit{
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3333)
     }
@@ -98,6 +125,25 @@
     .input_group.is_date{
       flex: 0 0 100%;
       margin-top: 4px;
+    }
+  }
+  .filter_wrap{
+    background-color: $gray-50;
+    .round_tab{
+      padding: 12px 0;
+      .tab_list.current > button,
+      .tab_list.current > a
+      .tab_list > button,
+      .tab_list > a{
+        cursor: default;
+        height: 32px;
+        padding: 0 8px 0 12px;
+        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
+        font-family: $font-aritadt;
+      }
+    }
+    .btn_delete{
+      cursor: pointer;
     }
   }
 }

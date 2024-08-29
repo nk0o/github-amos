@@ -307,6 +307,12 @@ button {
       color: $gray-600;
     }
   }
+  &_txt{
+    display: inline-flex;
+    align-items: center;
+    margin-left: auto;
+    @include fontStyle($gray-600, $fs-xs, $fw-m, 1.2307);
+  }
   &_txt_detail{
     display: inline-flex;
     align-items: center;
@@ -326,6 +332,15 @@ button {
   }
   &_reset{
     flex: 0 1 30.75% !important;
+  }
+  &_tag{
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    @include fontStyle($gray-950, $fs-s, $fw-m, 1.2143);
+    background-color: $gray-50;
+    border:1px solid $gray-50;
+    border-radius: 9999px;
   }
 }
 .spinner{

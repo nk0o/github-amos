@@ -81,8 +81,8 @@
     @include fontStyle($color-white, 11px, $fw-b, 1);
   }
   &_dot {
-    width: 10px;
-    height: 10px;
+    width: 4px;
+    height: 4px;
     border-radius: 100%;
   }
   &_history{
@@ -125,11 +125,12 @@
 button > .badge {
   margin-left: 8px;
 }
+a > .badge_dot,
 button > .badge_dot,
 i > .badge_dot {
   position: absolute;
-  top: -5px;
-  right: 0; 
+  top: 8px;
+  right: -2px; 
   transform: translate(50%, 50%);
 }
 button > .badge_round,
