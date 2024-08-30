@@ -159,6 +159,12 @@
 }
 /* Commerce */
 .ico {
+  &_filter {
+    &::before {
+      @include iconImgPath("ico_filter.svg");
+      background-color: $gray-600 !important;
+    }
+  }
   &_buy {
     &::before {
       @include iconImgPath("ico_buy.svg");
@@ -414,6 +420,7 @@
       &_sm{
         &::before {
           @include iconImgPath("ico_close_20_sm.svg");
+          background-color: $gray-400 !important;
         }
       }
     }

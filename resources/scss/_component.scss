@@ -54,6 +54,15 @@
 /*** Color ***/
 //Background Color
 .bg {
+  &_white {
+    background-color: $color-white !important;
+  }
+  &_box{
+    background-color: $gray-50 !important;
+  }
+  &_box_blue{ 
+    background-color: $color-blue-tertiary !important;
+  }
   &_primary {
     background-color: $color-primary !important;
   }
@@ -61,8 +70,17 @@
     background-color: $gray-700 !important;
   }
   &_green {
-    background-color: #EEFFF2 !important;
-    color: #01BE2B !important;
+    background-color: $color-green-secondary !important;
+    color: $color-green !important;
+  }
+  &_orange {
+    background-color: $color-orange-secondary !important;
+    color: $color-orange !important;
+  }
+  &_success,
+  &_blue {
+    background-color: $color-blue-secondary !important;
+    color: $color-blue !important;
   }
   &_red,
   &_danger {
@@ -78,19 +96,14 @@
   &_light {
     background-color: $gray-50 !important;
   }
-  &_orange {
-    background-color: #FFF5E9 !important;
-    color: #F18200 !important;
-  }
   &_olive {
     background-color: $color-olive !important;
   }
   &_teal {
     background-color: $color-teal !important;
   }
-  &_success,
-  &_blue {
-    background-color: $color-blue !important;
+  &_mint {
+    background-color: $color-mint !important;
   }
   &_violet {
     background-color: $color-violet !important;
@@ -111,26 +124,27 @@
   &_black {
     background-color: $gray-950 !important;
   }
-  &_white {
-    background-color: $color-white !important;
-  }
-  &_box{
-    background-color: $gray-50 !important;
-  }
-  &_box_blue{ 
-    background-color: $color-blue-tertiary !important;
-  }
 }
 //Border Line Color
 .line {
   &_primary {
     border: 1px solid $color-primary !important;
   }
-  &_secondary {
-    border: 1px solid $gray-700 !important;
-  }
   &_green {
     border: 1px solid $color-green !important;
+  }
+  &_orange {
+    border: 1px solid $color-orange !important;
+  }
+  &_success,
+  &_blue {
+    border: 1px solid $color-blue !important;
+  }
+  &_gray {
+    border: 1px solid $gray-300 !important;
+  }
+  &_white {
+    border: 1px solid $color-white !important;
   }
   &_red,
   &_danger {
@@ -140,24 +154,26 @@
   &_yellow {
     border: 1px solid $color-yellow !important;
   }
+  &_secondary {
+    border: 1px solid $gray-700 !important;
+  }
   &_info {
     border: 1px solid $color-blue !important;
   }
   &_light {
     border: 1px solid $gray-50 !important;
   }
-  &_orange {
-    border: 1px solid $color-orange !important;
-  }
   &_olive {
     border: 1px solid $color-olive !important;
   }
   &_teal {
     border: 1px solid $color-teal !important;
-  }
-  &_success,
-  &_blue {
-    border: 1px solid $color-blue !important;
+  }  
+  &_teal {
+    border: 1px solid $color-teal !important;
+  }  
+  &_mint {
+    border: 1px solid $color-mint !important;
   }
   &_violet {
     border: 1px solid $color-violet !important;
@@ -171,15 +187,9 @@
   &_brown {
     border: 1px solid $color-brown !important;
   }
-  &_gray {
-    border: 1px solid $gray-300 !important;
-  }
   &_dark,
   &_black {
     border: 1px solid $gray-950 !important;
-  }
-  &_white {
-    border: 1px solid $color-white !important;
   }
 }
 //Text Color
@@ -209,6 +219,12 @@
   }
   &_teal {
     color: $color-teal !important;
+  }
+  &_teal {
+    color: $color-teal !important;
+  }
+  &_mint {
+    color: $color-mint !important;
   }
   &_success,
   &_blue {

@@ -60,22 +60,25 @@ $color-primary-darken4: darken($color-primary, 40%);
 
 // 시스템 색상
 $color-red: $color-point;
+$color-green: #00B628;
+$color-green-secondary: #E1FBE1;
 $color-orange: #ED5828; 
 $color-orange-secondary: #FFF2EE; 
-$color-orange-light: #F18200; 
-$color-orange-light-secondary:#FFF5E9; 
-$color-yellow: #FFC107; 
-$color-olive: #B5CC18; 
-$color-green: #26A769; 
-$color-teal: #00B5AD; 
+$color-orange-light: #F18200;
+$color-orange-light-secondary:#FFF5E9;
 $color-blue: #1A63D9;
 $color-blue-secondary: #DFEDFF;
 $color-blue-tertiary: #EFF6FF;
+
+$color-mint-secondary: #E8FAFA;
+$color-mint: #15AEB4;
+$color-yellow: #FFC107; 
+$color-olive: #B5CC18; 
+$color-teal: #00B5AD; 
 $color-violet: #6435C9;
 $color-purple: #A333C8;
 $color-pink: #E03997;
 $color-brown: #A5673F;
-$color-mint: #15AEB4;
 
 // Grayscale
 $gray-50: #f6f6f6;

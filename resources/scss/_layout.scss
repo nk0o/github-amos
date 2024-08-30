@@ -36,6 +36,7 @@ header{
 #wrap{
   &:has(.btm_bar){
     margin-bottom: $btmbar-H;
+    min-height: calc(100vh - 90px);
   }
 }
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner{

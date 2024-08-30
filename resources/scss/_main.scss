@@ -242,7 +242,7 @@
   &_wrap{
     @include flexStart;
     align-items: flex-start;
-    height: calc(100vh - 190px);
+    height: calc(100dvh - 190px);
     overflow-y: auto;
   }
   &_nav{
