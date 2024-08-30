@@ -1103,7 +1103,7 @@
 .page_mypage{
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - ($subheader-H + $btmbar-H));
+  min-height: calc(100dvh - ($subheader-H + $btmbar-H + 40px));
   align-items: stretch;
   .mypage_menu_wrap{
     flex: 1 1 auto;

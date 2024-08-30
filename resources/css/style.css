@@ -5381,7 +5381,7 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 
 .modal_container .scroll_inner {
-  max-height: calc(100vh - 100px - 68px - 90px);
+  max-height: calc(100dvh - 100px - 68px - 90px);
   overflow-y: auto;
   padding: 12px 10px;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
@@ -5844,7 +5844,7 @@ div.dataTables_wrapper .btn_floating:focus {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.75);
 }
 .floating_tit {
@@ -5903,6 +5903,7 @@ header.fixed {
 
 #wrap:has(.btm_bar) {
   margin-bottom: 90px;
+  min-height: calc(100vh - 90px);
 }
 
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
@@ -6433,7 +6434,7 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   align-items: flex-start;
-  height: calc(100vh - 190px);
+  height: calc(100dvh - 190px);
   overflow-y: auto;
 }
 .cate_nav {
@@ -10654,7 +10655,7 @@ footer .f_company {
 .page_mypage {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 151px);
+  min-height: calc(100dvh - 191px);
   align-items: stretch;
 }
 .page_mypage .mypage_menu_wrap {

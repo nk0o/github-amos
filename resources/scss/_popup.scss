@@ -130,7 +130,7 @@
 //스크롤
 .modal_container{
   .scroll_inner{
-    max-height: calc(100vh - 100px - 68px - 90px );
+    max-height: calc(100dvh - 100px - 68px - 90px );
     overflow-y: auto;
     padding: 12px 10px;
     font-family: $font-aritadt;    
