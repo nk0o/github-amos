@@ -1009,7 +1009,7 @@ function handleScrollWithoutSwiper() {
     let windowHeight = $(window).height();
 
     // 스크롤 위치가 섹션 내부에 있을 때
-    if (scrollTop >= contsBoxTop - 200 && scrollTop < contsBoxTop - 100 + $(this).outerHeight()) {
+    if (scrollTop >= contsBoxTop - 150 && scrollTop < contsBoxTop - 150 + $(this).outerHeight()) {
       const activeSlide = $(this);
       // 현재 섹션의 비디오만 재생
       updateVideoState(activeSlide, true);
