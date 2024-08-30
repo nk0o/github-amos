@@ -213,6 +213,15 @@ p {
 }
 
 /*** Color ***/
+.bg_white {
+  background-color: #ffffff !important;
+}
+.bg_box {
+  background-color: #f6f6f6 !important;
+}
+.bg_box_blue {
+  background-color: #EFF6FF !important;
+}
 .bg_primary {
   background-color: #2A3136 !important;
 }
@@ -220,8 +229,16 @@ p {
   background-color: #777777 !important;
 }
 .bg_green {
-  background-color: #EEFFF2 !important;
-  color: #01BE2B !important;
+  background-color: #E1FBE1 !important;
+  color: #00B628 !important;
+}
+.bg_orange {
+  background-color: #FFF2EE !important;
+  color: #ED5828 !important;
+}
+.bg_success, .bg_blue {
+  background-color: #DFEDFF !important;
+  color: #1A63D9 !important;
 }
 .bg_red, .bg_danger {
   background-color: #FF2E00 !important;
@@ -235,18 +252,14 @@ p {
 .bg_light {
   background-color: #f6f6f6 !important;
 }
-.bg_orange {
-  background-color: #FFF5E9 !important;
-  color: #F18200 !important;
-}
 .bg_olive {
   background-color: #B5CC18 !important;
 }
 .bg_teal {
   background-color: #00B5AD !important;
 }
-.bg_success, .bg_blue {
-  background-color: #1A63D9 !important;
+.bg_mint {
+  background-color: #15AEB4 !important;
 }
 .bg_violet {
   background-color: #6435C9 !important;
@@ -266,24 +279,24 @@ p {
 .bg_dark, .bg_black {
   background-color: #222222 !important;
 }
-.bg_white {
-  background-color: #ffffff !important;
-}
-.bg_box {
-  background-color: #f6f6f6 !important;
-}
-.bg_box_blue {
-  background-color: #EFF6FF !important;
-}
 
 .line_primary {
   border: 1px solid #2A3136 !important;
 }
-.line_secondary {
-  border: 1px solid #777777 !important;
-}
 .line_green {
-  border: 1px solid #26A769 !important;
+  border: 1px solid #00B628 !important;
+}
+.line_orange {
+  border: 1px solid #ED5828 !important;
+}
+.line_success, .line_blue {
+  border: 1px solid #1A63D9 !important;
+}
+.line_gray {
+  border: 1px solid #dddddd !important;
+}
+.line_white {
+  border: 1px solid #ffffff !important;
 }
 .line_red, .line_danger {
   border: 1px solid #FF2E00 !important;
@@ -291,14 +304,14 @@ p {
 .line_warning, .line_yellow {
   border: 1px solid #FFC107 !important;
 }
+.line_secondary {
+  border: 1px solid #777777 !important;
+}
 .line_info {
   border: 1px solid #1A63D9 !important;
 }
 .line_light {
   border: 1px solid #f6f6f6 !important;
-}
-.line_orange {
-  border: 1px solid #ED5828 !important;
 }
 .line_olive {
   border: 1px solid #B5CC18 !important;
@@ -306,8 +319,11 @@ p {
 .line_teal {
   border: 1px solid #00B5AD !important;
 }
-.line_success, .line_blue {
-  border: 1px solid #1A63D9 !important;
+.line_teal {
+  border: 1px solid #00B5AD !important;
+}
+.line_mint {
+  border: 1px solid #15AEB4 !important;
 }
 .line_violet {
   border: 1px solid #6435C9 !important;
@@ -321,18 +337,12 @@ p {
 .line_brown {
   border: 1px solid #A5673F !important;
 }
-.line_gray {
-  border: 1px solid #dddddd !important;
-}
 .line_dark, .line_black {
   border: 1px solid #222222 !important;
 }
-.line_white {
-  border: 1px solid #ffffff !important;
-}
 
 .txt_green {
-  color: #26A769 !important;
+  color: #00B628 !important;
 }
 .txt_red, .txt_danger {
   color: #FF2E00 !important;
@@ -354,6 +364,12 @@ p {
 }
 .txt_teal {
   color: #00B5AD !important;
+}
+.txt_teal {
+  color: #00B5AD !important;
+}
+.txt_mint {
+  color: #15AEB4 !important;
 }
 .txt_success, .txt_blue {
   color: #1A63D9 !important;
@@ -4277,7 +4293,7 @@ select {
   color: #777777;
 }
 .badge.line_green {
-  color: #26A769;
+  color: #00B628;
 }
 .badge.line_red, .badge.line_danger {
   color: #FF2E00;
@@ -4318,6 +4334,9 @@ select {
 .badge.line_gray {
   color: #dddddd;
 }
+.badge.line_mint {
+  color: #15AEB4;
+}
 .badge.line_dark, .badge.line_black {
   color: #222222;
 }
@@ -4344,9 +4363,19 @@ select {
   line-height: 1;
 }
 .badge_dot {
+  display: inline-block;
   width: 4px;
   height: 4px;
   border-radius: 100%;
+}
+.badge_dot.bg_orange {
+  background-color: #ED5828 !important;
+}
+.badge_dot.bg_blue {
+  background-color: #1A63D9 !important;
+}
+.badge_dot.bg_green {
+  background-color: #00B628 !important;
 }
 .badge_history {
   height: 20px;
@@ -4428,14 +4457,19 @@ i > .badge_round {
 .avatar {
   display: inline-block;
   position: relative;
-  width: 48px;
-  height: 48px;
+  flex: none;
+  width: 66px;
+  height: 66px;
+  border: 1px solid #DFEDFF;
+  border-radius: 100%;
+  background-color: #EFF6FF;
 }
 .avatar > img {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
   height: auto;
+  object-fit: none;
   border-radius: 100%;
 }
 .avatar > img + .badge_dot {
@@ -5209,7 +5243,7 @@ div.dataTables_wrapper .btn_floating:focus {
   background-color: #FFC107;
 }
 .progress_bar_green {
-  background-color: #26A769;
+  background-color: #00B628;
 }
 .progress_bar_blue {
   background-color: #1A63D9;
@@ -10718,17 +10752,6 @@ footer .f_company {
   align-items: flex-start;
   gap: 16px;
   padding: 24px 0;
-}
-.user_info .avatar {
-  flex: none;
-  width: 66px;
-  height: 66px;
-  border: 1px solid #DFEDFF;
-  border-radius: 100%;
-  background-color: #EFF6FF;
-}
-.user_info .avatar > img {
-  object-fit: none;
 }
 .user_info .app_notice {
   position: absolute;

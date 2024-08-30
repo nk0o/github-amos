@@ -1154,17 +1154,6 @@
   align-items: flex-start;
   gap: 16px;
   padding: 24px 0;
-  .avatar{
-    flex: none;
-    width: 66px;
-    height: 66px;
-    border: 1px solid $color-blue-secondary;
-    border-radius: 100%;
-    background-color: $color-blue-tertiary;
-    & >img{
-      object-fit: none;
-    }
-  }
   .app_notice{
     position: absolute;
     right: 0;
