@@ -100,6 +100,9 @@
         background-color: $color-white;
       }
       .tab_cont_item{
+        .srch_brand{
+          padding: 8px 0;
+        }
         .input_check_wrap.without_box .input_check:checked + label{
           background-color: transparent;
         }
@@ -130,7 +133,9 @@
   .filter_wrap{
     background-color: $gray-50;
     .round_tab{
-      padding: 12px 0;
+      &.swiper .swiper-wrapper{
+        padding: 12px 0;
+      }
       .tab_list.current > button,
       .tab_list.current > a
       .tab_list > button,

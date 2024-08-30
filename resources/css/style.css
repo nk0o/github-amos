@@ -4442,8 +4442,8 @@ a > .badge_dot,
 button > .badge_dot,
 i > .badge_dot {
   position: absolute;
-  top: 8px;
-  right: -2px;
+  top: 6px;
+  right: -4px;
   transform: translate(50%, 50%);
 }
 
@@ -5552,6 +5552,9 @@ div.dataTables_wrapper .btn_floating:focus {
   top: -1px;
   background-color: #ffffff;
 }
+.btm_sheet_cont .tab_center_wrap .tab_cont_item .srch_brand {
+  padding: 8px 0;
+}
 .btm_sheet_cont .tab_center_wrap .tab_cont_item .input_check_wrap.without_box .input_check:checked + label {
   background-color: transparent;
 }
@@ -5582,7 +5585,7 @@ div.dataTables_wrapper .btn_floating:focus {
 .btm_sheet .filter_wrap {
   background-color: #f6f6f6;
 }
-.btm_sheet .filter_wrap .round_tab {
+.btm_sheet .filter_wrap .round_tab.swiper .swiper-wrapper {
   padding: 12px 0;
 }
 .btm_sheet .filter_wrap .round_tab .tab_list.current > button,
@@ -11282,6 +11285,32 @@ footer .f_company {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
+}
+.srch_txt.category {
+  display: -webkit-box;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+}
+.srch_brand {
+  gap: 16px;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.srch_brand .img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+}
+.srch_brand .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .srch_note {
   margin-left: auto;
