@@ -7293,6 +7293,7 @@ footer .f_company {
 }
 .page_detail {
   padding-bottom: 210px;
+  background: #fff;
 }
 .page_detail .sec_product.is_noBack {
   padding-top: 32px;
@@ -9211,32 +9212,39 @@ footer .f_company {
   margin-top: auto;
 }
 
-.conts_box_list .conts_box {
+.conts_box_list .conts_box,
+.conts_box_detail .conts_box {
   position: relative;
 }
-.conts_box_list .conts_box .visual {
+.conts_box_list .conts_box .visual,
+.conts_box_detail .conts_box .visual {
   aspect-ratio: 3/1.7;
   overflow: hidden;
 }
-.conts_box_list .conts_box .visual .thumbnail {
+.conts_box_list .conts_box .visual .thumbnail,
+.conts_box_detail .conts_box .visual .thumbnail {
   width: 100%;
   height: 100%;
 }
-.conts_box_list .conts_box .visual .thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.conts_box_list .conts_box .visual .video_box {
-  width: 100%;
-  height: 100%;
-}
-.conts_box_list .conts_box .visual .video_box .video_cont {
+.conts_box_list .conts_box .visual .thumbnail img,
+.conts_box_detail .conts_box .visual .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.conts_box_list .conts_box.conts_more {
+.conts_box_list .conts_box .visual .video_box,
+.conts_box_detail .conts_box .visual .video_box {
+  width: 100%;
+  height: 100%;
+}
+.conts_box_list .conts_box .visual .video_box .video_cont,
+.conts_box_detail .conts_box .visual .video_box .video_cont {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conts_box_list .conts_box.conts_more,
+.conts_box_detail .conts_box.conts_more {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -9247,7 +9255,8 @@ footer .f_company {
   padding: 0;
   margin-left: 0;
 }
-.conts_box_list .conts_box.conts_more div {
+.conts_box_list .conts_box.conts_more div,
+.conts_box_detail .conts_box.conts_more div {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -9257,31 +9266,37 @@ footer .f_company {
   flex-direction: column;
   gap: 4px;
 }
-.conts_box_list .conts_box.conts_more div [class*=ico_]::before {
+.conts_box_list .conts_box.conts_more div [class*=ico_]::before,
+.conts_box_detail .conts_box.conts_more div [class*=ico_]::before {
   background-color: #777777 !important;
 }
-.conts_box_list .conts_box.conts_more div span {
+.conts_box_list .conts_box.conts_more div span,
+.conts_box_detail .conts_box.conts_more div span {
   color: #888888;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.2142;
 }
-.conts_box_list .info {
+.conts_box_list .info,
+.conts_box_detail .info {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
 }
-.conts_box_list .cate {
+.conts_box_list .cate,
+.conts_box_detail .cate {
   margin: 0 0 4px;
   line-height: 18px;
 }
-.conts_box_list .cate span {
+.conts_box_list .cate span,
+.conts_box_detail .cate span {
   color: #444;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
 }
-.conts_box_list .cate span + em::before {
+.conts_box_list .cate span + em::before,
+.conts_box_detail .cate span + em::before {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -9289,13 +9304,15 @@ footer .f_company {
   background: url("../images/icon/ico_chev_next_16.svg") no-repeat;
   content: "";
 }
-.conts_box_list .cate em {
+.conts_box_list .cate em,
+.conts_box_detail .cate em {
   color: #444;
   font-size: 13px;
   font-weight: 600;
   line-height: 18px;
 }
-.conts_box_list .tit {
+.conts_box_list .tit,
+.conts_box_detail .tit {
   display: block;
   color: #222;
   font-size: 18px;
@@ -9310,7 +9327,8 @@ footer .f_company {
   overflow: hidden;
   word-break: break-all;
 }
-.conts_box_list .txt {
+.conts_box_list .txt,
+.conts_box_detail .txt {
   margin-top: 6px;
   color: #666;
   font-size: 15px;
@@ -9325,18 +9343,28 @@ footer .f_company {
   overflow: hidden;
   word-break: break-all;
 }
-.conts_box_list .bottom {
+.conts_box_list .top,
+.conts_box_list .bottom,
+.conts_box_detail .top,
+.conts_box_detail .bottom {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 24px;
 }
-.conts_box_list .bottom .date {
+.conts_box_list .top .date,
+.conts_box_list .bottom .date,
+.conts_box_detail .top .date,
+.conts_box_detail .bottom .date {
   color: #aaa;
   font-size: 13px;
   font-weight: 300;
   line-height: 16px;
 }
-.conts_box_list .bottom .right {
+.conts_box_list .top .right,
+.conts_box_list .bottom .right,
+.conts_box_detail .top .right,
+.conts_box_detail .bottom .right {
   display: flex;
   gap: 12px;
   color: #777;
@@ -9344,8 +9372,29 @@ footer .f_company {
   font-weight: 300;
   line-height: 16px;
 }
-.conts_box_list .bottom .right i {
+.conts_box_list .top .right i,
+.conts_box_list .bottom .right i,
+.conts_box_detail .top .right i,
+.conts_box_detail .bottom .right i {
   vertical-align: -2px;
+}
+
+.conts_box_detail .info {
+  margin-top: 16px;
+  padding-bottom: 40px;
+}
+.conts_box_detail .info .top {
+  margin-top: 0;
+}
+.conts_box_detail .cate {
+  margin: 12px 0 0 0;
+}
+.conts_box_detail .tit {
+  margin-top: 4px;
+}
+.conts_box_detail .txt {
+  margin-top: 6px;
+  -webkit-line-clamp: inherit;
 }
 
 @media (min-width: 1024px) {
@@ -9415,6 +9464,57 @@ footer .f_company {
     padding: 0;
   }
 }
+.page_tv_datail .sec_product.is_noBack {
+  padding: 32px 0 40px;
+}
+.page_tv_datail .sec_product.is_noBack .tit_area {
+  margin-bottom: 20px;
+}
+.page_tv_datail .sec_product.is_noBack .tit_area h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.tv_cont_detail .conts_box_detail .visual {
+  margin: 0 -20px;
+}
+
+.conts_box_list_wrap.type_row .conts_box_list > li + li {
+  margin-top: 20px;
+}
+.conts_box_list_wrap.type_row .conts_box_list .txt {
+  -webkit-line-clamp: 1;
+}
+.conts_box_list_wrap.type_row .conts_box > a {
+  display: flex;
+  gap: 16px;
+}
+.conts_box_list_wrap.type_row .conts_box > a .img {
+  width: 26.666666%;
+  min-width: 100px;
+  height: 26.666666%;
+  min-height: 100px;
+  flex-shrink: 0;
+}
+.conts_box_list_wrap.type_row .conts_box > a .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conts_row_sec {
+  padding: 20px 0 60px;
+}
+.conts_row_sec .tit_area {
+  margin-bottom: 20px;
+}
+.conts_row_sec .tit_area h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
