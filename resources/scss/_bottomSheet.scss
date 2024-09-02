@@ -9,7 +9,8 @@
   z-index: -1;
   & > .inner {
     //min-height: 200px;
-    max-width: 700px;
+    max-height: 66.01dvh;
+    overflow-y: auto;    
     position:fixed;
     z-index: 2;
     border-top-left-radius: $BtmSheetRadius;
@@ -89,8 +90,11 @@
     }
   }
   &_cont{
-    max-height: 53.94dvh;
-    overflow-y:auto;
+    .tab_cont{
+      height:33.993dvh;
+      overflow-y:auto;
+      padding-top: 16px;
+    }
     .tab_center_wrap{
       position: relative;
       .tab_menu{
@@ -100,6 +104,9 @@
         background-color: $color-white;
       }
       .tab_cont_item{
+        .srch_brand{
+          padding: 8px 0;
+        }
         .input_check_wrap.without_box .input_check:checked + label{
           background-color: transparent;
         }
@@ -130,7 +137,9 @@
   .filter_wrap{
     background-color: $gray-50;
     .round_tab{
-      padding: 12px 0;
+      &.swiper .swiper-wrapper{
+        padding: 12px 0;
+      }
       .tab_list.current > button,
       .tab_list.current > a
       .tab_list > button,

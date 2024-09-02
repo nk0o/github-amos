@@ -16,6 +16,7 @@ function checkIsMobile(){
   }
 }
 $(document).ready(function () {
+  tabSlider();
   LineTabMenuInit();
   toggleBtnDisabled();
 
@@ -1098,10 +1099,16 @@ function tvSlider() {
   }
 }
 
-
-
-
-
-
+function tabSlider(){  
+  if($(".tab_menu.swiper").length > 0){
+    let tabSwiper = new Swiper(".tab_menu.swiper", {
+      slidesPerView: "auto",
+    });
+    $(document).on('click', '.btn_delete', function() {
+      var elIdx = $(this).parents('.swiper-slide').index();
+      tabSwiper.removeSlide( elIdx );
+    });
+  }
+}
 
 
