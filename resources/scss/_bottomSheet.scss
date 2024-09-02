@@ -9,7 +9,8 @@
   z-index: -1;
   & > .inner {
     //min-height: 200px;
-    max-width: 700px;
+    max-height: 66.01dvh;
+    overflow-y: auto;    
     position:fixed;
     z-index: 2;
     border-top-left-radius: $BtmSheetRadius;
@@ -89,8 +90,11 @@
     }
   }
   &_cont{
-    max-height: 53.94dvh;
-    overflow-y:auto;
+    .tab_cont{
+      height:33.993dvh;
+      overflow-y:auto;
+      padding-top: 16px;
+    }
     .tab_center_wrap{
       position: relative;
       .tab_menu{

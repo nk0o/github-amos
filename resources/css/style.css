@@ -5455,7 +5455,8 @@ div.dataTables_wrapper .btn_floating:focus {
   z-index: -1;
 }
 .btm_sheet > .inner {
-  max-width: 700px;
+  max-height: 66.01dvh;
+  overflow-y: auto;
   position: fixed;
   z-index: 2;
   border-top-left-radius: 32px;
@@ -5539,9 +5540,10 @@ div.dataTables_wrapper .btn_floating:focus {
   font-weight: 400;
   line-height: normal;
 }
-.btm_sheet_cont {
-  max-height: 53.94dvh;
+.btm_sheet_cont .tab_cont {
+  height: 33.993dvh;
   overflow-y: auto;
+  padding-top: 16px;
 }
 .btm_sheet_cont .tab_center_wrap {
   position: relative;
