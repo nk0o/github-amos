@@ -1850,6 +1850,20 @@ p {
     background-image: none;
   }
 }
+.ico_reset::before {
+  background-image: url("../images/icon/ico_reset.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_reset::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_reset.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_info::before {
   background-image: url("../images/icon/ico_info.svg");
   background-size: cover;
@@ -3104,13 +3118,13 @@ button:disabled *[class*=ico_]::before {
   line-height: 1.714;
 }
 .input_check_wrap.without_box .input_check + label::before {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   top: 0;
-  background-image: url("../images/icon/ico_check_24.svg");
+  background-image: url("../images/icon/ico_check_20.svg");
 }
 .input_check_wrap.without_box .input_check:checked + label::before {
-  background-image: url("../images/icon/ico_check_24_on.svg");
+  background-image: url("../images/icon/ico_check_20_on.svg");
 }
 .input_check_wrap.without_box_sm .input_check + label {
   padding-left: 24px;
@@ -3288,17 +3302,25 @@ button:disabled *[class*=ico_]::before {
   border-radius: 8px;
 }
 .input_check_list .input_check_wrap.without_box .input_radio + label::before, .input_check_list .input_check_wrap.without_box .input_check + label::before, .input_check_list .input_radio_wrap.without_box .input_radio + label::before, .input_check_list .input_radio_wrap.without_box .input_check + label::before {
-  background-image: none;
   left: auto;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_check_wrap.without_box .input_check:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box .input_check:checked + label {
-  background-color: #f6f6f6;
+  background-image: none;
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_check_wrap.without_box .input_check:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_check:checked + label::before {
-  background-image: url("../images/icon/ico_check_24_on.svg");
+  background-image: url("../images/icon/ico_check_20_on.svg");
+}
+.input_check_list .input_check_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label {
+  background-color: #f6f6f6;
+}
+.input_check_list .input_check_wrap.without_box input[type=radio] + label::before, .input_check_list .input_check_wrap.without_box .input_radio + label::before, .input_check_list .input_radio_wrap.without_box input[type=radio] + label::before, .input_check_list .input_radio_wrap.without_box .input_radio + label::before {
+  background-image: none;
+}
+.input_check_list .input_check_wrap.is_img, .input_check_list .input_radio_wrap.is_img {
+  height: 64px;
 }
 
 /* SelectBox */
@@ -4245,6 +4267,36 @@ select {
 }
 .tab_selected_wrap .round_tab .btn_delete {
   margin-left: 2px;
+}
+.tab_selected_wrap.filter_wrap {
+  background-color: #f6f6f6;
+}
+.tab_selected_wrap.filter_wrap .round_tab.swiper .swiper-wrapper {
+  padding: 12px 0;
+}
+.tab_selected_wrap.filter_wrap .round_tab .tab_list.current > button,
+.tab_selected_wrap.filter_wrap .round_tab .tab_list.current > a .tab_list > button,
+.tab_selected_wrap.filter_wrap .round_tab .tab_list > a {
+  cursor: default;
+  height: 32px;
+  padding: 0 8px 0 12px;
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.tab_selected_wrap.filter_wrap .round_tab .tab_list > .ico_reset {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+.tab_selected_wrap.filter_wrap .round_tab .tab_list > .ico_reset::before {
+  background-color: #bbbbbb !important;
+  mask-size: 16px;
+}
+.tab_selected_wrap.filter_wrap .btn_delete {
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -5455,7 +5507,6 @@ div.dataTables_wrapper .btn_floating:focus {
   z-index: -1;
 }
 .btm_sheet > .inner {
-  max-height: 66.01dvh;
   overflow-y: auto;
   position: fixed;
   z-index: 2;
@@ -5554,12 +5605,6 @@ div.dataTables_wrapper .btn_floating:focus {
   top: -1px;
   background-color: #ffffff;
 }
-.btm_sheet_cont .tab_center_wrap .tab_cont_item .srch_brand {
-  padding: 8px 0;
-}
-.btm_sheet_cont .tab_center_wrap .tab_cont_item .input_check_wrap.without_box .input_check:checked + label {
-  background-color: transparent;
-}
 .btm_sheet_cont .tit {
   color: #222222;
   font-size: 0.9375rem;
@@ -5583,27 +5628,6 @@ div.dataTables_wrapper .btn_floating:focus {
 .btm_sheet .radio_btn_wrap .input_group.is_date, .btm_sheet .check_btn_wrap .input_group.is_date {
   flex: 0 0 100%;
   margin-top: 4px;
-}
-.btm_sheet .filter_wrap {
-  background-color: #f6f6f6;
-}
-.btm_sheet .filter_wrap .round_tab.swiper .swiper-wrapper {
-  padding: 12px 0;
-}
-.btm_sheet .filter_wrap .round_tab .tab_list.current > button,
-.btm_sheet .filter_wrap .round_tab .tab_list.current > a .tab_list > button,
-.btm_sheet .filter_wrap .round_tab .tab_list > a {
-  cursor: default;
-  height: 32px;
-  padding: 0 8px 0 12px;
-  color: #444444;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 1.23;
-  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
-}
-.btm_sheet .filter_wrap .btn_delete {
-  cursor: pointer;
 }
 
 .appbar {
@@ -11415,12 +11439,15 @@ footer .f_company {
 .srch_result {
   margin-top: 16px;
   height: calc(100dvh - 61px - 68px - 90px - 16px);
+  /*   .tab_selected_wrap{
+      z-index: 1;
+      position: sticky;
+      top: 0;
+      background-color: $color-white;
+    } */
 }
 .srch_result .tab_selected_wrap {
-  z-index: 1;
-  position: sticky;
-  top: 0;
-  background-color: #ffffff;
+  margin: -8px -20px 20px -20px;
 }
 .srch_result .prd_cont .select_box.type3 {
   margin: 0 12px 0 auto;

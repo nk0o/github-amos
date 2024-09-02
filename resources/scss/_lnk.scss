@@ -1709,11 +1709,15 @@
 .srch_result{
   margin-top: 16px;
   height: calc(100dvh - $subheader-H - 68px - $btmbar-H - 16px);
-  .tab_selected_wrap{
+/*   .tab_selected_wrap{
     z-index: 1;
     position: sticky;
     top: 0;
     background-color: $color-white;
+  } */
+
+  .tab_selected_wrap{
+    margin: -8px -20px 20px -20px;
   }
   .prd_cont{
     .select_box.type3{

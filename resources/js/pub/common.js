@@ -208,7 +208,8 @@ $(document).ready(function () {
 
   // 상품 담기
   if ($('.prd_list_wrap.ir').length > 0 ) {
-    $(document).on('click touchend', '.prd_box .prd', function(){
+    $(document).on('click touchend', '.prd_box .prd', function(e){
+      e.preventDefault();
       let imgSrc = $(this).find('img').attr('src');
       let $parent = $(this).parent();
       if ($parent.hasClass('checked')) {
@@ -1098,15 +1099,18 @@ function tvSlider() {
 }
 
 function tabSlider(){  
-  if($(".tab_menu.swiper").length > 0){
-    let tabSwiper = new Swiper(".tab_menu.swiper", {
+  $(".tab_menu.swiper").each(function (i, v) {
+    let sliderName = 'slider' + i;
+    $(v).attr('id', sliderName);
+    let sliderId = '#' + sliderName;
+  
+    let swiperContainer = $(sliderId);
+    let tabSwiper = new Swiper(sliderId, {
       slidesPerView: "auto",
     });
-    $(document).on('click', '.btn_delete', function() {
+    $(document).on('click touchend', '.btn_delete', function() {
       var elIdx = $(this).parents('.swiper-slide').index();
       tabSwiper.removeSlide( elIdx );
     });
-  }
+  });
 }
-
-
