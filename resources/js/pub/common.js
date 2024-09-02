@@ -1005,25 +1005,27 @@ function handleScrollWithSwiper() {
 }
 // 스크롤 시 비디오 재생 관리 함수 (스와이퍼 없을 때)
 function handleScrollWithoutSwiper() {
-  $('.conts_box').each(function () {
-    let contsBoxTop = $(this).offset().top;
-    let scrollTop = $(window).scrollTop();
-    let windowHeight = $(window).height();
-
-    // 스크롤 위치가 섹션 내부에 있을 때
-    if (scrollTop >= contsBoxTop - 150 && scrollTop < contsBoxTop - 150 + $(this).outerHeight()) {
-      const activeSlide = $(this);
-      // 현재 섹션의 비디오만 재생
-      updateVideoState(activeSlide, true);
-      // 나머지 비디오는 정지
-      $('.conts_box').not(activeSlide).each(function () {
+  if($('.page_tv_datail').length == 0){
+    $('.conts_box').each(function () {
+      let contsBoxTop = $(this).offset().top;
+      let scrollTop = $(window).scrollTop();
+      let windowHeight = $(window).height();
+  
+      // 스크롤 위치가 섹션 내부에 있을 때
+      if (scrollTop >= contsBoxTop - 150 && scrollTop < contsBoxTop - 150 + $(this).outerHeight()) {
+        const activeSlide = $(this);
+        // 현재 섹션의 비디오만 재생
+        updateVideoState(activeSlide, true);
+        // 나머지 비디오는 정지
+        $('.conts_box').not(activeSlide).each(function () {
+          updateVideoState($(this), false);
+        });
+      } else {
+        // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
         updateVideoState($(this), false);
-      });
-    } else {
-      // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
-      updateVideoState($(this), false);
-    }
-  });
+      }
+    });
+  }
 }
 // tvSlider 기능 초기화 함수
 function tvSlider() {
