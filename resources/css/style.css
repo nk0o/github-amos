@@ -6223,7 +6223,11 @@ footer .f_company {
   /* 메인 스와이퍼 */
 }
 .page_main section {
-  margin: 0 0 60px 0;
+  margin: 60px 0 60px 0;
+}
+.page_main section.hr_divider {
+  margin: 0 !important;
+  max-width: none;
 }
 .page_main .tit_area {
   padding: 0 0 24px 0;
@@ -6253,6 +6257,7 @@ footer .f_company {
   margin: 0;
 }
 .page_main .sec_amount {
+  margin-top: 0;
   padding: 24px 0 40px;
   background-color: #222222;
 }
@@ -6302,6 +6307,7 @@ footer .f_company {
   line-height: 20px;
 }
 .page_main .sec_type {
+  margin-top: 0;
   padding: 12px 0 0 0;
 }
 .page_main .sec_type .tab_cont {
@@ -9608,6 +9614,12 @@ footer .f_company {
 }
 .sign_notice span.user_name {
   margin-top: 0;
+  color: #444444;
+  font-weight: 600;
+}
+.sign_notice span em {
+  color: #1A63D9;
+  font-weight: 600;
 }
 .sign_notice .dot_list {
   margin-top: 16px;

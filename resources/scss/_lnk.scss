@@ -55,6 +55,12 @@
     }
     &.user_name{
       margin-top: 0;
+      color: $gray-900;
+      font-weight: $fw-sb;
+    }
+    em{      
+      color:$color-blue;
+      font-weight: $fw-sb;
     }
   }
   .dot_list{
