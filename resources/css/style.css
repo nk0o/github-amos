@@ -5507,6 +5507,7 @@ div.dataTables_wrapper .btn_floating:focus {
   z-index: -1;
 }
 .btm_sheet > .inner {
+  max-width: 700px;
   overflow-y: auto;
   position: fixed;
   z-index: 2;
@@ -11294,6 +11295,11 @@ footer .f_company {
 .user_leave_box .input_group, .user_modify_box .input_group {
   padding: 0;
 }
+@media (min-width: 1024px) {
+  .user_leave_box .input_group, .user_modify_box .input_group {
+    display: flex;
+  }
+}
 .user_leave_box .tit, .user_modify_box .tit {
   margin-bottom: 6px;
   color: #222222;
@@ -11548,6 +11554,11 @@ footer .f_company {
 }
 .srch_result .tab_selected_wrap {
   margin: -8px -20px 20px -20px;
+}
+@media (min-width: 1024px) {
+  .srch_result .tab_selected_wrap {
+    margin: -8px 0 20px 0;
+  }
 }
 .srch_result .prd_cont .select_box.type3 {
   margin: 0 12px 0 auto;
