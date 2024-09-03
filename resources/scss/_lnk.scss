@@ -55,6 +55,12 @@
     }
     &.user_name{
       margin-top: 0;
+      color: $gray-900;
+      font-weight: $fw-sb;
+    }
+    em{      
+      color:$color-blue;
+      font-weight: $fw-sb;
     }
   }
   .dot_list{
@@ -1512,6 +1518,9 @@
 .user_leave_box, .user_modify_box{
   .input_group{
     padding: 0;
+    @media (min-width: $pc-point) {
+      display: flex;
+    }
   }
   .tit{
     margin-bottom: 6px;
@@ -1542,6 +1551,9 @@
 .recent_search{
   .search_wrap{
     padding: 24px 0 0;
+    .dot_list{
+      margin: 12px 0 4px;
+    }
   }
   .tab_menu.round_tab{
     padding: 20px 0;
@@ -1709,11 +1721,18 @@
 .srch_result{
   margin-top: 16px;
   height: calc(100dvh - $subheader-H - 68px - $btmbar-H - 16px);
-  .tab_selected_wrap{
+/*   .tab_selected_wrap{
     z-index: 1;
     position: sticky;
     top: 0;
     background-color: $color-white;
+  } */
+
+  .tab_selected_wrap{
+    margin: -8px -20px 20px -20px;
+    @media (min-width: $pc-point) {
+      margin: -8px 0 20px 0;
+    }
   }
   .prd_cont{
     .select_box.type3{

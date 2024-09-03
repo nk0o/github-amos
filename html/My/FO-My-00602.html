@@ -93,13 +93,7 @@
                     <label for="">
                       <input type="text" id="" class="input_text" value="amos1234@naver.com" placeholder="이메일을 입력해주세요">
                     </label>
-                  </div><!-- //.input_group -->
-                  <div class="input_group">
-                    <span class="input_label">일반 전화번호</span>
-                    <label for="">
-                      <input type="text" id="" class="input_text" value="02-1234-5678" placeholder="전화번호를 입력해주세요">
-                    </label>
-                  </div><!-- //.input_group -->
+                  </div><!-- //.input_group -->                 
                 </div><!-- //.inner -->
               </div><!-- //.accord_cont -->
             </div><!-- //accord_head -->
@@ -383,13 +377,18 @@
               <div class="accord_tit">정보 동의</div>
               <div class="accord_cont">
                 <div class="inner">
-                  <div class="agree_check_list">
-                    <div class="input_check_wrap">
+                  <ul class="agree_check_list">
+                    <li class="input_check_wrap">
                       <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked>
-                      <label for="check-1-1">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의&nbsp;-&nbsp;SMS</label>
+                      <label for="check-1-1">(선택) 개인정보 수집.이용 동의</label>
                       <a href="#" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></a>
-                    </div>
-                  </div>
+                    </li>
+                    <li class="input_check_wrap">
+                      <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked>
+                      <label for="check-1-2">(선택) 광고성 정보수신동의</label>
+                      <a href="#" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></a>
+                    </li>
+                  </ul>
                 </div><!-- //.inner -->
               </div><!-- //.accord_cont -->
             </div><!-- //accord_head -->
@@ -412,6 +411,12 @@
                     <span class="input_label required">살롱명</span>
                     <label for="">
                       <input type="text" id="" class="input_text" value="용산 아모스살롱" placeholder="살롱명을 입력해주세요" disabled>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">대표자명</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="김모스" placeholder="대표자명을 입력해주세요" disabled>
                     </label>
                   </div><!-- //.input_group -->
                   <div class="input_group">
@@ -438,6 +443,12 @@
                     <label for="file-01">
                       <input type="file" id="file-01" class="input_text" value="아모스살롱 사업자 등록증.jpg" disabled>
                       <i class="ico_clip ico_24"></i>
+                    </label>
+                  </div><!-- //.input_group -->
+                  <div class="input_group">
+                    <span class="input_label">일반 전화번호</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="02-1234-5678" placeholder="전화번호를 입력해주세요">
                     </label>
                   </div><!-- //.input_group -->
                 </div><!-- //.inner -->
@@ -474,34 +485,6 @@
     </main>
     <!-- //#container --> 
   </div><!-- //#wrap.page_form -->
-
-<!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
-    <div class="btm_sheet_back"></div>
-    <div class="inner">
-      <div class="btm_sheet_head">
-        <p class="tit">유입경로</p>
-        <button type="button" class="btm_sheet_close ico_close_20"></button>
-      </div><!-- //.btm_sheet_head -->
-      <div class="btm_sheet_cont check_list">
-        <ul class="input_check_list">
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
-              <label for="radio-4-1">뉴플랫폼</label>
-            </div>
-          </li>
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
-              <label for="radio-4-2">CONNECT</label>
-            </div>
-          </li>
-        </ul>
-      </div><!-- //.btm_sheet_cont -->
-    </div><!-- //.inner -->
-  </div><!-- //.btm_sheet -->
-<!-- //Bottom Sheet -->
 
 
   

@@ -9,8 +9,8 @@
   z-index: -1;
   & > .inner {
     //min-height: 200px;
-    max-height: 66.01dvh;
-    overflow-y: auto;    
+    max-width: 700px;
+    overflow-y: auto;
     position:fixed;
     z-index: 2;
     border-top-left-radius: $BtmSheetRadius;
@@ -33,7 +33,7 @@
       z-index: 1000;
       opacity: 1;
       pointer-events: all;
-    }
+    } 
     .inner {
       z-index: 1001;
       bottom: 0;
@@ -103,14 +103,6 @@
         top: -1px;
         background-color: $color-white;
       }
-      .tab_cont_item{
-        .srch_brand{
-          padding: 8px 0;
-        }
-        .input_check_wrap.without_box .input_check:checked + label{
-          background-color: transparent;
-        }
-      }
     }
     .tit{
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3333)
@@ -132,27 +124,6 @@
     .input_group.is_date{
       flex: 0 0 100%;
       margin-top: 4px;
-    }
-  }
-  .filter_wrap{
-    background-color: $gray-50;
-    .round_tab{
-      &.swiper .swiper-wrapper{
-        padding: 12px 0;
-      }
-      .tab_list.current > button,
-      .tab_list.current > a
-      .tab_list > button,
-      .tab_list > a{
-        cursor: default;
-        height: 32px;
-        padding: 0 8px 0 12px;
-        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
-        font-family: $font-aritadt;
-      }
-    }
-    .btn_delete{
-      cursor: pointer;
     }
   }
 }

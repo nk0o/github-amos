@@ -57,14 +57,14 @@
       padding-left: 24px;
       @include fontStyle(inherit, $fs-s, $fw-m, 1.714);
       &::before{
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         top: 0;
-        background-image: url("../images/icon/ico_check_24.svg");
+        background-image: url("../images/icon/ico_check_20.svg");
       }
     }
     &:checked + label::before{
-      background-image: url("../images/icon/ico_check_24_on.svg");
+      background-image: url("../images/icon/ico_check_20_on.svg");
     }
   }
   &_sm{
@@ -207,7 +207,6 @@
         @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
         border-radius: 8px;
         &::before{
-          background-image: none;
           left: auto;
           right: 16px;
           top: 50%;
@@ -215,11 +214,22 @@
         }
       }
       .input_radio:checked + label, .input_check:checked + label{
-        background-color:$gray-50;
+        background-image: none;
         &::before{
-          background-image: url("../images/icon/ico_check_24_on.svg");
+          background-image: url("../images/icon/ico_check_20_on.svg");
         }
       }
+      input[type=radio]:checked + label, .input_radio:checked + label{
+        background-color:$gray-50;
+      }
+      input[type=radio] + label, .input_radio + label{
+        &::before{
+          background-image: none;
+        }
+      }
+    }
+    &.is_img{
+      height: 64px;
     }
   }
 }

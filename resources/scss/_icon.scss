@@ -304,6 +304,11 @@
       }
     }
   }
+  &_reset{
+    &::before {
+      @include iconImgPath("ico_reset.svg");
+    }
+  }
   &_info{
     &::before {
       @include iconImgPath("ico_info.svg");

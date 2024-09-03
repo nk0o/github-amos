@@ -278,6 +278,36 @@
       margin-left: 2px;
     }
   }
+  &.filter_wrap{
+    background-color: $gray-50;
+    .round_tab{
+      &.swiper .swiper-wrapper{
+        padding: 12px 0;
+      }
+      .tab_list.current > button,
+      .tab_list.current > a
+      .tab_list > button,
+      .tab_list > a{
+        cursor: default;
+        height: 32px;
+        padding: 0 8px 0 12px;
+        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
+        font-family: $font-aritadt;
+      }
+      .tab_list > .ico_reset{
+        width: 32px;
+        height:32px;
+        padding:8px;
+        &::before{
+          background-color: $gray-400 !important;
+          mask-size:16px;
+        }
+      }
+    }
+    .btn_delete{
+      cursor: pointer;
+    }
+  }
 }
 
 

@@ -1,6 +1,10 @@
 .page_main{
   section{
-    margin:0 0 60px 0;
+    margin: 60px 0 60px 0;
+    &.hr_divider{
+      margin: 0 !important;
+      max-width: none;
+    }
   }
   .tit_area{
     padding:0 0 24px 0;
@@ -24,6 +28,7 @@
     margin: 0;
   }
   .sec_amount{
+    margin-top: 0;
     padding: 24px 0 40px;
     background-color: $gray-950;
     .tit_area{
@@ -62,6 +67,7 @@
     }
   }
   .sec_type{
+    margin-top: 0;
     padding: 12px 0 0 0;
     .tab_cont{
       padding: 20px 0 0 0;

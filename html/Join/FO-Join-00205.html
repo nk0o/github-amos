@@ -36,7 +36,7 @@
               <dd>남성</dd>
             </dl>
             <dl>
-              <dt>생년월일</dt>
+              <dt>생년</dt>
               <dd>2025년 01월 01일</dd>
             </dl>
           </div><!-- //.input_read -->
@@ -90,6 +90,14 @@
               <input type="text" id="" class="input_text" value="" placeholder="살롱명">
             </label>
           </div><!-- //.input_group -->
+          <!-- 240903 대표자명 추가 -->
+          <div class="input_group">
+            <span class="input_label required">대표자명</span>
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="대표자명">
+            </label>
+          </div><!-- //.input_group -->
+          <!-- // 240903 대표자명 추가 -->
           <div class="input_group">
             <span class="input_label required">사업자 번호</span>
             <label for="">
@@ -128,20 +136,21 @@
             </label>
             <p class="txt_alert error">전화번호 형식이 틀립니다. 다시 입력해 주세요.</p>
           </div><!-- //.input_group -->
+          <!-- 240903 유입경로 삭제
           <div class="input_group">
             <span class="input_label">유입경로</span>
             <div class="select_box">
               <div class="select_box_value" data-btmsheet="btmSheet01">
                 <span>선택해 주세요</span>
-              </div><!-- //.select_box_value -->
+              </div>
               <div class="select_box_list">
                 <ul>
                   <li><span>뉴플랫폼</span></li>
                   <li><span>A-CONNECT</span></li>
                 </ul>
-              </div><!-- //.select_box_list -->
-            </div><!-- //.select_box -->
-          </div><!-- //.input_group -->
+              </div>
+            </div>
+          </div> -->
         </div><!-- //.input_area -->
         <div class="btn_group">
           <button class="btn btn_lg btn_primary">다음</button>
@@ -155,31 +164,7 @@
   </div><!-- //#wrap -->
 
 <!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
-    <div class="btm_sheet_back"></div>
-    <div class="inner">
-      <div class="btm_sheet_head">
-        <p class="tit">유입경로</p>
-        <button type="button" class="btm_sheet_close ico_close_20"></button>
-      </div><!-- //.btm_sheet_head -->
-      <div class="btm_sheet_cont check_list">
-        <ul class="input_check_list">
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-1" class="input_radio" name="radio-item-4" checked="">
-              <label for="radio-4-1">뉴플랫폼</label>
-            </div>
-          </li>
-          <li>
-            <div class="input_radio_wrap without_box">
-              <input type="radio" id="radio-4-2" class="input_radio" name="radio-item-4">
-              <label for="radio-4-2">CONNECT</label>
-            </div>
-          </li>
-        </ul>
-      </div><!-- //.btm_sheet_cont -->
-    </div><!-- //.inner -->
-  </div><!-- //.btm_sheet -->
+  <!-- 240903 유입경로 바텀시트 삭제 -->
 <!-- //Bottom Sheet -->
 
 
