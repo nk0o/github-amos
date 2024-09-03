@@ -8328,6 +8328,7 @@ footer .f_company {
   margin-bottom: 40px;
 }
 .board_detail .detail_cont img {
+  width: 100%;
   margin-bottom: 24px;
 }
 .board_detail .detail_cont p {
@@ -9516,11 +9517,34 @@ footer .f_company {
   margin: 0 -20px;
 }
 
+@media (min-width: 1024px) {
+  .tv_cont_detail .conts_box_detail .visual {
+    margin: 0;
+  }
+}
 .conts_box_list_wrap.type_row .conts_box_list > li + li {
   margin-top: 20px;
 }
 .conts_box_list_wrap.type_row .conts_box_list .txt {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 18px;
   -webkit-line-clamp: 1;
+}
+.conts_box_list_wrap.type_row .conts_box_list .info {
+  margin-top: 0;
+}
+.conts_box_list_wrap.type_row .conts_box_list .cate span {
+  font-size: 12px;
+  line-height: 16px;
+}
+.conts_box_list_wrap.type_row .conts_box_list .tit {
+  font-size: 15px;
+  line-height: 20px;
+  -webkit-line-clamp: 1;
+}
+.conts_box_list_wrap.type_row .conts_box_list .bottom {
+  margin-top: 16px;
 }
 .conts_box_list_wrap.type_row .conts_box > a {
   display: flex;
@@ -9551,6 +9575,71 @@ footer .f_company {
   line-height: 26px;
 }
 
+.page_event .sec_product.is_noBack {
+  padding: 32px 0 40px;
+}
+.page_event .sec_product.is_noBack .tit_area {
+  margin-bottom: 20px;
+}
+.page_event .sec_product.is_noBack .tit_area h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.page_event .board_detail .btn_group {
+  padding: 0 0 40px;
+}
+.page_event .top_check {
+  padding: 20px 20px 0;
+}
+.page_event .conts_box_list > li {
+  padding: 20px;
+}
+.page_event .conts_box_list > li .info {
+  padding: 0;
+}
+.page_event .conts_box_list .conts_box.end .img::before {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E2E2E2;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  z-index: 1;
+  content: "종료된 이벤트 ";
+}
+.page_event .conts_box_list .conts_box .img {
+  position: relative;
+  aspect-ratio: 3.35/2.6;
+}
+.page_event .conts_box_list .conts_box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page_event .conts_box_list .conts_box .badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+}
+.page_event .conts_box_list .bottom {
+  margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+  .page_event .top_check {
+    max-width: 1024px;
+    margin: 0 auto 20px;
+  }
+  .page_event .conts_box_list .conts_box {
+    padding: 0;
+  }
+}
 .sticky_tab {
   position: sticky;
   top: 60px;
