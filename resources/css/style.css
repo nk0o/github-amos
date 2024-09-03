@@ -11335,6 +11335,9 @@ footer .f_company {
 .recent_search .search_wrap {
   padding: 24px 0 0;
 }
+.recent_search .search_wrap .dot_list {
+  margin: 12px 0 4px;
+}
 .recent_search .tab_menu.round_tab {
   padding: 20px 0;
 }

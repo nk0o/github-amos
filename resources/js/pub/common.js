@@ -578,16 +578,16 @@ function floatingSideUI(){
   $(document).on('focusout', '.floating_side .anchor', function(){
     $(this).parents('.floating_side').removeClass('focus')
   });  
-  $(document).on('click touchend', '.floating_side .anchor', function(){
+  $(document).on('click', '.floating_side .anchor', function(){
     $(this).parents('.floating_side').addClass('is_expanded');
     $("body").addClass("no_scroll");
   })
-  $(document).on('click touchend', '.floating_side .anchor_close', function(){
+  $(document).on('click', '.floating_side .anchor_close', function(){
     $(this).parents('.floating_side').removeClass('is_expanded');
     $("body").removeClass("no_scroll");
   })
   //scrollTop
-  $(document).on('click touchend', '.floating_side .scrolltop', function(){
+  $(document).on('click', '.floating_side .scrolltop', function(){
     $('html, body').animate({scrollTop: '0'}, 500,'swing');
   });
   //scroll
@@ -642,7 +642,7 @@ function cateNavActive(el){
   $(el).addClass("active");
 }
 
-function cateScroll(){  
+function cateScroll(){
   $('.cate_list').scroll(function () {
     var list = $(this).children();
     var top = $(this).offset().top;
