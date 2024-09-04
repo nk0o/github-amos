@@ -220,7 +220,7 @@
       }
       .ico_chevNext_16{
         position: absolute;
-        top: 2px;
+        top: 8px;
         right: 0;
       }
     }
@@ -633,9 +633,6 @@
               margin-top: 0;
             }
           }
-          @media (min-width: $pc-point) {
-            justify-content: flex-end;
-          }
         }
       }
       @media (min-width: $pc-point) {
@@ -671,6 +668,10 @@
       gap: 8px;
       & > *{
         flex:1;
+      }
+      .spinner, .select_box{
+        max-width: 260px;
+        min-width: auto;
       }
     }
     & > span{

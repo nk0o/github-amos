@@ -1205,7 +1205,7 @@ p {
 
 @media (min-width: 1024px) {
   .thumb_list > li {
-    width: 80px !important;
+    width: 83px !important;
   }
 }
 /* Icon */
@@ -6034,11 +6034,13 @@ footer .logo img {
 }
 footer .f_info {
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 8px 26px;
   padding: 20px 0 0;
   border-top: 1px solid #e2e2e2;
 }
 footer .f_info li, footer .f_info a {
+  flex: none;
   color: #444444;
   font-size: 0.75rem;
   font-weight: 600;
@@ -8209,11 +8211,18 @@ footer .f_company {
     display: block;
   }
 }
+.board_list {
+  padding-top: 4px;
+}
+.board_list > li {
+  /* &:first-child{
+    & > a{
+      padding-top: 24px;
+    }
+  } */
+}
 .board_list > li + li {
   border-top: 1px solid #eee;
-}
-.board_list > li:first-child > a {
-  padding-top: 24px;
 }
 .board_list > li > a {
   display: block;
@@ -8260,6 +8269,23 @@ footer .f_company {
   font-weight: 600;
   line-height: 1.3571;
 }
+.board_list_top {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 28px 0 0;
+}
+.board_list_top .count {
+  font-size: 0.8125rem;
+  color: #888888;
+}
+.board_list_top .count span em {
+  color: #222222;
+  font-weight: 400;
+}
 
 .no_data {
   padding-top: 100px;
@@ -8287,6 +8313,7 @@ footer .f_company {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+  gap: 16px;
 }
 .board_detail .detail_top .top .date {
   color: #aaaaaa;
@@ -8302,6 +8329,7 @@ footer .f_company {
   line-height: 1.143;
 }
 .board_detail .detail_top .top .view {
+  margin-left: auto;
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 300;
@@ -8318,11 +8346,16 @@ footer .f_company {
 }
 .board_detail .detail_top .tit {
   display: block;
+  display: flex;
+  gap: 4px;
   font-family: "Arita-dotum";
   color: #222222;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 26px;
+}
+.board_detail .detail_top .tit .badge_notice {
+  margin-top: 2px;
 }
 .board_detail .detail_cont {
   margin-bottom: 40px;
@@ -9895,7 +9928,7 @@ footer .f_company {
 }
 .agree_check_list > .input_check_wrap .ico_chevNext_16 {
   position: absolute;
-  top: 2px;
+  top: 8px;
   right: 0;
 }
 
@@ -10386,11 +10419,6 @@ footer .f_company {
   margin-top: 0;
 }
 @media (min-width: 1024px) {
-  .cart_list .prd_list_sm .prd_box .prd .order_btn_area, .cart_list .gift_list .prd_box .prd .order_btn_area {
-    justify-content: flex-end;
-  }
-}
-@media (min-width: 1024px) {
   .cart_list .prd_list_sm .prd_box, .cart_list .gift_list .prd_box {
     width: 100%;
   }
@@ -10438,6 +10466,10 @@ footer .f_company {
 }
 .cart_qnty.is_control > * {
   flex: 1;
+}
+.cart_qnty.is_control .spinner, .cart_qnty.is_control .select_box {
+  max-width: 260px;
+  min-width: auto;
 }
 .cart_qnty > span {
   display: flex;
