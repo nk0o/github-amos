@@ -898,7 +898,7 @@ function showEtc(){
 }
 
 function tooltipUI() {
-  $(document).on('click touchend', '.info_tooltip', function(){
+  $(document).on('click touchend', '.info_tooltip', function(e){
     if(!$('.tooltip_box').hasClass('show')){
       e.preventDefault(); showTooltipBox(e.target); e.stopPropagation();
     }
