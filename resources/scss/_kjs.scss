@@ -2722,7 +2722,7 @@
     }
   }
   .sec_conts {
-    padding: 34px 20px 40px;
+    padding: 34px 0 40px 20px;
     .tit_area {
       margin-bottom: 24px;
       h2 {
@@ -3075,7 +3075,7 @@
 
 .page_event {
   .sec_product.is_noBack  {
-    padding: 32px 0 40px;
+    padding: 24px 0 40px;
     .tit_area {
       margin-bottom: 20px;
       h2 {
@@ -3150,6 +3150,38 @@
     .conts_box_list {
       .conts_box {
         padding: 0;
+      }
+    }
+  }
+}
+
+.conts_box_slide {
+  padding: 24px 0 60px;
+  .inner {
+    padding: 0 0 0 20px;
+  }
+  .tit_area {
+    margin-bottom: 20px;
+    h2 {
+      font-size: 18px;
+      font-weight: $fw-sb;
+      line-height: 26px;
+    }
+  }
+  .conts_box_list {
+    >li {
+      padding: 0;
+    }
+    .conts_box {
+      .info {
+        height: 142px;
+        padding: 0 8px;
+      }
+      .bottom {
+        margin-top: auto;
+      }
+      .img {
+        aspect-ratio: 2.6 / 2;
       }
     }
   }

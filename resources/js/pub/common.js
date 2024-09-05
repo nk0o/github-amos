@@ -32,6 +32,7 @@ $(document).ready(function () {
   catecoryUI();
   prdSlider();
   tvSlider();
+  contBoxSlider();
   headerScroll();
   prdImgFix();
   tabContPos();
@@ -661,7 +662,7 @@ function cateScroll(){
 /* 제품 리스트 Swiper */
 function prdSlider(){  
   $(".prd_list_wrap.swiper").each(function (i, v) {
-    let sliderName = 'slider' + i;
+    let sliderName = 'prdSlider' + i;
     $(v).attr('id', sliderName);
     let sliderId = '#' + sliderName;
   
@@ -1031,14 +1032,14 @@ function handleScrollWithoutSwiper() {
 function tvSlider() {
   // 스와이퍼가 있는 경우
   $(".conts_box_list_wrap.swiper").each(function (i, v) {
-    let sliderName = 'slider' + i;
+    let sliderName = 'tvSlider' + i;
     $(v).attr('id', sliderName);
     let sliderId = '#' + sliderName;
 
     // Swiper 초기화
     let tvSwiper = new Swiper(sliderId, {
       slidesPerView: 1.1,
-      spaceBetween: 7.5,
+      spaceBetween: 8,
       observer: true,
       observeParents: true,
       breakpoints: {
@@ -1102,7 +1103,7 @@ function tvSlider() {
 
 function tabSlider(){  
   $(".tab_menu.swiper").each(function (i, v) {
-    let sliderName = 'slider' + i;
+    let sliderName = 'tabSlider' + i;
     $(v).attr('id', sliderName);
     let sliderId = '#' + sliderName;
   
@@ -1116,3 +1117,27 @@ function tabSlider(){
     });
   });
 }
+
+// 다른 이벤트 보기
+function contBoxSlider() {
+  $(".conts_box_img_slide.swiper").each(function (i, v) {
+    let sliderName = 'contSlider' + i; 
+    $(v).attr('id', sliderName);
+    let sliderId = '#' + sliderName;
+
+    // Swiper 초기화
+    let contSwiper = new Swiper(sliderId, {
+      slidesPerView: 1.35,
+      spaceBetween: 8,
+      observer: true,
+      observeParents: true,
+      breakpoints: {
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        }
+      },
+    });
+  })
+}
+

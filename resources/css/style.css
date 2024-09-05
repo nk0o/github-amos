@@ -9277,7 +9277,7 @@ footer .f_company {
   opacity: 0.7;
 }
 .page_tv_main .sec_conts {
-  padding: 34px 20px 40px;
+  padding: 34px 0 40px 20px;
 }
 .page_tv_main .sec_conts .tit_area {
   margin-bottom: 24px;
@@ -9632,7 +9632,7 @@ footer .f_company {
 }
 
 .page_event .sec_product.is_noBack {
-  padding: 32px 0 40px;
+  padding: 24px 0 40px;
 }
 .page_event .sec_product.is_noBack .tit_area {
   margin-bottom: 20px;
@@ -9696,6 +9696,34 @@ footer .f_company {
     padding: 0;
   }
 }
+.conts_box_slide {
+  padding: 24px 0 60px;
+}
+.conts_box_slide .inner {
+  padding: 0 0 0 20px;
+}
+.conts_box_slide .tit_area {
+  margin-bottom: 20px;
+}
+.conts_box_slide .tit_area h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+.conts_box_slide .conts_box_list > li {
+  padding: 0;
+}
+.conts_box_slide .conts_box_list .conts_box .info {
+  height: 142px;
+  padding: 0 8px;
+}
+.conts_box_slide .conts_box_list .conts_box .bottom {
+  margin-top: auto;
+}
+.conts_box_slide .conts_box_list .conts_box .img {
+  aspect-ratio: 2.6/2;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
