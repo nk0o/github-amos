@@ -1467,6 +1467,20 @@ p {
 }
 
 /* Commerce */
+.ico_receipt::before {
+  background-image: url("../images/icon/ico_receipt.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_receipt::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_receipt.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_filter::before {
   background-image: url("../images/icon/ico_filter.svg");
   background-size: cover;
@@ -1900,6 +1914,20 @@ p {
   .ico_notice::before {
     background-color: #777777;
     mask-image: url("../images/icon/ico_notice.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
+.ico_logout::before {
+  background-image: url("../images/icon/ico_logout.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_logout::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_logout.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -2640,7 +2668,7 @@ button:disabled *[class*=ico_]::before {
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.23;
+  line-height: 1;
 }
 .btn_bottom {
   width: 100%;
@@ -2922,7 +2950,7 @@ button:disabled *[class*=ico_]::before {
   left: 18px;
 }
 .btn_toggle.txt_in_toggle {
-  height: 24px;
+  height: 32px;
 }
 .btn_toggle.txt_in_toggle input:checked + label {
   background-color: #eeeeee;
@@ -2934,7 +2962,8 @@ button:disabled *[class*=ico_]::before {
   color: #ffffff;
 }
 .btn_toggle.txt_in_toggle input:checked + label::after {
-  left: 0;
+  width: 50px;
+  left: 10px;
   transform: translateX(100%);
 }
 .btn_toggle.txt_in_toggle label {
@@ -2945,17 +2974,17 @@ button:disabled *[class*=ico_]::before {
   -webkit-box-align: center;
   align-items: center;
   width: auto;
+  height: 32px;
   background-color: #eeeeee;
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.23;
 }
 .btn_toggle.txt_in_toggle label span {
   position: relative;
   z-index: 1;
-  width: 74px;
-  padding: 0 8px;
+  padding: 0 16px;
   font: inherit;
   text-align: center;
 }
@@ -2966,10 +2995,11 @@ button:disabled *[class*=ico_]::before {
   z-index: 0;
   top: 0;
   left: 0;
-  width: 74px;
+  width: 58px;
   height: 100%;
   border-radius: 9999999px;
   background-color: #2A3136;
+  transition: all 0.2s ease-out 0s;
 }
 
 /* File Uploader */
@@ -7178,18 +7208,21 @@ footer .f_company {
 .page_form .login_first {
   max-width: 335px;
   margin: 0 auto;
-  padding: 50px 0 30px 0;
+  padding: 60px 0 30px 0;
 }
 .page_form .login_first .simbol {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+  /* width: 120px;
+  height: 120px; */
   margin: 0 auto;
 }
 .page_form .login_first .simbol img {
-  width: 100%;
+  max-width: 100%;
+}
+.page_form .login_first .simbol + .info_area {
+  padding-top: 60px;
 }
 .page_form .login_first .info_area .input_group {
   padding: 0;
@@ -7909,58 +7942,63 @@ footer .f_company {
 }
 
 .order_view {
-  padding: 20px 0 20px;
-}
-.order_view .accord_head {
-  border-bottom: 1px solid #eee;
-}
-.order_view .accord_head:last-child {
-  border-bottom: 0;
-}
-.order_view .accord_tit {
-  border-bottom: 0;
-}
-.order_view .accord_cont .order_info_list {
-  margin-top: 0;
-}
-.order_view .accord_cont .btn_group {
-  padding: 0;
-  margin-top: 20px;
-}
-.order_view .order_info_top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.order_view .order_info_top .date {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-}
-.order_view .order_info_top .order_num {
-  color: #777;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 26px;
-}
-.order_view .order_info_top .order_num span {
-  margin-left: 6px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 17px;
-  vertical-align: -1px;
-}
-.order_view .order_detail_box {
-  margin-top: 16px;
-  width: 100%;
-  height: 463px;
-  background-color: #F6F6F6;
+  padding: 20px 0 40px;
+  /* .accord_head {
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  .accord_tit{
+    border-bottom: 0;
+  }
+  .accord_cont {
+    .order_info_list {
+      margin-top: 0;
+    }
+    .btn_group {
+      padding: 0;
+      margin-top: 20px;
+    }
+  } 
+  .order_info_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .date {
+      font-size: 18px;
+      font-weight: $fw-m;
+      line-height: 26px;
+    }
+    .order_num {
+      color: #777;
+      font-size: 12px;
+      font-weight: $fw-m;
+      line-height: 26px;
+      span {
+        margin-left: 6px;
+        font-size: 14px;
+        font-weight: $fw-l;
+        line-height: 17px;
+        vertical-align: -1px;
+      }
+    }
+  }
+  .order_detail_box {
+    margin-top: 16px;
+    width: 100%;
+    height: 463px;
+    background-color:#F6F6F6;
+  }    
+  */
 }
 .order_view .modal_container .scroll_inner {
   padding: 20px 10px 0;
 }
-.order_view .modal_container .order_info_list > li + li {
-  margin-top: 10px;
+.order_view .modal_container .order_info_list > li {
+  margin: 0;
+  padding: 5px 0;
+  border: 0;
 }
 .order_view .modal_body {
   padding-bottom: 70px;
@@ -7993,19 +8031,21 @@ footer .f_company {
   line-height: 24px;
 }
 
-.order_info_list {
-  margin-top: 12px;
-}
 .order_info_list > li {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 16px 0 0;
+  margin-top: 16px;
+  border-top: 1px solid #eeeeee;
 }
-.order_info_list > li + li {
-  margin-top: 12px;
+.order_info_list > li:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 .order_info_list > li > em {
-  width: 100px;
+  flex: 0 0 72px;
   color: #888;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   font-size: 15px;
@@ -8026,6 +8066,40 @@ footer .f_company {
 }
 .order_info_list + .info_accord {
   margin-top: 16px;
+}
+.order_info_list .price {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.order_info_list .price em {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.order_info_list .price span {
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2142;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.order_info_list .date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.order_info_list .date .time {
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1.23;
 }
 
 .info_accord {
@@ -8948,15 +9022,27 @@ footer .f_company {
   margin-top: 8px;
 }
 .history_search .view_point .point_list em {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1;
 }
 .history_search .view_point .point_list .point {
-  font-size: 18px;
+  color: inherit;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.445;
+  text-transform: uppercase;
   color: #1A63D9;
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.history_search .view_point .point_list .point em {
+  font: inherit;
+}
+.history_search .view_point .point_list .point.remaining {
+  color: #222222;
 }
 .history_search .view_point .point_list .point.used {
   color: #777;
@@ -11010,54 +11096,11 @@ footer .f_company {
   flex: 1 1 auto;
 }
 
-.center_area {
-  margin-top: auto;
-  width: 100%;
-  padding: 24px 20px 40px 20px;
-  background-color: #EFF6FF;
+.my_logout.btn_group {
+  margin-top: 24px;
 }
-.center_area .center_link {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 8px;
-  color: #222222;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.center_area .center_link .ico_chevNext_20_20 {
-  margin-top: 1px;
-}
-.center_area .center_link .ico_chevNext_20_20::before {
-  background-color: #2A3136;
-}
-.center_area .center_tel {
-  display: inline-flex;
-  margin-bottom: 8px;
-  color: #222222;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.3636;
-}
-.center_area .center_hour {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 4px;
-}
-.center_area .center_hour li {
-  color: #777777;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 1.23;
-  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
-}
-.center_area .center_notice {
-  margin-bottom: 2px;
-  color: #444444;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  line-height: 1.23;
+.my_logout *[class*=btn_].btn_border *[class*=ico_]::before {
+  background-color: #888888 !important;
 }
 
 .user_info {
@@ -11790,4 +11833,63 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.333;
+}
+
+/********** 고객센터 **********/
+.center_box {
+  margin-top: 12px;
+  padding: 20px;
+  background-color: #EFF6FF;
+  border-radius: 8px;
+}
+.center_link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4445;
+}
+.center_link .ico_chevNext_20_15 {
+  margin-top: 1px;
+}
+.center_link .ico_chevNext_20_15::before {
+  background-color: #2A3136;
+}
+.center_tel {
+  display: inline-flex;
+  margin-top: 8px;
+  color: #222222;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4445;
+}
+.center_hour {
+  margin-top: 8px;
+  display: flex;
+  gap: 20px;
+}
+.center_hour li {
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.385;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.center_notice {
+  margin-top: 4px;
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.23;
+}
+.center_menu {
+  padding: 12px 0 32px;
+}
+.center_board {
+  padding: 24px 0 20px;
+}
+.center_board .board_list {
+  padding-top: 0;
 }/*# sourceMappingURL=style.css.map */

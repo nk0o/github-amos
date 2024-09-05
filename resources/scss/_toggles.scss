@@ -81,7 +81,7 @@
   }
   //글자 품은 토글버튼
   &.txt_in_toggle{
-    height: 24px;
+    height: 32px;
     input{
       &:checked + label{
         background-color: $gray-100;
@@ -94,7 +94,8 @@
           }
         }
         &::after{
-          left: 0;
+          width: 50px;
+          left: 10px;
           transform: translateX(100%);
         }
       }
@@ -102,13 +103,13 @@
     label{
       @include flexCenter;
       width:auto;
+      height: 32px;
       background-color: $gray-100;
-      @include fontStyle($color-white, $fs-xxs, $fw-m, 1);
+      @include fontStyle($color-white, $fs-xs, $fw-m, 1.23);
       span{
         position: relative;
         z-index: 1;
-        width: 74px;
-        padding: 0 8px;
+        padding: 0 16px;
         font:inherit;
         text-align: center;
         &:last-child{
@@ -119,10 +120,11 @@
         z-index: 0;
         top: 0;
         left: 0;
-        width: 74px;
+        width: 58px;
         height: 100%;
         border-radius: 9999999px;
         background-color:$color-primary;
+        transition: all 0.2s ease-out 0s;
       }
     }
   }
