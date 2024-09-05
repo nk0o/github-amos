@@ -550,16 +550,19 @@
   .login_first {
     max-width:  335px;
     margin: 0 auto;
-    padding: 50px 0 30px 0;
+    padding: 60px 0 30px 0;
     .simbol {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 120px;
-      height: 120px;
+      /* width: 120px;
+      height: 120px; */
       margin: 0 auto;
       img {
-        width: 100%;
+        max-width: 100%;
+      }
+      & + .info_area{
+        padding-top: 60px;
       }
     }
     .info_area {
@@ -2368,15 +2371,21 @@
         margin-top: 8px;
       }
       em {
-        font-size: 15px;
-        font-weight: $fw-sb;
-        line-height: 20px;
+        display:inline-flex;
+        align-items: center;
+        @include fontStyle(inherit, $fs-sm, $fw-b, 1);
       }
       .point {
-        font-size: 18px;
-        font-weight: $fw-m;
-        line-height: 20px;
+        @include fontStyle(inherit, $fs-ml, $fw-m, 1.445);
+        text-transform: uppercase;
         color: #1A63D9;
+        font-family:$font-gotham;
+        em{
+          font:inherit;
+        }
+        &.remaining{
+          color: $gray-950;
+        }
         &.used {
           color: #777;
         }

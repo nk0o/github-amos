@@ -324,6 +324,11 @@
       @include iconImgPath("ico_notice.svg");
     }
   }
+  &_logout{
+    &::before {
+      @include iconImgPath("ico_logout.svg");
+    }
+  }
   &_speaker{
     &::before {
       background: transparent url("../../resources/images/icon/ico_speaker.svg") center/contain no-repeat !important;

@@ -17,6 +17,28 @@ var include = {
     document.write('<link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css"></link>');
     document.write('<link rel="stylesheet" href="../../resources/css/style.css"></link>');
   },
+  mainAppBarTypeApp: function () {
+    document.write(`
+      <div class="appbar">
+        <div class="inner">
+          <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
+          <div class="btn_toggle txt_in_toggle">
+            <input type="checkbox"/>
+            <!-- 240905 문구수정 -->
+            <label>
+              <span>PRO</span>
+              <span>TV</span>
+            </label>
+          </div>
+          <div class="appbar_util">
+            <button class="ico_search ico_24"><div class="hide">검색</div></button>
+            <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
+            <button class="ico_bell ico_24"><div class="hide">앱알림</div><span class="badge_round bg_primary">8</span></button>
+          </div>
+        </div>
+      </div><!-- //.appbar -->
+    `)
+  },
   mainAppBar: function () {
     document.write(`
       <div class="appbar">
@@ -24,9 +46,10 @@ var include = {
           <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
           <div class="btn_toggle txt_in_toggle">
             <input type="checkbox"/>
+            <!-- 240905 문구수정 -->
             <label>
-              <span>뉴플랫폼</span>
-              <span>AMOS TV</span>
+              <span>PRO</span>
+              <span>TV</span>
             </label>
           </div>
           <div class="appbar_util">
@@ -44,9 +67,10 @@ var include = {
           <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
           <div class="btn_toggle txt_in_toggle">
             <input type="checkbox"/>
+            <!-- 240905 문구수정 -->
             <label>
-              <span>뉴플랫폼</span>
-              <span>AMOS TV</span>
+              <span>PRO</span>
+              <span>TV</span>
             </label>
           </div>
           <div class="appbar_util">
