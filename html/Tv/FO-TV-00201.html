@@ -19,17 +19,11 @@
     <!-- //header -->
     <main id="container" class="page_tv_main">
       <section class="sec_visual">
-        <div id="mainTopSwiper" class="swiper swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
-            <div class="swiper-slide"><a href="#"><img src="../../resources/images/main/img_tv_top_slide01.png" alt=""></a></div>
+        <div class="inner">
+          <div class="img">
+            <img src="../../resources/images/main/img_tv_top_slide01.png" alt="">
           </div>
-          <div class="swiper-pagination"></div>
-        </div><!-- //.swiper-container -->
+        </div>
       </section><!-- //.sec_visual -->
     
       <section class="sec_conts">
@@ -598,26 +592,5 @@
   <script>include.floatingSide();</script>
   <!-- //floatingSide -->
 </body>
-
-<script>
-  $(document).ready(function () {
-    const mainSwiper1 = new Swiper('#mainTopSwiper', {
-      slidesPerView: 1,
-      pagination: {
-        el: "#mainTopSwiper .swiper-pagination",
-        type: "fraction",
-      },
-      loop:true,
-      observer: true,
-      observeParents: true,
-      breakpoints: {
-        1024: {
-          slidesPerView: "auto",
-          spaceBetween: 2,
-        },
-      },
-    });
-  })
-</script>
 
 </html>
