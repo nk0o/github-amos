@@ -1643,15 +1643,16 @@
 }
 
 .board_list {
+  padding-top: 4px;
   >li {
     &+li {
       border-top: 1px solid #eee;
     }
-    &:first-child{
+    /* &:first-child{
       & > a{
         padding-top: 24px;
       }
-    }
+    } */
     >a {
       display: block;
       padding: 20px 0;
@@ -1689,6 +1690,20 @@
       @include fontStyle($gray-600, $fs-s, $fw-sb, 1.3571);
     }
   }
+  &_top {
+    @include flexBetween;
+    padding: 28px 0 0;
+    .count {
+      font-size: $fs-xs;
+      color: $gray-600;
+      span {
+        em {
+          color: $gray-950;
+          font-weight: $fw-m;
+        }
+      }
+    }
+  }
 }
 
 .no_data {
@@ -1714,6 +1729,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
+      gap:16px;
       .date {
         @include fontStyle($gray-500, $fs-xs, $fw-l, 1);
       }
@@ -1722,6 +1738,7 @@
         @include fontStyle($gray-600, $fs-s, $fw-sb, 1.143);
       }
       .view {
+        margin-left: auto;
         @include fontStyle($gray-700, $fs-xs, $fw-l, 1);
         &::before {
           display: inline-block;
@@ -1736,8 +1753,13 @@
     }
     .tit {
       display: block;
+      display: flex;
+      gap:4px;
       font-family: 'Arita-dotum';
       @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
+      .badge_notice{
+        margin-top: 2px;
+      }
     }
   }
   .detail_cont {
@@ -2854,7 +2876,6 @@
     }
   }
 }
-
 .conts_box_detail {
   .info {
     margin-top:16px;
