@@ -1467,6 +1467,20 @@ p {
 }
 
 /* Commerce */
+.ico_receipt::before {
+  background-image: url("../images/icon/ico_receipt.svg");
+  background-size: cover;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .ico_receipt::before {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_receipt.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
+}
 .ico_filter::before {
   background-image: url("../images/icon/ico_filter.svg");
   background-size: cover;
@@ -2654,7 +2668,7 @@ button:disabled *[class*=ico_]::before {
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.23;
+  line-height: 1;
 }
 .btn_bottom {
   width: 100%;
@@ -7928,58 +7942,63 @@ footer .f_company {
 }
 
 .order_view {
-  padding: 20px 0 20px;
-}
-.order_view .accord_head {
-  border-bottom: 1px solid #eee;
-}
-.order_view .accord_head:last-child {
-  border-bottom: 0;
-}
-.order_view .accord_tit {
-  border-bottom: 0;
-}
-.order_view .accord_cont .order_info_list {
-  margin-top: 0;
-}
-.order_view .accord_cont .btn_group {
-  padding: 0;
-  margin-top: 20px;
-}
-.order_view .order_info_top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.order_view .order_info_top .date {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-}
-.order_view .order_info_top .order_num {
-  color: #777;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 26px;
-}
-.order_view .order_info_top .order_num span {
-  margin-left: 6px;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 17px;
-  vertical-align: -1px;
-}
-.order_view .order_detail_box {
-  margin-top: 16px;
-  width: 100%;
-  height: 463px;
-  background-color: #F6F6F6;
+  padding: 20px 0 40px;
+  /* .accord_head {
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  .accord_tit{
+    border-bottom: 0;
+  }
+  .accord_cont {
+    .order_info_list {
+      margin-top: 0;
+    }
+    .btn_group {
+      padding: 0;
+      margin-top: 20px;
+    }
+  } 
+  .order_info_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .date {
+      font-size: 18px;
+      font-weight: $fw-m;
+      line-height: 26px;
+    }
+    .order_num {
+      color: #777;
+      font-size: 12px;
+      font-weight: $fw-m;
+      line-height: 26px;
+      span {
+        margin-left: 6px;
+        font-size: 14px;
+        font-weight: $fw-l;
+        line-height: 17px;
+        vertical-align: -1px;
+      }
+    }
+  }
+  .order_detail_box {
+    margin-top: 16px;
+    width: 100%;
+    height: 463px;
+    background-color:#F6F6F6;
+  }    
+  */
 }
 .order_view .modal_container .scroll_inner {
   padding: 20px 10px 0;
 }
-.order_view .modal_container .order_info_list > li + li {
-  margin-top: 10px;
+.order_view .modal_container .order_info_list > li {
+  margin: 0;
+  padding: 5px 0;
+  border: 0;
 }
 .order_view .modal_body {
   padding-bottom: 70px;
@@ -8012,19 +8031,21 @@ footer .f_company {
   line-height: 24px;
 }
 
-.order_info_list {
-  margin-top: 12px;
-}
 .order_info_list > li {
   display: flex;
   align-items: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 16px 0 0;
+  margin-top: 16px;
+  border-top: 1px solid #eeeeee;
 }
-.order_info_list > li + li {
-  margin-top: 12px;
+.order_info_list > li:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 .order_info_list > li > em {
-  width: 100px;
+  flex: 0 0 72px;
   color: #888;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   font-size: 15px;
@@ -8045,6 +8066,40 @@ footer .f_company {
 }
 .order_info_list + .info_accord {
   margin-top: 16px;
+}
+.order_info_list .price {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.order_info_list .price em {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.order_info_list .price span {
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2142;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.order_info_list .date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.order_info_list .date .time {
+  color: #888888;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1.23;
 }
 
 .info_accord {

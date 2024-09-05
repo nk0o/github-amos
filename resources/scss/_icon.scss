@@ -159,6 +159,11 @@
 }
 /* Commerce */
 .ico {
+  &_receipt {
+    &::before {
+      @include iconImgPath("ico_receipt.svg");
+    }
+  }
   &_filter {
     &::before {
       @include iconImgPath("ico_filter.svg");
