@@ -242,6 +242,22 @@
   }
 }
 .cate{
+  &_pro, &_tv{
+    display: none;
+    &.is_show{
+      display: block;
+    }
+  }
+  &_pro{
+    .cate_list{
+      padding-bottom: 33vh;
+    }
+  }
+  &_tv{
+    .cate_list{
+      padding-bottom: 45vh;
+    }
+  }
   &_tit{
     @include fontStyle($gray-600, $fs-s, $fw-m, 2.285);
   }
@@ -252,12 +268,14 @@
     overflow-y: auto;
   }
   &_nav{
-    flex:0 0 125px;
+    flex:none;
+    min-width: 125px;
     height: 100%;
     background-color: $gray-50;
     ul{
       height: 100%;
       overflow-y: auto;
+      @include verticalScroll;
     }
     li.active{
       a{

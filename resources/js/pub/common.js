@@ -19,7 +19,7 @@ $(document).ready(function () {
   tabSlider();
   LineTabMenuInit();
   toggleBtnDisabled();
-
+  categoryToggle();
   initCountString();
   progressBarUI();
   paginationUI();
@@ -205,6 +205,20 @@ $(document).ready(function () {
       });
     });
   }; */
+
+  
+  function categoryToggle(){
+    $(document).on('click change', '.appbar .btn_toggle input', function(){
+      LineTabMenuInit()
+      if($(this).prop('checked') == false){
+        $('.cate_pro').addClass('is_show');
+        $('.cate_tv').removeClass('is_show');
+      }else{
+        $('.cate_tv').addClass('is_show');
+        $('.cate_pro').removeClass('is_show');
+      }
+    })
+  }
 
   // 상품 담기
   if ($('.prd_list_wrap.ir').length > 0 ) {
@@ -592,14 +606,18 @@ function floatingSideUI(){
   });
   //scroll
   $(".floating_side").stop().hide();
-  $(window).scroll(function (event) {
-    var st = $(this).scrollTop();
-    if(st > 0){
-      $(".floating_side").stop().fadeIn(150);
-    }else{
-      $(".floating_side").stop().fadeOut(150);
-    }
-  })
+  if($(document).height() <= $(window).height()){
+    $(".floating_side").css('display','flex');
+  }else {
+    $(window).scroll(function (event) {
+      var st = $(this).scrollTop();
+      if(st > 0){
+        $(".floating_side").stop().fadeIn(150);
+      }else{
+        $(".floating_side").stop().fadeOut(150);
+      }
+    })
+  }
 }
 
 // 찜하기
@@ -628,7 +646,6 @@ function catecoryUI(){
   $(document).on('click touchend', '.cate_nav li', function(){
     let elName = $(this).find('.cate_tit').attr('href');
     let elPos = $(elName).offset();
-
     scrollTo(0, elPos.top);
     if(!$(this).hasClass("active")){
       cateNavActive(this)
