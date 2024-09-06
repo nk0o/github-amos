@@ -1696,7 +1696,7 @@
         width: 16px;
         height: 16px;
         @include iconImgPath("ico_chev_next_16.svg");
-        background-color: $gray-500;
+        background-color: $gray-500 !important;
       }
     }
     .date {

@@ -8341,7 +8341,7 @@ footer .f_company {
   height: 16px;
   background-image: url("../images/icon/ico_chev_next_16.svg");
   background-size: cover;
-  background-color: #aaaaaa;
+  background-color: #aaaaaa !important;
 }
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
   .board_list > li > a::after {
@@ -10538,9 +10538,6 @@ footer .f_company {
 .cart_check_prd {
   border-top: 8px solid #f6f6f6;
   padding-top: 20px;
-}
-.cart_check_prd.prd_sample .cart_list .order_bnr {
-  margin-top: 0;
 }
 .cart_list {
   padding: 20px 0 32px;
