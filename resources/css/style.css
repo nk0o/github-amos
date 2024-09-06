@@ -6203,7 +6203,6 @@ footer .f_company {
   }
 }
 .prd_list_wrap .prd_box.swiper-slide {
-  min-width: 159px;
   max-width: none;
   background-color: #ffffff;
   padding: 8px 0 0 9px;
