@@ -30,6 +30,142 @@
         </div><!-- //.inner -->
       </section><!-- //.srch_top -->
       <section class="srch_content">
+        <!-- 검색인풋 포커스일때 srch_default show 
+            / 검색어 입력중일때  srch_complete show
+            두경우 body에 no_scroll 필요
+        -->
+        <!-- 검색 - 최근검색어/태그 영역 -->
+        <!-- 검색 - 최근검색어/태그 영역 -->
+        <section class="srch_default">
+          <div class="inner">
+            <div class="srch_lastest">
+              <div class="tit">최근검색어</div>
+              <div class="tab_selected_wrap">
+                <div class="tab_menu round_tab swiper swiper-container">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide tab_list"><a href="#">조회조건 01<button class="btn_delete type_x"></button></a></li>
+                    <li class="swiper-slide tab_list"><a href="#">조회조건 02<button class="btn_delete type_x"></button></a></li>
+                    <li class="swiper-slide tab_list"><a href="#">조회조건 03<button class="btn_delete type_x"></button></a></li>
+                    <li class="swiper-slide tab_list"><a href="#">조회조건 04<button class="btn_delete type_x"></button></a></li>
+                    <li class="swiper-slide tab_list"><a href="#">조회조건 05<button class="btn_delete type_x"></button></a></li>
+                  </ul>
+                </div><!-- //.tab_menu -->
+              </div><!-- //.tab_selected_wrap -->
+            </div><!-- //.srch_lastest -->
+            <div class="srch_tag">
+              <div class="tit">태그</div>
+              <!-- 태그 최대 5개 -->
+              <div class="tag_list">
+                <a href="#" class="btn_tag">#열펌</a>
+                <a href="#" class="btn_tag">#영구염모</a>
+                <a href="#" class="btn_tag">#컬러루시드</a>
+                <a href="#" class="btn_tag">#프로스타일</a>
+                <a href="#" class="btn_tag">#퓨어스마트</a>
+              </div>
+            </div><!-- //.srch_tag -->
+          </div><!-- //.inner -->
+        </section><!-- //.srch_default -->
+        <!-- //검색 - 최근검색어/태그 영역 -->
+        <!-- 검색 - 자동완성 영역(검색어 입력시: show) -->
+        <section class="srch_complete">
+          <div class="inner">
+            <!-- 검색 브랜드 -->
+            <div class="releted_list brand">
+              <a href="#" class="list_item srch_brand">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_brand_thumb01.png" alt>
+                </div>
+                <div class="srch_txt"><em class="match_txt">컬러</em>서포트</div>
+                <div class="srch_note">브랜드</div>
+              </a>
+              <a href="#" class="list_item srch_brand">
+                <div class="img">
+                  <img src="../../resources/images/contents/img_brand_thumb06.png" alt>
+                </div>
+                <div class="srch_txt"><em class="match_txt">컬러</em>루시드</div>
+                <div class="srch_note">브랜드</div>
+              </a>
+            </div><!-- //.releted_list -->
+            <!-- // 검색 브랜드 -->
+            <!-- 검색 카테고리 -->
+            <div class="releted_list category">
+              <a href="#" class="list_item">
+                <div class="srch_txt">
+                  <p><em class="match_txt">컬러</em></p>
+                  <span class="ico_20 ico_chevNext_20"></span>
+                  <p>멋내기 <em class="match_txt">컬러</em></p>
+                </div>
+                <div class="srch_note">카테고리</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt">
+                  <p><em class="match_txt">컬러</em></p>
+                  <span class="ico_20 ico_chevNext_20"></span>
+                  <p>새치커버 <em class="match_txt">컬러</em></p>
+                </div>
+                <div class="srch_note">카테고리</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt">
+                  <p><em class="match_txt">컬러</em></p>
+                  <span class="ico_20 ico_chevNext_20"></span>
+                  <p>산성 <em class="match_txt">컬러</em></p>
+                </div>
+                <div class="srch_note">카테고리</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt">
+                  <p><em class="match_txt">컬러</em></p>
+                  <span class="ico_20 ico_chevNext_20"></span>
+                  <p><em class="match_txt">컬러</em>서포트</p>
+                </div>
+                <div class="srch_note">카테고리</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt">
+                  <p>헤어케어</p>
+                  <span class="ico_20 ico_chevNext_20"></span>
+                  <p><em class="match_txt">컬러</em>케어</p>
+                </div>
+                <div class="srch_note">카테고리</div>
+              </a>
+            </div><!-- //.releted_list -->
+            <!-- // 검색 카테고리 -->
+          </div><!-- //.inner -->
+          <hr class="hr_divider">
+          <!-- 검색 상품명 -->
+          <div class="inner">
+            <div class="releted_list product">
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 1</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 2</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 2</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 3</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 4</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 5</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 6</div>
+              </a>
+              <a href="#" class="list_item">
+                <div class="srch_txt"><em class="match_txt">컬러</em>가 포함된 상품명 7</div>
+              </a>
+            </div><!-- //.releted_list -->
+          </div><!-- //.inner -->
+          <!-- // 검색 상품명 -->
+        </section><!-- //.srch_complete -->
+        <!-- // 검색 - 자동완성 영역 -->
+        <!-- 검색 - 결과 영역 -->
         <section class="srch_result">
           <div class="tab_center_wrap">
             <div class="inner">
@@ -50,12 +186,12 @@
           <section class="srch_promotion">
             <div class="inner">
               <ul class="accord_list">
-                <li class="accord_head on"><!-- 펼쳐진 상태: on -->
+                <li class="accord_head">
                   <div class="accord_tit order_bnr">
                     <i class="ico_promotion ico_20"></i>
                     <span class="txt_extra">7월 프로모션</span>
-                  </div><!-- //.accord_tit -->
-                  <div class="accord_cont" style="display: block;"><!-- 펼쳐진 상태: style -->
+                  </div>
+                  <div class="accord_cont">
                     <ul class="gift_list">
                       <li class="prd_box">
                         <div class="prd">
@@ -82,7 +218,7 @@
                         </div><!-- //.prd -->
                       </li>
                     </ul>
-                  </div><!-- //.accord_cont -->
+                  </div>
                 </li>
               </ul>
             </div><!-- //.inner -->
@@ -104,7 +240,8 @@
                   </div>
                 </div>
                 <!-- //옵션값 -->
-                <!-- 필터 상세보기 --><!-- 필터 있는 경우: 버튼 active 클래스 -->
+                <!-- 필터 상세보기 -->
+                <!-- 필터 있는 경우: 버튼 active 클래스 -->
                 <button class="ico_filter ico_24" data-btmsheet="btmSheet02"></button>
                 <!-- //필터 상세보기 -->
               </div><!-- //.prd_list_top -->
@@ -120,7 +257,7 @@
                         <span class="badge bg_primary">묶음</span>
                       </div>
                       <div class="info">
-                        <!-- 검색페이지만 해당: info안 badge 영역 필요(없을시 문구, badge_promotion 클래스 삭제) -->
+                        <!-- 검색페이지만 해당 info안 badge 영역 필요(없을시 문구, badge_promotion 클래스 삭제) -->
                         <span class="badge badge_promotion">프로모션</span>
                         <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시샴푸 프레시</strong>
                         <span class="detail">강력한 비듬 케어 효과와 개운한 세정력으로 미세먼지부터 각질까지 케어해주는 두피 청정 샴푸</span>
@@ -279,9 +416,9 @@
                       <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
                     </div>
                   </div><!-- //.prd_box -->
-                </div><!-- //.prd_list_lg -->
+                </div>
                 <!-- //썸네일형 -->
-              </div><!-- //.prd_list_wrap -->
+              </div>
               <!-- //상품 리스트 -->
               <!-- 상품담기 버튼 -->
               <div class="prd_cart_btn">
@@ -290,24 +427,19 @@
                   <span>상품담기</span>
                   <span class="count">(0)</span>
                 </button>
-              </div><!-- //.prd_cart_btn -->
+              </div>
               <!-- //상품담기 버튼 -->
             </div>
           </section><!-- //.prd_cont -->
         </section><!-- //.srch_result -->
+        <!-- //검색 - 결과 영역 -->
       </section><!-- //.srch_content -->
-    </main><!-- //#container -->
-    <!-- footer -->
-    <script>include.footer();</script>
-    <!-- //footer -->
+    </main>
+    <!-- //#container -->
     <!-- tabBar -->
     <script>include.tabBar();</script>
     <!-- //tabBar -->
   </div><!-- //#wrap -->
-
-  <!-- floatingSide -->
-  <script>include.floatingSide();</script>
-  <!-- //floatingSide -->
 
   <!-- Bottom Sheet -->
   <div class="btm_sheet" id="btmSheet01">
@@ -601,6 +733,24 @@
   <script>
     $(document).ready(function(){
       $(".appbar_tit").html("통합상품 검색")
+
+      //검색
+      if($('.srch_default').hasClass('show') ||  $('.srch_complete').hasClass('show')){
+        $("body").addClass('no_scroll');
+      }else{
+        $("body").removeClass('no_scroll');
+      }
+      if(!$('.srch_default').hasClass('show')){
+        $('.srch_top').find('input').focus(function(){
+          $('.srch_default').addClass('show');
+        })
+      }
+      $('.srch_top input').keypress(function(){
+        if($('.srch_top').find('input').val().length < 1){
+          $('.srch_default').removeClass('show');
+          $('.srch_complete').addClass('show');
+        }
+      })
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

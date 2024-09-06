@@ -39,6 +39,13 @@
   .order_accord + .order_accord{
     border-top:8px solid $gray-50;
   }
+  //Br 줄바꿈
+  .br_mo{
+    display:inline-block;
+    @media (max-width: $moForm-point) {
+      display: block;
+    }
+  }
 }
 .sign_notice{
   padding: 24px 20px 0;
@@ -772,7 +779,7 @@
         }
       }
       .btn_group{
-        margin: 20px 0px 0px;
+        margin: 24px 0px 0px;
         padding: 0;
       }
       .inquiry_outer{
@@ -1013,7 +1020,7 @@
   .order_accord {
     .accord_cont {
       .btn_group{
-        margin:20px auto 0px;
+        margin:24px auto 0px;
       }
     }
   }
@@ -1564,6 +1571,11 @@
   }
 }
 /********** 검색 **********/
+.page_search{
+  display:flex;
+  flex-direction:column;
+
+}
 .tag_list{
   display: flex;
   flex-wrap: wrap;
@@ -1571,11 +1583,12 @@
 }
 .srch{
   &_top{
+    z-index: 1;
     position: fixed;
     left:0;
     top: $subheader-H;
     width: 100%;
-    padding: 24px 0 0;
+    padding: 24px 0 16px;
     background-color: $color-white;
   }
   &_txt{
@@ -1612,25 +1625,39 @@
     margin-left: auto;
     @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
   }
-}
-.srch_lastest{
-  margin-bottom: 32px;
-  .tab_selected_wrap{
-    margin: 0 -20px 0;
+  &_lastest{
+    margin-bottom: 32px;
+    .tab_selected_wrap{
+      margin: 0 -20px 0;
+    }
   }
 }
-.srch_result,
+.srch_content{
+  position:relative;
+  .srch_result,
+  .srch_default,
+  .srch_complete{
+    width: 100%;
+    background-color: $color-white;
+    overflow-y: auto;
+  }
+}
 .srch_default,
 .srch_complete{
-  position: fixed;
-  top: calc($subheader-H + 68px);
+  margin-top: 88px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-top: 20px;
-  height: calc(100dvh - $subheader-H - 68px - $btmbar-H - 20px);
-  background-color: $color-white;
-  overflow-y: auto;
+  height: calc(100dvh - $subheader-H - 88px);
+  @include customScroll(transparent, $width:0, $height:0)
 }
-.srch_default{
+.srch_default{//검색어 입력전 기본
+  z-index: 2;
+  display: none;
+  &.show{
+    display: block;
+  }
   .tit{
     display: flex;
     align-items: center;
@@ -1638,8 +1665,8 @@
     @include fontStyle($gray-950, $fs-m, $fw-b, 1.5);
   }
 }
-.srch_complete{
-  z-index: 1;
+.srch_complete{//검색어 입력시
+  z-index: 3;
   display: none;
   &.show{
     display: block;
@@ -1649,58 +1676,50 @@
     flex-direction: column;
     align-items: stretch;
     padding: 20px 0;
+    .img{
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background-color: $gray-50;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &.brand{
+      padding-top: 0;
+      gap: 12px;
+      .list_item{
+        gap: 16px;
+      }
+    }
+    &.category{
+      gap: 8px;
+      border-top: 1px solid $gray-100;
+      .list_item{
+        padding: 8px 0;
+      }
+      .srch_txt{
+        @include flexStart;
+        gap: 2px;
+      }
+    }
+    &.product{
+      gap: 4px;
+      .list_item{
+        padding: 12px 0;
+      }
+    }
   }
   .list_item{
     @include flexStart;
   }
 }
-.releted_list{
-  .img{
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    background-color: $gray-50;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &.brand{
-    padding-top: 0;
-    gap: 12px;
-    .list_item{
-      gap: 16px;
-    }
-  }
-  &.category{
-    gap: 8px;
-    border-top: 1px solid $gray-100;
-    .list_item{
-      padding: 8px 0;
-    }
-    .srch_txt{
-      @include flexStart;
-      gap: 2px;
-    }
-  }
-  &.product{
-    gap: 4px;
-    .list_item{
-      padding: 12px 0;
-    }
-  }
-}
-.srch_result{
-  margin-top: 16px;
-  height: calc(100dvh - $subheader-H - 68px - $btmbar-H - 16px);
-/*   .tab_selected_wrap{
-    z-index: 1;
-    position: sticky;
-    top: 0;
-    background-color: $color-white;
-  } */
-
+.srch_result{//검색결과 상품리스트
+  position: relative;
+  z-index: 1;
+  margin-top: 84px;
   .tab_selected_wrap{
     margin: -8px -20px 20px -20px;
     @media (min-width: $pc-point) {
@@ -1725,6 +1744,7 @@
     }
   }
 }
+
 .srch_promotion{
   margin: 20px 0;
   .order_bnr {
