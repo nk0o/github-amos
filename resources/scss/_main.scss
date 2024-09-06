@@ -268,8 +268,7 @@
     overflow-y: auto;
   }
   &_nav{
-    flex:none;
-    min-width: 125px;
+    flex:0 0 125px;
     height: 100%;
     background-color: $gray-50;
     ul{

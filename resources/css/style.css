@@ -6555,8 +6555,7 @@ footer .f_company {
   overflow-y: auto;
 }
 .cate_nav {
-  flex: none;
-  min-width: 125px;
+  flex: 0 0 125px;
   height: 100%;
   background-color: #f6f6f6;
 }
