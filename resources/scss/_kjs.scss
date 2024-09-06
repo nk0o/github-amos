@@ -312,9 +312,11 @@
   text-align: center;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
   .btn_bottom {
-    display: block;
-    width: 200px;
     margin: 0 auto;
+    padding: 0 24px;
+    .count{
+      @include fontStyle(#FFE7A9, $fs-ml, $fw-m, 1.4445);
+    }
   }
   .cart_txt {
     display: none;

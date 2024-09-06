@@ -2686,10 +2686,6 @@ button:disabled *[class*=ico_]::before {
 .btn_bottom *[class*=ico_]::before {
   background-color: #ffffff !important;
 }
-.btn_bottom .count {
-  margin-left: -4px;
-  font-weight: 400;
-}
 .btn_floating {
   display: block;
   width: 40px;
@@ -7015,9 +7011,14 @@ footer .f_company {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 .prd_cart_btn .btn_bottom {
-  display: block;
-  width: 200px;
   margin: 0 auto;
+  padding: 0 24px;
+}
+.prd_cart_btn .btn_bottom .count {
+  color: #FFE7A9;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4445;
 }
 .prd_cart_btn .cart_txt {
   display: none;
