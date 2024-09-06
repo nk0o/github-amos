@@ -694,7 +694,7 @@ function prdSlider(){
     
     // spaceBetweenValue2 부모에 .is_noBack 클래스가 있는지 확인
     let hasIsNoBack = swiperContainer && swiperContainer.parents('.sec_product').hasClass('is_noBack');
-    let slidesPerViewValue = hasIsNoBack ? 2.26 : 2.47;
+    let slidesPerViewValue = hasIsNoBack ? 2.26 : 2.23;
     let spaceBetweenValue = hasIsNoBack ? 8 : 0;
     //let slidesOffsetAfterValue = /iPhone/i.test(navigator.userAgent) && hasIsNoBack ? 80 : 0;
     

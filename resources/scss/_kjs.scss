@@ -2758,7 +2758,7 @@
     }
   }
   .sec_conts {
-    padding: 34px 0 40px 20px;
+    padding: 24px 0 40px 20px;
     .tit_area {
       margin-bottom: 24px;
       h2 {
@@ -2774,11 +2774,11 @@
   }
   .conts_box_list {
     .info {
-      height: 164px;
+      // height: 164px;
       padding: 0 8px;
     }
     .bottom {
-      margin-top: auto;
+      margin-top: 20px;
     }
   }
 }
@@ -2810,7 +2810,7 @@
     }
     &.conts_more{
       @include flexCenter;
-      min-height: 344px;
+      min-height: 311px;
       padding: 0;
       margin-left: 0;
       div{
@@ -2829,7 +2829,7 @@
   .info {
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   .cate {
     margin: 0 0 4px;
@@ -2865,7 +2865,7 @@
     line-height: 26px;
     white-space: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     word-wrap: normal;
@@ -2873,14 +2873,14 @@
     word-break: break-all;
   }
   .txt {
-    margin-top: 6px;
+    margin-top: 4px;
     color: #666;
     font-size: 15px;
     font-weight: $fw-m;
     line-height: 22px;
     white-space: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     word-wrap: normal;
@@ -2907,7 +2907,8 @@
       font-weight: $fw-l;
       line-height: 16px;
       i {
-        vertical-align: -2px;
+        vertical-align: -3px;
+        margin-right: 2px;
       }
     }
   }
@@ -2918,10 +2919,15 @@
     padding-bottom: 40px;
     .top {
       margin-top:0;
+      .right {
+        i {
+          vertical-align: -4px;
+        }
+      }
     }
   }
   .cate {
-    margin:12px 0 0 0;
+    margin:20px 0 0 0;
   }
   .tit {
     margin-top:4px;
@@ -2942,6 +2948,7 @@
     .sec_conts {
       max-width: 1024px;
       margin: 0 auto;
+      padding: 34px 20px 40px 20px;
     }
     .hr_divider {
       margin: 0;
@@ -3013,7 +3020,7 @@
 
 .page_tv_datail {
   .sec_product.is_noBack  {
-    padding: 32px 0 40px;
+    padding: 24px 0 40px;
     .tit_area {
       margin-bottom: 20px;
       h2 {
@@ -3077,7 +3084,7 @@
       }
     }
     .conts_box {
-      > a {
+      > div {
         display: flex;
         gap: 16px;
         .img {
@@ -3086,6 +3093,7 @@
           height: 26.666666%;
           min-height: 100px;
           flex-shrink: 0;
+          aspect-ratio: 1;
           img {
             width: 100%;
             height: 100%;
@@ -3098,7 +3106,7 @@
 }
 
 .conts_row_sec {
-  padding: 20px 0 60px;
+  padding: 24px 0 60px;
   .tit_area {
     margin-bottom: 20px;
     h2 {
@@ -3130,6 +3138,12 @@
     padding: 20px 20px 0;
   }
   .conts_box_list {
+    .tit {
+      -webkit-line-clamp: 2;
+    }
+    .txt {
+      -webkit-line-clamp: 2;
+    }
     >li {
       padding: 20px;
       .info {
@@ -3221,3 +3235,5 @@
     }
   }
 }
+
+
