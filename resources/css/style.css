@@ -8327,10 +8327,31 @@ footer .f_company {
   border-top: 1px solid #eee;
 }
 .board_list > li > a {
+  position: relative;
   display: block;
   padding: 20px 0;
-  background: url("../images/icon/ico_chev_next_16.svg") no-repeat right center;
-  background-size: 16px;
+}
+.board_list > li > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon/ico_chev_next_16.svg");
+  background-size: cover;
+  background-color: #aaaaaa;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .board_list > li > a::after {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_chev_next_16.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
 }
 .board_list > li .date {
   display: block;
@@ -11674,7 +11695,7 @@ footer .f_company {
 }
 
 .srch_top {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   left: 0;
   top: 61px;

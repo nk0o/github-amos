@@ -1684,10 +1684,20 @@
       }
     } */
     >a {
+      position: relative;
       display: block;
       padding: 20px 0;
-      background: url('../images/icon/ico_chev_next_16.svg') no-repeat right center;
-      background-size: 16px;
+      &::after{
+        content: '';
+        position: absolute;
+        top:50%;
+        right:0;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        @include iconImgPath("ico_chev_next_16.svg");
+        background-color: $gray-500;
+      }
     }
     .date {
       display: block;
