@@ -17,238 +17,425 @@
     </header>
     <!-- //header -->
     <main id="container" class="page_category">
-      <div class="tab_menu line_tab">
-        <ul>
-          <li class="current tab_list" data-tab="ctCate"><button>카테고리</button></li>
-          <li class="tab_list" data-tab="ctBrand"><button>브랜드라인</button></li><!-- 240903 문구수정 -->
-          <li class="tab_list" data-tab="ctService"><button>서비스</button></li>
-        </ul>
-        <div class="tab_bar" style="width: 125px; left: 0px;"></div>
-      </div>
-      <div class="tab_cont">
-        <div id="ctCate" class="tab_cont_item current"><!-- 열린탭 컨텐츠 current -->
-          <div class="cate_wrap">
-            <div class="cate_nav">
-              <ul>
-                <li class="active"><a href="#ctColor" class="cate_tit">컬러</a></li>
-                <li><a href="#ctPerm" class="cate_tit">펌</a></li>
-                <li><a href="#ctClinic" class="cate_tit">클리닉</a></li>
-                <li><a href="#ctSalonsupport" class="cate_tit">살롱 서포트</a></li>
-                <li><a href="#ctScalpcare" class="cate_tit">스칼프 케어</a></li>
-                <li><a href="#ctCare" class="cate_tit">헤어 케어</a></li>
-                <li><a href="#ctStyling" class="cate_tit">스타일링</a></li>
-              </ul>
-            </div><!-- //.cate_nav -->
-            <div class="cate_list">
-              <div class="item" id="ctColor">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_color ico_24"></i>
-                  <span>컬러</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">멋내기 컬러</a></li>
-                  <li><a href="#" class="cate_tit">새치커버 컬러</a></li>
-                  <li><a href="#" class="cate_tit">산성컬러</a></li>
-                  <li><a href="#" class="cate_tit">컬러 리포트</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctPerm">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_perm ico_24"></i>
-                  <span>펌</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">열펌</a></li>
-                  <li><a href="#" class="cate_tit">일반펌</a></li>
-                  <li><a href="#" class="cate_tit">멀티펌</a></li>
-                  <li><a href="#" class="cate_tit">다운펌</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctClinic">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_clinic ico_24"></i>
-                  <span>클리닉</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">헤어케어 프로그램</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctSalonsupport">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_salonsupport ico_24"></i>
-                  <span>살롱 서포트</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">살롱 전용 베이직 케어</a></li>
-                  <li><a href="#" class="cate_tit">전후처리제</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctScalpcare">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_scalpcare ico_24"></i>
-                  <span>스칼프 케어</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">탈모 헤어</a></li>
-                  <li><a href="#" class="cate_tit">비듬 케어</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctCare">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_care ico_24"></i>
-                  <span>헤어 케어</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">극손상모 케어</a></li>
-                  <li><a href="#" class="cate_tit">손상모 케어</a></li>
-                  <li><a href="#" class="cate_tit">웨이브 케어</a></li>
-                  <li><a href="#" class="cate_tit">컬러 케어</a></li>
-                </ul>
-              </div>
-              <div class="item" id="ctStyling">
-                <a href="#" class="list_tit">
-                  <i class="ico_hair_styling ico_24"></i>
-                  <span>스타일링</span>
-                  <i class="ico_chevNext_20 ico_20"></i>
-                </a>
-                <ul>
-                  <li><a href="#" class="cate_tit">왁스</a></li>
-                  <li><a href="#" class="cate_tit">스프레이</a></li>
-                  <li><a href="#" class="cate_tit">스타일링 기타</a></li>
-                </ul>
-              </div>
-            </div><!-- //.cate_list -->
-          </div><!-- //.cate_wrap -->
-        </div><!-- //.tab_cont_item -->
-        <div id="ctBrand" class="tab_cont_item">
-          <ul class="cate_brand">
-            <li style="background-image: url('../../resources/images/category/img_cate_brand01.png');">
-              <a href="#">잇츠에이블</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand02.png');">
-              <a href="#">트루싱크</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand03.png');">
-              <a href="#">프리즘 믹스</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand04.png');">
-              <a href="#">잇츠글로우</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand05.png');">
-              <a href="#">녹차빛채</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand06.png');">
-              <a href="#">칼라루시드</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand07.png');">
-              <a href="#">칼라 서포트</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand08.png');">
-              <a href="#">열펌</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand09.png');">
-              <a href="#">일반/멀티/다운펌</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand10.png');">
-              <a href="#">리페어 시카</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand11.png');">
-              <a href="#">프로 베이직</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand12.png');">
-              <a href="#">살롱 마스터</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand13.png');">
-              <a href="#">녹차 실감</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand14.png');">
-              <a href="#">퓨어 스마트</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand15.png');">
-              <a href="#">리페어 시카</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand16.png');">
-              <a href="#">리페어 CMC</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand17.png');">
-              <a href="#">컬링</a>
-            </li>
-            <!-- <li style="background-image: url('../../resources/images/category/img_cate_brand18.png');">
-              <a href="#">실키 래디언스</a>
-            </li> -->
-            <li style="background-image: url('../../resources/images/category/img_cate_brand20.png');">
-              <a href="#">스타일링</a>
-            </li>
-            <li style="background-image: url('../../resources/images/category/img_cate_brand19.png');">
-              <a href="#">왁스/스프레이</a>
-            </li>
+      <!-- 240905 Pro/Tv 카테고리 화면 구분 -->
+      <!---- PRO 카테고리 ---->
+      <div class="cate_pro is_show">
+        <div class="tab_menu line_tab">
+          <ul>
+            <li class="current tab_list" data-tab="ctCate"><button>카테고리</button></li>
+            <li class="tab_list" data-tab="ctBrand"><button>브랜드라인</button></li><!-- 240903 문구수정 -->
+            <li class="tab_list" data-tab="ctService"><button>서비스</button></li>
           </ul>
-        </div><!-- //.tab_cont_item -->
-        <div id="ctService" class="tab_cont_item">
-          <div class="cate_service">
-            <ul class="accord_list is_plus">
-              <li class="accord_head"><!-- 펼침상태: on -->
-                <div class="accord_tit">
-                  거래원장
-                  <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+          <div class="tab_bar" style="width: 125px; left: 0px;"></div>
+        </div>
+        <div class="tab_cont">
+          <div id="ctCate" class="tab_cont_item current"><!-- 열린탭 컨텐츠 current -->
+            <div class="cate_wrap">
+              <div class="cate_nav">
+                <ul>
+                  <li class="active"><a href="#ctColor" class="cate_tit">컬러</a></li>
+                  <li><a href="#ctPerm" class="cate_tit">펌</a></li>
+                  <li><a href="#ctClinic" class="cate_tit">클리닉</a></li>
+                  <li><a href="#ctSalonsupport" class="cate_tit">살롱 서포트</a></li>
+                  <li><a href="#ctScalpcare" class="cate_tit">스칼프 케어</a></li>
+                  <li><a href="#ctCare" class="cate_tit">헤어 케어</a></li>
+                  <li><a href="#ctStyling" class="cate_tit">스타일링</a></li>
+                </ul>
+              </div><!-- //.cate_nav -->
+              <div class="cate_list">
+                <div class="item" id="ctColor">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_color ico_24"></i>
+                    <span>컬러</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">멋내기 컬러</a></li>
+                    <li><a href="#" class="cate_tit">새치커버 컬러</a></li>
+                    <li><a href="#" class="cate_tit">산성컬러</a></li>
+                    <li><a href="#" class="cate_tit">컬러 리포트</a></li>
+                  </ul>
                 </div>
-                <!-- 240903 문구수정,거래원장 추가 -->
-                <div class="accord_cont">
-                  <a href="#" class="service_tit">거래원장</a>
-                  <a href="#" class="service_tit">결제내역</a>240904 문구 수정
+                <div class="item" id="ctPerm">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_perm ico_24"></i>
+                    <span>펌</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">열펌</a></li>
+                    <li><a href="#" class="cate_tit">일반펌</a></li>
+                    <li><a href="#" class="cate_tit">멀티펌</a></li>
+                    <li><a href="#" class="cate_tit">다운펌</a></li>
+                  </ul>
                 </div>
+                <div class="item" id="ctClinic">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_clinic ico_24"></i>
+                    <span>클리닉</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">헤어케어 프로그램</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctSalonsupport">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_salonsupport ico_24"></i>
+                    <span>살롱 서포트</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">살롱 전용 베이직 케어</a></li>
+                    <li><a href="#" class="cate_tit">전후처리제</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctScalpcare">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_scalpcare ico_24"></i>
+                    <span>스칼프 케어</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">탈모 헤어</a></li>
+                    <li><a href="#" class="cate_tit">비듬 케어</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctCare">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_care ico_24"></i>
+                    <span>헤어 케어</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">극손상모 케어</a></li>
+                    <li><a href="#" class="cate_tit">손상모 케어</a></li>
+                    <li><a href="#" class="cate_tit">웨이브 케어</a></li>
+                    <li><a href="#" class="cate_tit">컬러 케어</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctStyling">
+                  <a href="#" class="list_tit">
+                    <i class="ico_hair_styling ico_24"></i>
+                    <span>스타일링</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">왁스</a></li>
+                    <li><a href="#" class="cate_tit">스프레이</a></li>
+                    <li><a href="#" class="cate_tit">스타일링 기타</a></li>
+                  </ul>
+                </div>
+              </div><!-- //.cate_list -->
+            </div><!-- //.cate_wrap -->
+          </div><!-- //.tab_cont_item -->
+          <div id="ctBrand" class="tab_cont_item">
+            <ul class="cate_brand">
+              <li style="background-image: url('../../resources/images/category/img_cate_brand01.png');">
+                <a href="#">잇츠에이블</a>
               </li>
-              <li class="accord_head">
-                <div class="accord_tit">
-                  정기교육
-                  <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
-                </div>
-                <div class="accord_cont">
-                  <a href="#" class="service_tit">교육일정</a>
-                  <a href="#" class="service_tit">수강신청</a>
-                  <a href="#" class="service_tit">수강신청 내역</a>
-                </div>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand02.png');">
+                <a href="#">트루싱크</a>
               </li>
-              <li class="accord_head no_open">
-                <a href="" class="accord_tit">
-                  이벤트
-                  <!-- <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button> -->
-                </a>
-                <div class="accord_cont"></div>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand03.png');">
+                <a href="#">프리즘 믹스</a>
               </li>
-              <li class="accord_head">
-                <div class="accord_tit">
-                  고객센터
-                  <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
-                </div>
-                <div class="accord_cont">
-                  <a href="./FO-main-00201.html" class="service_tit">메인</a>
-                  <a href="./../Depth/FO-Detail-00201.html" class="service_tit">공지사항</a>
-                  <a href="#" class="service_tit">1:1 문의</a>
-                  <a href="#" class="service_tit">의견 나눔의 장</a>
-                </div>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand04.png');">
+                <a href="#">잇츠글로우</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand05.png');">
+                <a href="#">녹차빛채</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand06.png');">
+                <a href="#">칼라루시드</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand07.png');">
+                <a href="#">칼라 서포트</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand08.png');">
+                <a href="#">열펌</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand09.png');">
+                <a href="#">일반/멀티/다운펌</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand10.png');">
+                <a href="#">리페어 시카</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand11.png');">
+                <a href="#">프로 베이직</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand12.png');">
+                <a href="#">살롱 마스터</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand13.png');">
+                <a href="#">녹차 실감</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand14.png');">
+                <a href="#">퓨어 스마트</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand15.png');">
+                <a href="#">리페어 시카</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand16.png');">
+                <a href="#">리페어 CMC</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand17.png');">
+                <a href="#">컬링</a>
+              </li>
+              <!-- <li style="background-image: url('../../resources/images/category/img_cate_brand18.png');">
+                <a href="#">실키 래디언스</a>
+              </li> -->
+              <li style="background-image: url('../../resources/images/category/img_cate_brand20.png');">
+                <a href="#">스타일링</a>
+              </li>
+              <li style="background-image: url('../../resources/images/category/img_cate_brand19.png');">
+                <a href="#">왁스/스프레이</a>
               </li>
             </ul>
-          </div>
-        </div><!-- //.tab_cont_item -->
-      </div><!-- //.tab_cont -->
+          </div><!-- //.tab_cont_item -->
+          <div id="ctService" class="tab_cont_item">
+            <div class="cate_service">
+              <ul class="accord_list is_plus">
+                <li class="accord_head"><!-- 펼침상태: on -->
+                  <div class="accord_tit">
+                    거래원장
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <!-- 240903 문구수정,거래원장 추가 -->
+                  <div class="accord_cont">
+                    <a href="#" class="service_tit">거래원장</a>
+                    <a href="#" class="service_tit">결제내역</a><!-- 240904 문구 수정 -->
+                  </div>
+                </li>
+                <li class="accord_head">
+                  <div class="accord_tit">
+                    정기교육
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <div class="accord_cont">
+                    <a href="#" class="service_tit">교육일정</a>
+                    <a href="#" class="service_tit">수강신청</a>
+                    <a href="#" class="service_tit">수강신청 내역</a>
+                  </div>
+                </li>
+                <li class="accord_head no_open">
+                  <a href="" class="accord_tit">
+                    이벤트
+                    <!-- <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button> -->
+                  </a>
+                  <div class="accord_cont"></div>
+                </li>
+                <li class="accord_head">
+                  <div class="accord_tit">
+                    고객센터
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <div class="accord_cont">
+                    <a href="./FO-main-00201.html" class="service_tit">메인</a>
+                    <a href="./../Depth/FO-Detail-00201.html" class="service_tit">공지사항</a>
+                    <a href="#" class="service_tit">1:1 문의</a>
+                    <a href="#" class="service_tit">의견 나눔의 장</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- //.tab_cont_item -->
+        </div><!-- //.tab_cont -->
+      </div><!-- //.cate_pro -->
+      <!---- TV 카테고리 ---->
+      <div class="cate_tv">
+        <div class="tab_menu line_tab">
+          <ul>
+            <li class="current tab_list" data-tab="ctTVCate"><button>카테고리</button></li>
+            <li class="tab_list" data-tab="ctTVService"><button>서비스</button></li>
+          </ul>
+          <div class="tab_bar" style="width: 125px; left: 0px;"></div>
+        </div>
+        <div class="tab_cont">
+          <div id="ctTVCate" class="tab_cont_item current"><!-- 열린탭 컨텐츠 current -->
+            <div class="cate_wrap">
+              <div class="cate_nav">
+                <ul>
+                  <li class="active"><a href="#ctTvRepair" class="cate_tit">01 REPAIR</a></li>
+                  <li><a href="#ctTvBrand" class="cate_tit">BRAND</a></li>
+                  <li><a href="#ctTvColor" class="cate_tit">01 COLOR</a></li>
+                  <li><a href="#ctTvForm" class="cate_tit">01 FORM</a></li>
+                  <li><a href="#ctTvPro" class="cate_tit">01 PRO BASIC</a></li>
+                  <li><a href="#ctTvScalp" class="cate_tit">02 SCALP</a></li>
+                  <li><a href="#ctTvHair" class="cate_tit">03 COLOR</a></li>
+                  <li><a href="#ctTvLive" class="cate_tit">SALON LIVE-ON</a></li>
+                  <li><a href="#ctTvBasic" class="cate_tit">BASIC CLASS</a></li>
+                  <li><a href="#ctTvClass" class="cate_tit">SERVICE CLASS</a></li>
+                  <li><a href="#ctTvGlobal" class="cate_tit">GLOBAL</a></li>
+                  <li><a href="#ctTvSa" class="cate_tit">SA</a></li>
+                </ul>
+              </div><!-- //.cate_nav -->
+              <div class="cate_list">
+                <div class="item" id="ctTvRepair">
+                  <a href="#" class="list_tit">
+                    <span>01 REPAIR / 01 PRO STYLE</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvBrand">
+                  <a href="#" class="list_tit">
+                    <span>BRAND</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvColor">
+                  <a href="#" class="list_tit">
+                    <span>01 COLOR</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvForm">
+                  <a href="#" class="list_tit">
+                    <span>01 FORM</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvPro">
+                  <a href="#" class="list_tit">
+                    <span>01 PRO BASIC / 99 PRO TECHNIC</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvScalp">
+                  <a href="#" class="list_tit">
+                    <span>02 SCALP</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvHair">
+                  <a href="#" class="list_tit">
+                    <span>03 COLOR / 04 WAVE / 05 HAIR</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvLive">
+                  <a href="#" class="list_tit">
+                    <span>SALON LIVE-ON</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvBasic">
+                  <a href="#" class="list_tit">
+                    <span>BASIC CLASS</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvClass">
+                  <a href="#" class="list_tit">
+                    <span>SERVICE CLASS</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvGlobal">
+                  <a href="#" class="list_tit">
+                    <span>GLOBAL</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+                <div class="item" id="ctTvSa">
+                  <a href="#" class="list_tit">
+                    <span>SA</span>
+                    <i class="ico_chevNext_20 ico_20"></i>
+                  </a>
+                  <ul>
+                    <li><a href="#" class="cate_tit">소카테고리</a></li>
+                  </ul>
+                </div>
+              </div><!-- //.cate_list -->
+            </div><!-- //.cate_wrap -->
+          </div><!-- //.tab_cont_item -->
+          <div id="ctTVService" class="tab_cont_item">
+            <div class="cate_service">
+              <ul class="accord_list is_plus">
+                <li class="accord_head"><!-- 펼침상태: on -->
+                  <div class="accord_tit">
+                    거래원장
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <div class="accord_cont">
+                    <a href="#" class="service_tit">거래원장</a>
+                    <a href="#" class="service_tit">결제내역</a>
+                  </div>
+                </li>
+                <li class="accord_head">
+                  <div class="accord_tit">
+                    정기교육
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <div class="accord_cont">
+                    <a href="#" class="service_tit">교육일정</a>
+                    <a href="#" class="service_tit">수강신청</a>
+                    <a href="#" class="service_tit">수강신청 내역</a>
+                  </div>
+                </li>
+                <li class="accord_head no_open">
+                  <a href="" class="accord_tit">
+                    이벤트
+                    <!-- <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button> -->
+                  </a>
+                  <div class="accord_cont"></div>
+                </li>
+                <li class="accord_head">
+                  <div class="accord_tit">
+                    고객센터
+                    <button type="button" class="ico_plus_20 ico_20"><span class="hide">펼침버튼</span></button>
+                  </div>
+                  <div class="accord_cont">
+                    <a href="./FO-main-00201.html" class="service_tit">메인</a>
+                    <a href="./../Depth/FO-Detail-00201.html" class="service_tit">공지사항</a>
+                    <a href="#" class="service_tit">1:1 문의</a>
+                    <a href="#" class="service_tit">의견 나눔의 장</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div><!-- //.tab_cont_item -->
+        </div><!-- //.tab_cont -->
+      </div><!-- //.cate_tv -->
     </main>
     <!-- //#container -->
-    <!-- footer -->
-    <!-- <script>include.footer();</script> -->
-    <!-- //footer -->
     <!-- tabBar -->
     <script>include.tabBar();</script>
     <!-- //tabBar -->
   </div>
-  <!-- floatingSide -->
-  <script>include.floatingSide();</script>
-  <!-- //floatingSide -->
+  <!-- 240905 플로팅 버튼 삭제 -->
 </body>
 </html>

@@ -2696,7 +2696,7 @@ button:disabled *[class*=ico_]::before {
   height: 40px;
   padding: 8px;
   background-color: #ffffff;
-  border-radius: 0;
+  border-radius: 4px;
 }
 .btn_floating *[class*=ico_]::before, .btn_floating[class*=ico_]::before {
   mask-size: 24px;
@@ -2704,6 +2704,9 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_floating.btn_border {
   border-color: #e2e2e2;
+}
+.btn_floating.btn_primary {
+  background-color: #222222 !important;
 }
 .btn_floating.btn_primary *[class*=ico_]::before {
   background-color: #ffffff !important;
@@ -6033,7 +6036,7 @@ header.fixed {
 }
 
 footer {
-  padding: 40px 0 60px;
+  padding: 40px 0 80px;
   background-color: #f6f6f6;
 }
 footer .accord_head {
@@ -6523,6 +6526,18 @@ footer .f_company {
   padding: 0;
 }
 
+.cate_pro, .cate_tv {
+  display: none;
+}
+.cate_pro.is_show, .cate_tv.is_show {
+  display: block;
+}
+.cate_pro .cate_list {
+  padding-bottom: 33vh;
+}
+.cate_tv .cate_list {
+  padding-bottom: 45vh;
+}
 .cate_tit {
   color: #888888;
   font-size: 0.875rem;
@@ -6547,6 +6562,20 @@ footer .f_company {
 .cate_nav ul {
   height: 100%;
   overflow-y: auto;
+}
+.cate_nav ul::-webkit-scrollbar {
+  opacity: 0;
+  width: 7px;
+  background-color: #dddddd;
+}
+.cate_nav ul::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+.cate_nav ul::-webkit-scrollbar-thumb {
+  height: 3px;
+  margin: 0 auto;
+  background-color: #aaaaaa;
+  cursor: pointer;
 }
 .cate_nav li.active a {
   color: #222222;
