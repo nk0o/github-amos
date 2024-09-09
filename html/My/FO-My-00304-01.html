@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>주문취소내역 | 마이페이지 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType1();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_mypage">
+      <div class="btn_group">
+        <button type="button" id="modal04" class="btn_sm btn_primary btn_modal_open">Open Modal - 주문취소</button>
+      </div>
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div><!-- //#wrap -->
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+
+
+
+  <!-------- Modal -------->
+  <div class="modal_container fade" data-modal="modal04">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_header">
+        <h1 class="modal_tit">주문취소</h1>
+      </div>
+      <div class="modal_body">
+        <div class="scroll_inner">
+          <div class="inquiry_outer">
+            <div class="inquiry_box">
+              <strong class="ask_tit">취소 사유를 알려주세요.</strong>
+              <div class="radio_btn_wrap">
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" id="radio-1" class="input_radio" name="radio-item-0" checked="">
+                  <label for="radio-1">고객 변심</label>
+                </div>
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" id="radio-2" class="input_radio" name="radio-item-0">
+                  <label for="radio-2">상품 착오 주문</label>
+                </div>
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" id="radio-3" class="input_radio" name="radio-item-0">
+                  <label for="radio-3">상품 중복 주문</label>
+                </div>
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" id="radio-4" class="input_radio" name="radio-item-0">
+                  <label for="radio-4">대리점 실수</label>
+                </div>
+                <div class="input_radio_wrap type_btn">
+                  <input type="radio" id="radio-5" class="input_radio" name="radio-item-0">
+                  <label for="radio-5">배송 지연</label>
+                </div>
+              </div><!-- //.radio_btn_wrap -->
+            </div><!-- //.inquiry_box -->
+            <div class="inquiry_box">
+              <strong class="ask_tit">취소 사유를 알려주세요.</strong>
+              <div class="input_writing_group">
+                <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                <div class="txt_count">
+                  <p class="current zero">0</p>
+                  <span>/</span>
+                  <p class="total">1000</p>
+                </div>
+              </div>
+            </div><!-- //.inquiry_box -->
+          </div><!-- //.inquiry_outer -->
+          </div><!-- //.scroll_inner -->
+      </div><!-- //.modal_body -->
+      <div class="modal_footer">
+        <div class="btn_group">
+          <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+        </div>
+      </div><!-- //.modal_footer -->
+    </div><!-- //.modal_content -->
+  </div><!-- //.modal_container -->
+  <!-------- // Modal -------->
+
+
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("취소내역")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+
+  <script>
+    $.datepicker.setDefaults({
+      dateFormat: 'yy.mm.dd',
+      showOtherMonths: true,
+      showMonthAfterYear: true,
+      currentText:'오늘',
+      changeYear: false,
+      changeMonth: false,
+      monthNames: [ ".01", ".02", ".03", ".04", ".05", ".06",".07", ".08", ".09", ".10", ".11", ".12" ],
+      showOn: 'both',
+      dayNamesMin:['일','월','화', '수', '목','금','토'],
+      buttonImageOnly: true,
+      showAnim: '',
+      onSelect: function () {
+        let calName =$(this).attr('id');
+        let selectValue = this.value;
+        let toInput = $("input[data-cal='" + calName + "']").val(selectValue)
+        $(this).parents(".modal_container").attr("aria-hidden","true").removeClass('open');
+        $("body").removeClass("no_scroll");
+      }
+    });
+    $('#datepicker').datepicker();
+    $('#datepicker2').datepicker();
+    </script>
+</body>
+</html>
