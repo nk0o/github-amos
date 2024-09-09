@@ -5706,6 +5706,9 @@ div.dataTables_wrapper .btn_floating:focus {
 .appbar.is_line {
   border-bottom: 1px solid #eeeeee;
 }
+.appbar_back, .appbar_util {
+  z-index: 1;
+}
 .appbar_util {
   margin-left: auto;
   display: flex;
@@ -10217,8 +10220,19 @@ footer .f_company {
 }
 
 /*** 포인트몰 ***/
+.page_point .prd_cont {
+  padding: 0 20px;
+}
+@media (min-width: 1024px) {
+  .page_point .prd_cont {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .page_point .user_area {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 61px;
   z-index: 1;
   background-color: #ffffff;
@@ -10306,14 +10320,23 @@ footer .f_company {
 .page_point .prd_cont:last-of-type {
   margin-bottom: 0;
   border-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 30px;
 }
 .page_point .prd_cont.type_list {
   border-top: 0;
 }
 
+.point_prd_area {
+  margin-top: 118px;
+}
+.point_prd_area .btn_more {
+  margin-top: 20px;
+}
+.point_prd_area .prd_list_sm .btn_more, .point_prd_area .gift_list .btn_more {
+  margin-top: 60px;
+}
 .point_prd_area > .inner {
-  padding-bottom: 120px;
+  padding: 0;
 }
 .point_prd_area .prd_list_sm.xs .prd_box .prd .info, .point_prd_area .xs.gift_list .prd_box .prd .info {
   display: flex;

@@ -270,9 +270,18 @@
 }
 /*** 포인트몰 ***/
 .page_point{
+  .prd_cont{
+    padding: 0 20px;
+    @media (min-width: $pc-point) {
+      max-width: $pc-point;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
   .user_area{
-    position: sticky;
-    top: 61px;
+    position: fixed;
+    width:100%;
+    top: $subheader-H;
     z-index: 1;
     background-color: $color-white;
     .user{
@@ -344,7 +353,7 @@
     &:last-of-type{
       margin-bottom: 0;
       border-bottom: 0;
-      padding-bottom: 0;
+      padding-bottom: 30px;
     }
     &.type_list{
       border-top: 0;
@@ -352,8 +361,17 @@
   }
 }
 .point_prd_area{
+  margin-top: 118px;
+  .btn_more{
+    margin-top: 20px;
+  }
+  .prd_list_sm{
+    .btn_more{
+      margin-top: 60px;
+    }
+  }
   & > .inner{
-    padding-bottom: 120px;
+    padding: 0;
   }
   .prd_list_sm.xs .prd_box .prd .info{
     display: flex;
