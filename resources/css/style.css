@@ -6657,7 +6657,9 @@ footer .f_company {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  justify-content: flex-start;
   height: 132px;
+  padding-left: 20px;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 600;
@@ -7156,7 +7158,7 @@ footer .f_company {
   background-image: none;
 }
 .cate_brand.accord_list .accord_tit {
-  padding: 0;
+  padding: 0 0 0 20px;
   border: 0;
 }
 .cate_brand.accord_list .accord_tit::before {
