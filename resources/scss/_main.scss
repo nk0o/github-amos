@@ -334,7 +334,9 @@
       >a{
         position: relative;
         @include flexCenter;
+        justify-content: flex-start;
         height: 132px;
+        padding-left: 20px;
         @include fontStyle($color-white, $fs-lg, $fw-sb, 1.4166);
         // &::before{
         //   z-index: -1;
