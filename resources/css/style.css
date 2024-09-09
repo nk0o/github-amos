@@ -2686,10 +2686,6 @@ button:disabled *[class*=ico_]::before {
 .btn_bottom *[class*=ico_]::before {
   background-color: #ffffff !important;
 }
-.btn_bottom .count {
-  margin-left: -4px;
-  font-weight: 400;
-}
 .btn_floating {
   display: block;
   width: 40px;
@@ -7017,9 +7013,14 @@ footer .f_company {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 .prd_cart_btn .btn_bottom {
-  display: block;
-  width: 200px;
   margin: 0 auto;
+  padding: 0 24px;
+}
+.prd_cart_btn .btn_bottom .count {
+  color: #FFE7A9;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4445;
 }
 .prd_cart_btn .cart_txt {
   display: none;
@@ -8329,10 +8330,31 @@ footer .f_company {
   border-top: 1px solid #eee;
 }
 .board_list > li > a {
+  position: relative;
   display: block;
   padding: 20px 0;
-  background: url("../images/icon/ico_chev_next_16.svg") no-repeat right center;
-  background-size: 16px;
+}
+.board_list > li > a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon/ico_chev_next_16.svg");
+  background-size: cover;
+  background-color: #aaaaaa !important;
+}
+@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+  .board_list > li > a::after {
+    background-color: #777777;
+    mask-image: url("../images/icon/ico_chev_next_16.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-image: none;
+  }
 }
 .board_list > li .date {
   display: block;
@@ -9890,6 +9912,14 @@ footer .f_company {
 .page_form .order_accord + .order_accord {
   border-top: 8px solid #f6f6f6;
 }
+.page_form .br_mo {
+  display: inline-block;
+}
+@media (max-width: 740px) {
+  .page_form .br_mo {
+    display: block;
+  }
+}
 
 .sign_notice {
   padding: 24px 20px 0;
@@ -10512,9 +10542,6 @@ footer .f_company {
   border-top: 8px solid #f6f6f6;
   padding-top: 20px;
 }
-.cart_check_prd.prd_sample .cart_list .order_bnr {
-  margin-top: 0;
-}
 .cart_list {
   padding: 20px 0 32px;
   border-top: 1px solid #eeeeee;
@@ -10738,7 +10765,7 @@ footer .f_company {
   padding-top: 0;
 }
 .order_accord .accord_cont .btn_group {
-  margin: 20px 0px 0px;
+  margin: 24px 0px 0px;
   padding: 0;
 }
 .order_accord .accord_cont .inquiry_outer {
@@ -11005,7 +11032,7 @@ footer .f_company {
     border-bottom-width: 1px;
   }
   .order_accord .accord_cont .btn_group {
-    margin: 20px auto 0px;
+    margin: 24px auto 0px;
   }
 }
 /* 정기교육 만족도 조사 */
@@ -11656,6 +11683,11 @@ footer .f_company {
 }
 
 /********** 검색 **********/
+.page_search {
+  display: flex;
+  flex-direction: column;
+}
+
 .tag_list {
   display: flex;
   flex-wrap: wrap;
@@ -11663,11 +11695,12 @@ footer .f_company {
 }
 
 .srch_top {
+  z-index: 2;
   position: fixed;
   left: 0;
   top: 61px;
   width: 100%;
-  padding: 24px 0 0;
+  padding: 24px 0 16px;
   background-color: #ffffff;
 }
 .srch_txt {
@@ -11722,7 +11755,6 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.23;
 }
-
 .srch_lastest {
   margin-bottom: 32px;
 }
@@ -11730,18 +11762,52 @@ footer .f_company {
   margin: 0 -20px 0;
 }
 
-.srch_result,
-.srch_default,
-.srch_complete {
-  position: fixed;
-  top: 129px;
+.srch_content {
+  position: relative;
+}
+.srch_content .srch_result,
+.srch_content .srch_default,
+.srch_content .srch_complete {
   width: 100%;
-  margin-top: 20px;
-  height: calc(100dvh - 61px - 68px - 90px - 20px);
   background-color: #ffffff;
   overflow-y: auto;
 }
 
+.srch_default,
+.srch_complete {
+  margin-top: 88px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - 61px - 88px);
+}
+.srch_default::-webkit-scrollbar,
+.srch_complete::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.srch_default::-webkit-scrollbar-track,
+.srch_complete::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+.srch_default::-webkit-scrollbar-thumb,
+.srch_complete::-webkit-scrollbar-thumb {
+  background: transparent;
+  cursor: pointer;
+}
+.srch_default::-webkit-scrollbar-thumb:hover,
+.srch_complete::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.srch_default {
+  z-index: 2;
+  display: none;
+}
+.srch_default.show {
+  display: block;
+}
 .srch_default .tit {
   display: flex;
   align-items: center;
@@ -11753,7 +11819,7 @@ footer .f_company {
 }
 
 .srch_complete {
-  z-index: 1;
+  z-index: 3;
   display: none;
 }
 .srch_complete.show {
@@ -11765,6 +11831,45 @@ footer .f_company {
   align-items: stretch;
   padding: 20px 0;
 }
+.srch_complete .releted_list .img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+}
+.srch_complete .releted_list .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.srch_complete .releted_list.brand {
+  padding-top: 0;
+  gap: 12px;
+}
+.srch_complete .releted_list.brand .list_item {
+  gap: 16px;
+}
+.srch_complete .releted_list.category {
+  gap: 8px;
+  border-top: 1px solid #eeeeee;
+}
+.srch_complete .releted_list.category .list_item {
+  padding: 8px 0;
+}
+.srch_complete .releted_list.category .srch_txt {
+  display: -webkit-box;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 2px;
+}
+.srch_complete .releted_list.product {
+  gap: 4px;
+}
+.srch_complete .releted_list.product .list_item {
+  padding: 12px 0;
+}
 .srch_complete .list_item {
   display: -webkit-box;
   display: flex;
@@ -11773,55 +11878,10 @@ footer .f_company {
   align-items: center;
 }
 
-.releted_list .img {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  background-color: #f6f6f6;
-}
-.releted_list .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.releted_list.brand {
-  padding-top: 0;
-  gap: 12px;
-}
-.releted_list.brand .list_item {
-  gap: 16px;
-}
-.releted_list.category {
-  gap: 8px;
-  border-top: 1px solid #eeeeee;
-}
-.releted_list.category .list_item {
-  padding: 8px 0;
-}
-.releted_list.category .srch_txt {
-  display: -webkit-box;
-  display: flex;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  align-items: center;
-  gap: 2px;
-}
-.releted_list.product {
-  gap: 4px;
-}
-.releted_list.product .list_item {
-  padding: 12px 0;
-}
-
 .srch_result {
-  margin-top: 16px;
-  height: calc(100dvh - 61px - 68px - 90px - 16px);
-  /*   .tab_selected_wrap{
-      z-index: 1;
-      position: sticky;
-      top: 0;
-      background-color: $color-white;
-    } */
+  position: relative;
+  z-index: 1;
+  margin-top: 84px;
 }
 .srch_result .tab_selected_wrap {
   margin: -8px -20px 20px -20px;
