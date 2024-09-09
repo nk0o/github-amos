@@ -294,10 +294,29 @@
       .bottom {
         position: static;
         margin-top: 8px;
+        border: 1px solid #E2E2E2;
+        border-radius: 40px;
+        gap: 0;
         .btn_icon {
+          flex: 1;
           font-size: 0;
           gap: 0;
-          padding: 6px;
+          padding: 8px 6px;
+          border-radius: 0;
+          border: none;
+          & + .btn_icon {
+            position: relative;
+            &::before {
+              position: absolute;
+              top:0;
+              left: 0;
+              width:1px;
+              height:32px;
+              vertical-align: 0;
+              background:#E2E2E2;
+              content: '';
+            }
+          }
         }
       }
     }
@@ -3247,3 +3266,4 @@
     }
   }
 }
+

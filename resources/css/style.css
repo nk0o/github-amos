@@ -6997,11 +6997,30 @@ footer .f_company {
 .prd_list_sm.xs .prd_box .bottom, .xs.gift_list .prd_box .bottom {
   position: static;
   margin-top: 8px;
+  border: 1px solid #E2E2E2;
+  border-radius: 40px;
+  gap: 0;
 }
 .prd_list_sm.xs .prd_box .bottom .btn_icon, .xs.gift_list .prd_box .bottom .btn_icon {
+  flex: 1;
   font-size: 0;
   gap: 0;
-  padding: 6px;
+  padding: 8px 6px;
+  border-radius: 0;
+  border: none;
+}
+.prd_list_sm.xs .prd_box .bottom .btn_icon + .btn_icon, .xs.gift_list .prd_box .bottom .btn_icon + .btn_icon {
+  position: relative;
+}
+.prd_list_sm.xs .prd_box .bottom .btn_icon + .btn_icon::before, .xs.gift_list .prd_box .bottom .btn_icon + .btn_icon::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 32px;
+  vertical-align: 0;
+  background: #E2E2E2;
+  content: "";
 }
 
 .prd_cart_btn {
