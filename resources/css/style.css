@@ -3335,7 +3335,7 @@ button:disabled *[class*=ico_]::before {
 }
 .input_check_list .input_check_wrap, .input_check_list .input_radio_wrap {
   display: block;
-  height: 48px;
+  min-height: 48px;
   width: 100%;
 }
 .input_check_list .input_check_wrap.without_box .input_radio + label, .input_check_list .input_check_wrap.without_box .input_check + label, .input_check_list .input_radio_wrap.without_box .input_radio + label, .input_check_list .input_radio_wrap.without_box .input_check + label {
@@ -3343,7 +3343,8 @@ button:disabled *[class*=ico_]::before {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 16px;
+  min-height: 48px;
+  padding: 12px 68px 12px 16px;
   color: #222222;
   font-size: 1rem;
   font-weight: 400;
@@ -6741,6 +6742,7 @@ footer .f_company {
 
 .prd_cont {
   position: relative;
+  padding-bottom: 30px;
 }
 .prd_cont .prd_list_top {
   display: -webkit-box;
@@ -6945,6 +6947,9 @@ footer .f_company {
 .prd_list_lg .prd_box .bottom {
   margin-top: 10px;
 }
+.prd_list_lg .btn_more {
+  margin-top: 28px;
+}
 
 .prd_list_sm .prd_box, .gift_list .prd_box {
   position: relative;
@@ -6985,6 +6990,9 @@ footer .f_company {
 }
 .prd_list_sm .prd_box .bottom .btn_icon, .gift_list .prd_box .bottom .btn_icon {
   height: 30px;
+}
+.prd_list_sm .btn_more, .gift_list .btn_more {
+  margin-top: 60px;
 }
 .prd_list_sm.xs, .xs.gift_list {
   display: flex;
@@ -7044,6 +7052,9 @@ footer .f_company {
   vertical-align: 0;
   background: #E2E2E2;
   content: "";
+}
+.prd_list_sm.xs .btn_more, .xs.gift_list .btn_more {
+  margin-top: 36px;
 }
 
 .prd_cart_btn {
@@ -7188,7 +7199,7 @@ footer .f_company {
 .cate_brand.accord_list {
   background-color: #ffffff;
   padding-bottom: 0;
-  margin-bottom: -30px;
+  margin-bottom: -60px;
   /* &::after{
     content: '';
     position: absolute;
@@ -10226,7 +10237,7 @@ footer .f_company {
 
 /*** 포인트몰 ***/
 .page_point .prd_cont {
-  padding: 0 20px;
+  padding: 0 20px 0;
 }
 @media (min-width: 1024px) {
   .page_point .prd_cont {
@@ -10333,12 +10344,14 @@ footer .f_company {
 
 .point_prd_area {
   margin-top: 118px;
-}
-.point_prd_area .btn_more {
-  margin-top: 20px;
-}
-.point_prd_area .prd_list_sm .btn_more, .point_prd_area .gift_list .btn_more {
-  margin-top: 60px;
+  /* .btn_more{
+    margin-top: 20px;
+  }
+  .prd_list_sm{
+    .btn_more{
+      margin-top: 60px;
+    }
+  } */
 }
 .point_prd_area > .inner {
   padding: 0;
@@ -10602,6 +10615,12 @@ footer .f_company {
 }
 .cart_check label::before {
   top: 0;
+}
+.cart_check label.txt_eng {
+  color: #222222;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.1765;
 }
 .cart_check_all {
   padding: 20px 0;
@@ -11725,9 +11744,6 @@ footer .f_company {
 
 .recent_product .prd_list_sm .prd_box, .recent_product .gift_list .prd_box {
   margin-top: 20px;
-}
-.recent_product .prd_cont {
-  padding-bottom: 30px;
 }
 
 .list_option {

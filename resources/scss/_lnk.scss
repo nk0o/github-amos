@@ -271,7 +271,7 @@
 /*** 포인트몰 ***/
 .page_point{
   .prd_cont{
-    padding: 0 20px;
+    padding: 0 20px 0;
     @media (min-width: $pc-point) {
       max-width: $pc-point;
       width: 100%;
@@ -362,14 +362,14 @@
 }
 .point_prd_area{
   margin-top: 118px;
-  .btn_more{
+  /* .btn_more{
     margin-top: 20px;
   }
   .prd_list_sm{
     .btn_more{
       margin-top: 60px;
     }
-  }
+  } */
   & > .inner{
     padding: 0;
   }
@@ -575,6 +575,9 @@
       font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
       &::before{
         top: 0;
+      }
+      &.txt_eng{
+        @include fontStyle($gray-950, $fs-md, $fw-b, 1.1765);
       }
     }
     &_all{
@@ -1578,9 +1581,6 @@
 .recent_product{
   .prd_list_sm .prd_box{
     margin-top: 20px;
-  }
-  .prd_cont{
-    padding-bottom: 30px;
   }
 }
 //리스트 

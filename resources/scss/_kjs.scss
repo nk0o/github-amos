@@ -14,7 +14,7 @@
 
 .prd_cont {
   position: relative;
-  //padding-bottom: 120px;
+  padding-bottom: 30px;
   //margin-bottom: $btmbar-H;
   // &:has(.cate_brand.accord_list) {
   //   padding-bottom: 0
@@ -216,6 +216,9 @@
       margin-top: 10px;
     }
   }
+  .btn_more{
+    margin-top: 28px;
+  }
 }
 
 // 리스트형
@@ -263,6 +266,9 @@
         height: 30px;
       }
     }
+  }
+  .btn_more{
+    margin-top: 60px;
   }
   &.xs {
     display: flex;
@@ -320,7 +326,10 @@
         }
       }
     }
-  }
+    .btn_more{
+      margin-top: 36px;
+    }
+  } 
 }
 
 .prd_cart_btn {
@@ -453,7 +462,7 @@
 .cate_brand.accord_list {
   background-color: $color-white;
   padding-bottom: 0;
-  margin-bottom: -30px;
+  margin-bottom: -60px;
   /* &::after{
     content: '';
     position: absolute;

@@ -268,7 +268,9 @@
                   <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
                 </div>
               </div>
-            </div>
+              <!-- 240910 더보기 버튼 추가 -->
+              <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+            </div><!-- //.prd_list_lg -->
             <!-- //썸네일형 -->
           </div>
           <!-- //상품 리스트 -->
@@ -285,50 +287,52 @@
       </section>
     </main>
     <!-- //#container -->
-
-    <!-- Bottom Sheet -->
-    <div class="btm_sheet" id="btmSheetSort">
-      <div class="btm_sheet_back"></div>
-      <div class="inner">
-        <div class="btm_sheet_head">
-          <p class="tit">옵션값</p>
-          <button type="button" class="btm_sheet_close ico_close_20"></button>
-        </div><!-- //.btm_sheet_head -->
-        <div class="btm_sheet_cont check_list">
-          <ul class="input_check_list">
-            <li>
-              <div class="input_radio_wrap without_box">
-                <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked>
-                <label for="radio-1-1">추천순</label><!-- 240904 문구수정 -->
-              </div>
-            </li>
-            <li>
-              <div class="input_radio_wrap without_box">
-                <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
-                <label for="radio-1-2">이름순</label>
-              </div>
-            </li>
-            <li>
-              <div class="input_radio_wrap without_box">
-                <input type="radio" id="radio-1-3" class="input_radio" name="radio-item-1">
-                <label for="radio-1-3">가격순</label>
-              </div>
-            </li>
-          </ul>
-        </div><!-- //.btm_sheet_cont -->
-      </div><!-- //.inner -->
-    </div><!-- //.btm_sheet -->
-    <!-- //Bottom Sheet -->
-
+    <!-- 240910 푸터 추가 -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
     <!-- tabBar -->
     <script>include.tabBar();</script>
     <!-- //tabBar -->
-  </div>
+  </div><!-- //#wrap -->
   <!-- floatingSide -->
   <script>include.floatingSide();</script>
   <!-- //floatingSide -->
   
 
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheetSort">
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">옵션값</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked>
+              <label for="radio-1-1">추천순</label><!-- 240904 문구수정 -->
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+              <label for="radio-1-2">이름순</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-3" class="input_radio" name="radio-item-1">
+              <label for="radio-1-3">가격순</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+  <!-- //Bottom Sheet -->
     
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
