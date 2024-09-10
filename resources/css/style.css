@@ -9172,16 +9172,17 @@ footer .f_company {
   display: flex;
   justify-content: space-between;
 }
-.history_result > ul > li .detail em {
+.history_result > ul > li .detail > em {
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
 }
 .history_result > ul > li .detail .point {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 20px;
+  text-transform: uppercase;
   color: #1A63D9;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.1765;
 }
 .history_result > ul > li .detail .point.used {
   color: #777;

@@ -2487,16 +2487,14 @@
       .detail{
         display: flex;
         justify-content: space-between;
-        em {
+        & > em {
           font-size: 15px;
           font-weight: $fw-sb;
           line-height: 20px;
         }
         .point {
-          font-size: 18px;
-          font-weight: $fw-m;
-          line-height: 20px;
-          color: #1A63D9;
+          text-transform: uppercase;
+          @include fontStyle($color-blue, $fs-md, $fw-m, 1.1765);
           &.used {
             color: #777;
           }
