@@ -23,6 +23,9 @@
   &.is_line {
     border-bottom: 1px solid $gray-100;
   }
+  &_back, &_util{
+    z-index: 1;
+  }
   &_util{
     margin-left: auto;
     display: flex;

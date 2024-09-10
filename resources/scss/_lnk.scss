@@ -270,9 +270,18 @@
 }
 /*** 포인트몰 ***/
 .page_point{
+  .prd_cont{
+    padding: 0 20px;
+    @media (min-width: $pc-point) {
+      max-width: $pc-point;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
   .user_area{
-    position: sticky;
-    top: 61px;
+    position: fixed;
+    width:100%;
+    top: $subheader-H;
     z-index: 1;
     background-color: $color-white;
     .user{
@@ -344,7 +353,7 @@
     &:last-of-type{
       margin-bottom: 0;
       border-bottom: 0;
-      padding-bottom: 0;
+      padding-bottom: 30px;
     }
     &.type_list{
       border-top: 0;
@@ -352,8 +361,17 @@
   }
 }
 .point_prd_area{
+  margin-top: 118px;
+  .btn_more{
+    margin-top: 20px;
+  }
+  .prd_list_sm{
+    .btn_more{
+      margin-top: 60px;
+    }
+  }
   & > .inner{
-    padding-bottom: 120px;
+    padding: 0;
   }
   .prd_list_sm.xs .prd_box .prd .info{
     display: flex;
@@ -728,12 +746,23 @@
   border-bottom: 8px solid $gray-50;
 }
 .order_accord{
+  &:last-of-type{
+    .accord_list{
+      &:last-child{
+        padding-bottom: 0;
+        .accord_cont > .inner{
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   .accord{
     &_list{
       border-top: 8px solid $gray-50;
       &:first-child{
         border: 0;
       }
+      
       &.no_fold{
         border-top: 1px solid $gray-100;
         .accord_tit{
@@ -1112,7 +1141,7 @@
 .page_mypage{
   display: flex;
   flex-direction: column;
-  min-height: calc(100dvh - ($subheader-H + $btmbar-H + 40px));
+  //min-height: calc(100dvh - ($subheader-H + $btmbar-H + 40px));
   align-items: stretch;
   .mypage_menu_wrap{
     flex: 1 1 auto;
@@ -1376,7 +1405,7 @@
 }
 //APP 알림함
 .app_notice_wrap{
-  padding: 20px 0 40px;
+  padding: 20px 0 0;
   .tit{
     display: flex;
     align-items: center;
@@ -1392,6 +1421,9 @@
   border-top: 1px solid $gray-100;
   &:first-child{
     border-top: none;
+  }
+  &:last-child{
+    padding-bottom: 30px;
   }
   &::before{
     content: '';
@@ -1442,6 +1474,13 @@
   }
 }
 .order_history{
+  &_wrap{
+    &:last-child{
+      .cart_list{
+        padding-bottom: 30px;
+      }
+    }
+  }
   .cart_list{
     padding: 20px 0 24px;
   }
@@ -1490,6 +1529,9 @@
   display: none;
 }
 //회원탈퇴
+.user_leave{
+  padding-bottom: 30px;
+}
 .user_leave_box, .user_modify_box{
   .input_group{
     padding: 0;
@@ -1539,7 +1581,7 @@
     margin-top: 20px;
   }
   .prd_cont{
-    margin-bottom: 0;
+    padding-bottom: 30px;
   }
 }
 //리스트 

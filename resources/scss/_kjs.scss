@@ -1696,6 +1696,11 @@
 .board_list {
   padding-top: 4px;
   >li {
+    &:last-child{
+      &> a{
+      padding-bottom: 0;
+      }
+    }
     &+li {
       border-top: 1px solid #eee;
     }
@@ -1768,7 +1773,7 @@
 }
 
 .no_data {
-  padding-top: 100px;
+  padding: 100px 0 130px;
   text-align: center;
   img {
     width: 40px;
@@ -2276,7 +2281,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   gap: 16px;
   @media (min-width: $pc-point) {
     flex-direction: row;
@@ -2453,7 +2458,7 @@
 }
 
 .history_result {
-  padding: 20px 20px 40px;
+  padding: 20px 20px 30px;
   margin: 0 -20px;
   border-top: 8px solid #F6F6F6;
   >ul {

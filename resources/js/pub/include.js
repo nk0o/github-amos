@@ -119,28 +119,8 @@ var include = {
     </div>
     `);
   },
-  subAppBarType3: function(){
-    document.write(`
-      <div class="appbar is_line">
-        <div class="inner">
-          <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
-          <h2 class="appbar_tit">서브 페이지(Type1) 제목</h2>
-          <div class="appbar_util">
-            <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
-          </div>
-        </div>
-      </div>
-    `);
-  },
-  popUpAppBar:function(){
-    document.write(`
-      <div class="appbar is_line">
-        <div class="inner">
-          <h2 class="appbar_tit">전체팝업제목</h2>
-        </div>
-      </div>
-    `)
-  },
+  //240909 서브앱바type3삭제 
+  //240909 팝업앱바type삭제 
   tabBar: function () {
     document.write(`
       <div class="btm_bar is_nav">

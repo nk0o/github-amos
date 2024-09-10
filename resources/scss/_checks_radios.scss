@@ -163,6 +163,18 @@
     background-color: $color-primary;
     color: $color-white;
   }
+  &.read_only {
+    & + label {
+      border-color: $gray-200;
+      background-color: $gray-50; 
+      color: $gray-950 !important;
+    }
+    &[disabled][checked] + label {
+      border-color: $gray-200;
+      background-color: $gray-50; 
+      color: $gray-950 !important;
+    }
+  }
 }
 .input_radio_wrap.type_btn, .input_check_wrap.type_btn{
   height: 40px;

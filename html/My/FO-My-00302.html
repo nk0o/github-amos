@@ -56,149 +56,155 @@
       </section>
     </main>
     <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
     <!-- tabBar -->
     <script>include.tabBar();</script>
     <!-- //tabBar -->
-  </div>
+  </div><!-- //#wrap -->
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
 
-<!-- Bottom Sheet -->
-<div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
-  <div class="btm_sheet_back"></div>
-  <div class="inner">
-    <div class="btm_sheet_head">
-      <p class="tit">조회 기간</p>
-      <button type="button" class="btm_sheet_close ico_close_20"></button>
-    </div><!-- //.btm_sheet_head -->
-    <div class="btm_sheet_cont">
-      <ul class="input_check_list">
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked="">
-            <label for="radio-1-1">최근 1개월</label>
+  <!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">조회 기간</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked="">
+              <label for="radio-1-1">최근 1개월</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+              <label for="radio-1-2">최근 3개월</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-3" class="input_radio" name="radio-item-1">
+              <label for="radio-1-3">최근 6개월</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-4" class="input_radio" name="radio-item-1">
+              <label for="radio-1-4">최근 12개월</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+
+  <div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">상세 조회</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <div class="radio_btn_wrap">
+          <div class="tit">조회기간</div>
+          <div class="input_radio_wrap type_btn">
+            <input type="radio" id="radio-1" class="input_radio" name="radio-item-1" checked>
+            <label for="radio-1">1개월</label>
           </div>
-        </li>
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
-            <label for="radio-1-2">최근 3개월</label>
+          <div class="input_radio_wrap type_btn">
+            <input type="radio" id="radio-2" class="input_radio" name="radio-item-1">
+            <label for="radio-2">3개월</label>
           </div>
-        </li>
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-1-3" class="input_radio" name="radio-item-1">
-            <label for="radio-1-3">최근 6개월</label>
+          <div class="input_radio_wrap type_btn">
+            <input type="radio" id="radio-3" class="input_radio" name="radio-item-1">
+            <label for="radio-3">6개월</label>
           </div>
-        </li>
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-1-4" class="input_radio" name="radio-item-1">
-            <label for="radio-1-4">최근 12개월</label>
+          <div class="input_radio_wrap type_btn">
+            <input type="radio" id="radio-4" class="input_radio" name="radio-item-1">
+            <label for="radio-4">12개월</label>
           </div>
-        </li>
-      </ul>
-    </div><!-- //.btm_sheet_cont -->
-  </div><!-- //.inner -->
-</div><!-- //.btm_sheet -->
-
-<div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
-  <div class="btm_sheet_back"></div>
-  <div class="inner">
-    <div class="btm_sheet_head">
-      <p class="tit">상세 조회</p>
-      <button type="button" class="btm_sheet_close ico_close_20"></button>
-    </div><!-- //.btm_sheet_head -->
-    <div class="btm_sheet_cont check_list">
-      <div class="radio_btn_wrap">
-        <div class="tit">조회기간</div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1" class="input_radio" name="radio-item-1" checked>
-          <label for="radio-1">1개월</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-2" class="input_radio" name="radio-item-1">
-          <label for="radio-2">3개월</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-3" class="input_radio" name="radio-item-1">
-          <label for="radio-3">6개월</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-4" class="input_radio" name="radio-item-1">
-          <label for="radio-4">12개월</label>
-        </div>
-        <div class="input_radio_wrap type_btn show_picker">
-          <input type="radio" id="radio-5" class="input_radio" name="radio-item-1">
-          <label for="radio-5">기간 설정</label>
-        </div> 
-        <div class="input_group is_date hidden">
-          <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
-          <span class="dash">-</span>
-          <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
-        </div>
-      </div><!-- //.radio_btn_wrap -->
-      <div class="check_btn_wrap">
-        <div class="tit">상품유형</div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-1" class="input_check" name="check-item-1" checked>
-          <label for="check-1">일반</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2" class="input_check" name="check-item-1">
-          <label for="check-2">포인트몰</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-3" class="input_check" name="check-item-1">
-          <label for="check-3">체험상품</label>
-        </div>
-      </div><!-- //.check_btn_wrap -->
-      <div class="check_btn_wrap">
-        <div class="tit">주문상태</div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-all" class="input_check" name="check-item-2" checked>
-          <label for="check-2-all">전체</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-1" class="input_check" name="check-item-2">
-          <label for="check-2-1">주문완료</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-2" class="input_check" name="check-item-2">
-          <label for="check-2-2">상품 준비중</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-3" class="input_check" name="check-item-2">
-          <label for="check-2-3">배송중</label>
-        </div>
-        <div class="input_check_wrap type_btn">
-          <input type="checkbox" id="check-2-4" class="input_check" name="check-item-2">
-          <label for="check-2-4">배송완료</label>
-        </div>
-      </div><!-- //.check_btn_wrap -->
-    </div><!-- //.btm_sheet_cont -->
-  </div><!-- //.inner -->
-</div><!-- //.btm_sheet -->
-<!-- //Bottom Sheet -->
+          <div class="input_radio_wrap type_btn show_picker">
+            <input type="radio" id="radio-5" class="input_radio" name="radio-item-1">
+            <label for="radio-5">기간 설정</label>
+          </div> 
+          <div class="input_group is_date hidden">
+            <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
+            <span class="dash">-</span>
+            <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
+          </div>
+        </div><!-- //.radio_btn_wrap -->
+        <div class="check_btn_wrap">
+          <div class="tit">상품유형</div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-1" class="input_check" name="check-item-1" checked>
+            <label for="check-1">일반</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2" class="input_check" name="check-item-1">
+            <label for="check-2">포인트몰</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-3" class="input_check" name="check-item-1">
+            <label for="check-3">체험상품</label>
+          </div>
+        </div><!-- //.check_btn_wrap -->
+        <div class="check_btn_wrap">
+          <div class="tit">주문상태</div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2-all" class="input_check" name="check-item-2" checked>
+            <label for="check-2-all">전체</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2-1" class="input_check" name="check-item-2">
+            <label for="check-2-1">주문완료</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2-2" class="input_check" name="check-item-2">
+            <label for="check-2-2">상품 준비중</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2-3" class="input_check" name="check-item-2">
+            <label for="check-2-3">배송중</label>
+          </div>
+          <div class="input_check_wrap type_btn">
+            <input type="checkbox" id="check-2-4" class="input_check" name="check-item-2">
+            <label for="check-2-4">배송완료</label>
+          </div>
+        </div><!-- //.check_btn_wrap -->
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+  <!-- //Bottom Sheet -->
 
 
-<!-------- Modal -------->
-<div class="modal_container is_pickermodal" data-modal="modal01">
-  <div class="modal_overlay"></div>
-  <div class="modal_content">
-    <div class="modal_body">
-      <div type="text" id="datepicker" class="inp_cal"></div>  
-    </div>
-  </div><!-- //.modal_content -->
-</div><!-- //.modal_container -->
+  <!-------- Modal -------->
+  <div class="modal_container is_pickermodal" data-modal="modal01">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_body">
+        <div type="text" id="datepicker" class="inp_cal"></div>  
+      </div>
+    </div><!-- //.modal_content -->
+  </div><!-- //.modal_container -->
 
-<div class="modal_container is_pickermodal" data-modal="modal02">
-  <div class="modal_overlay"></div>
-  <div class="modal_content">
-    <div class="modal_body">
-      <div type="text" id="datepicker2" class="inp_cal"></div>
-    </div>
-  </div><!-- //.modal_content -->
-</div><!-- //.modal_container -->
-<!-------- // Modal -------->
+  <div class="modal_container is_pickermodal" data-modal="modal02">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_body">
+        <div type="text" id="datepicker2" class="inp_cal"></div>
+      </div>
+    </div><!-- //.modal_content -->
+  </div><!-- //.modal_container -->
+  <!-------- // Modal -------->
 
 
 
