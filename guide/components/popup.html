@@ -19,7 +19,27 @@
   <div id="container">
     <!-- contnets -->
     <div class="guide_contnets">
-      <h1>팝업 - 모달 알럿 / 모달 컨펌 / 레이어팝업(height 풀팝업)</h1>
+      <h1>메인 모달</h1>
+      <button type="button" id="modal011" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+
+      <div class="modal_container modal_notice fade" data-modal="modal011"><!-- modal_container modal_notice -->
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <div class="modal_body">
+            <div class="img" style="padding-bottom: 100%;"><!-- 이미지 비율% -->
+              <img src="../../resources/images/@img_popup.png" alt="팝업이미지내용">
+            </div>
+          </div>
+          <div class="modal_footer">
+            <div class="btn_group">
+              <button class="btn_modal_close">오늘 그만보기</button>
+              <button class="btn_modal_close">닫기</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal_content -->
+      </div>
+      <!-- /.modal_container -->
 
       <br>
       <h1>모달 - 알럿</h1>
