@@ -7017,7 +7017,7 @@ footer .f_company {
   top: 0;
   left: 0;
   width: 1px;
-  height: 32px;
+  height: 100%;
   vertical-align: 0;
   background: #E2E2E2;
   content: "";
