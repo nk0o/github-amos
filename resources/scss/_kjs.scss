@@ -14,7 +14,7 @@
 
 .prd_cont {
   position: relative;
-  padding-bottom: 120px;
+  //padding-bottom: 120px;
   //margin-bottom: $btmbar-H;
   // &:has(.cate_brand.accord_list) {
   //   padding-bottom: 0
@@ -453,14 +453,15 @@
 .cate_brand.accord_list {
   background-color: $color-white;
   padding-bottom: 0;
-  &::after{
+  margin-bottom: -30px;
+  /* &::after{
     content: '';
     position: absolute;
     height: 120px;
     width: 100%;
     padding-top: 32px;
     background-color: #000000;
-  }
+  } */
   li {
     background-image: none;
   }
@@ -490,7 +491,7 @@
 @media (min-width: 1024px) {
   .prd_cont {
     //margin-bottom: $btmbar-H;
-    padding-bottom: 140px;
+    //padding-bottom: 140px;
     &.type_list {
       max-width: 1024px;
       margin: 0 auto 0;
@@ -569,9 +570,9 @@
 
 .page_form {
   .login_first {
-    max-width:  335px;
+    max-width:  375px;
     margin: 0 auto;
-    padding: 60px 0 30px 0;
+    padding: 60px 20px 40px;
     .simbol {
       display: flex;
       justify-content: center;
@@ -612,6 +613,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 0;
   >li {
     + li {
       &::before {
@@ -634,6 +637,11 @@
 
 //pc
 @media (min-width: 1024px) {
+  .login_first {
+    max-width: $pc-point;
+    width: 100%;
+    margin: 0 auto;
+  }
   .page_form {
     .login_first {
       padding-top: 100px;

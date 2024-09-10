@@ -396,10 +396,9 @@
       }
     }
   } 
-  .order_coupon{
-   // padding-bottom: $btmbar-H;
-    .accord_cont > .inner {
-      padding: 0 20px 44px;
+  .order_accord .accord_list:last-child{
+    &.order_coupon{
+      padding-bottom: 40px;
     }
   }
 }
