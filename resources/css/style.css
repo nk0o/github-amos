@@ -6635,10 +6635,7 @@ footer .f_company {
   display: block;
 }
 .cate_pro .cate_list {
-  padding-bottom: 33vh;
-}
-.cate_tv .cate_list {
-  padding-bottom: 45vh;
+  padding-bottom: 50vh;
 }
 .cate_tit {
   color: #888888;
@@ -8670,11 +8667,14 @@ footer .f_company {
   line-height: 19px;
 }
 
-.edu_regist {
-  padding-bottom: 40px;
+.edu_regist_wrap {
+  margin-bottom: -30px;
 }
 .edu_regist .accord_list {
   margin: 0 -20px;
+}
+.edu_regist .accord_list li:last-child {
+  border-bottom: 0;
 }
 .edu_regist .accord_list .accord_head {
   padding: 0 20px;
@@ -8803,6 +8803,9 @@ footer .f_company {
   margin-top: 8px;
 }
 
+.page_edu {
+  padding-bottom: 30px;
+}
 .page_edu .tab_menu.round_tab > ul {
   margin: 0 -20px;
 }
@@ -8828,7 +8831,7 @@ footer .f_company {
   line-height: 18px;
 }
 .page_edu .round_tab + .tab_cont {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
@@ -10503,7 +10506,7 @@ footer .f_company {
   color: #1A63D9;
   font-size: 0.9375rem;
   font-weight: 600;
-  line-height: 1.333;
+  line-height: 1;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .order_bnr .btn_view {
@@ -11163,6 +11166,51 @@ footer .f_company {
   line-height: 1.2143;
 }
 
+.promo_box {
+  margin-top: 8px;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 16px;
+  opacity: 0.5;
+}
+.promo_box_list {
+  padding-top: 8px;
+}
+.promo_box.box_blue {
+  opacity: 1;
+  background-color: #EFF6FF;
+}
+.promo_box.box_blue .state {
+  color: #1A63D9;
+}
+.promo_box .state {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.38462;
+}
+.promo_box .tit {
+  margin-top: 4px;
+  color: #444444;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3333;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.promo_box .date {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.38462;
+}
+.promo_box .date span {
+  font-weight: 300;
+}
+
 @media (min-width: 1024px) {
   .page_form .tab_menu {
     display: block;
@@ -11218,7 +11266,7 @@ footer .f_company {
     margin: 24px auto 0px;
   }
 }
-/* 정기교육 만족도 조사 */
+/********* 정기교육 만족도 조사 *********/
 .survey_intro {
   padding-top: 80px;
   text-align: center;

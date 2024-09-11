@@ -402,7 +402,6 @@
     }
   }
 }
-
 .order_bnr{
   display: flex;
   align-items: flex-start;
@@ -432,7 +431,7 @@
   }
   .txt_extra{
     @include text-ellipsis;
-    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
+    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1);
     font-family: $font-aritadt;
   }
   .btn_view{
@@ -992,6 +991,41 @@
     }
   }
 }
+.promo_box{
+  margin-top: 8px;
+  background-color: $gray-100;
+  border-radius: 8px;
+  padding:16px;
+  opacity: 0.5;
+  &_list{
+    padding-top: 8px;
+  }
+  &.box_blue{
+    opacity: 1;
+    background-color: $color-blue-tertiary;
+    .state{
+      color:$color-blue;
+    }
+  }
+  .state{
+    @include fontStyle($gray-900, $fs-xs, $fw-sb, 1.38462);
+  }
+  .tit{
+    margin-top: 4px;
+    @include fontStyle($gray-900, $fs-sm, $fw-sb, 1.3333);
+    font-family: $font-aritadt;
+  }
+  .date{
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap:4px;
+    @include fontStyle($gray-700, $fs-xs, $fw-m, 1.38462);
+    span{
+      font-weight: $fw-l;
+    }
+  }
+}
 @media (min-width: 1024px) {
   .page_form {
     .tab_menu {
@@ -1052,7 +1086,7 @@
   }
 }
 
-/* 정기교육 만족도 조사 */
+/********* 정기교육 만족도 조사 *********/
 .survey_intro{
   padding-top: 80px;
   text-align: center;
