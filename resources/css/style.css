@@ -11162,10 +11162,48 @@ footer .f_company {
 }
 
 .promo_box {
+  margin-top: 8px;
   background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 16px;
+  opacity: 0.5;
 }
-.promo_box.applied {
+.promo_box_list {
+  padding-top: 8px;
+}
+.promo_box.box_blue {
+  opacity: 1;
   background-color: #EFF6FF;
+}
+.promo_box.box_blue .state {
+  color: #1A63D9;
+}
+.promo_box .state {
+  color: #444444;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.38462;
+}
+.promo_box .tit {
+  margin-top: 4px;
+  color: #444444;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.3333;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.promo_box .date {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #777777;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.38462;
+}
+.promo_box .date span {
+  font-weight: 300;
 }
 
 @media (min-width: 1024px) {
