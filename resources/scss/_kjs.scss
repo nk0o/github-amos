@@ -1882,9 +1882,14 @@
 }
 
 .edu_regist {
-  padding-bottom: 40px;
+  &_wrap{
+    margin-bottom: -30px;
+  }
   .accord_list {
     margin: 0 -20px;
+    li:last-child{
+      border-bottom: 0;
+    }
     .accord_head {
       padding: 0 20px;
       border-bottom: 8px solid #F6F6F6;
@@ -1998,7 +2003,7 @@
 
 
 .page_edu {
-  //margin-bottom: 133px;
+  padding-bottom: 30px;
   .tab_menu {
     &.round_tab {
       >ul {
@@ -2025,7 +2030,7 @@
   }
   .round_tab {
     &+.tab_cont {
-      margin-bottom: 30px;
+      padding-bottom: 30px;
       .btn_group {
         padding:60px 0 0;
       }

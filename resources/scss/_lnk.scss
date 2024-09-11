@@ -402,7 +402,6 @@
     }
   }
 }
-
 .order_bnr{
   display: flex;
   align-items: flex-start;
@@ -432,7 +431,7 @@
   }
   .txt_extra{
     @include text-ellipsis;
-    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1.333);
+    @include fontStyle($color-blue, $fs-sm, $fw-sb, 1);
     font-family: $font-aritadt;
   }
   .btn_view{
@@ -992,6 +991,12 @@
     }
   }
 }
+.promo_box{
+  background-color: $gray-100 ;
+  &.applied{
+    background-color: $color-blue-tertiary;
+  }
+}
 @media (min-width: 1024px) {
   .page_form {
     .tab_menu {
@@ -1052,7 +1057,7 @@
   }
 }
 
-/* 정기교육 만족도 조사 */
+/********* 정기교육 만족도 조사 *********/
 .survey_intro{
   padding-top: 80px;
   text-align: center;
