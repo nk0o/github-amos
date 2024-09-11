@@ -1029,6 +1029,9 @@
     opacity: 1;
     background-color: $color-white;
     border: 1px solid $gray-200;
+    .tit{
+      margin-top: 0;
+    }
   }
 }
 @media (min-width: 1024px) {

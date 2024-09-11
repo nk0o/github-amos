@@ -240,7 +240,7 @@ button {
     *[class*="ico_"], &[class*="ico_"] {
       &::before{ 
         mask-size: 24px;
-        background-color: $color-primary !important;
+        background-color: $gray-950 !important;
       }
     }
     &.btn_border{
@@ -294,8 +294,8 @@ button {
     padding: 12px 40px;
     @include fontStyle($gray-600, $fs-s, $fw-sb, 17px);
     border-radius: 4px;
-    border: 1px solid #EEE;
-    background: #F6F6F6;
+    border: 1px solid $gray-300;
+    background: $color-white;
     text-align: center;
     *[class*=ico_].point::before {
       background-color: #BBB !important;

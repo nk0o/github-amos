@@ -83,7 +83,7 @@
     }
     .txt_index {
       min-width: 74px;
-      margin-right: 12px;
+      margin-right: 6px;
       @include fontStyle($gray-600, $fs-xs, $fw-sb, 1.3846);
     }
     .price{
@@ -91,6 +91,12 @@
       @include fontStyle($gray-950, $fs-md, $fw-m, 20px);
       em{
         @include fontStyle($gray-950, $fs-s, $fw-sb, 20px);
+      }
+    }
+    @media (max-width: $mo-point) {
+      .txt_index, .price{
+        flex:100%;
+        justify-content:flex-start;
       }
     }
   }
@@ -278,6 +284,7 @@
   &_pro{
     .cate_list{
       padding-bottom: 50vh;
+      scroll-behavior: smooth;
     }
   }
   &_tv{
@@ -390,13 +397,21 @@
       }
     }
     .accord{
+      &_list {
+        &.is_plus {
+          .accord_tit {
+            flex-wrap: wrap;
+            padding-right: 32px;
+            white-space: normal;
+          }
+        }
+      }
       &_cont{
         padding:0 0 16px 0;
       }
     }
   }
 }
-
 .tab_cont_item{
   .thumb_list{
     gap: 16px 5px;
