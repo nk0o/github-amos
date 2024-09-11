@@ -11205,6 +11205,11 @@ footer .f_company {
 .promo_box .date span {
   font-weight: 300;
 }
+.promo_box.box_border {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+}
 
 @media (min-width: 1024px) {
   .page_form .tab_menu {

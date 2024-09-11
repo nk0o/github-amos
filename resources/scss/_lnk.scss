@@ -1000,7 +1000,7 @@
   &_list{
     padding-top: 8px;
   }
-  &.box_blue{
+  &.box_blue{//적용된 박스
     opacity: 1;
     background-color: $color-blue-tertiary;
     .state{
@@ -1024,6 +1024,11 @@
     span{
       font-weight: $fw-l;
     }
+  }
+  &.box_border{//검색 프로모션
+    opacity: 1;
+    background-color: $color-white;
+    border: 1px solid $gray-200;
   }
 }
 @media (min-width: 1024px) {
