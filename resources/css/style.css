@@ -6636,6 +6636,7 @@ footer .f_company {
 }
 .cate_pro .cate_list {
   padding-bottom: 50vh;
+  scroll-behavior: smooth;
 }
 .cate_tit {
   color: #888888;

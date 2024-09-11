@@ -650,7 +650,7 @@ function catecoryUI(){
   $(document).on('click touchend', '.cate_nav li', function(){
     let elName = $(this).find('.cate_tit').attr('href');
     let elPos = $(elName).offset();
-    scrollTo(0, elPos.top);
+    // scrollTo(0, elPos.top);
     if(!$(this).hasClass("active")){
       cateNavActive(this)
     }
