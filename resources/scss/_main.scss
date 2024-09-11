@@ -392,6 +392,15 @@
       }
     }
     .accord{
+      &_list {
+        &.is_plus {
+          .accord_tit {
+            flex-wrap: wrap;
+            padding-right: 32px;
+            white-space: normal;
+          }
+        }
+      }
       &_cont{
         padding:0 0 16px 0;
       }

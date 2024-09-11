@@ -6785,6 +6785,11 @@ footer .f_company {
 .cate_service .service_tit a {
   display: block;
 }
+.cate_service .accord_list.is_plus .accord_tit {
+  flex-wrap: wrap;
+  padding-right: 32px;
+  white-space: normal;
+}
 .cate_service .accord_cont {
   padding: 0 0 16px 0;
 }
