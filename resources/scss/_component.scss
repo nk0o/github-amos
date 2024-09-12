@@ -77,6 +77,10 @@
     background-color: $color-orange-secondary !important;
     color: $color-orange !important;
   }
+  &_light_orange {
+    background-color: $color-orange-light-secondary !important;
+    color: $color-orange-light !important;
+  }
   &_success,
   &_blue {
     background-color: $color-blue-secondary !important;
@@ -103,7 +107,8 @@
     background-color: $color-teal !important;
   }
   &_mint {
-    background-color: $color-mint !important;
+    color: $color-mint !important;
+    background-color: $color-mint-secondary !important;
   }
   &_violet {
     background-color: $color-violet !important;

@@ -236,6 +236,10 @@ p {
   background-color: #FFF2EE !important;
   color: #ED5828 !important;
 }
+.bg_light_orange {
+  background-color: #FFF5E9 !important;
+  color: #F18200 !important;
+}
 .bg_success, .bg_blue {
   background-color: #DFEDFF !important;
   color: #1A63D9 !important;
@@ -259,7 +263,8 @@ p {
   background-color: #00B5AD !important;
 }
 .bg_mint {
-  background-color: #15AEB4 !important;
+  color: #15AEB4 !important;
+  background-color: #E8FAFA !important;
 }
 .bg_violet {
   background-color: #6435C9 !important;
@@ -2696,7 +2701,7 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_floating *[class*=ico_]::before, .btn_floating[class*=ico_]::before {
   mask-size: 24px;
-  background-color: #2A3136 !important;
+  background-color: #222222 !important;
 }
 .btn_floating.btn_border {
   border-color: #e2e2e2;
@@ -2743,8 +2748,8 @@ button:disabled *[class*=ico_]::before {
   font-weight: 600;
   line-height: 17px;
   border-radius: 4px;
-  border: 1px solid #EEE;
-  background: #F6F6F6;
+  border: 1px solid #dddddd;
+  background: #ffffff;
   text-align: center;
 }
 .btn_more *[class*=ico_].point::before {
@@ -6423,7 +6428,7 @@ footer .f_company {
 }
 .page_main .sec_amount .txt_index {
   min-width: 74px;
-  margin-right: 12px;
+  margin-right: 6px;
   color: #888888;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -6446,6 +6451,12 @@ footer .f_company {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 20px;
+}
+@media (max-width: 375px) {
+  .page_main .sec_amount .txt_index, .page_main .sec_amount .price {
+    flex: 100%;
+    justify-content: flex-start;
+  }
 }
 .page_main .sec_type {
   margin-top: 0;
@@ -8055,7 +8066,7 @@ footer .f_company {
 }
 
 .exchange_cont {
-  padding: 24px 0 40px;
+  padding: 24px 0 30px;
 }
 .exchange_cont .accord_list {
   margin-top: 20px;
@@ -8116,7 +8127,7 @@ footer .f_company {
 }
 
 .order_view {
-  padding: 20px 0 40px;
+  padding: 20px 0 30px;
   /* .accord_head {
     border-bottom: 1px solid #eee;
     &:last-child {
@@ -9388,7 +9399,7 @@ footer .f_company {
   white-space: normal;
 }
 .amount_box_detail > ul > li .cont {
-  padding: 12px 20px;
+  padding: 16px 20px;
 }
 .amount_box_detail > ul > li .cont .txt {
   color: #222;
@@ -9396,6 +9407,10 @@ footer .f_company {
   font-weight: 400;
   line-height: 19px;
   white-space: wrap;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.amount_box_detail > ul > li .cont .txt + .txt {
+  margin-top: 8px;
 }
 .amount_box_detail > ul > li .cont ul {
   display: flex;
@@ -9415,6 +9430,15 @@ footer .f_company {
   color: #888;
   font-size: 14px;
   font-weight: 400;
+}
+.amount_box_detail > ul > li .cont ul.pay_price li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.amount_box_detail > ul > li .cont ul.pay_price .badge {
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 
 .payment_plan {
@@ -11210,6 +11234,14 @@ footer .f_company {
 }
 .promo_box .date span {
   font-weight: 300;
+}
+.promo_box.box_border {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+}
+.promo_box.box_border .tit {
+  margin-top: 0;
 }
 
 @media (min-width: 1024px) {
