@@ -9496,6 +9496,9 @@ footer .f_company {
   margin-top: 12px;
 }
 
+.designer_list_wrap {
+  padding-bottom: 30px;
+}
 .designer_list_wrap .designer_list > li {
   display: flex;
   gap: 19px;
@@ -9540,6 +9543,9 @@ footer .f_company {
 .designer_list_wrap .designer_list > li .info .btn_group {
   margin: 12px 0 0 0;
   padding: 0;
+}
+.designer_list_wrap .btn_more {
+  margin-top: 60px;
 }
 
 .modal_container .designer_img_view {
@@ -9858,6 +9864,9 @@ footer .f_company {
   font-weight: 400;
 }
 
+.conts_box_list_sec {
+  padding-bottom: 30px;
+}
 .conts_box_list_sec .inner {
   padding: 0;
 }
@@ -9875,6 +9884,16 @@ footer .f_company {
 }
 .conts_box_list_sec .no_data {
   padding-bottom: 100px;
+}
+.conts_box_list_sec .btn_more {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 60px auto 0;
+}
+@media (min-width: 1024px) {
+  .conts_box_list_sec .btn_more {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -10480,14 +10499,6 @@ footer .f_company {
 
 .point_prd_area {
   margin-top: 118px;
-  /* .btn_more{
-    margin-top: 20px;
-  }
-  .prd_list_sm{
-    .btn_more{
-      margin-top: 60px;
-    }
-  } */
 }
 .point_prd_area > .inner {
   padding: 0;
