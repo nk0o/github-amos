@@ -6066,7 +6066,7 @@ header.fixed {
 
 #wrap:has(.btm_bar) {
   margin-bottom: 90px;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100dvh - 90px);
 }
 
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
@@ -6635,7 +6635,7 @@ footer .f_company {
   display: block;
 }
 .cate_pro .cate_list {
-  padding-bottom: 50vh;
+  padding-bottom: 55vh;
   scroll-behavior: smooth;
 }
 .cate_tit {
