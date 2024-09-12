@@ -38,7 +38,7 @@ header{
     margin-bottom: $btmbar-H;
     min-height: calc(100dvh - 90px);
   }
-}
+} 
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner{
   padding: 0 20px;
   @media (min-width: $pc-point) {
