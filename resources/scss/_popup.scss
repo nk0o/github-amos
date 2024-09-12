@@ -118,6 +118,17 @@
       font-family: $font-aritadt;
     }
   }
+  &_form{
+    .input_group{
+      padding-top: 24px;
+      &:first-child{
+        padding-top: 8px;
+      }
+    }
+    .refer_mark{
+      margin-top: 20px;
+    }
+  }
 }
 //메인 공지모달
 .modal_notice{

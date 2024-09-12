@@ -1711,13 +1711,13 @@
 }
 
 .board_list {
-  padding-top: 4px;
+  padding: 4px 0 10px;
   >li {
-    &:last-child{
+   /*  &:last-child{
       &> a{
       padding-bottom: 0;
       }
-    }
+    } */
     &+li {
       border-top: 1px solid #eee;
     }
@@ -1785,6 +1785,12 @@
           font-weight: $fw-m;
         }
       }
+    }
+  }
+  &_wrap{
+    //padding-bottom: 30px;
+    .btn_more{
+      margin: 30px 0 30px;
     }
   }
 }
@@ -1883,10 +1889,12 @@
 
 .edu_regist {
   &_wrap{
-    margin-bottom: -30px;
+    .btn_more{
+      margin: 60px 0 30px;
+    }
   }
   .accord_list {
-    margin: 0 -20px;
+    margin: 0 -20px -30px;
     li:last-child{
       border-bottom: 0;
     }
@@ -2003,7 +2011,7 @@
 
 
 .page_edu {
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   .tab_menu {
     &.round_tab {
       >ul {
@@ -2030,17 +2038,20 @@
   }
   .round_tab {
     &+.tab_cont {
-      padding-bottom: 30px;
+      //padding-bottom: 30px;
       .btn_group {
         padding:60px 0 0;
       }
     }
   }
-  // .tab_cont {
-  //   .btn_group {
-  //     padding: 60px 0 30px;
-  //   }
-  // }
+  .tab_cont {
+    .edu_desc_wrap {
+      margin-bottom: 0;
+    }
+    .txt_notice_wrap {    
+      padding-bottom: 0;
+    }
+  }
 }
 
 .edu_detail_top {
@@ -2214,12 +2225,16 @@
 .sub_tab_wrap {
   max-width: 1024px;
   margin: 0 auto;
+  padding-bottom: 30px;
   .tab_menu {
     padding: 20px 20px 0;
   }
   .txt_notice_wrap {
     max-width:none;
-    padding: 28px 0 12px;
+    padding: 28px 0 30px;
+  }
+  .order_accord .accord_cont > .inner{
+    padding-bottom: 32px;
   }
 }
 

@@ -19,6 +19,96 @@
   <div id="container">
     <!-- contnets -->
     <div class="guide_contnets">
+      <h1>정보수정 모달</h1>
+      <button type="button" id="modal012" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+      <div class="modal_container fade" data-modal="modal012">
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+          <div class="modal_header">
+            <h1 class="modal_tit">휴대전화번호 변경</h1>
+          </div>
+          <div class="modal_body">
+            <div class="scroll_inner">
+              <section class="modal_form">
+                <div class="input_group">
+                  <span class="input_label">내/외국인</span>
+                  <div class="select_box">
+                    <div class="select_box_value" data-btmsheet="btmSheet01">
+                      <span>선택해 주세요</span>
+                    </div><!-- //.select_box_value -->
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>내국인</span></li>
+                        <li><span>외국인</span></li>
+                      </ul>
+                    </div><!-- //.select_box_list -->
+                  </div><!-- //.select_box -->
+                </div><!-- //.input_group -->
+                <div class="input_group">
+                  <span class="input_label">이름</span>
+                  <label for="">
+                    <input type="text" id="" class="input_text" value="" placeholder="이름">
+                  </label>
+                </div><!-- //.input_group -->
+                <div class="input_group input_social_num">
+                  <span class="input_label">생년</span>
+                  <!-- 동의한 사람만 뒷자리 성별구분인풋 노출 -->
+                  <label for="">
+                    <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                    <span class="dash">-</span>
+                    <input type="text" id="" class="input_text" value="" placeholder="0">
+                    <span class="hidden_num">******</span>
+                  </label>
+                  <!-- 동의 안 한 경우 -->
+                  <!-- <label for="">
+                    <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                    <span class="dash">-</span>
+                    <span class="hidden_num">*******</span>
+                  </label> -->
+                </div><!-- //.input_group -->
+                <div class="input_group">
+                  <span class="input_label">휴대폰 번호</span>
+                  <div class="select_box">
+                    <div class="select_box_value" data-btmsheet="btmSheet02">
+                      <span>통신사를 선택해 주세요</span>
+                    </div><!-- //.select_box_value -->
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>SKT</span></li>
+                        <li><span>KT</span></li>
+                        <li><span>LGT U</span></li>
+                        <li><span>SKT 알뜰폰</span></li>
+                        <li><span>KT 알뜰폰</span></li>
+                        <li><span>LG 알뜰폰</span></li>
+                      </ul>
+                    </div><!-- //.select_box_list -->
+                  </div><!-- //.select_box -->
+                  <label for="">
+                    <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                    <button class="btn_sm btn_border">인증요청</button>
+                  </label>
+                </div><!-- //.input_group -->
+                <div class="input_group with_time">
+                  <label for="">
+                    <input type="text" id="" class="input_text" value="899944" placeholder="">
+                    <span class="time">2:35</span>
+                    <!-- <button class="btn_sm btn_border">인증완료</button> -->
+                  </label>
+                </div><!-- //.input_group -->
+                <p class="txt_alert refer_mark">인증 완료 후 기본정보를 저장하시려면 인증 완료 버튼을 반드시 눌러주시기 바랍니다.</p>
+              </section>
+            </div><!-- //.scroll_inner -->
+          </div><!-- //.modal_body -->
+          <div class="modal_footer">
+            <div class="btn_group">
+              <button class="btn_modal_close btn btn_sm btn_primary">인증 완료</button>
+            </div>
+          </div><!-- //.modal_footer -->
+        </div><!-- //.modal_content -->
+      </div><!-- //.modal_container -->
+
+
+
       <h1>메인 모달</h1>
       <button type="button" id="modal011" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
 

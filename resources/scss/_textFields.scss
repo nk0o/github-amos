@@ -83,6 +83,9 @@
         right: 67px;
       }
     }
+    & + .input_group.with_time{
+      padding-top: 6px;
+    }
     .dash{
       color:$gray-200;
       text-align: center;

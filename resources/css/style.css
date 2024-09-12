@@ -3784,6 +3784,9 @@ select {
 .input_group.with_time .ico_close_circle {
   right: 67px;
 }
+.input_group + .input_group.with_time {
+  padding-top: 6px;
+}
 .input_group .dash {
   color: #e2e2e2;
   text-align: center;
@@ -5514,6 +5517,15 @@ div.dataTables_wrapper .btn_floating:focus {
   line-height: 1.3333;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
+.modal_form .input_group {
+  padding-top: 24px;
+}
+.modal_form .input_group:first-child {
+  padding-top: 8px;
+}
+.modal_form .refer_mark {
+  margin-top: 20px;
+}
 
 .modal_notice .modal_content {
   padding-top: 0;
@@ -6071,7 +6083,7 @@ header.fixed {
 
 #wrap:has(.btm_bar) {
   margin-bottom: 90px;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100dvh - 90px);
 }
 
 .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
@@ -8471,17 +8483,19 @@ footer .f_company {
   }
 }
 .board_list {
-  padding-top: 4px;
+  padding: 4px 0 10px;
 }
 .board_list > li {
+  /*  &:last-child{
+     &> a{
+     padding-bottom: 0;
+     }
+   } */
   /* &:first-child{
     & > a{
       padding-top: 24px;
     }
   } */
-}
-.board_list > li:last-child > a {
-  padding-bottom: 0;
 }
 .board_list > li + li {
   border-top: 1px solid #eee;
@@ -8568,6 +8582,9 @@ footer .f_company {
 .board_list_top .count span em {
   color: #222222;
   font-weight: 400;
+}
+.board_list_wrap .btn_more {
+  margin: 30px 0 30px;
 }
 
 .no_data {
@@ -8679,11 +8696,11 @@ footer .f_company {
   line-height: 19px;
 }
 
-.edu_regist_wrap {
-  margin-bottom: -30px;
+.edu_regist_wrap .btn_more {
+  margin: 60px 0 30px;
 }
 .edu_regist .accord_list {
-  margin: 0 -20px;
+  margin: 0 -20px -30px;
 }
 .edu_regist .accord_list li:last-child {
   border-bottom: 0;
@@ -8815,9 +8832,6 @@ footer .f_company {
   margin-top: 8px;
 }
 
-.page_edu {
-  padding-bottom: 30px;
-}
 .page_edu .tab_menu.round_tab > ul {
   margin: 0 -20px;
 }
@@ -8842,11 +8856,14 @@ footer .f_company {
   font-weight: 600;
   line-height: 18px;
 }
-.page_edu .round_tab + .tab_cont {
-  padding-bottom: 30px;
-}
 .page_edu .round_tab + .tab_cont .btn_group {
   padding: 60px 0 0;
+}
+.page_edu .tab_cont .edu_desc_wrap {
+  margin-bottom: 0;
+}
+.page_edu .tab_cont .txt_notice_wrap {
+  padding-bottom: 0;
 }
 
 .edu_detail_top {
@@ -9006,13 +9023,17 @@ footer .f_company {
 .sub_tab_wrap {
   max-width: 1024px;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 .sub_tab_wrap .tab_menu {
   padding: 20px 20px 0;
 }
 .sub_tab_wrap .txt_notice_wrap {
   max-width: none;
-  padding: 28px 0 12px;
+  padding: 28px 0 30px;
+}
+.sub_tab_wrap .order_accord .accord_cont > .inner {
+  padding-bottom: 32px;
 }
 
 .attendance {
@@ -12259,7 +12280,7 @@ footer .f_company {
   padding: 12px 0 32px;
 }
 .center_board {
-  padding: 24px 0 20px;
+  padding-top: 24px;
 }
 .center_board .board_list {
   padding-top: 0;
