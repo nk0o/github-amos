@@ -8,7 +8,7 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>공지사항 | 고객센터 | 아모레뉴플렛폼</title>
+  <title>정보공유의장 | 고객센터 | 아모레뉴플렛폼</title>
 </head>
 <body>
   <div id="wrap">
@@ -22,16 +22,19 @@
           <div class="board_detail">
             <div class="detail_top">
               <div class="top">
-                <span class="date">2024.06.03</span>
-                <span class="view">156</span>
-                <button class="btn_share"><i class="ico_share ico_24"></i></button>
+                <div>
+                  <span class="user_id">Honggil</span>/<span class="user_name">홍길동</span>
+                </div>
+                <button class="ico_20 ico_meatball"></button>
               </div>
-              <strong class="tit">
-                <span class="badge badge_notice">공지</span>
-                [본사/VIP] 6월 곱슬몽 슬릭펌의 모든것 With 더클래스 모나크 서애원장</strong>
+              <div class="top">
+                <span class="date">2024.06.03</span>
+              </div>
+              <strong class="tit">어떤 샴푸 브랜드가 좋은가요?</strong>
             </div>
             <div class="detail_cont">
-              <img src="../../resources/images/@img_detail_edu.png" alt="">
+              <img src="../../resources/images/@img_fileupload1.png" alt>
+              <img src="../../resources/images/@img_fileupload2.png" alt>
               <p>2024년 특별 기획, 핫펌 케미컬 심화학습 6월 특강입니다. 최적의 컬러 표현을 위한 솔루션 습득 과정을 친절히 알려 드립니다.<br><br>
               2024년 특별 기획, 핫펌 케미컬 심화학습 6월 특강입니다. 최적의 컬러 표현을 위한 솔루션 습득 과정을 친절히 알려 드립니다. 2024년 특별 기획, 핫펌 케미컬 심화학습 6월 특강입니다. 최적의 컬러 표현을 위한 솔루션 습득 과정을 친절히 알려 드립니다.2024년 특별 기획, 핫펌 케미컬 심화학습 6월 특강입니다. 최적의 컬러 표현을 위한 솔루션 습득 과정을 친절히 알려 드립니다.</p>
             </div>
@@ -48,7 +51,15 @@
               </div>
             </div>
           </div>
-        </div>
+          <!-- 댓글작성 버튼 -->
+          <div class="floating_btm">
+            <button class="btn_bottom">
+              <i class="ico_comment ico_24"></i>
+              <span>댓글작성</span>
+            </button>
+          </div><!-- //.floating_btm -->
+          <!-- 댓글작성 버튼 -->
+        </div><!-- //.inner -->
       </section>
       <div class="btn_group">
         <a href="#" class="btn_lg btn_primary">목록</a>
@@ -72,7 +83,7 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("공지사항")
+      $(".appbar_tit").html("정보 공유의 장")
     })
   </script>
   <!--------------- 퍼블화면에만 쓰이는 script --------------->

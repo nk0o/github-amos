@@ -159,6 +159,16 @@
 }
 /* Commerce */
 .ico {
+  &_post {
+    &::before {
+      @include iconImgPath("ico_post.svg");
+    }
+  }
+  &_comment {
+    &::before {
+      @include iconImgPath("ico_comment.svg");
+    }
+  }
   &_receipt {
     &::before {
       @include iconImgPath("ico_receipt.svg");
@@ -297,6 +307,16 @@
 }
 /* UI actions */
 .ico {  
+  &_crown{
+    &::before {
+      background: transparent url("../../resources/images/icon/ico_crown.svg") center/contain no-repeat !important;
+    }
+  }
+  &_meatball{
+    &::before {
+      @include iconImgPath("ico_meatball.svg");
+    }
+  }
   &_spinner{
     &_down{
       &::before {
@@ -447,6 +467,11 @@
     &_circle {
       &::before {
         background: url("../images/icon/ico_close_circle.svg") center/contain no-repeat;
+      }
+    }
+    &_box {
+      &::before {
+        background: url("../images/icon/ico_close_box.svg") center/contain no-repeat;        
       }
     }
   }

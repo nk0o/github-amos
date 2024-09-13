@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script | >include.style();</script>
+  <title>정보공유의장 | 고객센터 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <section class="dot_list_wrap">
+          <ul class="dot_list">
+            <li>정보 공유의 장의 목적은 좀더 진솔한 대화를 할수 있는 공간으로서의 익명의 순기능을 살리기 위함입니다.</li>
+            <li>냉소, 혐오, 욕설, 비방을 지양하며, 위반시 차단될 수 있습니다.</li>
+            <li>허위사실유포, 명예훼손 등의 소지가 있는 내용은 게시자 본인의 법적 책임을 지게 됩니다.</li>
+          </ul>
+        </section>
+        <section class="hr_divider"></section>
+        <section>
+          <div class="input_group">
+            <span class="input_label required">제목</span>
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="제목을 입력해주세요. (최대 20자)">
+            </label>
+          </div><!-- //.input_group -->
+          <div class="input_group">
+            <span class="input_label required">문의 내용</span>
+            <div class="input_writing_group">
+              <textarea name="" id="" placeholder="문의하실 내용을 입력해주세요."></textarea>
+              <div class="txt_count">
+                <p class="current zero">0</p>
+                <span>/</span>
+                <p class="total">1,000</p>
+              </div>
+            </div>
+          </div><!-- //.input_group -->
+          <div class="input_group">
+            <span class="input_label">첨부파일</span>
+            <div class="uploader_wrap">
+              <div class="file_name">
+                <input type="text" readonly>
+                <img src="../../resources/images/@img_fileupload1.png" alt>
+                <i class="input_delete" onclick="removeFilename(this)"></i>
+              </div>
+              <div class="file_name">
+                <input type="text" readonly>
+                <img src="../../resources/images/@img_fileupload2.png" alt>
+                <i class="input_delete" onclick="removeFilename(this)"></i>
+              </div>
+              <div class="file_name">
+                <input type="text" readonly>
+                <img src="../../resources/images/@img_fileupload1.png" alt>
+                <i class="input_delete" onclick="removeFilename(this)"></i>
+              </div>
+              <div class="file_name">
+                <input type="text" readonly>
+                <img src="../../resources/images/@img_fileupload2.png" alt>
+                <i class="input_delete" onclick="removeFilename(this)"></i>
+              </div>
+              <div class="file_uploader">
+                <label for="fileUploader-1"><span class="hide">파일 첨부하기</span></label>
+                <input type="file" class="input_file" id="fileUploader-1">
+              </div><!-- file_uploader -->
+            </div><!-- //.uploader_wrap -->
+            <ul class="dot_list">
+              <li>첨부파일은 최대 5개까지 업로드 가능합니다.</li>
+              <li>첨부파일 용량은 파일당 5MB를 초과하실 수 없습니다.</li>
+              <li>이미지(JPG, PNG, HEIC(HEIF)), PDF 파일만 업로드 가능합니다.</li>
+            </ul>
+          </div><!-- //.input_group -->
+        </section>
+        <div class="btn_group">
+          <button class="btn btn_lg btn_primary">등록하기</button>
+        </div><!-- //.btn_group -->
+      </div>
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <!-- <script>include.footer();</script> -->
+    <!-- //footer -->
+    <!-- tabBar -->
+    <!-- <script>include.tabBar();</script> -->
+    <!-- //tabBar -->
+  </div><!-- //#wrap -->
+  <!-- floatingSide -->
+  <!-- <script>include.floatingSide();</script> -->
+  <!-- //floatingSide -->
+
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("댓글작성");
+      $(document).on('click', '.input_delete', function(){
+        $(this).parent('.file_name') && $(this).parents('.file_name').remove();
+      })
+      $(document).on('change', '.input_file', function(e){
+        e.stopPropagation();
+        var $div = $(`<div class="file_name">
+          <input type="text" readonly>
+          <img src="" alt>
+          <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+        `);
+        $(this).parents('.uploader_wrap').prepend($div);
+        
+        var fileCheck = $(this).val();
+        if (fileCheck) {
+          var fileName = $(this).val();
+          //경로가 있는경우
+          //$div.find('input').val(fileName);
+          //경로가 없어야 하는 경우
+          fileName = fileName.split("\\");
+          $div.find('input').val(fileName[fileName.length - 1]);
+        }
+      })
+      //File Uploader - Remove Choosed File
+      function removeFilename(t) {
+        $(t).parents('.file_name').remove();
+      };
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

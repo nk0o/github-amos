@@ -197,8 +197,9 @@ button {
   &_icon{
     @extend .btn;
     justify-content: center;
-    height: 28px;
-    padding: 6px;
+    //height: 28px;
+    height: 32px;
+    padding: 8px;
     border-radius: 9999px;
     border-color:$gray-100;
     color: $gray-700;

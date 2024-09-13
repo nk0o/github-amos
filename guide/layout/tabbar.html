@@ -24,15 +24,6 @@
       <!-- guide_contnets -->
       <div class="guide_contnets">
 
-        <h1>Tab Bar</h1>
-        <div class="btm_bar" style="position:static">
-          <div class="inner">
-            <button class="btn_heart"><i class="ico_heart ico_24"></i></button>
-            <button class="btn_bottom"><i class="ico_cart_actionbar ico_24"></i><span>장바구니 담기</span></button>
-          </div>
-        </div>
-        <!-- //.btm_bar -->
-
         <div class="btm_bar type2" style="position:static">
           <div class="inner">
             <button class="btn_like" onclick="like(this);"><i class="ico_btn_heart ico_24"></i>찜하기</button>
@@ -72,6 +63,41 @@
         </div>
         <!-- //.btm_bar -->
 
+        <!-- inlineStyle 빼기 -->
+        <h1>장바구니담기버튼</h1>
+        <div class="prd_cart_btn" style="position:relative;bottom: auto;">
+          <button class="btn_bottom">
+            <span>선택상품 장바구니 담기</span>
+            <span class="count">0</span>
+          </button>
+        </div>
+        
+        
+        <h1>Floating Bottom - 글쓰기</h1>
+        <div class="floating_btm" style="position:relative;bottom: auto;">
+          <button class="btn_bottom">
+            <i class="ico_post ico_24"></i>
+            <span>글쓰기</span>
+          </button>
+        </div>
+
+        <h1>Floating Bottom - 댓글작성</h1>
+        <div class="floating_btm" style="position:relative;bottom: auto;">
+          <button class="btn_bottom">
+            <i class="ico_comment ico_24"></i>
+            <span>댓글작성</span>
+          </button>
+        </div>
+
+        <h1>텍스트 버튼</h1>
+        <a href="" class="btm_bar type_btn" style="position:static">
+          <div class="inner">
+            쇼핑하러 가기
+          </div>
+        </a>
+
+
+
         <h1>Floating Side - default</h1>
 
         <ul class="floating_side" style="position: static;">
@@ -98,19 +124,6 @@
           </li>
         </ul>
         <!-- //.floating_side -->
-
-
-        <h1>Floating Bottom - 상품담기</h1>
-        <div class="floating_btm" style="position:static">
-          <button class="btn_bottom"><i class="ico_cart_float ico_24"></i><span>장바구니</span><span class="count">4</span></button>
-        </div>
-
-        <h1>텍스트 버튼</h1>
-        <a href="" class="btm_bar type_btn" style="position:static">
-          <div class="inner">
-            쇼핑하러 가기
-          </div>
-        </a>
 
       </div>
       <!--//.guide_contnets -->

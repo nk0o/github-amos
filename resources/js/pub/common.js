@@ -46,7 +46,7 @@ $(document).ready(function () {
   allView();
   // if ($(".line_tab")) { LineTabMenuInit() }
   // if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
-  // if ($('.file_uploader')) { fileUploader() }
+  // if ($('.progress_bar')) { progressBarUI() }
   // if ($('.input_writing_group textarea')) { initCountString() }
   // if ($('.progress_bar')) { progressBarUI() }
   // if ($('.pagination').length > 0) { paginationUI() }
@@ -183,29 +183,6 @@ $(document).ready(function () {
     });
   }
 
-  /****** File Uploader ******/
-/*   function fileUploader() {
-    $('.file_uploader').each(function (index, item) {
-      $(item).find('.file_name .input_delete').on('click', function () {
-        $(this).parents('.file_name').remove();
-      });
-      $(item).find('.input_file').on('change', function () {
-        var fileCheck = $(this).val();
-        if (fileCheck == '') {
-          alert("파일을 첨부해 주세요");
-        } else {
-          var $div = $('<div class="file_name"><input type="text" readonly><i class="input_delete" onclick="removeFilename(this)"></i></div>');
-          $(item).append($div);
-          var fileName = $(this).val();
-          //경로가 있는경우
-          //$div.find('input').val(fileName);
-          //경로가 없어야 하는 경우
-          fileName = fileName.split("\\");
-          $div.find('input').val(fileName[fileName.length - 1]);
-        }
-      });
-    });
-  }; */
 
   
   function categoryToggle(){
@@ -479,11 +456,6 @@ function accordionUI() {
     }
   }
 }
-
-//File Uploader - Remove Choosed File
-function removeFilename(t) {
-  $(t).parents('.file_name').remove();
-};
 
 //DataTable Select All row
 function dataTableSelect(dtable) {
