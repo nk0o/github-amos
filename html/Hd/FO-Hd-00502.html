@@ -21,7 +21,7 @@
         <div class="inner">
           <div class="board_detail">
             <div class="detail_top">
-              <div class="top">
+              <div class="edit_top">
                 <div class="user_name">
                   <span>Honggil</span>&nbsp;/&nbsp;<span>홍길동</span>
                 </div>
@@ -41,20 +41,92 @@
               <img src="../../resources/images/@img_fileupload2.png" alt>
               <p>아윤채가 사용하는 것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요. 이런 경우, 어떻게 컨설팅을 하면 좋을까요?</p>
             </div>
-            <div class="detail_bottom">
-              
-            </div>
-          </div>
-          <!-- 댓글작성 버튼 -->
-          <div class="floating_btm">
-            <button class="btn_bottom">
-              <i class="ico_comment ico_24"></i>
-              <span>댓글작성</span>
-            </button>
-          </div><!-- //.floating_btm -->
-          <!-- 댓글작성 버튼 -->
+          </div><!-- //.board_detail -->
         </div><!-- //.inner -->
-      </section>
+        <div class="board_act">
+          <button class="act_like active" onclick="like(this);">120</button><!-- 좋아요 누른경우 구분: active -->
+          <div class="act_comment">3</div>
+          <div class="act_view">1K</div>
+        </div><!-- //.board_act -->
+      </section><!-- //.board_detail_wrap -->
+      <div class="hr_divider"></div>
+      <section class="comment_list_wrap">
+        <div class="inner">
+          <p class="count"><span><em>3</em>개</span>의 댓글이 있습니다.</p>
+        </div>
+        <ul>
+          <li class="comment_list">
+            <div class="inner">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>Honggil</span>&nbsp;/&nbsp;<span>홍길동</span>
+                </div>
+                <button class="ico_24 ico_meatball" data-actbox="actBox02"></button>
+                <ul id="actBox02" class="action_box">
+                  <li class="action_btn"><button>수정</button></li>
+                  <li class="action_btn"><button>삭제</button></li>
+                </ul>
+              </div><!-- //.edit_top -->
+              <div class="comment_cont">
+                <p>모든 손님을 맞출 수는 없지 않을까요. 우선 손님이 사용하는 것과 아윤채 제품을 비교해서 체험 시키면 어떨까요?</p>
+              </div><!-- //.detail_cont -->
+              <div class="comment_bottom">
+                <div class="date">2024.06.10</div>
+                <button class="act_like active" onclick="like(this);">4</button><!-- 좋아요 누른경우 구분: active -->
+              </div><!-- //.comment_bottom -->
+            </div><!-- //.inner -->
+          </li>
+          <li class="comment_list">
+            <div class="inner">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>Honggil</span>&nbsp;/&nbsp;<span>홍길동</span>
+                </div>
+                <button class="ico_24 ico_meatball" data-actbox="actBox03"></button>
+                <ul id="actBox03" class="action_box">
+                  <li class="action_btn"><button>수정</button></li>
+                  <li class="action_btn"><button>삭제</button></li>
+                </ul>
+              </div><!-- //.edit_top -->
+              <div class="comment_cont">
+                <p>모든 손님을 맞출 수는 없지 않을까요. 우선 손님이 사용하는 것과 아윤채 제품을 비교해서 체험 시키면 어떨까요?</p>
+              </div><!-- //.detail_cont -->
+              <div class="comment_bottom">
+                <div class="date">2024.06.10</div>
+                <button class="act_like">3</button>
+              </div><!-- //.comment_bottom -->
+            </div><!-- //.inner -->
+          </li>
+          <li class="comment_list not_view"><!-- 삭제,블라인드 댓글 구분: not_view  -->
+            <div class="inner">
+              <div class="comment_cont">
+                [ 사용자가 삭제한 댓글입니다. ]
+              </div><!-- //.detail_cont -->
+              <div class="comment_bottom">
+                <div class="date">2024.06.10</div>
+              </div><!-- //.comment_bottom -->
+            </div><!-- //.inner -->
+          </li>
+          <li class="comment_list not_view">
+            <div class="inner">
+              <div class="comment_cont">
+                [ 아모스 프로 정책에 따라 블라인드 처리되었습니다. ]
+              </div><!-- //.detail_cont -->
+              <div class="comment_bottom">
+                <div class="date">2024.06.10</div>
+              </div><!-- //.comment_bottom -->
+            </div><!-- //.inner -->
+          </li>
+        </ul>
+      </section><!-- //.comment_list_wrap -->
+      <!-- 댓글작성 버튼 -->
+      <div class="floating_btm w_200">
+        <button class="btn_bottom">
+          <i class="ico_comment ico_24"></i>
+          <span>댓글작성</span>
+        </button>
+      </div><!-- //.floating_btm -->
+      <!-- 댓글작성 버튼 -->
     </main>
     <!-- //#container -->
     <!-- footer -->

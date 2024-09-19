@@ -303,6 +303,7 @@
     @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
   }
   &_btm{
+    z-index: 1;
     position: fixed;
     left: 50%;
     bottom:calc($btmbar-H + 36px);

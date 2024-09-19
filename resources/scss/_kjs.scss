@@ -1760,6 +1760,11 @@
       word-wrap: normal;
       overflow: hidden;
     }
+    .summary{
+      margin-top: 8px;
+      @include fontStyle($gray-900, $fs-m, $fw-m, 1.5);
+      @include text-ellipsis-2;
+    }
   }
   .badge_notice{
     margin-right: 4px;
@@ -1793,6 +1798,53 @@
     }
   }
 }
+.sharing_board{
+  width: 100%;
+  max-width: 984px;
+  margin: 0 auto;
+  border-top: 1px solid $gray-100;
+  @media (min-width: $pc-point) {
+  }
+  .board_list {    
+    .ico_crown{
+      display: none;
+      vertical-align: -6px;
+      margin-right: 8px;
+    }
+    & > li {
+      .tit{
+        margin-top: 12px;
+      }
+      .date{
+        margin: 16px 0 0 0;
+      }
+      &.fixed_post{
+        .ico_crown{
+          display: inline-block;
+        }
+      }
+      & > a{
+        padding: 24px 20px;
+        &::after{
+          display: none;
+        }
+        @media (min-width: $pc-point) {
+          padding: 24px 0;
+        }
+      }
+    }
+  }
+  .board_act{
+    margin-top: 20px;
+    .act_image{
+      margin-left: auto;
+    }
+    .act_like{
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
 
 .no_data {
   padding: 100px 0 130px;
@@ -1817,10 +1869,6 @@
       justify-content: space-between;
       align-items: center;
       gap:16px;
-      .user_name{
-        @include fontStyle($gray-600, $fs-s, $fw-sb, 1.35714);
-        font-family: $font-aritadt;
-      }
       .date {
         @include fontStyle($gray-500, $fs-xs, $fw-l, 1.23);
       }
@@ -1868,6 +1916,18 @@
   }
   .detail_bottom {
     margin:40px 0 32px;
+  }
+  &_wrap{
+    .board_act{
+      width: 100%;
+      max-width: 984px;
+      padding: 16px 20px;
+      margin: 0 auto;
+      border-top: 1px solid $gray-100;
+      @media (min-width: $pc-point) {
+        padding: 16px 0;
+      }
+    }
   }
 }
 

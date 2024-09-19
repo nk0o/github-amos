@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>정보공유의장 | 고객센터 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.mainAppBar();</script>
+      <script>include.mainTabMenu();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container">
+      <!-- 탭 영역 -->
+      <section class="tabs_area"> 
+        <!-- 컨테인 탭 -->
+        <div class="tab_center_wrap">
+          <div class="inner">
+            <div class="tab_menu contain_tab contain_tab_type2 tab_center">
+              <ul>
+                <li class="tab_list"><button>공지사항</button></li>
+                <li class="tab_list"><button>1:1 문의</button></li>
+                <li class="current tab_list"><button>정보 공유의 장</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //컨테인 탭 -->
+      </section>
+      <!-- //탭 영역 -->
+      <section class="board_list_wrap sharing_board"><!-- 정보공유의 장 게시판 구분: sharing_board -->
+        <ul class="board_list">
+          <li class="fixed_post"><!-- 상단고정 게시글(최대 5개): fixed_post -->
+            <a href="#">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>Honggil</span>&nbsp;/&nbsp;<span>홍길동</span>
+                </div>
+              </div><!-- //.edit_top -->
+              <div class="tit">
+                <i class="ico_crown ico_24"></i>어떤 샴푸 브랜드가 좋은가요?
+              </div>
+              <p class="summary">아윤채가 사용하는것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.</p>
+              <span class="date">2024.06.03</span>
+              <div class="board_act">
+                <button class="act_like active" onclick="like(this);">120</button><!-- 좋아요 누른경우 구분: active -->
+                <div class="act_comment">3</div>
+                <div class="act_view">1K</div>
+                <div class="act_image">5</div><!-- 게시글에 컨텐츠있는경우(최대 5개) -->
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>sungch</span>&nbsp;/&nbsp;<span>성춘향</span>
+                </div>
+              </div><!-- //.edit_top -->
+              <div class="tit">
+                <i class="ico_crown ico_24"></i>어떤 샴푸 브랜드가 좋은가요?
+              </div>
+              <p class="summary">아윤채가 사용하는것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.아윤채가 사용하는것은
+                좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.아윤채가 사용하는것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.
+              </p>
+              <span class="date">2024.06.03</span>
+              <div class="board_act">
+                <button class="act_like" onclick="like(this);">50</button>
+                <div class="act_comment">4</div>
+                <div class="act_view">200</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>sungch</span>&nbsp;/&nbsp;<span>성춘향</span>
+                </div>
+              </div><!-- //.edit_top -->
+              <div class="tit">
+                <i class="ico_crown ico_24"></i>어떤 샴푸 브랜드가 좋은가요?
+              </div>
+              <p class="summary">아윤채가 사용하는것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.</p>
+              <span class="date">2024.06.03</span>
+              <div class="board_act">
+                <button class="act_like" onclick="like(this);">50</button>
+                <div class="act_comment">4</div>
+                <div class="act_view">200</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+        <!-- <div class="inner">
+        </div> -->
+      </section><!-- //.board_list_wrap.sharing_board -->
+      <!-- 글쓰기 버튼 -->
+      <div class="floating_btm w_200">
+        <button class="btn_bottom">
+          <i class="ico_post ico_24"></i>
+          <span>글쓰기</span>
+        </button>
+      </div><!-- //.floating_btm -->
+      <!-- 글쓰기 버튼 -->
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div><!-- //#wrap -->
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+</body>
+</html>

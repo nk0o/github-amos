@@ -1891,3 +1891,86 @@
     }
   }
 }
+//정보 공유의 장 댓글
+.board_act{
+  @include flexStart;
+  gap:24px;
+  width: 100%;
+  max-width: 984px;
+}
+.edit_top{
+  @include flexBetween;
+  .user_name{
+    @include fontStyle($gray-600, $fs-s, $fw-sb, 1.35714);
+    font-family: $font-aritadt;
+  }
+}
+.comment{
+  &_list{
+    padding: 24px 0;
+    border-bottom: 1px solid $gray-100;
+    & >.inner{
+      padding: 0 20px;
+    }
+    @media (min-width: $pc-point) {
+      max-width: calc($pc-point - 40px);
+      margin: 0 auto;
+      &>.inner{
+        max-width: calc($pc-point - 40px);
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &:last-child{
+      border-bottom: none;
+      padding-bottom: 30px;
+    }
+    &.not_view{
+      .comment_cont{
+        margin-top: 0;
+        @include fontStyle($gray-700, $fs-sm, $fw-m, 1.4667);
+      }
+    }
+  }
+  &_bottom{
+    .date{
+      @include fontStyle($gray-600, $fs-s, $fw-l, 1.2143);
+    }
+    .like{
+      @include fontStyle($gray-600, $fs-xs, $fw-m, 1);
+      &::before {
+        content: '';
+        display: inline-flex;
+        width: 20px;
+        height: 20px;
+        background-color: $gray-600 !important;
+        mask: url('../images/icon/ico_heart.svg') left center/contain no-repeat;
+      }
+    }
+  }
+  &_cont{
+    margin-top: 12px;
+    @include fontStyle($gray-900, $fs-m, $fw-m, 1.5);
+  }
+  &_bottom{
+    margin-top: 16px;
+    .act_like{
+      margin-top: 20px;
+    }
+  }
+}
+.comment_list_wrap{
+  .count{
+    margin-top: 20px;
+    .count{
+      @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
+      span{
+        color: $gray-950;
+      }
+    }
+  }
+}
+
+
+
+

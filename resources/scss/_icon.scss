@@ -307,6 +307,11 @@
 }
 /* UI actions */
 .ico {  
+  &_image{
+    &::before {
+      @include iconImgPath("ico_image.svg");
+    }
+  }
   &_crown{
     &::before {
       background: transparent url("../../resources/images/icon/ico_crown.svg") center/contain no-repeat !important;

@@ -11,6 +11,10 @@
   width: 220px !important;
   flex:0 0 220px !important;
 }
+.w_200{
+  width: 220px !important;
+  flex:0 0 220px !important;
+}
 .w_full{
   width: 100% !important;
   flex: 100% !important;
@@ -596,6 +600,52 @@
     &:last-child{      
       border-bottom: none;
     }
+  }
+}
+
+.act_view, .act_like, .act_comment, .act_file, .act_image{
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  @include fontStyle($gray-600, $fs-xs, $fw-m, 1);
+  &::before {
+    content: '';
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-color: $gray-600 !important;
+  }
+}
+.act_like{
+  &::before {
+    mask: url('../images/icon/ico_heart.svg') left center/contain no-repeat;
+  }
+  &.active{
+    &::before{
+      background-color: $color-red !important;
+      mask: url('../images/icon/ico_heart_red.svg') left center/contain no-repeat;
+    }
+  }
+}
+.act_comment{
+  &::before {
+    mask: url('../images/icon/ico_comment.svg') left center/contain no-repeat;
+  }
+}
+.act_view {
+  &::before {
+    mask: url('../images/icon/ico_view.svg') left center/contain no-repeat;
+  }
+}
+.act_image{
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 9999px;
+  background-color: $gray-50;
+  color: $gray-500 !important;
+  &::before {
+    background-color: $gray-500 !important;
+    mask: url('../images/icon/ico_image.svg') left center/contain no-repeat;
   }
 }
 // PC
