@@ -4199,7 +4199,7 @@ select {
   position: relative;
   width: 100%;
   height: 40px;
-  padding: 0 8px;
+  padding: 0 20px;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
@@ -4311,7 +4311,7 @@ select {
 }
 .tab_menu.round_tab .tab_list > button, .tab_menu.round_tab .tab_list > a {
   height: 35px;
-  padding: 0 12px;
+  padding: 0 8px 0 12px;
   border-radius: 50px;
   border: 1px solid #E2E2E2;
   color: #888;
