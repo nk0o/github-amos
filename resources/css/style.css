@@ -9268,7 +9268,7 @@ footer .f_company {
 .cupon_box:first-child {
   margin-top: 24px;
 }
-.cupon_box.end .cont {
+.cupon_box.end .cont > * {
   opacity: 0.5;
 }
 .cupon_box.end .bottom {
