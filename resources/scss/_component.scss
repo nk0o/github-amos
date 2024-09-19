@@ -569,6 +569,35 @@
     }
   }
 }
+
+.action_btn{
+  &, & >button{
+    min-width: 118px;
+    min-height: 46px;
+    border: 1px solid $gray-200;
+    border-radius: 4px;
+    @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.333);
+  }
+}
+.action_box{
+  display: none;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 13px;
+  .action_btn, button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $gray-200;
+    border-radius: 0;
+    &:last-child{      
+      border-bottom: none;
+    }
+  }
+}
 // PC
 @media (min-width: 1024px) {
   .thumb_list > li {

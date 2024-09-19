@@ -1816,10 +1816,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
       gap:16px;
+      .user_name{
+        @include fontStyle($gray-600, $fs-s, $fw-sb, 1.35714);
+        font-family: $font-aritadt;
+      }
       .date {
-        @include fontStyle($gray-500, $fs-xs, $fw-l, 1);
+        @include fontStyle($gray-500, $fs-xs, $fw-l, 1.23);
       }
       .state{
         margin: 0 auto 0 8px;
@@ -1842,6 +1845,7 @@
     .tit {
       display: block;
       display: flex;
+      margin-top: 8px;
       gap:4px;
       font-family: 'Arita-dotum';
       @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);

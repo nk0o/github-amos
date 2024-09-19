@@ -1208,6 +1208,37 @@ p {
   line-height: 1.23;
 }
 
+.action_btn, .action_btn > button {
+  min-width: 118px;
+  min-height: 46px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+.action_box {
+  display: none;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 13px;
+}
+.action_box .action_btn, .action_box button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e2e2e2;
+  border-radius: 0;
+}
+.action_box .action_btn:last-child, .action_box button:last-child {
+  border-bottom: none;
+}
+
 @media (min-width: 1024px) {
   .thumb_list > li {
     width: 83px !important;
@@ -8683,14 +8714,20 @@ footer .f_company {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
   gap: 16px;
+}
+.board_detail .detail_top .top .user_name {
+  color: #888888;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35714;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .board_detail .detail_top .top .date {
   color: #aaaaaa;
   font-size: 0.8125rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.23;
 }
 .board_detail .detail_top .top .state {
   margin: 0 auto 0 8px;
@@ -8718,6 +8755,7 @@ footer .f_company {
 .board_detail .detail_top .tit {
   display: block;
   display: flex;
+  margin-top: 8px;
   gap: 4px;
   font-family: "Arita-dotum";
   color: #222222;
