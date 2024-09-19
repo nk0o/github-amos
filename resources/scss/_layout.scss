@@ -160,6 +160,7 @@ footer{
     .accord{
       &_list{
         grid-column: 1/-1;
+        border-bottom: 1px solid #e2e2e2;
       }
       &_tit{
         pointer-events: none;
@@ -196,6 +197,7 @@ footer{
     }
     .f_info, .f_copyright{
       padding-top: 12px;
+      border-top: 0;
     }
   }
 }

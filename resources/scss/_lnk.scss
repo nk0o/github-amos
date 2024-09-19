@@ -241,7 +241,7 @@
     height: auto;
     .input_radio {
       &:checked + label{
-        background-color: $color-blue-secondary;
+        background-color: $color-blue-secondary !important;
       }
       & + label{
         padding: 30px;

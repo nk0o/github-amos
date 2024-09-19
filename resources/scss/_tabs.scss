@@ -293,11 +293,13 @@
         padding: 0 8px 0 12px;
         @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
         font-family: $font-aritadt;
+        background-color: $color-white;
       }
       .tab_list > .ico_reset{
         width: 32px;
         height:32px;
         padding:8px;
+        background-color: $color-white;
         &::before{
           background-color: $gray-400 !important;
           mask-size:16px;

@@ -339,6 +339,7 @@
   transform: translateX(-50%);
   text-align: center;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
   .btn_bottom {
     margin: 0 auto;
     padding: 0 24px;
@@ -2463,12 +2464,16 @@
   }
   .dot_list {
     margin-top: 16px;
+    &+.view_point {
+      margin-top: 24px;
+    }
   }
   .view_point {
     padding: 20px;
-    margin-top: 22px;
+    margin-top: 8px;
     border-radius: 8px;
     background: #EFF6FF;
+    
     .point_list {
       display: flex;
       justify-content: space-between;
@@ -2618,6 +2623,11 @@
 .amount_box_detail {
   >ul {
     >li {
+      &:last-child {
+        .cont {
+          padding-bottom: 24px;
+        }
+      }
       .top {
         display: flex;
         gap: 12px;

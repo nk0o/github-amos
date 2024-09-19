@@ -219,7 +219,7 @@ $(document).ready(function () {
         }, 1000);
       }
       let count = $('.prd_list_wrap').find('.prd_box.checked').length;
-      $('.prd_cart_btn .count').text('(' + count + ')');
+      $('.prd_cart_btn .count').text(count);
     });
     // putCart();
   }
