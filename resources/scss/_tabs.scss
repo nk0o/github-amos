@@ -29,7 +29,7 @@
         position: relative;
         width: 100%;
         height: 40px;
-        padding: 0 8px;
+        padding: 0 20px;
         //overflow: hidden;
         text-align: center;
         white-space: nowrap;
@@ -157,7 +157,7 @@
       padding: 0 4px;
       & > button, & > a {
         height: 35px;
-        padding:0 12px;
+        padding:0 8px 0 12px;
         border-radius: 50px;
         border: 1px solid #E2E2E2;
         color: #888;
@@ -293,11 +293,13 @@
         padding: 0 8px 0 12px;
         @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
         font-family: $font-aritadt;
+        background-color: $color-white;
       }
       .tab_list > .ico_reset{
         width: 32px;
         height:32px;
         padding:8px;
+        background-color: $color-white;
         &::before{
           background-color: $gray-400 !important;
           mask-size:16px;

@@ -1598,7 +1598,7 @@ p {
 .ico_filter::before {
   background-image: url("../images/icon/ico_filter.svg");
   background-size: cover;
-  background-color: #888888 !important;
+  background-color: #444444 !important;
 }
 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
   .ico_filter::before {
@@ -3516,6 +3516,7 @@ button:disabled *[class*=ico_]::before {
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_check_wrap.without_box .input_check:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_check:checked + label::before {
   background-image: url("../images/icon/ico_check_20_on.svg");
+  background-color: #2A3136 !important;
 }
 .input_check_list .input_check_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label {
   background-color: #f6f6f6;
@@ -4262,7 +4263,7 @@ select {
   position: relative;
   width: 100%;
   height: 40px;
-  padding: 0 8px;
+  padding: 0 20px;
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
@@ -4374,7 +4375,7 @@ select {
 }
 .tab_menu.round_tab .tab_list > button, .tab_menu.round_tab .tab_list > a {
   height: 35px;
-  padding: 0 12px;
+  padding: 0 8px 0 12px;
   border-radius: 50px;
   border: 1px solid #E2E2E2;
   color: #888;
@@ -4502,11 +4503,13 @@ select {
   font-weight: 400;
   line-height: 1.23;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  background-color: #ffffff;
 }
 .tab_selected_wrap.filter_wrap .round_tab .tab_list > .ico_reset {
   width: 32px;
   height: 32px;
   padding: 8px;
+  background-color: #ffffff;
 }
 .tab_selected_wrap.filter_wrap .round_tab .tab_list > .ico_reset::before {
   background-color: #bbbbbb !important;
@@ -6396,6 +6399,7 @@ footer .f_company {
   }
   footer .accord_list {
     grid-column: 1/-1;
+    border-bottom: 1px solid #e2e2e2;
   }
   footer .accord_tit {
     pointer-events: none;
@@ -6427,6 +6431,7 @@ footer .f_company {
   }
   footer .f_info, footer .f_copyright {
     padding-top: 12px;
+    border-top: 0;
   }
 }
 
@@ -7339,6 +7344,7 @@ footer .f_company {
   transform: translateX(-50%);
   text-align: center;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
 }
 .prd_cart_btn .btn_bottom {
   margin: 0 auto;
@@ -9003,7 +9009,7 @@ footer .f_company {
   line-height: 20px;
 }
 .edu_regist_box .cont {
-  padding: 20px;
+  padding: 20px 24px;
 }
 .edu_regist_box .cont .edu_regist_tit {
   padding-bottom: 16px;
@@ -9394,7 +9400,7 @@ footer .f_company {
 .cupon_box:first-child {
   margin-top: 24px;
 }
-.cupon_box.end .cont {
+.cupon_box.end .cont > * {
   opacity: 0.5;
 }
 .cupon_box.end .bottom {
@@ -9479,9 +9485,12 @@ footer .f_company {
 .history_search .dot_list {
   margin-top: 16px;
 }
+.history_search .dot_list + .view_point {
+  margin-top: 24px;
+}
 .history_search .view_point {
   padding: 20px;
-  margin-top: 22px;
+  margin-top: 8px;
   border-radius: 8px;
   background: #EFF6FF;
 }
@@ -9630,6 +9639,9 @@ footer .f_company {
   white-space: normal;
 }
 
+.amount_box_detail > ul > li:last-child .cont {
+  padding-bottom: 24px;
+}
 .amount_box_detail > ul > li .top {
   display: flex;
   gap: 12px;
@@ -10599,7 +10611,7 @@ footer .f_company {
   height: auto;
 }
 .user_check.input_check_list .input_check_wrap .input_radio:checked + label {
-  background-color: #DFEDFF;
+  background-color: #DFEDFF !important;
 }
 .user_check.input_check_list .input_check_wrap .input_radio + label {
   padding: 30px;
