@@ -736,6 +736,9 @@
       margin-top: 40px;
     }
   }
+  @media (min-width: $pc-point) {
+    padding: 32px 0 0;
+  }
 }
 .inquiry_box {
   & + .inquiry_box{
@@ -1799,24 +1802,34 @@
     }
   }
 }
+.board_list_search{
+  margin-bottom: 20px;
+  .inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .search_bar{
+    flex: 100%;
+    margin-top: 20px;
+  }
+  .select_box{
+    margin-left: auto
+  }
+  .input_check + label{
+    @include fontStyle($gray-950, $fs-sm, $fw-b, 1.3334);
+  }
+  .select_box, .input_check_wrap{
+    margin-top: 20px;
+  }
+}
 .sharing_board{
   width: 100%;
   max-width: $pc-point;
   margin: 0 auto;
   @media (min-width: $pc-point) {
     padding: 0 20px;
-  }
-  .board_list_top{
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    .search_bar{
-      flex: 100%;
-    }
-    .input_check + label{
-      @include fontStyle($gray-950, $fs-sm, $fw-b, 1.3334);
-    }
-    .select_box, .input_check_wrap{
-      margin-top: 20px;
+    .btn_more{
+      margin: 30px -20px 30px;
     }
   }
   .board_list {    

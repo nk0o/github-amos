@@ -9,6 +9,10 @@
   .hr_divider{
     max-width: 740px;
     //margin: 24px auto !important;
+    @media (min-width: $pc-point) {
+      margin: 0 -20px 0;
+      width: calc(100% + 40px);
+    }
     & + .inquiry_outer{
       padding-top: 0;
     }
@@ -82,6 +86,9 @@
   }
   & + .hr_divider{
     margin: 24px 0;
+  }
+  @media (min-width: $pc-point) {
+    padding: 24px 0 0;
   }
 }
 .tab_cont{
@@ -165,6 +172,7 @@
     }
   }
   @media (min-width: $pc-point) {
+    padding: 0 0 24px;
     display: flex;
     flex-wrap: wrap;
     gap: 0 30px;
@@ -173,6 +181,14 @@
       &:nth-child(n){order: 2;}
       &:nth-child(1){order: 0;}        
       &:nth-child(3){order: 1;}
+    }
+    &_wrap{
+      & > .info_read{
+        padding: 0 0 48px;
+      }
+      .tit{
+        padding: 0 0 20px;
+      }
     }
   }
 }
@@ -262,6 +278,9 @@
         }
       }
     }
+  }
+  @media (min-width: $pc-point) {
+    padding:0;
   }
 }
 
@@ -737,6 +756,8 @@
   }
 }
 .order_complete{
+  max-width: $pc-point;
+  margin: 0 auto;
   @extend .cart_empty;
   padding-top: 48px;
   border-bottom: 8px solid $gray-50;
@@ -1973,8 +1994,8 @@
       }
     }
   }
-  .board_list_wrap .btn_more {
-    margin: 30px 0 30px;
+  .btn_more {
+    margin: 30px 0 60px;
   }
 }
 
