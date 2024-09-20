@@ -91,10 +91,9 @@ footer{
     }
   } 
   .logo{
-    height: 24px;
+    width: 72px;
     img{
-      width: auto;
-      height: 100%;
+      max-width: 100%;
     }
   }
   .f_info{

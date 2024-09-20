@@ -1801,10 +1801,23 @@
 }
 .sharing_board{
   width: 100%;
-  max-width: 984px;
+  max-width: $pc-point;
   margin: 0 auto;
-  border-top: 1px solid $gray-100;
   @media (min-width: $pc-point) {
+    padding: 0 20px;
+  }
+  .board_list_top{
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .search_bar{
+      flex: 100%;
+    }
+    .input_check + label{
+      @include fontStyle($gray-950, $fs-sm, $fw-b, 1.3334);
+    }
+    .select_box, .input_check_wrap{
+      margin-top: 20px;
+    }
   }
   .board_list {    
     .ico_crown{
@@ -1813,6 +1826,7 @@
       margin-right: 8px;
     }
     & > li {
+      border-top: 1px solid $gray-100;
       .tit{
         margin-top: 12px;
       }
@@ -1921,7 +1935,7 @@
   &_wrap{
     .board_act{
       width: 100%;
-      max-width: 984px;
+      max-width: calc($pc-point - 40px);
       padding: 16px 20px;
       margin: 0 auto;
       border-top: 1px solid $gray-100;

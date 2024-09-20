@@ -35,8 +35,62 @@
         <!-- //컨테인 탭 -->
       </section>
       <!-- //탭 영역 -->
+      <section class="dot_list_wrap">
+        <div class="inner">
+          <ul class="dot_list">
+            <li>정보 공유의 장의 목적은 좀더 진솔한 대화를 할수 있는 공간으로서의 익명의 순기능을 살리기 위함입니다.</li>
+            <li>냉소, 혐오, 욕설, 비방을 지양하며, 위반시 차단될 수 있습니다.</li>
+            <li>허위사실유포, 명예훼손 등의 소지가 있는 내용은 게시자 본인의 법적 책임을 지게 됩니다.</li>
+          </ul>
+        </div>
+      </section><!-- //.dot_list_wrap -->
+      <section class="hr_divider"></section>
       <section class="board_list_wrap sharing_board"><!-- 정보공유의 장 게시판 구분: sharing_board -->
+        <section class="board_list_top">
+          <div class="search_bar">
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+              <button class="ico_search ico_20"></button>
+            </label>
+          </div>
+          <div class="input_check_wrap">
+            <input type="checkbox" id="check-1" class="input_check history_toggle" name="" checked="ture">
+            <label for="check-1">내가 작성한 글보기​</label>
+          </div>
+          <!-- 옵션값 -->
+          <div class="select_box type3">
+            <div class="select_box_value" data-btmsheet="btmSheet01"><span>최신순</span></div>
+            <div class="select_box_list">
+              <ul>
+                <li><span>최신순</span></li>
+                <li><span>조회순</span></li>
+                <li><span>좋아요순</span></li>
+              </ul>
+            </div>
+          </div>
+          <!-- //옵션값 -->
+        </section>
         <ul class="board_list">
+          <li class="fixed_post"><!-- 상단고정 게시글(최대 5개): fixed_post -->
+            <a href="#">
+              <div class="edit_top">
+                <div class="user_name">
+                  <span>Honggil</span>&nbsp;/&nbsp;<span>홍길동</span>
+                </div>
+              </div><!-- //.edit_top -->
+              <div class="tit">
+                <i class="ico_crown ico_24"></i>어떤 샴푸 브랜드가 좋은가요?
+              </div>
+              <p class="summary">아윤채가 사용하는것은 좋은데, 손님들 사이에서는 의견이 많네요. 다른분이 다른것으로 교체해달라고 하는데, 아쉽네요.</p>
+              <span class="date">2024.06.03</span>
+              <div class="board_act">
+                <button class="act_like active" onclick="like(this);">120</button><!-- 좋아요 누른경우 구분: active -->
+                <div class="act_comment">3</div>
+                <div class="act_view">1K</div>
+                <div class="act_image">5</div><!-- 게시글에 컨텐츠있는경우(최대 5개) -->
+              </div>
+            </a>
+          </li>
           <li class="fixed_post"><!-- 상단고정 게시글(최대 5개): fixed_post -->
             <a href="#">
               <div class="edit_top">
@@ -97,10 +151,10 @@
               </div>
             </a>
           </li>
-        </ul>
-        <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
-        <!-- <div class="inner">
-        </div> -->
+        </ul><!-- //.board_list -->
+        <div class="inner">
+          <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+        </div><!-- //.inner -->
       </section><!-- //.board_list_wrap.sharing_board -->
       <!-- 글쓰기 버튼 -->
       <div class="floating_btm w_200">

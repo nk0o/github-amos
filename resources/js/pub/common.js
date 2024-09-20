@@ -44,6 +44,7 @@ $(document).ready(function () {
   tooltipUI();
   orderChangeHistoryUI();
   allView();
+  actBoxUI();
   // if ($(".line_tab")) { LineTabMenuInit() }
   // if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
   // if ($('.progress_bar')) { progressBarUI() }
@@ -501,7 +502,12 @@ function addInputClearBtn(){
 }
 /****** Modal ******/
 function modalUI(){
-  $(document).on('click touchend', '.btn_modal_open', function(e){ e.preventDefault(); openModal(e.target) }); //open modal
+  //open modal
+  $(document).on('click touchend', '.btn_modal_open', function(e){
+    e.preventDefault(); 
+    let $target = $(e.target).hasClass('btn_modal_open')? e.target : $(e.target).closest('.btn_modal_open');
+    openModal($target);
+  }); 
 
   $(document).on('click touchend', '.btn_modal_close, .modal_overlay', function(e){
     e.preventDefault();
@@ -513,6 +519,7 @@ function modalUI(){
     timer = setTimeout(modalPosition, 50);
   })
   function openModal(el){
+    console.log(el);
     const modalName = $(el).attr('id');
     let thisModal = $(".modal_container[data-modal='" + modalName + "']")
     let documentH = $(document).height();
@@ -1131,4 +1138,40 @@ function contBoxSlider() {
       },
     });
   })
+}
+function actBoxUI(){
+  $(document).on('click','[data-actbox]', function (e) {
+    showActBox(this)
+    e.stopPropagation();
+  })
+  $(document).on('click','body', function (e) {
+    if ( $(e.target).closest('.action_box').length === 0 && $('.action_box').hasClass('show')) {
+      $('.action_box').removeClass('show')
+    }
+  });
+
+  let timer = null;
+  $(window).on('resize', function(){
+    if($('.action_box').hasClass('show')){
+      clearTimeout(timer);
+      timer = setTimeout(actBoxPosition, 100);
+    }
+  })
+
+  function showActBox(el){
+    let actName = $(el).attr('data-actbox');
+    let actBox = $('#'+actName);
+    actBox.addClass('show');
+    actBoxPosition(actBox, el);
+  };
+  function actBoxPosition(box, trigerBtn){
+    let $box = box? box : $('.action_box.show');
+    let $trigerBtn = trigerBtn? trigerBtn : $("[data-actbox='" + $box.attr('id') + "']");
+    let $trigerOfffsetBtm = $($trigerBtn).position().top + $($trigerBtn).innerHeight() + 8;
+    let $trigerOfffsetLeft = $($trigerBtn).position().left;
+    $box.css({
+      left: $trigerOfffsetLeft - $box.outerWidth() + 20,
+      top: $trigerOfffsetBtm
+    });
+  };
 }

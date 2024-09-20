@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>컴포넌트 모음</title>
+  <style>
+    .guide_contnets{padding: 20px;}
+    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
+    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
+  </style>
+</head>
+
+<body>
+   <div id="container">
+      <!-- contnets -->
+      <div class="guide_contnets">
+        <h1>게시판/고객센터 상단 dot list</h1>
+        <section class="dot_list_wrap">
+          <div class="inner">
+            <ul class="dot_list">
+              <li>접수된 내용은 빠른 시간내 답변을 드리도록 하겠습니다.</li>
+              <li>개인정보 보호를 위하여 최근 30일 이내의 문의내역만 확인 가능합니다.</li>
+            </ul>
+          </div>
+        </section>
+
+        <h1>게시판 리스트 형식</h1>
+        <section class="board_list_wrap">
+          <div class="inner">
+            <div class="board_list_top">
+              <p class="count"><span><em>6</em>개</span>의 상품이 있습니다.</p>
+              <!-- 옵션값 -->
+              <div class="select_box type3">
+                <div class="select_box_value" data-btmsheet="btmSheet01"><span>전체</span></div>
+                <div class="select_box_list">
+                  <ul>
+                    <li><span>전체</span></li>
+                    <li><span>공지</span></li>
+                    <li><span>이벤트</span></li>
+                    <li><span>당첨자 발표</span></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- //옵션값 -->
+            </div><!-- //.board_list_top -->
+            <ul class="board_list">
+              <li>
+                <a href="#">
+                  <span class="date">2024.06.03</span>
+                  <strong class="tit">
+                    정기교육 리스트 정기교육 리스트 정기교육 리스트 정기교육 리스트 정기교육 리스트                     
+                  </strong>
+                </a>
+              </li>
+              <li>
+                <a href="#"> 
+                  <div class="board_info">
+                    <span class="date">2024.06.03</span>
+                    <span class="state">답변대기</span>
+                  </div><!-- //.board_info -->
+                  <strong class="tit">
+                    1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 
+                  </strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="board_info">
+                    <span class="date">2024.06.03</span>
+                    <span class="state txt_blue">답변완료 </span>
+                  </div><!-- //.board_info -->
+                  <strong class="tit">
+                    1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 1:1일 문의내역 리스트 
+                  </strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="date">2024.06.03</span>
+                  <strong class="tit">
+                    <span class="badge badge_notice">공지</span>
+                    공지사항 리스트 공지사항 리스트 공지사항 리스트 공지사항 리스트 공지사항 리스트 공지사항 리스트 
+                  </strong>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="date">2024.06.03</span>
+                  <strong class="tit">
+                    <span class="badge badge_notice">이벤트</span>
+                    이벤트 리스트 이벤트 리스트 이벤트 리스트 이벤트 리스트 이벤트 리스트 이벤트 리스트 
+                  </strong>
+                </a>
+              </li>
+            </ul>
+            <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+          </div>
+        </section>
+
+
+        <section>
+          <h1>검색 텍스트</h1>
+          <div class="srch_txt category">
+            <p><em class="match_txt">컬러</em></p>
+            <span class="ico_20 ico_chevNext_20"></span>
+            <p>멋내기 <em class="match_txt">컬러</em></p>
+          </div><!-- //.srch_txt -->
+          <a href="#" class="list_item srch_brand">
+            <div class="img">
+              <img src="../../resources/images/contents/img_brand_thumb06.png" alt>
+            </div>
+            <div class="srch_txt"><em class="match_txt">컬러</em>루시드</div>
+            <div class="srch_note">브랜드</div>
+          </a><!-- //.srch_brand -->
+        </section>
+      </div>
+      <!--// contnets -->
+  </div>
+</body>
+</html>

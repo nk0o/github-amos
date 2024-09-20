@@ -37,11 +37,11 @@
             <span class="input_label required">문의 내용</span>
             <div class="input_writing_group">
               <textarea name="" id="" placeholder="문의하실 내용을 입력해주세요."></textarea>
-              <div class="txt_count">
+              <!-- <div class="txt_count">
                 <p class="current zero">0</p>
                 <span>/</span>
                 <p class="total">1,000</p>
-              </div>
+              </div> -->
             </div>
           </div><!-- //.input_group -->
           <div class="input_group">
@@ -99,10 +99,12 @@
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){
-      $(".appbar_tit").html("댓글작성");
+      $(".appbar_tit").html("정보공유의 장");
+      //파일 삭제
       $(document).on('click', '.input_delete', function(){
         $(this).parent('.file_name') && $(this).parents('.file_name').remove();
       })
+      //첨부파일 추가
       $(document).on('change', '.input_file', function(e){
         e.stopPropagation();
         var $div = $(`<div class="file_name">

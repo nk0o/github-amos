@@ -145,7 +145,9 @@ var include = {
           <ul class="accord_list">
             <li class="accord_head">
               <div class="accord_tit">
-                <div class="logo"><img src="../../resources/images/logo.svg" alt="아모레프로페셔널"></div>
+                <div class="logo">
+                  <img src="../../resources/images/simbol_2.svg" alt="아모레프로페셔널"><!-- 240920 이미지 수정 -->
+                </div>
               </div>
               <div class="accord_cont">
                 <div class="f_cs">
