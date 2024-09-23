@@ -12809,4 +12809,107 @@ footer .f_company {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.4667;
+}
+
+.board_detail .detail_cont {
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+  min-width: revert !important;
+  line-height: revert !important;
+  font-size: revert !important;
+  color: revert !important;
+  word-break: revert !important;
+  word-wrap: revert !important;
+  -ms-touch-action: revert !important;
+  touch-action: revert !important;
+}
+.board_detail .detail_cont * {
+  padding: revert !important;
+  margin: revert !important;
+  box-sizing: revert !important;
+  -webkit-tap-highlight-color: revert !important;
+}
+
+.board_detail .detail_cont div, .board_detail .detail_cont span, .board_detail .detail_cont object, .board_detail .detail_cont iframe, .board_detail .detail_cont h1, .board_detail .detail_cont h2, .board_detail .detail_cont h3, .board_detail .detail_cont h4, .board_detail .detail_cont h5, .board_detail .detail_cont h6, .board_detail .detail_cont p, .board_detail .detail_cont blockquote, .board_detail .detail_cont pre, .board_detail .detail_cont a, .board_detail .detail_cont abbr, .board_detail .detail_cont address, .board_detail .detail_cont cite, .board_detail .detail_cont code, .board_detail .detail_cont del, .board_detail .detail_cont dfn, .board_detail .detail_cont em, .board_detail .detail_cont ins, .board_detail .detail_cont kbd, .board_detail .detail_cont q, .board_detail .detail_cont s, .board_detail .detail_cont samp, .board_detail .detail_cont small, .board_detail .detail_cont strong, .board_detail .detail_cont sub, .board_detail .detail_cont sup, .board_detail .detail_cont var, .board_detail .detail_cont b, .board_detail .detail_cont u, .board_detail .detail_cont i, .board_detail .detail_cont dl, .board_detail .detail_cont dt, .board_detail .detail_cont dd, .board_detail .detail_cont ol, .board_detail .detail_cont ul, .board_detail .detail_cont li, .board_detail .detail_cont fieldset, .board_detail .detail_cont form, .board_detail .detail_cont label, .board_detail .detail_cont legend, .board_detail .detail_cont table, .board_detail .detail_cont caption, .board_detail .detail_cont tbody, .board_detail .detail_cont tfoot, .board_detail .detail_cont thead, .board_detail .detail_cont tr, .board_detail .detail_cont th, .board_detail .detail_cont td, .board_detail .detail_cont article, .board_detail .detail_cont aside, .board_detail .detail_cont canvas, .board_detail .detail_cont details, .board_detail .detail_cont embed, .board_detail .detail_cont figure, .board_detail .detail_cont figcaption, .board_detail .detail_cont footer, .board_detail .detail_cont header, .board_detail .detail_cont hgroup, .board_detail .detail_cont menu, .board_detail .detail_cont nav, .board_detail .detail_cont output, .board_detail .detail_cont ruby, .board_detail .detail_cont section, .board_detail .detail_cont summary, .board_detail .detail_cont time, .board_detail .detail_cont mark, .board_detail .detail_cont audio, .board_detail .detail_cont video {
+  margin: revert !important;
+  padding: revert !important;
+  border: revert !important;
+  font: revert !important;
+  vertical-align: revert !important;
+  box-sizing: revert !important;
+  letter-spacing: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+  background-color: revert !important;
+}
+.board_detail .detail_cont article, .board_detail .detail_cont aside, .board_detail .detail_cont details, .board_detail .detail_cont figcaption, .board_detail .detail_cont figure, .board_detail .detail_cont footer, .board_detail .detail_cont header, .board_detail .detail_cont hgroup, .board_detail .detail_cont menu, .board_detail .detail_cont nav, .board_detail .detail_cont section {
+  display: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont img {
+  margin: revert !important;
+  padding: revert !important;
+  border: revert !important;
+  font: revert !important;
+  vertical-align: revert !important;
+  box-sizing: revert !important;
+  max-width: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont figure, .board_detail .detail_cont a, .board_detail .detail_cont button {
+  font: revert !important;
+  color: revert !important;
+  line-height: revert !important;
+  text-decoration: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont button {
+  vertical-align: revert !important;
+  border: revert !important;
+  background: revert !important;
+  white-space: revert !important;
+  outline: revert !important;
+  cursor: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont > a:active, .board_detail .detail_cont > a:focus, .board_detail .detail_cont > a:hover {
+  outline: revert !important;
+  text-decoration: revert !important;
+  color: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont ol, .board_detail .detail_cont ul {
+  list-style: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont blockquote,
+.board_detail .detail_cont q {
+  quotes: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont blockquote:before, .board_detail .detail_cont blockquote:after, .board_detail .detail_cont q:before, .board_detail .detail_cont q:after {
+  content: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont table {
+  width: revert !important;
+  border-collapse: revert !important;
+  border-spacing: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont td, .board_detail .detail_cont th {
+  border-collapse: revert !important;
+  border-spacing: revert !important;
+  border-color: inherit !important;
+}
+.board_detail .detail_cont input[type=text], .board_detail .detail_cont textarea, .board_detail .detail_cont input[type=button], .board_detail .detail_cont input[type=submit], .board_detail .detail_cont input[type=search] {
+  border-radius: revert !important;
+  border: revert !important;
+  box-shadow: revert !important;
+  -webkit-appearance: revert !important;
+  -moz-appearance: revert !important;
+  appearance: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+}
+.board_detail .detail_cont select:focus, .board_detail .detail_cont input:focus, .board_detail .detail_cont textarea:focus, .board_detail .detail_cont button:focus {
+  outline: revert !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
 }/*# sourceMappingURL=style.css.map */
