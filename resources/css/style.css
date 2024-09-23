@@ -10447,6 +10447,83 @@ footer .f_company {
   aspect-ratio: 2.6/2;
 }
 
+.page_term .term_top {
+  padding: 24px 20px;
+}
+.page_term .term_top .page_tit_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.page_term .term_top .page_tit {
+  color: #222;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.page_term .term_top .date {
+  color: #aaa;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+.page_term .term_top .date span {
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.page_term .term_top .txt {
+  color: #666;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  word-break: break-all;
+}
+.page_term .term_cont {
+  padding: 24px 20px 0;
+}
+.page_term .term_cont .term_list > li + li {
+  margin-top: 20px;
+}
+.page_term .term_cont .term_list > li .tit {
+  display: block;
+  margin-bottom: 4px;
+  color: #222;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.page_term .term_cont .term_list > li .txt {
+  color: #444;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  word-break: break-all;
+}
+.page_term .term_cont .term_list > li .sub_list {
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.page_term .term_cont .term_list > li .sub_list > li {
+  color: #222;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.page_term .term_select {
+  padding: 0 20px;
+  margin: 32px 0 60px;
+}
+.page_term .term_select .select_box.type2 {
+  width: 100%;
+}
+
 .sticky_tab {
   position: sticky;
   top: 60px;
