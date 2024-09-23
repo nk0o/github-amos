@@ -10,11 +10,61 @@
   <script>include.style();</script> -->
   <title>Error Page | 아모레뉴플렛폼</title>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      box-sizing: border-box;
+      letter-spacing: -0.02em;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    html, body{
+      font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+      min-width: 280px;
+      line-height: 1.2;
+      font-size: 16px;
+      color: #222222;
+      word-break: keep-all;
+      word-wrap: break-word;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    a, button {
+      font-size: 100%;
+      font: inherit;
+      color: inherit;
+      line-height: inherit;
+      text-decoration: none;
+    }
+    p {
+      font-size: 16px;
+    }
+    img {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      box-sizing: border-box;
+      max-width: 100%;
+      vertical-align: top;
+    }
+    #wrap:has(.btm_bar) {
+      margin-bottom: 90px;
+      min-height: calc(100dvh - 90px);
+    }
     .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
         padding: 0 20px;
         justify-content: center;
     }
-    .btm_bar .type_btn{
+    .btm_bar.type_btn{
       z-index: 2;
       position: fixed;
       display: block;
@@ -27,6 +77,33 @@
       font-size: 1rem;
       font-weight: 700;
       line-height: 1.5;
+    }
+    .btm_bar .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+    }
+    .btm_bar.type_btn .inner {
+      justify-content: center;
+    }
+    .error_wrap{
+      padding-top: 140px;
+      text-align: center;
+    }
+    .error_wrap p{
+      margin-top: 20px;
+      color: #222;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4; 
+    }
+    .error_wrap span{
+      margin-top: 2px;
+      color: #666;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.4667;
     }
   </style>
 </head>

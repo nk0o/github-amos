@@ -127,13 +127,77 @@
 
       <!-- 아이콘 오른쪽 -->
       <h1>ICON - Right</h1>
-      <h1>파일 다운로드</h1>
+      <h1>파일 업로드 - 작성시</h1>
       <div class="input_group input_icon_right">
         <label for="file-01">
           <input type="file" id="file-01" class="input_text" value="">
           <i class="ico_clip ico_24"></i>
         </label>
+      </div><!-- //.input_group -->
+      <br>
+      <h1>파일 업로드 - 업로드한 파일 - 상세페이지</h1>
+      <div class="file_wrap">
+        <div class="file">
+          <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
+          <button class="btn_xxs btn_border">다운로드</button>
+        </div><!-- //.file -->
+      </div><!-- //.file_wrap -->
+      
+      <h1>파일 업로드 - 업로드한 파일 - 작성/수정페이지</h1>
+      <div class="input_group input_icon_right">
+        <span class="input_label">첨부파일</span>
+        <div class="file_wrap">
+          <div class="file">
+            <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
+            <button class="btn_xxs btn_border">다운로드</button>
+            <button class="ico_close_circle"></button>
+          </div><!-- //.file -->
+        </div><!-- //.file_wrap -->
       </div>
+      <!-- <div class="input_group input_icon_right">
+        <label for="file-01" class="is_uploaded">
+          <i class="ico_clip ico_24"></i>
+          <input type="text" id="file-01-1" class="input_text" value="amos_number.pdf" disabled>
+          <button class="btn_xxs btn_border">다운로드</button>
+          <button class="ico_close_circle"></button>
+        </label>
+      </div> -->
+
+      <h1>이미지 파일 업로드</h1>
+      <div class="input_group">
+        <span class="input_label">첨부파일</span>
+        <div class="uploader_wrap">
+          <div class="file_name">
+            <input type="text" readonly="">
+            <img src="../../resources/images/@img_fileupload1.png" alt="">
+            <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+          <div class="file_name">
+            <input type="text" readonly="">
+            <img src="../../resources/images/@img_fileupload2.png" alt="">
+            <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+          <div class="file_name">
+            <input type="text" readonly="">
+            <img src="../../resources/images/@img_fileupload1.png" alt="">
+            <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+          <div class="file_name">
+            <input type="text" readonly="">
+            <img src="../../resources/images/@img_fileupload2.png" alt="">
+            <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+          <div class="file_uploader">
+            <label for="fileUploader-1"><span class="hide">파일 첨부하기</span></label>
+            <input type="file" class="input_file" id="fileUploader-1">
+          </div><!-- file_uploader -->
+        </div><!-- //.uploader_wrap -->
+        <ul class="dot_list">
+          <li>첨부파일은 최대 5개까지 업로드 가능합니다.</li>
+          <li>첨부파일 용량은 파일당 5MB를 초과하실 수 없습니다.</li>
+          <li>이미지(JPG, PNG, HEIC(HEIF)), PDF 파일만 업로드 가능합니다.</li>
+        </ul><!-- //.dot_list -->
+      </div><!-- //.input_group -->
 
       <h1>검색바</h1>
       <div class="search_bar">
@@ -272,5 +336,41 @@
   $('#datepicker').datepicker();
   $('#datepicker2').datepicker();
   </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      
+      //파일 삭제
+      $(document).on('click', '.input_delete', function(){
+        $(this).parent('.file_name') && $(this).parents('.file_name').remove();
+      })
+      //첨부파일 추가
+      $(document).on('change', '.input_file', function(e){
+        e.stopPropagation();
+        var $div = $(`<div class="file_name">
+          <input type="text" readonly>
+          <img src="" alt>
+          <i class="input_delete" onclick="removeFilename(this)"></i>
+          </div>
+        `);
+        $(this).parents('.uploader_wrap').prepend($div);
+        
+        var fileCheck = $(this).val();
+        if (fileCheck) {
+          var fileName = $(this).val();
+          //경로가 있는경우
+          //$div.find('input').val(fileName);
+          //경로가 없어야 하는 경우
+          fileName = fileName.split("\\");
+          $div.find('input').val(fileName[fileName.length - 1]);
+        }
+      })
+      //File Uploader - Remove Choosed File
+      function removeFilename(t) {
+        $(t).parents('.file_name').remove();
+      };
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
 </body>
 </html>

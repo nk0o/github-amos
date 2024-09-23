@@ -34,6 +34,8 @@ header{
 }
 //Layout > Inner
 #wrap{
+  display:flex;
+  flex-direction: column;
   &:has(.btm_bar){
     margin-bottom: $btmbar-H;
     min-height: calc(100dvh - 90px);
@@ -65,6 +67,9 @@ header{
   border: 0 !important;
 }
 //FOOTER
+.footer_wrap{
+  margin-top: auto;
+}
 footer{
   margin-top: 30px;
   padding: 40px 0 80px;

@@ -230,7 +230,7 @@
         background-image: none;
         &::before{
           background-image: url("../images/icon/ico_check_20_on.svg");
-          background-color: #2A3136 !important;
+          //background-color: #2A3136 !important;
         }
       }
       input[type=radio]:checked + label, .input_radio:checked + label{

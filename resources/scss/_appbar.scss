@@ -175,6 +175,10 @@
     .nav_tit{
       @include fontStyle($gray-500, $fs-xxs, $fw-m, 1.333);
     }
+    .ico_wish::before {
+      background-color: #777777;
+      mask-image: url('../images/icon/ico_wish_is.svg') !important;
+    }
   }
   &.type_btn{
     background-color: $color-primary;

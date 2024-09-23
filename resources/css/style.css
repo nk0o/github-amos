@@ -3520,7 +3520,6 @@ button:disabled *[class*=ico_]::before {
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_check_wrap.without_box .input_check:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label::before, .input_check_list .input_radio_wrap.without_box .input_check:checked + label::before {
   background-image: url("../images/icon/ico_check_20_on.svg");
-  background-color: #2A3136 !important;
 }
 .input_check_list .input_check_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box input[type=radio]:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label {
   background-color: #f6f6f6;
@@ -3921,7 +3920,7 @@ select {
   min-height: 24px;
 }
 .input_group.input_icon_left .input_text {
-  padding-left: 56px;
+  padding-left: 40px;
 }
 .input_group.input_icon_left [class*=ico_] {
   left: 12px;
@@ -3987,6 +3986,52 @@ select {
 }
 .input_group.is_date.hidden {
   display: none;
+}
+.input_group label.is_uploaded label > i, .input_group label.is_uploaded label > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  min-width: 24px;
+  min-height: 24px;
+}
+.input_group label.is_uploaded .input_text {
+  padding-left: 40px;
+  color: #222222 !important;
+  border-color: transparent !important;
+}
+.input_group label.is_uploaded button {
+  z-index: 1;
+  display: block !important;
+  margin-left: auto;
+}
+.input_group label.is_uploaded .ico_clip {
+  left: 12px;
+}
+.input_group label.is_uploaded .ico_close_circle {
+  right: 12px;
+}
+.input_group label.is_uploaded [class*=btn_] {
+  border-color: #dddddd;
+  right: 48px;
+}
+.input_group .file_wrap {
+  width: 100%;
+}
+.input_group .file_wrap .file .name {
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.input_group .file_wrap .file button {
+  position: relative !important;
+  transform: none !important;
+  inset: auto;
+}
+.input_group .file_wrap .ico_clip {
+  inset: auto;
+  margin-right: 4px;
 }
 .input_group .uploader_wrap {
   margin: 2px 0 12px;
@@ -5600,6 +5645,9 @@ div.dataTables_wrapper .btn_floating:focus {
   padding: 0;
   margin: 0;
 }
+.modal_container .inquiry_box .input_writing_group {
+  min-width: 216px;
+}
 .modal_content {
   width: calc(100% - 40px);
   max-width: 500px;
@@ -6093,6 +6141,10 @@ div.dataTables_wrapper .btn_floating:focus {
   font-weight: 400;
   line-height: 1.333;
 }
+.btm_bar_nav .ico_wish::before {
+  background-color: #777777;
+  mask-image: url("../images/icon/ico_wish_is.svg") !important;
+}
 .btm_bar.type_btn {
   background-color: #2A3136;
   padding: 24px 0 40px;
@@ -6246,6 +6298,10 @@ header.fixed {
   top: 0;
 }
 
+#wrap {
+  display: flex;
+  flex-direction: column;
+}
 #wrap:has(.btm_bar) {
   margin-bottom: 90px;
   min-height: calc(100dvh - 90px);
@@ -6281,6 +6337,10 @@ header.fixed {
   margin: 0 auto;
   padding: 0 !important;
   border: 0 !important;
+}
+
+.footer_wrap {
+  margin-top: auto;
 }
 
 footer {
@@ -7732,7 +7792,7 @@ footer .f_company {
   }
 }
 .page_detail {
-  padding-bottom: 210px;
+  padding-bottom: 40px;
   background: #fff;
 }
 .page_detail .sec_product.is_noBack {
@@ -8597,7 +8657,7 @@ footer .f_company {
 }
 .ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-active {
   background-color: #2A3136 !important;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-active::after {
   content: "오늘";
@@ -8643,7 +8703,7 @@ footer .f_company {
 }
 .ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default.ui-state-active {
   background: #eeeeee !important;
-  color: #222222;
+  color: #222222 !important;
 }
 .ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default.ui-state-active::after {
   display: none;
@@ -8963,11 +9023,28 @@ footer .f_company {
   background-color: #F6F6F6;
 }
 .file_wrap .file .name {
-  font-family: "Arita-dotum";
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #222222;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 19px;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.file_wrap button {
+  margin-left: auto;
+}
+.file_wrap [class*=btn_] {
+  border-color: #dddddd;
+}
+.file_wrap .ico_close_circle {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
 }
 
 .edu_regist_wrap .btn_more {
@@ -11614,7 +11691,7 @@ footer .f_company {
     gap: 8px 20px;
     padding: 20px 0 0;
   }
-  .page_form .input_group .select_box, .page_form .input_group label:not(.input_label), .page_form .input_group p, .page_form .input_group .txt_alert, .page_form .input_group .dot_list {
+  .page_form .input_group .select_box, .page_form .input_group label:not(.input_label), .page_form .input_group p, .page_form .input_group .txt_alert, .page_form .input_group .dot_list, .page_form .input_group .file_wrap {
     grid-column-start: 2;
   }
   .page_form .input_group.pc_full {
@@ -12712,4 +12789,24 @@ footer .f_company {
 }
 .comment_list_wrap .btn_more {
   margin: 30px 0 60px;
+}
+
+/* 에러페이지(inline으로 style 입힘) */
+.error_wrap {
+  padding-top: 140px;
+  text-align: center;
+}
+.error_wrap p {
+  margin-top: 20px;
+  color: #222222;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.error_wrap span {
+  margin-top: 2px;
+  color: #666666;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4667;
 }/*# sourceMappingURL=style.css.map */

@@ -61,7 +61,7 @@
     }
     &.input_icon_left {
       .input_text {
-        padding-left: 56px;
+        padding-left: 40px;
       }
       [class*="ico_"] {
         left: 12px;
@@ -126,6 +126,46 @@
       }
       &.hidden{
         display: none;
+      }
+    }
+    label.is_uploaded{
+      @include inputIcon;
+      .input_text {
+        padding-left: 40px;
+        color: $gray-950 !important;
+        border-color: transparent !important;
+      }
+      button{
+        z-index: 1;
+        display: block !important;
+        margin-left: auto;
+      }
+      .ico_clip {
+        left: 12px;
+      }
+      .ico_close_circle{
+        right:12px;
+      }
+      [class*="btn_"] {
+        border-color: $gray-300;
+        right: 48px;
+      }
+    }
+    .file_wrap{
+      width: 100%;
+      .file{
+        .name{
+          @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
+        }
+        button{
+          position: relative !important;
+          transform:none !important;
+          inset:auto;
+        }
+      }
+      .ico_clip {
+        inset: auto;
+        margin-right: 4px;
       }
     }
     .uploader_wrap{

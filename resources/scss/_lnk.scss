@@ -1075,7 +1075,7 @@
       grid-template-columns: 150px 1fr;
       gap: 8px 20px;
       padding:20px 0 0;
-      .select_box, label:not(.input_label), p, .txt_alert, .dot_list{
+      .select_box, label:not(.input_label), p, .txt_alert, .dot_list, .file_wrap{
         grid-column-start: 2;
       }
       &.pc_full{
@@ -1999,6 +1999,16 @@
   }
 }
 
-
-
-
+/* 에러페이지(inline으로 style 입힘) */
+.error_wrap{
+  padding-top: 140px;
+  text-align: center;
+  p{
+    margin-top: 20px;
+    @include fontStyle($gray-950, $fs-l, $fw-sb, 1.4);
+  }
+  span{
+    margin-top: 2px;
+    @include fontStyle($gray-800, $fs-sm, $fw-m, 1.4667);
+  }
+}  

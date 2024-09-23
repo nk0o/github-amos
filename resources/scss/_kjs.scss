@@ -760,7 +760,7 @@
 }
 
 .page_detail {
-  padding-bottom: 210px;
+  padding-bottom: 40px;
   background: #fff;
   .sec_product.is_noBack  {
     padding-top: 32px;
@@ -1650,7 +1650,7 @@
   .ui-datepicker-today{
     .ui-state-default.ui-state-active{
       background-color: $color-primary !important;
-      color: $color-white;
+      color: $color-white !important;
       &::after{
         content: '오늘';
         font-family: $font-aritadt;
@@ -1697,7 +1697,7 @@
     .ui-datepicker-today{
       .ui-state-default.ui-state-active{
         background: $gray-100 !important;
-        color: $gray-950;
+        color: $gray-950 !important;
         &::after{
           display: none;
         }
@@ -1972,9 +1972,21 @@
     border-radius: 4px;
     background-color: #F6F6F6;
     .name {
-      font-family: 'Arita-dotum';
+      @include text-ellipsis;
       @include fontStyle($gray-950, $fs-s, $fw-m, 19px);
+      font-family: $font-aritadt;
     }
+  }
+  button{
+    margin-left: auto;
+  }
+  [class*=btn_]{
+    border-color: $gray-300;
+  }
+  .ico_close_circle{
+    width:24px;
+    height:24px;
+    margin-left: 12px;
   }
 }
 
