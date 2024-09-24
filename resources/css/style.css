@@ -2811,7 +2811,7 @@ button:disabled *[class*=ico_]::before {
   justify-content: center;
   align-items: center;
   height: 32px;
-  padding: 4px 8px;
+  padding: 4px 7px;
   border-radius: 9999px;
   border-color: #eeeeee;
   color: #777777;
