@@ -6601,7 +6601,7 @@ footer .f_company {
   margin: 0;
 }
 .page_main .sec_amount {
-  margin-top: 0;
+  margin: 0;
   padding: 24px 0 40px;
   background-color: #222222;
 }
@@ -6697,8 +6697,7 @@ footer .f_company {
   }
 }
 .page_main .sec_type {
-  margin-top: 0;
-  padding: 12px 0 0 0;
+  margin-top: 12px;
 }
 .page_main .sec_type .tab_cont {
   padding: 20px 0 0 0;
@@ -10448,7 +10447,7 @@ footer .f_company {
 }
 
 .page_term .term_top {
-  padding: 24px 20px;
+  padding: 24px 0;
 }
 .page_term .term_top .page_tit_wrap {
   display: flex;
@@ -10482,7 +10481,8 @@ footer .f_company {
   word-break: break-all;
 }
 .page_term .term_cont {
-  padding: 24px 20px 0;
+  padding: 24px 0 0;
+  margin-bottom: 30px;
 }
 .page_term .term_cont .term_list > li + li {
   margin-top: 20px;
@@ -10517,11 +10517,45 @@ footer .f_company {
   line-height: 18px;
 }
 .page_term .term_select {
-  padding: 0 20px;
+  padding: 0 0;
   margin: 32px 0 60px;
 }
 .page_term .term_select .select_box.type2 {
   width: 100%;
+}
+.page_term .term_table {
+  margin: 20px 0;
+}
+.page_term .term_table_wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.page_term .term_table_wrap::-webkit-scrollbar {
+  height: 4px;
+}
+.page_term .term_table_wrap::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.page_term .term_table_wrap::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+.page_term .term_table_wrap::-webkit-scrollbar-thumb:hover {
+  background-color: #e2e2e2;
+}
+.page_term .term_table th, .page_term .term_table td {
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  color: #222222;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.3846;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.page_term .dot_list > li {
+  margin-left: 0;
+  text-indent: 24px;
 }
 
 .sticky_tab {
