@@ -67,7 +67,7 @@ button {
     &.btn_icon {
       width: 56px;
       height: 56px;
-      padding: 12px;
+      padding: 4px 12px;
       border-color: transparent;
     }
     &.btn_circle{
@@ -83,7 +83,7 @@ button {
     &.btn_icon {
       width: 50px;
       height: 50px;
-      padding: 0 16px;
+      padding: 4px 16px;
       border-color: transparent;
     }
     &.btn_circle{
@@ -99,7 +99,7 @@ button {
     &.btn_icon {
       width: 46px;
       height: 46px;
-      padding: 6px;
+      padding: 4px 6px;
     }
     &.btn_circle{
       width: 46px;
@@ -115,7 +115,7 @@ button {
     &.btn_icon {
       width: 40px;
       height: 40px;
-      padding: 6px;
+      padding: 4px 6px;
       border-color: transparent;
     }
     &.btn_circle{
@@ -197,9 +197,10 @@ button {
   &_icon{
     @extend .btn;
     justify-content: center;
+    align-items: center;
     //height: 28px;
     height: 32px;
-    padding: 8px;
+    padding: 4px 8px;
     border-radius: 9999px;
     border-color:$gray-100;
     color: $gray-700;
@@ -208,7 +209,7 @@ button {
       @include fontStyle($gray-700, 0.6875rem, $fw-m, 1.3636);
     }
     &.with_txt{
-      padding: 6px 10px 6px 6px;
+      padding: 4px 10px 4px 6px;
       @include fontStyle($gray-700, $fs-xs, $fw-m, 1);
     }
   }

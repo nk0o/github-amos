@@ -1333,36 +1333,43 @@ p {
 *[class*=ico_60] {
   width: 60px;
   height: 60px;
+  flex: 0 0 60px;
 }
 
 *[class*=ico_44] {
   width: 44px;
   height: 44px;
+  flex: 0 0 44px;
 }
 
 *[class*=ico_24] {
   width: 24px;
   height: 24px;
+  flex: 0 0 24px;
 }
 
 *[class*=ico_20] {
   width: 20px;
   height: 20px;
+  flex: 0 0 20px;
 }
 
 *[class*=ico_16] {
   width: 16px;
   height: 16px;
+  flex: 0 0 16px;
 }
 
 *[class*=ico_14] {
   width: 14px;
   height: 14px;
+  flex: 0 0 14px;
 }
 
 *[class*=ico_12] {
   width: 12px;
   height: 12px;
+  flex: 0 0 12px;
 }
 
 /********* 아이콘 svg 추가 *********/
@@ -2680,7 +2687,7 @@ button:disabled *[class*=ico_]::before {
 .btn_lg.btn_icon {
   width: 56px;
   height: 56px;
-  padding: 12px;
+  padding: 4px 12px;
   border-color: transparent;
 }
 .btn_lg.btn_circle {
@@ -2695,7 +2702,7 @@ button:disabled *[class*=ico_]::before {
 .btn_md.btn_icon {
   width: 50px;
   height: 50px;
-  padding: 0 16px;
+  padding: 4px 16px;
   border-color: transparent;
 }
 .btn_md.btn_circle {
@@ -2710,7 +2717,7 @@ button:disabled *[class*=ico_]::before {
 .btn_sm.btn_icon {
   width: 46px;
   height: 46px;
-  padding: 6px;
+  padding: 4px 6px;
 }
 .btn_sm.btn_circle {
   width: 46px;
@@ -2725,7 +2732,7 @@ button:disabled *[class*=ico_]::before {
 .btn_xs.btn_icon {
   width: 40px;
   height: 40px;
-  padding: 6px;
+  padding: 4px 6px;
   border-color: transparent;
 }
 .btn_xs.btn_circle {
@@ -2802,8 +2809,9 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_icon {
   justify-content: center;
+  align-items: center;
   height: 32px;
-  padding: 8px;
+  padding: 4px 8px;
   border-radius: 9999px;
   border-color: #eeeeee;
   color: #777777;
@@ -2816,7 +2824,7 @@ button:disabled *[class*=ico_]::before {
   line-height: 1.3636;
 }
 .btn_icon.with_txt {
-  padding: 6px 10px 6px 6px;
+  padding: 4px 10px 4px 6px;
   color: #777777;
   font-size: 0.8125rem;
   font-weight: 400;
