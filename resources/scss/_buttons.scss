@@ -200,16 +200,19 @@ button {
     align-items: center;
     //height: 28px;
     height: 32px;
+    width: 32px;
     padding: 4px 7px;
     border-radius: 9999px;
     border-color:$gray-100;
     color: $gray-700;
     gap: 2px;
     &.btn_color{
+      width: auto;
       @include fontStyle($gray-700, 0.6875rem, $fw-m, 1.3636);
     }
     &.with_txt{
-      padding: 4px 10px 4px 6px;
+      width: auto;
+      padding: 4px 12px 4px 8px;
       @include fontStyle($gray-700, $fs-xs, $fw-m, 1);
     }
   }
