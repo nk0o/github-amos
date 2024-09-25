@@ -1987,6 +1987,9 @@
     width:24px;
     height:24px;
     margin-left: 12px;
+    &::before{
+      background: url('../images/icon/ico_close_circle_file.svg') center/contain no-repeat;
+    }
   }
 }
 

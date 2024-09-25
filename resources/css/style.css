@@ -9056,6 +9056,9 @@ footer .f_company {
   height: 24px;
   margin-left: 12px;
 }
+.file_wrap .ico_close_circle::before {
+  background: url("../images/icon/ico_close_circle_file.svg") center/contain no-repeat;
+}
 
 .edu_regist_wrap .btn_more {
   margin: 60px 0 30px;
