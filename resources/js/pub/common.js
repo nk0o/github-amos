@@ -853,11 +853,13 @@ function monthPicker() {
 }
 
 function showPicker(){
-  $(document).on('click touchend', '.input_radio_wrap input, .input_check_wrap input', function(){
-    if(!$(this).parents().hasClass('show_picker')){
-      $('.is_date.hidden').css('display','none');
-    }else{
-      $('.is_date.hidden').css('display','flex');
+  $(document).on('click touchend', '.input_radio_wrap input, .input_check_wrap input', function(e){
+    if($(this).parents('.radio_btn_wrap').find('.is_date.hidden').length >0){
+      if(!$(this).parents().hasClass('show_picker')){
+        $(this).parents('.radio_btn_wrap').find('.is_date.hidden').css('display','none');
+      }else{
+        $(this).parents('.radio_btn_wrap').find('.is_date.hidden').css('display','flex');
+      }
     }
   })
 }
