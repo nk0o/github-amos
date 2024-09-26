@@ -853,7 +853,7 @@ function monthPicker() {
 }
 
 function showPicker(){
-  $(document).on('click touchend', '.input_radio_wrap label, .input_check_wrap label', function(){
+  $(document).on('click touchend', '.input_radio_wrap input, .input_check_wrap input', function(){
     if(!$(this).parents().hasClass('show_picker')){
       $('.is_date.hidden').css('display','none');
     }else{

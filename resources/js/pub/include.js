@@ -13,6 +13,13 @@ var include = {
     document.write('<script src="../../resources/js/pub/common.js"></script>');
   },
   style: function () {
+    document.write('<!-- 240926 파비콘 추가 -->')
+    document.write('<link rel="apple-touch-icon" href="/favicon.png">');
+    document.write('<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">');
+    document.write('<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">');
+    document.write('<link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">');
+    document.write('<link rel="icon" type="image/png" href="/favicon.png">');
+    document.write('<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">');
     document.write('<link rel="stylesheet" href="../../resources/css/jquery-ui.min.css"></link>');
     document.write('<link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css"></link>');
     document.write('<link rel="stylesheet" href="../../resources/css/style.css"></link>');

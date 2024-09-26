@@ -1648,14 +1648,19 @@
     color: #222222 !important;
   }
   .ui-datepicker-today{
-    .ui-state-default.ui-state-active{
-      background-color: $color-primary !important;
-      color: $color-white !important;
+    .ui-state-default{
       &::after{
         content: '오늘';
         font-family: $font-aritadt;
         display: block;
-        @include fontStyle($color-white, 10px, $fw-m, 1.2);
+        @include fontStyle($gray-900, 10px, $fw-m, 1.2);
+      }
+      &.ui-state-active{
+        background-color: $color-primary !important;
+        color: $color-white !important;
+        &::after{
+          color: $color-white;
+        }
       }
     }
   }
