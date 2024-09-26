@@ -45,31 +45,7 @@ $(document).ready(function () {
   orderChangeHistoryUI();
   allView();
   actBoxUI();
-  // if ($(".line_tab")) { LineTabMenuInit() }
-  // if ($(".btn_toggle").find("input[disabled='true']")) { toggleBtnDisabled() }
-  // if ($('.progress_bar')) { progressBarUI() }
-  // if ($('.input_writing_group textarea')) { initCountString() }
-  // if ($('.progress_bar')) { progressBarUI() }
-  // if ($('.pagination').length > 0) { paginationUI() }
-  // if ($('.accord_head').length > 0) { accordionUI() }
-  // if ($('.select_box').length > 0) { selectBoxUI() }
-  // if ($('.input_text').length > 0) { addInputClearBtn() }
-  // if ($('.modal_container').length > 0) { modalUI() }
-  // if ($('[data-btmsheet]').length > 0) { bottomSheetUI() }
-  // if ($('.floating_side').length > 0) { floatingSideUI() }
-  // if ($('.cate_nav').length > 0) { catecoryUI() }
-  // if ($('.prd_list_wrap.swiper').length > 0) { prdSlider() }
-  // if ($('header').length > 0) { headerScroll() }
-  // if ($('.page_detail .prd_top_info').length > 0) { prdImgFix() }
-  // if ($('.page_detail .tab_menu').length > 0) { tabContPos() }
-  // if ($('.prd_cart_btn').length > 0) { putInCart() }
-  // if ($('.clickTab').length > 0) {  tabMoveAnchor() }
-  // if ($('.open_month').length > 0) {  monthPicker() }
-  // if ($('.show_picker').length > 0) {  showPicker() }
-  // if ($('.show_etcinput').length > 0) {  showEtc() }
-  // if ($('.tooltip_box').length > 0) {  tooltipUI() }
-  // if ($('.history_toggle').length > 0) {  orderChangeHistoryUI() }
-  // if ($('.accord_list .amount_box').length > 0) {  allView() }
+
 
   /****** Window Resize ******/
   $(window).resize(function () {
@@ -519,7 +495,6 @@ function modalUI(){
     timer = setTimeout(modalPosition, 50);
   })
   function openModal(el){
-    console.log(el);
     const modalName = $(el).attr('id');
     let thisModal = $(".modal_container[data-modal='" + modalName + "']")
     let documentH = $(document).height();
