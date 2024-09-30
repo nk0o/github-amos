@@ -4435,13 +4435,16 @@ select {
 }
 .tab_menu.round_tab .tab_list > button, .tab_menu.round_tab .tab_list > a {
   height: 35px;
-  padding: 0 8px 0 12px;
+  padding: 0 12px;
   border-radius: 50px;
   border: 1px solid #E2E2E2;
   color: #888;
   font-size: 14px;
   font-weight: 400;
   line-height: 35px;
+}
+.tab_menu.round_tab .tab_list > button:has(.type_x), .tab_menu.round_tab .tab_list > a:has(.type_x) {
+  padding: 0 8px 0 12px;
 }
 .tab_menu.round_tab .tab_list:first-child {
   padding: 0 4px 0 20px;
