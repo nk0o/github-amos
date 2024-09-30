@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,290 +7,440 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Text Fields</title>
-  <style>
-    .guide_contnets{padding: 20px;}
-    /*  */
-    .guide_contnets h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contnets h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-    .guide_tab{width: 375px;}
-  </style>
+  <title>TextFields | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
-    <!-- contnets -->
-    <div class="guide_contnets">
-      <h1>Default</h1>
-      <div class="input_group">
-        <!-- <span class="input_label">Label</span> -->
-        <span class="input_label required">Label</span>
-        <label for="">
-          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
-        </label>
-        <p class="txt_alert">사용이 가능한 닉네임입니다.</p>
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>TextFields</h3>
       </div>
-
-      <h1>Disabled</h1>
-      <div class="input_group">
-        <label for="">
-          <input type="text" id="" class="input_text" value="대한민국" placeholder="내용을 입력해 주세요." disabled>
-        </label>
-      </div>
-      
-      <h1>Error</h1>
-      <div class="input_group">
-        <label for="">
-          <input type="text" id="" class="input_text input_error" value="대한민국" placeholder="내용을 입력해 주세요.">
-        </label>
-        <p class="txt_alert error">이미 사용 중인 닉네임입니다.</p>
-      </div>
-      
-      <h1>Success</h1>
-      <div class="input_group">
-        <label for="">
-          <input type="text" id="" class="input_text input_success" value="대한민국" placeholder="내용을 입력해 주세요.">
-        </label>
-        <!-- <p class="txt_alert success">사용이 가능한 닉네임입니다.</p> -->
-        <p class="txt_alert">사용이 가능한 닉네임입니다.</p>
-      </div>
-
-      <h1>With 인증 시간</h1>
-      <div class="input_group with_time">
-        <label for="">
-          <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
-          <span class="time">2:35</span>
-        </label>
-      </div>
-
-      <h1>With 인증 실패</h1>
-      <div class="input_group with_time input_error">
-        <label for="">
-          <input type="text" id="" class="input_text input_error" value="" placeholder="휴대폰번호">
-          <span class="time">2:35</span>
-        </label>
-        <p class="txt_alert error">인증번호가 다릅니다.</p>
-      </div>
-
-      <h1>With Button</h1>
-      <div class="input_group">
-        <label for="">
-          <input type="text" id="" class="input_text" value="dfds" placeholder="휴대폰번호">
-          <button class="btn_sm btn_border">인증요청</button>
-        </label>
-      </div>
-
-      <h1>With Button - Disabled</h1>
-      <div class="input_group">
-        <label for="">
-          <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호" disabled>
-          <button class="btn_sm btn_border">인증요청</button>
-        </label>
-      </div>
-
-      <!-- 아이콘 왼쪽 -->
-      <!-- <h1>ICON - Left</h1>
-      <div class="input_group input_icon_left">
-        <label for="">
-          <i class="ico_clip ico_24"></i>
-          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
-        </label>
-      </div> -->
-
-      
-      <h1>Input 옆 버튼</h1>
-      <div class="input_group width_btn">
-        <label for="">
-          <input type="text" id="" class="input_text" value="" placeholder="쿠폰번호 입력">
-        </label>
-        <button class="btn_md btn_primary" disabled>쿠폰등록</button>
-      </div>
-
-
-      <h1>Tooltip</h1>
-      <span class="input_label required">아이디<button data-tooltip="tip01" class="info_tooltip ico_info ico_16"></button></span>
-      <div class="tooltip_box" id="tip01">
-        <ul class="dot_list">
-          <li>영어 소문자, 숫자 조합으로 8~20자까지 생성 가능합니다.</li>
-          <li>공백은 사용할수 없으며, 순사단일로만 구성 할수 없습니다.</li>
-        </ul>
-      </div><!-- //.tooltip_box -->
-
-
-      <h1>Input DatePicker - modal로 열림</h1>
-      <div class="input_group is_date">
-        <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
-        <span class="dash"></span>
-        <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
-      </div>
-
-      <!-- 아이콘 오른쪽 -->
-      <h1>ICON - Right</h1>
-      <h1>파일 업로드 - 작성시</h1>
-      <div class="input_group input_icon_right">
-        <label for="file-01">
-          <input type="file" id="file-01" class="input_text" value="">
-          <i class="ico_clip ico_24"></i>
-        </label>
-      </div><!-- //.input_group -->
-      <br>
-      <h1>파일 업로드 - 업로드한 파일 - 상세페이지</h1>
-      <div class="file_wrap">
-        <div class="file">
-          <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
-          <button class="btn_xxs btn_border">다운로드</button>
-        </div><!-- //.file -->
-      </div><!-- //.file_wrap -->
-      
-      <h1>파일 업로드 - 업로드한 파일 - 작성/수정페이지</h1>
-      <div class="input_group input_icon_right">
-        <span class="input_label">첨부파일</span>
-        <div class="file_wrap">
-          <div class="file">
-            <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
-            <button class="btn_xxs btn_border">다운로드</button>
-            <button class="ico_close_circle"></button>
-          </div><!-- //.file -->
-        </div><!-- //.file_wrap -->
-      </div>
-      <!-- <div class="input_group input_icon_right">
-        <label for="file-01" class="is_uploaded">
-          <i class="ico_clip ico_24"></i>
-          <input type="text" id="file-01-1" class="input_text" value="amos_number.pdf" disabled>
-          <button class="btn_xxs btn_border">다운로드</button>
-          <button class="ico_close_circle"></button>
-        </label>
-      </div> -->
-
-      <h1>이미지 파일 업로드</h1>
-      <div class="input_group">
-        <span class="input_label">첨부파일</span>
-        <div class="uploader_wrap">
-          <div class="file_name">
-            <input type="text" readonly="">
-            <img src="../../resources/images/@img_fileupload1.png" alt="">
-            <i class="input_delete" onclick="removeFilename(this)"></i>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Input Text</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Default</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">                    
+                    <span class="input_label required">Label</span><!-- 필수 표시: required -->
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                    </label>
+                    <p class="txt_alert">사용이 가능한 닉네임입니다.</p>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="대한민국" placeholder="내용을 입력해 주세요." disabled>
+                    </label>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Error</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <label for="">
+                      <input type="text" id="" class="input_text input_error" value="대한민국" placeholder="내용을 입력해 주세요.">
+                    </label>
+                    <p class="txt_alert error">이미 사용 중인 닉네임입니다.</p>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">With 인증 시간</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group with_time">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                      <span class="time">2:35</span>
+                    </label>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">With 인증 실패</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group with_time input_error">
+                    <label for="">
+                      <input type="text" id="" class="input_text input_error" value="" placeholder="휴대폰번호">
+                      <span class="time">2:35</span>
+                    </label>
+                    <p class="txt_alert error">인증번호가 다릅니다.</p>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">With Button</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="dfds" placeholder="휴대폰번호">
+                      <button class="btn_sm btn_border">인증요청</button>
+                    </label>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">With Button - Disabled</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호" disabled>
+                      <button class="btn_sm btn_border">인증요청</button>
+                    </label>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Input 옆 버튼</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group width_btn">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="쿠폰번호 입력">
+                    </label>
+                    <button class="btn_md btn_primary" disabled>쿠폰등록</button>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">주민등록번호 입력</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group input_social_num">
+                    <span class="input_label">주민번호</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                      <span class="dash">-</span>
+                      <input type="text" id="" class="input_text" value="" placeholder="0">
+                      <span class="hidden_num">******</span>
+                    </label>
+                    <p class="txt_alert">YYMMDD</p>
+                  </div>
+                  <!-- //.input_group -->
+                  <br><br>
+                  <!-- input_group -->
+                  <div class="input_group input_social_num">
+                    <span class="input_label">주민번호</span>
+                    <label for="">
+                      <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                      <span class="dash">-</span>
+                      <span class="hidden_num">*******</span>
+                    </label>
+                    <p class="txt_alert">YYMMDD</p>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="file_name">
-            <input type="text" readonly="">
-            <img src="../../resources/images/@img_fileupload2.png" alt="">
-            <i class="input_delete" onclick="removeFilename(this)"></i>
-          </div>
-          <div class="file_name">
-            <input type="text" readonly="">
-            <img src="../../resources/images/@img_fileupload1.png" alt="">
-            <i class="input_delete" onclick="removeFilename(this)"></i>
-          </div>
-          <div class="file_name">
-            <input type="text" readonly="">
-            <img src="../../resources/images/@img_fileupload2.png" alt="">
-            <i class="input_delete" onclick="removeFilename(this)"></i>
-          </div>
-          <div class="file_uploader">
-            <label for="fileUploader-1"><span class="hide">파일 첨부하기</span></label>
-            <input type="file" class="input_file" id="fileUploader-1">
-          </div><!-- file_uploader -->
-        </div><!-- //.uploader_wrap -->
-        <ul class="dot_list">
-          <li>첨부파일은 최대 5개까지 업로드 가능합니다.</li>
-          <li>첨부파일 용량은 파일당 5MB를 초과하실 수 없습니다.</li>
-          <li>이미지(JPG, PNG, HEIC(HEIF)), PDF 파일만 업로드 가능합니다.</li>
-        </ul><!-- //.dot_list -->
-      </div><!-- //.input_group -->
-
-      <h1>검색바</h1>
-      <div class="search_bar">
-        <label for="">
-          <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
-          <button class="ico_search ico_20"></button>
-        </label>
-      </div><!-- //.search_bar -->
-
-      <h1>주민등록번호 입력</h1>
-      <div class="input_group input_social_num">
-        <span class="input_label">주민번호</span>
-        <label for="">
-          <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
-          <span class="dash">-</span>
-          <input type="text" id="" class="input_text" value="" placeholder="0">
-          <span class="hidden_num">******</span>
-        </label>
-        <p class="txt_alert">YYMMDD</p>
-      </div>
-      <br><br>
-      <div class="input_group input_social_num">
-        <span class="input_label">주민번호</span>
-        <label for="">
-          <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
-          <span class="dash">-</span>
-          <span class="hidden_num">*******</span>
-        </label>
-        <p class="txt_alert">YYMMDD</p>
-      </div>
-      
-      <h1>spinner</h1>
-      <div class="spinner">
-        <button type="button" class="btn_spinner_down" disabled><div class="hide">감소</div></button>
-        <input type="text" class="input_spinner" value="0" disabled>
-        <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
-      </div><!-- //.spinner -->
-<br>
-      <div class="spinner">
-        <button type="button" class="btn_spinner_down"><div class="hide">감소</div></button>
-        <input type="text" class="input_spinner" value="1">
-        <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
-      </div><!-- //.spinner -->
-<br>
-      <div class="spinner disabled">
-        <button type="button" class="btn_spinner_down"><div class="hide">감소</div></button>
-        <input type="text" class="input_spinner" value="0">
-        <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
-      </div><!-- //.spinner -->
-
-      <h1>Textarea - Placeholder</h1>
-      <div class="input_writing_group">
-        <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
-        <div class="txt_count">
-          <p class="current">0</p>
-          <span>/</span>
-          <p class="total">1000</p>
         </div>
       </div>
-
-      <h1>Textarea - 글자입력</h1>
-      <div class="input_writing_group">
-        <textarea name="" id="" placeholder="내용을 입력해주세요.">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</textarea>
-        <div class="txt_count">
-          <p class="current zero">0</p>
-          <span>/</span>
-          <p class="total">1000</p>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Tooltip</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <span class="input_label required">아이디<button data-tooltip="tip01" class="info_tooltip ico_info ico_16"></button></span>
+                    <div class="tooltip_box" id="tip01">
+                      <ul class="dot_list">
+                        <li>영어 소문자, 숫자 조합으로 8~20자까지 생성 가능합니다.</li>
+                        <li>공백은 사용할수 없으며, 순사단일로만 구성 할수 없습니다.</li>
+                      </ul>
+                    </div><!-- //.tooltip_box -->
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                    </label>
+                    <p class="txt_alert">사용이 가능한 닉네임입니다.</p>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <h1>Textarea - 글자수 초과</h1>
-      <div class="input_writing_group">
-        <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
-        <div class="txt_count">
-          <p class="current">0</p>
-          <span>/</span>
-          <p class="total">1000</p>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Input Search</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <!-- search_bar -->
+                  <div class="search_bar">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                      <button class="ico_search ico_20"></button>
+                    </label>
+                  </div>
+                  <!-- //.search_bar -->
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <h1>Textarea - disabled</h1>
-      <div class="input_writing_group disabled"><!-- 비활성시 클래스 disabled -->
-        <textarea name="" id="" placeholder="내용을 입력해주세요." disabled></textarea>
-        <div class="txt_count">
-          <p class="current">0</p>
-          <span>/</span>
-          <p class="total">1000</p>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Input DatePicker</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">기간 - modal로 열림</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group is_date">
+                    <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
+                    <span class="dash"></span>
+                    <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      
-    </div><!--// guide_contnets -->
-  </div><!-- //.container -->
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>File Upload</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">작성시</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group input_icon_right">
+                    <label for="file-01">
+                      <input type="file" id="file-01" class="input_text" value="">
+                      <i class="ico_clip ico_24"></i>
+                    </label>
+                  </div>
+                  <!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">업로드한 파일 - 상세페이지</h5>
+                <div class="cont">
+                  <div class="file_wrap">
+                    <div class="file">
+                      <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
+                      <button class="btn_xxs btn_border">다운로드</button>
+                    </div><!-- //.file -->
+                  </div><!-- //.file_wrap -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">업로드한 파일 - 작성/수정페이지</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group input_icon_right">
+                    <span class="input_label">첨부파일</span>
+                    <div class="file_wrap">
+                      <div class="file">
+                        <span class="name"><i class="ico_clip ico_24"></i>amos_number.pdf</span>
+                        <button class="btn_xxs btn_border">다운로드</button>
+                        <button class="ico_close_circle"></button>
+                      </div><!-- //.file -->
+                    </div><!-- //.file_wrap -->
+                  </div>
+                  <!-- //.input_group -->
+                  <!-- <div class="input_group input_icon_right">
+                    <label for="file-01" class="is_uploaded">
+                      <i class="ico_clip ico_24"></i>
+                      <input type="text" id="file-01-1" class="input_text" value="amos_number.pdf" disabled>
+                      <button class="btn_xxs btn_border">다운로드</button>
+                      <button class="ico_close_circle"></button>
+                    </label>
+                  </div> -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">이미지 파일 업로드</h5>
+                <div class="cont">
+                  <!-- input_group -->
+                  <div class="input_group">
+                    <span class="input_label">첨부파일</span>
+                    <div class="uploader_wrap">
+                      <div class="file_name">
+                        <input type="text" readonly="">
+                        <img src="../../resources/images/@img_fileupload1.png" alt="">
+                        <i class="input_delete" onclick="removeFilename(this)"></i>
+                      </div>
+                      <div class="file_name">
+                        <input type="text" readonly="">
+                        <img src="../../resources/images/@img_fileupload2.png" alt="">
+                        <i class="input_delete" onclick="removeFilename(this)"></i>
+                      </div>
+                      <div class="file_name">
+                        <input type="text" readonly="">
+                        <img src="../../resources/images/@img_fileupload1.png" alt="">
+                        <i class="input_delete" onclick="removeFilename(this)"></i>
+                      </div>
+                      <div class="file_name">
+                        <input type="text" readonly="">
+                        <img src="../../resources/images/@img_fileupload2.png" alt="">
+                        <i class="input_delete" onclick="removeFilename(this)"></i>
+                      </div>
+                      <div class="file_uploader">
+                        <label for="fileUploader-1"><span class="hide">파일 첨부하기</span></label>
+                        <input type="file" class="input_file" id="fileUploader-1">
+                      </div><!-- file_uploader -->
+                    </div><!-- //.uploader_wrap -->
+                    <ul class="dot_list">
+                      <li>첨부파일은 최대 5개까지 업로드 가능합니다.</li>
+                      <li>첨부파일 용량은 파일당 5MB를 초과하실 수 없습니다.</li>
+                      <li>이미지(JPG, PNG, HEIC(HEIF)), PDF 파일만 업로드 가능합니다.</li>
+                    </ul><!-- //.dot_list -->
+                  </div><!-- //.input_group -->
+                  <!-- //.input_group -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Input Spinner</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <!-- spinner -->
+                  <div class="spinner">
+                    <button type="button" class="btn_spinner_down" disabled><div class="hide">감소</div></button>
+                    <input type="text" class="input_spinner" value="0" disabled>
+                    <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
+                  </div>
+                  <!-- //.spinner -->
+                  <br>
+                  <!-- spinner -->
+                  <div class="spinner">
+                    <button type="button" class="btn_spinner_down"><div class="hide">감소</div></button>
+                    <input type="text" class="input_spinner" value="1">
+                    <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
+                  </div>
+                  <!-- //.spinner -->
+                  <br>
+                  <!-- spinner -->
+                  <div class="spinner disabled">
+                    <button type="button" class="btn_spinner_down"><div class="hide">감소</div></button>
+                    <input type="text" class="input_spinner" value="0">
+                    <button type="button" class="btn_spinner_up"><div class="hide">증가</div></button>
+                  </div>
+                  <!-- //.spinner -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Textarea</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Default</h5>
+                <div class="cont">
+                  <!-- input_writing_group -->
+                  <div class="input_writing_group">
+                    <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                  </div>
+                  <!-- //.input_writing_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">글자수 세기</h5>
+                <div class="cont">
+                  <!-- input_writing_group -->
+                  <div class="input_writing_group">
+                    <textarea name="" id="" placeholder="내용을 입력해주세요.">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</textarea>
+                    <div class="txt_count">
+                      <p class="current zero">0</p>
+                      <span>/</span>
+                      <p class="total">1000</p>
+                    </div>
+                  </div>
+                  <!-- //.input_writing_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <!-- input_writing_group -->
+                  <div class="input_writing_group disabled"><!-- 비활성시 클래스 disabled -->
+                    <textarea name="" id="" placeholder="내용을 입력해주세요." disabled></textarea>
+                    <div class="txt_count">
+                      <p class="current">0</p>
+                      <span>/</span>
+                      <p class="total">1000</p>
+                    </div>
+                  </div>
+                  <!-- //.input_writing_group -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
+  </div>
 
-<!-- Modal -->
+
+
+  <!-- Modal -->
+  <!-- DatePicker Modal -->
   <div class="modal_container" data-modal="modal01">
     <div class="modal_overlay"></div>
     <div class="modal_content">
@@ -301,7 +450,6 @@
     </div>
     <!-- /.modal_content -->
   </div><!-- //.modal_content -->
-
   <div class="modal_container" data-modal="modal02">
     <div class="modal_overlay"></div>
     <div class="modal_content">
@@ -310,6 +458,7 @@
       </div>
     </div>
   </div><!-- //.modal_content -->
+  <!-- //DatePicker Modal -->
 <!-- //Modal -->
 
 <script>

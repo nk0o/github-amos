@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Guide</title>
+  <link rel="stylesheet" href="guide_style.css">
+</head>
+
+<body>
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>AMOS UI Guide</h3>
+        <div class="box_wrap download_box">
+          <strong>퍼블리싱 파일리스트</strong>
+          <div class="btn_area">
+            <a href="https://amos.grovesoft.net/"
+            target="_blank" class="btn btn_md btn_white">View File List</a>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Web font</h4>
+        <div class="box_wrap">
+          <p class="component_desc">
+            대체로 국문은 아리따돋움체, 숫자/영문/특수기회는 고담체 사용.
+          </p>
+          <div class="component_guideline">
+            <span class="txt_kor">가나다라ABcd1234$</span>&nbsp;&nbsp;&nbsp;
+            <span class="txt_eng">가나다라ABcd1234$</span>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Logo &amp; Favicon</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <img src="../resources/images/simbol_2.svg" style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;
+            <img src="../resources/images/logo.svg" style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../favicon-32x32.png" style="vertical-align: middle;">
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Layout</h4>
+        <p class="pubGuide_desc">
+          개별 페이지는 main#container에서 작업하고, 그 외 공통영역은 include.js에서 불러와서 작업함.
+          <br/>
+          예시⇒ &lt;script&gt;include.footer();&lt;script&gt;
+        </p>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <div class="layout_guide_figure">
+              <div id="example_body">
+                &lt;body&gt;
+                <div id="example_wrap">
+                  &lt;div id="wrap"&gt;
+                  <div id="example_header">
+                    &lt;header&gt;
+                    <div id="example_nav">
+                      &lt;appbar&gt;<br/>
+                      &lt;appbar_tabmenu&gt;
+                    </div>
+                  </div>
+                  <div id="example_main">
+                    &lt;main id="container"&gt;<br/>
+                    <section id="example_section1">
+                      &lt;section&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;inner&gt;<br/>
+                    </section>
+                    <section id="example_section2">&lt;section&gt;</section>
+                  </div>
+                  <div id="example_footer">&lt;footer&gt;</div>
+                  <div id="example_tabbar">&lt;tabBar&gt;</div><br/>
+                </div>
+                <section id="example_section3"> &lt;floatingSide&gt;</section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
+    
+  </div>
+  <script src="../resources/js/libs/jquery- v1.11.1.min.js" type="text/javascript"></script>
+</body>
+
+</html>

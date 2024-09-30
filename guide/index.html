@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>Guide</title>
+  <link rel="stylesheet" href="guide_style.css">
+</head>
+
+<body class="pubGuide">
+  <div id="wrap">
+    <div class="pubGuide_menu">
+      <h1><a href="guide_start.html" target="iframe">UI pubGuide</a></h1>
+      <dl class="pubGuide_list">
+        <dt class="depth1">
+          <a href="guide_start.html" target="iframe">Foundation</a>
+        </dt>
+        <dd class="depth2">
+          <ul class="depth2_list">
+            <li>
+              <a href="./components/colors.html" target="iframe">Colors</a>
+            </li>
+            <li>
+              <a href="./components/typography.html" target="iframe">Typography</a>
+            </li>
+            <li>
+              <a href="./components/icons.html" target="iframe">Icons</a>
+            </li>
+          </ul>
+        </dd>
+        <dt class="depth1">UI components</dt>
+        <dd class="depth2">
+          <ul class="depth2_list">
+            <li>
+              <a href="./components/buttons.html" target="iframe">Buttons</a>
+            </li>
+            <li>
+              <a href="./components/tabs.html" target="iframe">Tabs</a>
+            </li>
+            <li>
+              <a href="./components/accordions.html" target="iframe">Accordions</a>
+            </li>
+            <li>
+              <a href="./components/badges.html" target="iframe">Badges</a>
+            </li>
+            <li>
+              <a href="./components/progressbar.html" target="iframe">Progressbar</a>
+            </li>
+            <li>
+              <a href="./components/pagination.html" target="iframe">Pagination</a>
+            </li>
+            <li>
+              <a href="./components/popup.html" target="iframe">Modal</a>
+            </li>
+            <li>
+              <a href="./components/slide.html" target="iframe">Slide</a>
+            </li>
+            <li>
+              <a href="./components/tooltip.html" target="iframe">Tooltip</a>
+            </li>
+            <li>
+              <a href="./components/treecheckbox.html" target="iframe">TreeCheckBox</a>
+            </li>
+            <li>
+              <a href="./components/spinners.html" target="iframe">Spinners</a>
+            </li>
+            <li>
+              <a href="./components/navigation.html" target="iframe">Navigation</a>
+            </li>
+          </ul>
+        </dd>
+        <dt class="depth1">Forms</dt>
+        <dd class="depth2">
+          <ul class="depth2_list">
+            <li>
+              <a href="./components/textFields.html" target="iframe">Text Fields</a>
+            </li>
+            <li>
+              <a href="./components/checks_radios.html" target="iframe">Checks and Radios</a>
+            </li>
+            <li>
+              <a href="./components/dropdowns.html" target="iframe">Dropdowns</a>
+            </li>
+            <li>
+              <a href="./components/toggles.html" target="iframe">Toggles</a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <iframe src="guide_start.html" frameborder="0" class="iframe" name="iframe">
+    </iframe>
+  </div>
+  <script src="../resources/js/libs/jquery- v1.11.1.min.js" type="text/javascript"></script>
+  <script>
+    $(window).on('load', function () {
+      var sessionCureent = sessionStorage.getItem('currentPage');
+      if (!sessionCureent) {
+        $('.iframe').attr('src', 'guide_start.html');
+      } else if (sessionCureent == 'guide_start.html') {
+        $('.iframe').attr('src', 'guide_start.html');
+      }
+    });
+
+    $(document).ready(function () {
+      var currentPage;
+      $('h1').click(function () {
+        sessionStorage.setItem('currentPage', $(this).find('a').attr('href'));
+      });
+      $('.pubGuide_list .depth1 a').click(function () {
+        $('.depth2_list li').siblings().removeClass('active');
+        sessionStorage.setItem('currentPage', $(this).attr('href'));
+      });
+
+      $('.depth2_list li').click(function () {
+        $('.depth2_list li').siblings().removeClass('active');
+        $(this).addClass('active')
+        sessionStorage.setItem('currentPage', $(this).find('a').attr('href'));
+      });
+
+      var reloadPage = sessionStorage.getItem('currentPage');
+      $('.iframe').attr('src', reloadPage);
+      $('[href="' + reloadPage + '"]').parents('li').addClass('active');
+    })
+  </script>
+</body>
+
+</html>
