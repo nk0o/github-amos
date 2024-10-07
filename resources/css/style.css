@@ -284,7 +284,8 @@ p {
   background-color: #A5673F !important;
 }
 .bg_gray {
-  background-color: #dddddd !important;
+  background-color: #eeeeee !important;
+  color: #888888 !important;
 }
 .bg_dark, .bg_black {
   background-color: #222222 !important;
@@ -4695,7 +4696,20 @@ select {
   color: #ffffff;
   font-size: 11px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 18px;
+}
+.badge_num {
+  display: inline-block;
+  padding: 0 12px;
+  margin-left: 6px;
+  height: 26px;
+  background: #DFEDFF;
+  border-radius: 50px;
+  vertical-align: -1px;
+  color: #1A63D9;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 .badge_dot {
   display: inline-block;
@@ -7952,7 +7966,6 @@ footer .f_company {
 }
 .prd_detail_view .banner_area {
   width: 100%;
-  max-height: 500px;
   text-align: center;
   overflow: hidden;
 }
@@ -12384,6 +12397,10 @@ footer .f_company {
 
 .order_summary.info_read {
   padding-top: 20px;
+}
+.order_summary.info_read dt {
+  flex: 0 0 auto;
+  min-width: 100px;
 }
 .order_summary.info_read .price {
   display: flex;

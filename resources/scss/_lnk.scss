@@ -1571,7 +1571,11 @@
 }
 .order_summary{
   &.info_read{
-    padding-top: 20px;    
+    padding-top: 20px;
+    dt{
+      flex: 0 0 auto;
+      min-width: 100px;
+    }
     .price{
       display: flex;
       align-items: flex-start;
