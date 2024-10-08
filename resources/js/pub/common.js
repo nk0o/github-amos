@@ -527,7 +527,8 @@ function modalUI(){
 }
 
 function bottomSheetUI(){
-  $(document).on('click touchend', '[data-btmsheet]', function(){
+  //바텀시트 열기
+  $(document).on('click', '[data-btmsheet]', function(){
     if($(this).hasClass('select_box_value') && !isMobile){
       //셀렉트는 모바일일때만 열림
       return false;
@@ -535,12 +536,34 @@ function bottomSheetUI(){
     $("#"+ $(this).data('btmsheet')).addClass('show');
     $("body").addClass("no_scroll");
   });
+  
+  //바텀시트 닫기
   $(document).on('click touchend', '.btm_sheet_close, .btm_sheet_back', function(e){
     $(this).parents('.btm_sheet').removeClass('show')
     $("body").removeClass("no_scroll");
     e.preventDefault();
   });
+  
+  //라디오 체크 값 셀렉트에 넣기
+  let $selectText;
+  $(document).on('click', '.btm_sheet .input_check_list input[type=radio]', function(e){
+    let $targetBtmID = $(this).closest('.btm_sheet').attr('id')
+    if($(this).prop('checked')){
+      $selectText = $(this).next('label').text();
+    }
+    $(this).on('change', function(){    
+      $selectText = $(this).next('label').text();
+    })
+    if($('[data-btmsheet='+ $targetBtmID + ']').hasClass('select_box_value')){
+      $('[data-btmsheet='+ $targetBtmID + ']').find('span').text($selectText).css('color', '#222222')
+      $(this).closest('.btm_sheet').removeClass('show')
+      $("body").removeClass("no_scroll");
+    }
+  })
 }
+
+
+
 /* Floating UI */
 function floatingSideUI(){
   //expand
@@ -1031,6 +1054,9 @@ function tvSlider() {
             }
           }
         }
+      },
+      pagination: {
+        el: sliderId + " .swiper-pagination",
       },
       on: {
         slideChange: function () {

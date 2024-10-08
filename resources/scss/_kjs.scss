@@ -2918,6 +2918,12 @@
         width: 100%;
         height: 0;
         padding-bottom: 80%;
+        &_mo{
+          display: block;
+        }
+        &_pc{
+          display: none;
+        }
         img {
           width:100%;
           height: 100%;
@@ -2957,16 +2963,16 @@
         }
       }
     }
-  }
-  .swiper-pagination {
-    top: auto;
-    bottom: 20px;
-    right: 20px;
-    left: auto;
-    text-align: right;
-    @include fontStyle($color-white, $fs-xxs, $fw-l, 1.3333);
-    &-total{
-      opacity: 0.7;
+    .swiper-pagination {
+      top: auto;
+      bottom: 20px;
+      right: 20px;
+      left: auto;
+      text-align: right;
+      @include fontStyle($color-white, $fs-xxs, $fw-l, 1.3333);
+      &-total{
+        opacity: 0.7;
+      }
     }
   }
   .sec_conts {
@@ -2981,6 +2987,18 @@
       }
       .ico_chevNext_24::before{
         background-color:$color-primary !important;
+      }
+    }
+    .swiper-pagination{
+      display: none;
+    }
+    @media (min-width: $pc-point) {
+      .swiper {
+        padding: 0 0 40px 0;  
+      }
+      .swiper-pagination{
+        display: block;
+        bottom: 0;
       }
     }
   }
@@ -3155,6 +3173,19 @@
     .sec_visual {
       .inner {
         padding:0 20px;
+        .img{
+          height: 300px;
+          padding-bottom: 0;
+          &_mo{
+            display: none;
+          }
+          &_pc{
+            display: block;
+          }
+          img{
+            position: relative;
+          }
+        }
       }
     }
     .sec_conts {
