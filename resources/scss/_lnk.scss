@@ -1027,6 +1027,7 @@
     @include fontStyle($gray-900, $fs-xs, $fw-sb, 1.38462);
   }
   .tit{
+    @include text-ellipsis;
     margin-top: 4px;
     @include fontStyle($gray-900, $fs-sm, $fw-sb, 1.3333);
     font-family: $font-aritadt;

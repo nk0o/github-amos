@@ -219,6 +219,7 @@
         padding:12px 68px 12px 16px;
         @include fontStyle($gray-950, $fs-m, $fw-m, 1.5);
         border-radius: 8px;
+        @include text-ellipsis;
         &::before{
           left: auto;
           right: 16px;

@@ -52,13 +52,9 @@
                         <li><span>최근 1개월</span></li>
                         <li><span>최근 3개월</span></li>
                         <li><span>최근 6개월</span></li>
-                        <li><span>기간설정</span></li>
                       </ul>
                     </div>
                   </div>
-                  <button class="btn_md btn_primary" data-btmsheet="btmSheet02">
-                    <i class="ico_cal white ico_16"></i> 상세조회
-                  </button>
                 </div>
                 <ul class="dot_list">
                   <li>2024.06.01 ~ 2024.07.01 사용내역</li>
@@ -124,19 +120,6 @@
             </div>
             <div id="tab2-2" class="tab_cont_item current">
               <div class="history_search">
-                <div class="input_group width_btn">
-                  <div class="select_box">
-                    <div class="select_box_value" data-btmsheet="btmSheet03">
-                      <span>당월</span>
-                    </div>
-                    <div class="select_box_list">
-                      <ul>
-                        <li><span>당월</span></li>
-                        <li><span>익월</span></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
                 <ul class="dot_list">
                   <li>2024.07.01 ~ 2024.07.31 소멸예정 내역</li>
                   <li>당월 소멸예정 포인트 내역입니다.</li>
@@ -148,31 +131,12 @@
                     <span class="point used"><em>1,500</em>p</span>
                   </div>
                 </div>
-              </div>
-              <div class="history_result">
-                <ul>
-                  <li>
-                    <span class="date">2024.07.10</span>
-                    <div class="detail">
-                      <em>유효기간 만료</em>
-                    <span class="point used"><em>-500</em>p</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="date">2024.07.05</span>
-                    <div class="detail">
-                      <em>유효기간 만료</em>
-                    <span class="point used"><em>-500</em>p</span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="date">2024.07.02</span>
-                    <div class="detail">
-                      <em>유효기간 만료</em>
-                    <span class="point used"><em>-500</em>p</span>
-                    </div>
-                  </li>
-                </ul>
+                <div class="view_point">
+                  <div class="point_list">
+                    <em><i class="ico_point_circle primary ico_20"></i> 소멸 예정 포인트</em>
+                    <span class="point used"><em>1,500</em>p</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -225,7 +189,7 @@
   </div><!-- //.btm_sheet -->
 
   <!-- Bottom Sheet -->
-  <div class="btm_sheet" id="btmSheet03"><!-- data-btmsheet="btmSheet01" -->
+  <div class="btm_sheet" id="btmSheet03"><!-- data-btmsheet="btmSheet03" -->
     <div class="btm_sheet_back"></div>
     <div class="inner">
       <div class="btm_sheet_head">
@@ -247,42 +211,6 @@
             </div>
           </li>
         </ul>
-      </div><!-- //.btm_sheet_cont -->
-    </div><!-- //.inner -->
-  </div><!-- //.btm_sheet -->
-
-  <div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
-    <div class="btm_sheet_back"></div>
-    <div class="inner">
-      <div class="btm_sheet_head">
-        <p class="tit">상세 조회</p>
-        <button type="button" class="btm_sheet_close ico_close_20"></button>
-      </div><!-- //.btm_sheet_head -->
-      <div class="btm_sheet_cont check_list">
-        <div class="radio_btn_wrap">
-          <div class="tit">조회기간</div>
-          <div class="input_radio_wrap type_btn">
-            <input type="radio" id="radio-1" class="input_radio" name="radio-item-1" checked>
-            <label for="radio-1">1개월</label>
-          </div>
-          <div class="input_radio_wrap type_btn">
-            <input type="radio" id="radio-2" class="input_radio" name="radio-item-1">
-            <label for="radio-2">3개월</label>
-          </div>
-          <div class="input_radio_wrap type_btn">
-            <input type="radio" id="radio-3" class="input_radio" name="radio-item-1">
-            <label for="radio-3">6개월</label>
-          </div>
-          <div class="input_radio_wrap type_btn show_picker">
-            <input type="radio" id="radio-5" class="input_radio" name="radio-item-1">
-            <label for="radio-5">기간 설정</label>
-          </div> 
-          <div class="input_group is_date hidden">
-            <input type="text" data-cal="datepicker" class="input_text btn_modal_open" id="modal01" autocomplete="off">
-            <span class="dash">-</span>
-            <input type="text" data-cal="datepicker2" class="input_text btn_modal_open" id="modal02" autocomplete="off">
-          </div>
-        </div><!-- //.radio_btn_wrap -->
       </div><!-- //.btm_sheet_cont -->
     </div><!-- //.inner -->
   </div><!-- //.btm_sheet -->
