@@ -485,7 +485,7 @@ function modalUI(){
     openModal($target);
   }); 
 
-  $(document).on('click touchend', '.btn_modal_close, .modal_overlay', function(e){
+  $(document).on('click touchend', '.btn_modal_close', function(e){
     e.preventDefault();
     closeModal(e.target);
   });

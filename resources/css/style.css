@@ -10889,6 +10889,12 @@ footer .f_company {
   margin: 16px 0 0;
   border-top: 1px solid #eeeeee;
 }
+.agree_check .agree_check_list .input_check + label {
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.714;
+}
 .agree_check_list li {
   display: -webkit-box;
   display: flex;

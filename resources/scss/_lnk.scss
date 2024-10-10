@@ -224,6 +224,9 @@
     padding: 16px 0 0;
     margin: 16px 0 0;
     border-top: 1px solid $gray-100;
+    .input_check + label{
+      @include fontStyle(inherit, $fs-s, $fw-m, 1.714);
+    }
   }
   &_list{
     li{
