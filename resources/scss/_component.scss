@@ -127,7 +127,8 @@
     background-color: $color-brown !important;
   }
   &_gray {
-    background-color: $gray-300 !important;
+    background-color: $gray-100 !important;
+    color: $gray-600 !important;
   }
   &_dark,
   &_black {

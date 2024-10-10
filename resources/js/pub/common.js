@@ -105,23 +105,23 @@ $(document).ready(function () {
   }
   //Line Tab 초기화
   function LineTabMenuInit() {
-    var tabM = $('.tab_menu');
-    var lineTab = $('.line_tab');
-
-    if (tabM.hasClass("line_tab")) {
-      tabM.each(function () {
-        if ($(this).find('.tab_bar').length < 1) {
-          $(this).append("<div class='tab_bar'></div>");
-        };
-      });
-    }
-
-    lineTab.each(function () {
-      $(this).find('.tab_bar').css({
-        "width": $(this).find(".current").outerWidth(),
-        "left": $(this).find(".current").position().left + parseInt($(this).find(".current").css("margin-left"))
-      });
-    })
+    $(window).on('load', function () {
+      var tabM = $('.tab_menu');
+      var lineTab = $('.line_tab');
+      if (tabM.hasClass("line_tab")) {
+        tabM.each(function () {
+          if ($(this).find('.tab_bar').length < 1) {
+            $(this).append("<div class='tab_bar'></div>");
+          };
+        });
+      }
+      lineTab.each(function () {
+        $(this).find('.tab_bar').css({
+          "width": $(this).find(".current").outerWidth(),
+          "left": $(this).find(".current").position().left + parseInt($(this).find(".current").css("margin-left"))
+        });
+      })
+    });
   };
   //
 
