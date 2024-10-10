@@ -291,12 +291,16 @@
       .tab_list.current > a
       .tab_list > button,
       .tab_list > a{
+        @include text-ellipsis;
+        max-width: 140px;
+        min-width: 0;
         cursor: default;
         height: 32px;
-        padding: 0 8px 0 12px;
-        @include fontStyle($gray-900, $fs-xs, $fw-m, 1.23);
+        padding: 0 26px 0 12px;
+        @include fontStyle($gray-900, $fs-xs, $fw-m, 30px);
         font-family: $font-aritadt;
         background-color: $color-white;
+        position: relative;
       }
       .tab_list > .ico_reset{
         width: 32px;
@@ -311,6 +315,10 @@
     }
     .btn_delete{
       cursor: pointer;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

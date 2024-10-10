@@ -1011,11 +1011,10 @@
       border-radius: 50%;
       i {
         width: 55px;
-        height: 50px;
+        height: 55px;
+        flex: 0 0 55px;
         &::before {
-          width: 55px;
-          height: 50px;
-          background: #fff;
+          background: #fff !important;
         }
       }
     }
@@ -1121,14 +1120,6 @@
         @include flexCenter;
         width: 120px;
         height: 120px;
-        i {
-          width: 50px;
-          height: 55px;
-          &::before {
-            width: 50px;
-            height: 55px;
-          }
-        }
       }
     } 
     @keyframes moveAndFadeOut {

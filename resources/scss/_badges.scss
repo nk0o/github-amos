@@ -81,7 +81,20 @@
     min-width: 18px;
     padding: 3px 5px;
     border-radius: 20px;
-    @include fontStyle($color-white, 11px, $fw-b, 1);
+    @include fontStyle($color-white, 11px, $fw-b, 18px);
+  }
+  &_num {
+    display: inline-block;
+    padding: 0 12px;
+    margin-left: 6px;
+    height: 26px;
+    background: #DFEDFF;
+    border-radius: 50px;
+    vertical-align: -1px;
+    color: #1A63D9;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 24px;
   }
   &_dot {
     display: inline-block;

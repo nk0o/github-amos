@@ -3520,12 +3520,6 @@ button:disabled *[class*=ico_]::before {
   font-weight: 400;
   line-height: 1.5;
   border-radius: 8px;
-  display: block;
-  overflow: hidden;
-  word-break: break-all;
-  word-wrap: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .input_check_list .input_check_wrap.without_box .input_radio + label::before, .input_check_list .input_check_wrap.without_box .input_check + label::before, .input_check_list .input_radio_wrap.without_box .input_radio + label::before, .input_check_list .input_radio_wrap.without_box .input_check + label::before {
   left: auto;
@@ -4565,15 +4559,24 @@ select {
 .tab_selected_wrap.filter_wrap .round_tab .tab_list.current > button,
 .tab_selected_wrap.filter_wrap .round_tab .tab_list.current > a .tab_list > button,
 .tab_selected_wrap.filter_wrap .round_tab .tab_list > a {
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+  min-width: 0;
   cursor: default;
   height: 32px;
-  padding: 0 8px 0 12px;
+  padding: 0 26px 0 12px;
   color: #444444;
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.23;
+  line-height: 30px;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   background-color: #ffffff;
+  position: relative;
 }
 .tab_selected_wrap.filter_wrap .round_tab .tab_list > .ico_reset {
   width: 32px;
@@ -4587,6 +4590,10 @@ select {
 }
 .tab_selected_wrap.filter_wrap .btn_delete {
   cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (min-width: 1024px) {
@@ -8088,12 +8095,11 @@ footer .f_company {
 }
 .prd_put_cart .aniPut .ani_img i {
   width: 55px;
-  height: 50px;
+  height: 55px;
+  flex: 0 0 55px;
 }
 .prd_put_cart .aniPut .ani_img i::before {
-  width: 55px;
-  height: 50px;
-  background: #fff;
+  background: #fff !important;
 }
 .prd_put_cart .put_text {
   position: fixed;
@@ -8186,14 +8192,6 @@ footer .f_company {
     align-items: center;
     width: 120px;
     height: 120px;
-  }
-  .prd_put_cart .aniPut .ani_img i {
-    width: 50px;
-    height: 55px;
-  }
-  .prd_put_cart .aniPut .ani_img i::before {
-    width: 50px;
-    height: 55px;
   }
   @keyframes moveAndFadeOut {
     0% {
@@ -10873,6 +10871,11 @@ footer .f_company {
 .agree_check {
   padding: 0 20px;
 }
+@media (min-width: 1024px) {
+  .agree_check {
+    padding: 0;
+  }
+}
 .agree_check > p {
   margin: 10px 0 0;
   color: #777777;
@@ -11568,6 +11571,9 @@ footer .f_company {
 .order_accord .accord_cont > .inner {
   padding: 0 20px 20px;
 }
+.order_accord .accord_cont > .inner .refer_mark {
+  margin-top: 20px;
+}
 .order_accord .accord_cont .input_group {
   padding: 20px 0px 0;
 }
@@ -11814,12 +11820,6 @@ footer .f_company {
   line-height: 1.38462;
 }
 .promo_box .tit {
-  display: block;
-  overflow: hidden;
-  word-break: break-all;
-  word-wrap: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   margin-top: 4px;
   color: #444444;
   font-size: 0.9375rem;

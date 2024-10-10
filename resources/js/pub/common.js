@@ -472,7 +472,7 @@ function addInputClearBtn(){
       return false;
     }
     if(!$(el).parents('label').find('.ico_close_circle').length){
-      $(el).parent('label').append(`<button class="ico_close_circle"></button>`)
+      $(el).parent('label').append(`<button class="ico_close_circle" tabindex="-1"></button>`)//20241010 tab버튼 통과 
     }
   }
 }
