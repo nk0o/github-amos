@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,116 +7,154 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Dropdowns</title>
-  <style>
-    .guide_contents{padding: 20px;}
-    
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-  </style>
+  <title>Dropdowns(SelectBox) | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
-      <!-- contents -->
-      <div class="guide_contents">
-        <h1>드롭다운 - Default</h1>
-        <div class="select_box">
-          <div class="select_box_value"><span>Select Option</span></div>
-          <div class="select_box_list">
-            <ul>
-              <li><span>Option 1</span></li>
-              <li><span>Option 2</span></li>
-              <li><span>Option 3</span></li>
-              <li><span>Option 4</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <h1>드롭다운 - Disabled</h1>
-        <div class="select_box disabled">
-          <div class="select_box_value"><span>Select Option</span></div>
-          <div class="select_box_list">
-                <ul>
-                      <li><span>Option 1</span></li>
-                      <li><span>Option 2</span></li>
-                      <li><span>Option 3</span></li>
-                      <li><span>Option 4</span></li>
-                </ul>
-          </div>
-        </div>
-
-        <h1>드롭다운 - Group</h1>
-        <div class="select_box">
-          <div class="select_box_value"><span>Select Option</span></div>
-          <div class="select_box_list list-group">
-            <ul>
-              <li class="list-group_opt">
-                <div class="list_tit">Category A</div>
-                <ul>
-                  <li><span>Category A1</span></li>
-                  <li><span>Category A2</span></li>
-                  <li><span>Category A3</span></li>
-                </ul>
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Dropdowns (SelectBox)</h3>
+      </div>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Default</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                  <div class="select_box">
+                    <div class="select_box_value"><span>Select Option</span></div>
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>Option 1</span></li>
+                        <li><span>Option 2</span></li>
+                        <li><span>Option 3</span></li>
+                        <li><span>Option 4</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.select_box -->
+                </div>
               </li>
-              <li class="list-group_opt">
-                <div class="list_tit">Category B</div>
-                <ul>
-                  <li><span>Category B1</span></li>
-                  <li><span>Category B2</span></li>
-                  <li><span>Category B3</span></li>
-                </ul>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <div class="select_box disabled">
+                    <div class="select_box_value"><span>Select Option</span></div>
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>Option 1</span></li>
+                        <li><span>Option 2</span></li>
+                        <li><span>Option 3</span></li>
+                        <li><span>Option 4</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.select_box -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <div class="select_box disabled">
+                    <div class="select_box_value"><span>Select Option</span></div>
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>Option 1</span></li>
+                        <li><span>Option 2</span></li>
+                        <li><span>Option 3</span></li>
+                        <li><span>Option 4</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.select_box -->
+                </div>
               </li>
             </ul>
           </div>
         </div>
-
-        <h1>드롭다운 - 기본 SelectBox</h1>
-        <div class="select_box select_box_defalut">
-          <span class="select_box_arr"></span>
-          <select class="select_box_value" name="" id="">
-            <option value="">Select Option</option>
-            <option value="">Option 1</option>
-            <option value="">Option 2</option>
-            <option value="">Option 3</option>
-            <option value="">Option 4</option>
-          </select>     
-        </div>
-
-        <h1>드롭다운 - 기본 SelectBox - Disabled</h1>
-        <div class="select_box select_box_defalut disabled">
-          <span class="select_box_arr"></span>
-          <select class="select_box_value" name="" id="" disabled>
-            <option value="">Select Option</option>
-            <option value="">Option 1</option>
-            <option value="">Option 2</option>
-            <option value="">Option 3</option>
-            <option value="">Option 4</option>
-          </select>     
-        </div>
-
-        <h1>드롭다운 - type2</h1>
-        <div class="select_box type2">
-          <div class="select_box_value"><span>선택</span></div>
-          <div class="select_box_list">
-            <ul>
-              <li><span>선택</span></li>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>시스템 Selectbox</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                  <div class="select_box select_box_defalut">
+                    <span class="select_box_arr"></span>
+                    <select class="select_box_value" name="" id="">
+                      <option value="">1TA</option>
+                      <option value="">2TA</option>
+                      <option value="">3TA</option>
+                    </select>     
+                  </div><!-- //.select_box -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <div class="select_box select_box_defalut disabled">
+                    <span class="select_box_arr"></span>
+                    <select class="select_box_value" name="" id="" disabled>
+                      <option value="">1TA</option>
+                      <option value="">2TA</option>
+                      <option value="">3TA</option>
+                    </select>     
+                  </div><!-- //.select_box -->
+                </div>
+              </li>
             </ul>
           </div>
         </div>
-
-        <h1>드롭다운 - type3</h1>
-        <div class="select_box type3">
-          <div class="select_box_value"><span>이름순</span></div>
-          <div class="select_box_list">
-            <ul>
-              <li><span>이름순</span></li>
-              <li><span>가격순</span></li>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Type</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Type 2 (주문)</h5>
+                <div class="cont">
+                  <div class="select_box type2">
+                    <div class="select_box_value"><span>선택</span></div>
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>선택</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.select_box -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Type 3 (정렬)</h5>
+                <div class="cont">
+                  <div class="select_box type3">
+                    <div class="select_box_value"><span>이름순</span></div>
+                    <div class="select_box_list">
+                      <ul>
+                        <li><span>이름순</span></li>
+                        <li><span>가격순</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.select_box -->
+                </div>
+              </li>
             </ul>
           </div>
         </div>
-
-      </div><!--// contents -->
+      </div>
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
   </div>
 </body>
 </html>

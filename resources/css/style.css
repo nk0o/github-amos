@@ -2691,10 +2691,6 @@ button:disabled *[class*=ico_]::before {
   padding: 4px 12px;
   border-color: transparent;
 }
-.btn_lg.btn_circle {
-  width: 56px;
-  height: 56px;
-}
 .btn_md {
   height: 50px;
   font-size: 0.9375rem;
@@ -2706,10 +2702,6 @@ button:disabled *[class*=ico_]::before {
   padding: 4px 16px;
   border-color: transparent;
 }
-.btn_md.btn_circle {
-  width: 50px;
-  height: 50px;
-}
 .btn_sm {
   height: 46px;
   font-size: 0.9375rem;
@@ -2719,10 +2711,6 @@ button:disabled *[class*=ico_]::before {
   width: 46px;
   height: 46px;
   padding: 4px 6px;
-}
-.btn_sm.btn_circle {
-  width: 46px;
-  height: 46px;
 }
 .btn_xs {
   height: 40px;
@@ -2735,10 +2723,6 @@ button:disabled *[class*=ico_]::before {
   height: 40px;
   padding: 4px 6px;
   border-color: transparent;
-}
-.btn_xs.btn_circle {
-  width: 40px;
-  height: 40px;
 }
 .btn_xxs {
   height: 30px;
@@ -2770,13 +2754,6 @@ button:disabled *[class*=ico_]::before {
 }
 .btn_radius {
   border-radius: 99999px;
-}
-.btn_circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 100% !important;
-  padding: 0;
-  justify-content: center;
 }
 .btn_group {
   display: -webkit-box;
@@ -3806,6 +3783,12 @@ button:disabled *[class*=ico_]::before {
 /* Defalut SelectBox */
 .select_box.select_box_defalut {
   background-color: #ffffff;
+}
+.select_box.select_box_defalut .select_box_value {
+  color: #222222;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2143;
 }
 .select_box.select_box_defalut.disabled {
   background-color: #f6f6f6 !important;
@@ -10889,7 +10872,7 @@ footer .f_company {
   margin: 16px 0 0;
   border-top: 1px solid #eeeeee;
 }
-.agree_check .agree_check_list .input_check + label {
+.agree_check_list .input_check + label {
   color: inherit;
   font-size: 0.875rem;
   font-weight: 400;
@@ -11756,10 +11739,6 @@ footer .f_company {
   margin-top: 12px;
 }
 .gift_list .select_box_defalut .select_box_value {
-  color: #222222;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.2143;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
 .gift_list .cart_check {

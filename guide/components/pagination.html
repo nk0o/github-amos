@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,87 +7,61 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Pagination</title>
+  <title>Pagination | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
+  <style>
+    .swiper-container{padding-bottom: 40px;}
+  </style>
 </head>
-
 <body>
-  <div id="container">
+  <div id="pubGuidecontainer">
     <!-- contents -->
-    <div class="guide_contents">
-      <div class="pagination" aria-label="Page Navigation">
-        <a href="javascript:void(0);" class="arr arr_text prev"><span>이전</span></a>
-        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
-        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Pagination</h3>
       </div>
-      <br>
-      <div class="pagination" aria-label="Page Navigation">
-        <a href="javascript:void(0);" class="arr prev"><span>이전</span></a>
-        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
-        <a href="javascript:void(0);" class="arr next"><span>다음</span></a>
-      </div>
-      <br>
-      <div class="pagination" aria-label="Page Navigation">
-        <a href="javascript:void(0);" class="arr arr_text prev disabled"><span>이전</span></a>
-        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
-        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
-      </div>
-      <br>
-      <div class="pagination" aria-label="Page Navigation">
-        <a href="javascript:void(0);" class="arr arr_text prev disabled"><span>이전</span></a>
-        <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>2</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>3</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>4</span></a>
-        <a href="javascript:void(0);" class="page_link"><span>5</span></a>
-        <a href="javascript:void(0);" class="arr arr_text next"><span>다음</span></a>
-      </div>
-      <br>
-      <div class="pagination_number">
-        <span class="pagination_number_current">1</span>
-        <span class="pagination_number_total">5</span>
-      </div>
-      <br>
-      <div id="mySwiper-01" class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">....</div>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Swiper Pagination</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <div id="mySwiper" class="swiper swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">slide - 1</div><!-- //.swiper-slide -->
+                      <div class="swiper-slide">slide - 2</div><!-- //.swiper-slide -->
+                      <div class="swiper-slide">slide - 3</div><!-- //.swiper-slide -->
+                      <div class="swiper-slide">slide - 4</div><!-- //.swiper-slide -->
+                      <div class="swiper-slide">slide - 5</div><!-- //.swiper-slide -->
+                      <div class="swiper-slide">slide - 6</div><!-- //.swiper-slide -->
+                    </div><!-- //.swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                  </div><!-- //.swiper-container -->
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-      <!-- Swiper css head영역에서 불러오기 -->
-      <link rel="stylesheet" href="../../resources/css/swiper.min.css">
-      <!-- Swiper pagination 속성 스크립트 -->
-      <script src="../../resources/js/libs/swiper.min.js"></script>
-      <script>
-        var mySwiper01 = new Swiper('#mySwiper-01', {
-          //swiper pagination
-          pagination: {
-            el: '#mySwiper-01 .swiper-pagination',
-          }
-        })
-      </script>
-    </div><!--// contents -->
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
   </div>
+
   <script>
-    var mySwiper01 = new Swiper('#mySwiper-01', {
+    var mySwiper01 = new Swiper('#mySwiper', {
       //swiper pagination
+
       pagination: {
-        el: '#mySwiper-01 .swiper-pagination',
+        el: '#mySwiper .swiper-pagination',
         clickable: true
       }
     });
   </script>
 </body>
-
 </html>

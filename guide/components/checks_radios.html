@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,262 +7,367 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Checks and Radios</title>
-  <style>
-    .guide_contents{padding: 20px;}
-    
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-  </style>
+  <title>Check & Radio | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
-      <!-- contents -->
-      <div class="guide_contents">
-        <h1>체크박스</h1>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1"/>
-          <label for="check-1-1">기본 체크박스</label>
-        </div>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked/>
-          <label for="check-1-2">선택된 체크박스</label>
-        </div>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-3" class="input_check" name="check-item-1"/>
-          <label for="check-1-3"></label>
-        </div>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-4" class="input_check" name="check-item-1" checked/>
-          <label for="check-1-4"></label>
-        </div>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-5" class="input_check" name="check-item-3" disabled/>
-          <label for="check-1-5">비활성화된 체크박스</label>
-        </div>
-        <div class="input_check_wrap">
-          <input type="checkbox" id="check-1-6" class="input_check" name="check-item-3" checked disabled/>
-          <label for="check-1-6">비활성화 선택된 체크박스</label>
-        </div>
-
-        <h2>체크표시만 있는 타입 - 24px</h2>
-        <div class="input_check_wrap without_box">
-          <input type="checkbox" id="check-6" class="input_check" name="check-item-4"/>
-          <label for="check-6">Option</label>
-        </div>
-        <div class="input_check_wrap without_box">
-          <input type="checkbox" id="check-7" class="input_check" name="check-item-4" checked/>
-          <label for="check-7">Option</label>
-        </div>
-
-        <h2>체크표시만 있는 타입 - 20px</h2>
-        <div class="input_check_wrap without_box_sm">
-          <input type="checkbox" id="check-8" class="input_check" name="check-item-5"/>
-          <label for="check-8">Option</label>
-        </div>
-        <div class="input_check_wrap without_box_sm">
-          <input type="checkbox" id="check-9" class="input_check" name="check-item-5" checked/>
-          <label for="check-9">Option</label>
-        </div>
-        
-        <h1>장바구니 체크박스</h1>
-        <section class="cart_check_all">
-          <div class="inner cart_check">
-            <div class="input_check_wrap">
-              <input type="checkbox" id="check-all" class="input_check" name="check-item-1" checked="">
-              <label for="check-all">전체 선택(<span>2</span>/<span>5</span>)</label>
-            </div>
-            <button type="button" class="btn_delete">선택삭제</button>
-          </div>
-        </section><!-- //.cart_check_all -->
-        
-        <br>
-        
-        <div class="cart_check">
-          <div class="input_check_wrap">
-            <input type="checkbox" id="check-1-all" class="input_check" name="check-item-1" checked="">
-            <label for="check-1-all">새치커버 컬러</label>
-          </div>
-        </div>
-        
-        <br>
-        
-        <div class="cart_check">
-          <div class="input_check_wrap">
-            <input type="checkbox" id="check-11" class="input_check" name="check-item-1" checked="">
-            <label for="check-11"></label>
-          </div>
-          <button class="btn_delete type_x"><div class="hide">삭제</div></button>
-        </div>
-        
-        <br>
-        <h1>약관동의 체크박스</h1>
-        <div class="agree_check">
-          <div class="input_check_wrap">
-            <input type="checkbox" id="check-all-1" class="input_check" name="check-item-1" checked="">
-            <label for="check-all">전체 동의하기</label>
-          </div>
-          <p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
-          <ul class="agree_check_list">
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-1" class="input_check" name="check-item-1">
-                <label for="check-01-1">(필수) 이용약관 동의</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-2" class="input_check" name="check-item-1">
-                <label for="check-01-2">(필수) 개인정보 수집.이용 동의</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-3" class="input_check" name="check-item-1">
-                <label for="check-01-3">(필수) 개인정보 처리 위탁 안내</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-4" class="input_check" name="check-item-1">
-                <label for="check-01-4">(선택) 개인정보 수집.이용 동의</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-5" class="input_check" name="check-item-1">
-                <label for="check-01-5">(선택) 광고성 정보 수신 동의</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-6" class="input_check" name="check-item-1">
-                <label for="check-01-6">(필수) 본인은 만 14세 이상입니다.</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-            <li>
-              <div class="input_check_wrap without_box">
-                <input type="checkbox" id="check-01-7" class="input_check" name="check-item-1">
-                <label for="check-01-7">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의 - SMS</label>
-              </div>
-              <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
-            </li>
-          </ul>
-          <div class="agree_check_list">
-            <div class="input_check_wrap">
-              <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked>
-              <label for="check-1-1">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의&nbsp;-&nbsp;SMS</label>
-              <a href="#" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></a>
-            </div>
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>CheckBox &amp; RadioBox</h3>
+      </div>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>CheckBox - Default</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Default</h5>
+                <div class="cont">
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-3" class="input_check" name="check-item-1"/>
+                    <label for="check-1-3"></label>
+                  </div>
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-4" class="input_check" name="check-item-1" checked/>
+                    <label for="check-1-4"></label>
+                  </div>
+                  <br>
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1"/>
+                    <label for="check-1-1">기본 체크박스</label>
+                  </div>
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked/>
+                    <label for="check-1-2">선택된 체크박스</label>
+                  </div>
+                  <br>
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-5" class="input_check" name="check-item-3" disabled/>
+                    <label for="check-1-5">비활성화된 체크박스</label>
+                  </div>
+                  <div class="input_check_wrap">
+                    <input type="checkbox" id="check-1-6" class="input_check" name="check-item-3" checked disabled/>
+                    <label for="check-1-6">비활성화 선택된 체크박스</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">체크표시만 있는 타입 - 24px</h5>
+                <div class="cont">
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-6" class="input_check" name="check-item-4"/>
+                    <label for="check-6">Option</label>
+                  </div>
+                  <div class="input_check_wrap without_box">
+                    <input type="checkbox" id="check-7" class="input_check" name="check-item-4" checked/>
+                    <label for="check-7">Option</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">체크표시만 있는 타입 - 20px</h5>
+                <div class="cont">
+                  <div class="input_check_wrap without_box_sm">
+                    <input type="checkbox" id="check-8" class="input_check" name="check-item-5"/>
+                    <label for="check-8">Option</label>
+                  </div>
+                  <div class="input_check_wrap without_box_sm">
+                    <input type="checkbox" id="check-9" class="input_check" name="check-item-5" checked/>
+                    <label for="check-9">Option</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <h1>라디오박스</h1>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1"/>
-          <label for="radio-1-1">기본 라디오박스</label>
-        </div>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1" checked/>
-          <label for="radio-1-2">선택된 라디오박스</label>
-        </div>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-3-1" class="input_radio" name="radio-item-2"/>
-          <label for="radio-1-3-1"></label>
-        </div>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-3-2" class="input_radio" name="radio-item-2" checked/>
-          <label for="radio-1-3-2"></label>
-        </div>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-4" class="input_radio" name="radio-item-3" disabled/>
-          <label for="radio-1-4">비활성화된 라디오박스</label>
-        </div>
-        <div class="input_radio_wrap">
-          <input type="radio" id="radio-1-5" class="input_radio" name="radio-item-3" checked disabled/>
-          <label for="radio-1-5">비활성화 선택된 라디오박스</label>
-        </div>
-
-        <h2>버튼 타입 - type2</h2>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1-6" class="input_radio" name="radio-item-4"/>
-          <label for="radio-1-6">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1-7" class="input_radio" name="radio-item-4" checked/>
-          <label for="radio-1-7">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1-8" class="input_radio" name="radio-item-5" disabled/>
-          <label for="radio-1-8">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1-9" class="input_radio" name="radio-item-5" checked disabled/>
-          <label for="radio-1-9">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn">
-          <input type="radio" id="radio-1-14" class="input_radio read_only" name="radio-item-5" disabled/>
-          <label for="radio-1-9">Option 1</label>
-        </div>
-
-        <h2>버튼 타입2 - type3</h2>
-        <div class="input_radio_wrap type_btn2">
-          <input type="radio" id="radio-1-10" class="input_radio" name="radio-item-6"/>
-          <label for="radio-1-10">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn2">
-          <input type="radio" id="radio-1-11" class="input_radio" name="radio-item-6" checked/>
-          <label for="radio-1-11">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn2">
-          <input type="radio" id="radio-1-12" class="input_radio" name="radio-item-6" disabled/>
-          <label for="radio-1-12">Option 1</label>
-        </div>
-        <div class="input_radio_wrap type_btn2">
-          <input type="radio" id="radio-1-13" class="input_radio" name="radio-item-6" checked disabled/>
-          <label for="radio-1-13">Option 1</label>
-        </div>
-
-
-
-        
-      <h1>체크박스 리스트(바텀시트)</h1>
-      <ul class="input_check_list">
-        <li>
-          <div class="input_check_wrap without_box">
-            <input type="checkbox" id="check-10-1" class="input_check" name="check-item-6" checked/>
-            <label for="check-10-1">선택 1</label>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>CheckBox - Cart, Order</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <section class="cart_check_all">
+                    <div class="inner cart_check">
+                      <div class="input_check_wrap">
+                        <input type="checkbox" id="check-all" class="input_check" name="check-item-1" checked="">
+                        <label for="check-all">전체 선택(<span>2</span>/<span>5</span>)</label>
+                      </div>
+                      <button type="button" class="btn_delete">선택삭제</button>
+                    </div>
+                  </section><!-- //.cart_check_all -->
+                </div>
+              </li>
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <div class="cart_check">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="check-1-all" class="input_check" name="check-item-1" checked="">
+                      <label for="check-1-all">새치커버 컬러</label>
+                    </div>
+                  </div><!-- //.cart_check -->
+                </div>
+              </li>
+              <li>
+                <div class="cont">
+                  <div class="cart_check">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="check-11" class="input_check" name="check-item-1" checked="">
+                      <label for="check-11"></label>
+                    </div>
+                    <button class="btn_delete type_x"><div class="hide">삭제</div></button>
+                  </div><!-- //.cart_check -->
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li>
-          <div class="input_check_wrap without_box">
-            <input type="checkbox" id="check-10-2" class="input_check" name="check-item-6"/>
-            <label for="check-10-2">선택 2</label>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>CheckBox - 약관동의 </h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit"></h5>
+                <div class="cont">
+                  <div class="agree_check_list">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="check-01-8" class="input_check" name="check-item-1" checked>
+                      <label for="check-1-1">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의&nbsp;-&nbsp;SMS</label>
+                      <a href="#" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></a>
+                    </div>
+                  </div><!-- //.agree_check_list -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">전체,필수,선택 동의</h5>
+                <div class="cont">
+                  <div class="agree_check">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="check-all-1" class="input_check" name="check-item-1" checked="">
+                      <label for="check-all">전체 동의하기</label>
+                    </div>
+                    <p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+                    <ul class="agree_check_list">
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-1" class="input_check" name="check-item-1">
+                          <label for="check-01-1">(필수) 이용약관 동의</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-2" class="input_check" name="check-item-1">
+                          <label for="check-01-2">(필수) 개인정보 수집.이용 동의</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-3" class="input_check" name="check-item-1">
+                          <label for="check-01-3">(필수) 개인정보 처리 위탁 안내</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-4" class="input_check" name="check-item-1">
+                          <label for="check-01-4">(선택) 개인정보 수집.이용 동의</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-5" class="input_check" name="check-item-1">
+                          <label for="check-01-5">(선택) 광고성 정보 수신 동의</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-6" class="input_check" name="check-item-1">
+                          <label for="check-01-6">(필수) 본인은 만 14세 이상입니다.</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                      <li>
+                        <div class="input_check_wrap">
+                          <input type="checkbox" id="check-01-7" class="input_check" name="check-item-1">
+                          <label for="check-01-7">(선택) 무료배송, 할인쿠폰등 혜택/정보 수신동의 - SMS</label>
+                        </div>
+                        <button type="button" class="ico_16 ico_chevNext_16"><span class="hide">약관내용 보기</span></button>
+                      </li>
+                    </ul>                    
+                  </div>
+                </div>
+              </li>              
+            </ul>
           </div>
-        </li>
-      </ul>
-      <h1>라디오박스 리스트(바텀시트)</h1>
-      <ul class="input_check_list">
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-2-1" class="input_check" name="radio-item-6" checked/>
-            <label for="radio-2-1">SKT</label>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>RadioBox - Default</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Primary</h5>
+                <div class="cont">
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-3-1" class="input_radio" name="radio-item-2"/>
+                    <label for="radio-1-3-1"></label>
+                  </div>
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-3-2" class="input_radio" name="radio-item-2" checked/>
+                    <label for="radio-1-3-2"></label>
+                  </div>
+                  <br>
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1"/>
+                    <label for="radio-1-1">기본 라디오박스</label>
+                  </div>
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1" checked/>
+                    <label for="radio-1-2">선택된 라디오박스</label>
+                  </div>
+                  <br>
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-4" class="input_radio" name="radio-item-3" disabled/>
+                    <label for="radio-1-4">비활성화된 라디오박스</label>
+                  </div>
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="radio-1-5" class="input_radio" name="radio-item-3" checked disabled/>
+                    <label for="radio-1-5">비활성화 선택된 라디오박스</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-        <li>
-          <div class="input_radio_wrap without_box">
-            <input type="radio" id="radio-2-2" class="input_check" name="radio-item-6"/>
-            <label for="radio-2-2">KT</label>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>RadioBox - ButtonType</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Type 1</h5>
+                <div class="cont">
+                  <div class="input_radio_wrap type_btn">
+                    <input type="radio" id="radio-1-6" class="input_radio" name="radio-item-4"/>
+                    <label for="radio-1-6">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn">
+                    <input type="radio" id="radio-1-7" class="input_radio" name="radio-item-4" checked/>
+                    <label for="radio-1-7">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn">
+                    <input type="radio" id="radio-1-8" class="input_radio" name="radio-item-5" disabled/>
+                    <label for="radio-1-8">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn">
+                    <input type="radio" id="radio-1-9" class="input_radio" name="radio-item-5" checked disabled/>
+                    <label for="radio-1-9">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn">
+                    <input type="radio" id="radio-1-14" class="input_radio read_only" name="radio-item-5" disabled/>
+                    <label for="radio-1-9">Option 1</label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Type 2</h5>
+                <div class="cont">
+                  <div class="input_radio_wrap type_btn2">
+                    <input type="radio" id="radio-1-10" class="input_radio" name="radio-item-6"/>
+                    <label for="radio-1-10">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn2">
+                    <input type="radio" id="radio-1-11" class="input_radio" name="radio-item-6" checked="true"/>
+                    <label for="radio-1-11">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn2">
+                    <input type="radio" id="radio-1-12" class="input_radio" name="radio-item-6" disabled/>
+                    <label for="radio-1-12">Option 1</label>
+                  </div>
+                  <div class="input_radio_wrap type_btn2">
+                    <input type="radio" id="radio-1-13" class="input_radio" name="radio-item-6" checked disabled/>
+                    <label for="radio-1-13">Option 1</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Check,Radio Bottom Sheet</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Check</h5>
+                <div class="cont">
+                  <ul class="input_check_list">
+                    <li>
+                      <div class="input_check_wrap without_box">
+                        <input type="checkbox" id="check-10-1" class="input_check" name="check-item-6" checked/>
+                        <label for="check-10-1">선택 1</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_check_wrap without_box">
+                        <input type="checkbox" id="check-10-2" class="input_check" name="check-item-6"/>
+                        <label for="check-10-2">선택 2</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Radio</h5>
+                <div class="cont">
+                  <ul class="input_check_list">
+                    <li>
+                      <div class="input_radio_wrap without_box">
+                        <input type="radio" id="radio-2-1" class="input_check" name="radio-item-6" checked/>
+                        <label for="radio-2-1">SKT</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="input_radio_wrap without_box">
+                        <input type="radio" id="radio-2-2" class="input_check" name="radio-item-6"/>
+                        <label for="radio-2-2">KT</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
     </div>
     <!--// contents -->
   </div>

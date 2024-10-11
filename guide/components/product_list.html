@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,701 +7,585 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Product List</title>
-  <style>
-    .guide_contents{padding: 20px;}
-    
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-  </style>
+  <title>Product List | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
+  <div id="pubGuidecontainer">
     <!-- contents -->
-    <div class="guide_contents"> 
-      <h1>컬러칩상품</h1>
-      <div class="prd_list_lg">
-        <div class="prd_box">
-          <div class="prd">
-            <div class="img">
-              <img src="../../resources/images/contents/img_color_type04.png" alt="">
-            </div><!-- //.img -->
-            <div class="info">
-              <strong class="tit">잇츠 클로우 (네츄럴 브라운,7NB)</strong>
-              <span class="detail"><img src="../../resources/images/@sample_colorchip.png" alt="">7NB</span>
-              <span class="amount">80ml</span>
-              <div class="price"><em>8,000</em><span>원</span></div>
-            </div><!-- //.info -->
-          </div><!-- //.prd -->
-          <div class="bottom">
-            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-            <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-          </div><!-- //.bottom -->
-        </div><!-- //.prd_box -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Product List</h3>
       </div>
-
-      <h1>썸네일 상품</h1>
-      <div class="prd_list_lg">
-        <div class="prd_box">
-          <div class="prd">
-            <div class="img">
-              <img src="../../resources/images/contents/img_prd_list_lg_10.png" alt="">
-            </div><!-- //.img -->
-            <div class="info">
-              <strong class="tit">살롱 마스터 프렙 샴푸</strong>
-              <span class="detail">헤어 고민 부위를 쉽고 간편하게 커버</span>
-              <span class="amount">1000g</span>
-              <div class="price"><em>10,000</em><span>원</span></div>
-            </div><!-- //.info -->
-          </div><!-- //.prd -->
-          <div class="bottom">
-            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-            <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-          </div><!-- //.bottom -->
-        </div><!-- //.prd_box -->
-      </div>
-
-      <h1>묶음 상품</h1>
-      <div class="prd_list_lg">
-        <div class="prd_box">
-          <div class="prd">
-            <div class="img">
-              <img src="../../resources/images/contents/img_prd_list_lg_15.png" alt="">
-              <span class="badge bg_primary">묶음</span>
-            </div><!-- //.img -->
-            <div class="info">
-              <strong class="tit">아미노 매직세팅폼</strong>
-              <span class="detail">매직세팅 열펌제 (1제+2제)</span>
-              <span class="amount">400ml(1제) / 500ml(2제)</span>
-              <div class="price"><em>12,000</em><span>원</span></div>
-            </div><!-- //.info -->
-          </div><!-- //.prd -->
-          <div class="bottom">
-            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-            <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-          </div><!-- //.bottom -->
-        </div><!-- //.prd_box -->
-      </div>
-
-      <h1>썸네일 리스트</h1>
-      <ul class="thumb_list">
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb00.png" alt="컬러">
-          </div>
-          <em class="img_tit">컬러</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb01.png" alt="펌">
-          </div>
-          <em class="img_tit">펌</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb02.png" alt="클리닉">
-          </div>
-          <em class="img_tit">클리닉</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb03.png" alt="살롱 서포트">
-          </div>
-          <em class="img_tit">살롱 서포트</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb04.png" alt="스칼프케어">
-          </div>
-          <em class="img_tit">스칼프케어</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb05.png" alt="헤어케어">
-          </div>
-          <em class="img_tit">헤어케어</em>
-        </li>
-        <li>
-          <div class="img">
-            <img src="../../resources/images/contents/img_prd_thumb06.png" alt="스타일링">
-          </div>
-          <em class="img_tit">스타일링</em>
-        </li>
-      </ul>
-
-<!---------------------------------------------------------->
-
-      
-      <h1>상품 리스트 (썸네일형)</h1>
-      <section>
-        <div class="inner">
-
-
-          <!-- 상품 리스트 -->
-          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
-            <!-- 썸네일형 -->
-            <div class="prd_list_lg">
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>상품별 상품 UI (썸네일 형)</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">기본 상품 / 묶음 상품 / 컬러칩 상품(검색,슬라이드 등에서) </h5>
+                <div class="cont">
+                  <!-- 상품 리스트 -->
+                  <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+                    <div class="prd_list_lg">
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_prd_list_lg_10.png" alt="">
+                          </div><!-- //.img -->
+                          <div class="info">
+                            <strong class="tit">살롱 마스터 프렙 샴푸</strong>
+                            <span class="detail">헤어 고민 부위를 쉽고 간편하게 커버</span>
+                            <span class="amount">1000g</span>
+                            <div class="price"><em>10,000</em><span>원</span></div>
+                          </div><!-- //.info -->
+                        </div><!-- //.prd -->
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div><!-- //.bottom -->
+                      </div><!-- //.prd_box -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_prd_list_lg_15.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div><!-- //.img -->
+                          <div class="info">
+                            <strong class="tit">아미노 매직세팅폼</strong>
+                            <span class="detail">매직세팅 열펌제 (1제+2제)</span>
+                            <span class="amount">400ml(1제) / 500ml(2제)</span>
+                            <div class="price"><em>12,000</em><span>원</span></div>
+                          </div><!-- //.info -->
+                        </div><!-- //.prd -->
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div><!-- //.bottom -->
+                      </div><!-- //.prd_box -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type04.png" alt="">
+                          </div><!-- //.img -->
+                          <div class="info">
+                            <strong class="tit">잇츠 클로우 (네츄럴 브라운,7NB)</strong>
+                            <span class="detail"><img src="../../resources/images/@sample_colorchip.png" alt="">7NB</span>
+                            <span class="amount">80ml</span>
+                            <div class="price"><em>8,000</em><span>원</span></div>
+                          </div><!-- //.info -->
+                        </div><!-- //.prd -->
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div><!-- //.bottom -->
+                      </div><!-- //.prd_box -->
+                    </div><!-- //.prd_list_lg -->
+                  </div><!-- //.prd_list_wrap -->
+                  <!-- //상품 리스트 -->
                 </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
-            </div><!-- //.prd_list_lg -->
-            <!-- //썸네일형 -->
+              </li>
+            </ul>
           </div>
-          <!-- //상품 리스트 -->
-
-
         </div>
-      </section>
-
-      <h1>상품 리스트 (컬러칩)</h1>
-      <section>
-        <div class="inner">
-
-          
-          <!-- 상품 리스트 -->
-          <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
-            <!-- 리스트형 -->
-            <div class="prd_list_sm">
-              <!-- 상품 -->
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_color_type01.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
-                    <span class="amount">500ml</span>
-                    <div class="price">
-                      <em>27,500</em><span>원</span>
-                    </div>
-                  </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>컬러칩 상품</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">컬러칩 - 리스트 형</h5>
+                <div class="cont">
+                  <!-- 상품 리스트 -->
+                  <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+                    <!-- 리스트형 -->
+                    <div class="prd_list_sm">
+                      <!-- 상품 -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type01.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">퓨어스마트 샴푸 프레시 퓨어스마트 샴푸 프레시</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <!-- //상품 -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type02.png" alt="">
+                          </div>
+                          <div class="info">
+                            <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type03.png" alt="">
+                          </div>
+                          <div class="info">
+                            <strong class="tit">퓨어스마트 샴푸 프레시</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+                    </div><!-- //.prd_list_sm -->
+                    <!-- 리스트형 -->
+                  </div><!-- //.prd_list_wrap -->
+                  <!-- //상품 리스트 -->
                 </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+              </li>
+              <li>
+                <h5 class="tit">컬러칩 - 썸네일 형</h5>
+                <div class="cont">
+                  <!-- 상품 리스트 -->
+                  <div class="prd_list_wrap ir"><!-- 상품담기 ir 클래스 사용 -->
+                    <div class="prd_list_sm xs">
+                      <!-- 상품 -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type01.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">상품 코드 - 상품 상세 컬러 정보 더스티 브라운 시에나 오렌지 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">5DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <!-- //상품 -->
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type02.png" alt="">
+                          </div>
+                          <div class="info">
+                            <strong class="tit">3WB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">6DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type03.png" alt="">
+                          </div>
+                          <div class="info">
+                            <strong class="tit">5WB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">7DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type04.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">6WB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">8DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type01.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">9TB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">6DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type02.png" alt="">
+                          </div>
+                          <div class="info">
+                            <strong class="tit">5WB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">7DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type04.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">6WB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">8DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <div class="prd_box">
+                        <div class="prd">
+                          <div class="img">
+                            <img src="../../resources/images/contents/img_color_type01.png" alt="">
+                            <span class="badge bg_primary">묶음</span>
+                          </div>
+                          <div class="info">
+                            <strong class="tit">9TB - 웜 브라운</strong>
+                            <span class="amount">500ml</span>
+                            <div class="price">
+                              <em>27,500</em><span>원</span>
+                            </div>
+                            <div class="color_num">5DB</div>
+                          </div>
+                        </div>
+                        <div class="bottom">
+                          <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
+                        </div>
+                      </div>
+                      <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+                    </div><!-- //.prd_list_sm -->
+                  </div><!-- //.prd_list_wrap -->
+                  <!-- //상품 리스트 -->
                 </div>
-              </div>
-              <!-- //상품 -->
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_color_type02.png" alt="">
-                  </div>
-                  <div class="info">
-                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
-                    <span class="amount">500ml</span>
-                    <div class="price">
-                      <em>27,500</em><span>원</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-                </div>
-              </div>
-              <div class="prd_box">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_color_type03.png" alt="">
-                  </div>
-                  <div class="info">
-                    <strong class="tit">퓨어스마트 샴푸 프레시</strong>
-                    <span class="amount">500ml</span>
-                    <div class="price">
-                      <em>27,500</em><span>원</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                  <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-                </div>
-              </div>
-              <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
-            </div><!-- //.prd_list_sm -->
-            <!-- 리스트형 -->
+              </li>
+            </ul>
           </div>
-          <!-- //상품 리스트 -->
-
         </div>
-      </section>
-
-
-      <h1>상품 리스트 (컬러칩)</h1>
-      <section>
-        <div class="inner">
-
-          <div class="prd_list_sm xs">
-            <!-- 상품 -->
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type01.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>스와이퍼 리스트</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">배경 없음</h5>
+                <div class="cont">
+                  <section class="sec_product is_noBack">
+                    <div class="prd_list_wrap swiper swiper-container">
+                      <div class="prd_list_lg swiper-wrapper">
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_more prd_box swiper-slide">
+                          <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
+                        </div><!-- //.prd_box -->
+                      </div><!-- //.swiper-wrapper -->
+                      <div class="swiper-pagination"></div>
+                    </div><!-- //.swiper-container -->
+                  </section><!-- //.sec_product.is_noBack -->
                 </div>
-                <div class="info">
-                  <strong class="tit">상품 코드 - 상품 상세 컬러 정보 더스티 브라운 시에나 오렌지 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">5DB</div>
+              </li>
+              <li>
+                <h5 class="tit">배경 있음</h5>
+                <div class="cont">
+                  <section class="sec_product">
+                    <div class="prd_list_wrap swiper swiper-container swiper-initialized swiper-horizontal swiper-autoheight swiper-backface-hidden" id="slider1">
+                      <div class="prd_list_lg swiper-wrapper" id="swiper-wrapper-75f29ebb135d9ace" aria-live="polite" style="height: 422px;">
+                        <!-- 20개까지 노출이후 전체보기 버튼 -->
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_box swiper-slide">
+                          <div class="prd">
+                            <div class="img">
+                              <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
+                              <span class="badge bg_primary">묶음</span>
+                            </div>
+                            <div class="info">
+                              <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
+                              <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
+                              <span class="amount">용량 g, ml</span>
+                              <div class="price"><em>27,500</em><span>원</span></div>
+                            </div>
+                          </div>
+                          <div class="bottom">
+                            <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                            <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                          </div>
+                        </div>
+                        <div class="prd_more prd_box swiper-slide" role="group" aria-label="9 / 9" style="width: 254.832px; margin-right: 8px;">
+                          <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
+                        </div><!-- //.prd_box -->
+                      </div><!-- //.swiper-wrapper -->
+                      <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><!-- //.swiper-container -->
+                  </section>
                 </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <!-- //상품 -->
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type02.png" alt="">
-                </div>
-                <div class="info">
-                  <strong class="tit">3WB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">6DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type03.png" alt="">
-                </div>
-                <div class="info">
-                  <strong class="tit">5WB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">7DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type04.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">6WB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">8DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type01.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">9TB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">6DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type02.png" alt="">
-                </div>
-                <div class="info">
-                  <strong class="tit">5WB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">7DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type04.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">6WB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">8DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <div class="prd_box">
-              <div class="prd">
-                <div class="img">
-                  <img src="../../resources/images/contents/img_color_type01.png" alt="">
-                  <span class="badge bg_primary">묶음</span>
-                </div>
-                <div class="info">
-                  <strong class="tit">9TB - 웜 브라운</strong>
-                  <span class="amount">500ml</span>
-                  <div class="price">
-                    <em>27,500</em><span>원</span>
-                  </div>
-                  <div class="color_num">5DB</div>
-                </div>
-              </div>
-              <div class="bottom">
-                <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                <a href="#" class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</a>
-              </div>
-            </div>
-            <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
-          </div><!-- //.prd_list_sm -->
-
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-      <br>
-
-
-<!---------------------------------------------------------->
-
-
-      <h1>스와이퍼 리스트 - 배경없음</h1>
-      <div>
-        <section class="sec_product is_noBack">
-          <div class="prd_list_wrap swiper swiper-container">
-            <div class="prd_list_lg swiper-wrapper">
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_more prd_box swiper-slide">
-                <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
-              </div><!-- //.prd_box -->
-            </div><!-- //.swiper-wrapper -->
-            <div class="swiper-pagination"></div>
-          </div><!-- //.swiper-container -->
-        </section><!-- //.sec_product.is_noBack -->
       </div>
-
-      <h1>스와이퍼 리스트 - 배경있음</h1>
-      <div>
-        <section class="sec_product">
-          <div class="prd_list_wrap swiper swiper-container swiper-initialized swiper-horizontal swiper-autoheight swiper-backface-hidden" id="slider1">
-            <div class="prd_list_lg swiper-wrapper" id="swiper-wrapper-75f29ebb135d9ace" aria-live="polite" style="height: 422px;">
-              <!-- 20개까지 노출이후 전체보기 버튼 -->
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_box swiper-slide">
-                <div class="prd">
-                  <div class="img">
-                    <img src="../../resources/images/contents/img_prd_list_lg_05.png" alt="">
-                    <span class="badge bg_primary">묶음</span>
-                  </div>
-                  <div class="info">
-                    <strong class="tit">상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명 </strong>
-                    <span class="colorchip"><img src="../../resources/images/@sample_colorchip.png" alt>간략 상품설명 간략 상품설명간략 상품설명간략 상품설명간략 상품설명간략 상품설명</span>
-                    <span class="amount">용량 g, ml</span>
-                    <div class="price"><em>27,500</em><span>원</span></div>
-                  </div>
-                </div>
-                <div class="bottom">
-                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-                </div>
-              </div>
-              <div class="prd_more prd_box swiper-slide" role="group" aria-label="9 / 9" style="width: 254.832px; margin-right: 8px;">
-                <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
-              </div><!-- //.prd_box -->
-            </div><!-- //.swiper-wrapper -->
-            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><!-- //.swiper-container -->
-        </section>
-      </div>
-
+      <!--// pubGuide_sec -->
     </div>
     <!--// contents -->
   </div>

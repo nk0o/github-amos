@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,125 +7,172 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Tab Bar</title>
-  <style>
-    body{ background-color: #eee;}
-    .guide_contents{padding: 20px;}
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-    .guide_contents .floating_side.is_expanded::before{display: none;}
-    .guide_contents .floating_side li{display: flex;}
-  </style>
+  <title>Tab Bar | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-   <div id="container">
-      <!-- guide_contents -->
-      <div class="guide_contents">
-
-        <div class="btm_bar type2" style="position:static">
-          <div class="inner">
-            <button class="btn_like" onclick="like(this);"><i class="ico_btn_heart ico_24"></i>찜하기</button>
-            <span class="line"></span>
-            
-            <div class="prd_cart_btn">
-              <p class="cart_txt">나의 장바구니에 담았습니다.</p>
-              <button class="btn_bottom"><i class="ico_cart_actionbar ico_24"></i><span>장바구니 담기</span></button>
-            </div>
-          </div>
-        </div>
-
-        <h1>Tab Bar - Navigation</h1>
-        <div class="btm_bar is_nav" style="position:static">
-          <div class="inner">
-            <ul class="btm_bar_nav"><!-- li.active -->
-              <li class="active"><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
-              <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
-              <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
-              <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
-              <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <h1>Tab Bar - Navigation<br>(찜한상품 없을때 아이콘 클래스: ico_wish)<br>(찜한상품 있을때 아이콘 클래스: ico_wish_is)</h1>
-        <div class="btm_bar is_nav" style="position:static">
-          <div class="inner">
-            <ul class="btm_bar_nav"><!-- li.active -->
-              <li><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
-              <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
-              <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
-              <li class="active"><i class="ico_wish_is ico_24"><span class="badge_round bg_red">7</span></i><span class="nav_tit">찜한상품</span></li>
-              <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
-            </ul>
-          </div>
-        </div>
-        <!-- //.btm_bar -->
-
-        <!-- inlineStyle 빼기 -->
-        <h1>장바구니담기버튼</h1>
-        <div class="prd_cart_btn" style="position:relative;bottom: auto;">
-          <button class="btn_bottom">
-            <span>선택상품 장바구니 담기</span>
-            <span class="count">0</span>
-          </button>
-        </div>
-        
-        
-        <h1>Floating Bottom - 글쓰기</h1>
-        <div class="floating_btm" style="position:relative;bottom: auto;">
-          <button class="btn_bottom">
-            <i class="ico_post ico_24"></i>
-            <span>글쓰기</span>
-          </button>
-        </div>
-
-        <h1>Floating Bottom - 댓글작성</h1>
-        <div class="floating_btm" style="position:relative;bottom: auto;">
-          <button class="btn_bottom">
-            <i class="ico_comment ico_24"></i>
-            <span>댓글작성</span>
-          </button>
-        </div>
-
-        <h1>텍스트 버튼</h1>
-        <a href="" class="btm_bar type_btn" style="position:static">
-          <div class="inner">
-            쇼핑하러 가기
-          </div>
-        </a>
-
-
-
-        <h1>Floating Side - default</h1>
-
-        <ul class="floating_side" style="position: static;">
-          <li>
-            <span class="floating_tit">브랜드 소개</span>
-            <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
-          </li>
-          <li>
-            <span class="floating_tit">입점 상담</span>
-            <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
-          </li>
-          <li>
-            <span class="floating_tit">1:1 문의</span>
-            <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
-          </li>
-          <li class="anchor_close">
-            <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
-          </li>
-          <li class="item scrolltop">
-            <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
-          </li>
-          <li class="item anchor">
-            <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_24"></i></button>
-          </li>
-        </ul>
-        <!-- //.floating_side -->
-
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Tab Bar</h3>
       </div>
-      <!--//.guide_contents -->
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Nav</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Default</h5>
+                <div class="cont">
+                  <div class="btm_bar is_nav" style="position:static">
+                    <div class="inner">
+                      <ul class="btm_bar_nav"><!-- li.active -->
+                        <li class="active"><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
+                        <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
+                        <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
+                        <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
+                        <!-- <li><i class="ico_wish_is ico_24"><span class="badge_round bg_red">7</span></i><span class="nav_tit">찜한상품</span></li> -->
+                        <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.btm_bar -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">찜한상품 있는 경우</h5>
+                <div class="cont">
+                  <div class="btm_bar is_nav" style="position:static">
+                    <div class="inner">
+                      <ul class="btm_bar_nav"><!-- li.active -->
+                        <li class="active"><i class="ico_cate ico_24"></i><span class="nav_tit">카테고리</span></li>
+                        <li><i class="ico_point ico_24"></i><span class="nav_tit">포인트몰</span></li>
+                        <li><i class="ico_home ico_24"></i><span class="nav_tit">홈</span></li>
+                        <li><i class="ico_wish ico_24"></i><span class="nav_tit">찜한상품</span></li>
+                        <li><i class="ico_wish_is ico_24"><span class="badge_round bg_red">7</span></i><span class="nav_tit">찜한상품</span></li>
+                        <li><i class="ico_user ico_24"></i><span class="nav_tit">마이페이지</span></li>
+                      </ul>
+                    </div>
+                  </div><!-- //.btm_bar -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Bottom Button</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Default</h5> -->
+                <div class="cont">
+                  <a href="" class="btm_bar type_btn" style="position:static">
+                    <div class="inner">쇼핑하러 가기</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">상품 상세페이지</h5>
+                <div class="cont">
+                  <div class="btm_bar type2" style="position:static">
+                    <div class="inner">
+                      <button class="btn_like" onclick="like(this);"><i class="ico_btn_heart ico_24"></i>찜하기</button>
+                      <span class="line"></span>
+                      
+                      <div class="prd_cart_btn">
+                        <p class="cart_txt">나의 장바구니에 담았습니다.</p>
+                        <button class="btn_bottom"><i class="ico_cart_actionbar ico_24"></i><span>장바구니 담기</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Floating</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">상품 리스트 담기버튼</h5>
+                <div class="cont">
+                  <div class="prd_cart_btn" style="position:relative;bottom: auto;">
+                    <button class="btn_bottom">
+                      <span>선택상품 장바구니 담기</span>
+                      <span class="count">0</span>
+                    </button>
+                  </div><!-- //.prd_cart_btn -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">글쓰기</h5>
+                <div class="cont">
+                  <div class="floating_btm" style="position:relative;bottom: auto;">
+                    <button class="btn_bottom">
+                      <i class="ico_post ico_24"></i>
+                      <span>글쓰기</span>
+                    </button>
+                  </div><!-- //.floating_btm -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">댓글작성</h5>
+                <div class="cont">
+                  <div class="floating_btm" style="position:relative;bottom: auto;">
+                    <button class="btn_bottom">
+                      <i class="ico_comment ico_24"></i>
+                      <span>댓글작성</span>
+                    </button>
+                  </div><!-- //.floating_btm -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">플로팅 메뉴</h5>
+                <div class="cont">
+                  <ul class="floating_side" style="position: static;">
+                    <li>
+                      <span class="floating_tit">브랜드 소개</span>
+                      <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
+                    </li>
+                    <li>
+                      <span class="floating_tit">입점 상담</span>
+                      <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
+                    </li>
+                    <li>
+                      <span class="floating_tit">1:1 문의</span>
+                      <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
+                    </li>
+                    <li class="anchor_close">
+                      <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
+                    </li>
+                    <li class="item scrolltop">
+                      <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+                    </li>
+                    <li class="item anchor">
+                      <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_24"></i></button>
+                    </li>
+                  </ul><!-- //.floating_side -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
   </div>
 </body>
 </html>

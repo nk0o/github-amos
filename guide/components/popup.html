@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,529 +7,568 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Popup</title>
-  <style>
-    .guide_contents { padding: 20px; }
-    .guide_contents h1 { font-weight: 700; font-size: 20px; margin: 16px 0; }
-  </style>
+  <title>Popup(Modal) | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
+  <div id="pubGuidecontainer">
     <!-- contents -->
-    <div class="guide_contents">
-      <h1>정보수정 모달</h1>
-      <button type="button" id="modal012" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
-      <div class="modal_container fade" data-modal="modal012">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_header">
-            <h1 class="modal_tit">휴대전화번호 변경</h1>
-          </div>
-          <div class="modal_body">
-            <div class="scroll_inner">
-              <section class="modal_form">
-                <div class="input_group">
-                  <span class="input_label">내/외국인</span>
-                  <div class="select_box">
-                    <div class="select_box_value" data-btmsheet="btmSheet01">
-                      <span>선택해 주세요</span>
-                    </div><!-- //.select_box_value -->
-                    <div class="select_box_list">
-                      <ul>
-                        <li><span>내국인</span></li>
-                        <li><span>외국인</span></li>
-                      </ul>
-                    </div><!-- //.select_box_list -->
-                  </div><!-- //.select_box -->
-                </div><!-- //.input_group -->
-                <div class="input_group">
-                  <span class="input_label">이름</span>
-                  <label for="">
-                    <input type="text" id="" class="input_text" value="" placeholder="이름">
-                  </label>
-                </div><!-- //.input_group -->
-                <div class="input_group input_social_num">
-                  <span class="input_label">생년</span>
-                  <!-- 동의한 사람만 뒷자리 성별구분인풋 노출 -->
-                  <label for="">
-                    <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
-                    <span class="dash">-</span>
-                    <input type="text" id="" class="input_text" value="" placeholder="0">
-                    <span class="hidden_num">******</span>
-                  </label>
-                  <!-- 동의 안 한 경우 -->
-                  <!-- <label for="">
-                    <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
-                    <span class="dash">-</span>
-                    <span class="hidden_num">*******</span>
-                  </label> -->
-                </div><!-- //.input_group -->
-                <div class="input_group">
-                  <span class="input_label">휴대폰 번호</span>
-                  <div class="select_box">
-                    <div class="select_box_value" data-btmsheet="btmSheet02">
-                      <span>통신사를 선택해 주세요</span>
-                    </div><!-- //.select_box_value -->
-                    <div class="select_box_list">
-                      <ul>
-                        <li><span>SKT</span></li>
-                        <li><span>KT</span></li>
-                        <li><span>LGT U</span></li>
-                        <li><span>SKT 알뜰폰</span></li>
-                        <li><span>KT 알뜰폰</span></li>
-                        <li><span>LG 알뜰폰</span></li>
-                      </ul>
-                    </div><!-- //.select_box_list -->
-                  </div><!-- //.select_box -->
-                  <label for="">
-                    <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
-                    <button class="btn_sm btn_border">인증요청</button>
-                  </label>
-                </div><!-- //.input_group -->
-                <div class="input_group with_time">
-                  <label for="">
-                    <input type="text" id="" class="input_text" value="899944" placeholder="">
-                    <span class="time">2:35</span>
-                    <!-- <button class="btn_sm btn_border">인증완료</button> -->
-                  </label>
-                </div><!-- //.input_group -->
-                <p class="txt_alert refer_mark">인증 완료 후 기본정보를 저장하시려면 인증 완료 버튼을 반드시 눌러주시기 바랍니다.</p>
-              </section>
-            </div><!-- //.scroll_inner -->
-          </div><!-- //.modal_body -->
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_primary">인증 완료</button>
-            </div>
-          </div><!-- //.modal_footer -->
-        </div><!-- //.modal_content -->
-      </div><!-- //.modal_container -->
-
-
-
-      <h1>메인 모달</h1>
-      <button type="button" id="modal011" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
-
-      <div class="modal_container modal_notice fade" data-modal="modal011"><!-- modal_container modal_notice -->
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_body">
-            <div class="img"><!-- 240920 인라인 스타일 삭제 -->
-              <img src="../../resources/images/@img_popup01.png" alt="팝업이미지내용">
-              <!-- <img src="../../resources/images/@img_popup02.png" alt="팝업이미지내용"> -->
-            </div>
-          </div>
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close">오늘 그만보기</button>
-              <button class="btn_modal_close">닫기</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal_content -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Popup(Modal)</h3>
       </div>
-      <!-- /.modal_container -->
-
-      <br>
-      <h1>모달 - 알럿</h1>
-      <button type="button" id="modal01" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
-      <div class="modal_container alert fade" data-modal="modal01"><!-- modal_container alert -->
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_body">
-            <p>아이디 및 비밀번호를 다시 확인해 주세요.</p>
-          </div>
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal_content -->
-      </div>
-      <!-- /.modal_container -->
-
-      <!-- <h1>모달 - 컨펌</h1> -->
-      <button type="button" id="modal02" class="btn_sm btn_primary btn_modal_open">Open Modal - 컨펌</button>
-      <div class="modal_container alert fade" data-modal="modal02"><!-- modal_container confirm -->
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_body">
-            <p>계속 진행하시겠습니까?</p>
-          </div>
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_border">취소</button>
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal_content -->
-      </div>
-      <!-- /.modal_container -->
-
-      <h1>모달 - 내부스크롤(약관)</h1>
-      <button type="button" id="modal03" class="btn_sm btn_primary btn_modal_open">Open Modal - Scroll</button>
-      <div class="modal_container fade" data-modal="modal03">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_header">
-            <h1 class="modal_tit is_line">모달의 제목</h1>
-          </div>
-          <div class="modal_body">
-            <div class="modal_terms"><!-- 약관이나 긴글 -->
-              <div class="scroll_inner">
-                <strong>총칙</strong><br><br>
-                <p>제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
-                  온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
-                  이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
-                  제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
-                  사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-                  제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
-                  온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
-                  이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
-                  제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
-                  사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-                  제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
-                  온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
-                  이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
-                  제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
-                  사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div>
-        </div>
-        <!-- /.modal_content -->
-      </div>
-      <!-- /.modal_container -->
-
-      <h1>주문 취소</h1>
-      <button type="button" id="modal04" class="btn_sm btn_primary btn_modal_open">Open Modal - 주문취소</button>
-      <div class="modal_container fade" data-modal="modal04">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_header">
-            <h1 class="modal_tit">주문취소</h1>
-          </div>
-          <div class="modal_body">
-            <div class="scroll_inner">
-              <div class="inquiry_outer">
-                <div class="inquiry_box">
-                  <strong class="ask_tit">취소 사유를 알려주세요.</strong>
-                  <div class="radio_btn_wrap">
-                    <div class="input_radio_wrap type_btn">
-                      <input type="radio" id="radio-1" class="input_radio" name="radio-item-0" checked="">
-                      <label for="radio-1">고객 변심</label>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>공통</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Alert</h5>
+                <div class="cont">
+                  <button type="button" id="modal01" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+                  <div class="modal_container alert fade" data-modal="modal01"><!-- modal_container alert -->
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_body">
+                        <p>아이디 및 비밀번호를 다시 확인해 주세요.</p>
+                      </div>
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div>
                     </div>
-                    <div class="input_radio_wrap type_btn">
-                      <input type="radio" id="radio-2" class="input_radio" name="radio-item-0">
-                      <label for="radio-2">상품 착오 주문</label>
-                    </div>
-                    <div class="input_radio_wrap type_btn">
-                      <input type="radio" id="radio-3" class="input_radio" name="radio-item-0">
-                      <label for="radio-3">상품 중복 주문</label>
-                    </div>
-                    <div class="input_radio_wrap type_btn">
-                      <input type="radio" id="radio-4" class="input_radio" name="radio-item-0">
-                      <label for="radio-4">대리점 실수</label>
-                    </div>
-                    <div class="input_radio_wrap type_btn">
-                      <input type="radio" id="radio-5" class="input_radio" name="radio-item-0">
-                      <label for="radio-5">배송 지연</label>
-                    </div>
-                  </div><!-- //.radio_btn_wrap -->
-                </div><!-- //.inquiry_box -->
-                <div class="inquiry_box">
-                  <strong class="ask_tit">취소 사유를 알려주세요.</strong>
-                  <div class="input_writing_group">
-                    <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
-                    <div class="txt_count">
-                      <p class="current zero">0</p>
-                      <span>/</span>
-                      <p class="total">1000</p>
-                    </div>
-                  </div>
-                </div><!-- //.inquiry_box -->
-              </div><!-- //.inquiry_outer -->
-              </div><!-- //.scroll_inner -->
-          </div><!-- //.modal_body -->
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_border">취소</button>
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div><!-- //.modal_footer -->
-        </div><!-- //.modal_content -->
-      </div><!-- //.modal_container -->
-
-      <h1>사은품 선택 (FO-Order-00204-GIFT.html)</h1>
-      <button type="button" id="modal05" class="btn_sm btn_primary btn_modal_open">Open Modal - 사은품 선택</button>
-      <div class="modal_container fade" data-modal="modal05"><!-- modal_container -->
-        <div class="modal_overlay" style="height: 842px;"></div>
-        <div class="modal_content" style="position: relative; top: auto;">
-          <div class="modal_header">
-            <h1 class="modal_tit">사은품 선택</h1>
-          </div><!-- //.modal_header -->
-          <div class="modal_body">
-            <div class="scroll_inner">
-              <!-- 프로모션 -->
-              <div class="gift_check_wrap">
-                <div class="inner">
-                  <div class="gift_check_tit">
-                    <p class="tit">(프로모션 명) 스타일링 기타 상품 구매시, OOO 증정</p>
-                    <span class="txt_blue">1종 구매 / 1개 선택가능</span>
-                  </div>
-                  <div class=" gift_list">
-                    <!-- 사은품 -->
-                    <div class="cart_check">
-                      <div class="input_check_wrap">
-                        <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked="">
-                        <label for="check-1-1"></label>
-                      </div><!-- //.input_check_wrap -->
-                      <div class="prd_box">
-                        <div class="prd">
-                          <div class="img"><img src="../../resources/images/contents/img_prd_list_lg_02.png" alt></div>
-                          <div class="info">
-                            <strong class="tit">아모스 이어캡(율)</strong>
-                            <span class="detail">아모스 이어캡</span>
-                            <div class="cart_qnty">
-                              <span><em>4</em>개</span>
-                            </div><!-- //.cart_qnty -->
-                          </div><!-- //.info -->
-                        </div><!-- //.prd -->
-                        <div class="select_box select_box_defalut">
-                          <span class="select_box_arr"></span>
-                          <select class="select_box_value" name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                          </select>     
-                        </div><!-- //.select_box -->
-                      </div><!-- //.prd_box -->
-                    </div><!-- //.cart_check -->
-                    <!-- //사은품 -->
-                    <!-- 사은품 -->
-                    <div class="cart_check">
-                      <div class="input_check_wrap">
-                        <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked="">
-                        <label for="check-1-2"></label>
-                      </div><!-- //.input_check_wrap -->
-                      <div class="prd_box">
-                        <div class="prd">
-                          <div class="img"><img src="../../resources/images/contents/img_color_type01.png" alt></div>
-                          <div class="info">
-                            <strong class="tit">아모스 이어캡(율)</strong>
-                            <span class="detail">아모스 이어캡</span>
-                            <div class="cart_qnty">
-                              <span><em>4</em>개</span>
-                            </div><!-- //.cart_qnty -->
-                          </div><!-- //.info -->
-                        </div><!-- //.prd -->
-                        <div class="select_box select_box_defalut">
-                          <span class="select_box_arr"></span>
-                          <select class="select_box_value" name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                          </select>     
-                        </div><!-- //.select_box -->
-                      </div><!-- //.prd_box -->
-                    </div><!-- //.cart_check -->
-                    <!-- //사은품 -->
-                    <!-- 사은품 -->
-                  </div><!-- //.gift_list -->
-                </div><!-- //.inner -->
-              </div><!-- //.gift_check_wrap -->
-              <!-- //프로모션 -->
-              <!-- 프로모션 -->
-              <div class="gift_check_wrap">
-                <div class="inner">
-                  <div class="gift_check_tit">
-                    <p class="tit">30,000원 이상 구매시 OOO, OOO, OOO 증정</p>
-                    <span class="txt_blue">1종 구매 / 1개 선택가능</span>
-                  </div>
-                  <div class=" gift_list">
-                    <!-- 사은품 -->
-                    <div class="cart_check">
-                      <div class="input_check_wrap">
-                        <input type="checkbox" id="check-2-1" class="input_check" name="check-item-2" checked="">
-                        <label for="check-2-1"></label>
-                      </div><!-- //.input_check_wrap -->
-                      <div class="prd_box">
-                        <div class="prd">
-                          <div class="img"><img src="../../resources/images/contents//img_prd_list_lg_04.png" alt></div>
-                          <div class="info">
-                            <strong class="tit">컬러제닉 브라운 토닝 칼라 헤어 쿠션</strong>
-                            <span class="detail">COLORGEMIC BROWN TONING COLOR CUSHION</span>
-                            <div class="cart_qnty">
-                              <span><em>4</em>개</span>
-                            </div><!-- //.cart_qnty -->
-                          </div><!-- //.info -->
-                        </div><!-- //.prd -->
-                        <div class="select_box select_box_defalut">
-                          <span class="select_box_arr"></span>
-                          <select class="select_box_value" name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                          </select>     
-                        </div><!-- //.select_box -->
-                      </div><!-- //.prd_box -->
-                    </div><!-- //.cart_check -->
-                    <!-- //사은품 -->
-                  </div><!-- //.gift_list -->
-                </div><!-- //.inner -->
-              </div><!-- //.gift_check_wrap -->
-              <!-- //프로모션 -->
-              <!-- 프로모션 -->
-              <div class="gift_check_wrap">
-                <div class="inner">
-                  <div class="gift_check_tit">
-                    <p class="tit">30,000원 이상 구매시 OOO, OOO, OOO 증정</p>
-                    <span class="txt_blue">1종 구매 / 1개 선택가능</span>
-                  </div>
-                  <div class=" gift_list">
-                    <!-- 사은품 -->
-                    <div class="cart_check">
-                      <div class="input_check_wrap">
-                        <input type="checkbox" id="check-3-1" class="input_check" name="check-item-3" checked="">
-                        <label for="check-3-1"></label>
-                      </div><!-- //.input_check_wrap -->
-                      <div class="prd_box">
-                        <div class="prd">
-                          <div class="img"><img src="../../resources/images/img_noimg_thumb.svg" alt></div>
-                          <div class="info">
-                            <strong class="tit">아모스 이어캡(율)</strong>
-                            <span class="detail">아모스 이어캡</span>
-                            <div class="cart_qnty">
-                              <span><em>4</em>개</span>
-                            </div><!-- //.cart_qnty -->
-                          </div><!-- //.info -->
-                        </div><!-- //.prd -->
-                        <div class="select_box select_box_defalut">
-                          <span class="select_box_arr"></span>
-                          <select class="select_box_value" name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                          </select>     
-                        </div><!-- //.select_box -->
-                      </div><!-- //.prd_box -->
-                    </div><!-- //.cart_check -->
-                    <!-- //사은품 -->
-                  </div><!-- //.gift_list -->
-                </div><!-- //.inner -->
-              </div><!-- //.gift_check_wrap -->
-              <!-- //프로모션 -->
-            </div><!-- //.scroll_inner -->
-          </div><!-- //.modal_body -->
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div><!-- //.modal_footer -->
-        </div>
-        <!-- //.modal_content -->
-      </div>
-      <!-- //.modal_container -->
-      
-      <h1>사은품 선택 (FO-Order-00204.html)</h1>
-      <button type="button" id="modal06" class="btn_sm btn_primary btn_modal_open">Open Modal - 사은품 선택</button>
-      <div class="modal_container fade" data-modal="modal06"><!-- modal_container -->
-        <div class="modal_overlay" style="height: 842px;"></div>
-        <div class="modal_content" style="position: relative; top: auto;">
-          <div class="modal_header">
-            <h1 class="modal_tit">프로모션</h1>
-          </div><!-- //.modal_header -->
-          <div class="modal_body">
-            <div class="scroll_inner">
-              <ul class="promo_box_list">
-                <li class="promo_box box_blue"><!-- 적용된 프로모션 box_blue 클래스 -->
-                  <span class="state">적용</span>
-                  <div class="tit">[사은품] - 30,000원 이상 구매시, 칼라루시드 5개 증정</div>
-                  <div class="date">종료일자 :<span>2024.09.31</span></div>
-                </li><!-- //.promo_box -->
-                <li class="promo_box">
-                  <span class="state">미적용</span>
-                  <div class="tit">(10+10) 탈모헤어 제품 10개 구매 당 10개 증정</div>
-                  <div class="date">종료일자 :<span>2024.09.31</span></div>
-                </li><!-- //.promo_box -->
-                <li class="promo_box">
-                  <span class="state">미적용</span>
-                  <div class="tit">(20+5) 새치커버 컬러 제품 20개 구매 당 5개 증정</div>
-                  <div class="date">종료일자 :<span>2024.09.31</span></div>
-                </li><!-- //.promo_box -->
-                <li class="promo_box">
-                  <span class="state box_blue">적용</span>
-                  <div class="tit">[사은품] - 30,000원 이상 구매시, 칼라루시드 5개 증정 30,000원 이상 구매시, 칼라루시드 5개 증정</div>
-                  <div class="date">종료일자 :<span>2024.09.31</span></div>
-                </li><!-- //.promo_box -->
-              </ul><!-- //.promo_box_list -->
-            </div><!-- //.scroll_inner -->
-          </div><!-- //.modal_body -->
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_border">취소</button>
-              <button class="btn btn_sm btn_primary">확인</button>
-            </div>
-          </div><!-- //.modal_footer -->
-        </div>
-        <!-- //.modal_content -->
-      </div>
-      <!-- //.modal_container -->
-
-      <h1>Datepicker</h1>
-      <button type="button" id="modal07" class="btn_sm btn_primary btn_modal_open">Open Modal - 달력 날짜 선택</button>
-      <div class="modal_container is_pickermodal" data-modal="modal07">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_body">
-            <div type="text" id="datepicker" class="inp_cal"></div>  
-          </div>
-        </div><!-- //.modal_content -->
-      </div><!-- //.modal_container -->
-
-      <h1>댓글 작성(수정)하기</h1>
-      <button type="button" id="modal13" class="btn_sm btn_primary btn_modal_open">Open Modal - 댓글 작성(수정)하기</button>
-      <div class="modal_container fade" data-modal="modal13">
-        <div class="modal_overlay"></div>
-        <div class="modal_content">
-          <div class="modal_header">
-            <h1 class="modal_tit">댓글 작성(수정)하기</h1>
-          </div>
-          <div class="modal_body">
-            <div class="inquiry_outer">
-              <div class="inquiry_box">
-                <div class="input_writing_group">
-                  <textarea name="" id="" placeholder="200자 이내로 입력해 주세요"></textarea>
-                  <div class="txt_count">
-                    <p class="current zero">0</p>
-                    <span>/</span>
-                    <p class="total">200</p>
-                  </div>
+                    <!-- /.modal_content -->
+                  </div><!-- /.modal_container -->
                 </div>
-              </div><!-- //.inquiry_box -->
-            </div><!-- //.inquiry_outer -->
-          </div><!-- //.modal_body -->
-          <div class="modal_footer">
-            <div class="btn_group">
-              <button class="btn_modal_close btn btn_sm btn_border">취소</button>
-              <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
-            </div>
-          </div><!-- //.modal_footer -->
-        </div><!-- //.modal_content -->
-      </div><!-- //.modal_container -->
-
-
+              </li>
+              <li>
+                <h5 class="tit">Confirm</h5>
+                <div class="cont">
+                  <button type="button" id="modal02" class="btn_sm btn_primary btn_modal_open">Open Modal - 컨펌</button>
+                  <div class="modal_container alert fade" data-modal="modal02"><!-- modal_container confirm -->
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_body">
+                        <p>계속 진행하시겠습니까?</p>
+                      </div>
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.modal_content -->
+                  </div><!-- /.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">내부스크롤(약관)</h5>
+                <div class="cont">
+                  <button type="button" id="modal03" class="btn_sm btn_primary btn_modal_open">Open Modal - Scroll</button>
+                  <div class="modal_container fade" data-modal="modal03">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_header">
+                        <h1 class="modal_tit is_line">모달의 제목</h1>
+                      </div>
+                      <div class="modal_body">
+                        <div class="modal_terms"><!-- 약관이나 긴글 -->
+                          <div class="scroll_inner">
+                            <strong>총칙</strong><br><br>
+                            <p>제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
+                              온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
+                              이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
+                              제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
+                              사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
+                              제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
+                              온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
+                              이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
+                              제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
+                              사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
+                              제 1조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는
+                              온라인 사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를
+                              이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.<br><br>
+                              제 2조 [목적]이 약관은 ㈜아모스프로페셔널(이하 "회사"라 함)가 웹을 통해 운영하는 온라인
+                              사이트(www.amosprofessional.com, 이하 “사이트”)에서 제공하는 서비스(이하 "서비스"라 함)를 이용함에 있어 고객의 권리, 의무 및 책임 사항을 규정함을 목적으로 합니다.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.modal_content -->
+                  </div><!-- /.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Datepicker</h5>
+                <div class="cont">
+                  <button type="button" id="modal07" class="btn_sm btn_primary btn_modal_open">Open Modal - 달력 날짜 선택</button>
+                  <div class="modal_container is_pickermodal" data-modal="modal07">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_body">
+                        <div type="text" id="datepicker" class="inp_cal"></div>  
+                      </div>
+                    </div><!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>사용</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">메인 모달</h5>
+                <div class="cont">
+                  <button type="button" id="modal011" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+                  <div class="modal_container modal_notice fade" data-modal="modal011"><!-- modal_container modal_notice -->
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_body">
+                        <div class="img"><!-- 240920 인라인 스타일 삭제 -->
+                          <img src="../../resources/images/@img_popup01.png" alt="팝업이미지내용">
+                          <!-- <img src="../../resources/images/@img_popup02.png" alt="팝업이미지내용"> -->
+                        </div>
+                      </div>
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close">오늘 그만보기</button>
+                          <button class="btn_modal_close">닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.modal_content -->
+                  </div><!-- /.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">주문 취소</h5>
+                <div class="cont">
+                  <button type="button" id="modal04" class="btn_sm btn_primary btn_modal_open">Open Modal - 주문취소</button>
+                  <div class="modal_container fade" data-modal="modal04">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_header">
+                        <h1 class="modal_tit">주문취소</h1>
+                      </div>
+                      <div class="modal_body">
+                        <div class="scroll_inner">
+                          <div class="inquiry_outer">
+                            <div class="inquiry_box">
+                              <strong class="ask_tit">취소 사유를 알려주세요.</strong>
+                              <div class="radio_btn_wrap">
+                                <div class="input_radio_wrap type_btn">
+                                  <input type="radio" id="radio-1" class="input_radio" name="radio-item-0" checked="">
+                                  <label for="radio-1">고객 변심</label>
+                                </div>
+                                <div class="input_radio_wrap type_btn">
+                                  <input type="radio" id="radio-2" class="input_radio" name="radio-item-0">
+                                  <label for="radio-2">상품 착오 주문</label>
+                                </div>
+                                <div class="input_radio_wrap type_btn">
+                                  <input type="radio" id="radio-3" class="input_radio" name="radio-item-0">
+                                  <label for="radio-3">상품 중복 주문</label>
+                                </div>
+                                <div class="input_radio_wrap type_btn">
+                                  <input type="radio" id="radio-4" class="input_radio" name="radio-item-0">
+                                  <label for="radio-4">대리점 실수</label>
+                                </div>
+                                <div class="input_radio_wrap type_btn">
+                                  <input type="radio" id="radio-5" class="input_radio" name="radio-item-0">
+                                  <label for="radio-5">배송 지연</label>
+                                </div>
+                              </div><!-- //.radio_btn_wrap -->
+                            </div><!-- //.inquiry_box -->
+                            <div class="inquiry_box">
+                              <strong class="ask_tit">취소 사유를 알려주세요.</strong>
+                              <div class="input_writing_group">
+                                <textarea name="" id="" placeholder="내용을 입력해주세요."></textarea>
+                                <div class="txt_count">
+                                  <p class="current zero">0</p>
+                                  <span>/</span>
+                                  <p class="total">1000</p>
+                                </div>
+                              </div>
+                            </div><!-- //.inquiry_box -->
+                          </div><!-- //.inquiry_outer -->
+                          </div><!-- //.scroll_inner -->
+                      </div><!-- //.modal_body -->
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div><!-- //.modal_footer -->
+                    </div><!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li> 
+              <li>
+                <h5 class="tit">사은품 선택 (FO-Order-00204-GIFT.html)</h5>
+                <div class="cont">
+                  <button type="button" id="modal05" class="btn_sm btn_primary btn_modal_open">Open Modal - 사은품 선택</button>
+                  <div class="modal_container fade" data-modal="modal05"><!-- modal_container -->
+                    <div class="modal_overlay" style="height: 842px;"></div>
+                    <div class="modal_content" style="position: relative; top: auto;">
+                      <div class="modal_header">
+                        <h1 class="modal_tit">사은품 선택</h1>
+                      </div><!-- //.modal_header -->
+                      <div class="modal_body">
+                        <div class="scroll_inner">
+                          <!-- 프로모션 -->
+                          <div class="gift_check_wrap">
+                            <div class="inner">
+                              <div class="gift_check_tit">
+                                <p class="tit">(프로모션 명) 스타일링 기타 상품 구매시, OOO 증정</p>
+                                <span class="txt_blue">1종 구매 / 1개 선택가능</span>
+                              </div>
+                              <div class=" gift_list">
+                                <!-- 사은품 -->
+                                <div class="cart_check">
+                                  <div class="input_check_wrap">
+                                    <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1" checked="">
+                                    <label for="check-1-1"></label>
+                                  </div><!-- //.input_check_wrap -->
+                                  <div class="prd_box">
+                                    <div class="prd">
+                                      <div class="img"><img src="../../resources/images/contents/img_prd_list_lg_02.png" alt></div>
+                                      <div class="info">
+                                        <strong class="tit">아모스 이어캡(율)</strong>
+                                        <span class="detail">아모스 이어캡</span>
+                                        <div class="cart_qnty">
+                                          <span><em>4</em>개</span>
+                                        </div><!-- //.cart_qnty -->
+                                      </div><!-- //.info -->
+                                    </div><!-- //.prd -->
+                                    <div class="select_box select_box_defalut">
+                                      <span class="select_box_arr"></span>
+                                      <select class="select_box_value" name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                      </select>     
+                                    </div><!-- //.select_box -->
+                                  </div><!-- //.prd_box -->
+                                </div><!-- //.cart_check -->
+                                <!-- //사은품 -->
+                                <!-- 사은품 -->
+                                <div class="cart_check">
+                                  <div class="input_check_wrap">
+                                    <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1" checked="">
+                                    <label for="check-1-2"></label>
+                                  </div><!-- //.input_check_wrap -->
+                                  <div class="prd_box">
+                                    <div class="prd">
+                                      <div class="img"><img src="../../resources/images/contents/img_color_type01.png" alt></div>
+                                      <div class="info">
+                                        <strong class="tit">아모스 이어캡(율)</strong>
+                                        <span class="detail">아모스 이어캡</span>
+                                        <div class="cart_qnty">
+                                          <span><em>4</em>개</span>
+                                        </div><!-- //.cart_qnty -->
+                                      </div><!-- //.info -->
+                                    </div><!-- //.prd -->
+                                    <div class="select_box select_box_defalut">
+                                      <span class="select_box_arr"></span>
+                                      <select class="select_box_value" name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                      </select>     
+                                    </div><!-- //.select_box -->
+                                  </div><!-- //.prd_box -->
+                                </div><!-- //.cart_check -->
+                                <!-- //사은품 -->
+                                <!-- 사은품 -->
+                              </div><!-- //.gift_list -->
+                            </div><!-- //.inner -->
+                          </div><!-- //.gift_check_wrap -->
+                          <!-- //프로모션 -->
+                          <!-- 프로모션 -->
+                          <div class="gift_check_wrap">
+                            <div class="inner">
+                              <div class="gift_check_tit">
+                                <p class="tit">30,000원 이상 구매시 OOO, OOO, OOO 증정</p>
+                                <span class="txt_blue">1종 구매 / 1개 선택가능</span>
+                              </div>
+                              <div class=" gift_list">
+                                <!-- 사은품 -->
+                                <div class="cart_check">
+                                  <div class="input_check_wrap">
+                                    <input type="checkbox" id="check-2-1" class="input_check" name="check-item-2" checked="">
+                                    <label for="check-2-1"></label>
+                                  </div><!-- //.input_check_wrap -->
+                                  <div class="prd_box">
+                                    <div class="prd">
+                                      <div class="img"><img src="../../resources/images/contents//img_prd_list_lg_04.png" alt></div>
+                                      <div class="info">
+                                        <strong class="tit">컬러제닉 브라운 토닝 칼라 헤어 쿠션</strong>
+                                        <span class="detail">COLORGEMIC BROWN TONING COLOR CUSHION</span>
+                                        <div class="cart_qnty">
+                                          <span><em>4</em>개</span>
+                                        </div><!-- //.cart_qnty -->
+                                      </div><!-- //.info -->
+                                    </div><!-- //.prd -->
+                                    <div class="select_box select_box_defalut">
+                                      <span class="select_box_arr"></span>
+                                      <select class="select_box_value" name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                      </select>     
+                                    </div><!-- //.select_box -->
+                                  </div><!-- //.prd_box -->
+                                </div><!-- //.cart_check -->
+                                <!-- //사은품 -->
+                              </div><!-- //.gift_list -->
+                            </div><!-- //.inner -->
+                          </div><!-- //.gift_check_wrap -->
+                          <!-- //프로모션 -->
+                          <!-- 프로모션 -->
+                          <div class="gift_check_wrap">
+                            <div class="inner">
+                              <div class="gift_check_tit">
+                                <p class="tit">30,000원 이상 구매시 OOO, OOO, OOO 증정</p>
+                                <span class="txt_blue">1종 구매 / 1개 선택가능</span>
+                              </div>
+                              <div class=" gift_list">
+                                <!-- 사은품 -->
+                                <div class="cart_check">
+                                  <div class="input_check_wrap">
+                                    <input type="checkbox" id="check-3-1" class="input_check" name="check-item-3" checked="">
+                                    <label for="check-3-1"></label>
+                                  </div><!-- //.input_check_wrap -->
+                                  <div class="prd_box">
+                                    <div class="prd">
+                                      <div class="img"><img src="../../resources/images/img_noimg_thumb.svg" alt></div>
+                                      <div class="info">
+                                        <strong class="tit">아모스 이어캡(율)</strong>
+                                        <span class="detail">아모스 이어캡</span>
+                                        <div class="cart_qnty">
+                                          <span><em>4</em>개</span>
+                                        </div><!-- //.cart_qnty -->
+                                      </div><!-- //.info -->
+                                    </div><!-- //.prd -->
+                                    <div class="select_box select_box_defalut">
+                                      <span class="select_box_arr"></span>
+                                      <select class="select_box_value" name="" id="">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                      </select>     
+                                    </div><!-- //.select_box -->
+                                  </div><!-- //.prd_box -->
+                                </div><!-- //.cart_check -->
+                                <!-- //사은품 -->
+                              </div><!-- //.gift_list -->
+                            </div><!-- //.inner -->
+                          </div><!-- //.gift_check_wrap -->
+                          <!-- //프로모션 -->
+                        </div><!-- //.scroll_inner -->
+                      </div><!-- //.modal_body -->
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div><!-- //.modal_footer -->
+                    </div>
+                    <!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">사은품 선택 (FO-Order-00204.html)</h5>
+                <div class="cont">
+                  <button type="button" id="modal06" class="btn_sm btn_primary btn_modal_open">Open Modal - 사은품 선택</button>
+                  <div class="modal_container fade" data-modal="modal06"><!-- modal_container -->
+                    <div class="modal_overlay" style="height: 842px;"></div>
+                    <div class="modal_content" style="position: relative; top: auto;">
+                      <div class="modal_header">
+                        <h1 class="modal_tit">프로모션</h1>
+                      </div><!-- //.modal_header -->
+                      <div class="modal_body">
+                        <div class="scroll_inner">
+                          <ul class="promo_box_list">
+                            <li class="promo_box box_blue"><!-- 적용된 프로모션 box_blue 클래스 -->
+                              <span class="state">적용</span>
+                              <div class="tit">[사은품] - 30,000원 이상 구매시, 칼라루시드 5개 증정</div>
+                              <div class="date">종료일자 :<span>2024.09.31</span></div>
+                            </li><!-- //.promo_box -->
+                            <li class="promo_box">
+                              <span class="state">미적용</span>
+                              <div class="tit">(10+10) 탈모헤어 제품 10개 구매 당 10개 증정</div>
+                              <div class="date">종료일자 :<span>2024.09.31</span></div>
+                            </li><!-- //.promo_box -->
+                            <li class="promo_box">
+                              <span class="state">미적용</span>
+                              <div class="tit">(20+5) 새치커버 컬러 제품 20개 구매 당 5개 증정</div>
+                              <div class="date">종료일자 :<span>2024.09.31</span></div>
+                            </li><!-- //.promo_box -->
+                            <li class="promo_box">
+                              <span class="state box_blue">적용</span>
+                              <div class="tit">[사은품] - 30,000원 이상 구매시, 칼라루시드 5개 증정 30,000원 이상 구매시, 칼라루시드 5개 증정</div>
+                              <div class="date">종료일자 :<span>2024.09.31</span></div>
+                            </li><!-- //.promo_box -->
+                          </ul><!-- //.promo_box_list -->
+                        </div><!-- //.scroll_inner -->
+                      </div><!-- //.modal_body -->
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+                          <button class="btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div><!-- //.modal_footer -->
+                    </div>
+                    <!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">댓글 작성(수정)하기</h5>
+                <div class="cont">
+                  <button type="button" id="modal13" class="btn_sm btn_primary btn_modal_open">Open Modal - 댓글 작성(수정)하기</button>
+                  <div class="modal_container fade" data-modal="modal13">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_header">
+                        <h1 class="modal_tit">댓글 작성(수정)하기</h1>
+                      </div>
+                      <div class="modal_body">
+                        <div class="inquiry_outer">
+                          <div class="inquiry_box">
+                            <div class="input_writing_group">
+                              <textarea name="" id="" placeholder="200자 이내로 입력해 주세요"></textarea>
+                              <div class="txt_count">
+                                <p class="current zero">0</p>
+                                <span>/</span>
+                                <p class="total">200</p>
+                              </div>
+                            </div>
+                          </div><!-- //.inquiry_box -->
+                        </div><!-- //.inquiry_outer -->
+                      </div><!-- //.modal_body -->
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+                          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+                        </div>
+                      </div><!-- //.modal_footer -->
+                    </div><!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">정보수정 모달</h5>
+                <div class="cont">
+                  <button type="button" id="modal012" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+                  <div class="modal_container fade" data-modal="modal012">
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_header">
+                        <h1 class="modal_tit">휴대전화번호 변경</h1>
+                      </div>
+                      <div class="modal_body">
+                        <div class="scroll_inner">
+                          <section class="modal_form">
+                            <div class="input_group">
+                              <span class="input_label">내/외국인</span>
+                              <div class="select_box">
+                                <div class="select_box_value" data-btmsheet="btmSheet01">
+                                  <span>선택해 주세요</span>
+                                </div><!-- //.select_box_value -->
+                                <div class="select_box_list">
+                                  <ul>
+                                    <li><span>내국인</span></li>
+                                    <li><span>외국인</span></li>
+                                  </ul>
+                                </div><!-- //.select_box_list -->
+                              </div><!-- //.select_box -->
+                            </div><!-- //.input_group -->
+                            <div class="input_group">
+                              <span class="input_label">이름</span>
+                              <label for="">
+                                <input type="text" id="" class="input_text" value="" placeholder="이름">
+                              </label>
+                            </div><!-- //.input_group -->
+                            <div class="input_group input_social_num">
+                              <span class="input_label">생년</span>
+                              <!-- 동의한 사람만 뒷자리 성별구분인풋 노출 -->
+                              <label for="">
+                                <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                                <span class="dash">-</span>
+                                <input type="text" id="" class="input_text" value="" placeholder="0">
+                                <span class="hidden_num">******</span>
+                              </label>
+                              <!-- 동의 안 한 경우 -->
+                              <!-- <label for="">
+                                <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+                                <span class="dash">-</span>
+                                <span class="hidden_num">*******</span>
+                              </label> -->
+                            </div><!-- //.input_group -->
+                            <div class="input_group">
+                              <span class="input_label">휴대폰 번호</span>
+                              <div class="select_box">
+                                <div class="select_box_value" data-btmsheet="btmSheet02">
+                                  <span>통신사를 선택해 주세요</span>
+                                </div><!-- //.select_box_value -->
+                                <div class="select_box_list">
+                                  <ul>
+                                    <li><span>SKT</span></li>
+                                    <li><span>KT</span></li>
+                                    <li><span>LGT U</span></li>
+                                    <li><span>SKT 알뜰폰</span></li>
+                                    <li><span>KT 알뜰폰</span></li>
+                                    <li><span>LG 알뜰폰</span></li>
+                                  </ul>
+                                </div><!-- //.select_box_list -->
+                              </div><!-- //.select_box -->
+                              <label for="">
+                                <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                                <button class="btn_sm btn_border">인증요청</button>
+                              </label>
+                            </div><!-- //.input_group -->
+                            <div class="input_group with_time">
+                              <label for="">
+                                <input type="text" id="" class="input_text" value="899944" placeholder="">
+                                <span class="time">2:35</span>
+                                <!-- <button class="btn_sm btn_border">인증완료</button> -->
+                              </label>
+                            </div><!-- //.input_group -->
+                            <p class="txt_alert refer_mark">인증 완료 후 기본정보를 저장하시려면 인증 완료 버튼을 반드시 눌러주시기 바랍니다.</p>
+                          </section>
+                        </div><!-- //.scroll_inner -->
+                      </div><!-- //.modal_body -->
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close btn btn_sm btn_primary">인증 완료</button>
+                        </div>
+                      </div><!-- //.modal_footer -->
+                    </div><!-- //.modal_content -->
+                  </div><!-- //.modal_container -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
     </div>
     <!--// contents -->
   </div>
-
-
-
 
   <script>
     $.datepicker.setDefaults({
@@ -556,5 +594,4 @@
     $('#datepicker').datepicker();
     </script>
 </body>
-
 </html>

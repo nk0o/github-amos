@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,83 +7,93 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Toggles</title>
-  <style>
-    .guide_contents{padding: 20px;}
-    /*  */
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;}
-    .guide_tab{width: 375px;}
-  </style>
+  <title>Toggles | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-  <div id="container">
+  <div id="pubGuidecontainer">
     <!-- contents -->
-    <div class="guide_contents">
-      
-      <h1>Text in Toggle</h1>
-      <div class="btn_toggle txt_in_toggle">
-        <input type="checkbox"/>
-        <label>
-          <span>PRO</span>
-          <span>TV</span>
-        </label>
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Toggles</h3>
       </div>
-
-      <h1>Default - ON</h1>
-      <div class="btn_toggle_group">
-        <div class="btn_toggle">
-          <input type="checkbox" checked/>
-          <label></label>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Default</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Default - ON</h5>
+                <div class="cont">
+                  <div class="btn_toggle">
+                    <input type="checkbox" checked/>
+                    <label></label>
+                  </div><!-- //.btn_toggle -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Default - OFF</h5>
+                <div class="cont">
+                  <div class="btn_toggle">
+                    <input type="checkbox"/>
+                    <label></label>
+                  </div><!-- //.btn_toggle -->
+                  <!-- <div class="btn_toggle_group">
+                    <div class="btn_toggle">
+                      <input type="checkbox" />
+                      <label></label>
+                    </div>
+                    <p class="btn_toggle_txt">OFF</p>
+                  </div> -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Default - Disabled</h5>
+                <div class="cont">
+                  <div class="btn_toggle">
+                    <input type="checkbox" checked disabled />
+                    <label></label>
+                  </div><!-- //.btn_toggle -->
+                  <br>
+                  <div class="btn_toggle">
+                    <input type="checkbox" disabled />
+                    <label></label>
+                  </div><!-- //.btn_toggle -->
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="btn_toggle_txt">ON</p>
       </div>
-      <br>
-      <div class="btn_toggle">
-        <input type="checkbox" checked />
-        <label></label>
-      </div>
-
-      <h1>Default - OFF</h1>
-      <div class="btn_toggle_group">
-        <div class="btn_toggle">
-          <input type="checkbox" />
-          <label></label>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Appbar Toggle</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit"></h5> -->
+                <div class="cont">
+                  <div class="btn_toggle txt_in_toggle">
+                    <input type="checkbox"/>
+                    <label>
+                      <span>PRO</span>
+                      <span>TV</span>
+                    </label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="btn_toggle_txt">OFF</p>
       </div>
-      <br>
-      <div class="btn_toggle">
-        <input type="checkbox" />
-        <label></label>
-      </div>
-
-      <h1>Size small</h1>
-
-      <div class="btn_toggle_group">
-        <div class="btn_toggle btn_toggle_sm">
-          <input type="checkbox" checked />
-          <label></label>
-        </div>
-        <p class="btn_toggle_txt">Checked toggle</p>
-      </div>
-
-      <h1>Disabled</h1>
-      <div class="btn_toggle_group">
-        <div class="btn_toggle">
-          <input type="checkbox" checked disabled />
-          <label></label>
-        </div>
-        <p class="btn_toggle_txt">ON</p>
-        <div class="btn_toggle">
-          <input type="checkbox" disabled />
-          <label></label>
-        </div>
-        <p class="btn_toggle_txt">OFF</p>
-      </div>      
-    </div><!--// contents -->
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
   </div>
 </body>
-
 </html>

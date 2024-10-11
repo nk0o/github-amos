@@ -181,6 +181,9 @@
 /* Defalut SelectBox */
 .select_box.select_box_defalut {
   background-color: $color-white;
+  .select_box_value{
+    @include fontStyle($gray-950, $fs-s, $fw-sb, 1.2143);
+  }
   &.disabled {
     background-color: $gray-50 !important;
   }

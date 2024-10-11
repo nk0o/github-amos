@@ -7,167 +7,279 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>Buttons</title>
-  <style>
-    body{background-color: #fefefe;}
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    .guide_contents > div, ul{ margin-bottom: 16px; }
-    ul li + li{margin-top: 8px;}
-  </style>
+  <title>Buttons | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
 <body>
-  <div id="container">
+  <div id="pubGuidecontainer">
     <!-- contents -->
-    <div class="guide_contents">
-      <h1>버튼 Usage</h1>
-      <div>
-        <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
-        <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-        <button class="btn_icon"><i class="ico_btn_heart_red ico_16"></i></button>
-        <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
-        <button class="btn_icon"><i class="ico_btn_cart ico_16"></i></button>
-        <button class="btn_icon btn_cart"><i class="ico_btn_cart ico_16"></i></button>(.btn_cart = 장바구니담기 인터렉션)
-        <button class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</button>
-        <button class="btn_icon with_txt"><i class="ico_delete ico_16"></i>삭제하기</button>
-        <button class="btn_icon with_txt"><i class="ico_receipt ico_16"></i>영수증</button>
-        <button class="btn_icon"><i class="ico_btn_view ico_16"></i></button>
-        <br><br>
-        <h2>버튼 in Input</h2>
-        <div class="input_group">
-          <label for="">
-            <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
-            <button class="btn_sm btn_border">인증요청</button>
-          </label>
-        </div><!-- //.input_group -->
-        <br><br>
-        <h2>버튼 .btn_delete</h2>
-        <button class="btn_delete">선택삭제</button>
-        <button class="btn_delete type_x"><div class="hide">삭제</div></button>
-        <br><br>
-        <h2>버튼 .btn_txt</h2>
-        <button class="btn_txt">전체삭제</button>
-        <br><br>
-        <h2>버튼 .btn_txt_detail</h2>
-        <a href="#" class="btn_txt_detail">주문상세</a>
-        <br><br>
-        <h2>버튼 .btn_detail</h2>
-        <button class="btn_xs btn_detail">상세보기</button>
-        <br><br>
-        <h2>버튼 .btn_tag</h2>
-        <button class="btn_tag">#열펌</button>
-        <br><br>
-        <h2>버튼 더보기 in List</h2>
-        <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
-        <br><br>
-        <h2>버튼 더보기 in Slide</h2>
-        <div class="prd_more prd_box swiper-slide">
-          <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
-        </div><!-- //.prd_box -->
-        <h2>버튼 더보기 in 썸네일 리스트</h2>
-        <ul class="thumb_list">
-          <li>
-            <a href="#" class="img btn_icon"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
-          </li>
-        </ul>
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>Buttons</h3>
       </div>
-      <h1>버튼 Size</h1>
-      <div>
-        <button class="btn_xxs btn_border">XXS / H 30px / Font 14px / Pd 12px</button> <br><br>
-        <button class="btn_xs btn_primary">XS / H 40px / Font 15px / Pd 12px</button> <br><br>
-        <button class="btn_sm btn_primary">SM / H 46px / Font 15px / Pd 20px</button> <br><br>
-        <button class="btn_md btn_primary">MD / H 50px / Font 15px / Pd 20px</button> <br><br>
-        <button class="btn_lg btn_primary">LG / H 56px / Font 16px / Pd 20px</button> <br><br>
-        <h2>고정 Width</h2>
-        <button class="btn_xs btn_primary w_80">XS / w_80</button> 
-        <button class="btn_xs btn_border w_80">주문</button> <br><br>
-        <button class="btn_sm btn_primary w_145">SM / w_145</button>
-        <button class="btn_sm btn_primary w_145">확인</button> <br><br>
-        <h2>고정 비율 - 초기화 버튼(바텀시트)</h2>
-        <button class="btn_sm btn_border btn_reset">초기화</button>
-      </div>
-      <h1>버튼 Type</h1>
-      <div>
-        <button class="btn_sm btn_primary">Normal(Radius 2px)</button>
-        <button class="btn_md btn_primary btn_radius">Radius 4px</button>
-        <button class="btn_lg btn_primary btn_circle">Circle</button>
-      </div>
-      <h1>버튼 Color</h1>
-      <ul>
-        <li>
-          <button class="btn_md btn_primary">Primary</button>
-        </li>
-        <li>
-          <button class="btn_md btn_light">Light</button>
-        </li>
-        <li>
-          <button class="btn_sm btn_border">Line</button>
-        </li>
-        <li>
-          <button class="btn_sm btn_border line_gray">Line - &amp; + .line_gray</button>
-        </li>
-      </ul>
-      <h1>버튼 btn_icon</h1>
-      <div>
-        <button class="btn_sm btn_primary btn_icon"><i class="ico_search white ico_24"></i></button>
-        <button class="btn_sm btn_border btn_icon"><i class="ico_search point ico_24"></i></button>
-        <button class="btn_sm btn_primary btn_radius btn_icon"><i class="ico_search white ico_24"></i></button>
-        <button class="btn_sm btn_primary btn_circle"><i class="ico_search white ico_24"></i></button>
-      </div>
-      <h1>버튼 with_icon</h1>
-      <div>
-        <button class="btn_md btn_primary with_icon"><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
-        <button class="btn_xs btn_primary with_icon"><i class="ico_cart point ico_16"></i>전체 담기</button>
-      </div>
-      <h1>버튼 Disabled ( disabled / .btn_disabled)</h1>
-      <ul>
-        <li>
-          <button class="btn_sm" disabled>버튼</button>
-          <button class="btn_sm btn_border" disabled>버튼</button>
-          <button class="btn_sm btn_radius" disabled>버튼</button>
-        </li>
-        <li>
-          <button class="btn_sm btn_disabled">버튼</button>
-          <button class="btn_sm btn_border btn_disabled">버튼</button>
-          <button class="btn_sm btn_radius btn_disabled">버튼</button>
-        </li>
-        <li>
-          <button class="btn_sm btn_icon btn_disabled"><i class="ico_search white ico_24"></i></button>
-          <button class="btn_sm btn_border btn_icon btn_disabled"><i class="ico_search point ico_24"></i></button>
-        </li>
-        <li>
-          <button class="btn_md btn_primary with_icon btn_disabled"><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
-          <button class="btn_md btn_primary with_icon" disabled><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
-          <br><br>
-          <button class="btn_xs btn_primary with_icon" disabled><i class="ico_cart point ico_16"></i>전체 담기</button>
-          <button class="btn_xs btn_primary with_icon btn_disabled"><i class="ico_cart point ico_16"></i>전체 담기</button>
-        </li>
-      </ul>
-      <h1>버튼 그룹</h1>
-      <div class="btn_group">
-        <button class="btn_md btn_light">취소</button>
-        <button class="btn_md btn_primary">저장</button>
-      </div>
-      <div class="btn_group">
-        <button class="btn_sm btn_border btn_reset">초기화</button>
-        <button class="btn_sm btn_primary ">확인</button>
-      </div>
-      <h1>Bottom Button</h1>
-        <div>
-          <button class="btn_bottom">
-            <i class="ico_cart_float ico_24"></i>
-            <span>선택상품 장바구니 담기</span>
-            <span class="count">4</span>
-          </button>
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Size</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Size</h5> -->
+                <div class="cont">
+                  <button class="btn_xxs btn_border">XXS / H 30px / Font 14px / Pd 12px</button> <br><br>
+                  <button class="btn_xs btn_primary">XS / H 40px / Font 15px / Pd 12px</button> <br><br>
+                  <button class="btn_sm btn_primary">SM / H 46px / Font 15px / Pd 20px</button> <br><br>
+                  <button class="btn_md btn_primary">MD / H 50px / Font 15px / Pd 20px</button> <br><br>
+                  <button class="btn_lg btn_primary">LG / H 56px / Font 16px / Pd 20px</button> <br><br>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">고정 Width</h5>
+                <div class="cont">
+                  <button class="btn_xs btn_primary w_80">XS / w_80</button> 
+                  <button class="btn_xs btn_border w_80">주문</button> <br><br>
+                  <button class="btn_sm btn_primary w_145">SM / w_145</button>
+                  <button class="btn_sm btn_primary w_145">확인</button> <br><br>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">고정 비율 - 초기화 버튼(바텀시트)</h5>
+                <div class="cont">
+                  <button class="btn_sm btn_border btn_reset">초기화</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Color</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                    <button class="btn_md btn_primary">Primary</button>
+                    <button class="btn_md btn_light">Light</button>
+                    <button class="btn_sm btn_border">Line</button>
+                    <button class="btn_sm btn_border line_gray">Line - &amp; + .line_gray</button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">Disabled</h5>
+                <div class="cont">
+                  <button class="btn_sm" disabled>버튼</button>
+                  <button class="btn_sm btn_border" disabled>버튼</button>
+                  <button class="btn_sm btn_radius" disabled>버튼</button>
+                  <button class="btn_sm btn_disabled">버튼</button>
+                  <button class="btn_sm btn_border btn_disabled">버튼</button>
+                  <button class="btn_sm btn_radius btn_disabled">버튼</button>
+                  <button class="btn_sm btn_icon btn_disabled"><i class="ico_search white ico_24"></i></button>
+                  <button class="btn_sm btn_border btn_icon btn_disabled"><i class="ico_search point ico_24"></i></button>
+                  <button class="btn_md btn_primary with_icon btn_disabled"><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
+                  <button class="btn_md btn_primary with_icon" disabled><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
+                  <button class="btn_xs btn_primary with_icon" disabled><i class="ico_cart point ico_16"></i>전체 담기</button>
+                  <button class="btn_xs btn_primary with_icon btn_disabled"><i class="ico_cart point ico_16"></i>전체 담기</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>With Icon</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">btn_icon</h5>
+                <div class="cont">
+                  <button class="btn_sm btn_primary btn_icon"><i class="ico_search white ico_24"></i></button>
+                  <button class="btn_sm btn_border btn_icon"><i class="ico_search point ico_24"></i></button>
+                  <button class="btn_sm btn_primary btn_radius btn_icon"><i class="ico_search white ico_24"></i></button>
+                  <button class="btn_sm btn_primary btn_circle"><i class="ico_search white ico_24"></i></button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">with_icon</h5>
+                <div class="cont">
+                  <button class="btn_md btn_primary with_icon"><i class="ico_calendar_20 ico_16"></i>주소찾기</button>
+                  <button class="btn_xs btn_primary with_icon"><i class="ico_cart point ico_16"></i>전체 담기</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Button Group</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!-- <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                  <div class="btn_group">
+                    <button class="btn_md btn_light">취소</button>
+                    <button class="btn_md btn_primary">저장</button>
+                  </div><!-- //.btn_group -->
+                  <div class="btn_group">
+                    <button class="btn_sm btn_border btn_reset">초기화</button>
+                    <button class="btn_sm btn_primary ">확인</button>
+                  </div><!-- //.btn_group -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Bottom Button</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!--  <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                  <button class="btn_bottom">
+                    <i class="ico_cart_float ico_24"></i>
+                    <span>선택상품 장바구니 담기</span>
+                    <span class="count">4</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Floating Button</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <!--  <h5 class="tit">Primary</h5> -->
+                <div class="cont">
+                  <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
+                  <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_24"></i></button>
+                  <br>
+                  <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
+                  <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
+                  <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
+                  <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Usage</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">특정 아이콘 버튼</h5>
+                <div class="cont">
+                  <button class="btn_icon btn_color"><i class="ico_btn_color ico_16"></i>+36</button>
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <button class="btn_icon"><i class="ico_btn_heart_red ico_16"></i></button>
+                  <button class="btn_icon btn_like" onclick="like(this);"><i class="ico_btn_heart ico_16"></i></button>
+                  <button class="btn_icon"><i class="ico_btn_cart ico_16"></i></button>
+                  <button class="btn_icon btn_cart"><i class="ico_btn_cart ico_16"></i></button>(.btn_cart = 장바구니담기 인터렉션)
+                  <button class="btn_icon with_txt"><i class="ico_btn_view ico_16"></i>상세보기</button>
+                  <button class="btn_icon with_txt"><i class="ico_delete ico_16"></i>삭제하기</button>
+                  <button class="btn_icon with_txt"><i class="ico_receipt ico_16"></i>영수증</button>
+                  <button class="btn_icon"><i class="ico_btn_view ico_16"></i></button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">in input</h5>
+                <div class="cont">
+                  <div class="input_group">
+                    <label for="">
+                      <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+                      <button class="btn_sm btn_border">인증요청</button>
+                    </label>
+                  </div><!-- //.input_group -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">삭제 버튼</h5>
+                <div class="cont">
+                  <button class="btn_delete">선택삭제</button>
+                  <button class="btn_delete type_x"><div class="hide">삭제</div></button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">텍스트 버튼</h5>
+                <div class="cont">
+                  <button class="btn_txt">전체삭제</button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">텍스트 상세이동 버튼</h5>
+                <div class="cont">
+                  <a href="#" class="btn_txt_detail">주문상세</a>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">상세보기 버튼</h5>
+                <div class="cont">
+                  <button class="btn_xs btn_detail">상세보기</button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">태그 버튼</h5>
+                <div class="cont">
+                  <button class="btn_tag">#열펌</button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">더보기 in List</h5>
+                <div class="cont">
+                  <button class="btn_more">더보기<i class="ico_dropDown point ico_24"></i></button>
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">더보기 in Slide</h5>
+                <div class="cont">
+                  <div class="prd_more prd_box swiper-slide">
+                    <a href="#"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
+                  </div><!-- //.prd_box -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">더보기 in 썸네일 리스트</h5>
+                <div class="cont">
+                  <ul class="thumb_list">
+                    <li>
+                      <a href="#" class="img btn_icon"><i class="ico_plus_20 ico_20"></i><span>더보기</span></a>
+                    </li>
+                  </ul><!-- //.thumb_list -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
     </div>
-    <h1>플롯팅 버튼</h1>
-    <button class="btn_floating btn_border"><i class="ico_24 ico_float_top"></i></button>
-    <button class="btn_floating btn_primary"><i class="ico_24 ico_plus_24"></i></button>
-    <br>
-    <button class="btn_floating"><i class="ico_24 ico_float_brand"></i></button>
-    <button class="btn_floating"><i class="ico_24 ico_float_store"></i></button>
-    <button class="btn_floating"><i class="ico_24 ico_float_question"></i></button>
-    <button class="btn_floating btn_primary"><i class="ico_24 ico_float_close"></i></button>
     <!--// contents -->
   </div>
 </body>

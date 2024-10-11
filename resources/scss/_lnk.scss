@@ -224,11 +224,11 @@
     padding: 16px 0 0;
     margin: 16px 0 0;
     border-top: 1px solid $gray-100;
+  }
+  &_list{
     .input_check + label{
       @include fontStyle(inherit, $fs-s, $fw-m, 1.714);
     }
-  }
-  &_list{
     li{
       @include flexBetween;
       padding: 8px 0;
@@ -976,7 +976,6 @@
   .select_box_defalut{
     margin-top: 12px;
     .select_box_value{
-      @include fontStyle($gray-950, $fs-s, $fw-sb, 1.2143);
       font-family: $font-aritadt;
     }
   }

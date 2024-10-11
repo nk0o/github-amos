@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,115 +7,169 @@
   <script src="../../resources/js/pub/include.js"></script>
   <script>include.scripts();</script>
   <script>include.style();</script>
-  <title>AppBar</title>
-  <style>
-    .guide_contents{padding: 20px;background-color: #eee;}
-    .guide_contents h1{font-weight: 700; font-size: 20px; margin: 16px 0;}
-    /*  */
-    /* .guide_contents h2{font-weight: 700; font-size: 16px; margin: 16px 0;} */
-  </style>
+  <title>AppBar | Guide</title>
+  <link rel="stylesheet" href="../guide_style.css">
 </head>
-
 <body>
-   <div id="container"> 
-      <!-- contents -->
-      <div class="guide_contents"> 
-
-        <h1>AppBar - Main (앱알림 표시(ico_bell)는 APP일때만)</h1>
-        <div class="appbar">
-          <div class="inner">
-            <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
-            <div class="btn_toggle txt_in_toggle">
-              <input type="checkbox"/>
-              <label>
-                <span>PRO</span>
-                <span>TV</span>
-              </label>
-            </div>
-            <div class="appbar_util">
-              <button class="ico_search ico_24"><div class="hide">검색</div></button>
-              <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
-              <button class="ico_bell ico_24"><div class="hide">앱알림</div><span class="badge_round bg_primary">8</span></button>
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="appbar">
-          <div class="inner">
-            <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
-            <div class="btn_toggle txt_in_toggle">
-              <input type="checkbox" checked/>
-              <label>
-                <span>PRO</span>
-                <span>TV</span>
-              </label>
-            </div>
-            <div class="appbar_util">
-              <button class="ico_search ico_24"><div class="hide">검색</div></button>
-              <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">20</span></button>
-              <button class="ico_bell ico_24"><div class="hide">앱알림</div><span class="badge_round bg_primary">8</span></button>
-            </div>
-          </div>
-        </div>
-
-        <h1>AppBar - Usage</h1>
-        <div class="appbar">
-          <div class="inner">
-            <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
-            <h2 class="appbar_tit">살롱 서포트</h2>
-            <div class="appbar_util">
-              <button class="ico_search ico_24"><span class="hide">검색</span></button>
-              <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
-            </div>
-          </div>
-        </div>
-
-        <br>
-
-        <div class="appbar">
-          <div class="inner">
-            <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
-            <h2 class="appbar_tit">살롱 서포트</h2>
-          </div>
-        </div>
-
-        <br>
-
-        <h1>AppBar - depth2</h1>
-
-        <header>
-          <div class="appbar">
-            <div class="inner">
-              <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
-              <div class="btn_toggle txt_in_toggle">
-                <input type="checkbox"/>
-                <label>
-                  <span>PRO</span>
-                  <span>TV</span>
-                </label>
-              </div>
-              <div class="appbar_util">
-                <button class="ico_search ico_24"><div class="hide">검색</div></button>
-                <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
-              </div>
-            </div>
-            <!-- //.inner -->
-          </div><!-- //.appbar -->
-          <div class="tab_menu line_tab is_scroll">
-            <ul>
-              <li class="current tab_list" data-tab="tab4-1"><button>홈</button></li>
-              <li class="tab_list" data-tab="tab4-2"><button>상품구매</button></li>
-              <li class="tab_list" data-tab="tab4-3"><button>거래원장</button></li>
-              <li class="tab_list" data-tab="tab4-4"><button>정기교육</button></li>
-              <li class="tab_list" data-tab="tab4-5"><button>아모스TV</button></li>
-              <li class="tab_list" data-tab="tab4-5"><button>이벤트</button></li>
-            </ul>
-            <div class="tab_bar" style="width: 84px; left: 20px;"></div>
-          </div>
-        </header><!-- //.header -->
-
+  <div id="pubGuidecontainer">
+    <!-- contents -->
+    <div class="contents">
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h3>AppBar</h3>
       </div>
-      <!--// contents -->
+      <!-- //pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Main (mainAppBar/mainAppBarTypeApp(앱))</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">Pro</h5>
+                <div class="cont">
+                  <div class="appbar">
+                    <div class="inner">
+                      <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
+                      <div class="btn_toggle txt_in_toggle">
+                        <input type="checkbox"/>
+                        <!-- 240905 문구수정 -->
+                        <label>
+                          <span>PRO</span>
+                          <span>TV</span>
+                        </label>
+                      </div>
+                      <div class="appbar_util">
+                        <button class="ico_search ico_24"><div class="hide">검색</div></button>
+                        <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
+                        <button class="ico_bell ico_24"><div class="hide">앱알림</div><span class="badge_round bg_primary">8</span></button>
+                      </div>
+                    </div>
+                  </div><!-- //.appbar -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">TV</h5>
+                <div class="cont">
+                  <div class="appbar">
+                    <div class="inner">
+                      <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
+                      <div class="btn_toggle txt_in_toggle">
+                        <input type="checkbox" checked/>
+                        <label>
+                          <span>PRO</span>
+                          <span>TV</span>
+                        </label>
+                      </div>
+                      <div class="appbar_util">
+                        <button class="ico_search ico_24"><div class="hide">검색</div></button>
+                        <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
+                        <button class="ico_bell ico_24"><div class="hide">앱알림</div><span class="badge_round bg_primary">8</span></button>
+                      </div>
+                    </div>
+                  </div><!-- //.appbar -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">카테고리 - mainCategoryAppBar</h5>
+                <div class="cont">
+                  <div class="appbar">
+                    <div class="inner">
+                      <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
+                      <div class="btn_toggle txt_in_toggle">
+                        <input type="checkbox"/>
+                        <!-- 240905 문구수정 -->
+                        <label>
+                          <span>PRO</span>
+                          <span>TV</span>
+                        </label>
+                      </div>
+                      <div class="appbar_util">
+                        <button class="ico_search ico_24"><div class="hide">검색</div></button>
+                      </div>
+                    </div>
+                  </div><!-- //.appbar -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">MainHeader(mainAppBarTypeApp + mainTabMenu)</h5>
+                <div class="cont">
+                  <header>
+                    <div class="appbar">
+                      <div class="inner">
+                        <a href="#" class="logo"><img src="../../resources/images/logo.svg" alt="아모스프로페셔널 메인"></a>
+                        <div class="btn_toggle txt_in_toggle">
+                          <input type="checkbox"/>
+                          <!-- 240905 문구수정 -->
+                          <label>
+                            <span>PRO</span>
+                            <span>TV</span>
+                          </label>
+                        </div>
+                        <div class="appbar_util">
+                          <button class="ico_search ico_24"><div class="hide">검색</div></button>
+                          <button class="ico_cart ico_24"><div class="hide">장바구니</div><span class="badge_round bg_primary">8</span></button>
+                        </div>
+                      </div>
+                    </div><!-- //.appbar -->
+                    <div class="tab_center_wrap appbar_tabmenu">
+                      <div class="tab_menu tab_center line">
+                        <ul>
+                        <li class="current tab_list"><button>상품구매</button></li>
+                        <li class="tab_list"><button>거래원장</button></li>
+                        <li class="tab_list"><button>정기교육</button></li>
+                        <li class="tab_list"><button>이벤트</button></li>
+                        <li class="tab_list"><button>고객센터</button></li>
+                        </ul>
+                      </div>
+                    </div><!-- //.tab_center_wrap -->
+                  </header>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+      <!-- pubGuide_sec -->
+      <div class="pubGuide_sec">
+        <h4>Usage</h4>
+        <div class="box_wrap">
+          <div class="component_guideline">
+            <ul class="guide_list">
+              <li>
+                <h5 class="tit">subAppBarType1</h5>
+                <div class="cont">
+                  <div class="appbar">
+                    <div class="inner">
+                      <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
+                      <h2 class="appbar_tit">살롱 서포트</h2>
+                      <div class="appbar_util">
+                        <button class="ico_search ico_24"><span class="hide">검색</span></button>
+                        <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
+                      </div>
+                    </div>
+                  </div><!-- //.appbar -->
+                </div>
+              </li>
+              <li>
+                <h5 class="tit">subAppBarType2</h5>
+                <div class="cont">
+                  <div class="appbar">
+                    <div class="inner">
+                      <button class="appbar_back ico_btn_back ico_24"><span class="hide">뒤로가기</span></button>
+                      <h2 class="appbar_tit">살롱 서포트</h2>
+                    </div>
+                  </div><!-- //.appbar -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--// pubGuide_sec -->
+    </div>
+    <!--// contents -->
   </div>
 </body>
 </html>

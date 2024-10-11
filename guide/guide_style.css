@@ -1,6 +1,8 @@
 /** Font **/
 #pubGuidecontainer h1 { font-size: 54px; font-weight: 700; line-height: 1.37; }
+#pubGuidecontainer .modal_header .modal_tit {margin: 0; color: #222222; font-size: 1.125rem; font-weight: 700; line-height: 1.444; }
 #pubGuidecontainer h2 { font-size: 42px; font-weight: 600; line-height: 1.52; }
+#pubGuidecontainer h2.appbar_tit {display: block; overflow: hidden; word-break: break-all; word-wrap: normal; text-overflow: ellipsis; white-space: nowrap; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; padding: 0 80px 0 80px; color: #2A3136; font-size: 1.125rem; font-weight: 600; line-height: 1.444; font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif; text-align: center;}
 #pubGuidecontainer h3 { font-size: 32px; font-weight: 600; line-height: 1.5; }
 #pubGuidecontainer h4 { font-size: 24px; font-weight: 600; line-height: 1.41; }
 #pubGuidecontainer h5 { font-size: 20px; font-weight: 600; line-height: 1.6; }
@@ -95,7 +97,7 @@
 #pubGuidecontainer .box_wrap .component_list > li + li { margin-top: 30px; }
 #pubGuidecontainer .box_wrap .component_guideline .tit { font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; font-size: 18px; line-height: 26px; color: #000; font-weight: 600; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list .tit + .cont { margin-top: 16px; }
-#pubGuidecontainer .box_wrap .component_guideline .guide_list li + li { margin-top: 24px; }
+#pubGuidecontainer .box_wrap .component_guideline .guide_list > li + li { margin-top: 24px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list + .component_desc { margin-top: 24px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list.typo_list > li + li, .box_wrap .component_guideline .guide_list.flex_list > li + li { margin-top: 44px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list.icon_list > li + li { margin-top: 80px; }
@@ -271,7 +273,7 @@
 #pubGuidecontainer .ft_group .text_4{font-size:17px; line-height:1.177;font-family: 'Gotham' !important;}
 #pubGuidecontainer .ft_group .text_5{font-size:15px; line-height:1.2;font-family: 'Gotham' !important;}
 #pubGuidecontainer .icon_list_items{border:1px solid #ddd;padding: 16px;background-color: #efefef;
-display: grid;grid-template-columns: repeat(3, 1fr);gap: 12px;}
+display: grid;grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));gap: 12px;}
 #pubGuidecontainer .icon_list_items li{align-self: flex-end;}
 #pubGuidecontainer .icon_list_items + .icon_list_items{margin-top: 16px;}
 #pubGuidecontainer .icon_list_items p span{font-size: 14px; color: #777;}
