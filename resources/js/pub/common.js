@@ -156,7 +156,7 @@ $(document).ready(function () {
 
   // 상품 담기
   if ($('.prd_list_wrap.ir').length > 0 ) {
-    $(document).on('click touchend', '.prd_box .prd', function(e){
+    $(document).on('click', '.prd_box .prd', function(e){
       e.preventDefault();
       let imgSrc = $(this).find('img').attr('src');
       let $parent = $(this).parent();
@@ -610,7 +610,7 @@ function like(event) {
     target.parent().find('.ani_liked').remove();
   } else {
     target.addClass("active");
-    if ($('.prd_list_wrap.ir').length > 0 || parent.hasClass('btm_bar type2')) {
+    if ($('.prd_list_wrap.ir').length > 0 || parent.hasClass('btm_bar type2') ||  parent.hasClass('recent_product')) {
       target.parent().append(
         '<div class="ani_liked"><div class="ir_like"></div></div>'
       );

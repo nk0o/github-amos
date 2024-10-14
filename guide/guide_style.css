@@ -58,16 +58,9 @@
 #pubGuidecontainer .pubGuide_btn_area .btn:hover { color: #0f62fe; }
 #pubGuidecontainer .pubGuide_btn_area .btn i::before { background-color: #0f62fe !important; }
 #pubGuidecontainer .pubGuide_btn_area + .pubGuide_sec { margin-top: -20px; }
-#pubGuidecontainer footer { font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; padding-top: 18px; font-size: 14px; color: #999999; line-height: 24px; border-top: 1px solid #E2E5EA; }
 #pubGuidecontainer .pubGuide_desc { font-size: 16px; line-height: 26px; color: #666666; letter-spacing: -0.56px; }
 #pubGuidecontainer .inner_desc { font-size: 16px; line-height: 26px; color: #666666; letter-spacing: -0.56px; }
 #pubGuidecontainer .box_wrap { margin-top: 24px; }
-#pubGuidecontainer .box_wrap .key_point { display: flex; justify-content: flex-start; align-items: center; }
-#pubGuidecontainer .box_wrap .key_point li { width: calc(100%/4 - 12px); margin-right: 24px; padding: 24px 32px; background-color: #F7F7F7; }
-#pubGuidecontainer .box_wrap .key_point li:last-child { margin-right: 0; }
-#pubGuidecontainer .box_wrap .key_point li figure { margin-bottom: 16px; }
-#pubGuidecontainer .box_wrap .key_point li figure::before { display: none; }
-#pubGuidecontainer .box_wrap .key_point li h5 { margin-bottom: 24px; font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; font-weight: 600; color: #525252; }
 #pubGuidecontainer .box_wrap .browsers { display: flex; justify-content: flex-start; align-items: center; text-align: center; }
 #pubGuidecontainer .box_wrap .browsers li p { font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; font-size: 16px; color: #666666; }
 #pubGuidecontainer .box_wrap .browsers li + li { margin-left: 60px; }
@@ -95,8 +88,8 @@
 #pubGuidecontainer .box_wrap .component_list > li { padding-bottom: 10px; }
 #pubGuidecontainer .box_wrap .component_list > li:last-child { padding-bottom: 0; }
 #pubGuidecontainer .box_wrap .component_list > li + li { margin-top: 30px; }
-#pubGuidecontainer .box_wrap .component_guideline .tit { font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; font-size: 18px; line-height: 26px; color: #000; font-weight: 600; }
-#pubGuidecontainer .box_wrap .component_guideline .guide_list .tit + .cont { margin-top: 16px; }
+#pubGuidecontainer .box_wrap .component_guideline .guide_list > li > .tit { font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; font-size: 18px; line-height: 26px; color: #000; font-weight: 600; }
+#pubGuidecontainer .box_wrap .component_guideline .guide_list > li > .tit + .cont { margin-top: 16px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list > li + li { margin-top: 24px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list + .component_desc { margin-top: 24px; }
 #pubGuidecontainer .box_wrap .component_guideline .guide_list.typo_list > li + li, .box_wrap .component_guideline .guide_list.flex_list > li + li { margin-top: 44px; }

@@ -6143,6 +6143,7 @@ div.dataTables_wrapper .btn_floating:focus {
   justify-content: space-between;
 }
 .btm_bar_nav li {
+  cursor: pointer;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12506,6 +12507,11 @@ footer .f_company {
 
 .recent_product .prd_list_sm .prd_box, .recent_product .gift_list .prd_box {
   margin-top: 20px;
+}
+@media (min-width: 1024px) {
+  .recent_product .prd_list_sm .prd_box .prd .info, .recent_product .gift_list .prd_box .prd .info {
+    min-height: 118px;
+  }
 }
 
 .list_option {

@@ -1652,6 +1652,11 @@
   .prd_list_sm .prd_box{
     margin-top: 20px;
   }
+  @media (min-width: $pc-point) {
+    .prd_list_sm .prd_box .prd .info{
+      min-height: 118px;
+    }
+  }
 }
 //리스트 
 .list_option{

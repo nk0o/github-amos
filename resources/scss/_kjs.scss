@@ -52,6 +52,7 @@
 }
 
 .prd_box {
+  //cursor: pointer;
   &.checked {
     .img {
       &::before {
