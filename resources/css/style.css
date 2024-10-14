@@ -8408,19 +8408,20 @@ footer .f_company {
   padding: 8px 6px;
   border-radius: 0;
   border: none;
-}
-.prd_list_sm.xs .prd_box .bottom .btn_icon + .btn_icon, .xs.gift_list .prd_box .bottom .btn_icon + .btn_icon {
   position: relative;
 }
-.prd_list_sm.xs .prd_box .bottom .btn_icon + .btn_icon::before, .xs.gift_list .prd_box .bottom .btn_icon + .btn_icon::before {
+.prd_list_sm.xs .prd_box .bottom .btn_icon::before, .xs.gift_list .prd_box .bottom .btn_icon::before {
+  content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 1px;
   height: 100%;
   vertical-align: 0;
   background: #E2E2E2;
-  content: "";
+}
+.prd_list_sm.xs .prd_box .bottom .btn_icon:last-child::before, .xs.gift_list .prd_box .bottom .btn_icon:last-child::before {
+  display: none;
 }
 .prd_list_sm.xs .btn_more, .xs.gift_list .btn_more {
   margin-top: 36px;
