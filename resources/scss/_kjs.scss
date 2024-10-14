@@ -797,6 +797,8 @@
   >.inner {
     padding: 0;
     .inner {
+      position: relative;
+      z-index: 1;
       padding: 0 20px;
       background-color: #fff;
     }
@@ -808,7 +810,6 @@
     &.fix {
       position: fixed;
       top: 60px;
-      z-index: -1;
       &+.inner {
         margin-top: 100%;
       }
@@ -867,6 +868,8 @@
   }
 }
 .prd_detail_view {
+   position: relative;
+   z-index: 1;
   padding-top: 40px;
   background-color: #fff;
   .tab_menu {
