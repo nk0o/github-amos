@@ -205,6 +205,12 @@
     @include verticalScroll;
   }  
 }
+//모달 안 테이블
+.modal_tbl{
+  .scroll_inner{
+    padding: 0;
+  }
+}
 //사은품
 .modal_content{
   .gift_check_wrap{

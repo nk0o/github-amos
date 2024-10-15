@@ -192,6 +192,7 @@
   &::-webkit-scrollbar {
     opacity: 0;
     width: 7px;
+    height: 7px;
     background-color: $gray-300;
   }
   &::-webkit-scrollbar-track {
