@@ -4856,6 +4856,10 @@ th {
   background-color: #f6f6f6;
 }
 
+.tbl {
+  border-collapse: separate;
+  border-spacing: 0;
+}
 .tbl colgroup col:nth-child(1) {
   width: 120px;
 }
@@ -7817,6 +7821,10 @@ footer .f_company {
   padding-bottom: 40px;
   background: #fff;
 }
+.page_detail .hr_divider {
+  position: relative;
+  z-index: 1;
+}
 .page_detail .sec_product.is_noBack {
   padding-top: 32px;
   background-color: #fff;
@@ -7959,9 +7967,6 @@ footer .f_company {
 .prd_detail_view .tab_cont .tab_cont_item .inner {
   padding: 32px 20px 60px;
 }
-.prd_detail_view .tab_cont .tab_cont_item .info_box {
-  margin-top: 9px;
-}
 .prd_detail_view .banner_area {
   width: 100%;
   text-align: center;
@@ -8019,9 +8024,6 @@ footer .f_company {
   }
   .prd_detail_view .tab_cont .tab_cont_item .inner {
     padding: 0 0 60px 0;
-  }
-  .prd_detail_view .tab_cont .tab_cont_item .info_box {
-    margin-top: 20px;
   }
   .prd_detail_view .detail_cont {
     padding-bottom: 60px;
@@ -8206,27 +8208,25 @@ footer .f_company {
 .info_box .tit {
   display: block;
   height: 40px;
-  padding: 10px 8px;
-  color: #222;
-  font-size: 13px;
+  padding: 8px;
+  color: #222222;
+  font-size: 0.8125rem;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 1.3846;
   background-color: #F6F6F6;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-.info_box .info_list {
-  border-bottom: 1px solid #eee;
+.info_box .info_item {
+  padding: 10px 8px !important;
+  color: #666666 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 400 !important;
+  line-height: 1.3846 !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+  list-style: none !important;
 }
-.info_box .info_list li {
-  padding: 10px 8px;
-  color: #666;
-  font-family: "Arita-dotum";
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-}
-.info_box .info_list li em {
+.info_box .info_item em {
   display: block;
   color: #444;
   font-family: "Arita-dotum";
@@ -8240,11 +8240,7 @@ footer .f_company {
     border: 1px solid #eee;
   }
   .info_box .tit {
-    background: none;
     border-top: none;
-  }
-  .info_box .info_list {
-    border-bottom: none;
   }
 }
 .top_exchange_wrap {

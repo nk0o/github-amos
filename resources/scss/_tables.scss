@@ -25,6 +25,8 @@ th {
 }
 
 .tbl {
+  border-collapse: separate;
+  border-spacing: 0;
   colgroup {
     col {
       &:nth-child(1) {

@@ -766,6 +766,10 @@
 .page_detail {
   padding-bottom: 40px;
   background: #fff;
+  .hr_divider{
+    position: relative;
+    z-index: 1;
+  }
   .sec_product.is_noBack  {
     padding-top: 32px;
     background-color: #fff;
@@ -894,9 +898,6 @@
       .inner {
         padding: 32px 20px 60px;
       }
-      .info_box {
-        margin-top: 9px;
-      }
     }
   }
   .banner_area {
@@ -959,9 +960,6 @@
         padding-top: 40px;
         .inner {
           padding: 0 0 60px 0;
-        }
-        .info_box {
-          margin-top: 20px;
         }
       }
     }
@@ -1178,32 +1176,24 @@
   .tit {
     display: block;
     height: 40px;
-    padding: 10px 8px;
-    color: #222;
-    font-size: 13px;
-    font-weight: $fw-sb;
-    line-height: 18px; 
+    padding: 8px;
+    @include fontStyle($gray-950, $fs-xs, $fw-sb, 1.3846);
     background-color: #F6F6F6;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
   }
-  .info_list{
-    border-bottom: 1px solid #eee;
-    li {
-      padding: 10px 8px;
-      color: #666;
+  .info_item{
+    padding: 10px 8px!important;
+    @include fontStyle($gray-800 !important, $fs-xs !important, $fw-m !important, 1.3846 !important);
+    font-family: $font-aritadt !important;
+    list-style: none !important;
+    em {
+      display: block;
+      color: #444;
       font-family: 'Arita-dotum';
       font-size: 13px;
-      font-weight: $fw-m;
+      font-weight: $fw-sb;
       line-height: 18px;
-      em {
-        display: block;
-        color: #444;
-        font-family: 'Arita-dotum';
-        font-size: 13px;
-        font-weight: $fw-sb;
-        line-height: 18px;
-      }
     }
   }
 }
@@ -1212,11 +1202,7 @@
   .info_box {
     border: 1px solid #eee;
     .tit {
-      background: none;
       border-top: none;
-    }
-    .info_list {
-      border-bottom: none;
     }
   }
 }
