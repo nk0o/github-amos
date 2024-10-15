@@ -893,10 +893,15 @@
       }
     }
   }
-  .tab_cont {
-    .tab_cont_item  {
-      .inner {
-        padding: 32px 20px 60px;
+  .tab_cont_item  {
+    .inner {
+      padding: 32px 20px 60px;
+    }
+    .tbl{
+      border: none;
+      border-top: 1px solid $gray-100;
+      & > :not(caption) > * > *{
+        border-right-width: 0;
       }
     }
   }
@@ -1174,8 +1179,9 @@
 
 .info_box {
   .tit {
-    display: block;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
     padding: 8px;
     @include fontStyle($gray-950, $fs-xs, $fw-sb, 1.3846);
     background-color: #F6F6F6;
@@ -1200,7 +1206,6 @@
 
 @media (min-width: 1024px) {
   .info_box {
-    border: 1px solid #eee;
     .tit {
       border-top: none;
     }

@@ -5186,9 +5186,6 @@ div.dataTables_wrapper .btn_floating:focus {
   .tbl colgroup col:nth-child(1) {
     width: 160px;
   }
-  .tbl th {
-    background: none;
-  }
 }
 /* Accordion */
 .accord_tit {
@@ -7964,8 +7961,15 @@ footer .f_company {
 .prd_detail_view .tab_menu > ul > li button {
   justify-content: center;
 }
-.prd_detail_view .tab_cont .tab_cont_item .inner {
+.prd_detail_view .tab_cont_item .inner {
   padding: 32px 20px 60px;
+}
+.prd_detail_view .tab_cont_item .tbl {
+  border: none;
+  border-top: 1px solid #eeeeee;
+}
+.prd_detail_view .tab_cont_item .tbl > :not(caption) > * > * {
+  border-right-width: 0;
 }
 .prd_detail_view .banner_area {
   width: 100%;
@@ -8206,8 +8210,9 @@ footer .f_company {
   }
 }
 .info_box .tit {
-  display: block;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
   padding: 8px;
   color: #222222;
   font-size: 0.8125rem;
@@ -8236,9 +8241,6 @@ footer .f_company {
 }
 
 @media (min-width: 1024px) {
-  .info_box {
-    border: 1px solid #eee;
-  }
   .info_box .tit {
     border-top: none;
   }
