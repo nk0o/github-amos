@@ -636,6 +636,28 @@
           span{
             @include fontStyle($gray-950, $fs-xs, $fw-b, 1.384);
           }
+          .qnty{
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            @include fontStyle($gray-950, $fs-xs, $fw-m, 1.385);
+            font-family: $font-aritadt;
+            em{
+              @include fontStyle($gray-950, $fs-sm, $fw-l, 1.2);
+              font-family: $font-gotham;
+            }
+            &::before{
+              content: "";
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 8px;
+              width: 1px;
+              height: 10px;
+              background-color: $gray-400;
+            }
+          }
         }
         .prd_sum{
           display: flex;
