@@ -31,6 +31,7 @@ $(document).ready(function () {
   floatingSideUI();
   catecoryUI();
   prdSlider();
+  modalSlider();
   tvSlider();
   contBoxSlider();
   headerScroll();
@@ -618,6 +619,26 @@ function prdSlider(){
           slidesPerView: 5,
         },
       },
+    });
+  });
+}
+
+/* 모달(팝업) Swiper */
+function modalSlider(){  
+  $(".modal_swiper").each(function (i, v) {
+    let sliderName = 'modalSlider' + i;
+    $(v).attr('id', sliderName);
+    let sliderId = '#' + sliderName;
+    // Swiper 초기화
+    let modalSwiper = new Swiper(sliderId, {
+      autoHeight: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: sliderId + " .swiper-pagination",
+      },
+      observer: true,
+      observeParents: true,
     });
   });
 }

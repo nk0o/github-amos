@@ -1212,6 +1212,7 @@ p {
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.23;
+  white-space: normal;
 }
 
 .action_btn {
@@ -5471,6 +5472,11 @@ div.dataTables_wrapper .btn_floating:focus {
   transition: width 0.3s ease-out 0s;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
 .pagination_number {
   width: 45px;
   height: 24px;
@@ -5755,6 +5761,17 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 .modal_form .refer_mark {
   margin-top: 20px;
+}
+.modal_swiper .swiper-pagination-bullets {
+  bottom: 12px;
+}
+.modal_swiper .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 0.5;
+}
+.modal_swiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+  opacity: 1;
 }
 
 .modal_notice .modal_content {

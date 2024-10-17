@@ -135,6 +135,50 @@
           <div class="component_guideline">
             <ul class="guide_list">
               <li>
+                <h5 class="tit">메인 모달 (이미지 슬라이드)</h5>
+                <div class="cont">
+                  <!-- 241016 슬라이드 메인팝업 추가 -->
+                  <button type="button" id="modal013" class="btn_sm btn_primary btn_modal_open">Open Modal</button>
+                  <div class="modal_container modal_notice fade" data-modal="modal013"><!-- modal_container modal_notice -->
+                    <div class="modal_overlay"></div>
+                    <div class="modal_content">
+                      <div class="modal_body">
+                        <!-- 슬라이드 영역  -->
+                        <div class="modal_swiper swiper swiper-container">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="img">
+                                <img src="../../resources/images/@img_popup01.png" alt="팝업이미지내용">
+                              </div>
+                            </div><!-- //.swiper-slide -->
+                            <div class="swiper-slide">
+                              <div class="img">
+                                <img src="../../resources/images/@img_popup01.png" alt="팝업이미지내용">
+                              </div>
+                            </div><!-- //.swiper-slide -->
+                            <div class="swiper-slide">
+                              <div class="img">
+                                <img src="../../resources/images/@img_popup01.png" alt="팝업이미지내용">
+                              </div>
+                            </div><!-- //.swiper-slide -->
+                          </div><!-- //.swiper-wrapper -->
+                          <div class="swiper-pagination"></div>
+                        </div><!-- //.modal_swiper.swiper-container -->
+                        <!-- // 슬라이드 영역  -->                     
+                      </div>
+                      <div class="modal_footer">
+                        <div class="btn_group">
+                          <button class="btn_modal_close">오늘 그만보기</button>
+                          <button class="btn_modal_close">닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.modal_content -->
+                  </div><!-- /.modal_container -->
+                  <!-- //241016 슬라이드 메인팝업 추가 -->
+                </div>
+              </li>
+              <li>
                 <h5 class="tit">메인 모달</h5>
                 <div class="cont">
                   <button type="button" id="modal011" class="btn_sm btn_primary btn_modal_open">Open Modal</button>

@@ -571,6 +571,7 @@
       text-align: center;
       margin-top: 6px;
       @include fontStyle($gray-950, $fs-xs, $fw-sb, 1.23);
+      white-space: normal;
     }
   }
 }

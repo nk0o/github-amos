@@ -124,6 +124,10 @@
       @include trans($prop: width, $duration: 0.3s, $type: ease-out, $delay: 0s);
    }
 }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+   margin: 0 4px;
+}
 
 //Fraction pagination
 .pagination_number {
