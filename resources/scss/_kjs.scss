@@ -112,6 +112,8 @@
     }
     .price, .count {
       display: flex;
+      flex-wrap: wrap;
+      word-break: break-all;
       align-items: center;
       margin: 9px 0 0;
       color: $gray-950;
@@ -188,24 +190,33 @@
   gap: 32px 9px;
   .prd_box {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: calc((100% - 9px)/2);
-    min-height: 330px;
+    //min-height: 330px;
     .prd {
       position: relative;
-      height: calc(100% - 38px);
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      flex: 1;
+      //height: calc(100% - 38px);
       .img {
         background-color: $gray-50;
       }
       .info {
         display: flex;
         flex-direction: column;
-        height: 117px;
         margin-top: 12px;
+        flex: 1;
+        //height: 117px;
         // .tit {
         //   display: block;
         // }
         .price {
           margin-top: auto;
+          padding-top: 12px;
         }
         .badge{
           align-self: flex-start;
