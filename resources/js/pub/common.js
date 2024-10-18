@@ -799,7 +799,7 @@ function putInCart() {
     putInCartAction()
   })
   $(document).on('click touchend', '.btn_cart', function(){
-      putInCartAction()
+      putInCartAction();
   })
   function putInCartAction(){
     if($('.prd_put_cart').length == 0) {
@@ -807,7 +807,7 @@ function putInCart() {
       $('.prd_put_cart').addClass('active');
       setTimeout(function() {
         $('.prd_put_cart').removeClass('active').remove();
-      },4500)
+      },2200)
     }
   }
 }
