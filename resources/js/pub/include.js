@@ -110,9 +110,8 @@ var include = {
           <h2 class="appbar_tit">서브 페이지(Type1) 제목</h2>
           <div class="appbar_util">
             <button class="ico_search ico_24"><span class="hide">검색</span></button>
-            <button class="ico_cart ico_24" onclick="window.open('https://www.amoremall.com/')"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
+            <button class="ico_cart ico_24"><span class="hide">장바구니</span><span class="badge_round bg_primary">20</span></button>
           </div>
-          
         </div>
       </div>
     `);
