@@ -7848,6 +7848,9 @@ footer .f_company {
 }
 
 /* 카테고리 페이지 */
+.page_category {
+  max-height: calc(100dvh - 60px - 90px);
+}
 .page_category .tab_menu ul, .page_category .tab_cont {
   max-width: 700px;
   margin: 0 auto;
@@ -7867,6 +7870,7 @@ footer .f_company {
   scroll-behavior: smooth;
 }
 .cate_tit {
+  cursor: pointer;
   color: #888888;
   font-size: 0.875rem;
   font-weight: 400;
@@ -8969,7 +8973,6 @@ footer .f_company {
   }
 }
 .page_detail {
-  padding-bottom: 40px;
   background: #fff;
 }
 .page_detail .hr_divider {
@@ -8978,6 +8981,7 @@ footer .f_company {
 }
 .page_detail .sec_product.is_noBack {
   padding-top: 32px;
+  padding-bottom: 40px;
   background-color: #fff;
 }
 .page_detail .sec_product.is_noBack .recommend_prd {
@@ -9511,6 +9515,13 @@ footer .f_company {
   line-height: 1.3846 !important;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
   list-style: none !important;
+}
+.info_box .info_item p {
+  color: #666666 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 400 !important;
+  line-height: 1.3846 !important;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
 }
 .info_box .info_item em {
   display: block;

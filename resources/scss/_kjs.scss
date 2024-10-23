@@ -777,7 +777,6 @@
 }
 
 .page_detail {
-  padding-bottom: 40px;
   background: #fff;
   .hr_divider{
     position: relative;
@@ -785,6 +784,7 @@
   }
   .sec_product.is_noBack  {
     padding-top: 32px;
+    padding-bottom: 40px;
     background-color: #fff;
     .recommend_prd {
       max-width: 1024px;
@@ -1214,6 +1214,10 @@
     @include fontStyle($gray-800 !important, $fs-xs !important, $fw-m !important, 1.3846 !important);
     font-family: $font-aritadt !important;
     list-style: none !important;
+    p{
+      @include fontStyle($gray-800 !important, $fs-xs !important, $fw-m !important, 1.3846 !important);
+      font-family: $font-aritadt !important;
+    }
     em {
       display: block;
       color: #444;
