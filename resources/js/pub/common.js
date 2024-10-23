@@ -605,18 +605,19 @@ function prdSlider(){
     
     // Swiper 초기화
     let PrdSwiper = new Swiper(sliderId, {
-      //autoHeight: true,
       slidesPerView: slidesPerViewValue,
       spaceBetween: spaceBetweenValue,
       //slidesOffsetAfter : slidesOffsetAfterValue,
       pagination: {
         el: sliderId + " .swiper-pagination",
+        clickable: true,
       },
       observer: true,
       observeParents: true,
       breakpoints: {
         1024: {
           slidesPerView: 5,
+          slidesPerGroup: 5,
         },
       },
     });
