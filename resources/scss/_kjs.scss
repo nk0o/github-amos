@@ -163,11 +163,12 @@
   &.prd_more{
     @include flexCenter;
     height: 100%;
-    align-items: stretch;
     a{
       @include flexCenter;
       flex-direction: column;
       gap: 4px;
+      height: 100%;
+      width: 100%;
       [class*=ico_]::before{
         background-color: $gray-700 !important;
       }
@@ -224,6 +225,11 @@
           margin-bottom: 8px;
         }
       }
+    }
+    &.prd_more{
+      height: unset;
+      justify-content: center;
+      align-items: center;
     }
     .bottom {
       margin-top: 10px;
@@ -906,15 +912,17 @@
       }
     }
   }
-  .tab_cont_item  {
-    .inner {
-      padding: 32px 20px 60px;
-    }
-    .tbl{
-      border: none;
-      border-top: 1px solid $gray-100;
-      & > :not(caption) > * > *{
-        border-right-width: 0;
+  .tab_cont{
+    .tab_cont_item  {
+      .inner {
+        padding: 32px 20px 60px;
+      }
+      .tbl{
+        border: none;
+        border-top: 1px solid $gray-100;
+        & > :not(caption) > * > *{
+          border-right-width: 0;
+        }
       }
     }
   }
@@ -2650,10 +2658,9 @@
       .detail{
         display: flex;
         justify-content: space-between;
-        & > em {
-          font-size: 15px;
-          font-weight: $fw-sb;
-          line-height: 20px;
+        & > em, & > .btn_txt_detail, .btn_txt_detail  {
+          @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3334);
+          margin-left: 0;
         }
         .point {
           text-transform: uppercase;
