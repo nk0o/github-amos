@@ -99,7 +99,7 @@
         bottom: 0px;
         width: 100%;
         height: 1px;
-        background-color: $gray-100;;
+        background-color: $gray-100;
       }
     }
     .tab_bar {
@@ -108,9 +108,18 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: $color-primary;
       z-index: 1;
+      background-color: transparent;
       transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+      animation: colorchange .1s .3s forwards ;
+      @keyframes colorchange {
+        from{
+          background-color: transparent;
+        }
+        to{
+          background-color: $color-primary;
+        }
+      }
     }
     .tab_list{
       overflow: hidden;
