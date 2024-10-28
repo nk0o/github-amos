@@ -3339,6 +3339,9 @@ button:disabled *[class*=ico_]::before {
 .input_check[disabled][checked] + label::before {
   background-image: url("../images/icon/ico_checkbox_on.svg");
 }
+.input_check.hide + label::before {
+  display: none;
+}
 
 .input_check_wrap.without_box .input_check + label {
   min-height: 20px;
@@ -5820,6 +5823,9 @@ div.dataTables_wrapper .btn_floating:focus {
   line-height: 1.3333;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
+.modal_terms .p_indent {
+  text-indent: 8px;
+}
 .modal_form .input_group {
   padding-top: 24px;
 }
@@ -7784,6 +7790,12 @@ footer .f_company {
 }
 .page_form .login_first .list_btn_wrap {
   margin-top: 24px;
+}
+.page_form .login_first .agree_check_list {
+  margin-top: 16px;
+}
+.page_form .login_first .agree_check_list .input_check_wrap {
+  margin: 0;
 }
 
 .list_btn_wrap {
@@ -10991,6 +11003,16 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.357;
 }
+.agree_check.type_radio .txt_alert {
+  color: #444444;
+}
+.agree_check.type_radio .input_radio_wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  padding-left: 16px;
+}
 .agree_check .agree_check_list {
   position: relative;
   padding: 16px 0 0;
@@ -11033,6 +11055,15 @@ footer .f_company {
   top: 8px;
   right: 0;
 }
+.agree_check_list .agree_btm_info {
+  border-top: 1px solid #eeeeee;
+  margin-top: 4px;
+  padding-top: 12px;
+}
+.agree_check_list .agree_btm_info .input_check.hide + label {
+  padding-left: 0;
+  color: #666666;
+}
 
 .user_check.input_check_list li + li {
   margin-top: 10px;
@@ -11070,6 +11101,9 @@ footer .f_company {
 /*** 입점상담 ***/
 .page_enter .info_area {
   padding-top: 32px;
+}
+.page_enter .login_first .btn_group {
+  margin-top: 60px;
 }
 
 /*** 포인트몰 ***/

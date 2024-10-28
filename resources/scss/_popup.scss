@@ -122,6 +122,9 @@
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3333);
       font-family: $font-aritadt;
     }
+    .p_indent{
+      text-indent: 8px;
+    }
   }
   &_form{
     .input_group{
