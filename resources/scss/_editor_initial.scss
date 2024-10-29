@@ -1,4 +1,4 @@
-.board_detail .detail_cont {
+.editor_reset, .board_detail .detail_cont {
   font-family:$font-aritadt;
   min-width:revert;
   line-height:revert;
@@ -15,7 +15,7 @@
     -webkit-tap-highlight-color: revert;
   }
 }
-.board_detail .detail_cont {
+.editor_reset, .board_detail .detail_cont {
   div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: revert;
     padding: revert;

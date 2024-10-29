@@ -69,6 +69,7 @@
     }
   }
   .prd {
+		cursor: pointer;
     .img {
       position: relative;
       width: 100%;
@@ -1117,15 +1118,15 @@
       transform: translateX(-50%) scale(1);
     }
     45% {
-      opacity: 0.5;
-      top: -1px;
-      left: 93vw;
+      opacity: 0.2;
+      top: -3px;
+      left: calc(100% - 50px);
       transform: translateX(-50%) scale(0.1)
     }
     100% {
       opacity: 0;
-      top: -1px;
-      left: 93vw;
+      top: -3px;
+      left: calc(100% - 50px);
       transform: translateX(-50%) scale(0)
     }
   }
@@ -1252,8 +1253,9 @@
 }
 
 .top_exchange_wrap {
-  padding: 20px 0 32px;
+  padding: 20px 0;
   .exchange_box {
+    margin-top: 20px;
     padding: 20px;
     background: #EFF6FF;
     border-radius: 8px;
@@ -1289,7 +1291,7 @@
     margin-top: 8px;
   }
   .txt_notice_list {
-    margin-top: 20px;
+    margin-top: 8px;
   }
 }
 .exchange_detail {
@@ -1568,7 +1570,7 @@
 }
 
 .monthpicker_cont {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 24px;
   line-height: 34px; 
   display: flex;
@@ -1967,6 +1969,7 @@
     }
   }
   .detail_cont {
+   overflow: auto;
     margin-bottom: 40px;
     img {
       width: 100%;

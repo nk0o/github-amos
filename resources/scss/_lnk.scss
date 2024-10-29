@@ -1210,9 +1210,22 @@
   font-family: $font-aritadt;
   margin-bottom: 12px;
   white-space: normal;
+  &.required::after{
+   content: '';
+   position: relative;
+   display: inline-block;
+   top: 3px;
+   right: -2px;
+   width: 4px;
+   height: 4px;
+   background-color: $color-red;
+   border-radius: 100%;
+   vertical-align: top;
+  }
   &[data-asknum]::before{
     content: attr(data-asknum);
     display: block;
+    width: max-content;
     margin-bottom: 8px;
     @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
   }

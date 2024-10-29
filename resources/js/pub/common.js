@@ -796,11 +796,14 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
 
 //카트 담기
 function putInCart() {
-  $(document).on('click touchend', '.prd_cart_btn', function(){
+  $(document).on('click', '.prd_cart_btn', function(){
     putInCartAction()
   })
-  $(document).on('click touchend', '.btn_cart', function(){
-      putInCartAction();
+  $(document).on('click', '.btn_cart', function(){
+      $(this).toggleClass('is_incart');
+			if($(this).hasClass('is_incart')){
+				 putInCartAction();
+      }
   })
   function putInCartAction(){
     if($('.prd_put_cart').length == 0) {
