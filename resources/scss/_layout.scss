@@ -1,3 +1,13 @@
+html, body{
+  position: fixed;
+  overflow: hidden;
+  #wrap{
+    width: 100vw;
+    height: 100vh;/* calc(100dvh - 위아래 높이) */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 //Body
 body{
   &.no_scroll{
@@ -37,7 +47,7 @@ header{
   display:flex;
   flex-direction: column;
   &:has(.btm_bar){
-    margin-bottom: $btmbar-H;
+    padding-bottom: $btmbar-H;
     min-height: calc(100dvh - 90px);
   }
 } 
@@ -231,6 +241,7 @@ footer{
   }
   .prd_box.swiper-slide{
     // min-width: 159px;
+    cursor: pointer;
     max-width: none;
     background-color: $color-white;
     padding: 8px 0 0 9px;
