@@ -9232,6 +9232,9 @@ footer .f_company {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.prd_detail_view .tab_cont {
+  min-height: calc(100dvh - 90px - 60px - 40px);
+}
 .prd_detail_view .tab_cont .tab_cont_item .inner {
   padding: 32px 20px 60px;
 }

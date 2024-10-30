@@ -920,6 +920,7 @@
     }
   }
   .tab_cont{
+		min-height: calc(100dvh - $btmbar-H - $appbar-H - 40px);
     .tab_cont_item  {
       .inner {
         padding: 32px 20px 60px;
