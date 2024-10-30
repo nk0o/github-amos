@@ -1,7 +1,9 @@
 html, body{
   position: fixed;
   overflow: hidden;
-  #wrap{
+  #wrap, .body_wrapper{
+   
+    padding-bottom: $btmbar-H;
     width: 100vw;
     height: 100vh;/* calc(100dvh - 위아래 높이) */
     overflow-y: scroll;
