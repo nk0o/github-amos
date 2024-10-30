@@ -71,3 +71,57 @@
   }
 }
 
+
+.ui-uploader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid $gray-100;
+  &-container {
+    width: 100%;
+    height: 100%;
+  }
+  &-select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $gray-50;
+    z-index: 1;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;      
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      mask: url("../images/icon/ico_plus_20.svg") center/contain no-repeat;
+      background-color: #bbbbbb !important;
+    }
+    a{
+      font-size: 0;
+      opacity: 0;
+    }
+  }
+  &-preview {
+    position: relative;
+    .file-delete {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background: url("../images/icon/ico_close_box.svg") center/contain no-repeat;
+    }
+  }
+  img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+  }
+}

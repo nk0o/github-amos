@@ -1,105 +1,105 @@
-.board_detail .detail_cont {
-  font-family:$font-aritadt !important;
-  min-width:revert !important;
-  line-height:revert !important;
-  font-size:revert !important;
-  color: revert !important;
-  word-break: revert !important;
-  word-wrap: revert !important;
-  -ms-touch-action: revert !important;
-  touch-action: revert !important;
+.editor_reset, .board_detail .detail_cont {
+  font-family:$font-aritadt;
+  min-width:revert;
+  line-height:revert;
+  font-size:revert;
+  color: revert;
+  word-break: revert;
+  word-wrap: revert;
+  -ms-touch-action: revert;
+  touch-action: revert;
   * {
-    padding: revert !important;
-    margin: revert !important;
-    box-sizing: revert !important;
-    -webkit-tap-highlight-color: revert !important;
+    padding: revert;
+    margin: revert;
+    box-sizing: revert;
+    -webkit-tap-highlight-color: revert;
   }
 }
-.board_detail .detail_cont {
+.editor_reset, .board_detail .detail_cont {
   div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: revert !important;
-    padding: revert !important;
-    border:revert !important;
-    font: revert !important;
-    vertical-align: revert !important;
-    box-sizing: revert !important;
-    letter-spacing: revert !important;
-    font-family:$font-aritadt !important;
-    background-color: revert !important;
+    margin: revert;
+    padding: revert;
+    border:revert;
+    font: revert;
+    vertical-align: revert;
+    box-sizing: revert;
+    letter-spacing: revert;
+    font-family:$font-aritadt;
+    background-color: revert;
   }
   article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: revert !important;
-    font-family:$font-aritadt !important;
+    display: revert;
+    font-family:$font-aritadt;
   }
   img {
-    margin: revert !important;
-    padding: revert !important;
-    border:revert !important;
-    font: revert !important;
-    vertical-align: revert !important;
-    box-sizing: revert !important;
-    max-width: revert !important;
-    font-family:$font-aritadt !important;
+    margin: revert;
+    padding: revert;
+    border:revert;
+    font: revert;
+    vertical-align: revert;
+    box-sizing: revert;
+    max-width: revert;
+    font-family:$font-aritadt;
   }
   figure, a, button {
-    font:revert !important;
-    color: revert !important;
-    line-height: revert !important;
-    text-decoration: revert !important;
-    font-family:$font-aritadt !important;
+    font:revert;
+    color: revert;
+    line-height: revert;
+    text-decoration: revert;
+    font-family:$font-aritadt;
   }
   button{
-    vertical-align: revert !important;
-    border: revert !important;
-    background: revert !important;
-    white-space: revert !important;
-    outline: revert !important;
-    cursor: revert !important;
-    font-family:$font-aritadt !important;
+    vertical-align: revert;
+    border: revert;
+    background: revert;
+    white-space: revert;
+    outline: revert;
+    cursor: revert;
+    font-family:$font-aritadt;
   }
   & > a:active, & > a:focus, & >a:hover {
-    outline: revert !important;
-    text-decoration: revert !important;
-    color: revert !important;
-    font-family:$font-aritadt !important;
+    outline: revert;
+    text-decoration: revert;
+    color: revert;
+    font-family:$font-aritadt;
   }
   ol, ul {
-    list-style:  revert !important;
-    font-family:$font-aritadt !important;
+    list-style:  revert;
+    font-family:$font-aritadt;
   }
   blockquote,
   q {
-    quotes: revert !important;
-    font-family:$font-aritadt !important;
+    quotes: revert;
+    font-family:$font-aritadt;
   }
   blockquote:before, blockquote:after, q:before, q:after {
-    content: revert !important;
-    font-family:$font-aritadt !important;
+    content: revert;
+    font-family:$font-aritadt;
   }
   table {
-    width: revert !important;
-    border-collapse: revert !important;
-    border-spacing: revert !important;
-    font-family:$font-aritadt !important;
+    width: revert;
+    border-collapse: revert;
+    border-spacing: revert;
+    font-family:$font-aritadt;
   }
   td, th{
-    border-collapse: revert !important;
-    border-spacing: revert !important;
-    border-color: inherit !important;
-    //border: 1px solid black !important;
+    border-collapse: revert;
+    border-spacing: revert;
+    border-color: inherit;
+    //border: 1px solid black;
   }
   input[type="text"], textarea, input[type="button"], input[type='submit'], input[type='search'] {    
-    border-radius: revert !important;
-    border: revert !important;
-    box-shadow: revert !important;
-    -webkit-appearance: revert !important;
-    -moz-appearance: revert !important;
-    appearance: revert !important;
-    font-family:$font-aritadt !important;
+    border-radius: revert;
+    border: revert;
+    box-shadow: revert;
+    -webkit-appearance: revert;
+    -moz-appearance: revert;
+    appearance: revert;
+    font-family:$font-aritadt;
   }
   select:focus, input:focus, textarea:focus, button:focus {
-    outline: revert !important;
-    font-family:$font-aritadt !important;
+    outline: revert;
+    font-family:$font-aritadt;
   }
   
 }

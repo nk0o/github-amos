@@ -320,6 +320,15 @@ button {
     border:1px solid $gray-50;
     border-radius: 9999px;
   }
+  &_cart{
+   &.is_incart{
+      background-color: $color-primary;
+      border-color: $color-primary;
+      .ico_btn_cart::before{
+         background-color: $color-white;
+      }
+   }
+  }
 }
 .spinner{
   @include flexBetween;

@@ -32,6 +32,31 @@
               <input type="text" id="" class="input_text" value="" placeholder="이름을 입력해주세요"><!-- 240903 문구수정 -->
             </label>
           </div><!-- //.input_group -->
+          <!-- 241028 약관동의 추가 -->
+          <ul class="agree_check_list">
+            <li>
+              <div class="input_check_wrap">
+                <input type="checkbox" id="check-1-1" class="input_check" name="check-item-1">
+                <label for="check-1-1">(필수) 개인정보 수집,이용 동의</label>
+              </div>
+              <button type="button" id="modal01" class="ico_16 ico_chevNext_16 btn_modal_open"><span class="hide">약관내용 보기</span></button>
+            </li>
+            <li>
+              <div class="input_check_wrap">
+                <input type="checkbox" id="check-1-2" class="input_check" name="check-item-1">
+                <label for="check-1-2">(필수) 개인정보 제3자 제공 동의</label>
+              </div>
+              <button type="button" id="modal02" class="ico_16 ico_chevNext_16 btn_modal_open"><span class="hide">약관내용 보기</span></button>
+            </li>
+            <li class="agree_btm_info">
+              <div class="input_check_wrap">
+                <span class="input_check hide"></span><!-- 241028 체크아님 -->
+                <label>개인정보 처리 위탁 안내</label>
+              </div>
+              <button type="button" id="modal03" class="ico_16 ico_chevNext_16 btn_modal_open"><span class="hide">안내내용 보기</span></button>
+            </li>
+          </ul>
+          <!-- // 241028 약관동의 추가 -->
         </div><!-- //.input_area -->
         <div class="btn_group">
           <button class="btn_lg btn_primary">상담신청</button>
@@ -45,7 +70,329 @@
   </div>
 
 
-    
+
+
+  <!-- 241028 약관 팝업 / 거래대리점 팝업 추가 -->
+  <!--------------- 약관 팝업 --------------->
+  
+  <!---------- (필수) 개인정보 수집 및 이용동의 ---------->
+  <div class="modal_container fade" data-modal="modal01">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_header">
+        <h1 class="modal_tit is_line">(필수) 개인정보 수집 및 이용동의</h1>
+      </div>
+      <div class="modal_body">
+        <div class="modal_terms">
+          <div class="scroll_inner">
+            <p><strong>개인정보 수집 및 이용동의</strong></p>
+            <p>▶ 수집하는 개인정보의 항목 : 이름, 휴대전화번호, 살롱명, 살롱주소, 사업자등록번호</p>
+            <p>▶ 수집 및 이용목적 : 원활한 비회원 입점상담을 위한 본인확인 및 공지사항 안내</p>
+            <p>▶ 보유 및 이용기간 : 상담 완료 후 30일</p>
+            <br/><br/>
+            <p>입점상담자는 개인정보 수집 및 이용동의에 거부할 수 있습니다. 다만 거부하는 경우 상담 진행이 불가능 합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal_footer">
+        <div class="btn_group">
+          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+        </div>
+      </div>
+    </div><!-- /.modal_content -->
+  </div><!-- /.modal_container -->
+
+  <!---------- (필수) 개인정보 제3자 제공 동의 ---------->
+  <div class="modal_container fade" data-modal="modal02">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_header">
+        <h1 class="modal_tit is_line">(필수) 개인정보 제3자 제공 동의</h1>
+      </div>
+      <div class="modal_body">
+        <div class="modal_terms">
+          <div class="scroll_inner">
+            <p><strong>개인정보 제3자 제공 동의</strong></p>
+            <p>▶ 개인정보 제공 받는자 : <button type="button" id="modalPay" class="btn_modal_open btn_txt">확인하기</button></p>
+            <p>▶ 수집하는 개인정보 제공 항목 :  이름, 휴대전화번호, 살롱명, 살롱주소, 사업자등록번호</p>
+            <p>▶ 수집 및 이용 목적 : 원활한 비회원 입점상담을 위한 본인확인 및 공지사항 안내</p>
+            <p>▶ 보유 및 이용기간 : 상담 완료 후 30일</p>
+            <br/><br/>
+            <p>이용자는 개인정보 수집 및 이용동의에 거부할 수 있습니다. 다만 거부하는 경우 회원가입이 불가능 합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal_footer">
+        <div class="btn_group">
+          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+        </div>
+      </div>
+    </div><!-- /.modal_content -->
+  </div><!-- /.modal_container -->
+
+  <!---------- ※ 개인정보 처리 위탁 안내 ---------->
+  <div class="modal_container fade" data-modal="modal03">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_header">
+        <h1 class="modal_tit is_line">개인정보 처리 위탁 안내</h1>
+      </div>
+      <div class="modal_body">
+        <div class="modal_terms">
+          <div class="scroll_inner">
+            <p><strong>개인정보 처리 위탁 안내</strong></p>
+            <p>
+              (주)아모스프로페셔널은 서비스 향상 및 원활한 전산 처리 등을 위하여 이용자의 개인정보 관리를 외부 전문업체에 위탁하고 있습니다. 
+              아모스프로 서비스의 개인정보 처리업무를 위탁받는 자 및 업무의 내용은 <a href="#"><strong>개인정보 처리방침</strong></a>에서 확인 하실 수 있습니다.<!-- 241028 링크수정필요 -->
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal_footer">
+        <div class="btn_group">
+          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+        </div>
+      </div>
+    </div><!-- /.modal_content -->
+  </div><!-- /.modal_container -->
+
+  <!--------------- // 약관 팝업 --------------->
+
+  <!--------------- 거래 대리점 팝업 --------------->
+  <div class="modal_container" data-modal="modalPay">
+   <div class="modal_overlay"></div>
+   <div class="modal_content">
+     <div class="modal_header">
+       <h1 class="modal_tit is_line">거래 대리점</h1>
+     </div>
+     <div class="modal_body">
+       <div class="modal_tbl">
+         <div class="scroll_inner">
+           <table class="tbl">
+             <colgroup>
+             <col width="50%">
+             <col width="50%">
+             </colgroup>
+             <thead class="tbl_sticky_hd">
+               <tr>
+                 <th scope="col" colspan="2">사업자명 (사업자등록증상 명칭)</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>아모스프로페셔널광명점</td>
+                 <td>아모스프로페셔널부천점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널고양일산점</td>
+                 <td>아모스프로페셔널상인천점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널남인천</td>
+                 <td>아모스프로페셔널부평점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널서인천점</td>
+                 <td>아모스프로페셔널고양덕양점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널강서점</td>
+                 <td>아모스프로페셔널김포점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널양천점</td>
+                 <td>아모스프로페셔널원주점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널강북점</td>
+                 <td>아모스프로페셔널의정부점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널구리점</td>
+                 <td>아모스프로페셔널춘천점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널강릉점</td>
+                 <td>아모스프로페셔널하남점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널제천점</td>
+                 <td>아모스프로페셔널경기광주점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널태백점</td>
+                 <td>아모스프로페셔널성북점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널동부산점</td>
+                 <td>아모스프로페셔널남부산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널밀양점</td>
+                 <td>아모스프로페셔널울산중앙점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널울산남구점</td>
+                 <td>아모스프로페셔널울산북구점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널동래점</td>
+                 <td>아모스프로페셔널달서점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널안동점</td>
+                 <td>아모스프로페셔널대구남부점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널대구북부점</td>
+                 <td>아모스프로페셔널대구동부점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널영주점</td>
+                 <td>아모스프로페셔널수성점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널경산점</td>
+                 <td>아모스프로페셔널구미점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널김천점</td>
+                 <td>아모스프로페셔널경주점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널포항점</td>
+                 <td>아모스프로페셔널광진점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널성남점</td>
+                 <td>아모스프로페셔널노원점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널분당점</td>
+                 <td>아모스프로페셔널화성점</td>
+               </tr>
+               <tr>
+                 <td>(주)아모스프로페셔널안양점</td>
+                 <td>아모스프로페셔널동수원점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널서수원점</td>
+                 <td>아모스프로페셔널안산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널중랑점</td>
+                 <td>아모스프로페셔널용인점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널평택점</td>
+                 <td>아모스프로페셔널한밭점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널세종점</td>
+                 <td>아모스프로페셔널동부점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널서청주점</td>
+                 <td>아모스프로페셔널충주점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널당진점</td>
+                 <td>아모스프로페셔널천안점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널동청주점</td>
+                 <td>아모스프로페셔널서산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널아산점</td>
+                 <td>아모스프로페셔널대전중구점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널광주북구점</td>
+                 <td>아모스프로페셔널여수점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널제주점</td>
+                 <td>아모스프로페셔널광산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널순천점</td>
+                 <td>아모스프로페셔널목포점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널전주완산점</td>
+                 <td>㈜아모스프로페셔널금남점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널덕진점</td>
+                 <td>아모스프로페셔널남원점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널정읍점</td>
+                 <td>아모스프로페셔널익산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널군산점</td>
+                 <td>아모스프로페셔널중부산점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널진주점</td>
+                 <td>아모스프로페셔널창원점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널마산점</td>
+                 <td>아모스프로페셔널김해점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널서부산점</td>
+                 <td>아모스프로페셔널거제통영점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널부산북부점</td>
+                 <td>아모스프로페셔널서초점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널강동점</td>
+                 <td>아모스프로페셔널강남점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널서대문점</td>
+                 <td>아모스프로페셔널마포점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널송파점</td>
+                 <td>아모스프로페셔널관악점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널구로점</td>
+                 <td>아모스프로페셔널영등포점</td>
+               </tr>
+               <tr>
+                 <td>아모스프로페셔널중구종로점</td>
+                 <td>아모스프로페셔널은평점</td>
+               </tr>
+             </tbody>
+           </table>
+         </div><!-- //.scroll_inner -->
+       </div>
+     </div>
+     <div class="modal_footer">
+       <div class="btn_group">
+         <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+       </div>
+     </div>
+   </div><!-- //.modal_content -->
+ </div><!-- //.modal_container -->
+  <!--------------- // 거래 대리점 팝업 --------------->
+
+
+
+
+
+
+
+
+
   <!--------------- 퍼블화면에만 쓰이는 script --------------->
   <script>
     $(document).ready(function(){

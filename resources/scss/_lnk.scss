@@ -219,6 +219,18 @@
     margin:10px 0 0;
     @include fontStyle($gray-700, $fs-s, $fw-m, 1.357);
   }
+  &.type_radio{
+    .txt_alert {
+      color: $gray-900;
+    }
+    .input_radio_wrap{
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-top: 20px;
+      padding-left: 16px;
+    }
+  }
   .agree_check_list{
     position: relative;
     padding: 16px 0 0;
@@ -254,6 +266,15 @@
         position: absolute;
         top: 8px;
         right: 0;
+      }
+    }
+    .agree_btm_info{
+      border-top: 1px solid $gray-100;
+      margin-top: 4px;
+      padding-top: 12px;
+      .input_check.hide + label{
+        padding-left: 0;
+        color: $gray-800;
       }
     }
   }
@@ -294,6 +315,11 @@
 .page_enter{
   .info_area{
     padding-top: 32px;
+  }
+  .login_first{
+    .btn_group{
+      margin-top: 60px;
+    }
   }
 }
 /*** 포인트몰 ***/
@@ -1184,9 +1210,22 @@
   font-family: $font-aritadt;
   margin-bottom: 12px;
   white-space: normal;
+  &.required::after{
+   content: '';
+   position: relative;
+   display: inline-block;
+   top: 3px;
+   right: -2px;
+   width: 4px;
+   height: 4px;
+   background-color: $color-red;
+   border-radius: 100%;
+   vertical-align: top;
+  }
   &[data-asknum]::before{
     content: attr(data-asknum);
     display: block;
+    width: max-content;
     margin-bottom: 8px;
     @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
   }

@@ -48,6 +48,11 @@
       background-image: url("../images/icon/ico_checkbox_on.svg");
     }
   }  
+  &.hide{
+    & + label::before{
+      display: none;
+    }
+  }
 }
 //체크표시만 있는 타입
 .input_check_wrap.without_box{

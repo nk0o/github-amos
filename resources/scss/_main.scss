@@ -265,6 +265,7 @@
 
 /* 카테고리 페이지 */
 .page_category{
+   max-height: calc(100dvh - $appbar-H - $btmbar-H);
   .tab_menu ul, .tab_cont{
     max-width: 700px;
     margin: 0 auto;
@@ -290,6 +291,7 @@
     
   }
   &_tit{
+   cursor: pointer;
     @include fontStyle($gray-600, $fs-s, $fw-m, 2.285);
   }
   &_wrap{
@@ -363,6 +365,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       >a{
+				cursor: pointer;
         position: relative;
         @include flexCenter;
         justify-content: flex-start;

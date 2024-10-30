@@ -605,18 +605,19 @@ function prdSlider(){
     
     // Swiper 초기화
     let PrdSwiper = new Swiper(sliderId, {
-      //autoHeight: true,
       slidesPerView: slidesPerViewValue,
       spaceBetween: spaceBetweenValue,
       //slidesOffsetAfter : slidesOffsetAfterValue,
       pagination: {
         el: sliderId + " .swiper-pagination",
+        clickable: true,
       },
       observer: true,
       observeParents: true,
       breakpoints: {
         1024: {
           slidesPerView: 5,
+          slidesPerGroup: 5,
         },
       },
     });
@@ -795,11 +796,14 @@ function tabMoveAnchor() {//.tab_menu.clickTab --> .toCont
 
 //카트 담기
 function putInCart() {
-  $(document).on('click touchend', '.prd_cart_btn', function(){
+  $(document).on('click', '.prd_cart_btn', function(){
     putInCartAction()
   })
-  $(document).on('click touchend', '.btn_cart', function(){
-      putInCartAction();
+  $(document).on('click', '.btn_cart', function(){
+      $(this).toggleClass('is_incart');
+			if($(this).hasClass('is_incart')){
+				 putInCartAction();
+      }
   })
   function putInCartAction(){
     if($('.prd_put_cart').length == 0) {

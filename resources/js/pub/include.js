@@ -10,6 +10,7 @@ var include = {
     document.write('<script src="../../resources/js/libs/swiper.min.js"></script>');
     document.write('<script src="../../resources/js/libs/monthpicker.js"></script>');
     document.write('<script src="../../resources/js/libs/daterangepicker.min.js"></script>');
+    document.write('<script src="../../resources/js/libs/jquery.uploader.min.js"></script>');//241024 추가
     document.write('<script src="../../resources/js/pub/common.js"></script>');
   },
   style: function () {

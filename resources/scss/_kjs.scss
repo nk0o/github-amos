@@ -69,6 +69,7 @@
     }
   }
   .prd {
+		cursor: pointer;
     .img {
       position: relative;
       width: 100%;
@@ -167,6 +168,8 @@
       @include flexCenter;
       flex-direction: column;
       gap: 4px;
+      height: 100%;
+      width: 100%;
       [class*=ico_]::before{
         background-color: $gray-700 !important;
       }
@@ -223,6 +226,11 @@
           margin-bottom: 8px;
         }
       }
+    }
+    &.prd_more{
+      height: unset;
+      justify-content: center;
+      align-items: center;
     }
     .bottom {
       margin-top: 10px;
@@ -355,6 +363,7 @@
   text-align: center;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
   opacity: 0.9;
+  z-index: 1;
   .btn_bottom {
     margin: 0 auto;
     padding: 0 24px;
@@ -630,6 +639,12 @@
     .list_btn_wrap {
       margin-top: 24px;
     }
+    .agree_check_list{
+      margin-top: 16px;
+      .input_check_wrap{
+        margin:0;
+      }
+    }
   }
 }
 
@@ -775,7 +790,6 @@
 }
 
 .page_detail {
-  padding-bottom: 40px;
   background: #fff;
   .hr_divider{
     position: relative;
@@ -783,6 +797,7 @@
   }
   .sec_product.is_noBack  {
     padding-top: 32px;
+    padding-bottom: 40px;
     background-color: #fff;
     .recommend_prd {
       max-width: 1024px;
@@ -904,15 +919,17 @@
       }
     }
   }
-  .tab_cont_item  {
-    .inner {
-      padding: 32px 20px 60px;
-    }
-    .tbl{
-      border: none;
-      border-top: 1px solid $gray-100;
-      & > :not(caption) > * > *{
-        border-right-width: 0;
+  .tab_cont{
+    .tab_cont_item  {
+      .inner {
+        padding: 32px 20px 60px;
+      }
+      .tbl{
+        border: none;
+        border-top: 1px solid $gray-100;
+        & > :not(caption) > * > *{
+          border-right-width: 0;
+        }
       }
     }
   }
@@ -1101,15 +1118,15 @@
       transform: translateX(-50%) scale(1);
     }
     45% {
-      opacity: 0.5;
-      top: -1px;
-      left: 93vw;
+      opacity: 0.2;
+      top: -3px;
+      left: calc(100% - 50px);
       transform: translateX(-50%) scale(0.1)
     }
     100% {
       opacity: 0;
-      top: -1px;
-      left: 93vw;
+      top: -3px;
+      left: calc(100% - 50px);
       transform: translateX(-50%) scale(0)
     }
   }
@@ -1212,6 +1229,10 @@
     @include fontStyle($gray-800 !important, $fs-xs !important, $fw-m !important, 1.3846 !important);
     font-family: $font-aritadt !important;
     list-style: none !important;
+    p{
+      @include fontStyle($gray-800 !important, $fs-xs !important, $fw-m !important, 1.3846 !important);
+      font-family: $font-aritadt !important;
+    }
     em {
       display: block;
       color: #444;
@@ -1232,8 +1253,9 @@
 }
 
 .top_exchange_wrap {
-  padding: 20px 0 32px;
+  padding: 20px 0;
   .exchange_box {
+    margin-top: 20px;
     padding: 20px;
     background: #EFF6FF;
     border-radius: 8px;
@@ -1269,7 +1291,7 @@
     margin-top: 8px;
   }
   .txt_notice_list {
-    margin-top: 20px;
+    margin-top: 8px;
   }
 }
 .exchange_detail {
@@ -1548,7 +1570,7 @@
 }
 
 .monthpicker_cont {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 24px;
   line-height: 34px; 
   display: flex;
@@ -1947,6 +1969,7 @@
     }
   }
   .detail_cont {
+   overflow: auto;
     margin-bottom: 40px;
     img {
       width: 100%;
@@ -2644,10 +2667,9 @@
       .detail{
         display: flex;
         justify-content: space-between;
-        & > em {
-          font-size: 15px;
-          font-weight: $fw-sb;
-          line-height: 20px;
+        & > em, & > .btn_txt_detail, .btn_txt_detail  {
+          @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3334);
+          margin-left: 0;
         }
         .point {
           text-transform: uppercase;
