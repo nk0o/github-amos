@@ -3,7 +3,7 @@ html, body{
   overflow: hidden;
   #wrap, .body_wrapper{
    
-    padding-bottom: $btmbar-H;
+  overscroll-behavior: none;
     width: 100vw;
     height: 100vh;/* calc(100dvh - 위아래 높이) */
     overflow-y: scroll;

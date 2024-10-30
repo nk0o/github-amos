@@ -7149,7 +7149,8 @@ html, body {
   overflow: hidden;
 }
 html #wrap, html .body_wrapper, body #wrap, body .body_wrapper {
-  padding-bottom: 90px;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
   width: 100vw;
   height: 100vh; /* calc(100dvh - 위아래 높이) */
   overflow-y: scroll;
