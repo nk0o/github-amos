@@ -405,6 +405,10 @@ function addInputClearBtn(){
   }
 }
 /****** Modal ******/
+function closeAllModal(el){
+	$(".modal_container").attr("aria-hidden","true").removeClass('open');
+	$("body").removeClass("no_scroll");
+}
 function modalUI(){
   //open modal
   $(document).on('click touchend', '.btn_modal_open', function(e){

@@ -167,14 +167,29 @@
       <div class="modal_footer">
         <div class="btn_group">
           <button class="btn_modal_close btn btn_sm btn_border">취소</button>
-          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+          <button class="btn btn_sm btn_primary btn_modal_open" id="modal02">확인</button><!-- 241030 수정 -->
         </div>
       </div><!-- //.modal_footer -->
     </div><!-- //.modal_content -->
   </div><!-- //.modal_container -->
 <!-- //댓글작성 팝업 -->
 
-
+<!-- 241030 컨펌 팝업 -->
+<div class="modal_container alert fade" data-modal="modal02"><!-- modal_container confirm -->
+   <div class="modal_overlay"></div>
+   <div class="modal_content">
+     <div class="modal_body">
+       <p>댓글작성하시겠습니까?</p>
+     </div>
+     <div class="modal_footer">
+       <div class="btn_group">
+         <button class="btn_modal_close btn btn_sm btn_border">취소</button>
+         <button class="btn btn_sm btn_primary" onclick="closeAllModal()">확인</button>
+       </div>
+     </div>
+   </div>
+   <!-- /.modal_content -->
+ </div><!-- /.modal_container -->
 
 
 
