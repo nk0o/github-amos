@@ -288,6 +288,11 @@
     .input_radio {
       &:checked + label{
         background-color: $color-blue-secondary !important;
+        &::before{
+          background-image:none;
+          mask-image: url(../images/icon/ico_check_24_on.svg);
+          background-color: $color-primary !important;
+        }
       }
       & + label{
         padding: 30px;
@@ -617,7 +622,7 @@
     }
     label{
       @include fontStyle($gray-950, $fs-sm, $fw-b, 1.333);
-      font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+      font-family: $font-aritadt;
       &::before{
         top: 0;
       }
@@ -1860,17 +1865,19 @@
       }
     }
     &.brand{
-      padding-top: 0;
-      gap: 12px;
+      padding: 0 0 8px;
+      //gap: 12px;
       .list_item{
         gap: 16px;
+        margin-bottom: 12px;
       }
     }
     &.category{
-      gap: 8px;
+      padding-bottom: 12px;
       border-top: 1px solid $gray-100;
       .list_item{
         padding: 8px 0;
+        margin-bottom: 8px;
       }
       .srch_txt{
         @include flexStart;
@@ -1878,9 +1885,10 @@
       }
     }
     &.product{
-      gap: 4px;
+      padding-bottom: 16px;
       .list_item{
         padding: 12px 0;
+        margin-bottom: 4px;
       }
     }
   }
@@ -1904,6 +1912,9 @@
       min-width: auto;
     }
     .ico_filter{
+      &::before{
+        background-color: $gray-600 !important;
+      }
       &.active::before{
         background-color: $gray-900 !important;
       }
@@ -2079,7 +2090,7 @@
 
 /* 에러페이지(inline으로 style 입힘) */
 .error_wrap{
-  padding-top: 140px;
+  padding-top: 140px 32px 0;
   text-align: center;
   p{
     margin-top: 20px;

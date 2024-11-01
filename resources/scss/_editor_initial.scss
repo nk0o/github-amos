@@ -8,6 +8,7 @@
   word-wrap: revert;
   -ms-touch-action: revert;
   touch-action: revert;
+  line-height: 1.5;
   * {
     padding: revert;
     margin: revert;
@@ -86,7 +87,7 @@
     border-collapse: revert;
     border-spacing: revert;
     border-color: inherit;
-    //border: 1px solid black;
+    border: 1px solid;
   }
   input[type="text"], textarea, input[type="button"], input[type='submit'], input[type='search'] {    
     border-radius: revert;

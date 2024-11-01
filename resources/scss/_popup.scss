@@ -46,6 +46,7 @@
     }
     .modal_footer{
       .btn_group {
+        max-width: none !important;
         padding: 0;
         margin: 0;
       }
