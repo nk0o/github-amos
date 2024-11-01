@@ -10,101 +10,85 @@
   <script>include.style();</script> -->
   <title>Error Page | 아모레뉴플렛폼</title>
   <style>
-    *{
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      box-sizing: border-box;
-      letter-spacing: -0.02em;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* 241101 폰트 적용, css 수정 */
+    /* FONT */
+    /* Arita-Dotum */
+    @font-face {
+      font-family: "Arita-dotum";
+      font-weight: 400;
+      font-style: normal;
+      src: url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.eot"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.eot?#iefix") format("embedded-opentype"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.woff") format("woff"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.woff2") format("woff2"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.ttf") format("truetype"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Medium.svg") format("svg");
+      unicode-range: U+AC00-D7A3;
     }
-    html, body{
-      font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
-      min-width: 280px;
-      line-height: 1.2;
-      font-size: 16px;
-      color: #222222;
-      word-break: keep-all;
-      word-wrap: break-word;
-      -ms-touch-action: manipulation;
-      touch-action: manipulation;
+    @font-face {
+      font-family: "Arita-dotum";
+      font-weight: 600;
+      font-style: normal;
+      src: url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.eot"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.eot?#iefix") format("embedded-opentype"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.woff") format("woff"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.woff2") format("woff2"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.ttf") format("truetype"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-SemiBold.svg") format("svg");
+      unicode-range: U+AC00-D7A3;
     }
-    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-      display: block;
-    }
-    a, button {
-      font-size: 100%;
-      font: inherit;
-      color: inherit;
-      line-height: inherit;
-      text-decoration: none;
-    }
-    p {
-      font-size: 16px;
-    }
-    img {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      box-sizing: border-box;
-      max-width: 100%;
-      vertical-align: top;
-    }
-    #wrap:has(.btm_bar) {
-      margin-bottom: 90px;
-      min-height: calc(100dvh - 90px);
-    }
-    .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner {
-        padding: 0 20px;
-        justify-content: center;
-    }
-    .btm_bar.type_btn{
-      z-index: 2;
-      position: fixed;
-      display: block;
-      width: 100%;
-      bottom: 0;
-      height: 90px;
-      background-color: #2A3136;
-      padding: 24px 0 40px;
-      color: #ffffff;
-      font-size: 1rem;
+    @font-face {
+      font-family: "Arita-dotum";
       font-weight: 700;
-      line-height: 1.5;
+      font-style: normal;
+      src: url("../../resources/fonts/AritaDotum/Arita-Dotum-Bold.eot"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Bold.eot?#iefix") format("embedded-opentype"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Bold.woff") format("woff"),
+      url("../../resources/fonts/AritaDotum/Arita-Dotum-Bold.ttf") format("truetype");
+      unicode-range: U+AC00-D7A3;
     }
-    .btm_bar .inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 5px;
+    /* Gotham */
+    @font-face {
+      font-family: "Gotham";
+      font-style: normal;
+      font-weight: 300;
+      src: url("../../resources/fonts/Gotham/Gotham-Book.woff") format("woff"),
+      url("../../resources/fonts/Gotham/Gotham-Book.ttf") format("truetype"),
+      url("../../resources/fonts/Gotham/Gotham-Book.otf") format("opentype");
+      unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
     }
-    .btm_bar.type_btn .inner {
-      justify-content: center;
-    }
-    .error_wrap{
-      padding-top: 140px;
-      text-align: center;
-    }
-    .error_wrap p{
-      margin-top: 20px;
-      color: #222;
-      font-size: 20px;
+    @font-face {
+      font-family: "Gotham";
+      font-style: normal;
       font-weight: 400;
-      line-height: 1.4; 
+      src: url("../../resources/fonts/Gotham/Gotham-Medium.woff") format("woff"),
+      url("../../resources/fonts/Gotham/Gotham-Medium.ttf") format("truetype"),
+      url("../../resources/fonts/Gotham/Gotham-Medium.otf") format("opentype");
+      unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
     }
-    .error_wrap span{
-      margin-top: 2px;
-      color: #666;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 1.4667;
+    @font-face {
+      font-family: "Gotham";
+      font-style: normal;
+      font-weight: 700;
+      src: url("../../resources/fonts/Gotham/Gotham-Bold.woff") format("woff"),
+      url("../../resources/fonts/Gotham/Gotham-Bold.ttf") format("truetype"),
+      url("../../resources/fonts/Gotham/Gotham-Bold.otf") format("opentype");
+      unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
     }
+    *{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box; letter-spacing: -0.02em; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+    html, body{ font-family: "Arita-dotum", "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif; min-width: 280px; line-height: 1.2; font-size: 16px; color: #222222; word-break: keep-all; word-wrap: break-word; -ms-touch-action: manipulation; touch-action: manipulation; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+    a, button { font-size: 100%; font: inherit; color: inherit; line-height: inherit; text-decoration: none; }
+    p { font-size: 16px; }
+    img { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box; max-width: 100%; vertical-align: top; }
+    #wrap:has(.btm_bar) { margin-bottom: 90px; min-height: calc(100dvh - 90px); }
+    .appbar > .inner, section > .inner, footer > .inner, .btm_bar > .inner, #container > .inner { padding: 0 20px; justify-content: center; }
+    .btm_bar.type_btn{ z-index: 2; position: fixed; display: block; width: 100%; bottom: 0; height: 90px; background-color: #2A3136; padding: 24px 0 40px; color: #ffffff; font-size: 1rem; font-weight: 700; line-height: 1.5; }
+    .btm_bar .inner { display: flex; align-items: center; justify-content: space-between; gap: 5px; }
+    .btm_bar.type_btn .inner { justify-content: center; }
+    .error_wrap{ padding: 140px 32px 0; text-align: center; }
+    .error_wrap p{ margin-top: 20px; color: #222; font-size: 20px; font-weight: 600; line-height: 1.4; }
+    .error_wrap span{ margin-top: 2px; color: #666; font-size: 15px; font-weight: 400; line-height: 1.4667; }
   </style>
 </head>
 <body>
