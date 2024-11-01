@@ -5410,6 +5410,32 @@ div.dataTables_wrapper .btn_floating:focus {
   transform: rotate(180deg) translateY(-50%);
   mask-image: url("../images/icon/ico_minus_20.svg");
 }
+.accord_list.is_plus .accord_head.no_open > a {
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 16px 0 16px 12px;
+  border: 0;
+  color: #222222;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-right: 32px;
+  white-space: normal;
+}
 
 /* Pagination */
 .pagination {

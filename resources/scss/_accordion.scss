@@ -136,6 +136,21 @@
             }
           }
         }
+        &.no_open{
+          & > a{ // .accord_tit이랑 스타일같게
+            @include text-ellipsis;
+            cursor: pointer;
+            position: relative;
+            @include flexBetween;
+            padding: 16px 0 16px 12px;
+            border: 0;
+            @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
+            gap:24px;
+            flex-wrap: wrap;
+            padding-right: 32px;
+            white-space: normal;
+          }
+        }
       }
     }
   }
