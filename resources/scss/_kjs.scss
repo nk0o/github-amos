@@ -239,6 +239,9 @@
   .btn_more{
     margin-top: 28px;
   }
+  & + .prd_list_lg{
+    margin-top: 32px;
+  }
 }
 
 // 리스트형
@@ -352,7 +355,19 @@
     .btn_more{
       margin-top: 36px;
     }
+    & + .prd_list_sm.xs{
+      margin-top: 24px;
+      @media (min-width: $pc-point) {
+        margin-top: 32px;
+      }
+    }
   } 
+  & + .prd_list_sm{
+    margin-top: 20px;
+    @media (min-width: $pc-point) {
+      margin-top: 24px;
+    }
+  }
 }
 
 .prd_cart_btn {
@@ -537,7 +552,7 @@
     }
   }
   .prd_list_lg {
-    gap: 52px 12px;
+    gap: 32px 12px;
     .prd_box {
       width: calc((100% - 48px) / 5);
       max-width: 187px;

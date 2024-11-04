@@ -7540,6 +7540,9 @@ footer .f_company {
 .prd_list_lg .btn_more {
   margin-top: 28px;
 }
+.prd_list_lg + .prd_list_lg {
+  margin-top: 32px;
+}
 
 .prd_list_sm .prd_box, .gift_list .prd_box {
   position: relative;
@@ -7646,6 +7649,22 @@ footer .f_company {
 }
 .prd_list_sm.xs .btn_more, .xs.gift_list .btn_more {
   margin-top: 36px;
+}
+.prd_list_sm.xs + .prd_list_sm.xs, .xs.gift_list + .prd_list_sm.xs, .prd_list_sm.xs + .xs.gift_list, .xs.gift_list + .xs.gift_list {
+  margin-top: 24px;
+}
+@media (min-width: 1024px) {
+  .prd_list_sm.xs + .prd_list_sm.xs, .xs.gift_list + .prd_list_sm.xs, .prd_list_sm.xs + .xs.gift_list, .xs.gift_list + .xs.gift_list {
+    margin-top: 32px;
+  }
+}
+.prd_list_sm + .prd_list_sm, .gift_list + .prd_list_sm, .prd_list_sm + .gift_list, .gift_list + .gift_list {
+  margin-top: 20px;
+}
+@media (min-width: 1024px) {
+  .prd_list_sm + .prd_list_sm, .gift_list + .prd_list_sm, .prd_list_sm + .gift_list, .gift_list + .gift_list {
+    margin-top: 24px;
+  }
 }
 
 .prd_cart_btn {
@@ -7827,7 +7846,7 @@ footer .f_company {
     width: 260px;
   }
   .prd_list_lg {
-    gap: 52px 12px;
+    gap: 32px 12px;
   }
   .prd_list_lg .prd_box {
     width: calc((100% - 48px) / 5);
