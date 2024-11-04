@@ -5853,6 +5853,10 @@ div.dataTables_wrapper .btn_floating:focus {
   font-weight: 400;
   line-height: 1.357;
 }
+.modal_terms p em {
+  color: #444444;
+  font-weight: 600;
+}
 .modal_terms strong, .modal_terms b {
   color: #222222;
   font-size: 0.9375rem;

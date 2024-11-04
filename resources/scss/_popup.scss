@@ -118,6 +118,10 @@
     text-align: left;
     p{
       @include fontStyle($gray-800, $fs-s, $fw-m, 1.357);
+      em{
+        color: $gray-900;
+        font-weight: $fw-sb;
+      }
     }
     strong, b{
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.3333);
