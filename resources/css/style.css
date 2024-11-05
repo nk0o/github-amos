@@ -8226,6 +8226,7 @@ footer .f_company {
 }
 .prd_detail_view .tab_cont {
   min-height: calc(100dvh - 90px - 60px - 40px);
+  margin-bottom: 90px;
 }
 .prd_detail_view .tab_cont .tab_cont_item .inner {
   padding: 32px 20px 60px;
@@ -13377,6 +13378,7 @@ footer .f_company {
   -ms-touch-action: revert;
   touch-action: revert;
   line-height: 1.5;
+  overflow: auto;
 }
 .editor_reset *, .board_detail .detail_cont * {
   padding: revert;
@@ -13451,6 +13453,7 @@ footer .f_company {
   border-collapse: revert;
   border-spacing: revert;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+  width: 100% !important;
 }
 .editor_reset td, .editor_reset th, .board_detail .detail_cont td, .board_detail .detail_cont th {
   border-collapse: revert;
