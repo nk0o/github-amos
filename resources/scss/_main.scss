@@ -297,8 +297,6 @@
   &_wrap{
     @include flexStart;
     align-items: flex-start;
-    height: calc(100dvh - 190px);
-    overflow-y: auto;
   }
   &_nav{
     flex:0 0 125px;
@@ -389,7 +387,7 @@
     }
   }
   &_service{
-    padding: 4px 16px 0;
+    padding: 4px 16px 56px;
     .service_tit{
       display: block;
       padding: 12px 0 12px 20px;
@@ -411,6 +409,19 @@
       &_cont{
         padding:0 0 16px 0;
       }
+    }
+  }
+  &_wrap, &_brand, &_service{
+    height: calc(100dvh - 190px);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    @media (min-width: $pc-point) {
+      &::-webkit-scrollbar{
+        display: block;
+      }
+      @include verticalScroll;
     }
   }
 }

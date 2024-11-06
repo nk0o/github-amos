@@ -5943,17 +5943,17 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 .modal_container .scroll_inner::-webkit-scrollbar {
   opacity: 0;
-  width: 7px;
-  height: 7px;
-  background-color: #dddddd;
+  width: 4px;
+  height: 4px;
 }
 .modal_container .scroll_inner::-webkit-scrollbar-track {
   background-color: #f6f6f6;
 }
 .modal_container .scroll_inner::-webkit-scrollbar-thumb {
-  height: 3px;
+  height: 4px;
   margin: 0 auto;
-  background-color: #aaaaaa;
+  width: 4px;
+  background-color: #bbbbbb;
   cursor: pointer;
 }
 
@@ -7057,8 +7057,6 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   align-items: flex-start;
-  height: calc(100dvh - 190px);
-  overflow-y: auto;
 }
 .cate_nav {
   flex: 0 0 125px;
@@ -7071,17 +7069,17 @@ footer .f_company {
 }
 .cate_nav ul::-webkit-scrollbar {
   opacity: 0;
-  width: 7px;
-  height: 7px;
-  background-color: #dddddd;
+  width: 4px;
+  height: 4px;
 }
 .cate_nav ul::-webkit-scrollbar-track {
   background-color: #f6f6f6;
 }
 .cate_nav ul::-webkit-scrollbar-thumb {
-  height: 3px;
+  height: 4px;
   margin: 0 auto;
-  background-color: #aaaaaa;
+  width: 4px;
+  background-color: #bbbbbb;
   cursor: pointer;
 }
 .cate_nav li.active a {
@@ -7102,17 +7100,17 @@ footer .f_company {
 }
 .cate_list::-webkit-scrollbar {
   opacity: 0;
-  width: 7px;
-  height: 7px;
-  background-color: #dddddd;
+  width: 4px;
+  height: 4px;
 }
 .cate_list::-webkit-scrollbar-track {
   background-color: #f6f6f6;
 }
 .cate_list::-webkit-scrollbar-thumb {
-  height: 3px;
+  height: 4px;
   margin: 0 auto;
-  background-color: #aaaaaa;
+  width: 4px;
+  background-color: #bbbbbb;
   cursor: pointer;
 }
 .cate_list > div {
@@ -7179,7 +7177,7 @@ footer .f_company {
   border-top: 1px solid #ffffff;
 }
 .cate_service {
-  padding: 4px 16px 0;
+  padding: 4px 16px 56px;
 }
 .cate_service .service_tit {
   display: block;
@@ -7199,6 +7197,33 @@ footer .f_company {
 }
 .cate_service .accord_cont {
   padding: 0 0 16px 0;
+}
+.cate_wrap, .cate_brand, .cate_service {
+  height: calc(100dvh - 190px);
+  overflow-y: auto;
+}
+.cate_wrap::-webkit-scrollbar, .cate_brand::-webkit-scrollbar, .cate_service::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .cate_wrap::-webkit-scrollbar, .cate_brand::-webkit-scrollbar, .cate_service::-webkit-scrollbar {
+    display: block;
+  }
+  .cate_wrap::-webkit-scrollbar, .cate_brand::-webkit-scrollbar, .cate_service::-webkit-scrollbar {
+    opacity: 0;
+    width: 4px;
+    height: 4px;
+  }
+  .cate_wrap::-webkit-scrollbar-track, .cate_brand::-webkit-scrollbar-track, .cate_service::-webkit-scrollbar-track {
+    background-color: #f6f6f6;
+  }
+  .cate_wrap::-webkit-scrollbar-thumb, .cate_brand::-webkit-scrollbar-thumb, .cate_service::-webkit-scrollbar-thumb {
+    height: 4px;
+    margin: 0 auto;
+    width: 4px;
+    background-color: #bbbbbb;
+    cursor: pointer;
+  }
 }
 
 .tab_cont_item .thumb_list {
