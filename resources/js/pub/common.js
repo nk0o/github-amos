@@ -336,6 +336,7 @@ function accordionUI() {
       tablist.removeClass('current')
       tablist.eq(idx).addClass('current')
       moveCenterTab(tablist.eq(idx))
+      brandAccordScroll(idx)//241106 추가
     }
     if($(el).parents('.accord_head').hasClass("no_open")){
       return false;
@@ -360,6 +361,16 @@ function accordionUI() {
       }
     }
   }
+}
+
+//241106 추가
+function brandAccordScroll(idx){
+  let tabH= $('.sticky_tab').outerHeight();
+  let accorHeadTitH = $('.cate_brand.accord_list').find('.accord_tit').outerHeight();
+  let tabsAreaH = $('.tabs_area').outerHeight();
+  $("html, body").animate({
+    scrollTop : accorHeadTitH * idx + tabsAreaH + 1 * idx - tabH + 1
+  },500)
 }
 
 //DataTable Select All row
