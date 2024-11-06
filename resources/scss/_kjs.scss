@@ -503,6 +503,8 @@
   background-color: $color-white;
   padding-bottom: 0;
   margin-bottom: -60px;
+  height: auto;
+  overflow: visible;
   /* &::after{
     content: '';
     position: absolute;
