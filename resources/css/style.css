@@ -10234,6 +10234,10 @@ footer .f_company {
 .designer_list_wrap .designer_list > li .info .btn_group {
   margin: 12px 0 0 0;
   padding: 0;
+  justify-content: flex-start;
+}
+.designer_list_wrap .designer_list > li .info .btn_group .btn, .designer_list_wrap .designer_list > li .info .btn_group .btn_lg, .designer_list_wrap .designer_list > li .info .btn_group .btn_md, .designer_list_wrap .designer_list > li .info .btn_group .btn_sm, .designer_list_wrap .designer_list > li .info .btn_group .btn_xs, .designer_list_wrap .designer_list > li .info .btn_group .btn_xxs, .designer_list_wrap .designer_list > li .info .btn_group .btn_icon, .designer_list_wrap .designer_list > li .info .btn_group .btn_bottom, .designer_list_wrap .designer_list > li .info .btn_group .btn_floating, .designer_list_wrap .designer_list > li .info .btn_group button {
+  max-width: 50%;
 }
 .designer_list_wrap .btn_more {
   margin-top: 60px;
