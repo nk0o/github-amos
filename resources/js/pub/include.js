@@ -109,10 +109,10 @@ var include = {
       <div class="tab_menu tab_center line">
         <ul>
         <li class="current tab_list"><button>대카테고리1</button></li>
-        <li class="tab_list"><button>대카테고리2</button></li>
-        <li class="tab_list"><button>대카테고리3</button></li>
-        <li class="tab_list"><button>대카테고리4</button></li>
-        <li class="tab_list"><button>대카테고리5</button></li>
+        <!-- <li class="tab_list"><button>대카테고리2</button></li> -->
+        <!-- <li class="tab_list"><button>대카테고리3</button></li> -->
+        <!-- <li class="tab_list"><button>대카테고리4</button></li> -->
+        <!-- <li class="tab_list"><button>대카테고리5</button></li> -->
         </ul>
       </div>
     </div><!-- //.tab_center_wrap -->
