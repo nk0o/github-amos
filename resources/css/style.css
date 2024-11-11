@@ -10672,6 +10672,7 @@ footer .f_company {
 }
 .conts_box_list_wrap.type_row .conts_box_list .info {
   margin-top: 0;
+  flex: 1;
 }
 .conts_box_list_wrap.type_row .conts_box_list .cate span {
   font-size: 12px;
@@ -10690,14 +10691,15 @@ footer .f_company {
   gap: 16px;
 }
 .conts_box_list_wrap.type_row .conts_box > div .img {
-  width: 26.666666%;
-  min-width: 100px;
-  height: 26.666666%;
-  min-height: 100px;
-  flex-shrink: 0;
-  aspect-ratio: 1;
+  position: relative;
+  flex: 1;
+  max-width: 320px;
+  aspect-ratio: 3/1.7;
 }
 .conts_box_list_wrap.type_row .conts_box > div .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

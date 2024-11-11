@@ -3374,6 +3374,7 @@
       }
       .info {
         margin-top: 0;
+        flex: 1;
       }
       .cate {
         span {
@@ -3395,13 +3396,14 @@
         display: flex;
         gap: 16px;
         .img {
-          width: 26.666666%;
-          min-width: 100px;
-          height: 26.666666%;
-          min-height: 100px;
-          flex-shrink: 0;
-          aspect-ratio: 1;
+          position: relative;
+          flex: 1;
+          max-width: 320px;
+          aspect-ratio: 3 / 1.7;          
           img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
