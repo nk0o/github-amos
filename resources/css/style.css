@@ -8080,6 +8080,15 @@ footer .f_company {
 .inquiry_outer {
   padding: 32px 20px 0;
 }
+.inquiry_outer > li.txt_alert {
+  color: #222222;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3636;
+}
+.inquiry_outer > li.txt_alert + li {
+  margin-top: 20px;
+}
 .inquiry_outer > li + li {
   margin-top: 40px;
 }

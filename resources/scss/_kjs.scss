@@ -779,10 +779,17 @@
 .inquiry_outer {
   padding: 32px 20px 0;
   >li {
+    &.txt_alert {
+      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      & + li{
+        margin-top: 20px;
+      }
+    }
     &+li {
       margin-top: 40px;
     }
   }
+
   @media (min-width: $pc-point) {
     padding: 32px 0 0;
   }
