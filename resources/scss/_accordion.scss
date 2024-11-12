@@ -17,7 +17,7 @@
       height: 24px;
       @include iconImgPath("ico_dropdown_arr_24.svg");
       background-size: contain;
-      background-color: $gray-500 !important;
+      //background-color: $gray-500 !important;
       @include trans($prop: all, $duration: 0.3s, $type: ease-out, $delay: 0s);
     }
   }
@@ -114,13 +114,15 @@
             width: 20px;
             transform-origin: 50% 0%;
             transform: rotate(0deg) translateY(-50%);
-            mask-position: center right;
-            background-color:$color-primary !important;
+            //mask-position: center right;
+            mask: none;
+            //background-color:$color-primary !important;
+            background: url("../images/icon/ico_plus_20-primary.svg") center/contain no-repeat;
           }
         }
         &::before{
           display: none;  
-          mask-image: url("../images/icon/ico_plus_20.svg");
+          //mask-image: url("../images/icon/ico_plus_20.svg");
         }
       }
       .accord_head{
@@ -131,7 +133,8 @@
             .ico_plus_20{
               &::before{
                 transform: rotate(180deg) translateY(-50%);
-                mask-image: url("../images/icon/ico_minus_20.svg");
+                //mask-image: url("../images/icon/ico_minus_20.svg");
+                @include iconImgPath('ico_minus_20-primary.svg')
               }              
             }
           }

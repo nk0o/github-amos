@@ -121,8 +121,8 @@
       display: inline-block;
       width: 12px;
       height: 12px;
-      @include iconImgPath("ico_buy.svg");
-      background-color: $color-orange !important;
+      @include iconImgPath("ico_buy_orange.svg");
+      //background-color: $color-orange !important;
     }
   }
   &_promotion{
@@ -134,8 +134,8 @@
       display: inline-block;
       width: 12px;
       height: 12px;
-      @include iconImgPath("ico_promotion_12.svg");
-      background-color: $color-blue !important;
+      @include iconImgPath("ico_promotion_blue.svg");
+      //background-color: $color-blue !important;
     }
   }
   &_notice{

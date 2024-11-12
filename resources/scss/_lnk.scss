@@ -246,7 +246,7 @@
       padding: 8px 0;
       button, a{
         &::before{
-          background-color: $gray-700 !important;
+          //background-color: $gray-700 !important;
         }
       }
     }
@@ -289,9 +289,8 @@
       &:checked + label{
         background-color: $color-blue-secondary !important;
         &::before{
-          background-image:none;
-          mask-image: url(../images/icon/ico_check_24_on.svg);
-          background-color: $color-primary !important;
+          background: url('../images/icon/ico_check_24_on.svg') center/contain no-repeat;
+          //background-color: $color-primary !important;
         }
       }
       & + label{
@@ -305,8 +304,8 @@
           right: 30px;
           width: 24px;
           height: 24px;
-          mask-image: url(../images/icon/ico_check_24_on.svg);
-          background-color: $gray-400 !important;
+          background: url('../images/icon/ico_check_24.svg') center/contain no-repeat;
+          //background-color: $gray-400 !important;
         }
       }
     }
@@ -366,8 +365,8 @@
           display: inline-block;
           width: 24px;
           height: 20px;
-          mask: url('../images/icon/ico_point_circle.svg') center left/contain no-repeat;
-          background-color: $color-primary
+          background: url('../images/icon/ico_point_circle.svg') center left/contain no-repeat;
+          //background-color: $color-primary
         }
       }
       &_num{
@@ -399,8 +398,8 @@
       display: block;
       width: 20px;
       height: 20px;
-      mask: url('../images/icon/ico_point_circle.svg') center/contain no-repeat;
-      background-color: $color-primary;
+      background: url('../images/icon/ico_point_circle.svg') center/contain no-repeat;
+      //background-color: $color-primary;
       margin-top: -1px;
       margin-left: 2px;
     }
@@ -475,7 +474,7 @@
       }
       [class*="ico_"]{
         &::before{
-          background: $color-blue !important;
+          //background: $color-blue !important;
         }
       }
     }
@@ -502,7 +501,7 @@
       height: 14px;
       top: 12px;
       transform: translateY(0);
-      background-color: $color-blue !important;
+      //background-color: $color-blue !important;
     }
   }
   .gift_list{
@@ -572,7 +571,8 @@
           height: 14px;
           top: 0;
           transform: translateY(0);
-          background-color: $gray-600 !important;
+          //background-color: $gray-600 !important;
+          background:url('../images/icon/ico_bnr_line-600.svg') center/contain no-repeat;
         }
       }
       li{
@@ -1287,7 +1287,7 @@
   }
   *[class*=btn_].btn_border{
     *[class*=ico_]::before{
-      background-color: $gray-600 !important;
+      //background-color: $gray-600 !important;
     }
   }
 }
@@ -1370,7 +1370,7 @@
   }
   i{
     &::before{
-      background-color: $color-primary;
+      //background-color: $color-primary;
     }
   }
   .tit{
@@ -1435,8 +1435,8 @@
       transform: translateY(-50%);
       width: 24px;
       height: 24px;
-      mask: url('../images/icon/ico_chev_next_24.svg') center/contain no-repeat;      
-      background-color: $gray-400 !important;
+      background: url('../images/icon/ico_chev_next_24-400.svg') center/contain no-repeat;      
+      //background-color: $gray-400 !important;
     }
   }
   .state{
@@ -1913,10 +1913,11 @@
     }
     .ico_filter{
       &::before{
-        background-color: $gray-600 !important;
+         //background-color: $gray-600 !important;
       }
       &.active::before{
-        background-color: $gray-900 !important;
+        @include iconImgPath('ico_filter-900.svg')
+        //background-color: $gray-900 !important;
       }
     }
   }
@@ -1941,10 +1942,11 @@
     border: 0;
     &::before{
       right:12px;
-      background-color: $color-blue !important;
+      @include iconImgPath('ico_dropdown_arr_24-blue.svg')
+      //background-color: $color-blue !important;
     }
     .ico_promotion::before{
-      background-color: $color-blue !important;
+      //background-color: $color-blue !important;
     }
   }
   .gift_list{
@@ -1972,7 +1974,7 @@
     .ico_chevNext_20_15{
       margin-top: 1px;
       &::before{
-        background-color: $color-primary;
+        //background-color: $color-primary;
       }
     }
   }
@@ -2057,8 +2059,8 @@
         display: inline-flex;
         width: 20px;
         height: 20px;
-        background-color: $gray-600 !important;
-        mask: url('../images/icon/ico_heart.svg') left center/contain no-repeat;
+        //background-color: $gray-600 !important;
+        background: url('../images/icon/ico_heart-600.svg') left center/contain no-repeat;
       }
     }
   }

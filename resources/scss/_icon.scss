@@ -18,7 +18,7 @@
    }
 }
 /* svg아이콘 backgroundColor로 색상 변경(!important로 덮기) */
-*[class*="ico_"]{
+/* *[class*="ico_"]{
   &.white{
       &::before{
         background-color: $color-white !important;
@@ -34,7 +34,7 @@
         background-color: $color-primary !important;
     }
   }
-}
+} */
 /* 아이콘 사이즈 클래스 */
 *[class*="ico_60"] {
   width: 60px;
@@ -82,7 +82,7 @@
     &_on{
       &::before {
         @include iconImgPath("ico_user_on.svg");
-        background-color: $color-white !important;
+        //background-color: $color-white !important;
       }
     }
   }
@@ -183,8 +183,7 @@
   }
   &_filter {
     &::before {
-      @include iconImgPath("ico_filter.svg");
-      background-color: $gray-900 !important;
+      @include iconImgPath("ico_filter-900.svg");
     }
   }
   &_buy {
@@ -209,7 +208,7 @@
     &_on{
       &::before {
         @include iconImgPath("ico_point_on.svg");
-        background-color: $color-white !important;
+        //background-color: $color-white !important;
       }
     }
     &_circle{
@@ -230,7 +229,7 @@
     &_on{
       &::before {
         @include iconImgPath("ico_wish_on.svg");
-        background-color: $color-white !important;
+        //background-color: $color-white !important;
       }
     }
   }
@@ -413,7 +412,7 @@
   &_check_60{
     &::before {
       @include iconImgPath("ico_check_60.svg");
-      background-color: $color-point !important;
+      //background-color: $color-point !important;
     } 
   }
   &_delete{
@@ -429,7 +428,7 @@
   &_heart_red{
     &::before {
       @include iconImgPath("ico_heart_red.svg");
-      background-color: $color-point !important;
+      //background-color: $color-point !important;
     }
   }
   &_home {
@@ -440,7 +439,7 @@
   &_home_on {
     &::before {
       @include iconImgPath("ico_home_on.svg");
-      background-color: $color-white !important;
+      //background-color: $color-white !important;
     }
   }
   &_search {
@@ -455,7 +454,7 @@
     &_on {
       &::before {
         @include iconImgPath("ico_cate_on.svg");
-        background-color: $color-white !important;
+        //background-color: $color-white !important;
       }
     }
   }
@@ -467,7 +466,7 @@
       &_sm{
         &::before {
           @include iconImgPath("ico_close_20_sm.svg");
-          background-color: $gray-400 !important;
+          //background-color: $gray-400 !important;
         }
       }
     }
@@ -581,7 +580,7 @@
   &_heart_red{
     &::before {
       @include iconImgPath("ico_btn_heart_red.svg");
-      background-color: $color-point !important;
+      //background-color: $color-point !important;
     }
   }
   &_view{

@@ -317,8 +317,8 @@
         padding:8px;
         background-color: $color-white;
         &::before{
-          background-color: $gray-400 !important;
-          mask-size:16px;
+          //background-color: $gray-400 !important;
+          background-size:16px;
         }
       }
     }

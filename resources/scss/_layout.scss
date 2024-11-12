@@ -1,15 +1,15 @@
-html, body{
-  position: fixed;
-  overflow: hidden;
-  #wrap, .body_wrapper{
+// html, body{
+//   position: fixed;
+//   overflow: hidden;
+//   #wrap, .body_wrapper{
    
-  overscroll-behavior: none;
-    width: 100vw;
-    height: 100vh;/* calc(100dvh - 위아래 높이) */
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+//   overscroll-behavior: none;
+//     width: 100vw;
+//     height: 100vh;//calc(100dvh - 위아래 높이)
+//     overflow-y: scroll;
+//     -webkit-overflow-scrolling: touch;
+//   }
+// }
 //Body
 body{
   &.no_scroll{
@@ -49,7 +49,7 @@ header{
   display:flex;
   flex-direction: column;
   &:has(.btm_bar){
-    padding-bottom: $btmbar-H;
+    margin-bottom: $btmbar-H;
     min-height: calc(100dvh - 90px);
   }
 } 
@@ -98,8 +98,8 @@ footer{
       &::before{
         width: 24px;
         height: 24px;
-        mask-image: url('../images/icon/ico_chev_up_24.svg');
-        background-color: $color-primary !important;
+        background-image: url('../images/icon/ico_chev_up_24-primary.svg');
+        //background-color: $color-primary !important;
       }
     }
     &_cont{
@@ -283,7 +283,7 @@ footer{
         color: $gray-950;
       }
       .ico_chevNext_24::before{
-        background-color:$color-primary !important;
+        background: url('../images/icon/ico_chev_next_24-primary.svg') center/contain no-repeat;
       }
     }
     .prd_box.swiper-slide{

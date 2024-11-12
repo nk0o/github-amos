@@ -38,8 +38,8 @@
       @include pos_center;
       width: 20px;
       height: 20px;
-      mask: url('../images/icon/ico_plus_20.svg') center/contain no-repeat;
-      background-color: $gray-400 !important;
+      background: url('../images/icon/ico_plus_20.svg') center/contain no-repeat;
+      //background-color: $gray-400 !important;
     }
   }
 }
@@ -96,8 +96,8 @@
       transform: translate(-50%, -50%);
       width: 20px;
       height: 20px;
-      mask: url("../images/icon/ico_plus_20.svg") center/contain no-repeat;
-      background-color: #bbbbbb !important;
+      background: url("../images/icon/ico_plus_20.svg") center/contain no-repeat;
+      //background-color: #bbbbbb !important;
     }
     a{
       font-size: 0;

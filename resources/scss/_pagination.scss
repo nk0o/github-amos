@@ -51,7 +51,7 @@
          color: $gray-300;
          &.arr:not(.arr_text){
             &::after {
-               background-color: $gray-300 !important;
+               //background-color: $gray-300 !important;
             }
          }
          span{
@@ -156,7 +156,7 @@
          transform: translateY(-50%);
          width: 1px;
          height: 9px;
-         background-color: $gray-200;
+         //background-color: $gray-200;
       }
    }
 }

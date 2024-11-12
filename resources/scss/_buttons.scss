@@ -13,7 +13,7 @@ button {
     cursor: auto;
     *[class*="ico_"] {
       &::before {
-        background-color: $gray-300 !important;
+        //background-color: $gray-300 !important;
       }
     }
   }
@@ -24,14 +24,14 @@ button {
     &.btn_primary{
       *[class*="ico_"] {
         &::before {
-          background-color: $color-white !important;
+          //background-color: $color-white !important;
         }
       }
     }
     &.btn_border{
       *[class*="ico_"] {
         &::before {
-          background-color: $color-primary !important;
+          //background-color: $color-primary !important;
         }
       }
     }
@@ -136,7 +136,7 @@ button {
     background-color: $gray-400 !important;
     *[class*="ico_"] {
       &::before {
-        background-color: $gray-300 !important;
+        //background-color: $gray-300 !important;
       }
     }
   }
@@ -205,7 +205,7 @@ button {
     @include fontStyle($color-white, $fs-m, $fw-sb, 1.5);    
     *[class*="ico_"] {
       &::before{
-        background-color: $color-white !important;
+        //background-color: $color-white !important;
       }
     }
   }
@@ -222,8 +222,8 @@ button {
     border-radius: 4px;
     *[class*="ico_"], &[class*="ico_"] {
       &::before{ 
-        mask-size: 24px;
-        background-color: $gray-950 !important;
+        background-size: 24px;
+        //background-color: $gray-950 !important;
       }
     }
     &.btn_border{
@@ -233,7 +233,7 @@ button {
       background-color: $gray-950 !important;
       *[class*="ico_"] {
         &::before{
-          background-color: $color-white !important;
+          //background-color: $color-white !important;
         }
       }
     }
@@ -243,9 +243,9 @@ button {
     &.active {
       i {
         &::before {
-          mask-image: url(../images/icon/ico_btn_heart_red.svg);
-          background-size: cover;
-          background-color:$color-red !important;
+          background-image: url('../images/icon/ico_btn_heart_red.svg') center/contain no-repeat;
+          // background-size: cover;
+          // background-color:$color-red !important;
         }
       }
     }
@@ -258,16 +258,16 @@ button {
       display: block;
       width: 16px;
       height: 16px;
-      mask: url("../images/icon/ico_delete.svg") left center / contain no-repeat;
-      background-color:$gray-600 !important;
+      background: url("../images/icon/ico_delete.svg") left center / contain no-repeat;
+      //background-color:$gray-600 !important;
     }
     @include fontStyle($gray-600, $fs-xs, $fw-m, 1.23);
     &.type_x{
       &::before {
         width: 20px;
         height: 20px;
-        mask: url("../images/icon/ico_close_20_sm.svg") left center / contain no-repeat;
-        background-color:$gray-400 !important;
+        background: url("../images/icon/ico_close_20_sm.svg") left center / contain no-repeat;
+        //background-color:$gray-400 !important;
       }
     }
   }
@@ -281,7 +281,8 @@ button {
     background: $color-white;
     text-align: center;
     *[class*=ico_].point::before {
-      background-color: #BBB !important;
+      background:transparent url('../images/icon/ico_dropdown_arr_24-600.svg') center/contain no-repeat !important;
+      //background-color: #BBB !important;
     }
     &:hover {
       color: $gray-600;
@@ -346,8 +347,13 @@ button {
     }
     .btn_spinner{
       background-color:transparent !important;
-      &::before{
-        background-color:$gray-300 !important;
+      &_up::before{
+        background:url('../images/icon/ico_spinner_up-300.svg') center/contain no-repeat;
+        //background-color:$gray-300 !important;
+      }
+      &_down::before{
+        background:url('../images/icon/ico_spinner_down.svg') center/contain no-repeat;
+        //background-color:$gray-300 !important;
       }
     }
   }
@@ -371,19 +377,27 @@ button {
     display: block;
     width: 24px;
     height: 24px;
-    mask: url("../images/icon/ico_spinner_down.svg") center / contain no-repeat;
-    background-color:$gray-900 !important;
+    background: url("../images/icon/ico_spinner_down-900.svg") center / contain no-repeat;
+    //background-color:$gray-900 !important;
   }
   &:disabled{
     background-color:transparent !important;
     &::before{
-      background-color:$gray-300 !important;
+      //background-color:$gray-300 !important;
     }
+  }
+  &_up:disabled::before{
+    background: url("../images/icon/ico_spinner_up-300.svg") center / contain no-repeat;
+    //background-color:$gray-300 !important;
+  }
+  &_down:disabled::before{
+    background: url("../images/icon/ico_spinner_down.svg") center / contain no-repeat;
+    //background-color:$gray-300 !important;
   }
   &_up{
     @extend .btn_spinner;
     &::before{
-      mask: url("../images/icon/ico_spinner_up.svg") center / contain no-repeat;
+      background: url("../images/icon/ico_spinner_up.svg") center / contain no-repeat;
     }
   }
   &_down{

@@ -15,7 +15,7 @@
       @include fontStyle($color-white, $fs-lg, $fw-sb, 1.417); 
     }
     .ico_chevNext_24::before{
-      background-color:$color-white !important;
+      //background-color:$color-white !important;
     }
     .desc{
       @include fontStyle($gray-400, $fs-s, $fw-m, 1.214)
@@ -343,10 +343,10 @@
         @include fontStyle($gray-950, $fs-m, $fw-sb, 1.5);
       }
       .ico_24::before{
-        background-color: $gray-950;
+        //background-color: $gray-950;
       }
       .ico_20::before{
-        background-color: $color-primary;
+        //background-color: $color-primary;
       }
     }
     .cate_tit{
@@ -480,8 +480,8 @@
     transform: translateX(-50%);
     width:97px;
     height:97px;
-    mask: url('../images/logo.svg') center/40px no-repeat;
-    background-color: $color-white;
+    background: url('../images/logo-white.svg') center/40px no-repeat;
+    //background-color: $color-white;
   }
   &_spinner{
     .ani_01,.ani_02, .ani_03, .ani_04, .ani_05, .ani_06, .ani_07, .ani_08, .ani_09, .ani_10, .ani_11{

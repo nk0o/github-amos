@@ -243,7 +243,7 @@
       }
       input[type=radio] + label, .input_radio + label{
         &::before{
-          background-image: none;
+          //background-image: none;
         }
       }
     }

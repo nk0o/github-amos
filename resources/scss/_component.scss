@@ -314,8 +314,8 @@
     left: 0;
     width: 16px;
     height: 16px;
-    mask: url('../images/icon/ico_notice.svg') center/contain no-repeat;
-    background-color: $gray-400 !important;
+    background: url('../images/icon/ico_notice.svg') center/contain no-repeat;
+    //background-color: $gray-400 !important;
   }
   &:first-child{
     margin-top: 0 ;
@@ -556,11 +556,11 @@
         flex-direction: column;
         gap: 4px;
         border-color: $gray-200;
-        [class*="ico_"] {
-          &::before{
-            background-color: $gray-400 !important;
-          }
-        }
+        // [class*="ico_"] {
+        //   &::before{
+        //     background-color: $gray-400 !important;
+        //   }
+        // }
         span{
           @include fontStyle($gray-600, $fs-xxs, $fw-m, 1.3333);
         }
@@ -617,28 +617,28 @@
     display: inline-flex;
     width: 20px;
     height: 20px;
-    background-color: $gray-600 !important;
+    //background-color: $gray-600 !important;
   }
 }
 .act_like{
   &::before {
-    mask: url('../images/icon/ico_heart.svg') left center/contain no-repeat;
+    background: url('../images/icon/ico_heart-600.svg') left center/contain no-repeat;
   }
   &.active{
     &::before{
-      background-color: $color-red !important;
-      mask: url('../images/icon/ico_heart_red.svg') left center/contain no-repeat;
+      //background-color: $color-red !important;
+      background: url('../images/icon/ico_heart_red.svg') left center/contain no-repeat;
     }
   }
 }
 .act_comment{
   &::before {
-    mask: url('../images/icon/ico_comment.svg') left center/contain no-repeat;
+    background: url('../images/icon/ico_comment-600.svg') left center/contain no-repeat;
   }
 }
 .act_view {
   &::before {
-    mask: url('../images/icon/ico_view.svg') left center/contain no-repeat;
+    background: url('../images/icon/ico_view.svg') left center/contain no-repeat;
   }
 }
 .act_image{
@@ -648,8 +648,8 @@
   background-color: $gray-50;
   color: $gray-500 !important;
   &::before {
-    background-color: $gray-500 !important;
-    mask: url('../images/icon/ico_image.svg') left center/contain no-repeat;
+    //background-color: $gray-500 !important;
+    background: url('../images/icon/ico_image.svg') left center/contain no-repeat;
   }
 }
 // PC
