@@ -10406,7 +10406,6 @@ footer .f_company {
 .conts_box_detail .conts_box .visual .video_box .video_cont {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .conts_box_list .conts_box.conts_more,
 .conts_box_detail .conts_box.conts_more {
