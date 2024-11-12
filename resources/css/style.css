@@ -1865,7 +1865,7 @@ button:disabled {
   background-color: #222222 !important;
 }
 .btn_like.active i::before {
-  background-image: url("../images/icon/ico_btn_heart_red.svg") center/contain no-repeat;
+  background: url("../images/icon/ico_btn_heart_red.svg") center/contain no-repeat;
 }
 .btn_delete {
   display: flex;
@@ -1958,7 +1958,7 @@ button:disabled {
   border-color: #2A3136;
 }
 .btn_cart.is_incart .ico_btn_cart::before {
-  background-color: #ffffff;
+  background: url("../images/icon/ico_btn_cart-white.svg") center/contain no-repeat;
 }
 
 .spinner {
@@ -11263,9 +11263,6 @@ footer .f_company {
   right: 0;
   margin: 10px 0 0 auto;
 }
-.user_info .app_notice .ico_bell::before {
-  background-color: #2A3136;
-}
 .user_info .app_notice.on .ico_bell::before {
   mask-image: none;
   background: transparent url("../../resources/images/icon/ico_bell_on.svg") center/contain no-repeat !important;
@@ -11383,7 +11380,7 @@ footer .f_company {
   width: 16px;
   height: 16px;
   left: auto;
-  background-color: #aaaaaa;
+  background: url("../images/icon/ico_chev_next_16.svg") center/contain no-repeat;
 }
 
 .order_state {

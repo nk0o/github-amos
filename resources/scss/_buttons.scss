@@ -243,7 +243,7 @@ button {
     &.active {
       i {
         &::before {
-          background-image: url('../images/icon/ico_btn_heart_red.svg') center/contain no-repeat;
+          background: url('../images/icon/ico_btn_heart_red.svg') center/contain no-repeat;
           // background-size: cover;
           // background-color:$color-red !important;
         }
@@ -328,7 +328,8 @@ button {
       background-color: $color-primary;
       border-color: $color-primary;
       .ico_btn_cart::before{
-         background-color: $color-white;
+        @include iconImgPath('ico_btn_cart-white.svg')
+         //background-color: $color-white;
       }
    }
   }

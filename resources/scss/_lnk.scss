@@ -1303,7 +1303,7 @@
     right: 0;
     margin:10px 0 0 auto;
     .ico_bell::before{
-      background-color: $color-primary;
+      //background-color: $color-primary;
     }
     &.on{
       .ico_bell::before{
@@ -1414,7 +1414,8 @@
         width: 16px;
         height: 16px;
         left: auto;
-        background-color: $gray-500;
+        @include iconImgPath('ico_chev_next_16.svg')
+        //background-color: $gray-500;
       }
     }
   }
