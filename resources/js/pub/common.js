@@ -336,6 +336,7 @@ function accordionUI() {
       tablist.removeClass('current')
       tablist.eq(idx).addClass('current')
       moveCenterTab(tablist.eq(idx))
+      brandAccordScroll(idx)//241106 추가
     }
     if($(el).parents('.accord_head').hasClass("no_open")){
       return false;
@@ -360,6 +361,16 @@ function accordionUI() {
       }
     }
   }
+}
+
+//241106 추가
+function brandAccordScroll(idx){
+  let tabH= $('.sticky_tab').outerHeight();
+  let accorHeadTitH = $('.cate_brand.accord_list').find('.accord_tit').outerHeight();
+  let tabsAreaH = $('.tabs_area').outerHeight();
+  $("html, body").animate({
+    scrollTop : accorHeadTitH * idx + tabsAreaH + 1 * idx - tabH + 1
+  },500)
 }
 
 //DataTable Select All row
@@ -405,6 +416,10 @@ function addInputClearBtn(){
   }
 }
 /****** Modal ******/
+function closeAllModal(el){
+	$(".modal_container").attr("aria-hidden","true").removeClass('open');
+	$("body").removeClass("no_scroll");
+}
 function modalUI(){
   //open modal
   $(document).on('click touchend', '.btn_modal_open', function(e){
@@ -800,10 +815,11 @@ function putInCart() {
     putInCartAction()
   })
   $(document).on('click', '.btn_cart', function(){
-      $(this).toggleClass('is_incart');
-			if($(this).hasClass('is_incart')){
-				 putInCartAction();
-      }
+      //241104 담긴 상품 표시X 원복
+      // $(this).toggleClass('is_incart');
+			// if($(this).hasClass('is_incart')){
+      // }
+      putInCartAction();
   })
   function putInCartAction(){
     if($('.prd_put_cart').length == 0) {

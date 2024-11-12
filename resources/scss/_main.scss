@@ -283,7 +283,7 @@
   }
   &_pro{
     .cate_list{
-      padding-bottom: 55vh;
+      //padding-bottom: 55vh;
       scroll-behavior: smooth;
     }
   }
@@ -297,8 +297,6 @@
   &_wrap{
     @include flexStart;
     align-items: flex-start;
-    height: calc(100dvh - 190px);
-    overflow-y: auto;
   }
   &_nav{
     flex:0 0 125px;
@@ -332,6 +330,7 @@
       padding-bottom: 8px;
       &:last-child{
         padding-bottom: 24px;
+        min-height: calc(100dvh - $btmbar-H - $header-H);
       }
     }
     .list_tit{
@@ -389,7 +388,7 @@
     }
   }
   &_service{
-    padding: 4px 16px 0;
+    padding: 4px 16px 56px;
     .service_tit{
       display: block;
       padding: 12px 0 12px 20px;
@@ -413,6 +412,19 @@
       }
     }
   }
+  &_wrap, &_brand, &_service{
+    height: calc(100dvh - 190px);
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    @media (min-width: $pc-point) {
+      &::-webkit-scrollbar{
+        display: block;
+      }
+      @include verticalScroll;
+    }
+  }
 }
 .tab_cont_item{
   .thumb_list{
@@ -431,6 +443,67 @@
         flex: 1;
         max-width: 80px;
 
+      }
+    }
+  }
+}
+
+/* Loading */
+.loading{
+  &_wrap {
+    z-index: 1111;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  &_logo{
+    max-width: 40px;
+    height: auto;
+  }
+  &_center{
+    position: relative;
+  }
+  &_message{
+    margin-top: 20px;
+    @include fontStyle($color-white, $fs-sm, $fw-m, 1.4667);
+  }
+  &_logo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width:97px;
+    height:97px;
+    mask: url('../images/logo.svg') center/40px no-repeat;
+    background-color: $color-white;
+  }
+  &_spinner{
+    .ani_01,.ani_02, .ani_03, .ani_04, .ani_05, .ani_06, .ani_07, .ani_08, .ani_09, .ani_10, .ani_11{
+      fill: rgba(255, 255, 255, .3);
+      animation: loadingSpin 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+      animation-iteration-count: infinite;
+    }
+    .ani_01{animation-delay: 0s;}
+    .ani_11 {animation-delay: 0.1s;}
+    .ani_10 {animation-delay: 0.2s;}
+    .ani_09 {animation-delay: 0.3s;}
+    .ani_08 {animation-delay: 0.4s;}
+    .ani_07 {animation-delay: 0.5s;}
+    .ani_06 {animation-delay: 0.6s;}
+    .ani_05 {animation-delay: 0.7s;}
+    .ani_04 {animation-delay: 0.8s;}
+    .ani_03 {animation-delay: 0.9s;}
+    .ani_02 {animation-delay: 1s;}
+    @keyframes loadingSpin {
+      100% {
+        fill: rgba(255, 255, 255, 1);
       }
     }
   }

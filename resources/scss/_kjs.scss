@@ -239,6 +239,9 @@
   .btn_more{
     margin-top: 28px;
   }
+  & + .prd_list_lg{
+    margin-top: 32px;
+  }
 }
 
 // 리스트형
@@ -314,7 +317,7 @@
         .color_num {
           display: block;
           margin-top: 6px;
-          font-family: 'Arita-dotum';
+          font-family: $font-aritadt;
         }
       }
       .bottom {
@@ -352,7 +355,19 @@
     .btn_more{
       margin-top: 36px;
     }
+    & + .prd_list_sm.xs{
+      margin-top: 24px;
+      @media (min-width: $pc-point) {
+        margin-top: 32px;
+      }
+    }
   } 
+  & + .prd_list_sm{
+    margin-top: 20px;
+    @media (min-width: $pc-point) {
+      margin-top: 24px;
+    }
+  }
 }
 
 .prd_cart_btn {
@@ -488,6 +503,8 @@
   background-color: $color-white;
   padding-bottom: 0;
   margin-bottom: -60px;
+  height: auto;
+  overflow: visible;
   /* &::after{
     content: '';
     position: absolute;
@@ -537,7 +554,7 @@
     }
   }
   .prd_list_lg {
-    gap: 52px 12px;
+    gap: 32px 12px;
     .prd_box {
       width: calc((100% - 48px) / 5);
       max-width: 187px;
@@ -762,10 +779,17 @@
 .inquiry_outer {
   padding: 32px 20px 0;
   >li {
+    &.txt_alert {
+      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      & + li{
+        margin-top: 20px;
+      }
+    }
     &+li {
       margin-top: 40px;
     }
   }
+
   @media (min-width: $pc-point) {
     padding: 32px 0 0;
   }
@@ -866,7 +890,7 @@
     .vol {
       display: block;
       margin-top: 4px;
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       @include fontStyle($gray-900, $fs-sm, $fw-m, 20px);
     }
     .summary {
@@ -920,6 +944,8 @@
     }
   }
   .tab_cont{
+		min-height: calc(100dvh - $btmbar-H - $appbar-H - 40px);
+		margin-bottom: 90px;
     .tab_cont_item  {
       .inner {
         padding: 32px 20px 60px;
@@ -1236,7 +1262,7 @@
     em {
       display: block;
       color: #444;
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       font-size: 13px;
       font-weight: $fw-sb;
       line-height: 18px;
@@ -1733,6 +1759,9 @@
       right: 0;
     }
     .ui-datepicker-today{
+      .ui-state-default::after{
+        display: none;
+      }
       .ui-state-default.ui-state-active{
         background: $gray-100 !important;
         color: $gray-950 !important;
@@ -1792,7 +1821,7 @@
     .tit {
       display: block;
       padding-right: 35px;
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       @include fontStyle($gray-950, $fs-sm, $fw-sb, 20px);
       white-space: normal;
       display: -webkit-box;
@@ -1961,7 +1990,7 @@
       display: flex;
       margin-top: 8px;
       gap:4px;
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
       .badge_notice{
         margin-top: 2px;
@@ -1977,7 +2006,7 @@
     }
     p {
       padding: 0 4px;
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       @include fontStyle($gray-900, $fs-m, $fw-m, 24px);
     }
   }
@@ -2140,7 +2169,7 @@
       margin-top: 4px;
     }
     strong {
-      font-family: 'Arita-dotum';
+      font-family: $font-aritadt;
       @include fontStyle($gray-950, $fs-ml, $fw-sb, 26px);
       word-break: break-all;
     }
@@ -2921,6 +2950,10 @@
         .btn_group {
           margin: 12px 0 0 0;
           padding: 0;
+          justify-content: flex-start;
+          .btn, button{
+            max-width: 50%;
+          }
         }
       }
     }
@@ -3067,7 +3100,7 @@
         .video_cont {
           width:100%;
           height: 100%;
-          object-fit: cover;
+          //object-fit: cover;
         }
       }
     }
@@ -3179,7 +3212,7 @@
 .conts_box_detail {
   .info {
     margin-top:16px;
-    padding-bottom: 40px;
+    //padding-bottom: 40px;
     .top {
       margin-top:0;
       .right {
@@ -3322,6 +3355,9 @@
     .visual {
       margin:0 -20px;
     }
+    .editor_reset{
+      margin: 20px 0 40px;
+    }
   }
 }
 
@@ -3352,6 +3388,7 @@
       }
       .info {
         margin-top: 0;
+        flex: 1;
       }
       .cate {
         span {
@@ -3373,13 +3410,14 @@
         display: flex;
         gap: 16px;
         .img {
-          width: 26.666666%;
-          min-width: 100px;
-          height: 26.666666%;
-          min-height: 100px;
-          flex-shrink: 0;
-          aspect-ratio: 1;
+          position: relative;
+          flex: 1;
+          max-width: 320px;
+          aspect-ratio: 3 / 1.7;          
           img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -3472,6 +3510,21 @@
     }
     .bottom {
       margin-top: 16px;
+    }
+  }
+  .detail_cont{
+    overflow: visible;
+    .iframe_box, .video_box{ 
+      position: relative;
+      height: 0;
+      padding-top: 56.25%;
+      iframe, video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

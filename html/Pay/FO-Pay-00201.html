@@ -39,7 +39,8 @@
         <div class="inner">
           <div class="top_exchange_wrap">
             <div class="monthpicker_cont">
-              <div class="open_month" data-cal="picker" data-btmsheet="btmSheet01">2024. 07</div>
+              <!-- <div class="open_month" data-cal="picker" data-btmsheet="btmSheet01">2024. 07</div> -->
+              <div class="open_month btn_modal_open" data-cal="picker" id="modal02">2024. 07</div><!-- 241111 팝업인 경우 -->
               <button id="modal01" class="btn_xs btn_detail btn_modal_open">대리점</button><!-- 241014 추가 -->
             </div>
             <div class="exchange_box">
@@ -1652,6 +1653,26 @@
           <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
         </div>
       </div>
+    </div><!-- //.modal_content -->
+  </div><!-- //.modal_container -->
+  <!-- 241111 날짜선택 팝업인 경우 추가 -->
+  <!-- 결제 날짜 선택 팝업  -->
+  <div class="modal_container" data-modal="modal02">
+    <div class="modal_overlay"></div>
+    <div class="modal_content">
+      <div class="modal_header hide">
+        <h1 class="modal_tit is_line">연월 선택</h1>
+      </div>
+      <div class="modal_body">
+        <div class="picker_wrap">
+          <div data-type="picker"></div>
+        </div>
+      </div>
+      <!-- <div class="modal_footer">
+        <div class="btn_group">
+          <button class="btn_modal_close btn btn_sm btn_primary">확인</button>
+        </div>
+      </div> -->
     </div><!-- //.modal_content -->
   </div><!-- //.modal_container -->
   <!-------- //Modal -------->
