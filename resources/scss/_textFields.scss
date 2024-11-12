@@ -171,14 +171,6 @@
     .uploader_wrap{
       margin: 2px 0 12px;
     }
-    ul.dot_list{
-      li.txt_alert{
-        @include fontStyle($gray-700, $fs-xxs, $fw-m, 1.333);
-        & + li{
-          margin-top: 4px;
-        }
-      }
-    }
   }
   //타입 텍스트,파일 업로드, 비번
   &_text[type="text"], &_text[type="file"], &_text[type="password"] {

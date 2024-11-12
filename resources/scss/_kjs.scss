@@ -779,17 +779,10 @@
 .inquiry_outer {
   padding: 32px 20px 0;
   >li {
-    &.txt_alert {
-      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
-      & + li{
-        margin-top: 20px;
-      }
-    }
     &+li {
       margin-top: 40px;
     }
   }
-
   @media (min-width: $pc-point) {
     padding: 32px 0 0;
   }
@@ -1759,9 +1752,6 @@
       right: 0;
     }
     .ui-datepicker-today{
-      .ui-state-default::after{
-        display: none;
-      }
       .ui-state-default.ui-state-active{
         background: $gray-100 !important;
         color: $gray-950 !important;
@@ -2950,10 +2940,6 @@
         .btn_group {
           margin: 12px 0 0 0;
           padding: 0;
-          justify-content: flex-start;
-          .btn, button{
-            max-width: 50%;
-          }
         }
       }
     }
@@ -3100,7 +3086,7 @@
         .video_cont {
           width:100%;
           height: 100%;
-          //object-fit: cover;
+          object-fit: cover;
         }
       }
     }
@@ -3388,7 +3374,6 @@
       }
       .info {
         margin-top: 0;
-        flex: 1;
       }
       .cate {
         span {
@@ -3410,14 +3395,13 @@
         display: flex;
         gap: 16px;
         .img {
-          position: relative;
-          flex: 1;
-          max-width: 320px;
-          aspect-ratio: 3 / 1.7;          
+          width: 26.666666%;
+          min-width: 100px;
+          height: 26.666666%;
+          min-height: 100px;
+          flex-shrink: 0;
+          aspect-ratio: 1;
           img {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;

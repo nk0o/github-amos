@@ -4099,15 +4099,6 @@ select {
 .input_group .uploader_wrap {
   margin: 2px 0 12px;
 }
-.input_group ul.dot_list li.txt_alert {
-  color: #777777;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1.333;
-}
-.input_group ul.dot_list li.txt_alert + li {
-  margin-top: 4px;
-}
 .input_text[type=text], .input_text[type=file], .input_text[type=password] {
   width: 100%;
   height: 50px;
@@ -6288,11 +6279,29 @@ div.dataTables_wrapper .btn_floating:focus {
   color: #A5A5A5;
   gap: 2px;
 }
-.btm_bar_nav li i::before {
-  background-color: #aaaaaa !important;
+.btm_bar_nav li .ico_cate::before {
+  background: url("../images/icon/ico_cate.svg") center/contain no-repeat;
 }
-.btm_bar_nav li.active i::before {
-  background-color: #ffffff !important;
+.btm_bar_nav li .ico_point::before {
+  background: url("../images/icon/ico_point.svg") center/contain no-repeat;
+}
+.btm_bar_nav li .ico_home::before {
+  background: url("../images/icon/ico_home.svg") center/contain no-repeat;
+}
+.btm_bar_nav li .ico_wish::before {
+  background: url("../images/icon/ico_wish.svg") center/contain no-repeat;
+}
+.btm_bar_nav li.active .ico_cate::before {
+  background: url("../images/icon/ico_cate_on.svg") center/contain no-repeat;
+}
+.btm_bar_nav li.active .ico_point::before {
+  background: url("../images/icon/ico_point_on.svg") center/contain no-repeat;
+}
+.btm_bar_nav li.active .ico_home::before {
+  background: url("../images/icon/ico_home_on.svg") center/contain no-repeat;
+}
+.btm_bar_nav li.active .ico_wish::before {
+  background: url("../images/icon/ico_wish_on.svg") center/contain no-repeat;
 }
 .btm_bar_nav li.active .nav_tit {
   color: #ffffff;
@@ -6426,8 +6435,7 @@ html, body {
   overflow: hidden;
 }
 html #wrap, html .body_wrapper, body #wrap, body .body_wrapper {
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
+  overscroll-behavior: none;
   width: 100vw;
   height: 100vh; /* calc(100dvh - 위아래 높이) */
   overflow-y: scroll;
@@ -7062,6 +7070,7 @@ footer .f_company {
   display: block;
 }
 .cate_pro .cate_list {
+  padding-bottom: 55vh;
   scroll-behavior: smooth;
 }
 .cate_tit {
@@ -7139,7 +7148,6 @@ footer .f_company {
 }
 .cate_list > div:last-child {
   padding-bottom: 24px;
-  min-height: calc(100dvh - 90px - 100px);
 }
 .cate_list .list_tit {
   display: -webkit-box;
@@ -8102,15 +8110,6 @@ footer .f_company {
 .inquiry_outer {
   padding: 32px 20px 0;
 }
-.inquiry_outer > li.txt_alert {
-  color: #222222;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.3636;
-}
-.inquiry_outer > li.txt_alert + li {
-  margin-top: 20px;
-}
 .inquiry_outer > li + li {
   margin-top: 40px;
 }
@@ -9059,9 +9058,6 @@ footer .f_company {
 }
 .ui-datepicker.ui-monthpicker .ui-datepicker-next {
   right: 0;
-}
-.ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default::after {
-  display: none;
 }
 .ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default.ui-state-active {
   background: #eeeeee !important;
@@ -10268,10 +10264,6 @@ footer .f_company {
 .designer_list_wrap .designer_list > li .info .btn_group {
   margin: 12px 0 0 0;
   padding: 0;
-  justify-content: flex-start;
-}
-.designer_list_wrap .designer_list > li .info .btn_group .btn, .designer_list_wrap .designer_list > li .info .btn_group .btn_lg, .designer_list_wrap .designer_list > li .info .btn_group .btn_md, .designer_list_wrap .designer_list > li .info .btn_group .btn_sm, .designer_list_wrap .designer_list > li .info .btn_group .btn_xs, .designer_list_wrap .designer_list > li .info .btn_group .btn_xxs, .designer_list_wrap .designer_list > li .info .btn_group .btn_icon, .designer_list_wrap .designer_list > li .info .btn_group .btn_bottom, .designer_list_wrap .designer_list > li .info .btn_group .btn_floating, .designer_list_wrap .designer_list > li .info .btn_group button {
-  max-width: 50%;
 }
 .designer_list_wrap .btn_more {
   margin-top: 60px;
@@ -10419,6 +10411,7 @@ footer .f_company {
 .conts_box_detail .conts_box .visual .video_box .video_cont {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .conts_box_list .conts_box.conts_more,
 .conts_box_detail .conts_box.conts_more {
@@ -10709,7 +10702,6 @@ footer .f_company {
 }
 .conts_box_list_wrap.type_row .conts_box_list .info {
   margin-top: 0;
-  flex: 1;
 }
 .conts_box_list_wrap.type_row .conts_box_list .cate span {
   font-size: 12px;
@@ -10728,15 +10720,14 @@ footer .f_company {
   gap: 16px;
 }
 .conts_box_list_wrap.type_row .conts_box > div .img {
-  position: relative;
-  flex: 1;
-  max-width: 320px;
-  aspect-ratio: 3/1.7;
+  width: 26.666666%;
+  min-width: 100px;
+  height: 26.666666%;
+  min-height: 100px;
+  flex-shrink: 0;
+  aspect-ratio: 1;
 }
 .conts_box_list_wrap.type_row .conts_box > div .img img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
