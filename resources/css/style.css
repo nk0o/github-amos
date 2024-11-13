@@ -2582,6 +2582,7 @@ button:disabled {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+  background-image: url("../images/icon/ico_check_20.svg");
 }
 .input_check_list .input_check_wrap.without_box .input_radio:checked + label, .input_check_list .input_check_wrap.without_box .input_check:checked + label, .input_check_list .input_radio_wrap.without_box .input_radio:checked + label, .input_check_list .input_radio_wrap.without_box .input_check:checked + label {
   background-image: none;
