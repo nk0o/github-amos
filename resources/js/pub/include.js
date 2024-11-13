@@ -103,7 +103,7 @@ var include = {
     </div><!-- //.tab_center_wrap -->
     `)
   },
-  tvMainTabMenu: function () {//241111 TV메인 탭메뉴 추가
+  tvMainTabMenu: function () {//241113 TV메인 탭메뉴 추가
     document.write(`
     <div class="tab_center_wrap appbar_tabmenu">
       <div class="tab_menu tab_center line">
