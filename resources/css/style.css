@@ -5910,7 +5910,6 @@ footer .f_company {
   display: block;
 }
 .cate_pro .cate_list {
-  padding-bottom: 55vh;
   scroll-behavior: smooth;
 }
 .cate_tit {
@@ -5988,6 +5987,7 @@ footer .f_company {
 }
 .cate_list > div:last-child {
   padding-bottom: 24px;
+  min-height: calc(100dvh - 90px - 100px);
 }
 .cate_list .list_tit {
   display: -webkit-box;
