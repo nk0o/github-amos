@@ -320,6 +320,12 @@
   &:first-child{
     margin-top: 0 ;
   }
+  &.agree_check_list{
+    padding-left: 0;
+    &::before{
+      display: none;
+    }
+  }
 }
 /* Alert Text */
 .txt_alert {

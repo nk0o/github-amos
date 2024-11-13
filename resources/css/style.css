@@ -463,6 +463,12 @@ p {
 .txt_notice:first-child {
   margin-top: 0;
 }
+.txt_notice.agree_check_list {
+  padding-left: 0;
+}
+.txt_notice.agree_check_list::before {
+  display: none;
+}
 
 /* Alert Text */
 .txt_alert {
