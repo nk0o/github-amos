@@ -2942,6 +2942,10 @@
         .btn_group {
           margin: 12px 0 0 0;
           padding: 0;
+          justify-content: flex-start;
+          .btn, button{
+            max-width: 50%;
+          }
         }
       }
     }
