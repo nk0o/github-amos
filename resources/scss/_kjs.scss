@@ -790,7 +790,7 @@
       margin-top: 40px;
     }
   }
-  
+
   @media (min-width: $pc-point) {
     padding: 32px 0 0;
   }
@@ -1761,6 +1761,9 @@
       right: 0;
     }
     .ui-datepicker-today{
+      .ui-state-default::after{
+        display: none;
+      }
       .ui-state-default.ui-state-active{
         background: $gray-100 !important;
         color: $gray-950 !important;

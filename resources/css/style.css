@@ -7892,6 +7892,9 @@ footer .f_company {
 .ui-datepicker.ui-monthpicker .ui-datepicker-next {
   right: 0;
 }
+.ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default::after {
+  display: none;
+}
 .ui-datepicker.ui-monthpicker .ui-datepicker-today .ui-state-default.ui-state-active {
   background: #eeeeee !important;
   color: #222222 !important;
