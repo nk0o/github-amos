@@ -816,9 +816,9 @@ function putInCart() {
   })
   $(document).on('click', '.btn_cart', function(){
       //241104 담긴 상품 표시X 원복
-      // $(this).toggleClass('is_incart');
-			// if($(this).hasClass('is_incart')){
-      // }
+      $(this).toggleClass('is_incart');
+			if($(this).hasClass('is_incart')){
+      }
       putInCartAction();
   })
   function putInCartAction(){
