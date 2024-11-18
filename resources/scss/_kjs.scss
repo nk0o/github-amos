@@ -2418,12 +2418,16 @@
   padding: 0 20px;
   max-width: 1024px;
   margin: 24px auto 0;
-  >strong {
-    display: block;
+  .tit {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: $fw-b;
     line-height: 24px;
+    .btn_icon{
+      margin-left: auto;
+    }
   }
   .list {
     >li {

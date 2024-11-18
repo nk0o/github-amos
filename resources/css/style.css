@@ -1429,6 +1429,9 @@ p {
 }
 
 /* Commerce */
+.ico_camera::before {
+  background: url("../images/icon/ico_camera.svg") center/contain no-repeat;
+}
 .ico_post::before {
   background: url("../images/icon/ico_post.svg") center/contain no-repeat;
 }
@@ -8594,12 +8597,16 @@ footer .f_company {
   max-width: 1024px;
   margin: 24px auto 0;
 }
-.attendance > strong {
-  display: block;
+.attendance .tit {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
+}
+.attendance .tit .btn_icon {
+  margin-left: auto;
 }
 .attendance .list > li {
   display: flex;

@@ -166,6 +166,11 @@
 }
 /* Commerce */
 .ico {
+  &_camera {
+    &::before {
+      @include iconImgPath("ico_camera.svg");
+    }
+  }
   &_post {
     &::before {
       @include iconImgPath("ico_post.svg");
