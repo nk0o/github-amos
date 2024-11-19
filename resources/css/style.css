@@ -6959,6 +6959,9 @@ footer .f_company {
   font-weight: 700;
   line-height: 1.3636;
 }
+.inquiry_outer > li.txt_alert .txt_point, .inquiry_outer > li.txt_alert .txt_eng {
+  font-size: 0.9375rem;
+}
 .inquiry_outer > li.txt_alert + li {
   margin-top: 20px;
 }
@@ -9891,10 +9894,10 @@ footer .f_company {
   line-height: 1.3636;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
-.sign_notice p span.txt_eng {
+.sign_notice p span.txt_point, .sign_notice p .txt_eng {
   margin-top: 0;
   color: #222222;
-  font-size: 1.375rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.3636;
 }

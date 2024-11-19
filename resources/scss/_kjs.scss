@@ -782,6 +782,9 @@
   >li {
     &.txt_alert {
       @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      .txt_point, .txt_eng{
+        font-size:$fs-sm;
+      }
       & + li{
         margin-top: 20px;
       }

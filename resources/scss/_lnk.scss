@@ -59,9 +59,9 @@
   p{
     @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
     font-family: $font-aritadt;
-    span.txt_eng{
+    span.txt_point, .txt_eng{
       margin-top: 0;
-      @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
+      @include fontStyle($gray-950, $fs-sm, $fw-b, 1.3636);
     }
     @media (min-width: $pc-point) {
       &.txt_alert{
