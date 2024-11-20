@@ -11333,12 +11333,12 @@ footer .f_company {
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.3636;
-}
-.user_detail .user_name::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
+  /* &::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
+  } */
 }
 .user_detail .user_id span {
   display: inline-block;

@@ -1332,12 +1332,12 @@
       align-items: center;
       gap: 4px;
       @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
-      &::after{
+      /* &::after{
         content: '';
         width: 20px;
         height: 20px;
         background: transparent url("../../resources/images/icon/ico_chev_next_20_15.svg") center/contain no-repeat !important;
-      }
+      } */
     }
     &_id{
       span{
