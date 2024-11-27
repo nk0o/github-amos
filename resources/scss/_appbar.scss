@@ -53,6 +53,8 @@
     }
   }
   &_tabmenu{
+    max-width: 1024px;
+    margin: 0 auto;
     .tab_menu.line{
       display: inline-flex;
       justify-content: flex-start;

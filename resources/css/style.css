@@ -3500,10 +3500,6 @@ select {
   overflow: visible;
 }
 
-.tab_center_wrap {
-  max-width: 1024px;
-  margin: 0 auto;
-}
 .tab_center_wrap .tab_center {
   white-space: nowrap;
 }
@@ -5040,6 +5036,10 @@ div.dataTables_wrapper .btn_floating:focus {
   line-height: 1.444;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
   text-align: center;
+}
+.appbar_tabmenu {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .appbar_tabmenu .tab_menu.line {
   display: inline-flex;
