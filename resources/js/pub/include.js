@@ -108,11 +108,17 @@ var include = {
     <div class="tab_center_wrap appbar_tabmenu">
       <div class="tab_menu tab_center line">
         <ul>
-        <li class="current tab_list"><button>대카테고리1</button></li>
-        <!-- <li class="tab_list"><button>대카테고리2</button></li> -->
-        <!-- <li class="tab_list"><button>대카테고리3</button></li> -->
-        <!-- <li class="tab_list"><button>대카테고리4</button></li> -->
-        <!-- <li class="tab_list"><button>대카테고리5</button></li> -->
+          <li class="current tab_list"><button>01 REPAIR / 01 PRO STYLE</button></li>
+          <li class="tab_list"><button>BRAND</button></li>
+          <li class="tab_list"><button>01 COLOR</button></li>
+          <li class="tab_list"><button>01 PERM</button></li>
+          <li class="tab_list"><button>01 PRO BASIC / 99 PRO TECHNIC</button></li>
+          <li class="tab_list"><button>02 SCALP</button></li>
+          <li class="tab_list"><button>03 COLOR / 04 WAVE / 05 HAIR</button></li>
+          <li class="tab_list"><button>SALON LIVE-ON</button></li>
+          <li class="tab_list"><button>BASIC CLASS</button></li>
+          <li class="tab_list"><button>SERVICE CLASS</button></li>
+          <li class="tab_list"><button>SA</button></li>
         </ul>
       </div>
     </div><!-- //.tab_center_wrap -->

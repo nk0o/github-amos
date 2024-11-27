@@ -370,7 +370,7 @@ function brandAccordScroll(idx){
   let tabsAreaH = $('.tabs_area').outerHeight();
   $("html, body").animate({
     scrollTop : accorHeadTitH * idx + tabsAreaH + 1 * idx - tabH + 1
-  },500)
+  })
 }
 
 //DataTable Select All row
