@@ -11809,6 +11809,9 @@ footer .f_company {
 .list_option .input_check + label::before {
   top: 0;
 }
+.list_option .btn_primary .ico_cart::before {
+  background: url("../images/icon/ico_cart-white.svg") center/contain no-repeat;
+}
 
 .list_count {
   display: flex;

@@ -1749,6 +1749,11 @@
       top: 0;
     }
   }
+  .btn_primary{
+    .ico_cart::before{
+      background: url('../images/icon/ico_cart-white.svg') center / contain no-repeat;
+    }
+  }
 }
 .list_count{
   display: flex;
