@@ -22,6 +22,12 @@
   .prd_list_top {
     @include flexBetween;
     padding: 20px 0;
+    .ico_link{
+      &:first-of-type{
+        margin-left: auto;
+      }
+      margin-right: 8px;
+    }
     .count {
       font-size: $fs-xs;
       color: $gray-600;

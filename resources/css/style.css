@@ -1542,6 +1542,9 @@ p {
 .ico_clip::before {
   background: url("../images/icon/ico_clip.svg") center/contain no-repeat;
 }
+.ico_link::before {
+  background: url("../images/icon/ico_link.png") center/contain no-repeat;
+}
 .ico_notice::before {
   background: url("../images/icon/ico_notice.svg") center/contain no-repeat;
 }
@@ -2774,13 +2777,13 @@ button:disabled {
 }
 .select_box.type3 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: auto;
-  min-width: 95px;
+  min-width: auto;
 }
 .select_box.type3 .select_box_value {
   justify-content: end;
-  min-width: 95px;
+  min-width: auto;
   height: auto;
   padding: 0 12px 0 0;
   font-size: 13px;
@@ -2802,6 +2805,7 @@ button:disabled {
 }
 .select_box.type3 .select_box_list {
   min-width: 95px;
+  width: auto;
   top: 24px;
 }
 .select_box.on .select_box_list {
@@ -6230,6 +6234,12 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
   padding: 20px 0;
+}
+.prd_cont .prd_list_top .ico_link {
+  margin-right: 8px;
+}
+.prd_cont .prd_list_top .ico_link:first-of-type {
+  margin-left: auto;
 }
 .prd_cont .prd_list_top .count {
   font-size: 0.8125rem;
