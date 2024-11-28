@@ -370,7 +370,7 @@ function brandAccordScroll(idx){
   let tabsAreaH = $('.tabs_area').outerHeight();
   $("html, body").animate({
     scrollTop : accorHeadTitH * idx + tabsAreaH + 1 * idx - tabH + 1
-  })
+  })//241127 수정
 }
 
 //DataTable Select All row
@@ -599,6 +599,25 @@ function cateScroll(){
   })
 }
 
+// function cateScroll(){
+//   let timer = null;
+//   $('.cate_list').scroll(function () {
+//     var list = $(this).children();
+//     var top = $(this).offset().top;
+//     var $toc;
+//     clearTimeout(timer);
+//     timer = setTimeout(function(){
+//       list.each(function () {
+//         let itemTop = $(this).position().top;
+//         if(itemTop < top + 100){
+//           $toc = $(this).attr("id");
+//           var $findNav = $("a[href='#" + $toc + "']").parent('li');
+//           cateNavActive($findNav)
+//         }
+//       })
+//     }, 50);
+//   })
+// }
 /* 제품 리스트 Swiper */
 function prdSlider(){  
   $(".prd_list_wrap.swiper").each(function (i, v) {

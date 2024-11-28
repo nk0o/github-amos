@@ -54,7 +54,20 @@
     }
   }
 }
-.sign_notice{
+.form_term{
+  padding: 0 20px;
+  @include fontStyle($gray-950, $fs-sm, $fw-m, 1.3636);
+  .input_radio_outer{
+    margin-top: 32px;
+  }
+  em{
+    font-weight: $fw-b;
+  }
+  @media (min-width: $pc-point) {
+    padding: 0px;
+  }
+}
+.sign_notice, .sign_policy{
   padding: 24px 20px 0;
   p{
     @include fontStyle($gray-950, $fs-22, $fw-b, 1.3636);
@@ -100,6 +113,29 @@
   }
   @media (min-width: $pc-point) {
     padding: 24px 0 0;
+  }
+}
+.sign_notice{
+  p{
+    @media (min-width: $pc-point) {
+      &.txt_alert{
+        br{
+          display: block;
+        }
+      }
+    }
+  }
+}
+.sign_policy{
+  .txt_center{
+    margin-bottom: 16px;
+  }
+  .img_area{
+    text-align: center;
+    margin-bottom: 12px;
+    img{
+      display: inline-block;
+    }
   }
 }
 .tab_cont{
@@ -1170,6 +1206,9 @@
       display: none;
     }
   }
+  .sign_policy{
+    padding-top: 40px;
+  }
   .info_read{
     border-bottom-width: 1px;
   }
@@ -1185,6 +1224,7 @@
 /********* 정기교육 만족도 조사 *********/
 .survey_intro{
   padding-top: 80px;
+  padding-bottom: 30px;
   text-align: center;
   .intro{
     &_img{

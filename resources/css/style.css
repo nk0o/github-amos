@@ -9889,17 +9889,36 @@ footer .f_company {
   }
 }
 
-.sign_notice {
+.form_term {
+  padding: 0 20px;
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.3636;
+}
+.form_term .input_radio_outer {
+  margin-top: 32px;
+}
+.form_term em {
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .form_term {
+    padding: 0px;
+  }
+}
+
+.sign_notice, .sign_policy {
   padding: 24px 20px 0;
 }
-.sign_notice p {
+.sign_notice p, .sign_policy p {
   color: #222222;
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.3636;
   font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
-.sign_notice p span.txt_point, .sign_notice p .txt_eng {
+.sign_notice p span.txt_point, .sign_notice p .txt_eng, .sign_policy p span.txt_point, .sign_policy p .txt_eng {
   margin-top: 0;
   color: #222222;
   font-size: 0.9375rem;
@@ -9907,11 +9926,11 @@ footer .f_company {
   line-height: 1.3636;
 }
 @media (min-width: 1024px) {
-  .sign_notice p.txt_alert br {
+  .sign_notice p.txt_alert br, .sign_policy p.txt_alert br {
     display: block;
   }
 }
-.sign_notice span {
+.sign_notice span, .sign_policy span {
   display: inline-block;
   margin-top: 12px;
   color: #666666;
@@ -9919,32 +9938,49 @@ footer .f_company {
   font-weight: 400;
   line-height: 1.4667;
 }
-.sign_notice span + span {
+.sign_notice span + span, .sign_policy span + span {
   margin-top: 8px;
 }
-.sign_notice span.user_name {
+.sign_notice span.user_name, .sign_policy span.user_name {
   margin-top: 0;
   color: #444444;
   font-weight: 600;
 }
-.sign_notice span em {
+.sign_notice span em, .sign_policy span em {
   color: #1A63D9;
   font-weight: 600;
 }
-.sign_notice .dot_list {
+.sign_notice .dot_list, .sign_policy .dot_list {
   margin-top: 16px;
   padding: 0;
 }
-.sign_notice .dot_list > li + li {
+.sign_notice .dot_list > li + li, .sign_policy .dot_list > li + li {
   margin-top: 10px;
 }
-.sign_notice + .hr_divider {
+.sign_notice + .hr_divider, .sign_policy + .hr_divider {
   margin: 24px 0;
 }
 @media (min-width: 1024px) {
-  .sign_notice {
+  .sign_notice, .sign_policy {
     padding: 24px 0 0;
   }
+}
+
+@media (min-width: 1024px) {
+  .sign_notice p.txt_alert br {
+    display: block;
+  }
+}
+
+.sign_policy .txt_center {
+  margin-bottom: 16px;
+}
+.sign_policy .img_area {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.sign_policy .img_area img {
+  display: inline-block;
 }
 
 .tab_cont .sign_notice {
@@ -11159,6 +11195,9 @@ footer .f_company {
   .sign_notice br {
     display: none;
   }
+  .sign_policy {
+    padding-top: 40px;
+  }
   .info_read {
     border-bottom-width: 1px;
   }
@@ -11169,6 +11208,7 @@ footer .f_company {
 /********* 정기교육 만족도 조사 *********/
 .survey_intro {
   padding-top: 80px;
+  padding-bottom: 30px;
   text-align: center;
 }
 .survey_intro .intro_img {
