@@ -8824,20 +8824,21 @@ footer .f_company {
 .history_search .dot_list + .view_point {
   margin-top: 24px;
 }
-.history_search .view_point {
+
+.view_point {
   padding: 20px;
   margin-top: 8px;
   border-radius: 8px;
   background: #EFF6FF;
 }
-.history_search .view_point .point_list {
+.view_point .point_list {
   display: flex;
   justify-content: space-between;
 }
-.history_search .view_point .point_list + .point_list {
+.view_point .point_list + .point_list {
   margin-top: 8px;
 }
-.history_search .view_point .point_list em {
+.view_point .point_list em {
   display: inline-flex;
   align-items: center;
   color: inherit;
@@ -8845,7 +8846,7 @@ footer .f_company {
   font-weight: 700;
   line-height: 1;
 }
-.history_search .view_point .point_list .point {
+.view_point .point_list .point {
   color: inherit;
   font-size: 1.125rem;
   font-weight: 400;
@@ -8854,13 +8855,13 @@ footer .f_company {
   color: #1A63D9;
   font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
 }
-.history_search .view_point .point_list .point em {
+.view_point .point_list .point em {
   font: inherit;
 }
-.history_search .view_point .point_list .point.remaining {
+.view_point .point_list .point.remaining {
   color: #222222;
 }
-.history_search .view_point .point_list .point.used {
+.view_point .point_list .point.used {
   color: #777;
 }
 
