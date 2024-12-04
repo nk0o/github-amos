@@ -4186,6 +4186,32 @@ div.dataTables_wrapper .btn_floating:focus {
     width: 160px;
   }
 }
+.tbl_store {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+}
+.tbl_store .scroll_inner {
+  max-height: calc(100dvh - 206px);
+  overflow: auto;
+}
+.tbl_store .scroll_inner::-webkit-scrollbar {
+  opacity: 0;
+  width: 4px;
+  height: 4px;
+}
+.tbl_store .scroll_inner::-webkit-scrollbar-track {
+  background-color: #f6f6f6;
+}
+.tbl_store .scroll_inner::-webkit-scrollbar-thumb {
+  height: 4px;
+  margin: 0 auto;
+  width: 4px;
+  background-color: #bbbbbb;
+  cursor: pointer;
+}
+
 /* Accordion */
 .accord_tit {
   display: block;
@@ -5067,6 +5093,9 @@ div.dataTables_wrapper .btn_floating:focus {
 .appbar_tabmenu .tab_menu.line ul .tab_list button, .appbar_tabmenu .tab_menu.line ul .tab_list a {
   font-size: 1rem;
   line-height: 1.5;
+}
+.appbar.no_back .appbar_back {
+  display: none;
 }
 
 .btm_bar {
