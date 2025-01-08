@@ -144,6 +144,26 @@ button {
   &_radius {
     border-radius: 99999px;
   }
+  //circle
+  &_circle {
+    padding: 8px;
+    border-radius: 100% !important;
+    &.btn_lg {
+      width: 56px;
+    }
+    &.btn_md {
+      width: 50px;
+    }
+    &.btn_sm {
+      width: 46px;
+    }
+    &.btn_xs {
+      width: 40px;
+    }
+    &.btn_xxs {
+      width: 30px;
+    }
+  }
   //Button Group
   &_group {
     @include flexCenter;
@@ -226,6 +246,11 @@ button {
         //background-color: $gray-950 !important;
       }
     }
+    .ico_16[class*="ico_"] {
+      &::before{ 
+        background-size: 16px;
+      }
+    }
     &.btn_border{
       border-color: $gray-200;
     }
@@ -236,6 +261,18 @@ button {
           //background-color: $color-white !important;
         }
       }
+    }
+    &.btn_circle{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.9);
+      @include fontStyle($gray-950, $fs-xxs, $fw-b, 1.136);
+      letter-spacing: -0.24px;
+      filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.10));
     }
   }
   // like

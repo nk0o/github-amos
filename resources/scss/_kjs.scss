@@ -3116,6 +3116,18 @@
           object-fit: cover;
         }
       }
+      &.type_imgs{
+        aspect-ratio: auto;
+        overflow: visible;
+        img{
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0
+          }
+        }
+      }
     }
     &.conts_more{
       @include flexCenter;
@@ -3417,6 +3429,8 @@
       }
       .bottom {
         margin-top: 16px;
+        gap: 6px;
+        flex-wrap: wrap;
       }
     }
     .conts_box {
@@ -3426,6 +3440,7 @@
         .img {
           position: relative;
           flex: 1;
+          min-width: 160px;
           max-width: 320px;
           aspect-ratio: 3 / 1.7;          
           img {

@@ -237,4 +237,16 @@ var include = {
     </ul><!-- //.floating_side -->
     `);
   },
+  floatingSideLogin: function () {
+    document.write(`
+    <ul class="floating_side_left">
+      <li>
+        <button class="btn_floating btn_circle"><i class="ico_16 ico_login"></i>로그인</button>
+      </li>
+      <li>
+        <button class="btn_floating btn_circle"><i class="ico_16 ico_join"></i>회원가입</button>
+      </li>
+    </ul><!-- //.floating_side_left -->
+    `);
+  },
 }

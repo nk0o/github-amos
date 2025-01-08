@@ -1429,6 +1429,12 @@ p {
 }
 
 /* Commerce */
+.ico_login::before {
+  background: url("../images/icon/ico_login.svg") center/contain no-repeat;
+}
+.ico_join::before {
+  background: url("../images/icon/ico_join.svg") center/contain no-repeat;
+}
 .ico_camera::before {
   background: url("../images/icon/ico_camera.svg") center/contain no-repeat;
 }
@@ -1788,6 +1794,25 @@ button:disabled {
 .btn_radius {
   border-radius: 99999px;
 }
+.btn_circle {
+  padding: 8px;
+  border-radius: 100% !important;
+}
+.btn_circle.btn_lg {
+  width: 56px;
+}
+.btn_circle.btn_md {
+  width: 50px;
+}
+.btn_circle.btn_sm {
+  width: 46px;
+}
+.btn_circle.btn_xs {
+  width: 40px;
+}
+.btn_circle.btn_xxs {
+  width: 30px;
+}
 .btn_group {
   display: -webkit-box;
   display: flex;
@@ -1870,11 +1895,29 @@ button:disabled {
 .btn_floating *[class*=ico_]::before, .btn_floating[class*=ico_]::before {
   background-size: 24px;
 }
+.btn_floating .ico_16[class*=ico_]::before {
+  background-size: 16px;
+}
 .btn_floating.btn_border {
   border-color: #e2e2e2;
 }
 .btn_floating.btn_primary {
   background-color: #222222 !important;
+}
+.btn_floating.btn_circle {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #222222;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.136;
+  letter-spacing: -0.24px;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.1));
 }
 .btn_like.active i::before {
   background: url("../images/icon/ico_btn_heart_red.svg") center/contain no-repeat;
@@ -5230,7 +5273,7 @@ div.dataTables_wrapper .btn_floating:focus {
     padding: 0;
   }
 }
-.floating_side {
+.floating_side, .floating_side_left {
   z-index: 1;
   position: fixed;
   bottom: 90px;
@@ -5245,35 +5288,35 @@ div.dataTables_wrapper .btn_floating:focus {
   overflow: hidden;
   transition: height 0.3s 0.3s;
 }
-.floating_side::before {
+.floating_side::before, .floating_side_left::before {
   content: "";
   display: block;
   transition: background-color 0.2s;
 }
-.floating_side.focus {
+.floating_side.focus, .focus.floating_side_left {
   height: 56px;
   transition: height 0.2s;
 }
-.floating_side li {
+.floating_side li, .floating_side_left li {
   display: none;
   gap: 12px;
   align-items: center;
   position: relative;
 }
-.floating_side li.item {
+.floating_side li.item, .floating_side_left li.item {
   display: flex;
 }
-.floating_side.is_expanded {
+.floating_side.is_expanded, .is_expanded.floating_side_left {
   z-index: 100;
   height: 230px;
 }
-.floating_side.is_expanded li {
+.floating_side.is_expanded li, .is_expanded.floating_side_left li {
   display: flex;
 }
-.floating_side.is_expanded li.item {
+.floating_side.is_expanded li.item, .is_expanded.floating_side_left li.item {
   display: none;
 }
-.floating_side.is_expanded::before {
+.floating_side.is_expanded::before, .is_expanded.floating_side_left::before {
   z-index: -1;
   content: "";
   position: fixed;
@@ -5284,6 +5327,16 @@ div.dataTables_wrapper .btn_floating:focus {
   width: 100%;
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.75);
+}
+.floating_side_left {
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: auto;
+  right: auto;
+  left: 0;
+}
+.floating_side_left li {
+  display: block;
 }
 .floating_tit {
   color: #ffffff;
@@ -9279,6 +9332,21 @@ footer .f_company {
   height: 100%;
   object-fit: cover;
 }
+.conts_box_list .conts_box .visual.type_imgs,
+.conts_box_detail .conts_box .visual.type_imgs {
+  aspect-ratio: auto;
+  overflow: visible;
+}
+.conts_box_list .conts_box .visual.type_imgs img,
+.conts_box_detail .conts_box .visual.type_imgs img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+.conts_box_list .conts_box .visual.type_imgs img:last-child,
+.conts_box_detail .conts_box .visual.type_imgs img:last-child {
+  margin-bottom: 0;
+}
 .conts_box_list .conts_box.conts_more,
 .conts_box_detail .conts_box.conts_more {
   display: -webkit-box;
@@ -9581,6 +9649,8 @@ footer .f_company {
 }
 .conts_box_list_wrap.type_row .conts_box_list .bottom {
   margin-top: 16px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 .conts_box_list_wrap.type_row .conts_box > div {
   display: flex;
@@ -9589,6 +9659,7 @@ footer .f_company {
 .conts_box_list_wrap.type_row .conts_box > div .img {
   position: relative;
   flex: 1;
+  min-width: 160px;
   max-width: 320px;
   aspect-ratio: 3/1.7;
 }

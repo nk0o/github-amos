@@ -332,6 +332,17 @@
         background-color: rgba(0, 0, 0, 0.75);
       }
     }
+    &_left{
+      @extend .floating_side;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: auto;
+      right: auto;
+      left: 0;
+      li{
+        display: block;
+      }
+    }
   }
   &_tit{
     @include fontStyle($color-white, $fs-m, $fw-m, 1.5);
