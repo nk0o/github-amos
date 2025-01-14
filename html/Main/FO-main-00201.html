@@ -40,54 +40,85 @@
           <h2>AMC 실적 현황</h2><!-- 240903 문구 수정 -->
         </div>
         <div class="inner">
-          <ul>
-            <!-- 240910 그래프영역 수정 -->
-            <li>
-              <div class="half_progress orange">
-                <div class="left"></div>
-                <div class="right"><div class="back"></div></div>
-                <div class="bar_overflow">
-                  <div class="bar"></div>
-                </div>
-                <div class="percent">
-                  <p><span class="num">58</span>%</p>
-                </div>
-              </div><!-- //.half_progress -->
-              <div class="txt_wrap"><!-- 240911 문구수정 -->
-                <dl>
-                  <dt class="txt_index">분기 구매금액</dt>
-                  <dd class="price"><span>1,740,000</span><em>원</em></dd>
-                </dl>
-                <dl>
-                  <dt class="txt_index">목표금액</dt>
-                  <dd class="price"><span>3,000,000</span><em>원</em></dd><!-- 240919 문구수정 -->
-                </dl>
-              </div><!-- //.txt_wrap -->
-            </li>
-            <li>
-              <div class="half_progress">
-                <div class="left"></div>
-                <div class="right"><div class="back"></div></div>
-                <div class="bar_overflow">
-                  <div class="bar"></div>
-                </div>
-                <div class="percent">
-                  <p><span class="num">60</span>%</p>
-                </div>
-              </div><!-- //.half_progress -->
-              <div class="txt_wrap"><!-- 240911 문구수정 -->
-                <dl>
-                  <dt class="txt_index">연간 구매금액</dt>
-                  <dd class="price"><span>12,000,000</span><em>원</em></dd>
-                </dl>
-                <dl>
-                  <dt class="txt_index">목표금액</dt>
-                  <dd class="price"><span>30,000,000</span><em>원</em></dd>
-                </dl>
-              </div><!-- //.txt_wrap -->
-            </li>
-            <!-- 240910 그래프영역 수정 -->
-          </ul>
+          <!-- 
+            250117 실적현황 ui 수정 
+            performance_box_wrap (club_black/club_purple/club_green)
+            ./guide/components/component_set.html 참고
+          -->
+          <!-- .performance_box_wrap -->
+          <div class="performance_box_wrap club_purple">
+            <div class="performance_box">
+              <div class="tit">PURPLE</div>
+              <div class="cont">
+                <div class="cont_top">
+                  <div class="select_box select_box_defalut">
+                    <span class="select_box_arr"></span>
+                    <select class="select_box_value" name="" id="">
+                      <option value="">2024년 4분기</option>
+                      <option value="">2024년 3분기</option>
+                      <option value="">2024년 2분기</option>
+                      <option value="">2024년 1분기</option>
+                    </select>     
+                  </div><!-- //.select_box -->
+                  <p>단위: 만원</p>
+                </div><!-- //.cont_top -->
+                <ul class="performance_list">
+                  <li>
+                    <div class="half_progress_wrap">
+                      <div class="half_progress orange">
+                        <div class="left"></div>
+                        <div class="right"><div class="back"></div></div>
+                        <div class="bar_overflow">
+                          <div class="bar"></div>
+                        </div>
+                        <div class="percent">
+                          <p><span class="num">58</span>%</p>
+                        </div>
+                      </div><!-- //.half_progress -->
+                      <div class="view_point">
+                        <div class="point_list">
+                          <em>이번 분기 구입금액</em>
+                          <span class="point txt_blue"><em>100</em>만원</span>
+                        </div>
+                        <div class="point_list">
+                          <em>포인트를 위한 필요금액</em>
+                          <span class="point"><em>300</em>만원</span>
+                        </div>
+                      </div><!-- //.view_point -->
+                    </div><!-- //.half_progress_wrap -->
+                  </li>
+                  <li>
+                    <div class="half_progress_wrap">
+                      <div class="half_progress orange">
+                        <div class="left"></div>
+                        <div class="right"><div class="back"></div></div>
+                        <div class="bar_overflow">
+                          <div class="bar"></div>
+                        </div>
+                        <div class="percent">
+                          <p><span class="num">100</span>%</p>
+                        </div>
+                      </div><!-- //.half_progress -->
+                      <div class="view_point">
+                        <div class="point_list">
+                          <em>이번 분기 거래 월수<span>(10만원&nbsp;이상)</span></em>
+                          <span class="point txt_blue"><em>1</em>회</span>
+                        </div>
+                        <div class="point_list">
+                          <em>포인트 위한 잔여 거래 월수<span>(10만원&nbsp;이상)</span></em>
+                          <span class="point"><em>2</em>회</span>
+                        </div>
+                      </div><!-- //.view_point -->
+                    </div><!-- //.half_progress_wrap -->
+                  </li>
+                </ul>
+              </div><!-- //.cont -->
+              <div class="btn_area">
+                <button class="btn btn_primary w_full">PURPLE 등급 사은품 선택</button>
+              </div><!-- //.btn_area -->
+            </div><!-- //.performance_box -->
+          </div><!-- //.performance_box_wrap -->
+          <!-- // 250117 실적현황 ui 수정 -->
         </div>
       </section><!-- //.sec_amount -->
       <section class="sec_product is_noBack">

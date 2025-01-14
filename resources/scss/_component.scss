@@ -358,6 +358,9 @@
 //Spacing Padding
 //variables.scss와 $sp동일하게
 .spp {
+  &_t_0 {
+    padding-top: 0 !important;
+  }
   $paddings: 2, 4, 8, 12, 16, 24, 32, 40;
   @each $item in $paddings {
     &_t_#{$item} {

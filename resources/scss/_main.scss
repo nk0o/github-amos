@@ -41,62 +41,62 @@
     }
     & > .inner{
       overflow-x: auto;
-    }
-    ul{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 10px 8px;
-      @media (min-width: $pc-point) {
-        flex-direction: row;
-      }
-    }
-    li{
-      display: flex;      
-      width: 335px;
-      align-items: center;
-      gap:16px;
-      padding: 20px 20px 24px;
-      background-color: $color-white;
-      border-radius: 8px;
-      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.03);
-      @media (max-width: $mo-point) {
-        width: 100%;
-        .half_progress{
-          align-self: center;
+      & > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 8px;
+        @media (min-width: $pc-point) {
+          flex-direction: row;
         }
-      }
-    }
-    .txt_wrap{
-      flex: 1;
-      dl{
-        @include flexBetween;
-        flex-wrap: wrap;
-        gap: 4px 0;
-        & + dl{
-          margin-top:8px; 
-          padding-top:8px; 
-          border-top: 1px solid $gray-100;
+        li{
+          display: flex;      
+          width: 335px;
+          align-items: center;
+          gap:16px;
+          padding: 20px 20px 24px;
+          background-color: $color-white;
+          border-radius: 8px;
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.03);
+          @media (max-width: $mo-point) {
+            width: 100%;
+            .half_progress{
+              align-self: center;
+            }
+          }
         }
-      }
-    }
-    .txt_index {
-      min-width: 74px;
-      margin-right: 6px;
-      @include fontStyle($gray-600, $fs-xs, $fw-sb, 1.3846);
-    }
-    .price{
-      @include flexCenter;
-      @include fontStyle($gray-950, $fs-md, $fw-m, 20px);
-      em{
-        @include fontStyle($gray-950, $fs-s, $fw-sb, 20px);
-      }
-    }
-    @media (max-width: $mo-point) {
-      .txt_index, .price{
-        flex:100%;
-        justify-content:flex-start;
+        .txt_wrap{
+          flex: 1;
+          dl{
+            @include flexBetween;
+            flex-wrap: wrap;
+            gap: 4px 0;
+            & + dl{
+              margin-top:8px; 
+              padding-top:8px; 
+              border-top: 1px solid $gray-100;
+            }
+          }
+        }
+        .txt_index {
+          min-width: 74px;
+          margin-right: 6px;
+          @include fontStyle($gray-600, $fs-xs, $fw-sb, 1.3846);
+        }
+        .price{
+          @include flexCenter;
+          @include fontStyle($gray-950, $fs-md, $fw-m, 20px);
+          em{
+            @include fontStyle($gray-950, $fs-s, $fw-sb, 20px);
+          }
+        }
+        @media (max-width: $mo-point) {
+          .txt_index, .price{
+            flex:100%;
+            justify-content:flex-start;
+          }
+        }
       }
     }
   }
@@ -180,37 +180,37 @@
 }
 /* 메인 반원 그래프 */
 .half_progress {
-  flex: 0 0 80px;
-  width: 80px;
-  height: 66px;
+  flex: 0 0 70px;
+  width: 70px;
+  height: 58px;
   position: relative;
   text-align: center;
   align-self: start;
   .percent {
     position: absolute;
-    top: 20px;
+    top:25px;
     left: 0;
     width: 100%;
     text-align: center;
     p{
-      @include fontStyle($gray-950, $fs-23, $fw-b, 1.3913);
+      @include fontStyle($gray-950, $fs-ml, $fw-b, 1);
       font-family: $font-gotham;
     }
   }
   .bar_overflow {
     position: relative;
     overflow: hidden;
-    width: 80px;
-    height: 66px;
+    width: 70px;
+    height: 58px;
     &::before {
       content: "";
       display: block;
       position: absolute;
       top: 0;
       left: 0;
-      width: 80px;
-      height: 80px;
-      border: 4px solid transparent;
+      width: 70px;
+      height: 70px;
+      border: 5px solid transparent;
       border-radius: 50%;
       border-color: #33ECA9;
       background-origin: border-box;
@@ -221,11 +221,11 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       box-sizing: border-box;
-      border: 4px solid $gray-100;
+      border: 5px solid $gray-100;
       border-bottom-color: transparent;
       transform: rotate(15deg);
     }
@@ -244,8 +244,8 @@
   .right { 
     position: absolute;
     background: $gray-100;
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     right: 9.7px;
     bottom: -2px;
@@ -508,3 +508,146 @@
     }
   }
 }
+
+/* 메인 실적현황 */
+.performance_box{
+  //border: 1px solid;
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  &:first-child{
+    margin-top: 0;
+  }
+  &_wrap{
+    &.club_black{
+      .tit{
+        background-color: $color-club-black;
+      }
+    }
+    &.club_purple{
+      .tit{
+        background-color: $color-club-purple;
+      }
+    }
+    &.club_green{
+      .tit{
+        background-color: $color-club-green;
+      }
+    }
+  }
+  .tit{
+      @include flexCenter;
+      @include fontStyle($color-white, $fs-s, $fw-l, 1);
+      text-transform: uppercase;
+      height: 34px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+  }
+  .view_point{
+    width: 100%;
+    margin: 16px 0 0;
+    padding: 0;
+    background-color: transparent;
+    color: $gray-900;
+    .point_list{
+      align-items: center;
+      & + .point_list{
+        margin-top: 8px;
+      }
+      & > em{
+        gap: 4px;
+        font-size: $fs-xs;
+        font-weight: $fw-sb;
+        line-height: 1.384;
+        span{
+          @include fontStyle($gray-600, $fs-xxs, $fw-m, 1.7);
+          font-family: $font-aritadt;
+        }
+      }
+      .point{
+        white-space: nowrap;
+        font-size: $fs-md;
+        line-height: 1.176;
+        color: $gray-950;
+      }
+    }
+  }
+  .cont{
+    background-color: $color-white;
+    padding: 16px 20px 20px;
+    &_top{
+      @include flexBetween;
+      padding-bottom: 12px;
+      border-bottom: 1px solid $gray-900;
+      .view_point{
+        margin: 0;
+        color: $gray-950;
+        .point{
+          color: inherit;
+          font-size: $fs-ml;
+          line-height:1.444;
+        }
+        .point_list{
+          & > em{
+            font-size: $fs-sm;
+          }
+        }
+      }
+      p{
+        @include fontStyle($gray-600, $fs-xxs, $fw-m, 1.3333);
+      }
+    }
+  }
+  .txt_wrap{
+    flex: 100%;
+    dl{
+      @include flexBetween;
+    }
+  }
+  .select_box.select_box_defalut{
+    width: auto;
+    min-width: 96px;
+    .select_box_arr{
+      font-weight: 700;
+      color: $gray-950 !important;
+      &::after{
+        right: 0;
+      }
+    }
+    .select_box_value{
+      border: 0;
+      height: 20px;
+      padding: 0 24px 0 0;
+      font-size: 15px;
+      line-height: 1.3333;
+    }
+  }
+  .half_progress_wrap{
+    @include flexStart;
+    gap:16px;
+    margin-top: 16px;
+    .view_point{
+      margin-top: 0;
+      .point_list > em{
+        flex-wrap: wrap;
+        gap: 0px;
+        span{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .btn_area{
+    padding: 4px 20px 16px;
+    background-color: $color-white;
+  }
+}
+.performance_list{
+  li{
+    &:nth-child(n+2){
+      margin-top: 16px;
+      border-top: 1px solid $gray-100;
+    }
+  }
+}
+

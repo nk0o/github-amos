@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>MAIN | 아모스 TV</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.mainAppBar();</script>
+    </header>
+    <!-- //header -->
+    <main id="container" class="">
+      <div class="inner">
+        <button onclick="test()">testtest</button>
+        <button onclick="addBtn()">add</button>
+        <section class="conts_box_list_sec">
+          <div class="conts_box_list_wrap">
+            <ul class="conts_box_list">
+              <li class="conts_box">
+                <div class="visual">
+                  <!-- 썸네일 이미지 -->
+                  <div class="thumbnail" style="display: block;">
+                    <img src="../../resources/images/main/img_tv_video_thumb02.png" alt="썸네일 이미지">
+                  </div>
+                  <!-- 썸네일 이미지 -->
+                  <!-- 영상 -->
+                  <div class="video_box" style="display: none;">
+                    <video class="video_cont" src="../../resources/images/main/V33148649.mp4" poster="../../resources/images/main/img_tv_video_thumb02.png" playsinline loop muted>
+                    </video>
+                  </div>
+                  <!-- // 영상 -->
+                </div>
+                <div class="info">
+                  <div class="cate">
+                    <span>컬러</span><em>잇츠에이블</em>
+                  </div>
+                  <a href="#">
+                    <strong class="tit"> 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개익스프레스 다운펌</strong>
+                    <p class="txt">
+                      프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블
+                    </p>
+                  </a>
+                  <div class="bottom">
+                    <div class="date">2024.02.14</div>
+                    <div class="right">
+                      <div class="view"><i class="ico_view ico_16"></i>156</div>
+                      <button class="share"><i class="ico_share ico_16"></i>127</button>
+                    </div>
+                  </div>
+                </div>
+              </li><!-- //.conts_box -->
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- <div class="test">//dkdk</div> -->
+      <script>
+        function test(){
+          $('.test').toggle()
+        }
+        function addBtn(){
+          $('.conts_box_list').append(
+          `
+              <li class="conts_box">
+                <div class="visual">
+                  <!-- 썸네일 이미지 -->
+                  <div class="thumbnail" style="display: block;">
+                    <img src="../../resources/images/main/img_tv_video_thumb02.png" alt="썸네일 이미지">
+                  </div>
+                  <!-- 썸네일 이미지 -->
+                  <!-- 영상 -->
+                  <div class="video_box" style="display: none;">
+                    <video class="video_cont" src="../../resources/images/main/V33148649.mp4" poster="../../resources/images/main/img_tv_video_thumb02.png" playsinline loop muted>
+                    </video>
+                  </div>
+                  <!-- // 영상 -->
+                </div>
+                <div class="info">
+                  <div class="cate">
+                    <span>컬러</span><em>잇츠에이블</em>
+                  </div>
+                  <a href="#">
+                    <strong class="tit"> 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개 익스프레스 다운펌 상품 소개익스프레스 다운펌</strong>
+                    <p class="txt">
+                      프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블 프로의 터치에 힘이 되어 주는. 잇츠 에이블
+                    </p>
+                  </a>
+                  <div class="bottom">
+                    <div class="date">2024.02.14</div>
+                    <div class="right">
+                      <div class="view"><i class="ico_view ico_16"></i>156</div>
+                      <button class="share"><i class="ico_share ico_16"></i>127</button>
+                    </div>
+                  </div>
+                </div>
+              </li><!-- //.conts_box -->`
+          )
+        }
+      </script>
+    </main>
+    <!-- //#container -->
+    <!-- footer -->
+    <script>include.footer();</script>
+    <!-- //footer -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+  <!-- floatingSide -->
+  <script>include.floatingSide();</script>
+  <!-- //floatingSide -->
+</body>
+
+</html>

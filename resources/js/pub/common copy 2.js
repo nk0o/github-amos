@@ -32,7 +32,7 @@ $(document).ready(function () {
   catecoryUI();
   prdSlider();
   modalSlider();
-  tvSlider();
+  //tvSlider();
   contBoxSlider();
   headerScroll();
   prdImgFix();
@@ -986,165 +986,6 @@ function orderChangeHistoryUI(){
     $(el).prop('checked') == false ? $('.is_changed').addClass('hidden') : $('.is_changed').removeClass('hidden');
   }
 }
-
-// 아모스 tv 슬라이드
-// 스크롤 이벤트가 너무 자주 발생하지 않도록 주어진 딜레이 간격으로만 실행되도록 만드는 함수
-function throttle(func, delay) {
-  let lastCall = 0;
-  return function (...args) {
-    const now = new Date().getTime();
-    if (now - lastCall < delay) {
-      return;
-    }
-    lastCall = now;
-    return func(...args);
-  };
-}
-// 슬라이드의 동영상 상태를 업데이트하는 함수
-// play 매개변수가 true일 경우 비디오를 재생하고 썸네일을 숨김
-// false일 경우 비디오를 정지하고 썸네일을 표시
-function updateVideoState(slide, play) {
-  const video = slide.find('video').get(0);
-  const thumbnail = slide.find('.thumbnail');
-  const videoBox = slide.find('.video_box');
-  if (play && video) {
-    thumbnail.hide();
-    videoBox.show();
-    video.play();
-  } else {
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-    thumbnail.show();
-    videoBox.hide();
-  }
-}
-// 스크롤 시 비디오 재생 관리 함수 (스와이퍼 있을 때)
-function handleScrollWithSwiper() {
-  $('.sec_conts').each(function () {
-    let secContsTop = $(this).offset().top;
-    let scrollTop = $(window).scrollTop();
-    let windowHeight = $(window).height();
-
-    // 스크롤 위치가 섹션 내부에 있을 때
-    if (scrollTop >= secContsTop - 150 && scrollTop < secContsTop - 150 + $(this).outerHeight()) {
-      const activeSlide = $(this).find('.swiper-slide-active');
-      if (activeSlide.length) {
-        // 현재 섹션의 활성 슬라이드의 비디오만 재생
-        $('.conts_box_list_wrap .swiper-slide').not(activeSlide).each(function () {
-          updateVideoState($(this), false);
-        });
-        updateVideoState(activeSlide, true);
-      }
-    } else {
-      // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
-      $(this).find('.swiper-slide').each(function () {
-        updateVideoState($(this), false);
-      });
-    }
-  });
-}
-// 스크롤 시 비디오 재생 관리 함수 (스와이퍼 없을 때)
-function handleScrollWithoutSwiper() {
-  if($('.page_tv_datail').length == 0){
-    $('.conts_box').each(function () {
-      let contsBoxTop = $(this).offset().top;
-      let scrollTop = $(window).scrollTop();
-      let windowHeight = $(window).height();
-  
-      // 스크롤 위치가 섹션 내부에 있을 때
-      if (scrollTop >= contsBoxTop - 150 && scrollTop < contsBoxTop - 150 + $(this).outerHeight()) {
-        const activeSlide = $(this);
-        // 현재 섹션의 비디오만 재생
-        updateVideoState(activeSlide, true);
-        // 나머지 비디오는 정지
-        $('.conts_box').not(activeSlide).each(function () {
-          updateVideoState($(this), false);
-        });
-      } else {
-        // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
-        updateVideoState($(this), false);
-      }
-    });
-  }
-}
-// tvSlider 기능 초기화 함수
-function tvSlider() {
-  // 스와이퍼가 있는 경우
-  $(".conts_box_list_wrap.swiper").each(function (i, v) {
-    let sliderName = 'tvSlider' + i;
-    $(v).attr('id', sliderName);
-    let sliderId = '#' + sliderName;
-
-    // Swiper 초기화
-    let tvSwiper = new Swiper(sliderId, {
-      slidesPerView: 1.1,
-      spaceBetween: 8,
-      observer: true,
-      observeParents: true,
-      breakpoints: {
-        1025: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-          on: {
-            slideChange: function () {
-              // PC: 모든 슬라이드의 비디오를 정지하고 썸네일을 표시
-              $(this.slides).each(function () {
-                updateVideoState($(this), false);
-              });
-            }
-          }
-        }
-      },
-      pagination: {
-        el: sliderId + " .swiper-pagination",
-      },
-      on: {
-        slideChange: function () {
-          // 현재 활성 슬라이드를 찾고, 해당 슬라이드의 비디오만 재생
-          if (isMobile) {
-            const activeSlide = $(this.slides[this.activeIndex]);
-            updateVideoState(activeSlide, true);
-            // 나머지 슬라이드의 비디오는 정지
-            $(this.slides).not(activeSlide).each(function () {
-              updateVideoState($(this), false);
-            });
-          }
-        }
-      }
-    });
-
-    // 모바일일 경우 스크롤 이벤트로 비디오 재생 관리
-    if (isMobile) {
-      let initialActiveSlide = $('.conts_box_list_wrap .swiper-slide-active');
-      updateVideoState(initialActiveSlide, false);
-
-      // 스크롤 이벤트에 쓰로틀링 적용
-      $(window).on('scroll', throttle(handleScrollWithSwiper, 200));
-    }
-  });
-
-  // 스와이퍼가 없는 경우
-  if ($(".conts_box_list_wrap.swiper").length === 0) {
-    if (isMobile) {
-      $(window).on('scroll', throttle(handleScrollWithoutSwiper, 200));
-    }
-  }
-
-  // PC일 경우, 슬라이드에 마우스를 올릴 때만 비디오 재생
-  if (!isMobile) {
-    $('.conts_box_list_wrap .conts_box').hover(
-      function () {
-        updateVideoState($(this), true);
-      },
-      function () {
-        updateVideoState($(this), false);
-      }
-    );
-  }
-}
-
 function tabSlider(){  
   $(".tab_menu.swiper").each(function (i, v) {
     let sliderName = 'tabSlider' + i;
@@ -1161,7 +1002,6 @@ function tabSlider(){
     });
   });
 }
-
 // 다른 이벤트 보기
 function contBoxSlider() {
   $(".conts_box_img_slide.swiper").each(function (i, v) {
@@ -1220,3 +1060,160 @@ function actBoxUI(){
     });
   };
 }
+
+// 아모스 tv 슬라이드
+$(window).on('load', function(){
+  $(document).ready(function(){
+    tvSlider()
+  })
+  function throttle(func, delay) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = new Date().getTime();
+      if (now - lastCall < delay) {
+        return;
+      }
+      lastCall = now;
+      return func(...args);
+    };
+  }
+  // 슬라이드의 동영상 상태를 업데이트하는 함수
+  // play 매개변수가 true일 경우 비디오를 재생하고 썸네일을 숨김
+  // false일 경우 비디오를 정지하고 썸네일을 표시
+  function updateVideoState(video, play) {
+    const videoEl = video.find('video').get(0);
+    const thumbnail = video.find('.thumbnail');
+    const videoBox = video.find('.video_box');
+    if (!videoEl) return false;
+    if (play) {
+      videoPlay(thumbnail, videoBox, videoEl)
+    } 
+    if (!play) {
+      videoPause(thumbnail, videoBox, videoEl)
+    }
+  }
+  //비디오 재생 
+  function videoPlay(thumb, box, video){
+    thumb.hide();
+    box.show();
+    video.play();
+  }
+  //비디오 멈춤
+  function videoPause(thumb, box, video){
+    video.pause();
+    video.currentTime = 0;
+    thumb.show();
+    box.hide();
+  }
+  // 스크롤 시 비디오 재생 관리 함수 (스와이퍼 있을 때)
+  function handleScrollWithSwiper() {
+    $('.sec_conts').each(function () {
+      let secContsTop = $(this).offset().top;
+      let scrollTop = $(window).scrollTop();
+      let windowHeight = $(window).height();
+
+      // 스크롤 위치가 섹션 내부에 있을 때
+      if (scrollTop >= secContsTop - 150 && scrollTop < secContsTop - 150 + $(this).outerHeight()) {
+        const activeSlide = $(this).find('.swiper-slide-active');
+        if (activeSlide.length) {
+          // 현재 섹션의 활성 슬라이드의 비디오만 재생
+          $('.conts_box_list_wrap .swiper-slide').not(activeSlide).each(function () {
+            updateVideoState($(this), false);
+          });
+          updateVideoState(activeSlide, true);
+        }
+      } else {
+        // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
+        $(this).find('.swiper-slide').each(function () {
+          updateVideoState($(this), false);
+        });
+      }
+    });
+  }
+  // 스크롤 시 비디오 재생 관리 함수 (스와이퍼 없을 때)
+  function handleScrollWithoutSwiper() {
+    if($('.page_tv_datail').length == 0){
+      $('.conts_box').each(function () {
+        let contsBoxTop = $(this).offset().top;
+        let scrollTop = $(window).scrollTop();
+        let windowHeight = $(window).height();
+    
+        // 스크롤 위치가 섹션 내부에 있을 때
+        if (scrollTop >= contsBoxTop - 150 && scrollTop < contsBoxTop - 150 + $(this).outerHeight()) {
+          const activeSlide = $(this);
+          // 현재 섹션의 비디오만 재생
+          updateVideoState(activeSlide, true);
+          // 나머지 비디오는 정지
+          $('.conts_box').not(activeSlide).each(function () {
+            updateVideoState($(this), false);
+          });
+        } else {
+          // 섹션이 활성화되지 않았을 때 모든 비디오는 정지
+          updateVideoState($(this), false);
+        }
+      });
+    }
+  }
+  // tvSlider 기능 초기화 함수
+  function tvSlider() {
+    // 스와이퍼가 있는 경우
+    $(".conts_box_list_wrap.swiper").each(function (i, v) {
+      let sliderName = 'tvSlider' + i;
+      $(v).attr('id', sliderName);
+      let sliderId = '#' + sliderName;
+      // Swiper 초기화
+      let tvSwiper = new Swiper(sliderId, {
+        slidesPerView: 1.1,
+        spaceBetween: 8,
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            on: {
+              slideChange: function () {
+                // PC: 모든 슬라이드의 비디오를 정지하고 썸네일을 표시
+                $(this.slides).each(function () {
+                  updateVideoState($(this), false);
+                });
+              }
+            }
+          }
+        },
+        pagination: {
+          el: sliderId + " .swiper-pagination",
+        },
+        on: {
+          slideChange: function () {
+            // 현재 활성 슬라이드를 찾고, 해당 슬라이드의 비디오만 재생
+            if (isMobile) {
+              const activeSlide = $(this.slides[this.activeIndex]);
+              updateVideoState(activeSlide, true);
+              // 나머지 슬라이드의 비디오는 정지
+              $(this.slides).not(activeSlide).each(function () {
+                updateVideoState($(this), false);
+              });
+            }
+          }
+        }
+      });
+    });
+  }
+  
+  //이벤트
+  pcOnlyTvFunc()
+  //resize 이벤트
+  $(window).on('resize', function(){
+    pcOnlyTvFunc()
+  });
+  //hover 이벤트
+  $(document).on('.conts_box_list_wrap .conts_box',{
+    mouseenter: function () {
+      updateVideoState($(this), true);
+    },
+    mouseleave: function () {
+      updateVideoState($(this), false);
+    }
+  });
+});

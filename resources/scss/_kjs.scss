@@ -3234,6 +3234,10 @@
       }
     }
   }
+  .tag_list{
+    margin-top: 20px;
+    padding: 0 20px;
+  }
 }
 .conts_box_detail {
   .info {
@@ -3295,6 +3299,7 @@
 .sort_top_area {
   @include flexBetween;
   padding: 20px 0;
+  gap:12px;
   .count {
     font-size: $fs-xs;
     color: $gray-600;
@@ -3304,6 +3309,9 @@
         font-weight: $fw-m;
       }
     }
+  }
+  .select_box{
+    margin-left: auto;
   }
 }
 
@@ -3318,6 +3326,9 @@
   .conts_box_list {
     >li {
       padding: 20px 0;
+      &:nth-child(n+2){
+        padding-top: 12px;
+      }
       &:last-child {
         padding-bottom: 0;
       }

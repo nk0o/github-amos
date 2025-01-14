@@ -54,6 +54,7 @@ $color-point: #FF2E00;
 $color-red: $color-point;
 $color-green: #00B628;
 $color-green-secondary: #E1FBE1;
+$color-green-dark: #01584F;
 $color-orange: #ED5828; 
 $color-orange-secondary: #FFF2EE; 
 $color-orange-light: #F18200;
@@ -68,9 +69,14 @@ $color-yellow: #FFC107;
 $color-olive: #B5CC18; 
 $color-teal: #00B5AD; 
 $color-violet: #6435C9;
-$color-purple: #A333C8;
+$color-purple: #712C76;
 $color-pink: #E03997;
 $color-brown: #A5673F;
+
+// 클럽색상
+$color-club-black:#000;
+$color-club-purple: $color-purple;
+$color-club-green: $color-green-dark;
 
 // Grayscale
 $gray-50: #f6f6f6;
