@@ -5116,7 +5116,7 @@ div.dataTables_wrapper .btn_floating:focus {
 }
 
 .btm_bar {
-  z-index: 2;
+  z-index: 12;
   position: fixed;
   display: block;
   width: 100%;
@@ -5711,9 +5711,6 @@ footer .f_company {
   color: #ffffff;
   font-weight: 600;
 }
-.page_main .sec_amount > .inner {
-  overflow-x: auto;
-}
 .page_main .sec_amount > .inner > ul {
   display: flex;
   flex-direction: column;
@@ -5883,17 +5880,17 @@ footer .f_company {
 
 /* 메인 반원 그래프 */
 .half_progress {
-  flex: 0 0 70px;
-  width: 70px;
-  height: 58px;
+  flex: 0 0 74px;
+  width: 74px;
+  height: 63px;
   position: relative;
   text-align: center;
   align-self: start;
 }
 .half_progress .percent {
   position: absolute;
-  top: 25px;
-  left: 0;
+  top: 28px;
+  left: 2px;
   width: 100%;
   text-align: center;
 }
@@ -5903,6 +5900,20 @@ footer .f_company {
   font-weight: 700;
   line-height: 1;
   font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.half_progress circle {
+  transform-origin: center;
+  transform: rotate(141deg);
+  stroke-width: 5;
+  stroke-dasharray: 232;
+}
+.half_progress circle.circle_bg {
+  stroke: #eeeeee;
+  stroke-dashoffset: 80;
+}
+.half_progress circle.circle_progress {
+  stroke: #FF7E36;
+  stroke-dashoffset: 232;
 }
 .half_progress .bar_overflow {
   position: relative;
@@ -5957,6 +5968,9 @@ footer .f_company {
   right: 9.7px;
   bottom: -2px;
   overflow: hidden;
+}
+.half_progress.orange .circle_progress {
+  stroke: #FF7E36;
 }
 .half_progress.orange .left {
   background: #FF7E36;
@@ -6271,11 +6285,15 @@ footer .f_company {
 /* 메인 실적현황 */
 .performance_box {
   margin-top: 10px;
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 .performance_box:first-child {
   margin-top: 0;
+}
+.performance_box_wrap {
+  max-width: 700px;
+  margin: 0 auto;
 }
 .performance_box_wrap.club_black .tit {
   background-color: #000;
@@ -6295,7 +6313,7 @@ footer .f_company {
   align-items: center;
   color: #ffffff;
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
   height: 34px;
@@ -6337,6 +6355,7 @@ footer .f_company {
 .performance_box .cont {
   background-color: #ffffff;
   padding: 16px 20px 20px;
+  border-radius: 8px;
 }
 .performance_box .cont_top {
   display: -webkit-box;
@@ -6377,23 +6396,46 @@ footer .f_company {
   -webkit-box-align: center;
   align-items: center;
 }
-.performance_box .select_box.select_box_defalut {
+.performance_box .select_box.select_box_defalut, .performance_box .select_box.type2 {
   width: auto;
   min-width: 96px;
 }
-.performance_box .select_box.select_box_defalut .select_box_arr {
-  font-weight: 700;
-  color: #222222 !important;
-}
-.performance_box .select_box.select_box_defalut .select_box_arr::after {
+.performance_box .select_box.select_box_defalut .select_box_arr::after, .performance_box .select_box.type2 .select_box_arr::after {
   right: 0;
 }
-.performance_box .select_box.select_box_defalut .select_box_value {
+.performance_box .select_box.select_box_defalut .select_box_value, .performance_box .select_box.type2 .select_box_value {
   border: 0;
   height: 20px;
   padding: 0 24px 0 0;
   font-size: 15px;
   line-height: 1.3333;
+  font-weight: 700;
+  color: #222222 !important;
+}
+.performance_box .select_box.select_box_defalut .select_box_value::after, .performance_box .select_box.type2 .select_box_value::after {
+  right: 0;
+}
+.performance_box .select_box.select_box_defalut .select_box_value em, .performance_box .select_box.type2 .select_box_value em {
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+  font-weight: 400;
+}
+.performance_box .select_box.select_box_defalut .select_box_list, .performance_box .select_box.type2 .select_box_list {
+  top: 24px;
+  min-width: 124px;
+}
+.performance_box .select_box.select_box_defalut .select_box_list li, .performance_box .select_box.type2 .select_box_list li {
+  height: 40px;
+  padding: 10px;
+}
+.performance_box .select_box.select_box_defalut .select_box_list li span, .performance_box .select_box.type2 .select_box_list li span {
+  font-size: 15px;
+  line-height: 1.3333;
+  font-weight: 700;
+  color: #222222 !important;
+}
+.performance_box .select_box.select_box_defalut .select_box_list li span em, .performance_box .select_box.type2 .select_box_list li span em {
+  font-family: "Gotham", "Apple SD Gothic Neo", "AppleGothic", sans-serif !important;
+  font-weight: 400;
 }
 .performance_box .half_progress_wrap {
   display: -webkit-box;
@@ -6417,6 +6459,8 @@ footer .f_company {
 .performance_box .btn_area {
   padding: 4px 20px 16px;
   background-color: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .performance_list li:nth-child(n+2) {
@@ -9647,6 +9691,12 @@ footer .f_company {
   margin-top: 20px;
   padding: 0 20px;
 }
+@media (min-width: 1024px) {
+  .conts_box_list .tag_list,
+  .conts_box_detail .tag_list {
+    padding: 0;
+  }
+}
 
 .conts_box_detail .info {
   margin-top: 16px;
@@ -9728,9 +9778,6 @@ footer .f_company {
 }
 .conts_box_list_sec .conts_box_list > li {
   padding: 20px 0;
-}
-.conts_box_list_sec .conts_box_list > li:nth-child(n+2) {
-  padding-top: 12px;
 }
 .conts_box_list_sec .conts_box_list > li:last-child {
   padding-bottom: 0;
@@ -12345,8 +12392,19 @@ footer .f_company {
 .srch_result .prd_list_lg .prd_box .prd .info .badge {
   height: 20px;
 }
+@media (max-width: 1023px) {
+  .srch_result .conts_box_list_sec .conts_box:nth-child(n+2) {
+    padding-top: 12px;
+  }
+}
 .srch_result .conts_box_list_sec .sort_top_area {
   padding: 4px 20px 0;
+}
+@media (min-width: 1024px) {
+  .srch_result .conts_box_list_sec .sort_top_area {
+    margin: 0;
+    padding: 20px 0 0;
+  }
 }
 
 .srch_promotion {

@@ -3237,6 +3237,9 @@
   .tag_list{
     margin-top: 20px;
     padding: 0 20px;
+    @media (min-width: $pc-point) {
+      padding: 0;
+    }
   }
 }
 .conts_box_detail {
@@ -3326,9 +3329,6 @@
   .conts_box_list {
     >li {
       padding: 20px 0;
-      &:nth-child(n+2){
-        padding-top: 12px;
-      }
       &:last-child {
         padding-bottom: 0;
       }

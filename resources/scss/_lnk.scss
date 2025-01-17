@@ -1984,8 +1984,19 @@
       height: 20px;
     }
   }
-  .conts_box_list_sec .sort_top_area{
-    padding: 4px 20px 0;
+  .conts_box_list_sec{
+    @media (max-width: 1023px) {
+      .conts_box:nth-child(n+2){
+        padding-top: 12px;
+      }
+    }
+    .sort_top_area{
+      padding: 4px 20px 0;
+      @media (min-width: $pc-point) {
+        margin: 0;
+        padding: 20px 0 0;
+      }
+    }
   }
 }
 

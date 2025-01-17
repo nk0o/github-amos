@@ -236,16 +236,17 @@ function selectBoxUI(){
   function SelectBoxChange(selectItem) {
     if ($(selectItem).find('ul').length <= 0) {
       var $cloneEle = $(selectItem).parents('.select_box').find('.select_box_value').children('span').children();
-      var selectText = $(selectItem).text();
+      var selectText = $(selectItem).html();//250117 수정
       clearInput(selectItem);
-      $(selectItem).parents('.select_box').find('.select_box_value').children('span').text(selectText);
+      $(selectItem).parents('.select_box').find('.select_box_value').children('span').html(selectText);//250117 수정
       $(selectItem).parents('.select_box').find('.select_box_value').children('span').append($cloneEle);
       $(selectItem).parents('.select_box').find('.select_box_value').children('span').css('color', '#222222');
     }
   };
 
   function clearInput(obj) {
-    $(obj).parents('.select_box').find('.select_box_value').children('span').text("");
+    $(obj).parents('.select_box').find('.select_box_value').children('span').children().empty();//250117 수정
+    $(obj).parents('.select_box').find('.select_box_value').children('span').empty();
   };
 
 }

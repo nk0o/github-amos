@@ -40,7 +40,6 @@
       }
     }
     & > .inner{
-      overflow-x: auto;
       & > ul{
         display: flex;
         flex-direction: column;
@@ -180,21 +179,35 @@
 }
 /* 메인 반원 그래프 */
 .half_progress {
-  flex: 0 0 70px;
-  width: 70px;
-  height: 58px;
+  flex: 0 0 74px;
+  width: 74px;
+  height: 63px;
   position: relative;
   text-align: center;
   align-self: start;
   .percent {
     position: absolute;
-    top:25px;
-    left: 0;
+    top:28px;
+    left: 2px;
     width: 100%;
     text-align: center;
     p{
       @include fontStyle($gray-950, $fs-ml, $fw-b, 1);
       font-family: $font-gotham;
+    }
+  }
+  circle{
+    transform-origin: center; 
+    transform: rotate(141deg); 
+    stroke-width: 5;
+    stroke-dasharray:232;
+    &.circle_bg{
+      stroke: $gray-100;
+      stroke-dashoffset: 80;
+    }
+    &.circle_progress{
+      stroke: #FF7E36;
+      stroke-dashoffset:232;
     }
   }
   .bar_overflow {
@@ -252,6 +265,9 @@
     overflow: hidden; 
   }
   &.orange{
+    .circle_progress{
+      stroke: #FF7E36
+    }
     .left {
       background: #FF7E36;
     }
@@ -513,12 +529,15 @@
 .performance_box{
   //border: 1px solid;
   margin-top: 10px;
-  border-radius: 8px;
-  overflow: hidden;
+  border-radius: 10px;
+  background-color: $color-white;
+  //overflow: hidden;
   &:first-child{
     margin-top: 0;
   }
   &_wrap{
+    max-width: 700px;
+    margin: 0 auto;
     &.club_black{
       .tit{
         background-color: $color-club-black;
@@ -537,7 +556,7 @@
   }
   .tit{
       @include flexCenter;
-      @include fontStyle($color-white, $fs-s, $fw-l, 1);
+      @include fontStyle($color-white, $fs-s, $fw-m, 1);
       text-transform: uppercase;
       height: 34px;
       border-top-left-radius: 8px;
@@ -575,6 +594,7 @@
   .cont{
     background-color: $color-white;
     padding: 16px 20px 20px;
+    border-radius: 8px;
     &_top{
       @include flexBetween;
       padding-bottom: 12px;
@@ -604,15 +624,11 @@
       @include flexBetween;
     }
   }
-  .select_box.select_box_defalut{
+  .select_box.select_box_defalut, .select_box.type2{
     width: auto;
     min-width: 96px;
-    .select_box_arr{
-      font-weight: 700;
-      color: $gray-950 !important;
-      &::after{
+    .select_box_arr::after{
         right: 0;
-      }
     }
     .select_box_value{
       border: 0;
@@ -620,6 +636,33 @@
       padding: 0 24px 0 0;
       font-size: 15px;
       line-height: 1.3333;
+      font-weight: $fw-b;
+      color: $gray-950 !important;
+      &::after{
+        right: 0;
+      }
+      em{
+        font-family: $font-gotham !important;
+        font-weight: $fw-m;
+      }
+    }
+    .select_box_list{
+      top: 24px;
+      min-width: 124px;    
+      li{
+        height: 40px;
+        padding: 10px;
+        span{
+          font-size: 15px;
+          line-height: 1.3333;
+          font-weight: $fw-b;
+          color: $gray-950 !important;
+          em{
+            font-family: $font-gotham !important;
+            font-weight: $fw-m;
+          }
+        }
+      }
     }
   }
   .half_progress_wrap{
@@ -640,6 +683,8 @@
   .btn_area{
     padding: 4px 20px 16px;
     background-color: $color-white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 }
 .performance_list{
