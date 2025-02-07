@@ -221,7 +221,7 @@
       color: #FFE7A9;
       display: flex;
       align-items: center;
-      line-height: 26px;
+      line-height: normal;
       em{
         @include fontStyle(inherit, $fs-ml, $fw-m, normal);
       }

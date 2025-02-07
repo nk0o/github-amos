@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../resources/js/pub/include.js"></script>
+  <script>include.scripts();</script>
+  <script>include.style();</script>
+  <title>주문서 - 본인인증(Black) - 사은품몰 | 아모레뉴플렛폼</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <script>include.subAppBarType2();</script>
+    </header>    
+    <!-- //header -->
+    <main id="container" class="page_form">
+      <div class="inner">
+        <div class="sign_notice">
+          <p>아모스프로클럽 사은품을<br/> 신청하기 위해서는 <br/>본인인증이 필요합니다.</p>
+        </div><!-- //.sign_notice -->
+        <div class="info_area">
+          <div class="input_group">
+            <span class="input_label">내/외국인</span>
+            <div class="select_box">
+              <div class="select_box_value" data-btmsheet="btmSheet01">
+                <span>선택해 주세요</span>
+              </div><!-- //.select_box_value -->
+              <div class="select_box_list">
+                <ul>
+                  <li><span>내국인</span></li>
+                  <li><span>외국인</span></li>
+                </ul>
+              </div><!-- //.select_box_list -->
+            </div><!-- //.select_box -->
+          </div><!-- //.input_group -->
+          <div class="input_group">
+            <span class="input_label">이름</span>
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="이름">
+            </label>
+          </div><!-- //.input_group -->
+          <div class="input_group input_social_num">
+            <span class="input_label">생년</span>
+            <!-- 동의한 사람만 뒷자리 성별구분인풋 노출 -->
+            <label for="">
+              <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+              <span class="dash">-</span>
+              <input type="text" id="" class="input_text" value="" placeholder="0">
+              <span class="hidden_num">******</span>
+            </label>
+            <!-- 동의 안 한 경우 -->
+            <!-- <label for="">
+              <input type="text" id="" class="input_text birth_date" value="" placeholder="6자리 숫자">
+              <span class="dash">-</span>
+              <span class="hidden_num">*******</span>
+            </label> -->
+          </div><!-- //.input_group -->
+          <!-- 20240827 수정 -->
+          <div class="input_group">
+            <span class="input_label">휴대폰 번호</span>
+            <div class="select_box">
+              <div class="select_box_value" data-btmsheet="btmSheet02">
+                <span>통신사를 선택해 주세요</span>
+              </div><!-- //.select_box_value -->
+              <div class="select_box_list">
+                <ul>
+                  <li><span>SKT</span></li>
+                  <li><span>KT</span></li>
+                  <li><span>LGT U</span></li>
+                  <li><span>SKT 알뜰폰</span></li>
+                  <li><span>KT 알뜰폰</span></li>
+                  <li><span>LG 알뜰폰</span></li>
+                </ul>
+              </div><!-- //.select_box_list -->
+            </div><!-- //.select_box -->
+            <label for="">
+              <input type="text" id="" class="input_text" value="" placeholder="휴대폰번호">
+              <button class="btn_sm btn_border">인증요청</button>
+            </label>
+          </div><!-- //.input_group -->
+          <div class="input_group with_time">
+            <label for="">
+              <input type="text" id="" class="input_text" value="899944" placeholder="">
+              <span class="time">2:35</span>
+              <!-- <button class="btn_sm btn_border">인증완료</button> -->
+            </label>
+          </div><!-- //.input_group -->
+          <div class="input_group with_time">
+            <label for="">
+              <input type="text" id="" class="input_text input_error" value="899944" placeholder="">
+              <span class="time">2:35</span>
+              <button class="btn_sm btn_border">인증완료</button>
+            </label>
+            <p class="txt_alert error">인증번호가 다릅니다.</p>
+          </div><!-- //.input_group -->
+          <!-- // 20240827 수정 -->
+        </div><!-- //.input_area -->
+        <div class="btn_group">
+          <button class="btn btn_lg btn_primary">다음</button>
+        </div>
+      </div>
+    </main>
+    <!-- //#container -->
+    <!-- tabBar -->
+    <script>include.tabBar();</script>
+    <!-- //tabBar -->
+  </div>
+
+<!-- Bottom Sheet -->
+  <div class="btm_sheet" id="btmSheet01"><!-- data-btmsheet="btmSheet01" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">내/외국인</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-1" class="input_radio" name="radio-item-1" checked="">
+              <label for="radio-1-1">내국인</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-1-2" class="input_radio" name="radio-item-1">
+              <label for="radio-1-2">외국인</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+
+  <div class="btm_sheet" id="btmSheet02"><!-- data-btmsheet="btmSheet02" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">통신사 선택</p>
+        <button type="button" class="btm_sheet_close ico_close_20"></button>
+      </div><!-- //.btm_sheet_head -->
+      <div class="btm_sheet_cont check_list">
+        <ul class="input_check_list">
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-1" class="input_radio" name="radio-item-2" checked="">
+              <label for="radio-2-1">SKT</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-2" class="input_radio" name="radio-item-2">
+              <label for="radio-2-2">KT</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-3" class="input_radio" name="radio-item-2">
+              <label for="radio-2-3">LGT U</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-4" class="input_radio" name="radio-item-2">
+              <label for="radio-2-4">SKT 알뜰폰</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-5" class="input_radio" name="radio-item-2">
+              <label for="radio-2-5">KT 알뜰폰</label>
+            </div>
+          </li>
+          <li>
+            <div class="input_radio_wrap without_box">
+              <input type="radio" id="radio-2-6" class="input_radio" name="radio-item-2">
+              <label for="radio-2-6">LG 알뜰폰</label>
+            </div>
+          </li>
+        </ul>
+      </div><!-- //.btm_sheet_cont -->
+    </div><!-- //.inner -->
+  </div><!-- //.btm_sheet -->
+<!-- //Bottom Sheet -->
+
+
+  
+
+
+    
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+  <script>
+    $(document).ready(function(){
+      $(".appbar_tit").html("본인인증")
+    })
+  </script>
+  <!--------------- 퍼블화면에만 쓰이는 script --------------->
+</body>
+</html>

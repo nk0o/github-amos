@@ -238,6 +238,10 @@ p {
   background-color: #E1FBE1 !important;
   color: #00B628 !important;
 }
+.bg_dark_green {
+  background-color: #01584F !important;
+  color: #ffffff !important;
+}
 .bg_orange {
   background-color: #FFF2EE !important;
   color: #ED5828 !important;
@@ -290,6 +294,9 @@ p {
 }
 .bg_dark, .bg_black {
   background-color: #222222 !important;
+}
+.bg_dark_black {
+  background-color: #000 !important;
 }
 
 .line_primary {
@@ -399,7 +406,7 @@ p {
   color: #A5673F !important;
 }
 .txt_gray {
-  color: #dddddd !important;
+  color: #777777 !important;
 }
 .txt_dark, .txt_black {
   color: #222222 !important;
@@ -5251,7 +5258,7 @@ div.dataTables_wrapper .btn_floating:focus {
   color: #FFE7A9;
   display: flex;
   align-items: center;
-  line-height: 26px;
+  line-height: normal;
 }
 .btm_bar.type_btn .color_txt em {
   color: inherit;
@@ -5889,8 +5896,8 @@ footer .f_company {
 }
 .half_progress .percent {
   position: absolute;
-  top: 28px;
-  left: 2px;
+  top: 24px;
+  left: 1px;
   width: 100%;
   text-align: center;
 }
@@ -6348,9 +6355,14 @@ footer .f_company {
 }
 .performance_box .view_point .point_list .point {
   white-space: nowrap;
-  font-size: 1.0625rem;
-  line-height: 1.176;
+  font-size: 0.8125rem;
+  line-height: 20px;
   color: #222222;
+  display: inline-flex;
+  align-items: center;
+}
+.performance_box .view_point .point_list .point em {
+  font-size: 1.0625rem;
 }
 .performance_box .cont {
   background-color: #ffffff;
@@ -6700,6 +6712,31 @@ footer .f_company {
 .prd_list_lg .prd_box .prd .info .badge {
   align-self: flex-start;
   margin-bottom: 8px;
+}
+.prd_list_lg .prd_box .prd .info .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 32px;
+}
+.prd_list_lg .prd_box .prd .info .quantity .spinner {
+  min-width: auto;
+  max-width: 100px;
+}
+.prd_list_lg .prd_box .prd .info .quantity .btn_spinner_down, .prd_list_lg .prd_box .prd .info .quantity .btn_spinner_down::before {
+  width: 32px;
+  height: 32px;
+}
+.prd_list_lg .prd_box .prd .info .quantity .price, .prd_list_lg .prd_box .prd .info .quantity .count {
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+@media (min-width: 1024px) {
+  .prd_list_lg .prd_box .prd .info .quantity {
+    margin-top: auto;
+  }
 }
 .prd_list_lg .prd_box.prd_more {
   height: unset;
@@ -8918,6 +8955,17 @@ footer .f_company {
 .page_my_cupon .cupon_top {
   padding: 24px 0;
 }
+.page_my_cupon .cupon_top.club_point_top .info_txt {
+  color: #222222;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.71;
+  font-family: "Arita-dotum", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
+}
+.page_my_cupon .cupon_top.club_point_top .info_txt i {
+  vertical-align: top;
+  margin-right: 4px;
+}
 .page_my_cupon .cupon_top .member_grade {
   font-size: 22px;
   font-weight: 700;
@@ -10536,7 +10584,7 @@ footer .f_company {
   margin-top: 60px;
 }
 
-/*** 포인트몰 ***/
+/*** 포인트몰 & 사은품몰 ***/
 .page_point .prd_cont {
   padding: 0 20px 0;
 }
@@ -10596,6 +10644,35 @@ footer .f_company {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.4167;
+}
+.page_point .user_club .user {
+  padding: 24px 0 16px;
+  border: 0;
+}
+.page_point .user_club .user_msg span {
+  font: inherit;
+}
+.page_point .user_club .point {
+  padding: 0 0 8px;
+}
+.page_point .user_club .point_num {
+  color: #222222;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.page_point .user_club.no_fixed {
+  position: relative;
+  inset: auto;
+}
+.page_point .user_club.no_fixed .user {
+  padding: 24px 0 24px;
+}
+.page_point .gift_prd_area.black_club {
+  margin-top: 234px;
+}
+.page_point .gift_prd_area.no_fixed {
+  margin-top: 0;
 }
 .page_point .prd_list_top {
   flex-wrap: wrap;
@@ -12620,6 +12697,20 @@ footer .f_company {
 /* 클릭이벤트 커서 포인터 */
 .cate_nav li, .btn_toggle, .info_tooltip, .open_month, .btn_modal_open, .btm_sheet_close, .btm_sheet_back {
   cursor: pointer;
+}
+
+/* 사은품 주문서 */
+.page_order_gift .change_checkbox {
+  padding: 0;
+}
+.page_order_gift .change_checkbox .input_check + label {
+  color: #222222;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.466;
+}
+.page_order_gift .order_accord:last-of-type .accord_list:last-child .accord_cont > .inner {
+  padding-bottom: 40px;
 }
 
 .editor_reset, .board_detail .detail_cont {

@@ -132,7 +132,7 @@
         font-weight: $fw-b;
         line-height: normal;
       }
-    }
+    }    
     .color_num {
       display: none;
       font-size: $fs-sm;
@@ -231,6 +231,29 @@
         .badge{
           align-self: flex-start;
           margin-bottom: 8px;
+        }
+        .quantity{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 30px;
+          margin-top: 32px;
+          .spinner{
+            min-width: auto;
+            max-width: 100px;
+          }
+          .btn_spinner_down, .btn_spinner_down::before{
+            width: 32px;
+            height: 32px;
+          }
+          .price, .count{
+            padding: 0;
+            margin: 0;
+            flex-wrap: nowrap;
+          }
+          @media (min-width: $pc-point) {
+            margin-top: auto;
+          }
         }
       }
     }
@@ -2476,9 +2499,18 @@
     }
   }
 }
-
 .page_my_cupon {
   .cupon_top {
+    &.club_point_top{
+      .info_txt{
+        @include fontStyle($gray-950, $fs-xs, $fw-m, 1.71);
+        font-family: $font-aritadt;
+        i{
+          vertical-align: top;
+          margin-right: 4px;
+        }
+      }
+    }
     padding: 24px 0;
     .member_grade{
       font-size: 22px;
