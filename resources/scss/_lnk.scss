@@ -373,7 +373,7 @@
     }
   }
 }
-/*** 포인트몰 ***/
+/*** 포인트몰 & 사은품몰 ***/
 .page_point{
   .prd_cont{
     padding: 0 20px 0;
@@ -421,6 +421,38 @@
         margin-left: auto;
         @include fontStyle($color-blue, $fs-lg, $fw-m, 1.4167);
       }
+    }
+  }
+  .user_club{
+    .user{
+      padding: 24px 0 16px;
+      border: 0;
+      &_msg{
+        span{
+          font:inherit;
+        }
+      }
+    }
+    .point{
+      padding: 0 0 8px;
+      &_num{
+        @include fontStyle($gray-950, $fs-l, $fw-m, 1.4);
+      }
+    }
+    &.no_fixed{
+      position: relative;
+      inset: auto;
+      .user{
+        padding: 24px 0 24px;
+      }
+    }
+  }
+  .gift_prd_area{
+    &.black_club{
+      margin-top: 234px;
+    }
+    &.no_fixed{
+      margin-top: 0;
     }
   }
   .prd_list_top{
@@ -477,7 +509,7 @@
       order: 1;
       margin:4px 0 0;
     }
-  }
+  }  
 }
 /*** 장바구니 ***/
 .page_order{
@@ -2177,3 +2209,16 @@
 
 /* 클릭이벤트 커서 포인터 */
 .cate_nav li, .btn_toggle, .info_tooltip, .open_month, .btn_modal_open, .btm_sheet_close, .btm_sheet_back{ cursor: pointer;}
+
+/* 사은품 주문서 */
+.page_order_gift{
+  .change_checkbox{
+    padding: 0;
+    .input_check + label{
+      @include fontStyle($gray-950, $fs-sm, $fw-sb, 1.466);
+    }
+  }
+  .order_accord:last-of-type .accord_list:last-child .accord_cont > .inner{
+    padding-bottom: 40px;
+  }
+}

@@ -187,8 +187,8 @@
   align-self: start;
   .percent {
     position: absolute;
-    top:28px;
-    left: 2px;
+    top:24px;
+    left: 1px;
     width: 100%;
     text-align: center;
     p{
@@ -585,9 +585,14 @@
       }
       .point{
         white-space: nowrap;
-        font-size: $fs-md;
-        line-height: 1.176;
+        font-size: $fs-xs;
+        line-height: 20px;
         color: $gray-950;
+        display: inline-flex;
+        align-items: center;
+        em{
+          font-size: $fs-md;
+        }
       }
     }
   }

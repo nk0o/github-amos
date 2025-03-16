@@ -77,6 +77,10 @@
     background-color: $color-green-secondary !important;
     color: $color-green !important;
   }
+  &_dark_green {
+    background-color: $color-club-green !important;
+    color: $color-white !important;
+  }
   &_orange {
     background-color: $color-orange-secondary !important;
     color: $color-orange !important;
@@ -133,6 +137,9 @@
   &_dark,
   &_black {
     background-color: $gray-950 !important;
+  }
+  &_dark_black {
+    background-color: $color-club-black !important;
   }
 }
 //Border Line Color
@@ -253,7 +260,7 @@
     color: $color-brown !important;
   }
   &_gray {
-    color: $gray-300 !important;
+    color: $gray-700 !important;
   }
   &_dark,
   &_black {
